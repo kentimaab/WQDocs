@@ -10,13 +10,12 @@ jobs:
       - name: Create test file
         run: echo "FTP upload test - ${{ github.run_id }}" > test.txt
 
-      - name: Upload to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /public_html/docs/testfiles/
-          include: |
-            test.txt
+          local_path: ./test.txt
+          remote_path: /public_html/docs/testfiles/
+          sftp_only: true
