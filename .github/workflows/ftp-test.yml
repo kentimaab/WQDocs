@@ -18,4 +18,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local_path: ./test.txt
           remote_path: /public_html/docs/
-          sftp_only: false
+          sftp_only: true
