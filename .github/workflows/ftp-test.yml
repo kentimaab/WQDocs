@@ -15,7 +15,7 @@ jobs:
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          ssh_private_key: ${{ secrets.SFTP_PRIVATE_KEY }}
           local_path: ./test.txt
-          remote_path: /public_html/docs/testfiles/
+          remote_path: /public_html/docs/
           sftp_only: true
