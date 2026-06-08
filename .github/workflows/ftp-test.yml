@@ -1,0 +1,22 @@
+name: FTP Test Upload
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ftp-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create test file
+        run: echo "FTP upload test - ${{ github.run_id }}" > test.txt
+
+      - name: Upload to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /test-upload/
+          include: |
+            test.txt
