@@ -1,0 +1,16 @@
+---
+title: System Views — Apparatskap
+description: Apparatskap system view configuration and usage.
+product: bms
+page_type: concept
+doc_id: DOC-M19
+size: M
+priority: p1
+status: draft
+last_reviewed: 2026-05-19
+---
+
+# System Views — Apparatskap
+
+!!! note "Draft"
+    This page is a placeholder. See ticket **DOC-M19** in `plans/documentation-tickets.md`.
