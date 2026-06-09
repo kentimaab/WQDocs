@@ -1,4 +1,4 @@
-name: FTP Test Upload
+name: FTP Upload
 
 on:
   workflow_dispatch:
