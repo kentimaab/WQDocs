@@ -81,11 +81,20 @@ Click **New schedule** to open the creation wizard. It steps through three pages
 ![New schedule step 1](/Images/Alarms/alarm-schedule-step-1.png){align=center}
 
 * **Name** — name for the schedule.
-* **System** — which system this schedule applies to: the local system or a connected remote system.
+* **System** — which system this schedule applies to: the local system or a connected
+remote system.
 * **Active schedule** — toggle to enable or disable the schedule without deleting it.
-* **Weekdays** — which days of the week the schedule is active.
-* **Time interval** — one or two From/To time windows per day during which the schedule sends notifications.
+* **Weekdays** — select which days of the week the schedule is active. Only the
+selected days will appear in the **Time interval** section below.
+* **Time interval** — configure the active time windows for each selected day. Each
+day shows a primary **From/To** time slot. Click the **+** button to add a secondary
+time slot for that day, allowing two separate notification windows on the same day.
+Setting both **From** and **To** to `00:00` disables notifications for that time
+slot. To receive notifications for the entire day, set **From** to `00:00` and
+**To** to `23:59`.
 
+!!! note
+    Setting **To** to `23:59` covers the full day including the final minute.
 **Step 2 — What**
 
 ![New schedule step 2](/Images/Alarms/alarm-schedule-step-2.png){align=center}

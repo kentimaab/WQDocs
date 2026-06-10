@@ -32,7 +32,7 @@ as they require only a tag connection to work out of the box.
 
 The new symbols provide richer visual feedback than their predecessors through a
 two-layer animation system built from two concentric circles. The gif below shows
-the new symbol cycling through alarm, warning and service states:
+the new symbol cycling through alarm, warning and active states:
 
 ![New symbol](/Images/Symbol_Libraries/new_symbol.gif)
 

@@ -48,7 +48,7 @@ Since **WideQuick** version 8 the web client is shipped with a graphical tool fo
 - **Web server**
 
   The tab Web server contains the initialization values for **WideQuick® Web Client**.
-  The information is located in the [web-server] section in the ini-file.
+  The information is located in the **web-server** section in the ini-file.
   - **Http-address**
 
     The IP-address **WideQuick® Web Client** will listen on.
@@ -158,7 +158,7 @@ The information is located in the `[wqre-server]` section in the ini-file.
 
   The name of the server. The name can be used as an argument in the URL **WideQuick® Web Client**.
   Example URL: localhost/?wqruntime=server1, this URL would connect to a webserver running on localhost on port 80, and the webserver would in turn connect to a **WideQuick** server located on localhost at port 2140, as specified by server1 in the image above.
-  All servers that are not the default will be stored under its own node [name] in the ini-file.
+  All servers that are not the default will be stored under its own node **name** in the ini-file.
 
 - **Hostname**
 
@@ -193,7 +193,7 @@ The information is located in the `[wqre-server]` section in the ini-file.
 #### WideQuick® Web Client
 
 The tab **WideQuick® Web Client** configures how frequently **WideQuick® Web Client** should update the GUI for the project and how frequently data should be synchronized with **WideQuick® Runtime**.
-The information is located in the [wqweb] section in the ini-file.
+The information is located in the **wqweb** section in the ini-file.
 
 ![WideQuick Web Client Config Tool – WideQuick® Web Client.](./pics/install_wq/wqWebConfigWebClient.png)
 
@@ -219,7 +219,7 @@ The information is located in the [wqweb] section in the ini-file.
 
   The section Logger provides the path to the directory where the logging information is stored, as well as configuring what level of logging that should be active.
 
-  The information is located in the **[logger]** section in the ini-file.
+  The information is located in the **logger** section in the ini-file.
 
 - **File path**
 

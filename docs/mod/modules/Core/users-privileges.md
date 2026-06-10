@@ -1,53 +1,82 @@
+﻿---
+title: Users and Privileges
+description: Create and manage users and privileges in WideQuick.
+product: mod
+page_type: howto
+status: draft
+last_reviewed: 2026-06-08
+scripts:
+  - scUsers
+---
 <!-- --8<-- [start:body] -->
-Users & Privileges
-===
-In WideQuick the user is able to create user profiles with certain privileges. This enables the user to have profiles for certain purposes and limitations on availability. 
 
-## Add/Edit Users { #addedit-users }
-WideQuick allows for creation and editing of user profiles, this can be done in either in **WideQuick Designer®** or **WideQuick Runtime®**. Both will be explained below 
+# Users and Privileges
 
-### Designer { #designer }
-In the project tree, double click "Users and Privileges". Either right click "Users" and select "Add Users..." or double click "Users" and right click the user that is getting edited and select "Properties...". 
+WideQuick allows user profiles to be created with specific privileges, enabling
+role-based access control across the application. Profiles can be configured to
+restrict or grant access to specific views and actions.
 
-### Modular Framework Runtime { #modular-framework-runtime }
-In the main menu select "Inställningar" -> "Inställningar". Under "Användare och Privilegier" press ++"Ändra Användare"++. To add a new user click ++"Add..."++ and to edit an already existing user, click the user and then ++"Edit..."++. 
+## Adding and editing users { #adding-and-editing-users }
 
+Users can be managed in either **WideQuick Designer®** or **WideQuick Runtime®**.
+
+### WideQuick Designer®
+
+In the project tree, double-click **Users and Privileges**. To add a new user,
+right-click **Users** and select **Add Users...**. To edit an existing user,
+double-click **Users**, right-click the user and select **Properties...**.
+
+### WideQuick Runtime®
+
+Navigate to **Settings** in the main menu and open the **Settings** view. Under
+**Users and privileges** click **Change user**. Click **Add...** to create a new
+user or select an existing user and click **Edit...** to modify it.
 
 ![Users](/Images/User_and_privileges/Users.png)
 
-#### Settings User
+#### User settings
 
-*   User - Name of the user
-*   Description - Info about the user (Optional)
-*   Password and Verify password - Gives the user a password (Optional)
-*   Grant and Deny privileges by either double click a privilege or press it and then click either ++"Grant"++ or ++"Deny"++.
+* **User** — the username for the profile
+* **Description** — an optional description of the user
+* **Password** / **Verify password** — an optional password for the user
+* **Privileges** — grant or deny privileges by double-clicking a privilege, or
+selecting it and clicking **Grant** or **Deny**
 
 ![Edit Users](/Images/User_and_privileges/Edit_Users.png)
 
+## Adding and editing privileges { #adding-and-editing-privileges }
 
-## Add/Edit Privileges { #addedit-privileges }
+In the project tree, double-click **Users and Privileges**. To add a new privilege,
+right-click **Privileges** and select **Add Privilege...**. To edit an existing
+privilege, double-click **Privileges**, right-click the privilege and select
+**Properties...**.
 
+* **Privilege** — the name of the privilege
+* **Description** — an optional description of the privilege
+* **Default** — whether the privilege is **Granted** or **Denied** by default
+* **Virtual privilege** — if a user is granted this privilege, they will also be
+granted all privileges selected here
+* **Users** — grant or deny users by double-clicking a user, or selecting it and
+clicking **Grant** or **Deny**
 
-In the project tree, double click "Users and Privileges". Either right click "Privileges" and select "Add Privilege..." or double click "Privileges" and right click the privilege that is getting edited and select "Properties...". 
+![Privilege](/Images/User_and_privileges/Privilege.png)
 
-*   Privilege - Name of the privilege
-*   Description - Info about the privilege (Optional)
-*   Default - Denied/Granted
-*   Virtual privilege - If a user is granted the current privilege, then they will also grant privilege to all selected here.  
-*   Grant and Deny users by either double click a user or press it and then click either ++"Grant"++ or ++"Deny"++.
-*   ++"OK"++ - Finish by pressing here
+## Restricting Workviews by privilege { #restricting-workviews-by-privilege }
 
-![Edit Users](/Images/User_and_privileges/Privilege.png)
-
-### Modular Framework { #modular-framework }
-
-In order to restrict access to cretan Workviews depnding on privilegs. This can be configured in **WideQuick Runtime®** by selecting "Inställningar" -> "Arbetsvyer" -> "Arbetsvyer - privilegie" in the main menu. This will bring up the following window
+Access to specific **Workviews** can be restricted based on privileges. Navigate
+to **Settings → Workviews → Workviews - Privilege** in the main menu.
 
 ![WorkView Privilege](/Images/User_and_privileges/WorkView_privleage.png)
 
-In this window, open up the workview where the restriction is to be placed. When the workview is selected, it will bring up configuration options on the right side. 
+Select the **Workview** where the restriction should be applied. Configuration
+options will appear on the right side of the view.
 
 ![Workview Settings](/Images/User_and_privileges/Settings.png)
 
-Here the user sets the privileges requirement for that workview. The dropdown menu will display the available privileges, select the desired one and press ++"Spara"++ to save the change.
+Select the required privilege from the dropdown and click **Save** to apply the
+change.
+
+For information on how restricted **Workviews** appear in the navigation menu and
+how to configure the two display styles for locked views, see
+[Navigation — Configuring](../Core/Navigation/configuring#setting-privilege-requirements-on-views--setting-privilege-requirements-on-views-).
 <!-- --8<-- [end:body] -->

@@ -6,15 +6,35 @@ page_type: getstarted
 doc_id: DOC-M14
 status: draft
 last_reviewed: 2026-05-26
+scripts:
+  - scDashboard
+  - scAlarm
+object_libraries: 
+    - Dashboard Widgets
 ---
 <!-- --8<-- [start:body] -->
 
 # Dashboards — Get started
+???+ info "Requirements"
+    The following scripts are required to use Dashboards and all
+    related functionality covered in the Dashboards guides:
+    
+    * `scDashboard`
+    * `scAlarm`
+    * `scHistory`
+    * `scPrototypes`
+    * `scThemes`
+    * `scAlert`
+    * `scQuickSort`
+    
+    And the following Object Libraries:
+    
+    * `Dashboard Widgets`
 
 WideQuick MOD comes with three example dashboards that can be used as a starting point or modified to fit a project.
 New Dashboards can be created either from the template or from scratch depending on what the user wants.
 <figure markdown="span">
-    ![Dashboard](/Images/Dashboard/Dashboard.png)  <figcaption>The Add Report dialog in WideQuick Designer.</figcaption>
+    ![Dashboard](/Images/Dashboard/Dashboard.png)  <figcaption>The Energy Dashboard in WideQuick Runtime</figcaption>
 </figure>
 
 ## Setting Up a New Dashboard { #setting-up-a-new-dashboard }
@@ -22,10 +42,6 @@ New Dashboards can be created either from the template or from scratch depending
 Duplicate the dashboard template in **WideQuick Designer®** by right clicking the template in the project tree and move it to the correct folder in the project structure.
 
 ![Setting up a dashboard](/Images/Dashboard/SetupDashboard.gif){align=center}
-
-!!! tip
-    To set a dashboard as the default view after login, open the `WORKSPACE` workview in **WideQuick Designer®** and right-click in the centre of the view. Select the `Multiviewerpage` object under **Select Object**, open the **Multiviewer** tab and update the workview name to the dashboard view.
-
 ## Widgets — Pre-built Components for the Dashboard { #widgets-pre-built-components-for-the-dashboard }
 
 Dashboards are built using pre-built widgets from the `Dashboard Widgets` library.

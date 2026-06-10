@@ -1,4 +1,4 @@
-<!-- --8<-- [start:body] -->
+﻿<!-- --8<-- [start:body] -->
 # Reports
 WideQuick Modular Framework includes a built-in report module that allows you to 
 generate, schedule, and customize reports based on alarm and energy data. This section 
@@ -13,8 +13,6 @@ and configure report templates in **WideQuick Designer®**.
 Introduction to generating reports in **WideQuick Runtime®**.
 * [**Scheduling a report**](get-started.md#scheduling-a-report-in-widequick-runtime) — 
 How to set up recurring scheduled reports.
-* [**Common errors**](get-started.md#common-errors) — A list of common errors and how 
-to resolve them.
 
 ---
 
@@ -39,4 +37,9 @@ configure your own report template.
 How to create a ReportController view for your custom template.
 * [**Changing the maximum number of signals**](extending.md#changing-the-maximum-of-signals-to-be-selected) — 
 How to increase the signal limit for report generation.
+
+---
+
+### [Troubleshooting](../../Troubleshooting/Reports.md) { #troubleshooting }
+* [**Common Issues**](../../Troubleshooting/Reports) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

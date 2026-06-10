@@ -1,4 +1,4 @@
-﻿---
+---
 title: Calendar
 description: Visual overview of events and maintenance deadlines in month, week and day views.
 product: mod
@@ -35,5 +35,9 @@ Events come from two sources: custom events created directly in the calendar, an
 
 ### [Extending](extending.md) { #extending }
 * [**Reminder Offset**](extending.md#global-offset) — Changing the reminder offset in the database.
-* [**Troubleshooting**](extending.md#troubleshooting) — Common issues and how to fix them.
+
+---
+
+### [Troubleshooting](../../Troubleshooting/calendar.md) { #troubleshooting }
+* [**Common Issues**](../../Troubleshooting/calendar.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

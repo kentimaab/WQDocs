@@ -1,0 +1,64 @@
+# Script dependency map — single source of truth.
+# Each key is a script name; the value is its list of direct dependencies.
+# This file is read by hooks/script_deps.py to auto-generate Requirements
+# admonitions on get-started pages. Update this file when dependencies change.
+# add your script. Enters the scripts that you know you used, and the tree, will
+# handel the full dependencies.
+# Exampel: scMyscript: [scAlert, scLinking, scNav]
+# Result in tree: scMyscript: [scAler, scLinking, scPrototypes, scSubNav, scUser ,scSuffix ,scObjectFinder,scThemes]
+
+# Layer 0, no dependencies
+scAlert: []
+scQuickSort: []
+scKeybindings: []
+scModem: []
+scOSK: []
+
+#Layer 1, one singel dependencie(And its in layer 0)
+scDatabase: [scAlert]
+scObjectFinder: [scAlert]
+scUsers: [scAlert]
+scPrototypes: [scAlert]
+scPlatform: [scAlert]
+scThemes: [scAlert]
+scSuffix: [scAlert]
+scLogBook: [scAlert]
+scAuditTrail: [scAlert]
+scBackUpAndRestore: []
+scRemoteClients: [scAlert]
+scRemoteSystems: [scAlert]
+scTimeChannel: [scAlert]
+scToolTip: [scAlert]
+scTrend: [scAlert]
+scWM: [scAlert]
+scWeather: [scAlert]
+scMapObjects: [scAlert]
+scButtons: [scAlert]
+scInit: [scAlert]
+scMail: [scAlert]
+scReports: [scAlert]
+
+# More than 1 dependencie. 
+scMaintenance: [scAlert, scDatabase]
+scSubNav: [scAlert, scUsers, scSuffix]
+scHistory: [scAlert, scPrototypes, scQuickSort, scThemes]
+scNav: [scAlert, scThemes]
+scFilePicker: [scAlert, scThemes]
+scAlarm: [scAlert, scPrototypes]
+scMap: [scAlert, scThemes, scMaintenance]
+scSubNavPopup: [scAlert, scUsers, scSubNav]
+scLinking: [scAlert, scPrototypes, scSubNav, scObjectFinder]
+scSmartPopup: [scAlert, scPrototypes, scUsers, scSuffix]
+scStyrkurva: [scAlert, scSuffix]
+scStyrkurvaTid: [scAlert, scSuffix]
+scWorkviewAnimation: [scAlert, scSuffix]
+scRemoteAlarms: [scAlert, scAlarm]
+scReportScheduler: [scAlert, scReports]
+scAlarmSender: [scAlert, scMail]
+scCalendar: [scAlert, scThemes, scMaintenance]
+scDashboard: [scAlert, scHistory]
+
+scDoc: [scAlert, scThemes, scLinking]
+scAlarmFinder: [scAlert, scObjectFinder, scLinking, scMap]
+scDayViewManager: [scAlert, scThemes, scCalendar]
+scWeekViewManager: [scAlert, scThemes, scCalendar]

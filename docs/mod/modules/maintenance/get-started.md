@@ -1,4 +1,4 @@
-﻿---
+---
 title: Maintenance — Get Started
 description: Get up and running with the Maintenance module.
 product: mod
@@ -6,10 +6,19 @@ page_type: getstarted
 doc_id: DOC-M6
 status: draft
 last_reviewed: 2026-05-26
+scripts:
+  - scMaintenance
 ---
 <!-- --8<-- [start:body] -->
 
 # Maintenance — Get Started
+???+ info "Requirements"
+    The following scripts are required to use Maintenance and all
+    related functionality covered in the Maintenance guides:
+    
+    * `scMaintenance`
+    * `scDatabase`
+    * `scAlert`
 
 The Maintenance module is available through the main menu under **Maintenance**. From here there are three views for working with maintenance tasks.
 
@@ -66,10 +75,6 @@ Fill in the following fields:
 * **Description** — pre-filled from the selected template. Can be edited freely before saving.
 
 Click **Save** to save. The task is created with the status **Planned**. If Create multiple is enabled, all tasks in the series are created at once.
-
-!!! note
-    Create multiple creates a fixed batch of tasks at the time of saving. For an ongoing automated schedule, use [Recurring Maintenance](configuring.md#recurring-maintenance) instead.
-
 ## Completing a Task { #completing-a-task }
 
 1. Navigate to **Maintenance → Maint. - List**.

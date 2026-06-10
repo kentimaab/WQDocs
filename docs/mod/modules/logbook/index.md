@@ -1,4 +1,4 @@
-﻿---
+---
 title: Logbook
 description: Record and organise free-text notes tied to specific parts of the system.
 product: mod
@@ -35,5 +35,9 @@ The logbook is available in three places: globally under **Documents & Logbook �
 
 ### [Extending](extending.md) { #extending }
 * [**Privileges**](extending.md#privileges) — Required privileges for adding, editing and deleting entries.
-* [**Troubleshooting**](extending.md#troubleshooting) — Common issues and how to fix them.
+
+---
+
+### [Troubleshooting](../../Troubleshooting/logbook.md) { #troubleshooting }
+* [**Common Issues**](../../Troubleshooting/logbook.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

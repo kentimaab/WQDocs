@@ -139,7 +139,7 @@ app._subNavTarget = { root: root, dir: dir };
 
 !!! note
     Directory linking requires the Fullscreen Menu to be available. See
-    [Navigation — Get started](../Navigation/get-started.md) for more information.
+    [Navigation — Get started](../Core/Navigation/get-started.md) for more information.
 
 #### Linking to a specific object
 To link an indicator directly to a specific object, add a **targetObject** property
@@ -151,7 +151,7 @@ scLinking.goTo(this.targetObject);
 ```
 
 This will navigate to the **Workview** containing the target object and highlight it.
-For more information about GoTo, see [Navigation — Extending](../Navigation/extending.md#goto).
+For more information about GoTo, see [Navigation — Extending](../Core/Navigation/extending.md#goto).
 
 !!! tip
     Use **linkedView** with a `.kvie` path to navigate to a specific **Workview**,

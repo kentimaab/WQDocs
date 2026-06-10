@@ -54,6 +54,7 @@ nav = [
       { "Install Runtime" = "wq/get-started/install-runtime.md" },
       { "Install Web Client" = "wq/get-started/install-web-client.md" },
       { "Web Client" = "wq/get-started/web-client.md" },
+      { "Installing WideQuick" = "wq/get-started/Installing-WideQuick.md" },
     ]},
     { "Guides" = [
       { "Deployment" = [
@@ -80,9 +81,7 @@ nav = [
       
       { "Core" = [
         { "Overview" = "mod/modules/Core/index.md" },
-        { "Navigation Framework" = "mod/modules/Core/navigation-framework.md" },
         { "Settings" = "mod/modules/Core/settings.md" },
-        { "Themes" = "mod/modules/Core/themes.md" },
         { "Users Privileges" = "mod/modules/Core/users-privileges.md" },
         { "Alarms" = [
           { "Overview" = "mod/modules/Core/alarms/index.md" },
@@ -95,6 +94,12 @@ nav = [
           { "Get Started" = "mod/modules/Core/Themes/get-started.md" },
           { "Configuring" = "mod/modules/Core/Themes/configuring.md" },
           { "Extending" = "mod/modules/Core/Themes/extending.md" },
+        ]},
+        { "Navigation" = [
+          { "Overview" = "mod/modules/Core/Navigation/index.md" },
+          { "Get Started" = "mod/modules/Core/Navigation/get-started.md" },
+          { "Configuring" = "mod/modules/Core/Navigation/configuring.md" },
+          { "Extending" = "mod/modules/Core/Navigation/extending.md" },
         ]},
       ]},
       { "Dashboards" = [
@@ -145,12 +150,17 @@ nav = [
         { "Configuring" = "mod/modules/reports/configuring.md" },
         { "Extending" = "mod/modules/reports/extending.md" },
       ]},
-      { "Navigation" = [
-        { "Overview" = "mod/modules/Navigation/index.md" },
-        { "Get Started" = "mod/modules/Navigation/get-started.md" },
-        { "Configuring" = "mod/modules/Navigation/configuring.md" },
-        { "Extending" = "mod/modules/Navigation/extending.md" },
+      { "Audit Trail" = [
+        { "Overview" = "mod/modules/audit-trail/index.md" },
+        { "Get Started" = "mod/modules/audit-trail/get-started.md" },
+        { "Configuring" = "mod/modules/audit-trail/configuring.md" },
       ]},
+      { "Backup And Restore" = [
+        { "Overview" = "mod/modules/backup-and-restore/index.md" },
+        { "Get Started" = "mod/modules/backup-and-restore/get-started.md" },
+        { "Configuring" = "mod/modules/backup-and-restore/configuring.md" },
+      ]},
+      { "Loggers" = "mod/modules/Loggers.md" },
       { "Popup" = [
         { "Overview" = "mod/modules/Popup/index.md" },
         { "Tab" = "mod/modules/Popup/Tab.md" },
@@ -168,11 +178,10 @@ nav = [
     ]},
     { "Guides" = [
       { "Overview" = "mod/guides/index.md" },
-      { "Audit Trail" = "mod/guides/audit-trail.md" },
       { "Automatic Scaling" = "mod/guides/automatic-scaling.md" },
-      { "Backup Restore" = "mod/guides/backup-restore.md" },
       { "Create A Popup" = "mod/guides/create-a-popup.md" },
       { "Create An Object" = "mod/guides/create-an-object.md" },
+      { "Languages" = "mod/guides/languages.md" },
       { "Remote Systems" = "mod/guides/remote-systems.md" },
       { "Workview Animations" = "mod/guides/workview-animations.md" },
     ]},
@@ -182,6 +191,7 @@ nav = [
       { "Resources And Resurspaket" = "mod/reference/resources-and-resurspaket.md" },
       { "Suffix System" = "mod/reference/suffix-system.md" },
       { "Tag Structure" = "mod/reference/tag-structure.md" },
+      { "Script Hierarchy" = "mod/reference/ScriptHierarchy.md" },
       { "Database Schemas" = [
         { "Overview" = "mod/reference/database-schemas/index.md" },
         { "Config Db" = "mod/reference/database-schemas/config-db.md" },
@@ -189,6 +199,15 @@ nav = [
         { "Maintenance Db" = "mod/reference/database-schemas/maintenance-db.md" },
         { "Suffixconfig Db" = "mod/reference/database-schemas/suffixconfig-db.md" },
       ]},
+    ]},
+    { "Troubleshooting" = [
+      { "Overview" = "mod/Troubleshooting/index.md" },
+      { "Calendar" = "mod/Troubleshooting/calendar.md" },
+      { "Dashboards" = "mod/Troubleshooting/dashboards.md" },
+      { "History" = "mod/Troubleshooting/history.md" },
+      { "Logbook" = "mod/Troubleshooting/logbook.md" },
+      { "Maintenance" = "mod/Troubleshooting/maintenance.md" },
+      { "Reports" = "mod/Troubleshooting/Reports.md" },
     ]},
     { "Releases" = "mod/releases/index.md" },
   ]},
@@ -275,6 +294,7 @@ nav = [
     { "Get Started" = [
       { "Overview" = "wwt/get-started/index.md" },
       { "What Is Wwt" = "wwt/get-started/what-is-wwt.md" },
+      { "Download" = "wwt/get-started/download.md" },
     ]},
     { "Modules" = [
       { "Core" = [

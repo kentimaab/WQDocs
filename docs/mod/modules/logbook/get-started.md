@@ -1,4 +1,4 @@
-﻿---
+---
 title: Logbook — Get Started
 description: Get up and running with the Logbook module.
 product: mod
@@ -6,10 +6,25 @@ page_type: getstarted
 doc_id: DOC-M15
 status: draft
 last_reviewed: 2026-05-26
+scripts:
+  - scDoc
 ---
 <!-- --8<-- [start:body] -->
 
 # Logbook — Get Started
+???+ info "Requirements"
+    The following scripts are required to use Logbook and all
+    related functionality covered in the Logbook guides:
+    
+    * `scDoc`
+    * `scLinking`
+    * `scSubNav`
+    * `scObjectFinder`
+    * `scPrototypes`
+    * `scSuffix`
+    * `scThemes`
+    * `scUsers`
+    * `scAlert`
 
 The Logbook is available in the main menu under **Documents & Logbook → Logbook**.
 

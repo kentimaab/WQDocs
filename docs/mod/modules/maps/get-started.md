@@ -6,19 +6,27 @@ page_type: getstarted
 doc_id: DOC-M14
 status: draft
 last_reviewed: 2026-05-19
+scripts:
+  - scMap
+object_libraries: 
+    -Map Indicators
+    -WEATHER 
 ---
 <!-- --8<-- [start:body] -->
 
 # Maps & Indicators — Get started
-
-???+ note
-    The **Map Indicators** module requires the following script libraries to function:
-
-    * `scMap` script
-    * `scAlert` script
-
+???+ info "Requirements"
+    The following scripts are required to use Maps & Indicators and all
+    related functionality covered in the Maps & Indicators guides:
+    
+    * `scMap`
+    * `scMaintenance`
+    * `scDatabase`
+    * `scThemes`
+    * `scAlert`
+    
     And the following Object Libraries:
-
+    
     * `Map Indicators`
     * `WEATHER`
 

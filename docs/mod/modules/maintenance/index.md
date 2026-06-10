@@ -1,4 +1,4 @@
-﻿---
+---
 title: Maintenance
 description: Schedule, track and automate maintenance tasks for objects in the system.
 product: mod
@@ -37,5 +37,10 @@ There are two ways to access maintenance tasks. The **Maint. - List** view in th
 
 ### [Extending](extending.md) { #extending }
 * [**Calendar Integration**](extending.md#calendar-integration) — How maintenance deadlines appear as calendar events.
-* [**Troubleshooting**](extending.md#troubleshooting) — Common issues and how to fix them.
+* [**Change History**](extending.md#change-history) — Automatic change logging for tasks.
+
+---
+
+### [Troubleshooting](../../Troubleshooting/maintenance.md) { #troubleshooting }
+* [**Common Issues**](../../Troubleshooting/maintenance.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

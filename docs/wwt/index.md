@@ -31,7 +31,7 @@ hide:
 
     Set up the WWT concept app and verify hardware compatibility.
 
-    [Walkthrough →](get-started/)
+    [Walkthrough →](get-started/download.md)
 
 -   **Connect a station**
 

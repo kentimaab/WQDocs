@@ -6,15 +6,30 @@ page_type: getstarted
 doc_id: DOC-M16
 status: draft
 last_reviewed: 2026-05-27
+scripts:
+  - scDoc
 ---
 <!-- --8<-- [start:body] -->
 
 # Documents — Get Started
+???+ info "Requirements"
+    The following scripts are required to use Documents and all
+    related functionality covered in the Documents guides:
+    
+    * `scDoc`
+    * `scLinking`
+    * `scSubNav`
+    * `scObjectFinder`
+    * `scPrototypes`
+    * `scSuffix`
+    * `scThemes`
+    * `scUsers`
+    * `scAlert`
+
 
 The Documents module is available under **Documents & Logbook -> Documents** in the main menu. The **Documents - List** view is the main entry point — it lists all documents available in the system and lets you add, preview and manage them.
 
-!!! note "Requirements"
-    The `scDoc` script must be running for the Documents module to work.
+
 
 ## Files view { #files-view }
 
