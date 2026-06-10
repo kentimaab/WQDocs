@@ -220,15 +220,25 @@ nav = [
     { "Modules" = [
       { "Core" = [
         { "Overview" = "bms/modules/Core/index.md" },
-        { "Navigation Framework" = "bms/modules/Core/navigation-framework.md" },
         { "Settings" = "bms/modules/Core/settings.md" },
-        { "Themes" = "bms/modules/Core/themes.md" },
         { "Users Privileges" = "bms/modules/Core/users-privileges.md" },
         { "Alarms" = [
           { "Overview" = "bms/modules/Core/alarms/index.md" },
           { "Get Started" = "bms/modules/Core/alarms/get-started.md" },
           { "Configuring" = "bms/modules/Core/alarms/configuring.md" },
           { "Extending" = "bms/modules/Core/alarms/extending.md" },
+        ]},
+        { "Themes" = [
+          { "Overview" = "bms/modules/Core/Themes/index.md" },
+          { "Get Started" = "bms/modules/Core/Themes/get-started.md" },
+          { "Configuring" = "bms/modules/Core/Themes/configuring.md" },
+          { "Extending" = "bms/modules/Core/Themes/extending.md" },
+        ]},
+        { "Navigation" = [
+          { "Overview" = "bms/modules/Core/Navigation/index.md" },
+          { "Get Started" = "bms/modules/Core/Navigation/get-started.md" },
+          { "Configuring" = "bms/modules/Core/Navigation/configuring.md" },
+          { "Extending" = "bms/modules/Core/Navigation/extending.md" },
         ]},
       ]},
       { "Dashboards" = [
@@ -299,15 +309,25 @@ nav = [
     { "Modules" = [
       { "Core" = [
         { "Overview" = "wwt/modules/Core/index.md" },
-        { "Navigation Framework" = "wwt/modules/Core/navigation-framework.md" },
         { "Settings" = "wwt/modules/Core/settings.md" },
-        { "Themes" = "wwt/modules/Core/themes.md" },
         { "Users Privileges" = "wwt/modules/Core/users-privileges.md" },
         { "Alarms" = [
           { "Overview" = "wwt/modules/Core/alarms/index.md" },
           { "Get Started" = "wwt/modules/Core/alarms/get-started.md" },
           { "Configuring" = "wwt/modules/Core/alarms/configuring.md" },
           { "Extending" = "wwt/modules/Core/alarms/extending.md" },
+        ]},
+        { "Themes" = [
+          { "Overview" = "wwt/modules/Core/Themes/index.md" },
+          { "Get Started" = "wwt/modules/Core/Themes/get-started.md" },
+          { "Configuring" = "wwt/modules/Core/Themes/configuring.md" },
+          { "Extending" = "wwt/modules/Core/Themes/extending.md" },
+        ]},
+        { "Navigation" = [
+          { "Overview" = "wwt/modules/Core/Navigation/index.md" },
+          { "Get Started" = "wwt/modules/Core/Navigation/get-started.md" },
+          { "Configuring" = "wwt/modules/Core/Navigation/configuring.md" },
+          { "Extending" = "wwt/modules/Core/Navigation/extending.md" },
         ]},
       ]},
       { "Dashboards" = [
