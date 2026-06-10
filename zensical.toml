@@ -101,6 +101,11 @@ nav = [
           { "Configuring" = "mod/modules/Core/Navigation/configuring.md" },
           { "Extending" = "mod/modules/Core/Navigation/extending.md" },
         ]},
+        { "Graphical Symbols" = [
+          { "Overview" = "mod/modules/Core/Graphical-symbols/index.md" },
+          { "Symbol Libraries" = "mod/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Legacy Symbols" = "mod/modules/Core/Graphical-symbols/legacy.md" },
+        ]},
       ]},
       { "Dashboards" = [
         { "Overview" = "mod/modules/dashboards/index.md" },
@@ -240,6 +245,11 @@ nav = [
           { "Configuring" = "bms/modules/Core/Navigation/configuring.md" },
           { "Extending" = "bms/modules/Core/Navigation/extending.md" },
         ]},
+        { "Graphical Symbols" = [
+          { "Overview" = "bms/modules/Core/Graphical-symbols/index.md" },
+          { "Symbol Libraries" = "bms/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Legacy Symbols" = "bms/modules/Core/Graphical-symbols/legacy.md" },
+        ]},
       ]},
       { "Dashboards" = [
         { "Overview" = "bms/modules/dashboards/index.md" },
@@ -289,6 +299,16 @@ nav = [
         { "Configuring" = "bms/modules/reports/configuring.md" },
         { "Extending" = "bms/modules/reports/extending.md" },
       ]},
+      { "Audit Trail" = [
+        { "Overview" = "bms/modules/audit-trail/index.md" },
+        { "Get Started" = "bms/modules/audit-trail/get-started.md" },
+        { "Configuring" = "bms/modules/audit-trail/configuring.md" },
+      ]},
+      { "Backup and Restore" = [
+        { "Overview" = "bms/modules/backup-and-restore/index.md" },
+        { "Get Started" = "bms/modules/backup-and-restore/get-started.md" },
+        { "Configuring" = "bms/modules/backup-and-restore/configuring.md" },
+      ]},
     ]},
     { "Guides" = [
       { "Backup & Restore" = "bms/guides/backup-and-restore/index.md" },
@@ -328,6 +348,11 @@ nav = [
           { "Get Started" = "wwt/modules/Core/Navigation/get-started.md" },
           { "Configuring" = "wwt/modules/Core/Navigation/configuring.md" },
           { "Extending" = "wwt/modules/Core/Navigation/extending.md" },
+        ]},
+        { "Graphical Symbols" = [
+          { "Overview" = "wwt/modules/Core/Graphical-symbols/index.md" },
+          { "Symbol Libraries" = "wwt/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Legacy Symbols" = "wwt/modules/Core/Graphical-symbols/legacy.md" },
         ]},
       ]},
       { "Dashboards" = [
@@ -377,6 +402,16 @@ nav = [
         { "Get Started" = "wwt/modules/reports/get-started.md" },
         { "Configuring" = "wwt/modules/reports/configuring.md" },
         { "Extending" = "wwt/modules/reports/extending.md" },
+      ]},
+      { "Audit Trail" = [
+        { "Overview" = "wwt/modules/audit-trail/index.md" },
+        { "Get Started" = "wwt/modules/audit-trail/get-started.md" },
+        { "Configuring" = "wwt/modules/audit-trail/configuring.md" },
+      ]},
+      { "Backup and Restore" = [
+        { "Overview" = "wwt/modules/backup-and-restore/index.md" },
+        { "Get Started" = "wwt/modules/backup-and-restore/get-started.md" },
+        { "Configuring" = "wwt/modules/backup-and-restore/configuring.md" },
       ]},
     ]},
     { "Guides" = [

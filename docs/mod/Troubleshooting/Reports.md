@@ -9,16 +9,6 @@ last_reviewed: 2026-06-08
 ---
 <!-- --8<-- [start:body] -->
 
----
-title: Reports — Troubleshooting
-description: Common issues and solutions for the Reports module.
-product: mod
-page_type: troubleshooting
-status: draft
-last_reviewed: 2026-06-08
----
-<!-- --8<-- [start:body] -->
-
 # Reports — Troubleshooting
 
 ## Common issues { #common-issues }
