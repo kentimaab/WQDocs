@@ -1,4 +1,4 @@
----
+﻿---
 title: Tag Structure
 description: Tag structure and configuration for WideQuick Modular Framework.
 product: mod
@@ -154,7 +154,7 @@ any display element connected to a signal with that suffix.
 
 !!! note
     Similar alias systems exist for object animations and popups. See
-    [Workview Animations](#) and [Popups](#) for more information.
+    [Workview Animations](../guides/workview-animations.md) and [Popups](../modules/Popup/index.md) for more information.
 
 ## Special properties on tags { #special-properties-on-tags }
 It is possible to define tag-specific properties and descriptions for a tag, which
@@ -181,4 +181,3 @@ requires the privilege "Config" to edit:
 !!! warning
     The tag must contain a description for the override to work. It is not possible
     to write only `DECIMAL=3;` without also providing a description.
-

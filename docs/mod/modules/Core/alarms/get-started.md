@@ -6,16 +6,21 @@ page_type: getstarted
 doc_id: DOC-M9
 status: draft
 last_reviewed: 2026-05-29
+scripts:
+  - scAlarm
 ---
 <!-- --8<-- [start:body] -->
 
 # Alarms — Get Started
+???+ info "Requirements"
+    The following scripts are required to use Alarms and all
+    related functionality covered in the Alarms guides:
+    
+    * `scAlarm`
+    * `scPrototypes`
+    * `scAlert`
 
 The Alarms module provides real-time alarm monitoring across the WideQuick MOD installation. Alarms are defined in **WideQuick Designer®** and monitored at runtime through a set of dedicated views accessible from the main navigation.
-
-!!! note "Requirements"
-    The `scAlarm` script must be running for the Alarms module to work.
-
 ## Alarm views { #alarm-views }
 
 The alarm views are accessible from the **Alarms** section in the main navigation.

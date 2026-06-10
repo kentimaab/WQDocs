@@ -1,4 +1,4 @@
-﻿---
+---
 title: History
 description: Graphical views of logged signal data for the whole project, a specific workview, or a single object.
 product: mod
@@ -37,5 +37,9 @@ All three views are built on the same chart component and share the same control
 ### [Extending](extending.md) { #extending }
 * [**Opening View-Specific History**](extending.md#opening-view-specific-history) — Script for opening the view-scoped history popup from a workview.
 * [**Signals Not Logged**](extending.md#signals-not-logged) — Showing signals that exist but are not being logged.
-* [**Troubleshooting**](extending.md#troubleshooting) — Common issues and how to fix them.
+
+---
+
+### [Troubleshooting](../../Troubleshooting/history.md) { #troubleshooting }
+* [**Common Issues**](../../Troubleshooting/history.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

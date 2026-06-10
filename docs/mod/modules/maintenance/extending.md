@@ -1,4 +1,4 @@
-﻿---
+---
 title: Maintenance — Extending
 description: Extend the Maintenance module — calendar integration and troubleshooting.
 product: mod
@@ -23,23 +23,6 @@ A reminder event appears in the calendar a set number of days before each task's
 
 ## Change History { #change-history }
 
-Every change to a maintenance task — status, deadline, assignee, priority and description — is automatically recorded and viewable under **History → Logs → Trace log → Audit Trail - Maintenance**. No configuration is needed. See [Trace Log](/mod/guides/audit-trail/#maintenance-change-log) for details.
+Every change to a maintenance task — status, deadline, assignee, priority and description — is automatically recorded and viewable under **History → Logs → Trace log → Audit Trail - Maintenance**. No configuration is needed. See [Trace Log](/mod/modules/audit-trail/get-started/#maintenance-change-log) for details.
 
-## Troubleshooting { #troubleshooting }
-
-### Maintenance widget on the dashboard always shows zero for active tasks { #maintenance-widget-on-the-dashboard-always-shows-zero-for-active-tasks }
-
-Confirm that the maintenance database connection is active and that the maintenance table contains records with the expected status values.
-
-### A recurring task was not created after completing the previous one { #a-recurring-task-was-not-created-after-completing-the-previous-one }
-
-Check that the configuration is still set to active. If the object was removed from the configuration's object list between completions, no new task is generated for that object.
-
-### Tasks show the status Ongoing { #tasks-show-the-status-ongoing }
-
-**Ongoing** is a legacy status from an earlier version of the module. The `scMaintenance` script includes a migration that automatically converts these to **Planned** on startup. If tasks still show **Ongoing** after the system has been restarted, check that the `scMaintenance` script is running and that the migration completed without errors.
-
-### A missed task did not generate a follow-up { #a-missed-task-did-not-generate-a-follow-up }
-
-Check that **Auto-create next maintenance on missed deadline** is enabled on the recurring configuration. If it is disabled, the schedule does not continue automatically when a task is missed.
 <!-- --8<-- [end:body] -->

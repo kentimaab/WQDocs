@@ -32,7 +32,7 @@ list. The **Workview** will then only be accessible to users with the correct pr
 Privileges can be applied to both individual **Workviews** and entire **Workview**
 folders.
 
-![SettingPriv](../../../Images/Navigation/SettingPriv.png)
+![SettingPriv](/Images/Navigation/SettingPriv.png)
 
 !!! note "Encrypted projects"
     If your project is encrypted, **WideQuick** will not be able to suggest privileges.
@@ -46,7 +46,7 @@ There are several settings controlling how restricted folders are displayed for 
 without the required privilege. These settings can be found under **Settings** in
 **WideQuick Runtime®**.
 
-![DisplayPriv](../../../Images/Navigation/Display%20priv.png)
+![DisplayPriv](/Images/Navigation/Display%20priv.png)
 
 There are two toggle options: **Show locked menus** and **Show locked submenus**. These
 toggles offer three meaningful combinations. Note that if **Show locked menus** is
@@ -54,7 +54,7 @@ disabled, its submenus will not be shown regardless of the **Show locked submenu
 setting.
 
 
-![Display settings combinations](../../../Images/Navigation/Combined,%20options.png){align=center}
+![Display settings combinations](/Images/Navigation/Combined,%20options.png){align=center}
 
 
 * **Left** — Both enabled.

@@ -11,5 +11,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x
-      - run: pip install zensical
+      - run: pip install zensical pyyaml
+      - run: python hooks/script_deps.py docs
       - run: zensical build --clean
+      - run: git checkout docs/

@@ -1,4 +1,4 @@
----
+﻿---
 title: Dashboards — Extending
 description: Extend and customise the Dashboards module beyond the defaults.
 product: mod
@@ -65,23 +65,4 @@ if (System.currentUser().hasPrivilege("Config")){
 
 ---
 
-## Troubleshooting — Common Issues and How to Fix Them { #troubleshooting-common-issues-and-how-to-fix-them }
-
-### Widget header shows "undefined" { #widget-header-shows-undefined }
-
-The `Header` property was left empty on a widget that does not have a default fallback value. Either set the `Header` property on the widget instance or add a fallback in the widget `onLoad` script.
-
-> **Note:** A plain string set as `Header` will not be picked up by the translation system. The string needs to be added to `Translations.klib` and then the translation has to be entered under **Translations → Project Translation** in the project tree.
-
-### Signal value shows -- or is blank { #signal-value-shows-or-is-blank }
-
-The signal path passed to the widget does not match any entry in DataStore. Check for typos, confirm the signal exists in DataStore and verify that the driver is connected and writing values.
-
-### Alarm widgets show no alarms despite active alarms existing { #alarm-widgets-show-no-alarms-despite-active-alarms-existing }
-
-The `Grupp` or `Grupper` parameter is set to a group name that does not match any alarm group in the project. Leave the parameter empty to show all alarms, or check the exact group name in the alarm configuration.
-
-### Maintenance widget always shows zero for active tasks { #maintenance-widget-always-shows-zero-for-active-tasks }
-
-Confirm that the maintenance database connection is active and that the maintenance table contains records with the expected status values.
 <!-- --8<-- [end:body] -->

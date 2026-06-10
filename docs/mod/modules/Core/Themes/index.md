@@ -16,23 +16,19 @@ Themes ship in light and dark variants. Both can be selected in **WideQuick Desi
 
 Because themes follow the M3 standard, a complete theme with all color roles, elevation surfaces, and dark/light variants can be generated from a single brand color. This makes it practical to build themes that match a customer's graphical profile and the result is coherent, visually distinct, and standards-compliant without manually defining every role.
 
-!!! note "Requirements"
-    The `scThemes` script must be running for the Themes module to work.
-
 ## Contents { #contents }
 
 ### [Get started](get-started.md) { #get-started }
 * [**Light and dark mode**](get-started.md#light-and-dark-mode) — The two theme variants and what they look like.
-* [**Switching themes**](get-started.md#switching-themes) — Setting the start theme in **WideQuick Designer®** and toggling at runtime.
+* [**Switching themes**](get-started.md#switching-themes) — Setting the start theme in **WideQuick Designer®** and switching at runtime in **WideQuick Runtime®**.
 * [**How objects follow themes**](get-started.md#how-objects-follow-themes) — How colors, text, and alarm states update automatically with the theme.
 
 ---
 
 ### [Configuring](configuring.md) { #configuring }
-* [**Changing a specific color**](configuring.md#changing-a-specific-color) — Editing individual color roles in the theme editor.
-* [**Color roles**](configuring.md#color-roles) — Overview of the M3 color role system.
-* [**Assigning color roles to objects**](configuring.md#assigning-color-roles-to-objects) — Connecting objects to theme roles in **WideQuick Designer®**.
-* [**Custom colors**](configuring.md#custom-colors) — Adding project-specific colors to a theme.
+* [**Changing a color**](configuring.md#changing-a-color) — Editing color values in the theme editor.
+* [**How colors are applied to objects**](configuring.md#how-colors-are-applied-to-objects) — How objects reference theme colors through scripts.
+* [**Custom colors**](configuring.md#custom-colors) — Project-specific colors and how to add them.
 
 ---
 

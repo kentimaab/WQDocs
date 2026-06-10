@@ -6,25 +6,31 @@ page_type: getstarted
 doc_id: DOC-M14
 status: draft
 last_reviewed: 2026-05-21
+scripts:
+  - scNav
+  - scSubNavPopup
+  - scLinking
 ---
 <!-- --8<-- [start:body] -->
 
 # Navigation — Get started
-
-???+ note
-    The **Navigation** module requires the following script libraries to function:
-
-    * `scNav` script
-    * `scSubNav` script
-    * `scSubNavPopup` script
-    * `scAlert` script
-    * `scUsers` script
-    * `scLinking` script
-    * `scPrototypes` script
-    * `scObjectFinder` script
-
-    And the following **Object Libraries**:
-
+???+ info "Requirements"
+    The following scripts are required to use Navigation and all
+    related functionality covered in the Navigation guides:
+    
+    * `scNav`
+    * `scSubNavPopup`
+    * `scLinking`
+    * `scSubNav`
+    * `scObjectFinder`
+    * `scPrototypes`
+    * `scSuffix`
+    * `scThemes`
+    * `scUsers`
+    * `scAlert`
+    
+    And the following Object Libraries:
+    
     * `Navigation`
 
 This section covers the basics of the Navigation module, including how to add 
@@ -33,8 +39,8 @@ module automatically builds the menu structure based on the folder structure in
 **WideQuick Designer®**, making it easy to manage and extend as the project grows.
 
 For access control and display settings for restricted views, see 
-[Navigation — Configuring](configuring.md). For advanced functionality such as GoTo 
-shortcuts and custom icons, see [Navigation — Extending](extending.md).
+[Navigation — Configuring](configuring). For advanced functionality such as GoTo 
+shortcuts and custom icons, see [Navigation — Extending](extending).
 
 ## Adding Workviews to the navigation { #adding-workviews-to-the-navigation }
 The automatic navigation consists of two parts: the **Main_Menu** folder and the 
@@ -51,9 +57,9 @@ open the view directly.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
-![Single Depth](../../../Images/Navigation/Navigation_depth.png)
+![Single Depth](/Images/Navigation/Navigation_depth.png)
 
-![Single Depth Menu](../../../Images/Navigation/Navigation_single_menu.png)
+![Single Depth Menu](/Images/Navigation/Navigation_single_menu.png)
 
 </div>
 
@@ -63,7 +69,7 @@ can be nested inside to build even deeper navigation structures.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
-![Depth](../../../Images/Navigation/Navigation_single.png)
+![Depth](/Images/Navigation/Navigation_single.png)
 
 ![Depth Navigation](/Images/Navigation/Navigation_depth_menu.png)
 
@@ -77,7 +83,7 @@ allows quick navigation to nested views. It can be toggled in **WideQuick Runtim
 The menu is built automatically from the directory structure in **WideQuick Designer®**, 
 meaning design decisions made there are reflected directly in runtime.
 
-![FullScreen_Toggle](../../../Images/Navigation/ToggleFullNav.png)
+![FullScreen_Toggle](/Images/Navigation/ToggleFullNav.png)
 
 The Fullscreen Menu is designed to display as many **Workviews** as possible while 
 remaining organized. The layout follows these rules:
@@ -103,5 +109,5 @@ Together these two mechanisms allow the Fullscreen Menu to scale to systems of a
 size — no matter how many views or directories a project contains, the menu will always 
 remain navigable.
 
-![FullScreen_Menu](../../../Images/Navigation/Nav_2Stor.png)
+![FullScreen_Menu](/Images/Navigation/Nav_2Stor.png)
 

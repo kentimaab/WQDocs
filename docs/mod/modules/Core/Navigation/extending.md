@@ -35,7 +35,7 @@ scLinking.goTo("YOUR_OBJECT.NAME");
 In the example below, the `goTo()` function is applied to a button's **onClick** action
 with the target object `MB.AS01.LB02_GT43`:
 
-![goTo](../../../Images/Navigation/goTO.gif)
+![goTo](/Images/Navigation/goTO.gif)
 
 ### GoTo in Alarm Groups { #goto-in-alarm-groups }
 GoTo can also be integrated into **Alarm Group** and the **AlarmList**, allowing users to
@@ -59,7 +59,10 @@ display text and select a colour.
 5. Select the **Measure** category — pressing this column for a specific alarm will
 trigger GoTo and navigate to the **Workview** where that alarm originated.
 
-![Alarm_Goto](../../../Images/Navigation/Alarm_goTo.png)
+![Alarm_Goto](/Images/Navigation/Alarm_goTo.png)
+
+!!! note 
+    In order to use the Goto function on Alarms, the script `scAlarmFinder` is needed
 
 
 ## Custom navigation icons { #custom-navigation-icons }

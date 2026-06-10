@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dashboards
 tags:
   - test
@@ -44,5 +44,10 @@ and maintenance status.
 
 - [**Custom Widgets**](extending.md#custom-widgets-building-new-widgets-from-existing-templates) — Building new widgets from existing templates.
 - [**Role-Based Dashboards**](extending.md#role-based-dashboards-controlling-access-and-default-views) — Controlling access and default views.
-- [**Troubleshooting**](extending.md#troubleshooting-common-issues-and-how-to-fix-them) — Common issues and how to fix them.
+
+---
+
+### [Troubleshooting](../../Troubleshooting/dashboards.md) { #troubleshooting }
+
+- [**Common Issues**](../../Troubleshooting/dashboards.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

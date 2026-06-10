@@ -12,9 +12,7 @@ last_reviewed: 2026-05-29
 
 ## Creating a custom theme { #creating-a-custom-theme }
 
-WideQuick MOD themes are built on Material Design 3 (M3). This means a full theme, including all color roles, light and dark variants, elevation surfaces, and contrast levels, can be generated from a single source color. The result is a theme that is immediately coherent, visually distinct, and standards-compliant without manually defining every role.
-
-This makes it straightforward to create themes that closely follow a customer's or organization's graphical profile. Feed in the brand's primary color and the M3 system derives all supporting colors in a way that works well together across both light and dark modes.
+A complete theme can be generated from a single brand color. Feed that color into the theme builder and all supporting colors, light and dark variants, elevation surfaces, and contrast levels are derived automatically — the result is a theme that fits the customer's or organization's graphical profile and works well across all states.
 
 ### Step 1 — Generate the theme { #step-1-generate-the-theme }
 

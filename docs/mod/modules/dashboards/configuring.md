@@ -155,21 +155,23 @@ Displays real-time signal distribution as a pie chart. Includes an expand button
 
 ### Bar Chart { #bar-chart }
 
-Displays monthly signal value comparisons as a bar chart. Suited for energy comparisons over time. Includes an expand button that opens a fullscreen view.
+Displays signal value comparisons as a bar chart across configurable time periods. Suited for energy comparisons over time. Includes an expand button that opens a fullscreen view.
 
 ![Bar Chart](/Images/Dashboard/Widget.png){align=center}
 
 **Parameters**
 
 * `Signaler` — Array of signal paths to display.
-* `Typ` — Aggregation mode. Determines how each month's bar value is calculated. Defaults to `Add`.
-* `Months` — Number of months to display. Defaults to 12.
+* `Typ` — Aggregation mode. Determines how each period's bar value is calculated. Defaults to `Add`.
+* `TimePeriod` — The time unit for each bar: `"Day"`, `"Week"`, `"Month"` or `"Year"`. Defaults to `"Month"`.
+* `TimeSpan` — Number of periods to display. Defaults to `12`.
 
 | `Typ` | Description |
 |---|---|
-| `Add` | Sums all logged values within each month. Use for instantaneous signals such as power, where the sum represents total energy consumed. |
-| `Average` | Calculates the average of all logged values within each month. Use for continuous signals such as temperature. |
-| `Growth` | Shows the increase in the signal's maximum value from one month to the next. Use for cumulative counters where the signal is a running total. |
+| `Add` | Sums all logged values within each period. Use for instantaneous signals such as power, where the sum represents total energy consumed. |
+| `Average` | Calculates the average of all logged values within each period. Use for continuous signals such as temperature. |
+| `Trend` | Shows the difference between the last value in the current period and the last value in the previous period. Use for signals where the change from one period to the next is what matters. |
+| `Result` | Shows the last logged value within each period. Use for signals where the end-of-period state is what matters. |
 
 ---
 

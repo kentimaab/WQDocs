@@ -66,7 +66,7 @@ To manage reports in **WideQuick Runtime®**, navigate to
 **History → Reports → Reports - List**. This page displays a list of all 
 generated reports with two columns:
 
-* **Report** — The name of the report, defaulting to Alarm Report [#] where [#] 
+* **Report** — The name of the report, defaulting to Alarm Report \[#\] where \[#\] 
 indicates the generation number.
 * **Timestamp** — The date and time at which the recording ends.
 
@@ -173,14 +173,29 @@ Below are descriptions of the options on the first and third pages:
 * First page
 
     * **Name of schedule** — The name of the schedule.
-    * **Active schedule** — Toggles whether the scheduled report is active and will 
+    * **Active schedule** — Toggles whether the scheduled report is active and will
     be sent.
-    * **Report tamplate** — The report template to use. Defaults to 
-    **Alarm_Report**. See [here](extending.md#creating-templates) for guidance on creating 
-    templates.
-    * **Frequency** — How often the report is generated. Options are: daily, weekly, 
-    monthly, quarterly, or yearly.
+    * **Report template** — The report template to use. Defaults to
+    **Alarm_Report**. See [here](extending.md#creating-templates) for guidance on
+    creating templates.
+    * **Frequency** — How often the report is generated. The available options and
+    their additional settings are:
+
+        * **Daily** — Select a specific time of day. Times are available in
+        30-minute intervals.
+        * **Weekly** — Select a day of the week and a specific time of day.
+        * **Monthly** — Select a day of the month and a specific time of day.
+        The system automatically handles months with 30 or 31 days, as well as
+        February and leap years.
+        * **Quarterly** — Select which month of the quarter (1, 2, or 3), the
+        day of that month, and a specific time of day.
+        * **Yearly** — Select a month, the day of that month, and a specific
+        time of day.
+
     * **Description of schedule** — A description of the schedule.
+    !!! note
+        Schedules are checked every 5 minutes. The configured time is therefore
+        approximate — reports may be sent up to 5 minutes after the set time.
 
 * Third page
 
@@ -193,17 +208,5 @@ Below are descriptions of the options on the first and third pages:
     each entry is an email address or an alias.
     * **Report file format** — The format in which the report is sent: PDF or Excel.
 
-## Common Errors { #common-errors }
-Here is a list of common errors and how to fix them:
 
-* **Dates are out of range** — If no data is available for the selected time period, 
-the report will fail. Ensure the values are actually being stored in the database. If 
-not, verify that the logger is correctly set up. A guide can be found [here](TBD).
-* **The report is empty** — If no data appears in the report, the macro command is 
-most likely failing. This only happens when a custom template is used. Review the 
-macro command configuration [here](../Core/alarms/alarm-sender.md#setting-up-a-smtp-configuration).
-* **Report is not being sent** — This can be due to a few reasons. Either the SMTP 
-is not configured correctly — try sending a test email from the 
-**Reports - Schedule** workview to verify. If that works, verify that the email 
-addresses are correctly entered.
 <!-- --8<-- [end:body] -->

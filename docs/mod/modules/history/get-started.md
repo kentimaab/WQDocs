@@ -1,4 +1,4 @@
-﻿---
+---
 title: History — Get started
 description: Get up and running with the History module.
 product: mod
@@ -6,10 +6,22 @@ page_type: getstarted
 doc_id: DOC-M18
 status: draft
 last_reviewed: 2026-05-27
+scripts:
+  - scHistory
 ---
 <!-- --8<-- [start:body] -->
 
 # History — Get started
+???+ info "Requirements"
+    The following scripts are required to use History and all
+    related functionality covered in the History guides:
+    
+    * `scHistory`
+    * `scPrototypes`
+    * `scThemes`
+    * `scAlert`
+    * `scQuickSort`
+
 
 The History module displays logged signal data as interactive line charts. There are three ways to access it: the project-wide **History** view from the main menu, a view-specific **History** popup opened from a workview, and the **History** tab in any object popup.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Calendar — Get Started
 description: Get up and running with the Calendar module.
 product: mod
@@ -6,10 +6,25 @@ page_type: getstarted
 doc_id: DOC-M13
 status: draft
 last_reviewed: 2026-05-26
+scripts:
+  - scCalendar
+  - scDayViewManager
+  - scWeekViewManager
 ---
 <!-- --8<-- [start:body] -->
 
 # Calendar — Get Started
+???+ info "Requirements"
+    The following scripts are required to use Calendar and all
+    related functionality covered in the Calendar guides:
+    
+    * `scCalendar`
+    * `scDayViewManager`
+    * `scWeekViewManager`
+    * `scMaintenance`
+    * `scDatabase`
+    * `scThemes`
+    * `scAlert`
 
 The Calendar is available in the main menu under **Calendar**. It opens in month view and loads events and maintenance deadlines for the current period automatically.
 

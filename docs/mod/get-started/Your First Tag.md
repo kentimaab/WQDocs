@@ -14,7 +14,7 @@ tag to verifying it on a Process popup. It is the quickest way to confirm that y
 project is correctly set up and ready for implementation.
 
 Before getting started, make sure you have the template project open in
-**WideQuick 14** or later. If not, see [Get Started with WideQuick BMS](../../bms/get-started/index.md).
+**WideQuick 14** or later. If not, see [Get Started with WideQuick BMS](../../bms/get-started/index).
 
 ## Step 1 — Set up a connection
 
@@ -51,13 +51,13 @@ This tag consists of:
 ![Create](/Images/First_tag/Create.gif)
 
 For more information on the tag structure see
-[Tag Structure](../reference/tag-structure.md).
+[Tag Structure](../reference/tag-structure).
 
 ## Step 3 — Create a Workview
 
 In **WideQuick Designer®**, create a new **Workview** inside **System 1**. This will
 make it automatically appear in the navigation menu. For more information on how the
-navigation works see [Navigation — Get started](../modules/Navigation/get-started.md).
+navigation works see [Navigation — Get started](../modules/Core//Navigation/get-started).
 
 ![Workview](/Images/First_tag/CreateWork.gif)
 
@@ -78,7 +78,7 @@ Enter the following:
 
 !!! tip
     The `dynMotorPumpR_000` object is a pre-built object from the **Motors** object
-    library. To learn how to create your own custom objects see [here](../guides/create-an-object.md).
+    library. To learn how to create your own custom objects see [here](../guides/create-an-object).
 
 ## Step 5 — Connecting suffix aliases and verifying
 
@@ -92,7 +92,7 @@ The suffix alias **On** is now part of the **4 - Active** group. Next, select **
 in the tree view and assign `_IO` to the **Suffix** field.
 
 For more information on how the animation system works see
-[Workview Animations](../guides/workview-animations.md).
+[Workview Animations](../guides/workview-animations).
 
 ![Suffix Alarm configuration](/Images/First_tag/SuffixAlarm.gif)
 
@@ -103,7 +103,7 @@ the object opens the popup and allows the signal to be manipulated. Navigate to
 **Settings → Suffix → Suffix - Popups**.
 
 This view shows all configured standard popups. To create a custom popup see
-[here](../guides/create-a-popup.md). Select **Process** and click **Add new
+[here](../guides/create-a-popup). Select **Process** and click **Add new
 suffix alias in selected category**. When prompted, name the new suffix alias **On**
 for consistency. Then select the **On** alias and assign `_IO` to the **Suffix**
 field.
