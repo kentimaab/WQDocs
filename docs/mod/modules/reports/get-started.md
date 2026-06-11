@@ -6,16 +6,20 @@ page_type: getstarted
 doc_id: DOC-M17
 status: draft
 last_reviewed: 2026-05-21
+scripts:
+  - scReportScheduler
 ---
 <!-- --8<-- [start:body] -->
+
 # Reports — Get started
-???+ Info "Requirements"
-    The following scripts are required to use Reports, Report Scheduler and all 
+???+ info "Requirements"
+    The following scripts are required to use Reports and all
     related functionality covered in the Reports guides:
     
-    * `scReports`
     * `scReportScheduler`
+    * `scReports`
     * `scAlert`
+
 
 This section covers the basics of the Report module, including how to add a new 
 template, how to use existing templates in **WideQuick Runtime®**, and how to schedule 
@@ -44,10 +48,6 @@ destination.
 **Local System Only**.
 * **Output name** — Customize the report file name using the **Output Name Builder**. 
 A preview of the name is shown in the **Name Preview** field.
-
-!!! note "Importing a Report template"
-    When importing a report template, make sure the file is in `.xlsx` format.
-
 <figure markdown="span">
   ![Create new report template](/Images/Reports/Create_new_report_template.gif)
   <figcaption>Creating a new report template from scratch.</figcaption>

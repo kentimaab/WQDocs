@@ -6,6 +6,7 @@ page_type: howto
 status: draft
 last_reviewed: 2026-06-08
 ---
+<!-- --8<-- [start:body] -->
 
 # Configuring a Logger
 
@@ -117,3 +118,4 @@ one individually.
 The **Hysteresis** column is available for numeric signals and defines the minimum
 change in value required before a new entry is logged. This is useful for reducing
 noise in logged data.
+<!-- --8<-- [end:body] -->
