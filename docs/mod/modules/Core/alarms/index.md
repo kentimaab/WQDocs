@@ -13,8 +13,6 @@ last_reviewed: 2026-05-29
 
 The Alarms module provides real-time alarm monitoring across the WideQuick MOD installation. Alarms are defined in **WideQuick Designer®** using alarm groups, each with configurable triggers, alarm classes (severities), and acknowledgement rules. At runtime, active alarms appear across a set of dedicated views and optionally trigger email or SMS notifications.
 
-!!! note "Requirements"
-    The `scAlarm` script must be running for the Alarms module to work. Notification schedules additionally require `scAlarmSender` script.
 
 ## Contents { #contents }
 

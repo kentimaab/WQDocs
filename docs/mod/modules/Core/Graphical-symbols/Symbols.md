@@ -5,7 +5,10 @@ product: mod
 page_type: reference
 status: draft
 last_reviewed: 2026-05-29
+tags: 
+ - Symbol
 ---
+<!-- --8<-- [start:body] -->
 
 # Symbol Libraries {#symbol-libraries}
 
@@ -50,7 +53,7 @@ multiple states can be communicated simultaneously — for example an active war
 with a background alarm highlight.
 
 All new symbols are fully compatible with the
-[Workview Animation](../../guides/workview-animations.md) system, meaning they respond
+[Workview Animation](../../../guides/workview-animations.md)system, meaning they respond
 automatically to all configured animation categories without any additional setup.
 
 ## Basic symbols — COMPONENTS {#components}
@@ -105,7 +108,7 @@ The following symbols are available:
 The **COMPONENTS** library also contains a set of supporting objects such as status
 texts, value displays, and indicators. These are useful when building custom objects
 and complement the base symbols. For more information on building custom objects see
-[Create Object](../../guides/create-an-object.md).
+[Create Object](../../../guides/create-an-object.md).
 
 ## DAMPERS {#dampers}
 
@@ -362,27 +365,4 @@ for example flow rate and accumulated volume.
 and a name label.
 
 
-## Legacy symbols {#legacy-symbols}
-
-WideQuick BMS 8.0 included an earlier generation of symbols which are still
-available in the following object libraries:
-
-* **COMPONENTS_Legacy**
-* **DAMPERS_Legacy**
-* **MOTORS_Legacy**
-* **SENSORS_Legacy**
-* **VALVES_Legacy**
-* **OTHERS_Legacy**
-
-Legacy symbols function the same way as the current symbols and are fully compatible
-with WideQuick Modular Framework. However they use the older single-layer animation
-system and do not provide the same level of visual feedback as the new symbols.
-
-When importing a view from an older BMS project, all legacy symbols are automatically
-upgraded to the new symbol versions. This means migration is seamless — no manual
-replacement is needed.
-
-!!! tip "Recommendation"
-    It is recommended to migrate away from legacy symbols when building new projects
-    or updating existing ones. The new symbols provide richer visual feedback and are
-    the actively maintained standard going forward.
+<!-- --8<-- [end:body] -->
