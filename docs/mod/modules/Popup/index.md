@@ -6,6 +6,7 @@ page_type: concept
 status: draft
 last_reviewed: 2026-05-29
 ---
+<!-- --8<-- [start:body] -->
 
 # Popups
 
@@ -56,3 +57,4 @@ operating modes or setting manual values.
 for the object.
 * [**Control Curve**](Control curve.md) — a control curve editor for configuring
 non-linear control relationships.
+<!-- --8<-- [end:body] -->

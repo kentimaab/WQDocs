@@ -28,10 +28,6 @@ scripts:
     * `scThemes`
     * `scUsers`
     * `scAlert`
-    
-    And the following Object Libraries:
-    
-    * `Navigation`
 
 This section covers the basics of the Navigation module, including how to add 
 **Workviews** to the navigation menu and how the Fullscreen Menu works. The Navigation 

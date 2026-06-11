@@ -34,7 +34,7 @@ However, if you want to set up a separate logger for alarms, the report must be 
 accordingly. Follow these steps:
 
 * Set up the new logger with the type Alarm and select your desired database. See 
-[Loggers](../Loggers.md) for more information.
+[Loggers](../../guides/Loggers.md) for more information.
 * Update the macro call in the report template (see image).
 * Update the view called **Alarm_Report** to reference the new logger.
 

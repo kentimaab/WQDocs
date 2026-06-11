@@ -26,7 +26,6 @@ scripts:
     * `scUsers`
     * `scAlert`
 
-
 The Documents module is available under **Documents & Logbook -> Documents** in the main menu. The **Documents - List** view is the main entry point — it lists all documents available in the system and lets you add, preview and manage them.
 
 

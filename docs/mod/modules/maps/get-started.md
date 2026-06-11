@@ -27,8 +27,30 @@ object_libraries:
     
     And the following Object Libraries:
     
-    * `Map Indicators`
-    * `WEATHER`
+    * `-`
+    * `M`
+    * `a`
+    * `p`
+    * ` `
+    * `I`
+    * `n`
+    * `d`
+    * `i`
+    * `c`
+    * `a`
+    * `t`
+    * `o`
+    * `r`
+    * `s`
+    * ` `
+    * `-`
+    * `W`
+    * `E`
+    * `A`
+    * `T`
+    * `H`
+    * `E`
+    * `R`
 
 This section covers how to set up a **Map View** object in WideQuick and how to add
 basic indicators. For configuring more advanced indicators such as Pin Status, Cluster
