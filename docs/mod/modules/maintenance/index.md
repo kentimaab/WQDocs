@@ -41,6 +41,6 @@ There are two ways to access maintenance tasks. The **Maint. - List** view in th
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/maintenance.md) { #troubleshooting }
-* [**Common Issues**](../../Troubleshooting/maintenance.md) — Common issues and how to fix them.
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
+* [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

@@ -38,6 +38,6 @@ The logbook is available in three places: globally under **Documents & Logbook �
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/logbook.md) { #troubleshooting }
-* [**Common Issues**](../../Troubleshooting/logbook.md) — Common issues and how to fix them.
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
+* [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

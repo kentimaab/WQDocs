@@ -47,7 +47,7 @@ and maintenance status.
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/dashboards.md) { #troubleshooting }
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
 
-- [**Common Issues**](../../Troubleshooting/dashboards.md) — Common issues and how to fix them.
+- [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

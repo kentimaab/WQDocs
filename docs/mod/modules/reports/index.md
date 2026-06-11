@@ -40,6 +40,6 @@ How to increase the signal limit for report generation.
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/Reports.md) { #troubleshooting }
-* [**Common Issues**](../../Troubleshooting/Reports) — Common issues and how to fix them.
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
+* [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

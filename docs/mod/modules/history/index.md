@@ -40,6 +40,6 @@ All three views are built on the same chart component and share the same control
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/history.md) { #troubleshooting }
-* [**Common Issues**](../../Troubleshooting/history.md) — Common issues and how to fix them.
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
+* [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->
