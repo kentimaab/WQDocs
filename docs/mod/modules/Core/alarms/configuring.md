@@ -42,7 +42,7 @@ Once a group exists, open it (double-click or right-click → **Open**) and clic
 | **Colors** | Per-alarm color overrides. If left blank, the group defaults are used |
 | **Activation monitor** | Boolean variable set to `true` while the alarm is active |
 | **Acknowledge monitor** | Boolean variable set to `true` while the alarm is acknowledged |
-| **Measure** | Action available in the alarm list — used to add a GoTo link. See [GoTo in Alarm Groups](/mod/modules/Navigation/extending/#goto-in-alarm-groups) |
+| **Measure** | Action available in the alarm list — used to add a GoTo link. See [GoTo in Alarm Groups](../Navigation/extending.md#goto-in-alarm-groups) |
 | **Description** | Internal note about the alarm. Not shown at runtime |
 
 ### Activation { #activation }
@@ -59,7 +59,7 @@ Double-click the **Activation** field to configure the trigger. Set the variable
 
 ### Measure { #measure }
 
-The **Measure** field on an alarm enables an action column in the alarm list. Configuring a GoTo measure lets operators navigate directly to the object that triggered the alarm by pressing the measure in the list. See [GoTo in Alarm Groups](/mod/modules/Navigation/extending/#goto-in-alarm-groups) for setup instructions.
+The **Measure** field on an alarm enables an action column in the alarm list. Configuring a GoTo measure lets operators navigate directly to the object that triggered the alarm by pressing the measure in the list. See [GoTo in Alarm Groups](../Navigation/extending.md#goto-in-alarm-groups) for setup instructions.
 
 ![Measure settings](/Images/Create_Alarm/Measure.png){align=center}
 

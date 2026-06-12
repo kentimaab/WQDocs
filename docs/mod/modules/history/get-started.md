@@ -22,7 +22,7 @@ scripts:
     * `scAlert`
     * `scQuickSort`
 
-The History module displays logged signal data as interactive line charts. There are three ways to access it: the project-wide **History** view from the main menu, a view-specific **History** popup opened from a workview, and the [**History** tab](../../reference/Popup/History.md) in any object popup.
+The History module displays logged signal data as interactive line charts. There are three ways to access it: the project-wide **History** view from the main menu, a view-specific **History** popup opened from a workview, and the [**History**](../../reference/Popup/History.md) tab in any object popup.
 
 ## The History View { #the-history-view }
 
@@ -82,7 +82,7 @@ Signal selection, time controls, settings and saved signal groups work the same 
 
 ## Object Popup (History Tab) { #object-popup-history-tab }
 
-Every object in the project has a **History** tab in its popup. Opening the tab shows the logged signals for that object in a chart.
+Every object in the project has a [**History**](../../reference/Popup/History.md) tab in its popup. Opening the tab shows the logged signals for that object in a chart.
 
 ![History tab in an object popup](/Images/History/history-object-popup.png){align=center}
 

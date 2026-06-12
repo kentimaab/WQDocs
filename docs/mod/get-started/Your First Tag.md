@@ -7,6 +7,8 @@ status: draft
 last_reviewed: 2026-05-19
 ---
 
+<!-- --8<-- [start:body] -->
+
 # Your first tag
 
 This guide walks through connecting a single tag end-to-end — from creating an OPC UA
@@ -123,3 +125,5 @@ becomes active, confirming that the tag is correctly wired end-to-end.
     If the green light does not appear, verify that the tag name in the **Tag Editor**
     matches the properties entered on the `DynTouch` object exactly, including
     capitalisation.
+
+<!-- --8<-- [end:body] -->

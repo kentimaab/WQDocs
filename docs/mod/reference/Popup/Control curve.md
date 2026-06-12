@@ -1,6 +1,6 @@
 ---
 title: Control Curve
-description: Overview of the Control Curve (Styrkurva) popup in WideQuick.
+description: Overview of the Control Curve popup in WideQuick.
 product: mod
 page_type: reference
 status: draft

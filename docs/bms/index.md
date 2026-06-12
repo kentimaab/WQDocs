@@ -36,13 +36,7 @@ hide:
 
     Bring in your first signal from an OPC UA, Modbus, or BACnet device.
 
-    [Configure →](configuration-recipes/)
-
--   **The architecture**
-
-    See the BMS system views for ventilation, heating, and electrical panels.
-
-    [Read more →](concepts/)
+    [Your first tag →](get-started/your-first-tag/)
 
 </div>
 
@@ -52,23 +46,17 @@ hide:
 
 <div class="lp-browse grid cards" markdown>
 
--   :material-wrench-outline: **Configuration recipes**
+-   :material-view-grid-outline: **Modules**
 
-    Step-by-step guides — alarms, maintenance plans, energy dashboards, schedules.
+    All modules included in WideQuick BMS — configuration, extension, and reference.
 
-    [Recipes →](configuration-recipes/)
+    [Modules →](modules/)
 
--   :material-palette-outline: **Customization**
+-   :material-book-open-outline: **Guides**
 
-    Adapt the BMS concept app's look, feel, and behavior to a specific site or customer.
+    Step-by-step guides for common tasks in WideQuick BMS.
 
-    [Customize →](customization/)
-
--   :material-cog-outline: **Operations**
-
-    Build a release, deploy to HMI nodes, troubleshoot a live installation.
-
-    [Operate →](operations/)
+    [Guides →](guides/)
 
 -   :material-package-variant: **Releases**
 

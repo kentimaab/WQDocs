@@ -11,7 +11,7 @@ last_reviewed: 2026-05-19
 ---
 <!-- --8<-- [start:body] -->
 
-# Navigation(navigering)
+# Navigation
 
 WideQuick Modular Framework includes a built-in navigation module that automatically 
 builds the menu structure based on the folder structure in **WideQuick Designer®**. 

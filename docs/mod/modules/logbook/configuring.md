@@ -47,7 +47,7 @@ The full logbook under **Documents & Logbook → Logbook** shows all entries fro
 
 ### Object Popup { #object-popup }
 
-Every object in the project has a **Logbook** tab in its popup. Opening this tab shows only entries whose topic matches the object's tag path. New entries created from here are automatically assigned the correct topic.
+Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md) tab in its popup. Opening this tab shows only entries whose topic matches the object's tag path. New entries created from here are automatically assigned the correct topic.
 
 ![Logbook tab in the object popup](/Images/Logbook/object-popup-logbook.png){align=center}
 

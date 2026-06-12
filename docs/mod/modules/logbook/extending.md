@@ -21,6 +21,6 @@ Three privileges control access to logbook operations:
 | `Logbook_Edit` | Required to edit existing entries |
 | `Logbook_Delete` | Required to delete entries |
 
-Users without `Logbook_Add` will not see the **Add** button. The buttons are hidden automatically based on the current user's privileges. No extra script logic is needed.
+Users without `Logbook_Add` will see the **Add** button area disabled and grayed out, with a red box overlay displaying a message indicating the required privilege. The `Enabled` property on the button is bound to `scUsers.hasPriv("Logbook_Add")`. The same pattern applies to `Logbook_Edit` and `Logbook_Delete`.
 
 <!-- --8<-- [end:body] -->
