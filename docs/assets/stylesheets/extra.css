@@ -2040,6 +2040,12 @@ input[type="file"] {
     font-weight: 700;
 }
 
+/* Bold collapsible sections converted from section headers (Guides, Reference) */
+.nav-item--collapsible-section > .md-nav__link .md-ellipsis,
+.nav-item--collapsible-section > .md-nav__container .md-ellipsis {
+    font-weight: 700;
+}
+
 /* Hide draft/status badge in sidebar nav */
 .md-nav__link .md-status,
 .md-nav__link > .md-status,

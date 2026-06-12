@@ -73,6 +73,7 @@ nav = [
     { "Overview" = "mod/index.md" },
     { "Get Started" = [
       { "Overview" = "mod/get-started/index.md" },
+      { "Concepts" = "mod/concepts/index.md" },
       { "Download" = "mod/get-started/download.md" },
       { "Your First Tag" = "mod/get-started/Your First Tag.md" },
     ]},
@@ -182,7 +183,6 @@ nav = [
       { "Remote Systems" = "mod/guides/remote-systems.md" },
       { "Workview Animations" = "mod/guides/workview-animations.md" },
     ]},
-    { "Concepts" = "mod/concepts/index.md" },
     { "Reference" = [
       { "Overview" = "mod/reference/index.md" },
       { "Multiview" = "mod/reference/multiview.md" },
@@ -219,6 +219,7 @@ nav = [
     { "Get Started" = [
       { "Overview" = "bms/get-started/index.md" },
       { "Download" = "bms/get-started/download.md" },
+      { "Your First Tag" = "bms/get-started/Your First Tag.md" },
     ]},
     { "Modules" = [
       { "Overview" = "bms/modules/index.md" },
@@ -325,6 +326,35 @@ nav = [
       { "Remote System" = "bms/guides/remote-system/index.md" },
       { "Workview Animations" = "bms/guides/workview-animations/index.md" },
     ]},
+    { "Reference" = [
+      { "Overview" = "bms/reference/index.md" },
+      { "Multiview" = "bms/reference/multiview.md" },
+      { "Resources And Resurspaket" = "bms/reference/resources-and-resurspaket.md" },
+      { "Suffix System" = "bms/reference/suffix-system.md" },
+      { "Tag Structure" = "bms/reference/tag-structure.md" },
+      { "Script Hierarchy" = "bms/reference/ScriptHierarchy.md" },
+      { "Popups" = [
+        { "Overview" = "bms/reference/Popup/index.md" },
+        { "Tab" = "bms/reference/Popup/Tab.md" },
+        { "History" = "bms/reference/Popup/History.md" },
+        { "Trend" = "bms/reference/Popup/Trend.md" },
+        { "Object Info" = "bms/reference/Popup/ObjectInfo.md" },
+        { "Maintenance" = "bms/reference/Popup/Maintenance.md" },
+        { "Logbook" = "bms/reference/Popup/Logbook.md" },
+        { "Documents" = "bms/reference/Popup/Documents.md" },
+        { "Process" = "bms/reference/Popup/Process.md" },
+        { "Manover" = "bms/reference/Popup/Manover.md" },
+        { "Timechannel" = "bms/reference/Popup/Timechannel.md" },
+        { "Control Curve" = "bms/reference/Popup/Control curve.md" },
+      ]},
+      { "Database Schemas" = [
+        { "Overview" = "bms/reference/database-schemas/index.md" },
+        { "Config Db" = "bms/reference/database-schemas/config-db.md" },
+        { "History Db" = "bms/reference/database-schemas/history-db.md" },
+        { "Maintenance Db" = "bms/reference/database-schemas/maintenance-db.md" },
+        { "Suffixconfig Db" = "bms/reference/database-schemas/suffixconfig-db.md" },
+      ]},
+    ]},
     { "Releases" = "bms/releases/index.md" },
   ]},
   { "Water & Wastewater Treatment" = [
@@ -332,6 +362,7 @@ nav = [
     { "Get Started" = [
       { "Overview" = "wwt/get-started/index.md" },
       { "Download" = "wwt/get-started/download.md" },
+      { "Your First Tag" = "wwt/get-started/Your First Tag.md" },
     ]},
     { "Modules" = [
       { "Core" = [
@@ -436,6 +467,35 @@ nav = [
       { "Logger" = "wwt/guides/loggers/index.md" },
       { "Remote System" = "wwt/guides/remote-system/index.md" },
       { "Workview Animations" = "wwt/guides/workview-animations/index.md" },
+    ]},
+    { "Reference" = [
+      { "Overview" = "wwt/reference/index.md" },
+      { "Multiview" = "wwt/reference/multiview.md" },
+      { "Resources And Resurspaket" = "wwt/reference/resources-and-resurspaket.md" },
+      { "Suffix System" = "wwt/reference/suffix-system.md" },
+      { "Tag Structure" = "wwt/reference/tag-structure.md" },
+      { "Script Hierarchy" = "wwt/reference/ScriptHierarchy.md" },
+      { "Popups" = [
+        { "Overview" = "wwt/reference/Popup/index.md" },
+        { "Tab" = "wwt/reference/Popup/Tab.md" },
+        { "History" = "wwt/reference/Popup/History.md" },
+        { "Trend" = "wwt/reference/Popup/Trend.md" },
+        { "Object Info" = "wwt/reference/Popup/ObjectInfo.md" },
+        { "Maintenance" = "wwt/reference/Popup/Maintenance.md" },
+        { "Logbook" = "wwt/reference/Popup/Logbook.md" },
+        { "Documents" = "wwt/reference/Popup/Documents.md" },
+        { "Process" = "wwt/reference/Popup/Process.md" },
+        { "Manover" = "wwt/reference/Popup/Manover.md" },
+        { "Timechannel" = "wwt/reference/Popup/Timechannel.md" },
+        { "Control Curve" = "wwt/reference/Popup/Control curve.md" },
+      ]},
+      { "Database Schemas" = [
+        { "Overview" = "wwt/reference/database-schemas/index.md" },
+        { "Config Db" = "wwt/reference/database-schemas/config-db.md" },
+        { "History Db" = "wwt/reference/database-schemas/history-db.md" },
+        { "Maintenance Db" = "wwt/reference/database-schemas/maintenance-db.md" },
+        { "Suffixconfig Db" = "wwt/reference/database-schemas/suffixconfig-db.md" },
+      ]},
     ]},
     { "Releases" = "wwt/releases/index.md" },
   ]},

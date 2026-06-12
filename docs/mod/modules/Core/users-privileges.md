@@ -18,7 +18,6 @@ scripts:
     * `scUsers`
     * `scAlert`
 
-
 WideQuick allows user profiles to be created with specific privileges, enabling
 role-based access control across the application. Profiles can be configured to
 restrict or grant access to specific views and actions.

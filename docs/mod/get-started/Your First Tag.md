@@ -7,6 +7,7 @@ status: draft
 last_reviewed: 2026-05-19
 ---
 
+
 # Your first tag
 
 This guide walks through connecting a single tag end-to-end — from creating an OPC UA
@@ -15,6 +16,8 @@ project is correctly set up and ready for implementation.
 
 Before getting started, make sure you have the template project open in
 **WideQuick 14** or later. If not, see [Download WideQuick MOD](download.md)
+
+<!-- --8<-- [start:body] -->
 
 ## Step 1 — Set up a connection
 
