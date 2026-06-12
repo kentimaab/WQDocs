@@ -2,7 +2,7 @@
 title: Popups
 description: Overview of all popups available in WideQuick.
 product: mod
-page_type: concept
+page_type: reference
 status: draft
 last_reviewed: 2026-05-29
 ---
@@ -19,7 +19,7 @@ Which popups are available for a given object depends on which signals the objec
 has. Some popups are always visible regardless of the object's signals, while others
 only appear when the object has signals matching the configured suffix aliases. For
 more information on how suffix aliases work, see
-[Tag Structure — Suffix Alias](../../reference/tag-structure.md#suffix-alias).
+[Tag Structure — Suffix Alias](../tag-structure.md#suffix-alias).
 
 To create a custom popup, see [Create Popup](../../guides/create-a-popup.md).
 

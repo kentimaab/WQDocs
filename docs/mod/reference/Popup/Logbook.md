@@ -12,7 +12,7 @@ last_reviewed: 2026-05-29
 The Logbook popup displays all logbook entries associated with the selected object.
 Users can create, edit, and delete notes directly from this popup. It is always
 visible in the Tab menu regardless of which suffixes the object has. For more
-information on how the logbook system works, see [Logbook](../logbook/index.md).
+information on how the logbook system works, see [Logbook](../../modules/logbook/index.md).
 
 ![Logbook popup](/Images/Popups/Logbook.png)
 

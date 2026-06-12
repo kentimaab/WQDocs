@@ -10,7 +10,7 @@ last_reviewed: 2026-06-12
 
 # Modules
 
-All modules that ship with WideQuick Modular Framework. Core is the only required module — all others are optional and can be enabled per installation.
+WideQuick MOD organises its features and functionality into modules. Each module covers a distinct area of the system. The Core module is the foundation every installation builds on. It provides navigation, alarms, themes, user management, and graphical symbols. The remaining modules are built to work alongside Core and can be added or removed to match what the project needs.
 
 ## Contents { #contents }
 
@@ -22,21 +22,6 @@ All modules that ship with WideQuick Modular Framework. Core is the only require
 * [**Graphical Symbols**](Core/Graphical-symbols/index.md) — Symbol libraries: components, dampers, motors, sensors, and valves.
 * [**Settings**](Core/settings.md) — Project-wide settings for the Core module.
 * [**Users & Privileges**](Core/users-privileges.md) — User management and privilege configuration.
-
----
-
-### [Popups](Popup/index.md) { #popups }
-
-* [**Tab**](Popup/Tab.md) — Entry point for all popups: object overview, alarm and maintenance summary.
-* [**History**](Popup/History.md) — Trend graph of logged signals for the selected object.
-* [**Trend**](Popup/Trend.md) — Live signal values in a real-time graph.
-* [**Process**](Popup/Process.md) — Process values and status signals.
-* [**Manover**](Popup/Manover.md) — Operating mode switching and manual setpoint control.
-* [**Maintenance**](Popup/Maintenance.md) — Scheduled maintenance tasks for the object.
-* [**Logbook**](Popup/Logbook.md) — Logbook entries for the object.
-* [**Documents**](Popup/Documents.md) — Documents linked to the object.
-* [**TimeChannel**](Popup/Timechannel.md) — Time-based schedule configuration.
-* [**Control Curve**](Popup/Control curve.md) — Non-linear control curve editor.
 
 ---
 

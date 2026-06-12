@@ -13,7 +13,7 @@ The Documents popup displays all documents linked to the selected object. Docume
 can be previewed directly in the popup and new documents can be linked from the
 computer. It is always visible in the Tab menu regardless of which suffixes the
 object has. For more information on how the document system works, see
-[Documents](../documents/index.md).
+[Documents](../../modules/documents/index.md).
 
 ![Documents popup](/Images/Popups/Documents.png)
 

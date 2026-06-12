@@ -51,4 +51,20 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 * [**History.db**](database-schemas/history-db.md) — Dynamically generated logger tables for signal history.
 * [**SuffixConfig.db**](database-schemas/suffixconfig-db.md) — Suffix object configuration.
 
+---
+
+### [Popups](Popup/index.md) { #popups }
+
+* [**Tab**](Popup/Tab.md) — Entry point for all popups: object overview, alarm and maintenance summary.
+* [**History**](Popup/History.md) — Trend graph of logged signals for the selected object.
+* [**Trend**](Popup/Trend.md) — Live signal values in a real-time graph.
+* [**Object Info**](Popup/ObjectInfo.md) — Raw list of all signals connected to the object, with current values, units, and types.
+* [**Maintenance**](Popup/Maintenance.md) — Scheduled maintenance tasks for the object.
+* [**Logbook**](Popup/Logbook.md) — Logbook entries for the object.
+* [**Documents**](Popup/Documents.md) — Documents linked to the object.
+* [**Process**](Popup/Process.md) — Process values and status signals (suffix-dependent).
+* [**Manover**](Popup/Manover.md) — Operating mode switching and manual setpoint control (suffix-dependent).
+* [**TimeChannel**](Popup/Timechannel.md) — Time-based schedule configuration (suffix-dependent).
+* [**Control Curve**](Popup/Control curve.md) — Non-linear control curve editor (suffix-dependent).
+
 <!-- --8<-- [end:body] -->

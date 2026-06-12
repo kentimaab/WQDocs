@@ -171,20 +171,6 @@ nav = [
         { "Configuring" = "mod/modules/backup-and-restore/configuring.md" },
       ]},
 
-      { "Popup" = [
-        { "Overview" = "mod/modules/Popup/index.md" },
-        { "Tab" = "mod/modules/Popup/Tab.md" },
-        { "History" = "mod/modules/Popup/History.md" },
-        { "Trend" = "mod/modules/Popup/Trend.md" },
-        { "Objectinfo" = "mod/modules/Popup/ObjectInfo.md" },
-        { "Maintenance" = "mod/modules/Popup/Maintenance.md" },
-        { "Logbook" = "mod/modules/Popup/Logbook.md" },
-        { "Documents" = "mod/modules/Popup/Documents.md" },
-        { "Process" = "mod/modules/Popup/Process.md" },
-        { "Manover" = "mod/modules/Popup/Manover.md" },
-        { "Timechannel" = "mod/modules/Popup/Timechannel.md" },
-        { "Control Curve" = "mod/modules/Popup/Control curve.md" },
-      ]},
     ]},
     { "Guides" = [
       { "Overview" = "mod/guides/index.md" },
@@ -204,6 +190,20 @@ nav = [
       { "Suffix System" = "mod/reference/suffix-system.md" },
       { "Tag Structure" = "mod/reference/tag-structure.md" },
       { "Script Hierarchy" = "mod/reference/ScriptHierarchy.md" },
+      { "Popups" = [
+        { "Overview" = "mod/reference/Popup/index.md" },
+        { "Tab" = "mod/reference/Popup/Tab.md" },
+        { "History" = "mod/reference/Popup/History.md" },
+        { "Trend" = "mod/reference/Popup/Trend.md" },
+        { "Object Info" = "mod/reference/Popup/ObjectInfo.md" },
+        { "Maintenance" = "mod/reference/Popup/Maintenance.md" },
+        { "Logbook" = "mod/reference/Popup/Logbook.md" },
+        { "Documents" = "mod/reference/Popup/Documents.md" },
+        { "Process" = "mod/reference/Popup/Process.md" },
+        { "Manover" = "mod/reference/Popup/Manover.md" },
+        { "Timechannel" = "mod/reference/Popup/Timechannel.md" },
+        { "Control Curve" = "mod/reference/Popup/Control curve.md" },
+      ]},
       { "Database Schemas" = [
         { "Overview" = "mod/reference/database-schemas/index.md" },
         { "Config Db" = "mod/reference/database-schemas/config-db.md" },
@@ -313,9 +313,6 @@ nav = [
         { "Overview" = "bms/modules/backup-and-restore/index.md" },
         { "Get Started" = "bms/modules/backup-and-restore/get-started.md" },
         { "Configuring" = "bms/modules/backup-and-restore/configuring.md" },
-      ]},
-      { "Popup" = [
-        { "Overview" = "bms/modules/Popup/index.md" },
       ]},
     ]},
     { "Guides" = [
@@ -428,9 +425,6 @@ nav = [
         { "Overview" = "wwt/modules/backup-and-restore/index.md" },
         { "Get Started" = "wwt/modules/backup-and-restore/get-started.md" },
         { "Configuring" = "wwt/modules/backup-and-restore/configuring.md" },
-      ]},
-      { "Popup" = [
-        { "Overview" = "wwt/modules/Popup/index.md" },
       ]},
     ]},
     { "Guides" = [

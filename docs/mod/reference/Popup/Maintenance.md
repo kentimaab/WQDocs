@@ -12,7 +12,7 @@ last_reviewed: 2026-05-29
 The Maintenance popup displays all maintenance tasks scheduled for the selected
 object. It is always visible in the Tab menu regardless of which suffixes the
 object has. For more information on how the maintenance system works, see
-[Maintenance](../maintenance/index.md).
+[Maintenance](../../modules/maintenance/index.md).
 
 ![Maintenance popup](/Images/Popups/Maintenance.png)
 
