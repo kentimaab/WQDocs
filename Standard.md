@@ -51,7 +51,9 @@ Examples: **Historik → Rapporter → Rapporter - Lista**
 ---
 
 ### Product names
-Product names always include the registered trademark symbol and are formatted as bold.
+The registered trademark symbol and bold formatting apply only to **WideQuick Designer®** and **WideQuick Runtime®**. These are the two named software products.
+
+The framework itself is referred to as "WideQuick MOD" in prose and "WideQuick Modular Framework" in frontmatter and formal descriptions. Neither form gets the bold + ® treatment.
 
 Syntax: `**Product Name®**`
 

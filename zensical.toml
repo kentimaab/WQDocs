@@ -71,7 +71,6 @@ nav = [
   ]},
   { "Modular Framework" = [
     { "Overview" = "mod/index.md" },
-    { "Architechture" = "mod/architechture.md" },
     { "Get Started" = [
       { "Overview" = "mod/get-started/index.md" },
       { "Download" = "mod/get-started/download.md" },

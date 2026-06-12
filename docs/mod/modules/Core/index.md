@@ -13,7 +13,7 @@ last_reviewed: 2026-06-11
 
 # Core
 
-Core is the foundation of every **WideQuick Modular Framework®** installation. Unlike optional modules, Core is always present and it provides the navigation structure, alarm handling, theme system, user privileges, and the graphical symbol libraries that all other modules build on top of.
+Core is the foundation of every WideQuick MOD installation. Unlike optional modules, Core is always present and it provides the navigation structure, alarm handling, theme system, user privileges, and the graphical symbol libraries that all other modules build on top of.
 
 ## Contents { #contents }
 

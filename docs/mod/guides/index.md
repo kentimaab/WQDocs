@@ -10,7 +10,7 @@ last_reviewed: 2026-06-11
 
 # Guides
 
-The guides cover how to use specific features of the **WideQuick Modular Framework®** — both for setting up a new project and for customizing it so it works exactly as needed. Each guide is self-contained and focuses on a single task or feature.
+The guides cover how to use specific features of the WideQuick MOD — both for setting up a new project and for customizing it so it works exactly as needed. Each guide is self-contained and focuses on a single task or feature.
 
 ## Contents { #contents }
 
@@ -28,7 +28,7 @@ The guides cover how to use specific features of the **WideQuick Modular Framewo
 
 ### [Create a Popup](create-a-popup.md) { #create-a-popup }
 
-* [**Create a Popup**](create-a-popup.md) — How to create a custom popup in **WideQuick Modular Framework®**.
+* [**Create a Popup**](create-a-popup.md) — How to create a custom popup in WideQuick MOD.
 
 ---
 
@@ -46,6 +46,6 @@ The guides cover how to use specific features of the **WideQuick Modular Framewo
 
 ### [Workview Animations](workview-animations.md) { #workview-animations }
 
-* [**Workview Animations**](workview-animations.md) — Configure and extend workview animations in **WideQuick Modular Framework®**.
+* [**Workview Animations**](workview-animations.md) — Configure and extend workview animations in WideQuick MOD.
 
 <!-- --8<-- [end:body] -->
