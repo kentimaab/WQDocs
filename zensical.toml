@@ -77,7 +77,7 @@ nav = [
       { "Your First Tag" = "mod/get-started/Your First Tag.md" },
     ]},
     { "Modules" = [
-      
+      { "Overview" = "mod/modules/index.md" },
       { "Core" = [
         { "Overview" = "mod/modules/Core/index.md" },
         { "Settings" = "mod/modules/Core/settings.md" },
@@ -196,6 +196,7 @@ nav = [
       { "Remote Systems" = "mod/guides/remote-systems.md" },
       { "Workview Animations" = "mod/guides/workview-animations.md" },
     ]},
+    { "Concepts" = "mod/concepts/index.md" },
     { "Reference" = [
       { "Overview" = "mod/reference/index.md" },
       { "Multiview" = "mod/reference/multiview.md" },
@@ -220,6 +221,7 @@ nav = [
       { "Download" = "bms/get-started/download.md" },
     ]},
     { "Modules" = [
+      { "Overview" = "bms/modules/index.md" },
       { "Core" = [
         { "Overview" = "bms/modules/Core/index.md" },
         { "Settings" = "bms/modules/Core/settings.md" },
