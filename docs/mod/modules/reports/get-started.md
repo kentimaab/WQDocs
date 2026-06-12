@@ -20,7 +20,6 @@ scripts:
     * `scReports`
     * `scAlert`
 
-
 This section covers the basics of the Report module, including how to add a new 
 template, how to use existing templates in **WideQuick Runtime®**, and how to schedule 
 reports to run automatically.

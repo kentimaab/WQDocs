@@ -6,6 +6,7 @@ page_type: reference
 status: draft
 last_reviewed: 2026-06-08
 ---
+<!-- --8<-- [start:body] -->
 
 # Script Dependencies
 

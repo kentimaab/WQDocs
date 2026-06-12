@@ -1,3 +1,8 @@
+---
+title: MultiView
+---
+<!-- --8<-- [start:body] -->
+
 MultiView
 ===
 

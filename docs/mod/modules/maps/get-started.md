@@ -8,11 +8,27 @@ status: draft
 last_reviewed: 2026-05-19
 scripts:
   - scMap
-object_libraries: 
-    -Map Indicators
-    -WEATHER 
+object_libraries:
+  - Map Indicators
+  - WEATHER
 ---
 <!-- --8<-- [start:body] -->
+
+# Maps & Indicators — Get started
+???+ info "Requirements"
+    The following scripts are required to use Maps & Indicators and all
+    related functionality covered in the Maps & Indicators guides:
+    
+    * `scMap`
+    * `scMaintenance`
+    * `scDatabase`
+    * `scThemes`
+    * `scAlert`
+    
+    And the following Object Libraries:
+    
+    * `Map Indicators`
+    * `WEATHER`
 
 
 This section covers how to set up a **Map View** object in WideQuick and how to add
