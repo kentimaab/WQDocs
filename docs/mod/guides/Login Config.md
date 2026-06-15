@@ -9,6 +9,7 @@ tags:
  - MOD
 ---
 
+<!-- --8<-- [start:body] -->
 # Login configurations
 
 This guide covers how to configure the login screen in WideQuick Modular Framework and its verticals. This includes configuring the login requirement, changing how users identify themselves, customizing
@@ -112,3 +113,4 @@ start **Workview** should be a **Workview** located in either the **Main_Menu** 
     configure different landing views per user by adding multiple views to the
     **Multiviewer** tab and using a load script to select the correct view based on
     the logged-in user.
+<!-- --8<-- [end:body] -->

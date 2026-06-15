@@ -42,7 +42,7 @@ The following modules are included out of the box:
 * **Automatic navigation** — Plug and play navigation that builds itself. Includes features for adaptive navigation based on user privilegies.
 
 
-# Download WideQuick BMS
+## Download WideQuick BMS
 
 The Concept application is accessed through the Kentima Partner Download pages. Please follow this guide:
 

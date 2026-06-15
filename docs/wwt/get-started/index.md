@@ -1,17 +1,19 @@
-WideQuick Water and Wastewater Treatment (WWT)
-===
-<section class="hidden1" markdown>
+---
+title: Get Started — WWT
+description: Install WideQuick and set up your first WWT project.
+product: wwt
+page_type: getstarted
+status: draft
+last_reviewed: 2026-06-15
+tags: 
+ - WWT
+---
 
-
+# WideQuick Water and Wastewater Treatment (WWT)
 
 <img src="../pics/WWT-1_1000x246.png" style="width:100%;box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"></img>
 
-
-
 **WideQuick Water and Wastewater Treatment is built upon [WideQuick Modular Framework](../../mod/index.md). In addition to all the general functionality in the Modular Framework the Water and Wastewater concept provides industry specific functionality such as map objects, custom dashboards and ready to use objects.**
-
-
-
 
 ## Extensive Symbol & Object Libraries
 
@@ -21,13 +23,12 @@ The accompanying object libraries include components such as buttons and value d
 
 WideQuick Modular Framework makes it easy for users to add or remove modules as needed to tailor the application for specific purposes. The flexible and modular structure also simplifies the updating of specific parts of the application in the future.
 
-
-
 ## Who has access to WideQuick Water and Wastewater Treatment?
+
 WideQuick Water and Wastewater treatment is available to all partners of Kentima. To become a partner, please get in contact with our sales team via our website [here](https://www.kentima.com/en-GB/Kontakt)
-</section>
 
 ## Download WideQuick WWT
+
 The Concept application is accessed through the Kentima Partner Download pages. Please follow this guide:
 
 [Download WideQuick WWT](./download.md){ .md-button .md-button--primary }
