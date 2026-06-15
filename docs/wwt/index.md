@@ -39,13 +39,7 @@ tags:
 
     Bring in your first signal from a pumping station, basin, or treatment line.
 
-    [Configure →](configuration-recipes/)
-
--   **The architecture**
-
-    See the WWT views for stations, basins, and process lines.
-
-    [Read more →](concepts/)
+    [Your first tag →](get-started/your-first-tag/)
 
 </div>
 
@@ -56,23 +50,23 @@ tags:
 
 <div class="lp-browse grid cards" markdown>
 
--   :material-wrench-outline: **Configuration recipes**
+-   :material-view-grid-outline: **Modules**
 
-    Step-by-step guides — alarms, maintenance, process dashboards, station views.
+    All modules included in WideQuick WWT — configuration, extension, and reference.
 
-    [Recipes →](configuration-recipes/)
+    [Modules →](modules/)
 
--   :material-palette-outline: **Customization**
+-   :material-book-open-outline: **Guides**
 
-    Adapt the WWT concept app's look, feel, and behavior to a specific site or customer.
+    Step-by-step guides for common tasks in WideQuick WWT.
 
-    [Customize →](customization/)
+    [Guides →](guides/)
 
--   :material-cog-outline: **Operations**
+-   :material-file-document-outline: **Reference**
 
-    Build a release, deploy to HMI nodes, troubleshoot a live installation.
+    Tag structure, multiview, suffix system, resources, database schemas.
 
-    [Operate →](operations/)
+    [Reference →](reference/)
 
 -   :material-package-variant: **Releases**
 
