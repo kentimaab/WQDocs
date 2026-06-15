@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the Control Curve popup in WideQuick.
 title: Control Curve
 product: bms
 tags: 

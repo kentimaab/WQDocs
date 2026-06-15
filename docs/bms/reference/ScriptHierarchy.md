@@ -1,4 +1,5 @@
----
+﻿---
+description: Dependency map for all scripts in WideQuick BMS.
 title: Script Dependencies
 product: bms
 tags: 

@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the WideQuick BMS Reports module — generate, schedule, and customize reports based on alarm and energy data.
 title: Reports
 tags: 
  - BMS

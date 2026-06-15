@@ -1,4 +1,6 @@
----
+﻿---
+search:
+  exclude: true
 title: Configure a building-energy dashboard
 description: Build and configure the Energi dashboard in BMS.
 product: bms
@@ -11,6 +13,8 @@ last_reviewed: 2026-05-19
 tags: 
  - BMS
 ---
+search:
+  exclude: true
 
 # Configure a building-energy dashboard
 

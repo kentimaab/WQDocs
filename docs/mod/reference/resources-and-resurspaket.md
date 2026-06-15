@@ -1,5 +1,6 @@
 ---
 title: Resources
+description: How to export and import resources between WideQuick MOD projects using the built-in resource interface.
 tags: 
  - MOD
 ---

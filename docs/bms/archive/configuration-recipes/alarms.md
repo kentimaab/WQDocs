@@ -1,4 +1,6 @@
----
+﻿---
+search:
+  exclude: true
 title: Configure Alarms for BMS scenarios
 description: BMS-specific alarm class setup and outgoing alarm communication.
 product: bms
@@ -11,6 +13,8 @@ last_reviewed: 2026-05-19
 tags: 
  - BMS
 ---
+search:
+  exclude: true
 
 # Configure Alarms for BMS scenarios
 

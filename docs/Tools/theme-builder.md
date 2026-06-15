@@ -1,4 +1,6 @@
 ---
+title: Theme Builder
+description: Interactive tool for building and previewing custom color themes for WideQuick applications.
 hide:
 - toc
 ---

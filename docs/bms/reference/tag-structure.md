@@ -1,4 +1,5 @@
----
+﻿---
+description: Tag structure and configuration for WideQuick BMS.
 title: Tag Structure
 product: bms
 tags: 

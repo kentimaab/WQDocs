@@ -1,4 +1,5 @@
----
+﻿---
+description: Table reference for maintenance.db â€” stores maintenance tasks, calendar events, and remote system state.
 title: Maintenance.db
 product: bms
 tags: 

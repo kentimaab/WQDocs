@@ -1,4 +1,5 @@
----
+﻿---
+description: Wire one tag end-to-end and verify on a Process popup.
 title: Your First Tag
 product: bms
 page_type: getstarted
@@ -8,7 +9,7 @@ tags:
 
 # Your first tag
 
-This guide walks through connecting a single tag end-to-end — from creating an OPC UA
+This guide walks through connecting a single tag end-to-end â€” from creating an OPC UA
 tag to verifying it on a Process popup. It is the quickest way to confirm that your
 project is correctly set up and ready for implementation.
 

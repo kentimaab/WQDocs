@@ -1,4 +1,5 @@
----
+﻿---
+description: Graphical views of logged signal data for the whole project, a specific workview, or a single object.
 title: History
 tags: 
  - WWT

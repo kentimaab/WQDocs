@@ -1,4 +1,5 @@
----
+﻿---
+description: Monitor, acknowledge, and configure alarms across the WideQuick BMS installation.
 title: Alarms
 tags: 
  - BMS

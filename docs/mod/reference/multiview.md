@@ -1,5 +1,6 @@
 ---
 title: MultiView
+description: How to link Workviews in WideQuick MOD using MultiView to trigger navigation between views based on object actions.
 tags: 
  - MOD
 ---

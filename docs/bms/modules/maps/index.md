@@ -1,4 +1,5 @@
----
+﻿---
+description: Floorplan views and map indicators â€” configuration and usage.
 title: Maps & Indicators
 tags: 
  - BMS

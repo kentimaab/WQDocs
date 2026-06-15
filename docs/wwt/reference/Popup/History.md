@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the History popup in WideQuick.
 title: History
 product: wwt
 tags: 

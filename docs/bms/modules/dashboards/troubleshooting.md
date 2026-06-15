@@ -1,5 +1,6 @@
----
-title: Dashboards — Troubleshooting
+﻿---
+description: Common issues and solutions for the Dashboards module.
+title: Dashboards â€” Troubleshooting
 tags: 
  - BMS
 ---

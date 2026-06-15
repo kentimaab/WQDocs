@@ -1,5 +1,6 @@
----
-title: Calendar — Configuring
+﻿---
+description: Configure events, maintenance colors and reminder settings in the Calendar module.
+title: Calendar â€” Configuring
 tags: 
  - WWT
 ---

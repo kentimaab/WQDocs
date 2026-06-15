@@ -1,5 +1,6 @@
----
-title: Calendar — Extending
+﻿---
+description: Extend the Calendar module and troubleshoot common issues.
+title: Calendar â€” Extending
 tags: 
  - WWT
 ---

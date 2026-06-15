@@ -1,481 +1,397 @@
+---
+title: Install WideQuick Web Client
+description: How to install and configure WideQuick Web Client as a standalone application.
+product: wq
+page_type: getstarted
+tags:
+ - WQ
+---
+
 # Install WideQuick Web Client
 
-## Installing WideQuick Web Client
-
-### Configuration of **WideQuick® Web Client** Standalone
-
-#### WideQuick® Web Client Config Tool
-
-Since **WideQuick** version 8 the web client is shipped with a graphical tool for configuring the .ini-file that will be installed alongside the web client. The tool is built in a very self-explanatory way and provides graphical interface for editing all the settings in the .ini-file.
-
-![WideQuick Web Client Config Tool – Web server.](./pics/install_wq/wqWebClientConfigTool.png)
-
-- **File**
-
-  In the File menu you will find commands to create, open and save configurations.
-
-- **New**
-
-  Creates a new configuration to edit
-
-- **Open**
-
-  Open an existing configuration to edit.
-
-- **Save**
-
-  Saves the current configuration.
-
-- **Save as…**
-
-  Allows you to save a new copy of the current configuration.
-
-  !!! Observe
-
-        If the configuration file requires elevated privilege to be saved the program may display a UAC-dialog on saving.
-
-- **Exit**
-  Exits the program.
-- **Settings**
-  - **Store relative paths**
-
-    If this option is checked the program will attempt to convert all paths in the configuration into relative paths, relative to where the configuration file is located.
-
-  - **Restart service**
-
-    Restarts the service **WideQuick Web Client**. The option is only available on Windows system if the loaded configuration is used by the service. After a configuration has been modified and saved, the **WideQuick Web Client** service must be restarted in order for the changes to take effect.
-
-- **Web server**
-
-  The tab Web server contains the initialization values for **WideQuick® Web Client**.
-  The information is located in the **web-server** section in the ini-file.
-  - **Http-address**
-
-    The IP-address **WideQuick® Web Client** will listen on.
-    Default value is _0.0.0.0_ and corresponds to all available IP-addresses on the computer.
-    It is possible to specify _127.0.0.1_ or _localhost_, but please note that if you do so, then the server will not be available to other computers on the network.
-
-  - **Http-port**
-
-    Http-port used by **WideQuick® Web Client** for incoming connections.
-    If http-port is left empty the default port 80 will be used for http-connections and 443 for https-connections.
-
-  - **Console**
-
-    If console is on, **WideQuick® Web Client** will run with a visible console window for debug purpose.
-
-  - **threading**
-
-    Choose what threading model the web client should use. This setting can be relevant if there are specific performance requirements. free specifies that web client should create as many threads as is deemed necessary, while strict specifies that there should be a fixed amount of threads throughout the entire runtime of the process.
-
-  - **docroot**
-
-    If you want to utilize resources other than those provided with **WideQuick® Web Client** by default, you may alter this path to the directory of your resources.
-    By default this is set to ‘./data’
-
-  - **error_root**
-
-    Specifies a directory that contains standard-error pages (.html).
-    By default this is set to '.' to display the standard built-in error pages.
-
-    To add a custom error-page, add files with the following names in the specified directory, the files should contain a page specified in html.
-
-    ```{ .txt .no-copy title="error_root catalogue" }
-        .
-        ├─ 200-ok.html
-        │
-        ├─ 201-created.html
-        │
-        ├─ 202-accepted.html
-        │
-        ├─ 204-nocontent.html
-        │
-        ├─ 300-multiple-choices.html
-        │
-        ├─ 301-moved-permanently.html
-        │
-        ├─ 302-found.html
-        │
-        ├─ 303-see-other.html
-        │
-        ├─ 304-not-modified.html
-        │
-        ├─ 307-moved-temporarily.html
-        │
-        ├─ 400-bad-request.html
-        │
-        ├─ 401-unauthorized.html
-        │
-        ├─ 403-forbidden.html
-        │
-        ├─ 404-not-found.html
-        │
-        ├─ 413-request-entity-too-large.html
-        │
-        ├─ 500-internal-server-error.html
-        │
-        ├─ 501-not-implemented.html
-        │
-        ├─ 502-bad-gateway.html
-        │
-        ├─ 503-service-unavailable.html
-        │
-        └─
-
-    ```
-
-    For a specification on what the various error-codes mean, see:
-
-    [www.w3schools.com/tags/ref_httpmessages](http://www.w3schools.com/tags/ref_httpmessages.asp){:target="\_blank"}
-
-  - **use_https**
-
-    When use_https is set to true the web server will use HTTPS (Hypertext Transfer Protocol Secure), when establishing connections and communicating with clients, such as a web-browser.
-
-    !!! Note
-
-          If use_https is selected the values; ssl_certificate, ssl_private_key and ssl_temp_dh must be specified, otherwise the server cannot start.
-
-- **ssl_certificate**
-  Specifies the SSL-certificate to be used by secure communication.
-  This is only required if use_https is selected.
-- **ssl_private_key**
-  Specifies the private server key used by secure communication.
-  This is only required if use_https is selected.
-- **ssl_temp_dh**
-  Specifies the random Diffie-Hellman parameters used for secure key exchange.
-  This is only required if use_https is selected.
-
-#### WideQuick® Runtime Server
-
-The tab **WideQuick® Runtime Server** contains information regarding instances of **WideQuick® Runtime** that **WideQuick® Web Client** can connect to and what workviews and variables is possible to specify in the URL.
-
-The information is located in the `[wqre-server]` section in the ini-file.
-
-![WideQuick Web Client Config Tool – WideQuick® Runtime Server.](./pics/install_wq/wqWebRuntimeServer.png)
-
-- **Name**
-
-  The name of the server. The name can be used as an argument in the URL **WideQuick® Web Client**.
-  Example URL: localhost/?wqruntime=server1, this URL would connect to a webserver running on localhost on port 80, and the webserver would in turn connect to a **WideQuick** server located on localhost at port 2140, as specified by server1 in the image above.
-  All servers that are not the default will be stored under its own node **name** in the ini-file.
-
-- **Hostname**
-
-  IP-address of the computer executing **WideQuick® Runtime**.
-  The IP-address 127.0.0.1 means that** WideQuick® Runtim**e and **WideQuick® Web Client** are running on the same system.
-
-- **Port**
-
-  The connection port specified for view access in the **WideQuick®** project properties.
-
-- **Cache size**
-
-  Specifies the size of the file cache in MB. Specify 0 to completely deactivate the cache.
-
-- **Workview**
-
-  This value should be set to the name of the workview that should be displayed in** WideQuick® Web Client** when connecting to the **WideQuick®** project using a web browser.
-  By default this option is left empty to use the startview specified in the WideQuick® Runtime project.
-
-- **Workviews**
-
-  List of workviews that can be used as arguments in the URL to **WideQuick® Web Client**.
-  Example URL: localhost/?view=Workview2.kvie, this URL would connect to a webserver running on localhost on port 80, and would start by displaying the workview named Workview2.kvie.
-  The information is saved as view_args in the ini-file and must be separated with a space.
-
-- **Export variables**
-
-  List of variables that will be exposed and accessible through the URL to **WideQuick® Web Clien**t.
-  Example URL: localhost/?export_var1=11&export_var2=22, this URL would connect to a webserver running on localhost on port 80, and would assign the exported variables exported_var1 to 11 and exported variable exported_var2 to 22.
-  The information is saved as export_vars in the ini-file and must be separated with a space.
-
-#### WideQuick® Web Client
-
-The tab **WideQuick® Web Client** configures how frequently **WideQuick® Web Client** should update the GUI for the project and how frequently data should be synchronized with **WideQuick® Runtime**.
-The information is located in the **wqweb** section in the ini-file.
-
-![WideQuick Web Client Config Tool – WideQuick® Web Client.](./pics/install_wq/wqWebConfigWebClient.png)
-
-- **refreshrate**
-
-  Frequency of WideQuick® Web Clients synchronisation of data with WideQuick® Runtime.
-
-- **gfxupdaterate**
-
-  Frequency of WideQuick® Web Client update rate of the graphical interface to web browsers.
-
-- **Max reconnect attempts**
-
-  Specifies the maximum amount of reconnect attempts that the remote system should attempt. If the value is set to 0, then no reconnect attempts will be performed.
-
-  If the value is set to -1 then the remote system will attempt to reconnect indefinitely.
-
-- **Reconnect delay**
-
-  Specifies how many seconds the remote system should wait in between reconnect attempts.
-
-- **Logger**
-
-  The section Logger provides the path to the directory where the logging information is stored, as well as configuring what level of logging that should be active.
-
-  The information is located in the **logger** section in the ini-file.
-
-- **File path**
-
-  Specify the path to the folder where the logging information should be stored. WideQuick® Web Client requires write access to the folder.
-
-- **Error, warning and debug**
-
-  Select if Error, warning and/or debug information should be logged in the logging file or not.
-
-#### Configuring the .ini-file manually
-
-The ini-file can also be edited manually. Open Notepad, Notepad++ or equivalent and make sure it has administrative rights.
-
-As an example you can start WordPad as an administrator by writing WordPad in the start menu and then right-click on the program.
-
-Finally select Run as administrator.
-
-![Open wordpad as an administrator.](./pics/install_wq/openWithNotepad.png)
-
-Open wqweb.ini, which by default is available in the following directories:
-
-- Default (for 64-bit Windows) : C:\Program Files (x86)\Kentima AB\WideQuick Web Client
-- Default (for debian installations) : /etc/wqweb/
-
-Following the installation, the content should look as displayed below:
-
-```{.íni title="wqweb.ini"}
-   [web-server]
-   http-address=127.0.0.1
-   http-port=80
-   docroot=.
-   error_root=.
-   console=true
-   use_https=false
-   ssl_certificate=cert.pem
-   ssl_private_key=server.key
-   ssl_temp_dh=dh2048.pem
-   [wqre-server]
-   hostname=127.0.0.1
-   port=2122
-   workview=
-   view_args=
-   export_vars=
-   [wqweb]
-   refreshrate=250
-   gfxupdaterate=250
-   [logger]
-   filepath=C:/ProgramData/Kentima AB/WQWebClient/Log
-   error=true
-   warning=true
-   debug=true
+## WideQuick® Web Client Config Tool
+
+Since **WideQuick** version 8 the web client ships with a graphical tool for
+configuring the `.ini` file installed alongside the web client. The tool provides
+a graphical interface for editing all settings in the `.ini` file.
+
+![WideQuick Web Client Config Tool – Web server](pics/install_wq/wqWebClientConfigTool.png)
+
+### File menu
+
+* **New** — creates a new configuration
+* **Open** — opens an existing configuration
+* **Save** — saves the current configuration
+* **Save as...** — saves a copy of the current configuration
+
+!!! note
+    If the configuration file requires elevated privileges to be saved, a UAC
+    dialog may appear.
+
+* **Exit** — exits the program
+
+### Settings menu
+
+* **Store relative paths** — when enabled, all paths in the configuration are
+converted to relative paths, relative to the location of the configuration file
+* **Restart service** — restarts the **WideQuick Web Client** service. Only
+available on Windows when the loaded configuration is in use by the service. The
+service must be restarted after any configuration change for the changes to take
+effect.
+
+---
+
+## Web server tab
+
+The **Web server** tab contains the initialization values for **WideQuick® Web
+Client**, stored in the `[web-server]` section of the `.ini` file.
+
+* **Http-address** — the IP address **WideQuick® Web Client** will listen on.
+Defaults to `0.0.0.0`, which corresponds to all available IP addresses on the
+computer. Setting this to `127.0.0.1` or `localhost` makes the server unavailable
+to other computers on the network.
+
+* **Http-port** — the HTTP port used for incoming connections. If left empty,
+port `80` is used for HTTP connections and `443` for HTTPS connections.
+
+* **Console** — when enabled, **WideQuick® Web Client** runs with a visible
+console window for debugging.
+
+* **Threading** — controls the threading model. `free` allows the web client to
+create as many threads as needed. `strict` uses a fixed number of threads
+throughout the runtime of the process.
+
+* **docroot** — the directory for web client resources. Defaults to `./data`.
+Change this if you want to use custom resources.
+
+* **error_root** — the directory containing custom error pages (`.html`). Defaults
+to `.` to display the standard built-in error pages. To add a custom error page,
+place files with the following names in the specified directory:
+
+```{ .txt .no-copy title="error_root catalogue" }
+.
+├─ 200-ok.html
+├─ 201-created.html
+├─ 202-accepted.html
+├─ 204-nocontent.html
+├─ 300-multiple-choices.html
+├─ 301-moved-permanently.html
+├─ 302-found.html
+├─ 303-see-other.html
+├─ 304-not-modified.html
+├─ 307-moved-temporarily.html
+├─ 400-bad-request.html
+├─ 401-unauthorized.html
+├─ 403-forbidden.html
+├─ 404-not-found.html
+├─ 413-request-entity-too-large.html
+├─ 500-internal-server-error.html
+├─ 501-not-implemented.html
+├─ 502-bad-gateway.html
+└─ 503-service-unavailable.html
 ```
 
-### Configuration of the WideQuick® Project
+For a specification of HTTP error codes, see
+[www.w3schools.com/tags/ref_httpmessages](http://www.w3schools.com/tags/ref_httpmessages.asp){target="_blank"}.
 
-For WideQuick® Web Client to connect to a WideQuick® Runtime project the WideQuick® Runtime project must be configured in the same way as when it is used together with WideQuick® Remote Client.
+* **use_https** — when enabled, the web server uses HTTPS for all connections.
 
-#### View Access
+!!! note
+    If **use_https** is enabled, `ssl_certificate`, `ssl_private_key`, and
+    `ssl_temp_dh` must all be specified, otherwise the server cannot start.
 
-The WideQuick® Runtime project must have an active port for view access. The view access port specifies the TCP/IP port for communication between two instances of WideQuick® Runtime or between WideQuick® Runtime and WideQuick® Web Client.
+* **ssl_certificate** — the SSL certificate used for secure communication.
+Required only when **use_https** is enabled.
 
-The view access port is specified in the project properties, for e.g. port 2122
+* **ssl_private_key** — the private server key used for secure communication.
+Required only when **use_https** is enabled.
 
-#### Read and Write access to DataStore Variables
+* **ssl_temp_dh** — the random Diffie-Hellman parameters used for secure key
+exchange. Required only when **use_https** is enabled.
 
-For all variables and alarms which values should be transmitted to the client or back, the View access must be set to Read and/or Write as desired.
+---
 
-#### Start View
+## WideQuick® Runtime Server tab
 
-Any view in a project can be set as the Start View of the Web Client independent of the Start View for **WideQuick Runtime**. All other windows in the project are sub views to the main view. Sub views are automatically closed when their parent is closed.
+The **WideQuick® Runtime Server** tab configures the **WideQuick® Runtime**
+instances that **WideQuick® Web Client** can connect to, stored in the
+`[wqre-server]` section of the `.ini` file.
 
-When the main view is closed, all other windows will also be closed, and your presentation will be terminated.
+![WideQuick Web Client Config Tool – WideQuick® Runtime Server](pics/install_wq/wqWebRuntimeServer.png)
 
-If you link to another workview from the start view, and that workview is opened in the same window as the start view, it will resume the role of main view.
+* **Name** — the name of the server. Can be used as a URL argument, for example
+`localhost/?wqruntime=server1` connects to the server named `server1`. All
+non-default servers are stored under their own `[name]` node in the `.ini` file.
 
-To set a Start View for the Web Client. Right click any view and set the view as Start View for _WQWeb_
+* **Hostname** — the IP address of the computer running **WideQuick® Runtime**.
+`127.0.0.1` means **WideQuick® Runtime** and **WideQuick® Web Client** are
+running on the same machine.
 
-### Connect with Web Browser
+* **Port** — the connection port specified for view access in the **WideQuick®**
+project properties.
 
-When WideQuick® Web Client, the WideQuick® Runtime project and the web server are configured it is possible to display the WideQuick® Runtime project in any web browser without the need to install any extra plug-in components to the browser.
+* **Cache size** — the size of the file cache in MB. Set to `0` to disable
+caching entirely.
 
-The URL for an IIS server configured as described above is:
+* **Workview** — the workview displayed when connecting via a web browser. Leave
+empty to use the start view specified in the **WideQuick® Runtime** project.
 
+* **Workviews** — list of workviews that can be used as URL arguments, for example
+`localhost/?view=Workview2.kvie`. Separated by spaces, stored as `view_args` in
+the `.ini` file.
+
+* **Export variables** — list of variables exposed through the URL, for example
+`localhost/?export_var1=11&export_var2=22`. Separated by spaces, stored as
+`export_vars` in the `.ini` file.
+
+---
+
+## WideQuick® Web Client tab
+
+The **WideQuick® Web Client** tab configures update and synchronisation rates,
+stored in the `[wqweb]` section of the `.ini` file.
+
+![WideQuick Web Client Config Tool – WideQuick® Web Client](pics/install_wq/wqWebConfigWebClient.png)
+
+* **refreshrate** — how frequently **WideQuick® Web Client** synchronises data
+with **WideQuick® Runtime**.
+
+* **gfxupdaterate** — how frequently **WideQuick® Web Client** updates the
+graphical interface in the browser.
+
+* **Max reconnect attempts** — the maximum number of reconnect attempts. Set to
+`0` to disable reconnection. Set to `-1` to retry indefinitely.
+
+* **Reconnect delay** — how many seconds to wait between reconnect attempts.
+
+* **File path** — the directory where log files are stored.
+**WideQuick® Web Client** requires write access to this folder.
+
+* **Error, warning and debug** — toggles for which log levels are written to the
+log file.
+
+---
+
+## Configuring the .ini file manually
+
+The `.ini` file can also be edited manually using a text editor with administrative
+rights. The default file location is:
+
+* **Windows (64-bit)** — `C:\Program Files (x86)\Kentima AB\WideQuick Web Client`
+* **Debian** — `/etc/wqweb/`
+
+The default content of `wqweb.ini` after installation:
+
+```{.ini title="wqweb.ini"}
+[web-server]
+http-address=127.0.0.1
+http-port=80
+docroot=.
+error_root=.
+console=true
+use_https=false
+ssl_certificate=cert.pem
+ssl_private_key=server.key
+ssl_temp_dh=dh2048.pem
+[wqre-server]
+hostname=127.0.0.1
+port=2122
+workview=
+view_args=
+export_vars=
+[wqweb]
+refreshrate=250
+gfxupdaterate=250
+[logger]
+filepath=C:/ProgramData/Kentima AB/WQWebClient/Log
+error=true
+warning=true
+debug=true
 ```
-http://ServerName:ConnectionPort
-```
 
-Where Server Name is the web server’s IP address or computer name or full URL to the web server.
+---
 
-### Supported Properties
+## Configuring the WideQuick® project
 
-- **Variables and Data Types**
+For **WideQuick® Web Client** to connect to a project, the project must be
+configured in the same way as for **WideQuick® Remote Client**.
 
-  All types of variables are supported by WideQuick® Web Client.
+### View access
 
-- **Dynamics**
+The project must have an active port for view access, specifying the TCP/IP port
+for communication between **WideQuick® Runtime** and **WideQuick® Web Client**.
+The port is configured in the project properties, for example port `2122`.
 
-  All forms of dynamics are supported by WideQuick® Web Client. However, dynamics is not supported in a few properties. See Dynamics for more information on where dynamics is not supported.
+### Read and write access to DataStore variables
 
-- **Workviews**
+For all variables and alarms whose values should be transmitted to or from the
+client, the view access must be set to **Read** and/or **Write** as required.
 
-  When connecting to a WideQuick® Web Client the view specified in the configuration file is displayed. Thereafter navigation is possible through the link() function or a multiviewer.
+### Start view
 
-- **Objects**
+Any view in a project can be set as the start view for **WideQuick® Web Client**,
+independent of the start view for **WideQuick® Runtime**. All other windows are
+sub views to the main view and are automatically closed when their parent is closed.
 
-      The following objects are supported for the most part in WideQuick® Web Client. Some functionality may be missing. See Objects for more information about functionality missing.
+To set a start view for the web client, right-click any view and select
+**Set as Start View for WQWeb**.
 
-   <div style="display: flex; flex-wrap: wrap;">
-    <div style="flex: 1; min-width: 200px;">
-      <ul>
-        <li>Alarm – Blocking list</li>
-        <li>Alarm – Frequency list</li>
-        <li>Alarm – List</li>
-        <li>Alarm – Log</li>
-        <li>Alarm – Row</li>
-        <li>Combo box (Not editable)</li>
-        <li>Button – temporary (Does not display unique text when clicked)</li>
-        <li>Box</li>
-        <li>Arch</li>
-        <li>Check box</li>
-        <li>Custom Button</li>
-      </ul>
-    </div>
-    <div style="flex: 1; min-width: 200px;">
-      <ul>
-        <li>Custom Spin box</li>
-        <li>Datetime Edit</li>
-        <li>Ellipse</li>
-        <li>EthirisView</li>
-        <li>History</li>
-        <li>History2</li>
-        <li>Image</li>
-        <li>Line</li>
-        <li>Line Chart 2</li>
-        <li>Map View</li>
-        <li>Multiviewer</li>
-        <li>Object list</li>
-        <li>Polygon</li>
-      </ul>
-    </div>
-    <div style="flex: 1; min-width: 200px;">
-      <ul>  
-        <li>Radio button</li>
-        <li>Slider</li>
-        <li>Spin box</li>
-        <li>Trend</li>
-        <li>Triangle</li>
-        <li>Table</li>
-        <li>HTML</li>
-        <li>Report view</li>
-        <li>Bar Chart 2</li>
-        <li>Event List 2</li>
-        <li>Text</li>
-        <li>Text box</li>
-        <li>Tree view</li>
-      </ul>
-    </div>
-  </div>
+---
 
-- **Groups and Instances**  
-   WideQuick® Web Client has full support for groups and instances.
+## Connecting with a web browser
 
-- **Data Base Connections**
+Once **WideQuick® Web Client**, the **WideQuick® Runtime** project, and the web
+server are configured, the project can be displayed in any web browser without
+installing any additional plug-ins.
 
-  WideQuick® Web Client supports the use of virtual databases.
+The URL format is: http://ServerName:ConnectionPort
 
-- **Remote System**
+Where `ServerName` is the web server's IP address, computer name, or full URL.
 
-  WideQuick ® Web Client supports that information is retrieved from multiple remote systems. I.e. if the WideQuick® Runtime that the web client connects to in turn receives information from other Runtime systems, then that information will also be presented in the browser.
+---
 
-  WideQuick® Web Client also supports remote-systems through the linkRemote() functionality, and the configuration for remote systems in the multiviewer.
+## Supported properties
 
-- **Users and Privileges**
+**Variables and data types** — all variable types are supported.
 
-  WideQuick® Web Client supports that users log in and out, change passwords and edit users via script and dialogs.
+**Dynamics** — all forms of dynamics are supported, with some exceptions. See
+[Not supported properties](#not-supported-properties) for details.
 
-- **Language**
+**Workviews** — the view specified in the configuration file is displayed on
+connection. Navigation is then possible through the `link()` function or a
+multiviewer.
 
-  WideQuick® Web Client supports translation of both project and application.
+**Groups and instances** — full support for groups and instances.
 
-- **Script**
+**Database connections** — virtual databases are supported.
 
-  Most features are supported via script. However, there are some exceptions. See Script for more information.
+**Remote systems** — supported, including information retrieved from multiple
+remote systems, `linkRemote()` functionality, and remote system configuration in
+the multiviewer.
 
-- **EthirisView**
+**Users and privileges** — users can log in and out, change passwords, and edit
+users via script and dialogs.
 
-  WideQuick® Web Client has full support for EthirisView.
+**Language** — translation of both project and application is supported.
 
-- **History Object**
+**Script** — most script features are supported. See
+[Not supported properties](#not-supported-properties) for exceptions.
 
-  Most The history object can be used as an advanced analytical tool to study individual signals, or their interrelationships. The signals which are presented are gathered from one or several loggers. For each signal you can indicate a unique label and color. For the analogue signals, you may also indicate min and max values for the scale, or make them dynamic. The analogue signals are presented as curves, and the digital signals as lines.
+**EthirisView** — full support.
 
-- **Mail**
+**History object** — supported as an advanced analytical tool for studying
+individual signals or their interrelationships across one or several loggers.
 
-  It is possible to use the mail system in WideQuick® Web Client. The mails will be sent from the server that Web Client is connected to.
+**Mail** — the mail system is supported. Mails are sent from the server that
+**WideQuick® Web Client** is connected to.
 
-### Not Supported Properties
+The following objects are supported for the most part, with some functionality
+missing:
 
-- **Dynamics**
+* Alarm – Blocking list
+* Alarm – Frequency list
+* Alarm – List
+* Alarm – Log
+* Alarm – Row
+* Arch
+* Bar Chart 2
+* Box
+* Button – temporary (does not display unique text when clicked)
+* Check box
+* Combo box (not editable)
+* Custom Button
+* Custom Spin box
+* Datetime Edit
+* Ellipse
+* EthirisView
+* Event List 2
+* History
+* History2
+* HTML
+* Image
+* Line
+* Line Chart 2
+* Map View
+* Multiviewer
+* Object list
+* Polygon
+* Radio button
+* Report view
+* Slider
+* Spin box
+* Table
+* Text
+* Text box
+* Trend
+* Triangle
+* Tree view
 
-  The following properties of dynamics are not supported:
-  - Bring workviews to front.
+---
 
-- **Workviews**
+## Not supported properties
 
-  When connecting to a WideQuick® Web Client the view specified in the configuration file is displayed.
+### Dynamics
 
-  WideQuick® Web Client does not present any menus in workviews.
+The following dynamic property is not supported:
 
-- **Objects**
+* Bring workviews to front
 
-  Some shared properties are not supported by WideQuick® Web Client for any object.
-  - Other borders than solid and no border.
-  - Font does not support strikethrough and underline.
-  - If the browser does not have access to the specified font, it chooses a similar font.
+### Workviews
 
-  The following objects are not supported via WideQuick® Web Client.
-  - ActiveX
-  - Bar Chart
-  - Camera
-  - Combo box (Editable)
-  - Event list
-  - Gauge
-  - Knob
-  - Line Chart
-  - Tab
+**WideQuick® Web Client** does not present any menus in workviews.
 
-    Tab indexes for object navigation is not supported.
+### Objects
 
-    !!! Note
+Some shared properties are not supported by **WideQuick® Web Client** for any
+object:
 
-        If a font is unavailable in the browser, a similar font will be used. However, to ensure that the project looks as similar as possible, only fonts with good web support should be chosen if the project is intended to be used with WideQuick Web Client.
+* Borders other than solid or none
+* Font does not support strikethrough or underline
+* If the browser does not have access to the specified font, it will use a similar
+font instead
 
-- **Unit System**
+!!! note
+    To ensure the project looks as similar as possible, only fonts with good web
+    support should be chosen if the project is intended to be used with
+    **WideQuick® Web Client**.
 
-  WideQuick® Web Client does not support unit conversions.
+The following objects are not supported via **WideQuick® Web Client**:
 
-- **Script**
+* ActiveX
+* Bar Chart
+* Camera
+* Combo box (Editable)
+* Event list
+* Gauge
+* Knob
+* Line Chart
+* Tab
 
-  The following features are not supported by WideQuick® Web Client:
-  - **Bitmap object** – The following
-  - print()
-  - **COMObject object**
-  - **Debugger object**
-  - **File object**
-  - **Run external application**
-  - **Messenger object**
-  - **Process object**
-  - **SerialPort object**
-  - **UnitSystemCollection object**
-  - **Workview object** – The following
-    - grab()
-    - print()
-    - translate()
-    - mapTo()
-    - mapFrom()
-    - mapToScreen()
-    - mapFromScreen()
+!!! note
+    Tab indexes for object navigation are not supported.
 
+### Unit System
+
+**WideQuick® Web Client** does not support unit conversions.
+
+### Script
+
+The following features are not supported by **WideQuick® Web Client**:
+
+* **Bitmap object** — `print()`
+* **COMObject object**
+* **Debugger object**
+* **File object**
+* **Run external application**
+* **Messenger object**
+* **Process object**
+* **SerialPort object**
+* **UnitSystemCollection object**
+* **Workview object** — the following functions are not supported:
+    * `grab()`
+    * `print()`
+    * `translate()`
+    * `mapTo()`
+    * `mapFrom()`
+    * `mapToScreen()`
+    * `mapFromScreen()`

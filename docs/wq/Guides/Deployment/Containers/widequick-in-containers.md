@@ -1,3 +1,11 @@
+---
+title: Deploying WideQuick in Containers
+description: How to deploy WideQuick in Docker containers for scalable multi-site HMI and SCADA deployments.
+product: wq
+page_type: howto
+tags:
+ - WQ
+---
 # Deploying WideQuick in Containers
 
 ![WQContainerintro](/assets/Images/WQContainers.png)

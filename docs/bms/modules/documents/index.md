@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the Documents module â€” manage files and link them to objects.
 title: Documents
 tags: 
  - BMS

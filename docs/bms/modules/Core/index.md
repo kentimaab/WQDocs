@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the Core modules that form the foundation of the WideQuick BMS.
 title: Core
 tags: 
  - BMS

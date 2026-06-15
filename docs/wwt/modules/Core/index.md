@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the Core modules that form the foundation of the WideQuick WWT.
 title: Core
 tags: 
  - WWT

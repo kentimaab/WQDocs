@@ -1,4 +1,5 @@
----
+﻿---
+description: How to create and configure a logger in WideQuick Designer.
 title: Configuring a Logger
 tags: 
  - BMS

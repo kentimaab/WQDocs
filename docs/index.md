@@ -1,5 +1,6 @@
 ---
 template: home.html
+description: WideQuick documentation home — explore guides, references, and module documentation for all WideQuick products.
 hide:
   - navigation
   - toc

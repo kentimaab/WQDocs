@@ -1,3 +1,11 @@
+---
+title: Create Alarm
+description: Step-by-step guide to creating alarm groups and configuring individual alarms in WideQuick Designer.
+product: mod
+page_type: getstarted
+tags:
+ - MOD
+---
 <!-- --8<-- [start:body] -->
  Create Alarm 
 ===

@@ -1,4 +1,5 @@
----
+﻿---
+description: Tag structure and configuration for WideQuick WWT.
 title: Tag Structure
 product: wwt
 tags: 

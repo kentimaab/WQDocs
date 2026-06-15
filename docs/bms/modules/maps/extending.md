@@ -1,5 +1,6 @@
----
-title: Maps — Extending
+﻿---
+description: Extend the Maps & Indicators module with scripts and hooks.
+title: Maps â€” Extending
 tags: 
  - BMS
 ---

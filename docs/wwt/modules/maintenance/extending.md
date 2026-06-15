@@ -1,5 +1,6 @@
----
-title: Maintenance — Extending
+﻿---
+description: Extend the Maintenance module â€” calendar integration and troubleshooting.
+title: Maintenance â€” Extending
 tags: 
  - WWT
 ---

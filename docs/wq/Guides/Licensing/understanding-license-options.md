@@ -1,3 +1,11 @@
+---
+title: Understanding WideQuick License Options
+description: Guide to WideQuick license types, levels, and optional features to help you choose the right license for your application.
+product: wq
+page_type: concept
+tags:
+ - WQ
+---
 Understanding WideQuick License Options
 =====
 

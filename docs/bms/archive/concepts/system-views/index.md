@@ -1,4 +1,6 @@
----
+﻿---
+search:
+  exclude: true
 title: BMS System Views
 description: Overview of the BMS concept application system views.
 product: bms
@@ -11,6 +13,8 @@ last_reviewed: 2026-05-19
 tags: 
  - BMS
 ---
+search:
+  exclude: true
 
 # BMS System Views
 

@@ -1,5 +1,6 @@
----
-title: Navigation — Extending
+﻿---
+description: Extend the Navigation module with scripts and hooks.
+title: Navigation â€” Extending
 tags: 
  - WWT
 ---

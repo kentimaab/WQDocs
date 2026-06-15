@@ -50,11 +50,8 @@ nav = [
     { "Overview" = "wq/index.md" },
     { "Get Started" = [
       { "Overview" = "wq/get-started/index.md" },
-      { "Install Designer" = "wq/get-started/install-designer.md" },
-      { "Install Runtime" = "wq/get-started/install-runtime.md" },
-      { "Install Web Client" = "wq/get-started/install-web-client.md" },
-      { "Web Client" = "wq/get-started/web-client.md" },
       { "Installing WideQuick" = "wq/get-started/Installing-WideQuick.md" },
+      { "Install Web Client" = "wq/get-started/install-web-client.md" },
     ]},
     { "Guides" = [
       { "Deployment" = [

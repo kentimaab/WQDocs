@@ -1,4 +1,5 @@
----
+﻿---
+description: Create and manage users and privileges in WideQuick.
 title: Users & privileges
 scripts:
   - scUsers

@@ -1,5 +1,6 @@
----
-title: Backup and Restore — Configuring
+﻿---
+description: Restore and delete saved backups in the Backup and Restore feature.
+title: Backup and Restore â€” Configuring
 tags: 
  - BMS
 ---
