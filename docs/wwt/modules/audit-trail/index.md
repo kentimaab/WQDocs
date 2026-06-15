@@ -1,5 +1,7 @@
 ---
 title: Audit Trail
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

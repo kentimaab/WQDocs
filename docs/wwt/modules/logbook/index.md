@@ -1,5 +1,7 @@
 ---
 title: Logbook
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

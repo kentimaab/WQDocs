@@ -521,7 +521,7 @@ extra_css = ["assets/stylesheets/extra.css"]
 # The path provided should be relative to the "docs_dir".
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
-extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js"]
+extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js"]
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options

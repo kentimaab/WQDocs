@@ -2681,3 +2681,51 @@ a.md-nav__link .md-status,
 .lp h1.lp-title + * {
     margin-top: 0;
 }
+
+/* ── Search tag chips ──────────────────────────────────────── */
+.search-tag-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    padding: .6rem .8rem .5rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.tag-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    padding: .2rem .6rem;
+    border-radius: 2rem;
+    border: 1px solid var(--md-primary-fg-color);
+    background: transparent;
+    color: var(--md-primary-fg-color);
+    font-size: .7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .12s, color .12s;
+    white-space: nowrap;
+}
+
+.tag-chip:hover:not([disabled]) {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color, #fff);
+}
+
+.tag-chip--active {
+    background: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color, #fff);
+}
+
+.tag-chip--disabled {
+    opacity: .3;
+    cursor: default;
+    border-color: currentColor;
+    color: var(--md-default-fg-color--light);
+}
+
+.tag-chip__count {
+    font-size: .65rem;
+    font-weight: 400;
+    opacity: .75;
+}

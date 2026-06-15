@@ -1,5 +1,7 @@
 ---
 title: Reports
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

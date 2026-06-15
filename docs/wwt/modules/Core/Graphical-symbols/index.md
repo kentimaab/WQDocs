@@ -1,5 +1,7 @@
 ---
 title: Graphical symbols
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

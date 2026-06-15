@@ -5,6 +5,8 @@ product: bms
 page_type: concept
 status: draft
 last_reviewed: 2026-06-12
+tags: 
+ - BMS
 ---
 
 !!! info "Shared modules"

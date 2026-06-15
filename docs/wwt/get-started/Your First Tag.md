@@ -2,6 +2,8 @@
 title: Your First Tag
 product: wwt
 page_type: getstarted
+tags: 
+ - WWT
 ---
 # Your first tag
 

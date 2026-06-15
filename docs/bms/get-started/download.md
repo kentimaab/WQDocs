@@ -5,6 +5,8 @@ product: bms
 page_type: getstarted
 status: draft
 last_reviewed: 2026-06-02
+tags: 
+ - BMS
 ---
 
 # Download WideQuick BMS

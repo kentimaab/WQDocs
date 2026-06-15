@@ -1,5 +1,7 @@
 ---
 title: Alarms
+tags: 
+ - BMS
 ---
 
 

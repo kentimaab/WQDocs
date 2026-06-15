@@ -8,6 +8,8 @@ last_reviewed: 2026-05-28
 scripts: 
  - scRemoteAlarms
  - scRemoteSystems
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 # Remote Systems

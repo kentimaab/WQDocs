@@ -10,6 +10,8 @@ scripts:
   - scCalendar
   - scDayViewManager
   - scWeekViewManager
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 

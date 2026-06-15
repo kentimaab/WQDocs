@@ -1,5 +1,7 @@
 ---
 title: Core
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

@@ -5,6 +5,8 @@ product: wwt
 page_type: release
 status: draft
 last_reviewed: 2026-06-02
+tags: 
+ - WWT
 ---
 
 # Releases — WWT

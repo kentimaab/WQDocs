@@ -1,5 +1,7 @@
 ---
 title: Navigation
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

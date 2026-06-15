@@ -1,5 +1,7 @@
 ---
 title: Navigation framework
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

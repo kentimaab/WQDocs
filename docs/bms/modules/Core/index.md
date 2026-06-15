@@ -1,5 +1,7 @@
 ---
 title: Core
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

@@ -1,5 +1,7 @@
 ---
 title: Graphical symbols
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

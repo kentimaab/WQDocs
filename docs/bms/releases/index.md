@@ -4,6 +4,8 @@ description: Release notes for WideQuick BMS.
 product: bms
 page_type: release
 last_reviewed: 2026-06-03
+tags: 
+ - BMS
 ---
 
 # Releases — BMS

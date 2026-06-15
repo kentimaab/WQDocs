@@ -1,5 +1,7 @@
 ---
 title: Navigation framework
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

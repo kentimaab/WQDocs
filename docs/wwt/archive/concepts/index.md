@@ -5,6 +5,8 @@ product: wwt
 page_type: concept
 status: draft
 last_reviewed: 2026-05-19
+tags: 
+ - WWT
 ---
 
 # Concepts — WWT

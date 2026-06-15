@@ -11,6 +11,8 @@ scripts:
 object_libraries:
   - Map Indicators
   - WEATHER
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
