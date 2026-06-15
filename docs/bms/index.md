@@ -58,6 +58,12 @@ hide:
 
     [Guides →](guides/)
 
+-   :material-file-document-outline: **Reference**
+
+    Tag structure, multiview, suffix system, resources, database schemas.
+
+    [Reference →](reference/)
+
 -   :material-package-variant: **Releases**
 
     Release notes, migration guides, known issues, and roadmap.
