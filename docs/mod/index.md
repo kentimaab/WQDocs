@@ -32,13 +32,13 @@ tags:
 
     Install WideQuick, open the Modular Framework concept app, and verify it runs end-to-end.
 
-    [Walkthrough →](get-started/)
+    [Walkthrough →](get-started/download.md)
 
 -   **First workview**
 
     Build a workview, add a graphical object, and bind it to a Data Store variable.
 
-    [Build it →](guides/create-an-object.md)
+    [Build it →](get-started/Your%20First%20Tag.md)
 
 -   **The architecture**
 

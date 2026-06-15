@@ -25,15 +25,15 @@ WideQuick MOD uses several SQLite databases stored in the `Data/` folder of the 
 
 ---
 
-### [maintenance.db](maintenance-db.md) { #maintenance-db }
-
-* [**maintenance.db**](maintenance-db.md) — Stores maintenance task configurations, the task log, change history, calendar events, and the registry of known remote systems.
-
----
-
 ### [History.db](history-db.md) { #history-db }
 
 * [**History.db**](history-db.md) — Stores logged signal data. Tables are generated dynamically by loggers — each logger produces a data table and a meta table identified by a hash of the logger name.
+
+---
+
+### [maintenance.db](maintenance-db.md) { #maintenance-db }
+
+* [**maintenance.db**](maintenance-db.md) — Stores maintenance task configurations, the task log, change history, calendar events, and the registry of known remote systems.
 
 ---
 

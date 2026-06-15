@@ -48,4 +48,7 @@ Signal groups can be saved and reloaded to avoid re-selecting the same signals e
 1. Select the group from the **Select saved signals** dropdown.
 2. Click **Delete saved signals**. The group is removed. This does not affect the logged signal data.
 
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — opening the view-specific popup from a script and troubleshooting
 <!-- --8<-- [end:body] -->

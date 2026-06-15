@@ -49,4 +49,8 @@ Clicking a maintenance event opens a popup showing the object, status, deadline 
 A reminder event can appear in the calendar a set number of days before a maintenance deadline. The reminder appears as a separate entry with the color **Reminder**, distinct from the deadline event itself.
 
 Reminders are enabled by default for tasks created without a template. Tasks created from a template use that template's reminder setting, which defaults to off. The default reminder offset is 3 days. See [Extending](extending.md#reminder-configuration) for how to change these settings.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — reminder offset configuration
 <!-- --8<-- [end:body] -->

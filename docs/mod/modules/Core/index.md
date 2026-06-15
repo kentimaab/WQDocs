@@ -27,11 +27,10 @@ Core is the foundation of every WideQuick MOD installation. Unlike optional modu
 
 ---
 
-### [Themes](Themes/index.md) { #themes }
+### [Graphical Symbols](Graphical-symbols/index.md) { #graphical-symbols }
 
-* [**Get started**](Themes/get-started.md) — Light and dark mode, switching themes, how objects follow themes.
-* [**Configuring**](Themes/configuring.md) — Changing colors, how colors are applied to objects, custom colors.
-* [**Extending**](Themes/extending.md) — Creating custom themes and the built-in themes that ship with MOD.
+* [**Symbol libraries**](Graphical-symbols/Symbols.md) — Components, dampers, motors, sensors, valves, and more.
+* [**Legacy symbols**](Graphical-symbols/legacy.md) — Earlier generation symbols from WideQuick BMS 8.0.
 
 ---
 
@@ -43,16 +42,17 @@ Core is the foundation of every WideQuick MOD installation. Unlike optional modu
 
 ---
 
-### [Graphical Symbols](Graphical-symbols/index.md) { #graphical-symbols }
-
-* [**Symbol libraries**](Graphical-symbols/Symbols.md) — Components, dampers, motors, sensors, valves, and more.
-* [**Legacy symbols**](Graphical-symbols/legacy.md) — Earlier generation symbols from WideQuick BMS 8.0.
-
----
-
 ### [Settings](settings.md) { #settings }
 
 * [**Settings**](settings.md) — Project-wide settings for the Core module.
+
+---
+
+### [Themes](Themes/index.md) { #themes }
+
+* [**Get started**](Themes/get-started.md) — Light and dark mode, switching themes, how objects follow themes.
+* [**Configuring**](Themes/configuring.md) — Changing colors, how colors are applied to objects, custom colors.
+* [**Extending**](Themes/extending.md) — Creating custom themes and the built-in themes that ship with MOD.
 
 ---
 

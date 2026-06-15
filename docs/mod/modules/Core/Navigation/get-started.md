@@ -109,3 +109,8 @@ remain navigable.
 
 ![FullScreen_Menu](/Images/Navigation/Nav_2Stor.png)
 
+## Next Steps { #next-steps }
+
+* [Configuring](configuring.md) — privilege requirements on views and display settings for restricted views
+* [Extending](extending.md) — GoTo function and custom navigation icons
+<!-- --8<-- [end:body] -->

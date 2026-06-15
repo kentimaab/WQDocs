@@ -47,4 +47,8 @@ Click **Sync with local files on server** to scan the folder and update the data
 * Online resources are never removed by the sync.
 
 The sync runs automatically when `scDoc` starts.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — privilege reference
 <!-- --8<-- [end:body] -->

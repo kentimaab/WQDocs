@@ -182,4 +182,8 @@ Displays signal value comparisons as a bar chart across configurable time period
 Displays maintenance task status — active, planned and missed tasks. Connects directly to the maintenance module. No signal input required.
 
 ![Maintenance](/Images/Dashboard/Maintenance.png){align=center}
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — custom widgets, design patterns and troubleshooting
 <!-- --8<-- [end:body] -->

@@ -124,7 +124,7 @@ Syntax: ```` ```javascript title="scReports — createReport() — after" ````
 
 ## Images
 
-Images are stored under `docs/assets/` and referenced with a path relative to the current file.
+Images are stored under a product-specific `Images/` folder (e.g. `docs/Images/` for shared images, or alongside the page for product-specific content) and referenced with an absolute path from the site root.
 
 ### Single image
 Single images are centered using the align attribute.
@@ -261,10 +261,13 @@ Every page must have a YAML frontmatter block. Fields and their valid values:
 | `title` | Yes | Plain text. Shown in the browser tab and nav. |
 | `description` | Yes | One sentence. Used by search and meta tags. |
 | `product` | Yes | `mod`, `bms`, `wwt`, or `wq` |
-| `page_type` | Yes | `concept`, `guide`, `reference`, `troubleshooting` |
+| `page_type` | Yes | `concept`, `howto`, `getstarted`, `extending`, `reference`, `troubleshooting` |
 | `doc_id` | Recommended | Ticket reference, e.g. `DOC-M9`. Used to track coverage. |
 | `status` | Yes | `draft` or `published` |
 | `last_reviewed` | Yes | ISO date, e.g. `2026-06-11` |
+| `tags` | Recommended | Array of product labels, e.g. `[MOD]`, `[BMS]`, `[WWT]`, `[WQ]` |
+| `hide` | Optional | Array — `toc` hides table of contents, `navigation` hides the sidebar nav |
+| `search` | Optional | `{exclude: true}` — hides the page from the search index |
 
 Example:
 
@@ -277,6 +280,8 @@ page_type: concept
 doc_id: DOC-M13
 status: draft
 last_reviewed: 2026-06-11
+tags:
+ - MOD
 ---
 ```
 

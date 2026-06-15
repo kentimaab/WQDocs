@@ -40,4 +40,8 @@ System.themes.color("Symbol_Alarm")
 ```
 
  To add a new custom color, click **+** at the bottom of the **Custom colors** tab (It will be added as ColorX), assign a name, and set a value. Use the same name across all themes so the color resolves correctly when switching between themes.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — creating a custom theme that follows a graphical profile
 <!-- --8<-- [end:body] -->

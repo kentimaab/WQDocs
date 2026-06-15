@@ -12,7 +12,7 @@ tags:
 <!-- --8<-- [start:body] -->
 # Workview Animations
 
-???+ note "Requirements"
+???+ info "Requirements"
     The following scripts are required to use Workview Animations:
 
     * `scWorkviewAnimation` script

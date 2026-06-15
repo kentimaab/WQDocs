@@ -56,4 +56,8 @@ Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md
 ### View-Scoped { #view-scoped }
 
 The **SpeedDial** menu on process views includes a button that opens a logbook scoped to the current view. Only entries matching that view's topic are shown, and new entries created from here are automatically assigned the correct topic. See [Extending](extending.md) for setup details.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — adding a logbook to a custom view or button
 <!-- --8<-- [end:body] -->

@@ -32,7 +32,6 @@ tags:
     * `Map Indicators`
     * `WEATHER`
 
-
 This section covers how to set up a **Map View** object in WideQuick and how to add
 basic indicators. For configuring more advanced indicators such as Pin Status, Cluster
 Pins, and Lines, see [Maps & Indicators — Configuring](configuring.md). For connecting
@@ -135,3 +134,9 @@ DataStore variable by default. This is configured in the properties tab of the
 
 Once configured, the Weather Widget will display current weather information for the
 centre of the visible map area, updating automatically as the user navigates the map.
+
+## Next Steps { #next-steps }
+
+* [Configuring](configuring.md) — pin status indicators, cluster pins, lines, and alarm integration
+* [Extending](extending.md) — creating custom map indicators
+<!-- --8<-- [end:body] -->
