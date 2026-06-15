@@ -5,6 +5,8 @@ product: bms
 page_type: getstarted
 status: draft
 last_reviewed: 2026-06-12
+tags: 
+ - BMS
 ---
 
 --8<-- "mod/get-started/Your First Tag.md:body"

@@ -27,7 +27,7 @@ site_author = "johan.vikstrand@kentima.se"
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-#site_url = "https://www.example.com/"
+site_url = "https://www.widequick.com/"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
@@ -365,6 +365,7 @@ nav = [
       { "Your First Tag" = "wwt/get-started/Your First Tag.md" },
     ]},
     { "Modules" = [
+      { "Overview" = "wwt/modules/index.md" },
       { "Core" = [
         { "Overview" = "wwt/modules/Core/index.md" },
         { "Settings" = "wwt/modules/Core/settings.md" },
@@ -521,7 +522,7 @@ extra_css = ["assets/stylesheets/extra.css"]
 # The path provided should be relative to the "docs_dir".
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
-extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js"]
+extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js"]
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options

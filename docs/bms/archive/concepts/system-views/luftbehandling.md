@@ -8,6 +8,8 @@ size: M
 priority: p1
 status: draft
 last_reviewed: 2026-05-19
+tags: 
+ - BMS
 ---
 
 # System Views — Luftbehandling

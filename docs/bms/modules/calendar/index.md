@@ -1,5 +1,7 @@
 ---
 title: Calendar
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

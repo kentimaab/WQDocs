@@ -5,13 +5,15 @@ product: mod
 page_type: concept
 status: draft
 last_reviewed: 2026-06-12
+tags: 
+ - MOD
 ---
-<!-- --8<-- [start:body] -->
+
 
 # Modules
 
 WideQuick MOD organises its features and functionality into modules. Each module covers a distinct area of the system. The Core module is the foundation every installation builds on. It provides navigation, alarms, themes, user management, and graphical symbols. The remaining modules are built to work alongside Core and can be added or removed to match what the project needs.
-
+<!-- --8<-- [start:body] -->
 ## Contents { #contents }
 
 ### [Core](Core/index.md) { #core }

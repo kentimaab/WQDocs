@@ -1,5 +1,7 @@
 ---
 title: Settings
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

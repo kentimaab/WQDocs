@@ -4,6 +4,8 @@ description: WideQuick Building Management System — monitor and optimize build
 product: bms
 hide:
   - toc
+tags: 
+ - BMS
 ---
 
 <div class="lp lp--bms" markdown>

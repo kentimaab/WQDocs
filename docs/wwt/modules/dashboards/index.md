@@ -1,5 +1,7 @@
 ---
 title: Dashboards
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

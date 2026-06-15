@@ -2,6 +2,8 @@
 title: Your First Tag
 product: bms
 page_type: getstarted
+tags: 
+ - BMS
 ---
 
 # Your first tag

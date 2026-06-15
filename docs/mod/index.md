@@ -4,6 +4,8 @@ description: The shared foundation that BMS and WWT build on — modules, script
 product: mod
 hide:
   - toc
+tags: 
+ - MOD
 ---
 
 <div class="lp lp--mod" markdown>

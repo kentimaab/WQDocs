@@ -4,6 +4,8 @@ description: WideQuick Water & Wastewater Treatment — monitor facilities, ensu
 product: wwt
 hide:
   - toc
+tags: 
+ - WWT
 ---
 
 <div class="lp lp--wwt" markdown>

@@ -11,6 +11,8 @@ scripts:
   - scAlarm
 object_libraries: 
     - Dashboard Widgets
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 

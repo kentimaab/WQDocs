@@ -1,5 +1,7 @@
 ---
 title: Dashboards
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

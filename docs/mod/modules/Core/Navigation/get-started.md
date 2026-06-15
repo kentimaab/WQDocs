@@ -10,6 +10,8 @@ scripts:
   - scNav
   - scSubNavPopup
   - scLinking
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 

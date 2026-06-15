@@ -1,5 +1,7 @@
 ---
 title: Alarms
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

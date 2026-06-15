@@ -5,6 +5,8 @@ product: bms
 page_type: howto
 status: draft
 last_reviewed: 2026-05-19
+tags: 
+ - MOD
 ---
 
 # Login configurations

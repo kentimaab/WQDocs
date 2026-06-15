@@ -1,5 +1,7 @@
 ---
 title: Documents
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

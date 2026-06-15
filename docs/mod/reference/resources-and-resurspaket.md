@@ -1,5 +1,7 @@
 ---
 title: Resources
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 

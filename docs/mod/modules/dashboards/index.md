@@ -1,7 +1,5 @@
 ---
 title: Dashboards
-tags:
-  - test
 description: Configurable views for monitoring signals, values and status from different parts of the system.
 product: mod
 page_type: concept
@@ -10,6 +8,8 @@ size: M
 priority: p0
 status: draft
 last_reviewed: 2026-05-26
+tags:
+  - MOD
 ---
 
 <!-- --8<-- [start:body] -->

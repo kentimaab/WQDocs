@@ -5,6 +5,8 @@ scripts:
   - scAlarm
 object_libraries:
   - Dashboard Widgets
+tags: 
+ - WWT
 ---
 
 --8<-- "mod/modules/dashboards/get-started.md:body"

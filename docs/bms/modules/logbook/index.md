@@ -1,5 +1,7 @@
 ---
 title: Logbook
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

@@ -1,5 +1,7 @@
 ---
 title: Maps & Indicators
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

@@ -5,6 +5,8 @@ product: wwt
 page_type: getstarted
 status: draft
 last_reviewed: 2026-06-08
+tags: 
+ - WWT
 ---
 
 # Download WideQuick Water and Wastewater Treatment

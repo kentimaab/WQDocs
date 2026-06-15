@@ -1,5 +1,7 @@
 ---
 title: Navigation
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

@@ -1,5 +1,7 @@
 ---
 title: Settings
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

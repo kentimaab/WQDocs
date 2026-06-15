@@ -1,5 +1,7 @@
 ---
 title: Maps
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"
