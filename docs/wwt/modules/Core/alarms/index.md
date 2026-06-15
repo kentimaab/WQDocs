@@ -1,4 +1,5 @@
----
+﻿---
+description: Monitor, acknowledge, and configure alarms across the WideQuick WWT installation.
 title: Alarms
 tags: 
  - WWT

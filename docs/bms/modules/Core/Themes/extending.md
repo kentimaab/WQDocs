@@ -1,5 +1,6 @@
----
-title: Themes — Extending
+﻿---
+description: Create a custom theme that follows a graphical profile using Material Theme Builder.
+title: Themes â€” Extending
 tags: 
  - BMS
 ---

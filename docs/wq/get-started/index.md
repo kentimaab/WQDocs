@@ -15,28 +15,11 @@ Install the WideQuick components needed for your setup, then verify everything r
 
 ### [Installing WideQuick](Installing-WideQuick.md) { #installing-widequick }
 
-* [**Installing WideQuick**](Installing-WideQuick.md) — How to install WideQuick Designer, Runtime, and Remote.
-
----
-
-### [Install Designer](install-designer.md) { #install-designer }
-
-* [**Install Designer**](install-designer.md) — System requirements and installation steps for WideQuick Designer.
-
----
-
-### [Install Runtime](install-runtime.md) { #install-runtime }
-
-* [**Install Runtime**](install-runtime.md) — System requirements and installation steps for WideQuick Runtime.
+* [**Installing WideQuick**](Installing-WideQuick.md) — How to install WideQuick Designer, Runtime, and Remote. Includes system requirements and recommended configurations for different machine types.
 
 ---
 
 ### [Install Web Client](install-web-client.md) { #install-web-client }
 
-* [**Install Web Client**](install-web-client.md) — Installing and configuring the WideQuick Web Client.
+* [**Install Web Client**](install-web-client.md) — Installing and configuring the WideQuick Web Client as a standalone application.
 
----
-
-### [Web Client](web-client.md) { #web-client }
-
-* [**Web Client Capabilities and Limits**](web-client.md) — What works on WideQuick Web versus a panel client, and known limitations.

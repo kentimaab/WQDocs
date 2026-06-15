@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the Tab popup in WideQuick.
 title: Tab
 product: bms
 tags: 

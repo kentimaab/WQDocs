@@ -1,4 +1,5 @@
----
+﻿---
+description: Apply, configure, and create themes for WideQuick BMS applications.
 title: Themes
 tags: 
  - BMS

@@ -1,5 +1,12 @@
-
-#  Universal License - Create a license key
+---
+title: Universal License
+description: Step-by-step instructions for generating a WideQuick universal license key using WideQuick License Config.
+product: wq
+page_type: howto
+tags:
+ - WQ
+---
+# Universal License - Create a license key
 
 ## Introduction 
 

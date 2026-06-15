@@ -1,3 +1,11 @@
+---
+title: WideQuick Deployment Options
+description: Overview of WideQuick deployment options across embedded panels, Windows, Linux, and containerized environments.
+product: wq
+page_type: concept
+tags:
+ - WQ
+---
 # WideQuick Deployment Options
 
 WideQuick can run on a broad spectrum of hardware and environments, from compact embedded devices to distributed cloud clusters. 

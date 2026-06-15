@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the Documents popup in WideQuick.
 title: Documents
 product: wwt
 tags: 

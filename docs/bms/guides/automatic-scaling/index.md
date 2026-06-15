@@ -1,4 +1,5 @@
----
+﻿---
+description: How WideQuick BMS automatically scales views and popups to any screen resolution.
 title: Automatic Scaling
 tags: 
  - BMS

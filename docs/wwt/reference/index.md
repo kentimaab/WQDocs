@@ -1,4 +1,5 @@
----
+﻿---
+description: Technical reference for WideQuick WWT â€” tag structure, scripts, databases, and system concepts.
 title: Reference
 product: wwt
 tags: 

@@ -1,3 +1,7 @@
+---
+title: Tag Name Validator
+description: Validate WideQuick tag names against the required Connection.Device.Sys_ObjectName_Suffix structure.
+---
 Tag Name Validator
 ===
 

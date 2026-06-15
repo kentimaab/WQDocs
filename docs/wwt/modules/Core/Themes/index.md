@@ -1,4 +1,5 @@
----
+﻿---
+description: Apply, configure, and create themes for WideQuick WWT applications.
 title: Themes
 tags: 
  - WWT

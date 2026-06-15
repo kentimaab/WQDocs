@@ -1,5 +1,6 @@
----
-title: Audit Trail — Get started
+﻿---
+description: Get up and running with the Trace Log (Audit Trail) module.
+title: Audit Trail â€” Get started
 scripts:
   - scAuditTrail
 tags: 

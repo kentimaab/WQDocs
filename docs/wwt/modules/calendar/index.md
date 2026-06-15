@@ -1,4 +1,5 @@
----
+﻿---
+description: Visual overview of events and maintenance deadlines in month, week and day views.
 title: Calendar
 tags: 
  - WWT

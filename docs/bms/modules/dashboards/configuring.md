@@ -1,5 +1,6 @@
----
-title: Dashboards — Configuring
+﻿---
+description: Configure and customise the Dashboards module.
+title: Dashboards â€” Configuring
 tags: 
  - BMS
 ---

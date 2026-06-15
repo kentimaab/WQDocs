@@ -1,5 +1,6 @@
----
-title: Logbook — Get started
+﻿---
+description: Get up and running with the Logbook module.
+title: Logbook â€” Get started
 scripts:
   - scDoc
 tags: 

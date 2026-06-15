@@ -1,4 +1,12 @@
-﻿<!-- --8<-- [start:body] -->
+﻿---
+title: Reports
+description: Overview of the WideQuick MOD Reports module — generate, schedule, and customize reports based on alarm and energy data.
+product: mod
+page_type: overview
+tags:
+ - MOD
+---
+<!-- --8<-- [start:body] -->
 # Reports
 WideQuick Modular Framework includes a built-in report module that allows you to 
 generate, schedule, and customize reports based on alarm and energy data. This section 

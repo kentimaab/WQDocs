@@ -1,5 +1,6 @@
----
-title: Dashboards — Get started
+﻿---
+description: Get up and running with the Dashboards module.
+title: Dashboards â€” Get started
 scripts:
   - scDashboard
   - scAlarm

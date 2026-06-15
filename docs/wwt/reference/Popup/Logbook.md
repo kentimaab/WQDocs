@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the Logbook popup in WideQuick.
 title: Logbook
 product: wwt
 tags: 

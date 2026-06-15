@@ -1,5 +1,6 @@
----
-title: Dashboards — Extending
+﻿---
+description: Extend and customise the Dashboards module beyond the defaults.
+title: Dashboards â€” Extending
 tags: 
  - WWT
 ---

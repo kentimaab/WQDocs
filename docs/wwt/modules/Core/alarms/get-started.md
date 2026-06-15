@@ -1,5 +1,6 @@
----
-title: Alarms — Get started
+﻿---
+description: Get up and running with the Alarms module.
+title: Alarms â€” Get started
 scripts:
   - scAlarm
 tags: 

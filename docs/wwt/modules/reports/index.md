@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of the WideQuick WWT Reports module — generate, schedule, and customize reports based on alarm and energy data.
 title: Reports
 tags: 
  - WWT

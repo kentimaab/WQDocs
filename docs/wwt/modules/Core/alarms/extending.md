@@ -1,5 +1,6 @@
----
-title: Alarms — Extending
+﻿---
+description: Configure email and SMS channels for alarm notifications.
+title: Alarms â€” Extending
 tags: 
  - WWT
 ---

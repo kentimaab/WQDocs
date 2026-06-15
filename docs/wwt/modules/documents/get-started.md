@@ -1,5 +1,6 @@
----
-title: Documents — Get started
+﻿---
+description: Get up and running with the Documents module.
+title: Documents â€” Get started
 scripts:
   - scDoc
 tags: 

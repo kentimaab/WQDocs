@@ -1,5 +1,6 @@
----
-title: Navigation — Get started
+﻿---
+description: Get up and running with the Navigation module.
+title: Navigation â€” Get started
 scripts:
   - scNav
   - scSubNavPopup

@@ -1,4 +1,5 @@
----
+﻿---
+description: Overview of all popups available in WideQuick.
 title: Popups
 product: bms
 tags: 

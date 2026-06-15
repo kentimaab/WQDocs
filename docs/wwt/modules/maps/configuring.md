@@ -1,5 +1,6 @@
----
-title: Maps — Configuring
+﻿---
+description: Configure and customise the Maps & Indicators module.
+title: Maps â€” Configuring
 tags: 
  - WWT
 ---

@@ -1,4 +1,5 @@
----
+﻿---
+description: Configurable views for monitoring signals, values and status from different parts of the system.
 title: Dashboards
 tags: 
  - BMS
