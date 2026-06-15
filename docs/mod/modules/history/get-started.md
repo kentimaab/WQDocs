@@ -1,5 +1,5 @@
 ---
-title: History — Get started
+title: History - Get started
 description: Get up and running with the History module.
 product: mod
 page_type: getstarted
@@ -13,7 +13,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# History — Get started
+# History - Get started
 ???+ info "Requirements"
     The following scripts are required to use History and all
     related functionality covered in the History guides:

@@ -1,5 +1,5 @@
 ﻿---
-title: History — Configuring
+title: History - Configuring
 description: Configure signal selection, chart settings and saved signal groups in the History module.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# History — Configuring
+# History - Configuring
 
 ## Tracking a Signal { #tracking-a-signal }
 

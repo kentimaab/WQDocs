@@ -1,5 +1,5 @@
 ---
-title: Alarms — Configuring
+title: Alarms - Configuring
 description: Create alarm groups, define alarms, and set up notification schedules.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Alarms — Configuring
+# Alarms - Configuring
 
 ## Creating alarm groups { #creating-alarm-groups }
 

@@ -1,5 +1,5 @@
 ---
-title: Reports — Configuring
+title: Reports - Configuring
 description: Configure and customise the Reports module.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Reports — Configuring
+# Reports - Configuring
 
 This section covers how to configure the four report templates in WideQuick Mod to fit 
 your needs, as well as how to use the built-in Report History to recreate or resend 

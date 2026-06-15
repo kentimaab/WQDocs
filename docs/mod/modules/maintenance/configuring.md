@@ -1,5 +1,5 @@
 ﻿---
-title: Maintenance — Configuring
+title: Maintenance - Configuring
 description: Configure the Maintenance module — templates, recurring schedules and status reference.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Maintenance — Configuring
+# Maintenance - Configuring
 
 ## Maintenance List { #maintenance-list }
 

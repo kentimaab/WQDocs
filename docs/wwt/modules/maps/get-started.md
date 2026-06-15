@@ -1,6 +1,6 @@
 ﻿---
 description: Get up and running with the Maps & Indicators module.
-title: Maps â€” Get started
+title: Maps - Get started
 scripts:
   - scMap
 object_libraries:

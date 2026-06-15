@@ -1,5 +1,5 @@
 ---
-title: Documents — Extending
+title: Documents - Extending
 description: Extend the Documents module — privilege reference.
 product: mod
 page_type: extending
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Documents — Extending
+# Documents - Extending
 
 ## Privileges { #privileges }
 

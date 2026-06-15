@@ -1,5 +1,5 @@
 ---
-title: Get Started — BMS
+title: Get Started - BMS
 description: Install WideQuick and set up your first BMS project.
 product: bms
 page_type: getstarted

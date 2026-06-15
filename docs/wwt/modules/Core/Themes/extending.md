@@ -1,6 +1,6 @@
 ﻿---
 description: Create a custom theme that follows a graphical profile using Material Theme Builder.
-title: Themes â€” Extending
+title: Themes - Extending
 tags: 
  - WWT
 ---

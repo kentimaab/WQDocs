@@ -1,5 +1,5 @@
 ---
-title: Get Started — WWT
+title: Get Started - WWT
 description: Install WideQuick and set up your first WWT project.
 product: wwt
 page_type: getstarted

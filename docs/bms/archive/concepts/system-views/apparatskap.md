@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: System Views â€” Apparatskap
+title: System Views - Apparatskap
 description: Apparatskap system view configuration and usage.
 product: bms
 page_type: concept
@@ -16,7 +16,7 @@ tags:
 search:
   exclude: true
 
-# System Views â€” Apparatskap
+# System Views - Apparatskap
 
 !!! note "Draft"
     This page is a placeholder. See ticket **DOC-M19** in `plans/documentation-tickets.md`.

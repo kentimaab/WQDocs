@@ -1,5 +1,5 @@
 ---
-title: Logbook — Get Started
+title: Logbook - Get Started
 description: Get up and running with the Logbook module.
 product: mod
 page_type: getstarted
@@ -13,7 +13,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Logbook — Get Started
+# Logbook - Get Started
 ???+ info "Requirements"
     The following scripts are required to use Logbook and all
     related functionality covered in the Logbook guides:

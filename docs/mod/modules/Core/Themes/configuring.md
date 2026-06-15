@@ -1,5 +1,5 @@
 ---
-title: Themes — Configuring
+title: Themes - Configuring
 description: Change individual theme colors and assign color roles to objects.
 product: mod
 page_type: howto
@@ -10,7 +10,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Themes — Configuring
+# Themes - Configuring
 
 ## Changing a color { #changing-a-color }
 

@@ -1,5 +1,5 @@
 ﻿---
-title: Calendar — Configuring
+title: Calendar - Configuring
 description: Configure events, maintenance colors and reminder settings in the Calendar module.
 product: mod
 page_type: howto
@@ -9,7 +9,7 @@ last_reviewed: 2026-05-26
 ---
 <!-- --8<-- [start:body] -->
 
-# Calendar — Configuring
+# Calendar - Configuring
 
 ## Events { #events }
 

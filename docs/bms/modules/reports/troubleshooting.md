@@ -1,6 +1,6 @@
 ﻿---
 description: Common issues and solutions for the Reports module.
-title: Reports â€” Troubleshooting
+title: Reports - Troubleshooting
 tags: 
  - BMS
 ---

@@ -1,5 +1,5 @@
 ---
-title: Logbook — Extending
+title: Logbook - Extending
 description: Add logbook support to custom views and buttons.
 product: mod
 page_type: extending
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Logbook — Extending
+# Logbook - Extending
 
 ## Privileges { #privileges }
 

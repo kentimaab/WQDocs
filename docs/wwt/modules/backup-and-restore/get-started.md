@@ -1,6 +1,6 @@
 ﻿---
 description: Get up and running with the Backup and Restore feature.
-title: Backup and Restore â€” Get started
+title: Backup and Restore - Get started
 scripts:
   - scBackUpAndRestore
 tags: 

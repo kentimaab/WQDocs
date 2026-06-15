@@ -1,5 +1,5 @@
 ---
-title: Maps & Indicators — Get started
+title: Maps & Indicators - Get started
 description: Get up and running with the Maps & Indicators module.
 product: mod
 page_type: getstarted
@@ -16,7 +16,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Maps & Indicators — Get started
+# Maps & Indicators - Get started
 ???+ info "Requirements"
     The following scripts are required to use Maps & Indicators and all
     related functionality covered in the Maps & Indicators guides:

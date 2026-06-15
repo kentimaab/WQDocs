@@ -1,6 +1,6 @@
 ﻿---
 description: Common issues and solutions for the Logbook module.
-title: Logbook â€” Troubleshooting
+title: Logbook - Troubleshooting
 tags: 
  - BMS
 ---

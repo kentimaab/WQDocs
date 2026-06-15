@@ -1,6 +1,6 @@
 ﻿---
 description: Extend the Maps & Indicators module with scripts and hooks.
-title: Maps â€” Extending
+title: Maps - Extending
 tags: 
  - WWT
 ---

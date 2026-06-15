@@ -1,5 +1,5 @@
 ---
-title: Navigation — Get started
+title: Navigation - Get started
 description: Get up and running with the Navigation module.
 product: mod
 page_type: getstarted
@@ -15,7 +15,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Navigation — Get started
+# Navigation - Get started
 ???+ info "Requirements"
     The following scripts are required to use Navigation and all
     related functionality covered in the Navigation guides:

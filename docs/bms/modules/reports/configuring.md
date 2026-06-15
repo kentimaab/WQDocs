@@ -1,6 +1,6 @@
 ﻿---
 description: Configure and customise the Reports module.
-title: Reports â€” Configuring
+title: Reports - Configuring
 tags: 
  - BMS
 ---

@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: Customization â€” BMS
+title: Customization - BMS
 description: Theming, branding, workview composition, and scripting for BMS.
 product: bms
 page_type: howto
@@ -13,7 +13,7 @@ tags:
 search:
   exclude: true
 
-# Customization â€” BMS
+# Customization - BMS
 
 !!! note "Draft"
     This page is a placeholder. Content will be added as part of the BMS 2026.1 documentation effort.

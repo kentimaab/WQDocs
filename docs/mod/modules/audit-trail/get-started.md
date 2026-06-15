@@ -1,5 +1,5 @@
 ---
-title: Trace Log — Get Started
+title: Trace Log - Get Started
 description: Get up and running with the Trace Log (Audit Trail) module.
 product: mod
 page_type: getstarted
@@ -13,7 +13,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Trace Log — Get Started
+# Trace Log - Get Started
 ???+ info "Requirements"
     The following scripts are required to use Trace Log and all
     related functionality covered in the Trace Log guides:

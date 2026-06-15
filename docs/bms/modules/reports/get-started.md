@@ -1,6 +1,6 @@
 ﻿---
 description: Get up and running with the Reports module.
-title: Reports â€” Get started
+title: Reports - Get started
 scripts:
   - scReportScheduler
 tags: 

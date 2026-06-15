@@ -1,6 +1,6 @@
 ﻿---
 description: Configure topics, contexts and access patterns for the Logbook module.
-title: Logbook â€” Configuring
+title: Logbook - Configuring
 tags: 
  - WWT
 ---

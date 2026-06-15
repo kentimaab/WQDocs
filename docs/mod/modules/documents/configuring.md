@@ -1,5 +1,5 @@
 ---
-title: Documents — Configuring
+title: Documents - Configuring
 description: Configure the Documents module — link documents to objects and sync with the filesystem.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Documents — Configuring
+# Documents - Configuring
 
 ## Linking documents to objects { #linking-documents-to-objects }
 

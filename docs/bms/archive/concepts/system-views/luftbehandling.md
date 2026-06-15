@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: System Views â€” Luftbehandling
+title: System Views - Luftbehandling
 description: Luftbehandling family and the relationship to Luftbehandling Legacy.
 product: bms
 page_type: concept
@@ -16,7 +16,7 @@ tags:
 search:
   exclude: true
 
-# System Views â€” Luftbehandling
+# System Views - Luftbehandling
 
 !!! note "Draft"
     This page is a placeholder. See ticket **DOC-M20** in `plans/documentation-tickets.md`.

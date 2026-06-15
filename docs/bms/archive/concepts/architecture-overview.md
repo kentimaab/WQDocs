@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: Architecture Overview â€” BMS
+title: Architecture Overview - BMS
 description: How WideQuick BMS is built on the MOD framework.
 product: bms
 page_type: concept
@@ -13,7 +13,7 @@ tags:
 search:
   exclude: true
 
-# Architecture Overview â€” BMS
+# Architecture Overview - BMS
 
 !!! note "Draft"
     This page is a placeholder. Content will be added as part of the BMS 2026.1 documentation effort.

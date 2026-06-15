@@ -1,5 +1,5 @@
 ---
-title: Backup and Restore — Configuring
+title: Backup and Restore - Configuring
 description: Restore and delete saved backups in the Backup and Restore feature.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Backup and Restore — Configuring
+# Backup and Restore - Configuring
 
 ## Restoring a Backup { #restoring-a-backup }
 

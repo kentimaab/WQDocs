@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: Configuration Recipes â€” BMS
+title: Configuration Recipes - BMS
 description: BMS-specific configuration walkthroughs.
 product: bms
 page_type: howto
@@ -13,7 +13,7 @@ tags:
 search:
   exclude: true
 
-# Configuration Recipes â€” BMS
+# Configuration Recipes - BMS
 
 !!! note "Draft"
     This page is a placeholder. Content will be added as part of the BMS 2026.1 documentation effort.

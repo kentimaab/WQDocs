@@ -1,5 +1,5 @@
 ---
-title: Navigation — Configuring
+title: Navigation - Configuring
 description: Configure and customise Navigation.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Navigation — Configuring
+# Navigation - Configuring
 This section covers how to configure the Navigation module to fit your needs. This
 includes managing access control through privilege settings and configuring how
 restricted views are displayed to users.

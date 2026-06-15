@@ -1,6 +1,6 @@
 ﻿---
 description: Extend the Maintenance module â€” calendar integration and troubleshooting.
-title: Maintenance â€” Extending
+title: Maintenance - Extending
 tags: 
  - BMS
 ---

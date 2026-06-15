@@ -1,5 +1,5 @@
 ---
-title: Report — Extending
+title: Report - Extending
 description: Extend the Reports module with scripts and hooks.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Reports — Extending
+# Reports - Extending
 WideQuick comes with a set of default report templates, but it is also 
 possible to create fully custom templates tailored to your specific needs. This section 
 covers the complete process of creating a custom report template and its corresponding 

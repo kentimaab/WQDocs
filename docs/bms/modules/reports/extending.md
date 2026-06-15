@@ -1,6 +1,6 @@
 ﻿---
 description: Extend the Reports module with scripts and hooks.
-title: Reports â€” Extending
+title: Reports - Extending
 tags: 
  - BMS
 ---

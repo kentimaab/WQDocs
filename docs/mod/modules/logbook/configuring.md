@@ -1,5 +1,5 @@
 ﻿---
-title: Logbook — Configuring
+title: Logbook - Configuring
 description: Configure topics, contexts and access patterns for the Logbook module.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Logbook — Configuring
+# Logbook - Configuring
 
 ## Topics { #topics }
 

@@ -1,5 +1,5 @@
 ---
-title: Reports — Get started
+title: Reports - Get started
 description: Get up and running with the Reports module.
 product: mod
 page_type: getstarted
@@ -13,7 +13,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Reports — Get started
+# Reports - Get started
 ???+ info "Requirements"
     The following scripts are required to use Reports and all
     related functionality covered in the Reports guides:

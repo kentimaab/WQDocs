@@ -1,6 +1,6 @@
 ﻿---
 description: Configure the Maintenance module — templates, recurring schedules and status reference.
-title: Maintenance â€” Configuring
+title: Maintenance - Configuring
 tags: 
  - BMS
 ---

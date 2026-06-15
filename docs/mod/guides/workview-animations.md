@@ -183,14 +183,14 @@ Replace `alarm` with the relevant category name. The available category names ar
     animated object from the standard object libraries and modify it. This ensures
     all expressions and scripts are already in place.
 
-## Example — Building a custom animated motor object { #example-building-a-custom-animated-motor-object }
+## Example - Building a custom animated motor object { #example-building-a-custom-animated-motor-object }
 
 This example walks through building a simple custom motor object that responds to
 four animation categories — alarm, warning, service, and active. It also demonstrates
 how to add service animation, which is not included in the standard object libraries
 by default.
 
-### Step 1 — Verify the suffix configuration { #step-1-verify-the-suffix-configuration }
+### Step 1 - Verify the suffix configuration { #step-1-verify-the-suffix-configuration }
 
 Before building the object, verify that all four animation categories used in this
 example are configured in **Settings → Suffix → Suffix - Alarms**. Categories 1, 2
@@ -208,7 +208,7 @@ enter `_SERVICE` as the suffix and give it a description that fits your needs.
 
 ![Service suffix](/Images/Workview_Animations/Service_suffix.png)
 
-### Step 2 — Create the visual elements { #step-2-create-the-visual-elements }
+### Step 2 - Create the visual elements { #step-2-create-the-visual-elements }
 
 In **WideQuick Designer®**, create the following objects:
 
@@ -219,7 +219,7 @@ of those categories are active.
 
 ![Create objects](/Images/Workview_Animations/Create_object.png)
 
-### Step 3 — Add the onLoad scripts { #step-3-add-the-onload-scripts }
+### Step 3 - Add the onLoad scripts { #step-3-add-the-onload-scripts }
 
 Add the following onLoad script to the circle:
 
@@ -244,7 +244,7 @@ no animation category is active.
     it is set to the theme background color on load. This ensures the fill follows
     the active theme rather than being hardcoded to a specific color.
 
-### Step 4 — Add the color expressions { #step-4-add-the-color-expressions }
+### Step 4 - Add the color expressions { #step-4-add-the-color-expressions }
 
 **Circle — brush color:**
 
@@ -284,7 +284,7 @@ The gif below shows where to add this expression:
 
 ![Triangle pen color dynamic](/Images/Workview_Animations/DynTriangel.gif)
 
-### Step 5 — Group the objects { #step-5-group-the-objects }
+### Step 5 - Group the objects { #step-5-group-the-objects }
 
 Before grouping, configure the `DynTouch` object properties to connect it to the
 correct tag. In the **Properties** tab, enter the following:
@@ -306,7 +306,7 @@ be shared with all child objects in the group.
     **Workview** properties instead of on each `DynTouch` object individually. See
     [Tag Structure](../reference/tag-structure.md) for more information.
 
-### Step 6 — Test in runtime { #step-6-test-in-runtime }
+### Step 6 - Test in runtime { #step-6-test-in-runtime }
 
 Start the project and verify that:
 

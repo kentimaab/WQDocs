@@ -21,7 +21,7 @@ Before getting started, make sure you have the template project open in
 
 <!-- --8<-- [start:body] -->
 
-## Step 1 — Set up a connection
+## Step 1 - Set up a connection
 
 The first step is to set up a connection in **WideQuick Designer®**. For this example
 an **OPC UA** connection will be used, named `OPC`. A full guide on configuring OPC UA
@@ -38,7 +38,7 @@ The following connection types are also supported:
 
 ![OPCUA](/Images/First_tag/OPCUA.gif)
 
-## Step 2 — Create the tag
+## Step 2 - Create the tag
 
 In **WideQuick Designer®**, open the **Tag Editor** and create a new boolean tag
 following the tag structure:
@@ -58,7 +58,7 @@ This tag consists of:
 For more information on the tag structure see
 [Tag Structure](../reference/tag-structure.md).
 
-## Step 3 — Create a Workview
+## Step 3 - Create a Workview
 
 In **WideQuick Designer®**, create a new **Workview** inside **System 1**. This will
 make it automatically appear in the navigation menu. For more information on how the
@@ -66,7 +66,7 @@ navigation works see [Navigation — Get started](../modules/Core/Navigation/get
 
 ![Workview](/Images/First_tag/CreateWork.gif)
 
-## Step 4 — Place the motor object
+## Step 4 - Place the motor object
 
 Open the new **Workview** and drag the `dynMotorPumpR_000` object from the **Motors**
 object library into the view.
@@ -85,7 +85,7 @@ Enter the following:
     The `dynMotorPumpR_000` object is a pre-built object from the **Motors** object
     library. To learn how to create your own custom objects see [Create an Object](../guides/create-an-object.md).
 
-## Step 5 — Connecting suffix aliases and verifying
+## Step 5 - Connecting suffix aliases and verifying
 
 ### Configuring the animation
 
