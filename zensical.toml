@@ -177,7 +177,7 @@ nav = [
       { "Create Object" = "mod/guides/create-an-object.md" },
       { "Languages" = "mod/guides/languages.md" },
       { "Logger" = "mod/guides/Loggers.md" },
-      { "Login Config" = "mod/guides/Login%20Config" },
+      { "Login Config" = "mod/guides/Login Config.md" },
       { "Remote Systems" = "mod/guides/remote-systems.md" },
       { "Workview Animations" = "mod/guides/workview-animations.md" },
     ]},

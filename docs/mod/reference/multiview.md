@@ -6,8 +6,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-MultiView
-===
+# MultiView
 
 In WideQuick Modular Framework it is possible to have objects which contains linking to other Workviews. This makes it possible to have the system change to another Workview based on a certain action. This guide will go through how to set this up.  Firstly go to a Workview where this will be implemented, and select the object. From here press the tab ++"Action"++, which will bring up the following. 
 

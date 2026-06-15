@@ -6,8 +6,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-Resources
-===
+# Resources
 WideQuick has a built in interface for exporting and importing resources. This allows the user to easily transfer parts from one project to another and avoid faulty implementation of resources.  
 
 ## Exporting resources { #exporting-resources }

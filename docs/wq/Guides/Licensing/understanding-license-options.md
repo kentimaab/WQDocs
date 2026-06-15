@@ -6,8 +6,7 @@ page_type: concept
 tags:
  - WQ
 ---
-Understanding WideQuick License Options
-=====
+# Understanding WideQuick License Options
 
 ## Introduction
 
