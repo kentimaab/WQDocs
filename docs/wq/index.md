@@ -9,10 +9,16 @@ hide:
 
 <div class="wq-lp">
 
-<p class="wq-page-lead">An HMI/SCADA/PSIM platform built without lock-in. Open protocols, flexible deployment modes, and a Modular Framework whose code is yours to read, modify, and extend — so you can deliver exactly the right system for every customer.</p>
-<a href="get-started/" class="wq-docs-pill">Documentation <span class="wq-docs-pill__arrow">→</span></a>
+<div style="position:relative;background:#161616;padding:2.5rem 2rem 2rem;overflow:hidden;margin-bottom:0;border-radius:8px;">
+  <div class="hp-hex-overlay"></div>
+  <div style="position:relative;z-index:1;">
+    <h1 style="color:#fff;margin:0 0 0.1rem;">WideQuick HMI/SCADA/PSIM</h1>
+    <p class="wq-page-lead" style="color:rgba(255,255,255,0.8);">An HMI/SCADA/PSIM platform built without lock-in. Open protocols, flexible deployment modes, and a Modular Framework whose code is yours to read, modify, and extend — so you can deliver exactly the right system for every customer.</p>
+    <a href="get-started/" class="wq-docs-pill" style="color:#fff !important;">Documentation <span class="wq-docs-pill__arrow">→</span></a>
+  </div>
+</div>
 
-<div class="wq-hero-cards">
+<div class="wq-hero-cards" style="margin-top:1rem;">
   <div class="wq-hero-card wq-hero-card--primary">
     <div>
       <div class="wq-hero-card__title">Get WideQuick Designer</div>

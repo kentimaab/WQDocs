@@ -54,6 +54,12 @@ tags:
 
 <div class="lp-browse grid cards" markdown>
 
+-   :material-lightbulb-outline: **Concepts**
+
+    Framework architecture, solutions, and how MOD relates to BMS and WWT.
+
+    [Concepts →](concepts/)
+
 -   :material-puzzle-outline: **Modules**
 
     Alarms, Maintenance, Calendar, History, Reports, Dashboards, Maps, Documents, Logbook, Settings.
@@ -66,11 +72,6 @@ tags:
 
     [Guides →](guides/)
 
--   :material-lightbulb-outline: **Concepts**
-
-    Framework architecture, solutions, and how MOD relates to BMS and WWT.
-
-    [Concepts →](concepts/)
 
 -   :material-file-document-outline: **Reference**
 
