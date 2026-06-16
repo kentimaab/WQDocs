@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: Concepts â€” WWT
+title: Concepts - WWT
 description: Architecture and key concepts of WideQuick WWT.
 product: wwt
 page_type: concept
@@ -13,7 +13,7 @@ tags:
 search:
   exclude: true
 
-# Concepts â€” WWT
+# Concepts - WWT
 
 !!! note "Draft"
     This page is a placeholder. Content will be added as part of the BMS 2026.1 documentation effort.

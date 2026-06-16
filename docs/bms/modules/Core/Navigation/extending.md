@@ -1,6 +1,6 @@
 ﻿---
 description: Extend the Navigation module with scripts and hooks.
-title: Navigation â€” Extending
+title: Navigation - Extending
 tags: 
  - BMS
 ---

@@ -1,6 +1,6 @@
 ﻿---
 description: Change individual theme colors and assign color roles to objects.
-title: Themes â€” Configuring
+title: Themes - Configuring
 tags: 
  - WWT
 ---

@@ -1,5 +1,5 @@
 ---
-title: Alarms — Configuring
+title: Alarms - Configuring
 description: Create alarm groups, define alarms, and set up notification schedules.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Alarms — Configuring
+# Alarms - Configuring
 
 ## Creating alarm groups { #creating-alarm-groups }
 
@@ -118,4 +118,8 @@ slot. To receive notifications for the entire day, set **From** to `00:00` and
 Select a schedule in the list and click **Edit schedule** to modify it. Active and inactive status can be toggled from within the edit dialog.
 
 Click **Delete schedule** to remove the selected schedule.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — configuring email and SMS for alarm notifications
 <!-- --8<-- [end:body] -->

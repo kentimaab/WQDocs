@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Reports — Troubleshooting
+# Reports - Troubleshooting
 
 ## Common issues { #common-issues }
 

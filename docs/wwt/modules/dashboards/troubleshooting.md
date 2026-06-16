@@ -1,6 +1,6 @@
 ﻿---
 description: Common issues and solutions for the Dashboards module.
-title: Dashboards â€” Troubleshooting
+title: Dashboards - Troubleshooting
 tags: 
  - WWT
 ---

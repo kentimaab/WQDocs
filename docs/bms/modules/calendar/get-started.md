@@ -1,6 +1,6 @@
 ﻿---
 description: Get up and running with the Calendar module.
-title: Calendar â€” Get started
+title: Calendar - Get started
 scripts:
   - scCalendar
   - scDayViewManager

@@ -1,5 +1,5 @@
 ---
-title: Dashboards — Configuring
+title: Dashboards - Configuring
 description: Configure and customise the Dashboards module.
 product: mod
 page_type: howto
@@ -10,9 +10,9 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Dashboards — Configuring
+# Dashboards - Configuring
 
-## Parameters — Common Settings Shared by All Widgets { #parameters-common-settings-shared-by-all-widgets }
+## Parameters - Common Settings Shared by All Widgets { #parameters-common-settings-shared-by-all-widgets }
 
 All widgets share a `Header` parameter, a string, that sets the title displayed on the widget. If left empty the widgets has a standard header.
 
@@ -31,7 +31,7 @@ Some widgets include an expand button in the top-right corner. Clicking it opens
 
 Widgets that display a signal legend automatically handle overflow. When there are more signals than fit in the legend, a button shows how many are hidden. Clicking it opens the fullscreen view with all signals listed.
 
-## Widgets — All Available Widgets and Their Parameters { #widgets-all-available-widgets-and-their-parameters }
+## Widgets - All Available Widgets and Their Parameters { #widgets-all-available-widgets-and-their-parameters }
 
 ### Alarm Status { #alarm-status }
 
@@ -182,4 +182,8 @@ Displays signal value comparisons as a bar chart across configurable time period
 Displays maintenance task status — active, planned and missed tasks. Connects directly to the maintenance module. No signal input required.
 
 ![Maintenance](/Images/Dashboard/Maintenance.png){align=center}
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — custom widgets, design patterns and troubleshooting
 <!-- --8<-- [end:body] -->

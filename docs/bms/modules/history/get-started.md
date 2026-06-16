@@ -1,6 +1,6 @@
 ﻿---
 description: Get up and running with the History module.
-title: History â€” Get started
+title: History - Get started
 scripts:
   - scHistory
 tags: 

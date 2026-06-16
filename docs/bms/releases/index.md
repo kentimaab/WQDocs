@@ -1,5 +1,5 @@
 ---
-title: Releases — BMS
+title: Releases - BMS
 description: Release notes for WideQuick BMS.
 product: bms
 page_type: release
@@ -8,7 +8,7 @@ tags:
  - BMS
 ---
 
-# Releases — BMS
+# Releases - BMS
 
 Release notes for WideQuick BMS. The newest release is listed first and expanded;
 older releases are collapsed, click a release to expand it. Each release is built on

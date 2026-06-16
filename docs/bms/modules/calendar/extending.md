@@ -1,6 +1,6 @@
 ﻿---
 description: Extend the Calendar module and troubleshoot common issues.
-title: Calendar â€” Extending
+title: Calendar - Extending
 tags: 
  - BMS
 ---

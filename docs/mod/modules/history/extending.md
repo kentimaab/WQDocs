@@ -1,5 +1,5 @@
 ---
-title: History — Extending
+title: History - Extending
 description: Script setup for view-specific history, unlogged signals, and troubleshooting.
 product: mod
 page_type: extending
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# History — Extending
+# History - Extending
 
 ## Opening View-Specific History { #opening-view-specific-history }
 

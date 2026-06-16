@@ -1,5 +1,5 @@
 ---
-title: Maintenance — Extending
+title: Maintenance - Extending
 description: Extend the Maintenance module — calendar integration and troubleshooting.
 product: mod
 page_type: extending
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Maintenance — Extending
+# Maintenance - Extending
 
 ## Calendar Integration { #calendar-integration }
 

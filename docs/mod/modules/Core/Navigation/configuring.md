@@ -1,5 +1,5 @@
 ---
-title: Navigation — Configuring
+title: Navigation - Configuring
 description: Configure and customise Navigation.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Navigation — Configuring
+# Navigation - Configuring
 This section covers how to configure the Navigation module to fit your needs. This
 includes managing access control through privilege settings and configuring how
 restricted views are displayed to users.
@@ -62,3 +62,8 @@ setting.
 * **Left** — Both enabled.
 * **Middle** — Show locked menus enabled, Show locked submenus disabled.
 * **Right** — Show locked menus disabled — submenus not shown regardless.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — GoTo function and custom navigation icons
+<!-- --8<-- [end:body] -->

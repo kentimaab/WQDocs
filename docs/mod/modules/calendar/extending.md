@@ -1,5 +1,5 @@
 ---
-title: Calendar — Extending
+title: Calendar - Extending
 description: Extend the Calendar module and troubleshoot common issues.
 product: mod
 page_type: extending
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Calendar — Extending
+# Calendar - Extending
 
 ## Reminder Configuration { #reminder-configuration }
 

@@ -1,6 +1,6 @@
 ﻿---
 description: Get up and running with the Themes module.
-title: Themes â€” Get started
+title: Themes - Get started
 scripts:
   - scThemes
 tags: 

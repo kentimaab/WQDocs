@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: System Views â€” Varm
+title: System Views - Varm
 description: Varm system view configuration and usage.
 product: bms
 page_type: concept
@@ -16,7 +16,7 @@ tags:
 search:
   exclude: true
 
-# System Views â€” Varm
+# System Views - Varm
 
 !!! note "Draft"
     This page is a placeholder. See ticket **DOC-M21** in `plans/documentation-tickets.md`.

@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: Configuration Recipes â€” WWT
+title: Configuration Recipes - WWT
 description: WWT-specific configuration walkthroughs.
 product: wwt
 page_type: howto
@@ -13,7 +13,7 @@ tags:
 search:
   exclude: true
 
-# Configuration Recipes â€” WWT
+# Configuration Recipes - WWT
 
 !!! note "Draft"
     This page is a placeholder. Content will be added as part of the BMS 2026.1 documentation effort.

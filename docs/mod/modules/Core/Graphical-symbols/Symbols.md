@@ -56,7 +56,7 @@ All new symbols are fully compatible with the
 [Workview Animation](../../../guides/workview-animations.md)system, meaning they respond
 automatically to all configured animation categories without any additional setup.
 
-## Basic symbols — COMPONENTS {#components}
+## Basic symbols - COMPONENTS {#components}
 
 The **COMPONENTS** object library contains the base symbols used to represent
 physical components in process views. Each symbol already includes the two-layer

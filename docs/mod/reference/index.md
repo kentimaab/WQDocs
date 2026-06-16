@@ -16,42 +16,18 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 
 ## Contents { #contents }
 
-### [Tag Structure](tag-structure.md) { #tag-structure }
+### [Database Schemas](database-schemas/index.md) { #database-schemas }
 
-* [**Tag Structure**](tag-structure.md) — Tag naming conventions and configuration for WideQuick MOD.
-
----
-
-### [Suffix System](suffix-system.md) { #suffix-system }
-
-* [**Suffix System**](suffix-system.md) — How suffix objects are structured, their attributes, and how they associate with popups.
-
----
-
-### [Script Hierarchy](ScriptHierarchy.md) { #script-hierarchy }
-
-* [**Script Hierarchy**](ScriptHierarchy.md) — Dependency map for all scripts in WideQuick MOD.
+* [**Config.db**](database-schemas/config-db.md) — Navigation, reports, logbook, objects, documents, and module configuration.
+* [**History.db**](database-schemas/history-db.md) — Dynamically generated logger tables for signal history.
+* [**maintenance.db**](database-schemas/maintenance-db.md) — Maintenance tasks, calendar events, and remote system registry.
+* [**SuffixConfig.db**](database-schemas/suffixconfig-db.md) — Suffix object configuration.
 
 ---
 
 ### [Multiview](multiview.md) { #multiview }
 
 * [**Multiview**](multiview.md) — How to configure workview linking so the system can navigate between views based on object actions.
-
----
-
-### [Resources and Resurspaket](resources-and-resurspaket.md) { #resources-and-resurspaket }
-
-* [**Resources and Resurspaket**](resources-and-resurspaket.md) — Exporting and importing resources between projects.
-
----
-
-### [Database Schemas](database-schemas/index.md) { #database-schemas }
-
-* [**Config.db**](database-schemas/config-db.md) — Navigation, reports, logbook, objects, documents, and module configuration.
-* [**maintenance.db**](database-schemas/maintenance-db.md) — Maintenance tasks, calendar events, and remote system registry.
-* [**History.db**](database-schemas/history-db.md) — Dynamically generated logger tables for signal history.
-* [**SuffixConfig.db**](database-schemas/suffixconfig-db.md) — Suffix object configuration.
 
 ---
 
@@ -68,5 +44,29 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 * [**Manover**](Popup/Manover.md) — Operating mode switching and manual setpoint control (suffix-dependent).
 * [**TimeChannel**](Popup/Timechannel.md) — Time-based schedule configuration (suffix-dependent).
 * [**Control Curve**](Popup/Control curve.md) — Non-linear control curve editor (suffix-dependent).
+
+---
+
+### [Resources and Resurspaket](resources-and-resurspaket.md) { #resources-and-resurspaket }
+
+* [**Resources and Resurspaket**](resources-and-resurspaket.md) — Exporting and importing resources between projects.
+
+---
+
+### [Script Hierarchy](ScriptHierarchy.md) { #script-hierarchy }
+
+* [**Script Hierarchy**](ScriptHierarchy.md) — Dependency map for all scripts in WideQuick MOD.
+
+---
+
+### [Suffix System](suffix-system.md) { #suffix-system }
+
+* [**Suffix System**](suffix-system.md) — How suffix objects are structured, their attributes, and how they associate with popups.
+
+---
+
+### [Tag Structure](tag-structure.md) { #tag-structure }
+
+* [**Tag Structure**](tag-structure.md) — Tag naming conventions and configuration for WideQuick MOD.
 
 <!-- --8<-- [end:body] -->

@@ -1,5 +1,5 @@
 ---
-title: Trace Log — Configuring
+title: Trace Log - Configuring
 description: Configure which DataStore variables are tracked by the Trace Log.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Trace Log — Configuring
+# Trace Log - Configuring
 
 ## Configuring Variables to Track { #configuring-variables-to-track }
 

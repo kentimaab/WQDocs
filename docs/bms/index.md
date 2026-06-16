@@ -32,13 +32,13 @@ tags:
 
     Set up the BMS concept app and verify hardware compatibility.
 
-    [Walkthrough →](get-started/)
+    [Walkthrough →](get-started/download.md)
 
 -   **Connect a controller**
 
     Bring in your first signal from an OPC UA, Modbus, or BACnet device.
 
-    [Your first tag →](get-started/your-first-tag/)
+    [Your first tag →](get-started/Your%20First%20Tag.md)
 
 </div>
 

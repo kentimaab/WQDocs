@@ -1,6 +1,6 @@
 ﻿---
 description: Add logbook support to custom views and buttons.
-title: Logbook â€” Extending
+title: Logbook - Extending
 tags: 
  - WWT
 ---

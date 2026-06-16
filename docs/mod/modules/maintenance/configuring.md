@@ -1,5 +1,5 @@
 ﻿---
-title: Maintenance — Configuring
+title: Maintenance - Configuring
 description: Configure the Maintenance module — templates, recurring schedules and status reference.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Maintenance — Configuring
+# Maintenance - Configuring
 
 ## Maintenance List { #maintenance-list }
 
@@ -138,4 +138,8 @@ Tasks can be assigned one of four priority levels:
 | High | High priority. For important but non-critical tasks. |
 | Normal | Default level for standard scheduled maintenance. |
 | Low | Low priority. For tasks that can be deferred if needed. |
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — calendar integration and troubleshooting
 <!-- --8<-- [end:body] -->

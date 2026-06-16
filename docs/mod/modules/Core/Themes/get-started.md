@@ -1,5 +1,5 @@
 ---
-title: Themes — Get Started
+title: Themes - Get Started
 description: Get up and running with the Themes module.
 product: mod
 page_type: getstarted
@@ -12,7 +12,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Themes — Get Started
+# Themes - Get Started
 ???+ info "Requirements"
     The following scripts are required to use Themes and all
     related functionality covered in the Themes guides:

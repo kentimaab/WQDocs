@@ -1,5 +1,5 @@
 ---
-title: Calendar — Get Started
+title: Calendar - Get Started
 description: Get up and running with the Calendar module.
 product: mod
 page_type: getstarted
@@ -15,7 +15,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Calendar — Get Started
+# Calendar - Get Started
 ???+ info "Requirements"
     The following scripts are required to use Calendar and all
     related functionality covered in the Calendar guides:

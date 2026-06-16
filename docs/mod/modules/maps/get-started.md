@@ -1,5 +1,5 @@
 ---
-title: Maps & Indicators — Get started
+title: Maps & Indicators - Get started
 description: Get up and running with the Maps & Indicators module.
 product: mod
 page_type: getstarted
@@ -16,7 +16,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Maps & Indicators — Get started
+# Maps & Indicators - Get started
 ???+ info "Requirements"
     The following scripts are required to use Maps & Indicators and all
     related functionality covered in the Maps & Indicators guides:
@@ -31,7 +31,6 @@ tags:
     
     * `Map Indicators`
     * `WEATHER`
-
 
 This section covers how to set up a **Map View** object in WideQuick and how to add
 basic indicators. For configuring more advanced indicators such as Pin Status, Cluster
@@ -135,3 +134,9 @@ DataStore variable by default. This is configured in the properties tab of the
 
 Once configured, the Weather Widget will display current weather information for the
 centre of the visible map area, updating automatically as the user navigates the map.
+
+## Next Steps { #next-steps }
+
+* [Configuring](configuring.md) — pin status indicators, cluster pins, lines, and alarm integration
+* [Extending](extending.md) — creating custom map indicators
+<!-- --8<-- [end:body] -->

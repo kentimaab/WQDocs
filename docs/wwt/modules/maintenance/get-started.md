@@ -1,6 +1,6 @@
 ﻿---
 description: Get up and running with the Maintenance module.
-title: Maintenance â€” Get started
+title: Maintenance - Get started
 scripts:
   - scMaintenance
 tags: 

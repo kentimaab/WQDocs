@@ -1,6 +1,6 @@
 ﻿---
 description: Extend the Documents module â€” privilege reference.
-title: Documents â€” Extending
+title: Documents - Extending
 tags: 
  - BMS
 ---

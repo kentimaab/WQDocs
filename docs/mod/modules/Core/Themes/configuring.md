@@ -1,5 +1,5 @@
 ---
-title: Themes — Configuring
+title: Themes - Configuring
 description: Change individual theme colors and assign color roles to objects.
 product: mod
 page_type: howto
@@ -10,7 +10,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Themes — Configuring
+# Themes - Configuring
 
 ## Changing a color { #changing-a-color }
 
@@ -40,4 +40,8 @@ System.themes.color("Symbol_Alarm")
 ```
 
  To add a new custom color, click **+** at the bottom of the **Custom colors** tab (It will be added as ColorX), assign a name, and set a value. Use the same name across all themes so the color resolves correctly when switching between themes.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — creating a custom theme that follows a graphical profile
 <!-- --8<-- [end:body] -->

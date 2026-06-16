@@ -1,6 +1,6 @@
 ﻿---
 description: Common issues and solutions for the History module.
-title: History â€” Troubleshooting
+title: History - Troubleshooting
 tags: 
  - BMS
 ---

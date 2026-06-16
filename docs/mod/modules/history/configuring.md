@@ -1,5 +1,5 @@
 ﻿---
-title: History — Configuring
+title: History - Configuring
 description: Configure signal selection, chart settings and saved signal groups in the History module.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# History — Configuring
+# History - Configuring
 
 ## Tracking a Signal { #tracking-a-signal }
 
@@ -67,4 +67,7 @@ To remove a group from your selection before importing, select it in the right p
 !!! note
     Importing a group copies it into the current context. Changes to the original group after importing are not reflected.
 
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — opening the view-specific popup from a script and troubleshooting
 <!-- --8<-- [end:body] -->

@@ -1,5 +1,5 @@
 ---
-title: Maps & Indicators — Configuring
+title: Maps & Indicators - Configuring
 description: Configure and customise the Maps & Indicators module.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Maps & Indicators — Configuring
+# Maps & Indicators - Configuring
 
 This section covers how to configure the more advanced Map Indicators, including Pin
 Status, Cluster Pins, Lines, and Filters. For setting up a **Map View** object and
@@ -140,3 +140,8 @@ Filters allow users to focus on a specific set of lines or networks by toggling 
 visibility. Any line network is automatically registered with the filter, so no
 additional configuration is needed. Add a `Filter` object to your view the same way
 as any other object.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — creating custom map indicators
+<!-- --8<-- [end:body] -->

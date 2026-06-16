@@ -29,6 +29,8 @@ Variants include:
 
 This license type is well suited for non-connected or highly secured systems, such as installations behind a DMZ or fully air‑gapped networks.
 
+For the full feature breakdown by license level and available option packages, see the [WideQuick 14 License Overview](https://widequick.com/license/14/Licens%20WideQuick%2014%20-%20English.html){target="_blank"} on the Kentima website.
+
 ### WideQuick Universal License
 
 The WideQuick Universal License is a subscription-based, cloud-managed licensing model designed for modern and dynamic environments.

@@ -1,5 +1,5 @@
 ---
-title: Reports — Get started
+title: Reports - Get started
 description: Get up and running with the Reports module.
 product: mod
 page_type: getstarted
@@ -13,7 +13,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Reports — Get started
+# Reports - Get started
 ???+ info "Requirements"
     The following scripts are required to use Reports and all
     related functionality covered in the Reports guides:
@@ -209,5 +209,8 @@ Below are descriptions of the options on the first and third pages:
     each entry is an email address or an alias.
     * **Report file format** — The format in which the report is sent: PDF or Excel.
 
+## Next Steps { #next-steps }
 
+* [Configuring](configuring.md) — built-in report templates and report history
+* [Extending](extending.md) — creating custom templates and report controllers
 <!-- --8<-- [end:body] -->

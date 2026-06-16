@@ -22,21 +22,33 @@ The guides cover how to use specific features of the WideQuick MOD — both for 
 
 ---
 
-### [Create an Object](create-an-object.md) { #create-an-object }
+### [Create Object](create-an-object.md) { #create-object }
 
-* [**Create an Object**](create-an-object.md) — How to create and connect a process object in a WideQuick workview, and how to create objects dynamically from script.
+* [**Create Object**](create-an-object.md) — How to create and connect a process object in a WideQuick workview, and how to create objects dynamically from script.
 
 ---
 
-### [Create a Popup](create-a-popup.md) { #create-a-popup }
+### [Create Popup](create-a-popup.md) { #create-popup }
 
-* [**Create a Popup**](create-a-popup.md) — How to create a custom popup in WideQuick MOD.
+* [**Create Popup**](create-a-popup.md) — How to create a custom popup in WideQuick MOD.
 
 ---
 
 ### [Languages](languages.md) { #languages }
 
 * [**Languages**](languages.md) — Add languages, create translation files, and use `Language.translate()` for runtime language switching.
+
+---
+
+### [Logger](Loggers.md) { #logger }
+
+* [**Logger**](Loggers.md) — How to create and configure a logger in WideQuick Designer for use with History, Reports, and other data-dependent modules.
+
+---
+
+### [Login Config](Login Config.md) { #login-config }
+
+* [**Login Config**](Login Config.md) — Configure the login screen, skip login, user selection method, background image, and start workview.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Maps & Indicators — Extending
+title: Maps & Indicators - Extending
 description: Extend the Maps & Indicators module with scripts and hooks.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Maps & Indicators — Extending
+# Maps & Indicators - Extending
 
 This section covers how to extend the Maps & Indicators module with custom
 functionality. This includes connecting an **Alarm** object to a **Map View** for

@@ -1,5 +1,5 @@
 ---
-title: Releases — WWT
+title: Releases - WWT
 description: Release notes for WideQuick WWT.
 product: wwt
 page_type: release
@@ -9,7 +9,7 @@ tags:
  - WWT
 ---
 
-# Releases — WWT
+# Releases - WWT
 
 Release notes for WideQuick WWT. The newest release is listed first. Each release
 is built on a specific WideQuick Modular Framework version, linked under its

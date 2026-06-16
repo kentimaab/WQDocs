@@ -1,5 +1,5 @@
 ---
-title: Backup and Restore — Get Started
+title: Backup and Restore - Get Started
 description: Get up and running with the Backup and Restore feature.
 product: mod
 page_type: getstarted
@@ -13,7 +13,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Backup and Restore — Get Started
+# Backup and Restore - Get Started
 ???+ info "Requirements"
     The following scripts are required to use Backup and Restore and all
     related functionality covered in the Backup and Restore guides:

@@ -1,5 +1,5 @@
 ---
-title: Reports — Configuring
+title: Reports - Configuring
 description: Configure and customise the Reports module.
 product: mod
 page_type: howto
@@ -11,7 +11,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Reports — Configuring
+# Reports - Configuring
 
 This section covers how to configure the four report templates in WideQuick Mod to fit 
 your needs, as well as how to use the built-in Report History to recreate or resend 
@@ -195,4 +195,7 @@ successfully sent.
 Use the navigation buttons to select a specific day and view detailed information. The 
 popup lists all reports for that day along with their status. Failed reports, sent 
 emails, and failed emails can be reconfigured to be recreated or resent.
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — creating custom templates and report controllers
 <!-- --8<-- [end:body] -->

@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: Architecture Overview â€” WWT
+title: Architecture Overview - WWT
 description: How WideQuick WWT is built on the MOD framework.
 product: wwt
 page_type: concept
@@ -13,7 +13,7 @@ tags:
 search:
   exclude: true
 
-# Architecture Overview â€” WWT
+# Architecture Overview - WWT
 
 !!! note "Draft"
     This page is a placeholder. Content will be added as part of the BMS 2026.1 documentation effort.

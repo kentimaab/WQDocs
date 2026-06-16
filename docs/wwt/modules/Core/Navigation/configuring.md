@@ -1,6 +1,6 @@
 ﻿---
 description: Configure and customise Navigation.
-title: Navigation â€” Configuring
+title: Navigation - Configuring
 tags: 
  - WWT
 ---

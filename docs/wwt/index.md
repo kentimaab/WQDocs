@@ -39,7 +39,7 @@ tags:
 
     Bring in your first signal from a pumping station, basin, or treatment line.
 
-    [Your first tag →](get-started/your-first-tag/)
+    [Your first tag →](get-started/Your%20First%20Tag.md)
 
 </div>
 

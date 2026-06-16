@@ -1,7 +1,7 @@
 ﻿---
 search:
   exclude: true
-title: Concepts â€” BMS
+title: Concepts - BMS
 description: Architecture and key concepts of WideQuick BMS.
 product: bms
 page_type: concept
@@ -13,7 +13,7 @@ tags:
 search:
   exclude: true
 
-# Concepts â€” BMS
+# Concepts - BMS
 
 !!! note "Draft"
     This page is a placeholder. Content will be added as part of the BMS 2026.1 documentation effort.

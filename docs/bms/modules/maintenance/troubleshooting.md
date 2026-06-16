@@ -1,6 +1,6 @@
 ﻿---
 description: Common issues and solutions for the Maintenance module.
-title: Maintenance â€” Troubleshooting
+title: Maintenance - Troubleshooting
 tags: 
  - BMS
 ---
