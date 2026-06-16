@@ -757,6 +757,12 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
+[project.extra]
+alternate = [
+    { name = "English", link = "/", lang = "en" },
+    { name = "Svenska", link = "/sv/", lang = "sv" },
+]
+
 #[[project.extra.social]]
 #icon = "fontawesome/brands/github"
 #link = "https://github.com/user/repo"
