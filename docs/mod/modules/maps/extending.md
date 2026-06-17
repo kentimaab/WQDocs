@@ -46,7 +46,7 @@ scMap.updateAlarmList(scMap.mapView, scMap.alarmList);
 
 !!! note
     Replace `Alarm1` with the name of the **Alarm** object placed in the view.
-    `alarmNames` is an internal DataStore variable containing a comma-separated
+    `alarmNames` is an internal Data Store variable containing a comma-separated
     string of all alarm group names in the system. It does not need to be configured
     manually.
 

@@ -95,11 +95,11 @@ If a remote system disconnects, its alarms are removed from the list automatical
 
 ### Integrating a non-MOD application { #integrating-a-non-mod-application }
 
-Alarm aggregation works with any WideQuick application — not just MOD — as long as the remote application exposes the following variables in its DataStore:
+Alarm aggregation works with any WideQuick application — not just MOD — as long as the remote application exposes the following variables in its Data Store:
 
 * `activeAckAlarms` — current count of active acknowledged alarms.
 * `activeNoAckAlarms` — current count of active unacknowledged alarms.
-* `alarmNames` — a comma-separated list of alarm group names. Each name in the list must also exist as an `AlarmGroup` object in the DataStore.
+* `alarmNames` — a comma-separated list of alarm group names. Each name in the list must also exist as an `AlarmGroup` object in the Data Store.
 
 These are the variables that `scAlarm` maintains in MOD. A non-MOD application that keeps these up to date will be picked up by `scRemoteAlarms` automatically once the remote system connection is established.
 

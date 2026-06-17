@@ -1,6 +1,6 @@
 ---
 title: Navigation
-description: Floorplan views and map indicators — configuration and usage.
+description: Navigation table of content
 product: mod
 page_type: concept
 doc_id: DOC-M14

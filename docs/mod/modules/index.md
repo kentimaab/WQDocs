@@ -27,7 +27,7 @@ WideQuick MOD organises its features and functionality into modules. Each module
 
 ---
 
-### [Trace Log](audit-trail/index.md) { #trace-log }
+### [Audit Trail (Trace Log)](audit-trail/index.md) { #trace-log }
 
 * [**Get started**](audit-trail/get-started.md) — Viewing the log and maintenance change log.
 * [**Configuring**](audit-trail/configuring.md) — Configuring variables to track.

@@ -121,7 +121,7 @@ The **From** and **To** fields at the top of the dashboard set the time range. H
 
 ### Key Value { #key-value }
 
-Displays a single live value with its configured unit and decimal precision. Accepts any value in DataStore — internal variables, driver signals and System variables.
+Displays a single live value with its configured unit and decimal precision. Accepts any value in Data Store — internal variables, driver signals and System variables.
 
 ![Key Value](/Images/Dashboard/KeyValue.png){align=center}
 
@@ -133,7 +133,7 @@ Displays a single live value with its configured unit and decimal precision. Acc
 
 ### Signal Value Display { #signal-value-display }
 
-Displays current live values for one or more signals. Automatically resolves units and decimal precision from DataStore.
+Displays current live values for one or more signals. Automatically resolves units and decimal precision from Data Store.
 
 ![Signal Value Display](/Images/Dashboard/SignalValueDisplay.png){align=center}
 

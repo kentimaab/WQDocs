@@ -110,7 +110,7 @@ time.
 The **Variables** tab defines which signals are logged. Signals can be added in
 two ways:
 
-* **Browse** — opens the DataStore browser to select a specific signal
+* **Browse** — opens the Data Store browser to select a specific signal
 * **Add** — adds an empty row where a signal name can be entered manually
 
 Wildcard suffixes are supported. For example `*_kWh` logs all signals ending in

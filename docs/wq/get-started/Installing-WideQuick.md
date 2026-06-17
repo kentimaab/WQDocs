@@ -13,23 +13,23 @@ last_reviewed: 2026-05-29
 — all installed from the same installation package.
 
 **WideQuick® Designer** is the development environment used to build the user
-interface for a project. It works with collaborative workviews containing objects
-connected to variables in the DataStore, creating dynamic effects. Objects and
-workviews appear static in Designer — the dynamics only come to life in Runtime.
+interface for a project. It works with collaborative Workviews containing objects
+connected to variables in the Data Store, creating dynamic effects. Objects and
+Workviews appear static in Designer — the dynamics only come to life in Runtime.
 
 **WideQuick® Runtime** is a standalone program installed on the target machine
-together with a project created in Designer. When started, it presents the workviews
-and objects of the user interface, manages the DataStore, and handles communication
+together with a project created in Designer. When started, it presents the Workviews
+and objects of the user interface, manages the Data Store, and handles communication
 with I/O modules and OPC servers.
 
 **WideQuick® Remote** makes it possible for one or more users to connect to the
 same target system from different stations, enabling a client/server environment.
-Using Designer, an overview workview can also be created to present multiple target
+Using Designer, an overview Workview can also be created to present multiple target
 systems simultaneously.
 
 If more complex solutions are needed — such as custom control and regulation logic
 — an application program can be combined with Runtime using the **WideQuick® C API**.
-Application programs have the same access to DataStore variables as Runtime and can
+Application programs have the same access to Data Store variables as Runtime and can
 be used to create tailored process control. The C API is not included in the standard
 package.
 

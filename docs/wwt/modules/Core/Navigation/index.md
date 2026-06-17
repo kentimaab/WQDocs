@@ -1,5 +1,5 @@
 ﻿---
-description: Floorplan views and map indicators â€” configuration and usage.
+description: Navigation table of content
 title: Navigation
 tags: 
  - WWT

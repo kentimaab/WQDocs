@@ -127,7 +127,7 @@ are set in the visibility dynamics script described
 [above](#setting-up-a-map-view-object).
 
 The widget also needs to be pointed to its data source, which is the `weather`
-DataStore variable by default. This is configured in the properties tab of the
+Data Store variable by default. This is configured in the properties tab of the
 **Map View**:
 
 ![Weather Widget](/Images/Map_Indicators/WeatherWidgetSettings.png)

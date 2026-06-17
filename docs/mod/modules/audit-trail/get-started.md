@@ -1,6 +1,6 @@
 ---
-title: Trace Log - Get Started
-description: Get up and running with the Trace Log (Audit Trail) module.
+title: Audit Trail (Trace Log) - Get Started
+description: Get up and running with the Audit Trail (Trace Log) module.
 product: mod
 page_type: getstarted
 doc_id: DOC-M19
@@ -13,7 +13,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Trace Log - Get Started
+# Audit Trail (Trace Log) - Get Started
 ???+ info "Requirements"
     The following scripts are required to use Trace Log and all
     related functionality covered in the Trace Log guides:
@@ -21,7 +21,7 @@ tags:
     * `scAuditTrail`
     * `scAlert`
 
-The Trace Log records changes to selected DataStore variables and maintenance tasks. It is available under **History → Logs → Trace log**.
+The Trace Log records changes to selected Data Store variables and maintenance tasks. It is available under **History → Logs → Trace log**.
 
 ## Viewing the Log { #viewing-the-log }
 
@@ -33,7 +33,7 @@ The log shows all recorded changes with the following columns:
 
 * **Time** — when the change occurred.
 * **Event** — the old value and new value, shown as `old → new`.
-* **Context** — the full variable path in the DataStore.
+* **Context** — the full variable path in the Data Store.
 * **User** — the user logged in when the change was made.
 
 Use the **Filter** panel on the left to narrow down the log:
