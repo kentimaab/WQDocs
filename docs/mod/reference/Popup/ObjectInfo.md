@@ -13,7 +13,7 @@ tags:
 # Object Info
 
 The Object Info popup provides a raw list of all signals connected to the selected
-object, pulled directly from the DataStore. It is always visible in the Tab menu
+object, pulled directly from the Data Store. It is always visible in the Tab menu
 regardless of which suffixes the object has. It is primarily useful for
 troubleshooting and verifying that the correct signals are connected to the object.
 

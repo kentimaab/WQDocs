@@ -35,7 +35,7 @@ name, IP address, and port.
 Read-only.
 
 **Lang** — the display language of the application. Click **Set lang** to change
-the language. See [here](../../../mod/guides/languages.md) for more information.
+the language. See [here](../../guides/languages.md) for more information.
 
 **Units** — the unit system used for value displays, for example SI. Click
 **Change unit system** to switch between unit systems. 
@@ -52,7 +52,7 @@ notifications. Click **Edit** to open the configuration dialog. See
 information.
 
 **Remote sys** — manages connections to remote WideQuick Runtime instances. Click
-**Manage remote** to add or configure remote systems. See [here](../../../mod/guides/remote-systems.md) for more
+**Manage remote** to add or configure remote systems. See [here](../../guides/remote-systems.md) for more
 information.
 
 **Connected clients** — displays the number of currently connected remote clients.
@@ -96,12 +96,12 @@ user.
 
 **Require login** — when enabled, users must log in before accessing the system.
 When disabled, the login screen is bypassed and the user enters as unauthenticated.
-See [Login configurations](../../guides/Login%20Config.md#require-login) for more 
+See [Login configurations](../../guides/Login%20Config/#require-login) for more
 information.
 
 **Require username** — when enabled, users must type their full username when
 logging in. When disabled, a combobox showing all available users is displayed
-instead. See [Login configurations](../../guides/Login%20Config.md#require-username)
+instead. See [Login configurations](../../guides/Login%20Config/#require-username)
 for more information.
 
 ---
@@ -130,7 +130,7 @@ is shown first allowing the user to choose whether to navigate. See
 ## Advanced settings
 
 **Debug tree** — click **DebugTree** to open the debug tree, which displays the
-full DataStore variable hierarchy. Useful for troubleshooting tag connections.
+full Data Store variable hierarchy. Useful for troubleshooting tag connections.
 
 **Console** — click **Open console** to open the script console, which displays
 script output and errors at runtime.

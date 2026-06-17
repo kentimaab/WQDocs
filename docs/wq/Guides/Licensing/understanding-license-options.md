@@ -82,12 +82,12 @@ The number of **internal variables** (for example alarms and internal tags creat
 | OPC DA Server Connections | Premium | Maximum number of clients that can connect to a WideQuick OPC DA Server. |
 | OPC UA Server Connections | Premium | Maximum number of clients that can connect to a WideQuick OPC UA Server. |
 |<span style = "font-size:16px"> **Communication Drivers**</span> |||
-| Modbus Serial and TCP Driver | Extended | Allows WideQuick to communicate with devices over Modbus (serial and TCP) via the DataStore. |
-| OPC DA Driver | Advanced | Allows WideQuick to communicate with devices over OPC DA via the DataStore. |
-| OPC UA Driver | Advanced | Allows WideQuick to communicate with devices over OPC UA via the DataStore. |
-| MQTT Driver | Advanced | Allows WideQuick to communicate with devices over MQTT via the DataStore. |
-| BACnet Driver | Premium | Allows WideQuick to communicate with devices over BACnet via the DataStore. |
-| BACnet+ Driver | Premium | Allows WideQuick to communicate with devices over BACnet via the DataStore and enables an extended script interface for deeper integration. |
+| Modbus Serial and TCP Driver | Extended | Allows WideQuick to communicate with devices over Modbus (serial and TCP) via the Data Store. |
+| OPC DA Driver | Advanced | Allows WideQuick to communicate with devices over OPC DA via the Data Store. |
+| OPC UA Driver | Advanced | Allows WideQuick to communicate with devices over OPC UA via the Data Store. |
+| MQTT Driver | Advanced | Allows WideQuick to communicate with devices over MQTT via the Data Store. |
+| BACnet Driver | Premium | Allows WideQuick to communicate with devices over BACnet via the Data Store. |
+| BACnet+ Driver | Premium | Allows WideQuick to communicate with devices over BACnet via the Data Store and enables an extended script interface for deeper integration. |
 |<span style = "font-size:16px">**HMI/SCADA Features**</span> |||
 | Number of Workviews | Extended | Maximum number of Workviews that can be used in the application. |
 | Themes | Extended | Enables the application to define and switch between color schemes. |

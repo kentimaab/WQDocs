@@ -33,7 +33,7 @@ The log shows all recorded changes with the following columns:
 
 * **Time** — when the change occurred.
 * **Event** — the old value and new value, shown as `old → new`.
-* **Context** — the full variable path in the DataStore.
+* **Context** — the full variable path in the Data Store.
 * **User** — the user logged in when the change was made.
 
 Use the **Filter** panel on the left to narrow down the log:

@@ -72,7 +72,7 @@ indicates the generation number.
 * **Timestamp** — The date and time at which the recording ends.
 
 From this page, reports can be created, removed, or sent as email attachments. Sending 
-reports by email requires an SMTP server to be configured, which is explained [here]().
+reports by email requires an SMTP server to be configured, which is explained [here](../Core/alarms/extending.md#configuring-smtp-in-widequick-designer).
 
 <figure markdown="span">
   ![Report](/Images/Reports/Report.png)
@@ -203,7 +203,7 @@ Below are descriptions of the options on the first and third pages:
     * **Subject line** — The subject line of the email in which the report is sent.
     * **Recipient** — The recipients of the email. Accepts both email addresses 
     and aliases.
-    * **Alias** — Displays available aliases. Select one and click **Lägg till** 
+    * **Alias** — Displays available aliases. Select one and click **Add** 
     to add it as a recipient.
     * **List of Recipients** — Shows the full list of recipients, indicating whether 
     each entry is an email address or an alias.

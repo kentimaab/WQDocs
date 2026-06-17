@@ -1,5 +1,5 @@
-﻿---
-description: Track and review changes to DataStore variables and maintenance task history.
+---
+description: Track and review changes to Data Store variables and maintenance task history.
 title: Audit Trail
 tags: 
  - BMS

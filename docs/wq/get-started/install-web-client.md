@@ -133,10 +133,10 @@ project properties.
 * **Cache size** — the size of the file cache in MB. Set to `0` to disable
 caching entirely.
 
-* **Workview** — the workview displayed when connecting via a web browser. Leave
+* **Workview** — the Workview displayed when connecting via a web browser. Leave
 empty to use the start view specified in the **WideQuick® Runtime** project.
 
-* **Workviews** — list of workviews that can be used as URL arguments, for example
+* **Workviews** — list of Workviews that can be used as URL arguments, for example
 `localhost/?view=Workview2.kvie`. Separated by spaces, stored as `view_args` in
 the `.ini` file.
 
@@ -196,7 +196,7 @@ ssl_temp_dh=dh2048.pem
 [wqre-server]
 hostname=127.0.0.1
 port=2122
-workview=
+Workview=
 view_args=
 export_vars=
 [wqweb]
@@ -222,7 +222,7 @@ The project must have an active port for view access, specifying the TCP/IP port
 for communication between **WideQuick® Runtime** and **WideQuick® Web Client**.
 The port is configured in the project properties, for example port `2122`.
 
-### Read and write access to DataStore variables
+### Read and write access to Data Store variables
 
 For all variables and alarms whose values should be transmitted to or from the
 client, the view access must be set to **Read** and/or **Write** as required.
@@ -334,11 +334,11 @@ missing:
 
 The following dynamic property is not supported:
 
-* Bring workviews to front
+* Bring Workviews to front
 
 ### Workviews
 
-**WideQuick® Web Client** does not present any menus in workviews.
+**WideQuick® Web Client** does not present any menus in Workviews.
 
 ### Objects
 

@@ -33,7 +33,7 @@ For more information on tag suffixes see [Tag Structure](../reference/tag-struct
 
 When a `DynTouch` object is placed on an object in **WideQuick Designer®**, it
 automatically calls the `AnimationHandler()` function in the `scWorkviewAnimation`
-script. This creates a handler that watches all DataStore signals matching the
+script. This creates a handler that watches all Data Store signals matching the
 object's tag name combined with the configured suffixes. The handler exposes a
 boolean for each category — for example `animation.alarm` or `animation.warning`,
 where `animation` is the reference to the handler — which is `true` when any signal
@@ -320,7 +320,7 @@ active suffix is active.
 
 !!! tip
     To test without a PLC connected, right-click the object in **WideQuick Runtime®**
-    to open the debug popup. From here the DataStore variables can be toggled between
+    to open the debug popup. From here the Data Store variables can be toggled between
     `true` and `false` to verify the animations work as expected.
 
 <!-- --8<-- [end:body] -->

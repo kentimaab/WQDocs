@@ -14,7 +14,7 @@ tags:
 
 The Trend popup displays live signal values for the selected object in a real-time
 graph. Unlike the [History](./History.md) popup which is limited by how frequently
-signals are logged, the Trend popup reads directly from the DataStore and updates
+signals are logged, the Trend popup reads directly from the Data Store and updates
 continuously. It is always visible in the Tab menu regardless of which suffixes the
 object has.
 

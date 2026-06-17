@@ -31,9 +31,9 @@ The main view scales automatically — no configuration is needed. `scWM` contin
 
 ## Popup Scaling { #popup-scaling }
 
-Popups do not scale automatically. To scale a popup proportionally to the main view and place it on screen, call `scWM.scaleAndPlacePopup()` in the popup workview's **onLoad** script. To find the onLoad script, right-click the workview in the project tree in **WideQuick Designer®**, select **Properties**, open the **Action** tab and double-click **load**.
+Popups do not scale automatically. To scale a popup proportionally to the main view and place it on screen, call `scWM.scaleAndPlacePopup()` in the popup Workview's **onLoad** script. To find the onLoad script, right-click the Workview in the project tree in **WideQuick Designer®**, select **Properties**, open the **Action** tab and double-click **load**.
 
-```javascript title="Popup workview — onLoad"
+```javascript title="Popup Workview — onLoad"
 scWM.scaleAndPlacePopup(this);
 ```
 
@@ -55,21 +55,21 @@ scWM.scaleAndPlacePopup(this, "bottom");
 
 ### Enabling Pannable/Zoomable { #enabling-pannablezoomable }
 
-Popup scaling requires **Pannable/Zoomable** to be enabled on the popup workview. In **WideQuick Designer®**, right-click the workview in the project tree and select **Properties**. Open the **Layout** tab and check **Pannable/Zoomable**.
+Popup scaling requires **Pannable/Zoomable** to be enabled on the popup Workview. In **WideQuick Designer®**, right-click the Workview in the project tree and select **Properties**. Open the **Layout** tab and check **Pannable/Zoomable**.
 
-![Pannable/Zoomable setting in workview properties](/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
+![Pannable/Zoomable setting in Workview properties](/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
 
 ## Placement Without Scaling { #placement-without-scaling }
 
 For smaller popups that do not need to resize, use `scWM.placePopup()` to center the popup without scaling it:
 
-```javascript title="Popup workview — onLoad"
+```javascript title="Popup Workview — onLoad"
 scWM.placePopup(this);
 ```
 
 ## Reloading a View { #reloading-a-view }
 
-To force a workview to re-initialize, use `scWM.reloadPage()`:
+To force a Workview to re-initialize, use `scWM.reloadPage()`:
 
 ```javascript title="Button or script"
 scWM.reloadPage("ViewName");

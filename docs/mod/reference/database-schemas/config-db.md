@@ -31,14 +31,14 @@ Config.db is the central configuration database. It stores persistent applicatio
 |---|---|
 | `navMenu` | The main navigation menu structure, stored as JSON. Built and updated by `scNav` at runtime. |
 | `subNavs` | Sub-navigation structures for individual views, stored as JSON. Managed by `scSubNav`. |
-| `viewPrivilegies` | Privilege requirements per workview name. Controls which users can access a given view. |
+| `viewPrivilegies` | Privilege requirements per Workview name. Controls which users can access a given view. |
 
 ## History { #history }
 
 | Table | Description |
 |---|---|
 | `History_SavedSignals_Project` | Project-wide saved signal groups in the History module. Available to all users. |
-| `History_SavedSignals_View` | View-specific saved signal groups in the History module. Scoped to a particular workview. |
+| `History_SavedSignals_View` | View-specific saved signal groups in the History module. Scoped to a particular Workview. |
 
 ## Logbook { #logbook }
 
@@ -67,7 +67,7 @@ Config.db is the central configuration database. It stores persistent applicatio
 
 | Table | Description |
 |---|---|
-| `ObjectList` | Maps process objects to the workviews they appear in and their DataStore names. Used by `scObjectFinder` and `scLinking` to resolve object locations at runtime. |
+| `ObjectList` | Maps process objects to the Workviews they appear in and their Data Store names. Used by `scObjectFinder` and `scLinking` to resolve object locations at runtime. |
 
 ## Control Curves { #control-curves }
 

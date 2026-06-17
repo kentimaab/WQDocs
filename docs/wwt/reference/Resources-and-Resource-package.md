@@ -6,4 +6,4 @@ tags:
  - WWT
 ---
 
---8<-- "mod/reference/resources-and-resurspaket.md:body"
+--8<-- "mod/reference/Resources-and-Resource-package.md:body"

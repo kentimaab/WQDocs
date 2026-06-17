@@ -9,7 +9,7 @@ This tool is a way to confirm that you tag names in you WideQuick project are of
 
 By coping the name column from your Data Store in WideQuick Designer and pasting it into the textfield below you can check which of you signals conform or not to the tag structure. 
 
-As the WideQuick name differs between Modbus and OPC UA/DA there are two tabs. The difference between the two is that Modbus inherits the Connection and Device part of the syntax from its Connection and Device in the DataStore.  
+As the WideQuick name differs between Modbus and OPC UA/DA there are two tabs. The difference between the two is that Modbus inherits the Connection and Device part of the syntax from its Connection and Device in the Data Store.  
 
 For more information on how the Tag Structure is intended to work please visit [Tag Structure](../mod/reference/tag-structure.md){target=_blank}
 

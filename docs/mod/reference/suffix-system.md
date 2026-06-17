@@ -13,9 +13,9 @@ tags:
 
 # Suffix System
 
-The suffix system is how WideQuick MOD connects a clickable object in a workview to the correct popup controls and DataStore tags. When an operator clicks a pump, valve, or sensor, the suffix system looks up which parameters exist for that object and renders only the controls that apply.
+The suffix system is how WideQuick MOD connects a clickable object in a Workview to the correct popup controls and Data Store tags. When an operator clicks a pump, valve, or sensor, the suffix system looks up which parameters exist for that object and renders only the controls that apply.
 
-The link between object and parameter is a naming convention: a short string (the suffix) appended to the base tag name. For an object named `MB.AS01.SYS_PUMP1`, a suffix `_BV` resolves to the DataStore tag `MB.AS01.SYS_PUMP1_BV`. If that tag exists, the corresponding control is shown.
+The link between object and parameter is a naming convention: a short string (the suffix) appended to the base tag name. For an object named `MB.AS01.SYS_PUMP1`, a suffix `_BV` resolves to the Data Store tag `MB.AS01.SYS_PUMP1_BV`. If that tag exists, the corresponding control is shown.
 
 Configuration lives in `SuffixConfig.db` as a JSON structure called `SuffixObj`. The structure is loaded by `scSuffix` at startup and read by `scSmartPopup` whenever a popup opens.
 
@@ -56,8 +56,8 @@ Each entry in `Popups` represents one popup group — a tab or panel that appear
 | Attribute | Type | Description |
 |---|---|---|
 | `name` | string | Display name shown as the tab label. |
-| `viewPath` | string | The `.kvie` workview file to load for this popup group. |
-| `Always visible` | boolean | If `true`, the tab is shown even if no suffixes exist for the clicked object. If `false`, the tab is hidden unless at least one suffix tag is found in the DataStore. |
+| `viewPath` | string | The `.kvie` Workview file to load for this popup group. |
+| `Always visible` | boolean | If `true`, the tab is shown even if no suffixes exist for the clicked object. If `false`, the tab is hidden unless at least one suffix tag is found in the Data Store. |
 | `privilage` | string | Privilege key required to see this tab. Empty string means all users. |
 | `suffixes` | object | Map of suffix alias names to suffix definitions (see below). |
 
@@ -65,12 +65,12 @@ Each entry in `Popups` represents one popup group — a tab or panel that appear
 
 | Attribute | Type | Description |
 |---|---|---|
-| `suffix` | string | The string appended to the object's base tag name to form the DataStore key. |
+| `suffix` | string | The string appended to the object's base tag name to form the Data Store key. |
 | `desc` | string | Human-readable label shown in the popup control. |
 | `decimals` | number | Number of decimal places for numeric display. |
 | `writeable` | number | `1` if the control allows operator input, `0` for read-only display. |
 | `write_priv` | string | Privilege key required to write. Empty string falls back to the object's own privilege. |
-| `unit` | string | Unit label. Can be left empty if the unit is defined on the DataStore tag description. |
+| `unit` | string | Unit label. Can be left empty if the unit is defined on the Data Store tag description. |
 
 ## Views { #views }
 
@@ -124,7 +124,7 @@ When a popup is opened directly via a DynTouch link (not routed through the tab 
 
 `scSmartPopup.bootstrapDirect()` solves this. It reconstructs the popup context from the clicked object and re-fires the Load events for all child components, ensuring they register and receive `activate()` after the view is fully ready.
 
-This bootstrap runs automatically. No manual handling is needed in popup workviews.
+This bootstrap runs automatically. No manual handling is needed in popup Workviews.
 
 ## Editing the configuration { #editing }
 

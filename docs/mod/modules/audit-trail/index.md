@@ -13,7 +13,7 @@ tags:
 
 # Audit Trail
 
-The Audit Trail records changes to selected DataStore variables and provides a full history of changes to maintenance tasks. For tracked variables, each entry captures the old value, the new value, the variable path, the user who made the change, and a timestamp. Maintenance task changes are recorded automatically. No configuration is needed.
+The Audit Trail records changes to selected Data Store variables and provides a full history of changes to maintenance tasks. For tracked variables, each entry captures the old value, the new value, the variable path, the user who made the change, and a timestamp. Maintenance task changes are recorded automatically. No configuration is needed.
 
 The Audit Trail is available under **History → Logs → Audit Trail**.
 

@@ -66,7 +66,7 @@ From **Maint. - List**, click **Create**. From the object popup, click **New mai
 
 Fill in the following fields:
 
-* **Objekt** — select the object this task belongs to from the dropdown. Pre-filled when opening from an object popup.
+* **Object** — select the object this task belongs to from the dropdown. Pre-filled when opening from an object popup.
 * **Type of Maintenance** — select a template to pre-fill priority, deadline and description. All fields can still be edited after selecting.
 * **Priority** — Critical, High, Normal or Low.
 * **Maintenance deadline** — either a specific date or a number of days from now.

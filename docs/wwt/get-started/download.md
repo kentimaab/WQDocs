@@ -21,8 +21,7 @@ The download includes everything needed to get started:
 - system logic pre-configured
 - a fully implemented demo project for reference.
 
-The project can be opened and explored freely in WideQuick Designer, but
-commissioning a live system requires a [WideQuick license](#). <!-- PIN: confirm license requirement -->
+The project can be opened and explored freely in WideQuick Designer, but commissioning a live system requires a **WideQuick Advanced** license or higher.
 
 If you are in need of a WideQuick License please get in contact with the Kentima
 [sales team](https://www.kentima.com/en-GB/Kontakt){target="_blank"}.
