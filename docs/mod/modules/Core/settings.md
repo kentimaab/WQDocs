@@ -96,12 +96,12 @@ user.
 
 **Require login** — when enabled, users must log in before accessing the system.
 When disabled, the login screen is bypassed and the user enters as unauthenticated.
-See [Login configurations](../../guides/Login%20Config.md#require-login) for more 
+See [Login configurations](../../guides/Login%20Config/#require-login) for more
 information.
 
 **Require username** — when enabled, users must type their full username when
 logging in. When disabled, a combobox showing all available users is displayed
-instead. See [Login configurations](../../guides/Login%20Config.md#require-username)
+instead. See [Login configurations](../../guides/Login%20Config/#require-username)
 for more information.
 
 ---
