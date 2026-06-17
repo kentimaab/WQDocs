@@ -1,5 +1,5 @@
 ---
-title: maintenance-db
+title: Maintenance.db
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# maintenance-db
-
-Översättning kommer
+--8<-- "mod/reference/database-schemas/maintenance-db.md:body"

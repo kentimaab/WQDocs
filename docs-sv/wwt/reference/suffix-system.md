@@ -1,5 +1,5 @@
 ---
-title: suffix-system
+title: Suffixsystem
 product: wwt
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# suffix-system
-
-Översättning kommer
+--8<-- "mod/reference/suffix-system.md:body"

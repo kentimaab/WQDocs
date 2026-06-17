@@ -25,6 +25,6 @@ A reminder event appears in the calendar a set number of days before each task's
 
 ## Change History { #change-history }
 
-Every change to a maintenance task — status, deadline, assignee, priority and description — is automatically recorded and viewable under **History → Logs → Trace log → Audit Trail - Maintenance**. No configuration is needed. See [Trace Log](/mod/modules/audit-trail/get-started/#maintenance-change-log) for details.
+Every change to a maintenance task — status, deadline, assignee, priority and description — is automatically recorded and viewable under **History → Logs → Audit Trail → Audit Trail - Maintenance**. No configuration is needed. See [Audit Trail](/mod/modules/audit-trail/get-started/#maintenance-change-log) for details.
 
 <!-- --8<-- [end:body] -->

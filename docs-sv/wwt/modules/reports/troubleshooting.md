@@ -1,5 +1,5 @@
 ---
-title: troubleshooting
+title: Rapporter - Felsökning
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# troubleshooting
-
-Översättning kommer
+--8<-- "mod/modules/reports/troubleshooting.md:body"

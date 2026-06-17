@@ -1,5 +1,5 @@
 ---
-title: config-db
+title: Config.db
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# config-db
-
-Översättning kommer
+--8<-- "mod/reference/database-schemas/config-db.md:body"

@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# Flik
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Tab.md:body"

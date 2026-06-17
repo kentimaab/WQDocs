@@ -1,5 +1,5 @@
 ---
-title: index
+title: Popupfönster
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/reference/Popup/index.md:body"

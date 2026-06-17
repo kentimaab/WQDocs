@@ -1,5 +1,5 @@
 ---
-title: users-privileges
+title: Användare & behörigheter
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# users-privileges
-
-Översättning kommer
+--8<-- "mod/modules/Core/users-privileges.md:body"

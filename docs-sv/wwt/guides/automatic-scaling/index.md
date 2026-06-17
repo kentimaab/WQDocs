@@ -1,5 +1,5 @@
 ---
-title: index
+title: Automatisk skalning
 product: wwt
 page_type: guide
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/guides/automatic-scaling.md:body"

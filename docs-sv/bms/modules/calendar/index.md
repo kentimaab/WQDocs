@@ -1,5 +1,5 @@
 ---
-title: index
+title: Kalender
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,7 @@ tags:
  - BMS
 ---
 
-# index
+!!! info "Delad modul"
+    Den här modulen är en del av [WideQuick Modular Framework](/mod/modules/calendar/). Dokumentationen nedan är den kanoniska versionen som underhålls i MOD.
 
-Översättning kommer
+--8<-- "mod/modules/calendar/index.md:body"

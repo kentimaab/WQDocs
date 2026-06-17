@@ -1,5 +1,5 @@
 ---
-title: index
+title: Loggbok
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,7 @@ tags:
  - WWT
 ---
 
-# index
+!!! info "Delad modul"
+    Den här modulen är en del av [WideQuick Modular Framework](/mod/modules/logbook/). Dokumentationen nedan är den kanoniska versionen som underhålls i MOD.
 
-Översättning kommer
+--8<-- "mod/modules/logbook/index.md:body"

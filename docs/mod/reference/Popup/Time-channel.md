@@ -1,6 +1,6 @@
 ---
-title: TimeChannel
-description: Overview of the TimeChannel popup in WideQuick.
+title: Time Channel
+description: Overview of the Time Channel popup in WideQuick.
 product: mod
 page_type: reference
 status: draft
@@ -10,14 +10,14 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# TimeChannel
+# Time Channel
 
-The TimeChannel popup allows users to configure time-based schedules for the selected
+The Time Channel popup allows users to configure time-based schedules for the selected
 object. Each day of the week can have up to two active time periods defined by Turn on
 and Turn off times. It only appears in the Tab menu when the object has a signal
 matching the `_TK` suffix.
 
-![TimeChannel popup](/Images/Popups/TimeChannel.png)
+![Time Channel popup](/Images/Popups/Time-channel.png)
 
 ## Channel status
 
@@ -63,7 +63,7 @@ saved to the database or retrieved from a previously saved configuration.
 
 ## Default suffix aliases
 
-The TimeChannel popup uses a large number of suffixes to map each time slot to a
+The Time Channel popup uses a large number of suffixes to map each time slot to a
 specific signal. The key suffixes are:
 
 | Suffix alias | Suffix | Description |

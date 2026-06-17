@@ -1,5 +1,5 @@
 ---
-title: users-privileges
+title: Användare och behörigheter
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# users-privileges
-
-Översättning kommer
+--8<-- "mod/modules/Core/users-privileges.md:body"

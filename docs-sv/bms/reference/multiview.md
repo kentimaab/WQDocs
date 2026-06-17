@@ -1,5 +1,5 @@
 ---
-title: multiview
+title: MultiView
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# multiview
-
-Översättning kommer
+--8<-- "mod/reference/multiview.md:body"

@@ -1,5 +1,5 @@
 ---
-title: index
+title: Popups
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,7 @@ tags:
  - WWT
 ---
 
-# index
+!!! info "Delad modul"
+    Dessa sidor är en del av [WideQuick Modular Framework-referensen](/mod/reference/Popup/). Dokumentationen nedan är den kanoniska versionen som underhålls i MOD.
 
-Översättning kommer
+--8<-- "mod/reference/Popup/index.md:body"

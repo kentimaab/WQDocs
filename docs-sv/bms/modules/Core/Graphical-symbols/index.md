@@ -1,5 +1,5 @@
 ---
-title: index
+title: Grafiska symboler
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,7 @@ tags:
  - BMS
 ---
 
-# index
+!!! info "Delad modul"
+    Den här modulen ingår i [WideQuick Modular Framework](/mod/modules/Core/Graphical-symbols/). Dokumentationen nedan är den kanoniska versionen som underhålls i MOD.
 
-Översättning kommer
+--8<-- "mod/modules/Core/Graphical-symbols/index.md:body"

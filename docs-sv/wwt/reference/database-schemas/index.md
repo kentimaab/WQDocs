@@ -1,5 +1,5 @@
 ---
-title: index
+title: Databasscheman
 product: wwt
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/reference/database-schemas/index.md:body"

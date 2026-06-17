@@ -1,5 +1,5 @@
 ---
-title: index
+title: Databasscheman
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/reference/database-schemas/index.md:body"

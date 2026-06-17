@@ -1,5 +1,5 @@
 ---
-title: tag-structure
+title: Taggstruktur
 product: wwt
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# tag-structure
-
-Översättning kommer
+--8<-- "mod/reference/tag-structure.md:body"

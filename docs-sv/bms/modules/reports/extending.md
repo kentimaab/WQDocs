@@ -1,5 +1,5 @@
 ---
-title: extending
+title: Rapporter - Utöka
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# extending
-
-Översättning kommer
+--8<-- "mod/modules/reports/extending.md:body"

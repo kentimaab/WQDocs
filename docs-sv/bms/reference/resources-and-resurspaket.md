@@ -1,5 +1,5 @@
 ---
-title: resources-and-resurspaket
+title: Resurser
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# resources-and-resurspaket
-
-Översättning kommer
+--8<-- "mod/reference/resources-and-resurspaket.md:body"

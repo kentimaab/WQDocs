@@ -1,5 +1,5 @@
 ---
-title: configuring
+title: Navigation - Konfigurering
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# configuring
-
-Översättning kommer
+--8<-- "mod/modules/Core/Navigation/configuring.md:body"

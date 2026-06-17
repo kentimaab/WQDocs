@@ -1,5 +1,5 @@
 ---
-title: index
+title: Skapa ett anpassat popup-fönster
 product: wwt
 page_type: guide
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/guides/create-a-popup.md:body"

@@ -1,5 +1,5 @@
 ---
-title: index
+title: Skapa objekt i Runtime
 product: bms
 page_type: guide
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/guides/create-an-object.md:body"

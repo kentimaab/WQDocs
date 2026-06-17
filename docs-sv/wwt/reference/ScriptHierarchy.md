@@ -1,5 +1,5 @@
 ---
-title: ScriptHierarchy
+title: Skriptberoenden
 product: wwt
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# ScriptHierarchy
-
-Översättning kommer
+--8<-- "mod/reference/ScriptHierarchy.md:body"

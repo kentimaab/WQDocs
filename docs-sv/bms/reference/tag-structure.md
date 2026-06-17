@@ -1,5 +1,5 @@
 ---
-title: tag-structure
+title: Taggstruktur
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# tag-structure
-
-Översättning kommer
+--8<-- "mod/reference/tag-structure.md:body"

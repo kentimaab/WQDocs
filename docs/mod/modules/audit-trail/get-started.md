@@ -1,6 +1,6 @@
 ---
-title: Trace Log - Get Started
-description: Get up and running with the Trace Log (Audit Trail) module.
+title: Audit Trail - Get Started
+description: Get up and running with the Audit Trail module.
 product: mod
 page_type: getstarted
 doc_id: DOC-M19
@@ -13,21 +13,21 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Trace Log - Get Started
+# Audit Trail - Get Started
 ???+ info "Requirements"
-    The following scripts are required to use Trace Log and all
-    related functionality covered in the Trace Log guides:
+    The following scripts are required to use Audit Trail and all
+    related functionality covered in the Audit Trail guides:
     
     * `scAuditTrail`
     * `scAlert`
 
-The Trace Log records changes to selected DataStore variables and maintenance tasks. It is available under **History → Logs → Trace log**.
+The Audit Trail records changes to selected DataStore variables and maintenance tasks. It is available under **History → Logs → Audit Trail**.
 
 ## Viewing the Log { #viewing-the-log }
 
-Navigate to **History → Logs → Trace log → Trace log**.
+Navigate to **History → Logs → Audit trail → Audit trail**.
 
-![Trace log view](/Images/Audit_Trail/audit-trail-log.png){align=center}
+![Audit trail view](/Images/Audit_Trail/audit-trail-log.png){align=center}
 
 The log shows all recorded changes with the following columns:
 
@@ -43,10 +43,10 @@ Use the **Filter** panel on the left to narrow down the log:
 * **User** — filter by a specific user.
 * **Number of rows** — limit how many entries are shown.
 
-Click **Filter** to apply. Click **Clear audit log** to permanently delete all log entries.
+Click **Filter** to apply. Click **Clear audit trail** to permanently delete all log entries.
 ## Maintenance Change Log { #maintenance-change-log }
 
-Navigate to **History → Logs → Trace log → Audit Trail - Maintenance**.
+Navigate to **History → Logs → Audit trail → Audit Trail - Maintenance**.
 
 ![Audit Trail - Maintenance view](/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
 

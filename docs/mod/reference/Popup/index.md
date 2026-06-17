@@ -53,9 +53,9 @@ aliases:
 
 * [**Process**](Process.md) — displays process values and status signals for the
 object.
-* [**Manover**](Manover.md) — provides control actions such as switching between
+* [**Maneuver**](Maneuver.md) — provides control actions such as switching between
 operating modes or setting manual values.
-* [**TimeChannel**](Timechannel.md) — allows time-based schedules to be configured
+* [**Time Channel**](Time-channelmd) — allows time-based schedules to be configured
 for the object.
 * [**Control Curve**](Control curve.md) — a control curve editor for configuring
 non-linear control relationships.

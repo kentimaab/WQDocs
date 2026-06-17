@@ -1,5 +1,5 @@
 ---
-title: get-started
+title: Spårningslogg - Kom igång
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# get-started
-
-Översättning kommer
+--8<-- "mod/modules/audit-trail/get-started.md:body"

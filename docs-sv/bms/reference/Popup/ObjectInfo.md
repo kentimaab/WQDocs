@@ -1,5 +1,5 @@
 ---
-title: ObjectInfo
+title: Objektinfo
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# ObjectInfo
-
-Översättning kommer
+--8<-- "mod/reference/Popup/ObjectInfo.md:body"

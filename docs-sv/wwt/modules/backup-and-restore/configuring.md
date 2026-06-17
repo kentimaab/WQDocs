@@ -1,5 +1,5 @@
 ---
-title: configuring
+title: Säkerhetskopiering och återställning - Konfigurering
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# configuring
-
-Översättning kommer
+--8<-- "mod/modules/backup-and-restore/configuring.md:body"

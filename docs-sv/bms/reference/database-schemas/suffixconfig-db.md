@@ -1,5 +1,5 @@
 ---
-title: suffixconfig-db
+title: SuffixConfig.db
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# suffixconfig-db
-
-Översättning kommer
+--8<-- "mod/reference/database-schemas/suffixconfig-db.md:body"

@@ -1,5 +1,5 @@
 ---
-title: legacy
+title: Äldre symboler
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# legacy
-
-Översättning kommer
+--8<-- "mod/modules/Core/Graphical-symbols/legacy.md:body"

@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# Underhåll
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Maintenance.md:body"

@@ -1,5 +1,5 @@
 ---
-title: index
+title: Referens
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/reference/index.md:body"

@@ -1,5 +1,5 @@
 ---
-title: Control curve
+title: Kontrollkurva
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# Control curve
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Control curve.md:body"

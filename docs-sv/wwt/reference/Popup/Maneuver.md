@@ -1,13 +1,11 @@
 ---
 title: Manöver
-product: bms
+product: wwt
 page_type: reference
 status: draft
 last_reviewed: 2026-06-16
 tags:
- - BMS
+ - WWT
 ---
 
-# Manöver
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Maneuver.md:body"

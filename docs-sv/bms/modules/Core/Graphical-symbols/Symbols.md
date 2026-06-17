@@ -1,5 +1,5 @@
 ---
-title: Symbols
+title: Symbolbibliotek - Referens
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# Symbols
-
-Översättning kommer
+--8<-- "mod/modules/Core/Graphical-symbols/Symbols.md:body"

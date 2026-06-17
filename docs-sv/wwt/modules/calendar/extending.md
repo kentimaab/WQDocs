@@ -1,5 +1,5 @@
 ---
-title: extending
+title: Kalender - Utöka
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# extending
-
-Översättning kommer
+--8<-- "mod/modules/calendar/extending.md:body"

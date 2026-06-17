@@ -1,5 +1,5 @@
 ---
-title: Timechannel
+title: Tidkanal
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# Timechannel
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Time-channel.md:body"

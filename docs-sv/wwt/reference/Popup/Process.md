@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# Process
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Process.md:body"

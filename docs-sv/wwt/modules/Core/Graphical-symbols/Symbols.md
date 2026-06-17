@@ -1,5 +1,5 @@
 ---
-title: Symbols
+title: Symbolbibliotek - Referens
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# Symbols
-
-Översättning kommer
+--8<-- "mod/modules/Core/Graphical-symbols/Symbols.md:body"

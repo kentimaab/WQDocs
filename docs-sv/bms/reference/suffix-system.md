@@ -1,5 +1,5 @@
 ---
-title: suffix-system
+title: Suffixsystem
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# suffix-system
-
-Översättning kommer
+--8<-- "mod/reference/suffix-system.md:body"

@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# Loggbok
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Logbook.md:body"

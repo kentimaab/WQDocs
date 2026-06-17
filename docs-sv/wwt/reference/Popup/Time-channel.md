@@ -1,5 +1,5 @@
 ---
-title: Manöver
+title: Tidskanal
 product: wwt
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# Manöver
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Time-channel.md:body"

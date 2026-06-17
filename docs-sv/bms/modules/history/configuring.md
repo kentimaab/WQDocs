@@ -1,5 +1,5 @@
 ---
-title: configuring
+title: Historik - Konfigurering
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# configuring
-
-Översättning kommer
+--8<-- "mod/modules/history/configuring.md:body"

@@ -1,6 +1,6 @@
 ---
-title: Manover
-description: Overview of the Manover popup in WideQuick.
+title: Maneuver
+description: Overview of the Maneuver popup in WideQuick.
 product: mod
 page_type: reference
 status: draft
@@ -10,14 +10,14 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Manover
+# Maneuver
 
-The Manover popup provides control actions for the selected object, such as
+The Maneuver popup provides control actions for the selected object, such as
 switching between operating modes or setting manual values. It only appears in the
 Tab menu when the object has signals matching one or more of the configured suffix
-aliases for the Manover popup.
+aliases for the Maneuver popup.
 
-![Manover popup](/Images/Popups/Manover.png)
+![Maneuver popup](/Images/Popups/Maneuver.png)
 
 ## Control
 
@@ -34,7 +34,7 @@ configured as writable
 
 ## Default suffix aliases
 
-The following suffix aliases are configured for the Manover popup by default:
+The following suffix aliases are configured for the Maneuver popup by default:
 
 | Suffix alias | Suffix | Writable | Description |
 |---|---|---|---|

@@ -1,5 +1,5 @@
 ---
-title: index
+title: Inloggningskonfiguration
 product: bms
 page_type: guide
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/guides/Login Config.md:body"

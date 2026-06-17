@@ -1,5 +1,5 @@
 ---
-title: Control curve
+title: Styrkurva
 product: wwt
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# Control curve
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Control curve.md:body"

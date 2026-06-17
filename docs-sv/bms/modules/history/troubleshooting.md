@@ -1,5 +1,5 @@
 ---
-title: troubleshooting
+title: History - Felsökning
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# troubleshooting
-
-Översättning kommer
+--8<-- "mod/modules/history/troubleshooting.md:body"

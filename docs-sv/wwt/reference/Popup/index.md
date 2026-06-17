@@ -1,5 +1,5 @@
 ---
-title: index
+title: Popups
 product: wwt
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/reference/Popup/index.md:body"

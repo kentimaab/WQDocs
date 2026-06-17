@@ -1,5 +1,5 @@
 ---
-title: configuring
+title: Underhåll - Konfigurering
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# configuring
-
-Översättning kommer
+--8<-- "mod/modules/maintenance/configuring.md:body"

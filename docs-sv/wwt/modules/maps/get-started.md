@@ -1,5 +1,5 @@
 ---
-title: get-started
+title: Kartor - Kom igång
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# get-started
-
-Översättning kommer
+--8<-- "mod/modules/maps/get-started.md:body"

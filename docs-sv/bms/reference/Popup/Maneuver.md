@@ -1,13 +1,11 @@
 ---
 title: Manöver
-product: mod
+product: bms
 page_type: reference
 status: draft
 last_reviewed: 2026-06-16
 tags:
- - MOD
+ - BMS
 ---
 
-# Manöver
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Maneuver.md:body"

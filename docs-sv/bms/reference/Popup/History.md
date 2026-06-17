@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# Historik
-
-Översättning kommer
+--8<-- "mod/reference/Popup/History.md:body"

@@ -1,5 +1,5 @@
 ---
-title: configuring
+title: Rapporter - Konfigurering
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# configuring
-
-Översättning kommer
+--8<-- "mod/modules/reports/configuring.md:body"

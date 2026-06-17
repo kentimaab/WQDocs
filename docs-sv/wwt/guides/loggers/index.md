@@ -1,5 +1,5 @@
 ---
-title: index
+title: Konfigurera en loggare
 product: wwt
 page_type: guide
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# index
-
-Översättning kommer
+--8<-- "mod/guides/Loggers.md:body"

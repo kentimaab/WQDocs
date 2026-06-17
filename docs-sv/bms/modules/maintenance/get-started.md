@@ -1,5 +1,5 @@
 ---
-title: get-started
+title: Underhåll - Kom igång
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# get-started
-
-Översättning kommer
+--8<-- "mod/modules/maintenance/get-started.md:body"

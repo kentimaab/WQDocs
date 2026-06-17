@@ -125,7 +125,7 @@ nav = [
         { "Utökning" = "mod/modules/reports/extending.md" },
         { "Felsökning" = "mod/modules/reports/troubleshooting.md" },
       ]},
-      { "Spårlogg" = [
+      { "Spårningslogg" = [
         { "Översikt" = "mod/modules/audit-trail/index.md" },
         { "Kom igång" = "mod/modules/audit-trail/get-started.md" },
         { "Konfigurering" = "mod/modules/audit-trail/configuring.md" },
@@ -164,8 +164,8 @@ nav = [
         { "Loggbok" = "mod/reference/Popup/Logbook.md" },
         { "Dokument" = "mod/reference/Popup/Documents.md" },
         { "Process" = "mod/reference/Popup/Process.md" },
-        { "Manöver" = "mod/reference/Popup/Manover.md" },
-        { "Tidkanal" = "mod/reference/Popup/Timechannel.md" },
+        { "Manöver" = "mod/reference/Popup/Maneuver.md" },
+        { "Tidkanal" = "mod/reference/Popup/Time-channel.md" },
         { "Styrkurva" = "mod/reference/Popup/Control curve.md" },
       ]},
       { "Databasscheman" = [
@@ -269,7 +269,7 @@ nav = [
         { "Utökning" = "bms/modules/reports/extending.md" },
         { "Felsökning" = "bms/modules/reports/troubleshooting.md" },
       ]},
-      { "Spårlogg" = [
+      { "Spårningslogg" = [
         { "Översikt" = "bms/modules/audit-trail/index.md" },
         { "Kom igång" = "bms/modules/audit-trail/get-started.md" },
         { "Konfigurering" = "bms/modules/audit-trail/configuring.md" },
@@ -308,8 +308,8 @@ nav = [
         { "Loggbok" = "bms/reference/Popup/Logbook.md" },
         { "Dokument" = "bms/reference/Popup/Documents.md" },
         { "Process" = "bms/reference/Popup/Process.md" },
-        { "Manöver" = "bms/reference/Popup/Manover.md" },
-        { "Tidkanal" = "bms/reference/Popup/Timechannel.md" },
+        { "Manöver" = "bms/reference/Popup/Maneuver.md" },
+        { "Tidkanal" = "bms/reference/Popup/Time-channel.md" },
         { "Styrkurva" = "bms/reference/Popup/Control curve.md" },
       ]},
       { "Databasscheman" = [
@@ -413,7 +413,7 @@ nav = [
         { "Utökning" = "wwt/modules/reports/extending.md" },
         { "Felsökning" = "wwt/modules/reports/troubleshooting.md" },
       ]},
-      { "Spårlogg" = [
+      { "Spårningslogg" = [
         { "Översikt" = "wwt/modules/audit-trail/index.md" },
         { "Kom igång" = "wwt/modules/audit-trail/get-started.md" },
         { "Konfigurering" = "wwt/modules/audit-trail/configuring.md" },
@@ -452,8 +452,8 @@ nav = [
         { "Loggbok" = "wwt/reference/Popup/Logbook.md" },
         { "Dokument" = "wwt/reference/Popup/Documents.md" },
         { "Process" = "wwt/reference/Popup/Process.md" },
-        { "Manöver" = "wwt/reference/Popup/Manover.md" },
-        { "Tidkanal" = "wwt/reference/Popup/Timechannel.md" },
+        { "Manöver" = "wwt/reference/Popup/Maneuver.md" },
+        { "Tidkanal" = "wwt/reference/Popup/Time-channel.md" },
         { "Styrkurva" = "wwt/reference/Popup/Control curve.md" },
       ]},
       { "Databasscheman" = [

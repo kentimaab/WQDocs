@@ -1,5 +1,5 @@
 ---
-title: extending
+title: Historik - Utöka
 product: wwt
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# extending
-
-Översättning kommer
+--8<-- "mod/modules/history/extending.md:body"

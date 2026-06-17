@@ -1,5 +1,5 @@
 ﻿---
-description: Configure which DataStore variables are tracked by the Trace Log.
+description: Configure which DataStore variables are tracked by the Audit Trail.
 title: Audit Trail - Configuring
 tags: 
  - WWT

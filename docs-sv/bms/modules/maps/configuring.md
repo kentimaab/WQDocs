@@ -1,5 +1,5 @@
 ---
-title: configuring
+title: Kartor - Konfigurering
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# configuring
-
-Översättning kommer
+--8<-- "mod/modules/maps/configuring.md:body"

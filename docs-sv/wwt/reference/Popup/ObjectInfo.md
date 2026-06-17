@@ -1,5 +1,5 @@
 ---
-title: ObjectInfo
+title: Objektinfo
 product: wwt
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# ObjectInfo
-
-Översättning kommer
+--8<-- "mod/reference/Popup/ObjectInfo.md:body"

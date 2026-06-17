@@ -1,5 +1,5 @@
 ---
-title: Trace Log (Audit Trail)
+title: Audit Trail
 description: Track and review changes to DataStore variables and maintenance task history.
 product: mod
 page_type: concept
@@ -11,21 +11,21 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Trace Log (Audit Trail)
+# Audit Trail
 
-The Trace Log records changes to selected DataStore variables and provides a full history of changes to maintenance tasks. For tracked variables, each entry captures the old value, the new value, the variable path, the user who made the change, and a timestamp. Maintenance task changes are recorded automatically. No configuration is needed.
+The Audit Trail records changes to selected DataStore variables and provides a full history of changes to maintenance tasks. For tracked variables, each entry captures the old value, the new value, the variable path, the user who made the change, and a timestamp. Maintenance task changes are recorded automatically. No configuration is needed.
 
-The Trace Log is available under **History → Logs → Trace log**.
+The Audit Trail is available under **History → Logs → Audit Trail**.
 
 ## Contents { #contents }
 
 ### [Get started](get-started.md) { #get-started }
-* [**Viewing the Log**](get-started.md#viewing-the-log) — Filtering and reading the trace log.
+* [**Viewing the Log**](get-started.md#viewing-the-log) — Filtering and reading the audit trail.
 * [**Maintenance Change Log**](get-started.md#maintenance-change-log) — Automatic history of maintenance task changes.
 
 ---
 
 ### [Configuring](configuring.md) { #configuring }
-* [**Variables to Track**](configuring.md#configuring-variables-to-track) — Adding and removing variables from the trace log.
+* [**Variables to Track**](configuring.md#configuring-variables-to-track) — Adding and removing variables from the audit trail.
 
 <!-- --8<-- [end:body] -->

@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# Dokument
-
-Översättning kommer
+--8<-- "mod/reference/Popup/Documents.md:body"

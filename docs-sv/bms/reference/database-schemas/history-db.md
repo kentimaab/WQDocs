@@ -1,5 +1,5 @@
 ---
-title: history-db
+title: History.db
 product: bms
 page_type: reference
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# history-db
-
-Översättning kommer
+--8<-- "mod/reference/database-schemas/history-db.md:body"

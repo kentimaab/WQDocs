@@ -8,6 +8,4 @@ tags:
  - WWT
 ---
 
-# Workview-animationer
-
-Översättning kommer
+--8<-- "mod/guides/workview-animations.md:body"

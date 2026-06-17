@@ -1,5 +1,5 @@
 ---
-title: get-started
+title: Navigation - Kom igång
 product: bms
 page_type: module
 status: draft
@@ -8,6 +8,4 @@ tags:
  - BMS
 ---
 
-# get-started
-
-Översättning kommer
+--8<-- "mod/modules/Core/Navigation/get-started.md:body"
