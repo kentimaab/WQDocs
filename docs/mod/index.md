@@ -28,23 +28,26 @@ tags:
 
 <div class="lp-quickstart" markdown>
 
--   **Install & launch**
+-   **The concept**
 
-    Install WideQuick, open the Modular Framework concept app, and verify it runs end-to-end.
-
-    [Walkthrough →](get-started/download.md)
-
--   **First workview**
-
-    Build a workview, add a graphical object, and bind it to a Data Store variable.
-
-    [Build it →](get-started/Your%20First%20Tag.md)
-
--   **The architecture**
-
-    See how modules, solutions, templates, and the runtime fit together.
+    How modules, concept applications, and the runtime fit together.
 
     [Read more →](concepts/)
+
+-   **Download MOD**
+
+    Where to get the template and demo projects, and how to open them in
+    **WideQuick Designer®**.
+
+    [Download →](get-started/download.md)
+
+-   **Your first tag**
+
+    Wire a tag end-to-end and verify it on a Process popup.
+
+    [Create it →](get-started/Your%20First%20Tag.md)
+
+
 
 </div>
 
@@ -54,11 +57,6 @@ tags:
 
 <div class="lp-browse grid cards" markdown>
 
--   :material-lightbulb-outline: **Concepts**
-
-    Framework architecture, solutions, and how MOD relates to BMS and WWT.
-
-    [Concepts →](concepts/)
 
 -   :material-puzzle-outline: **Modules**
 

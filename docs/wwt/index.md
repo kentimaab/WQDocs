@@ -23,28 +23,27 @@ tags:
 </div>
 
 <div class="lp-section-head">
-  <span class="lp-section-num">§ 01</span>
   <span class="lp-section-label">Get started</span>
 </div>
 
 <div class="lp-quickstart" markdown>
 
--   **Install WWT**
+-   **Download WWT**
 
-    Set up the WWT concept app and verify hardware compatibility.
+    Where to get the template and demo projects, and how to open them in
+    **WideQuick Designer®**.
 
-    [Walkthrough →](get-started/download.md)
+    [Download →](get-started/download.md)
 
--   **Connect a station**
+-   **Your first tag**
 
-    Bring in your first signal from a pumping station, basin, or treatment line.
+    Wire a tag end-to-end and verify it on a Process popup.
 
-    [Your first tag →](get-started/Your%20First%20Tag.md)
+    [Create it →](get-started/Your%20First%20Tag.md)
 
 </div>
 
 <div class="lp-section-head">
-  <span class="lp-section-num">§ 02</span>
   <span class="lp-section-label">Browse the product</span>
 </div>
 
