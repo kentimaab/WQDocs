@@ -5,6 +5,8 @@ product: mod
 page_type: howto
 status: draft
 last_reviewed: 2026-05-26
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 # Create Object

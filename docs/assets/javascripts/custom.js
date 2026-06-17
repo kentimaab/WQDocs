@@ -373,10 +373,39 @@ const themeFileEl = document.getElementById('themeFile');
 if (themeFileEl) themeFileEl.addEventListener('change', function () {
     const fileInput = document.getElementById('themeFile');
     const fileNameDisplay = document.getElementById('themeFileNameDisplay');
-    
+
     if (fileInput.files.length > 0) {
         fileNameDisplay.textContent = `Selected file: ${fileInput.files[0].name}`;
     } else {
         fileNameDisplay.textContent = ''; // Clear the text if no file is selected
     }
 });
+
+// Convert specific nav section headers into collapsible items, starting collapsed
+(function () {
+    const COLLAPSED = ['Guides', 'Reference'];
+
+    function collapseNavSections() {
+        document.querySelectorAll('.md-nav__item--section').forEach(function (item) {
+            const ellipsis = item.querySelector('.md-nav__link .md-ellipsis');
+            if (!ellipsis || !COLLAPSED.includes(ellipsis.textContent.trim())) return;
+
+            item.classList.remove('md-nav__item--section');
+            if (!item.classList.contains('md-nav__item--nested')) {
+                item.classList.add('md-nav__item--nested');
+            }
+            item.classList.add('nav-item--collapsible-section');
+
+            if (item.querySelector('.md-nav__link--active')) return;
+
+            const toggle = item.querySelector(':scope > input.md-nav__toggle');
+            if (toggle) toggle.checked = false;
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', collapseNavSections);
+
+    if (typeof document$ !== 'undefined') {
+        document$.subscribe(collapseNavSections);
+    }
+})();

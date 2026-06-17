@@ -8,6 +8,8 @@ size: M
 priority: p0
 status: draft
 last_reviewed: 2026-05-26
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
@@ -15,7 +17,7 @@ last_reviewed: 2026-05-26
 
 The Maintenance module lets users schedule and track maintenance tasks for objects in the system. Tasks can be created manually for any object or generated automatically on a recurring schedule. Templates speed up the creation of recurring task types by predefining the type, interval and description.
 
-There are two ways to access maintenance tasks. The **Maint. - List** view in the main menu shows all tasks across all objects in the project. The **Maintenance** tab in the object popup shows only the tasks for that specific object.
+There are two ways to access maintenance tasks. The **Maint. - List** view in the main menu shows all tasks across all objects in the project. The [**Maintenance**](../../reference/Popup/Maintenance.md) tab in the object popup shows only the tasks for that specific object.
 
 ## Contents { #contents }
 
@@ -41,6 +43,6 @@ There are two ways to access maintenance tasks. The **Maint. - List** view in th
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/maintenance.md) { #troubleshooting }
-* [**Common Issues**](../../Troubleshooting/maintenance.md) — Common issues and how to fix them.
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
+* [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

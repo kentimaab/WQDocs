@@ -1,5 +1,5 @@
 ---
-title: Maps & Indicators — Get started
+title: Maps & Indicators - Get started
 description: Get up and running with the Maps & Indicators module.
 product: mod
 page_type: getstarted
@@ -8,13 +8,15 @@ status: draft
 last_reviewed: 2026-05-19
 scripts:
   - scMap
-object_libraries: 
-    -Map Indicators
-    -WEATHER 
+object_libraries:
+  - Map Indicators
+  - WEATHER
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Maps & Indicators — Get started
+# Maps & Indicators - Get started
 ???+ info "Requirements"
     The following scripts are required to use Maps & Indicators and all
     related functionality covered in the Maps & Indicators guides:
@@ -125,10 +127,16 @@ are set in the visibility dynamics script described
 [above](#setting-up-a-map-view-object).
 
 The widget also needs to be pointed to its data source, which is the `weather`
-DataStore variable by default. This is configured in the properties tab of the
+Data Store variable by default. This is configured in the properties tab of the
 **Map View**:
 
 ![Weather Widget](/Images/Map_Indicators/WeatherWidgetSettings.png)
 
 Once configured, the Weather Widget will display current weather information for the
 centre of the visible map area, updating automatically as the user navigates the map.
+
+## Next Steps { #next-steps }
+
+* [Configuring](configuring.md) — pin status indicators, cluster pins, lines, and alarm integration
+* [Extending](extending.md) — creating custom map indicators
+<!-- --8<-- [end:body] -->

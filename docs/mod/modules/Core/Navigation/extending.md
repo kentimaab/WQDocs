@@ -1,15 +1,17 @@
 ---
-title: Navigation — Extending
+title: Navigation - Extending
 description: Extend the Navigation module with scripts and hooks.
 product: mod
 page_type: howto
 doc_id: DOC-M14
 status: draft
 last_reviewed: 2026-05-21
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Navigation — Extending
+# Navigation - Extending
 
 This section covers how to extend the Navigation module with custom functionality.
 This includes creating shortcuts to specific objects using GoTo and adding custom

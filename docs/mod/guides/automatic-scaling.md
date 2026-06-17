@@ -5,16 +5,25 @@ product: mod
 page_type: howto
 status: draft
 last_reviewed: 2026-05-27
+scripts:
+  - scWM
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 # Automatic Scaling
+???+ info "Requirements"
+    The following scripts are required to use Automatic Scaling and all
+    related functionality covered in the Automatic Scaling guides:
+    
+    * `scWM`
+    * `scAlert`
+
 
 WideQuick MOD automatically scales the UI to fit any screen size or browser window. This means a project can run on different displays without requiring layout changes.
 
 The `scWM` script handles all scaling. It monitors the main window every 500 ms and calculates a scaling factor based on a reference resolution of 1920×1080. The current factor is always available as `scWM.scalingFactor`.
 
-!!! note "Requirements"
-    The `scWM` script must be running for automatic scaling to work.
 
 ## Main View Scaling { #main-view-scaling }
 
@@ -22,9 +31,9 @@ The main view scales automatically — no configuration is needed. `scWM` contin
 
 ## Popup Scaling { #popup-scaling }
 
-Popups do not scale automatically. To scale a popup proportionally to the main view and place it on screen, call `scWM.scaleAndPlacePopup()` in the popup workview's **onLoad** script. To find the onLoad script, right-click the workview in the project tree in **WideQuick Designer®**, select **Properties**, open the **Action** tab and double-click **load**.
+Popups do not scale automatically. To scale a popup proportionally to the main view and place it on screen, call `scWM.scaleAndPlacePopup()` in the popup Workview's **onLoad** script. To find the onLoad script, right-click the Workview in the project tree in **WideQuick Designer®**, select **Properties**, open the **Action** tab and double-click **load**.
 
-```javascript title="Popup workview — onLoad"
+```javascript title="Popup Workview — onLoad"
 scWM.scaleAndPlacePopup(this);
 ```
 
@@ -46,21 +55,21 @@ scWM.scaleAndPlacePopup(this, "bottom");
 
 ### Enabling Pannable/Zoomable { #enabling-pannablezoomable }
 
-Popup scaling requires **Pannable/Zoomable** to be enabled on the popup workview. In **WideQuick Designer®**, right-click the workview in the project tree and select **Properties**. Open the **Layout** tab and check **Pannable/Zoomable**.
+Popup scaling requires **Pannable/Zoomable** to be enabled on the popup Workview. In **WideQuick Designer®**, right-click the Workview in the project tree and select **Properties**. Open the **Layout** tab and check **Pannable/Zoomable**.
 
-![Pannable/Zoomable setting in workview properties](/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
+![Pannable/Zoomable setting in Workview properties](/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
 
 ## Placement Without Scaling { #placement-without-scaling }
 
 For smaller popups that do not need to resize, use `scWM.placePopup()` to center the popup without scaling it:
 
-```javascript title="Popup workview — onLoad"
+```javascript title="Popup Workview — onLoad"
 scWM.placePopup(this);
 ```
 
 ## Reloading a View { #reloading-a-view }
 
-To force a workview to re-initialize, use `scWM.reloadPage()`:
+To force a Workview to re-initialize, use `scWM.reloadPage()`:
 
 ```javascript title="Button or script"
 scWM.reloadPage("ViewName");

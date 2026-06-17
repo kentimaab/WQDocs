@@ -1,5 +1,8 @@
----
-title: Calendar — Extending
+﻿---
+description: Extend the Calendar module and troubleshoot common issues.
+title: Calendar - Extending
+tags: 
+ - WWT
 ---
 
 --8<-- "mod/modules/calendar/extending.md:body"

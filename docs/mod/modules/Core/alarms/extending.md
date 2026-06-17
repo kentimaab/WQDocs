@@ -1,15 +1,17 @@
 ---
-title: Alarms — Extending
+title: Alarms - Extending
 description: Configure email and SMS channels for alarm notifications.
 product: mod
 page_type: extending
 doc_id: DOC-M9
 status: draft
 last_reviewed: 2026-05-29
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Alarms — Extending
+# Alarms - Extending
 
 ## Email notifications { #email-notifications }
 

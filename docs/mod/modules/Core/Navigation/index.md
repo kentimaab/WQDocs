@@ -1,6 +1,6 @@
 ---
 title: Navigation
-description: Floorplan views and map indicators — configuration and usage.
+description: Navigation table of content
 product: mod
 page_type: concept
 doc_id: DOC-M14
@@ -8,10 +8,12 @@ size: M
 priority: p0
 status: draft
 last_reviewed: 2026-05-19
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Navigation(navigering)
+# Navigation
 
 WideQuick Modular Framework includes a built-in navigation module that automatically 
 builds the menu structure based on the folder structure in **WideQuick Designer®**. 

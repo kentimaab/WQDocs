@@ -1,17 +1,19 @@
 ﻿---
-title: Dashboards — Extending
+title: Dashboards - Extending
 description: Extend and customise the Dashboards module beyond the defaults.
 product: mod
 page_type: extending
 doc_id: DOC-M14
 status: draft
 last_reviewed: 2026-05-26
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Dashboards — Extending
+# Dashboards - Extending
 
-## Custom Widgets — Building New Widgets from Existing Templates { #custom-widgets-building-new-widgets-from-existing-templates }
+## Custom Widgets - Building New Widgets from Existing Templates { #custom-widgets-building-new-widgets-from-existing-templates }
 
 To base a new widget on an existing one, drag it from the `Dashboard Widgets` library onto a workview in **WideQuick Designer®**. Right-click the placed widget and select **Disconnect from template**. The widget can now be edited freely. Adjust the layout, add or remove objects, and modify the script logic.
 
@@ -41,7 +43,7 @@ To understand how a widget handles signals, properties or layout, double-click i
 
 ---
 
-## Role-Based Dashboards — Controlling Access and Default Views { #role-based-dashboards-controlling-access-and-default-views }
+## Role-Based Dashboards - Controlling Access and Default Views { #role-based-dashboards-controlling-access-and-default-views }
 
 ### Setting View Privileges { #setting-view-privileges }
 

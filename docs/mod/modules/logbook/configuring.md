@@ -1,15 +1,17 @@
 ﻿---
-title: Logbook — Configuring
+title: Logbook - Configuring
 description: Configure topics, contexts and access patterns for the Logbook module.
 product: mod
 page_type: howto
 doc_id: DOC-M15
 status: draft
 last_reviewed: 2026-05-26
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Logbook — Configuring
+# Logbook - Configuring
 
 ## Topics { #topics }
 
@@ -47,11 +49,15 @@ The full logbook under **Documents & Logbook → Logbook** shows all entries fro
 
 ### Object Popup { #object-popup }
 
-Every object in the project has a **Logbook** tab in its popup. Opening this tab shows only entries whose topic matches the object's tag path. New entries created from here are automatically assigned the correct topic.
+Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md) tab in its popup. Opening this tab shows only entries whose topic matches the object's tag path. New entries created from here are automatically assigned the correct topic.
 
 ![Logbook tab in the object popup](/Images/Logbook/object-popup-logbook.png){align=center}
 
 ### View-Scoped { #view-scoped }
 
 The **SpeedDial** menu on process views includes a button that opens a logbook scoped to the current view. Only entries matching that view's topic are shown, and new entries created from here are automatically assigned the correct topic. See [Extending](extending.md) for setup details.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — adding a logbook to a custom view or button
 <!-- --8<-- [end:body] -->

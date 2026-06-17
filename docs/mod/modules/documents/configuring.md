@@ -1,19 +1,21 @@
 ---
-title: Documents — Configuring
+title: Documents - Configuring
 description: Configure the Documents module — link documents to objects and sync with the filesystem.
 product: mod
 page_type: howto
 doc_id: DOC-M16
 status: draft
 last_reviewed: 2026-05-27
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Documents — Configuring
+# Documents - Configuring
 
 ## Linking documents to objects { #linking-documents-to-objects }
 
-Documents can be connected to specific objects in the project. When a document is linked to an object, it becomes accessible in the **Documents** tab of that object's popup.
+Documents can be connected to specific objects in the project. When a document is linked to an object, it becomes accessible in the [**Documents**](../../reference/Popup/Documents.md) tab of that object's popup.
 
 Navigate to **Documents → Object Refs** to manage links.
 
@@ -30,7 +32,7 @@ A document can be linked to multiple objects. The same object can have multiple 
 
 ## Object popup { #object-popup }
 
-Every object in the project has a **Documents** tab available through its popup. Open the popup by clicking on an object and selecting the **Documents** tab. This shows all documents linked to that specific object. Selecting a document and clicking **Open** opens a preview directly in the popup.
+Every object in the project has a [**Documents**](../../reference/Popup/Documents.md) tab available through its popup. Open the popup by clicking on an object and selecting the **Documents** tab. This shows all documents linked to that specific object. Selecting a document and clicking **Open** opens a preview directly in the popup.
 
 ![Documents tab in the object popup](/Images/Documents/documents-object-popup.png){align=center}
 
@@ -45,4 +47,8 @@ Click **Sync with local files on server** to scan the folder and update the data
 * Online resources are never removed by the sync.
 
 The sync runs automatically when `scDoc` starts.
+
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — privilege reference
 <!-- --8<-- [end:body] -->

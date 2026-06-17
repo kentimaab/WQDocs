@@ -1,20 +1,25 @@
 ---
-title: Reports — Get started
+title: Reports - Get started
 description: Get up and running with the Reports module.
 product: mod
 page_type: getstarted
 doc_id: DOC-M17
 status: draft
 last_reviewed: 2026-05-21
+scripts:
+  - scReportScheduler
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
-# Reports — Get started
-???+ Info "Requirements"
-    The following scripts are required to use Reports, Report Scheduler and all 
+
+# Reports - Get started
+???+ info "Requirements"
+    The following scripts are required to use Reports and all
     related functionality covered in the Reports guides:
     
-    * `scReports`
     * `scReportScheduler`
+    * `scReports`
     * `scAlert`
 
 This section covers the basics of the Report module, including how to add a new 
@@ -44,10 +49,6 @@ destination.
 **Local System Only**.
 * **Output name** — Customize the report file name using the **Output Name Builder**. 
 A preview of the name is shown in the **Name Preview** field.
-
-!!! note "Importing a Report template"
-    When importing a report template, make sure the file is in `.xlsx` format.
-
 <figure markdown="span">
   ![Create new report template](/Images/Reports/Create_new_report_template.gif)
   <figcaption>Creating a new report template from scratch.</figcaption>
@@ -71,7 +72,7 @@ indicates the generation number.
 * **Timestamp** — The date and time at which the recording ends.
 
 From this page, reports can be created, removed, or sent as email attachments. Sending 
-reports by email requires an SMTP server to be configured, which is explained [here]().
+reports by email requires an SMTP server to be configured, which is explained [here](../Core/alarms/extending.md#configuring-smtp-in-widequick-designer).
 
 <figure markdown="span">
   ![Report](/Images/Reports/Report.png)
@@ -202,11 +203,14 @@ Below are descriptions of the options on the first and third pages:
     * **Subject line** — The subject line of the email in which the report is sent.
     * **Recipient** — The recipients of the email. Accepts both email addresses 
     and aliases.
-    * **Alias** — Displays available aliases. Select one and click **Lägg till** 
+    * **Alias** — Displays available aliases. Select one and click **Add** 
     to add it as a recipient.
     * **List of Recipients** — Shows the full list of recipients, indicating whether 
     each entry is an email address or an alias.
     * **Report file format** — The format in which the report is sent: PDF or Excel.
 
+## Next Steps { #next-steps }
 
+* [Configuring](configuring.md) — built-in report templates and report history
+* [Extending](extending.md) — creating custom templates and report controllers
 <!-- --8<-- [end:body] -->

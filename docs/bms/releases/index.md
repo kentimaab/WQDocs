@@ -1,12 +1,14 @@
 ---
-title: Releases — BMS
+title: Releases - BMS
 description: Release notes for WideQuick BMS.
 product: bms
 page_type: release
 last_reviewed: 2026-06-03
+tags: 
+ - BMS
 ---
 
-# Releases — BMS
+# Releases - BMS
 
 Release notes for WideQuick BMS. The newest release is listed first and expanded;
 older releases are collapsed, click a release to expand it. Each release is built on
@@ -26,9 +28,9 @@ This is the first release of WideQuick BMS in the Modular Framework family — t
 
 | Feature | Description |
 | --- | --- |
-| **Multi-language support** | Views, scripts, the object library, dynamics and datastore are now fully translatable, with a built-in language selector and flag icons for switching language at runtime. |
+| **Multi-language support** | Views, scripts, the object library, dynamics and Data Store are now fully translatable, with a built-in language selector and flag icons for switching language at runtime. |
 | **Tooltip system** | A new tooltip mechanism (`scToolTip`) adds contextual help boxes throughout the system, including history and map objects. |
-| **Rewritten workview animation** | The animation system has been rebuilt from the ground up to be more versatile and easier to configure, with a matching settings view and helpers for reading user-defined theme colours. |
+| **Rewritten Workview animation** | The animation system has been rebuilt from the ground up to be more versatile and easier to configure, with a matching settings view and helpers for reading user-defined theme colours. |
 | **ObjectFinder & goTo** | Every object is automatically indexed with its view path and name, and the new `goTo` function lets you jump straight to any object from anywhere in the project. |
 | **Configurable runtime behaviour** | Value-display refresh rate is now adjustable at runtime, and the chosen theme (light/dark) is remembered and restored on the next startup. |
 | **Automatic data retention** | Loggers and history now prune data older than a set age (e.g. two years) automatically, keeping databases from growing unbounded over time. |
@@ -41,8 +43,8 @@ This is the first release of WideQuick BMS in the Modular Framework family — t
 | --- | --- |
 | **Object library** | A redesigned set of process symbols (valves, sensors, dampers and more) with a cleaner, modernised look, plus the legacy BMS symbols (including air-handling/"luftbehandling") integrated to work in the framework while keeping their familiar appearance. Objects were standardised across font size, decimals, captions and descriptions, and digital value displays were added. These are the symbols that legacy BMS 8.0 views repaint to on import. |
 | **Time channels** | Time-channel functionality ported from the legacy BMS and integrated into the common popup system. Time-channel configurations can be saved and applied, with a user-assigned name and description, and a privilege check on the time-channel popout. |
-| **Control curves** | Control curve (styrkurva) objects with configurable X/Y setpoints, value clamping and axis locking, plus a time-based control curve (styrkurvatid). Curve signals have their own privileges and the views scale correctly across resolutions. |
-| **Manual operation (Manöver)** | A manual-operation popup for commanding objects, including changing the hand icon and the shutdown option, with captioned special buttons. |
+| **Control curves** | Control curve objects with configurable X/Y setpoints, value clamping and axis locking, plus a time-based control curve. Curve signals have their own privileges and the views scale correctly across resolutions. |
+| **Manual operation** | A manual-operation popup for commanding objects, including changing the hand icon and the shutdown option, with captioned special buttons. |
 | **Dashboard** | A new configurable dashboard built from a library of reusable widget objects (`Dashboard Widgets.klib`), with ready-made BMS dashboards and a dynamic alarm graph. Widgets work on desktop, web and remote, the start dashboard shown after login is configurable, and example dashboards are included to build from. |
 | **Logbook** | A new module for creating, browsing and filtering timestamped log entries across the project. Filter by topic, date range and user; open it pre-filtered to a specific topic; and embed the `LogBookEntryButton` template in any view. |
 | **Calendar** | A new calendar module with month navigation, mini calendar and an upcoming-events sidebar. Maintenance tasks appear as calendar events with status-based colours and automatic reminders ahead of scheduled work. |
@@ -60,7 +62,7 @@ This is the first release of WideQuick BMS in the Modular Framework family — t
 | **Navigation** | "Loggar" moved into "Rapporter & loggar", "Underhåll & loggar" renamed to "Underhåll", individual menu items can be hidden at runtime, and a re-show button was added for hidden sub-navigation. |
 | **Login & users** | Login is now possible via a combo box instead of typing a username, and the login requirement can be disabled from the settings view. |
 | **Users & permissions** | New demo users were added, each with a sensible role-based privilege level, and the privilege system was reworked: privileges were renamed from the old scheme to a new one, dedicated privileges were added for maintenance and logbook actions, and users now get a clear notification when they lack the privilege for an action. The `Servicetekniker` role was renamed to `service`. |
-| **Process value object** | Value updates are now driven by a datastore listener instead of dynamics, giving lighter rendering for stale or slow-changing variables since the object only redraws when the value actually changes. |
+| **Process value object** | Value updates are now driven by a Data Store listener instead of dynamics, giving lighter rendering for stale or slow-changing variables since the object only redraws when the value actually changes. |
 | **Alarm terminology** | Alarm wording was standardised: "Allvarlighetsgrad" is now "Larmklass" and "Bekräfta/Bekräftbara" is now "Kvittera/Kvitterbara" throughout the views and translations. |
 | **Signal simulation** | Demo Modbus signals were converted to OPC UA, with a simulator (`scSimMB`) generating realistic values for the new OPC UA signals. |
 | **Settings** | Settings unavailable on remote/web clients are now clearly disabled. |

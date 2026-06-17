@@ -1,5 +1,5 @@
 ---
-title: Dashboards — Get started
+title: Dashboards - Get started
 description: Get up and running with the Dashboards module.
 product: mod
 page_type: getstarted
@@ -11,10 +11,12 @@ scripts:
   - scAlarm
 object_libraries: 
     - Dashboard Widgets
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Dashboards — Get started
+# Dashboards - Get started
 ???+ info "Requirements"
     The following scripts are required to use Dashboards and all
     related functionality covered in the Dashboards guides:
@@ -42,7 +44,7 @@ New Dashboards can be created either from the template or from scratch depending
 Duplicate the dashboard template in **WideQuick Designer®** by right clicking the template in the project tree and move it to the correct folder in the project structure.
 
 ![Setting up a dashboard](/Images/Dashboard/SetupDashboard.gif){align=center}
-## Widgets — Pre-built Components for the Dashboard { #widgets-pre-built-components-for-the-dashboard }
+## Widgets - Pre-built Components for the Dashboard { #widgets-pre-built-components-for-the-dashboard }
 
 Dashboards are built using pre-built widgets from the `Dashboard Widgets` library.
 Each widget is designed for a specific type of data and can be placed and
@@ -50,7 +52,7 @@ configured directly without any custom development. Most widgets also exist in d
 
 ![Widget](/Images/Dashboard/Widget.png){align=center}
 
-## Grid Layout — Positioning Widgets in the Editor { #grid-layout-positioning-widgets-in-the-editor }
+## Grid Layout - Positioning Widgets in the Editor { #grid-layout-positioning-widgets-in-the-editor }
 
 The dashboards in **WideQuick Designer®** uses a 4×4 grid to help with widget placement. Each grid
 position is marked by an ellipse that acts as a placement guide. These ellipses

@@ -1,5 +1,5 @@
 ---
-title: History — Get started
+title: History - Get started
 description: Get up and running with the History module.
 product: mod
 page_type: getstarted
@@ -8,10 +8,12 @@ status: draft
 last_reviewed: 2026-05-27
 scripts:
   - scHistory
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# History — Get started
+# History - Get started
 ???+ info "Requirements"
     The following scripts are required to use History and all
     related functionality covered in the History guides:
@@ -22,8 +24,7 @@ scripts:
     * `scAlert`
     * `scQuickSort`
 
-
-The History module displays logged signal data as interactive line charts. There are three ways to access it: the project-wide **History** view from the main menu, a view-specific **History** popup opened from a workview, and the **History** tab in any object popup.
+The History module displays logged signal data as interactive line charts. There are three ways to access it: the project-wide **History** view from the main menu, a view-specific **History** popup opened from a workview, and the [**History**](../../reference/Popup/History.md) tab in any object popup.
 
 ## The History View { #the-history-view }
 
@@ -34,7 +35,7 @@ The project-wide **History** view is available from the main menu. It shows sign
 The view has a chart at the top and three panels at the bottom:
 
 * **Signals** — a tree of all logged signals in the project, grouped by system. Signals are selected here and applied to the chart.
-* **Track signal** — options for tracking a live signal on the chart. Also contains the **Saved signals** section for saving and loading named signal groups.
+* **Track signal** — options for tracking a live signal on the chart. Also contains the **Saved groups** section for saving and loading named signal groups.
 * **Settings** — toggles for legend, ruler and Y-axis scaling, plus time interval and update interval controls.
 
 The **Show variables not being logged** button in the top-right corner opens a separate window that shows all signals not connected to a logger. 
@@ -78,12 +79,26 @@ The **SpeedDial** menu on process views includes a button that opens a view-spec
 
 ![View-specific history popup](/Images/History/history-view-specific.png){align=center}
 
-Signal selection, time controls, settings and saved signal groups work the same way. Saved signal groups in this popup are stored per view and are separate from project-wide saved groups.
+Signal selection, time controls, settings and saved signal groups work the same way. Saved signal groups in this popup are stored per view and are separate from project-wide saved groups. You can also import saved groups from other views using **Import groups from views** — see [Importing Groups from Other Views](configuring.md#importing-groups-from-other-views).
+
+Since the view-specific History only shows signals belonging to the current view, you can bring in signals from other views using **Import signals**.
+
+![Import signals dialog with Available on the left and Selected on the right](/Images/History/history-import-signals.png){align=center}
+
+**To import signals from other views:**
+
+1. Click **Import signals**. A dialog opens showing all signals from all other views, organised by system and object.
+2. Expand the tree in the **Available** panel to find the signal you want.
+3. Select a signal and click **→** to move it to the **Selected** panel.
+4. Repeat for each signal you want to add.
+5. Click **Import and close**. The signals are added to the signal list and can be selected and applied to the chart.
+
+To remove a signal from your selection before importing, select it in the **Selected** panel and click **←**. Click **Clear added** to empty the right panel entirely.
 
 
 ## Object Popup (History Tab) { #object-popup-history-tab }
 
-Every object in the project has a **History** tab in its popup. Opening the tab shows the logged signals for that object in a chart.
+Every object in the project has a [**History**](../../reference/Popup/History.md) tab in its popup. Opening the tab shows the logged signals for that object in a chart.
 
 ![History tab in an object popup](/Images/History/history-object-popup.png){align=center}
 

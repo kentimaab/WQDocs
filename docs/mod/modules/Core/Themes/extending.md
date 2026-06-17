@@ -1,24 +1,26 @@
 ---
-title: Themes — Extending
+title: Themes - Extending
 description: Create a custom theme that follows a graphical profile using Material Theme Builder.
 product: mod
 page_type: extending
 status: draft
 last_reviewed: 2026-05-29
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Themes — Extending
+# Themes - Extending
 
 ## Creating a custom theme { #creating-a-custom-theme }
 
 A complete theme can be generated from a single brand color. Feed that color into the theme builder and all supporting colors, light and dark variants, elevation surfaces, and contrast levels are derived automatically — the result is a theme that fits the customer's or organization's graphical profile and works well across all states.
 
-### Step 1 — Generate the theme { #step-1-generate-the-theme }
+### Step 1 - Generate the theme { #step-1-generate-the-theme }
 
 Open the [Theme Builder](../../../../Tools/theme-builder.md). The embedded **Material Theme Builder** allows setting a source color (or uploading a logo to extract one) and previewing the resulting theme in light and dark mode. Export the finished theme as a `Colors.xml` file.
 
-### Step 2 — Import into WideQuick { #step-2-import-into-widequick }
+### Step 2 - Import into WideQuick { #step-2-import-into-widequick }
 
 On the same [Theme Builder](../../../../Tools/theme-builder.md) page, scroll down to **Parse Theme into WideQuick format**:
 

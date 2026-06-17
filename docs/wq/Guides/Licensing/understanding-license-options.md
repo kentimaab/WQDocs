@@ -1,5 +1,12 @@
-Understanding WideQuick License Options
-=====
+---
+title: Understanding WideQuick License Options
+description: Guide to WideQuick license types, levels, and optional features to help you choose the right license for your application.
+product: wq
+page_type: concept
+tags:
+ - WQ
+---
+# Understanding WideQuick License Options
 
 ## Introduction
 
@@ -21,6 +28,8 @@ Variants include:
 - **Licenses with five years of free version upgrades** – recommended when periodic upgrades are planned.
 
 This license type is well suited for non-connected or highly secured systems, such as installations behind a DMZ or fully air‑gapped networks.
+
+For the full feature breakdown by license level and available option packages, see the [WideQuick 14 License Overview](https://widequick.com/license/14/Licens%20WideQuick%2014%20-%20English.html){target="_blank"} on the Kentima website.
 
 ### WideQuick Universal License
 
@@ -73,12 +82,12 @@ The number of **internal variables** (for example alarms and internal tags creat
 | OPC DA Server Connections | Premium | Maximum number of clients that can connect to a WideQuick OPC DA Server. |
 | OPC UA Server Connections | Premium | Maximum number of clients that can connect to a WideQuick OPC UA Server. |
 |<span style = "font-size:16px"> **Communication Drivers**</span> |||
-| Modbus Serial and TCP Driver | Extended | Allows WideQuick to communicate with devices over Modbus (serial and TCP) via the DataStore. |
-| OPC DA Driver | Advanced | Allows WideQuick to communicate with devices over OPC DA via the DataStore. |
-| OPC UA Driver | Advanced | Allows WideQuick to communicate with devices over OPC UA via the DataStore. |
-| MQTT Driver | Advanced | Allows WideQuick to communicate with devices over MQTT via the DataStore. |
-| BACnet Driver | Premium | Allows WideQuick to communicate with devices over BACnet via the DataStore. |
-| BACnet+ Driver | Premium | Allows WideQuick to communicate with devices over BACnet via the DataStore and enables an extended script interface for deeper integration. |
+| Modbus Serial and TCP Driver | Extended | Allows WideQuick to communicate with devices over Modbus (serial and TCP) via the Data Store. |
+| OPC DA Driver | Advanced | Allows WideQuick to communicate with devices over OPC DA via the Data Store. |
+| OPC UA Driver | Advanced | Allows WideQuick to communicate with devices over OPC UA via the Data Store. |
+| MQTT Driver | Advanced | Allows WideQuick to communicate with devices over MQTT via the Data Store. |
+| BACnet Driver | Premium | Allows WideQuick to communicate with devices over BACnet via the Data Store. |
+| BACnet+ Driver | Premium | Allows WideQuick to communicate with devices over BACnet via the Data Store and enables an extended script interface for deeper integration. |
 |<span style = "font-size:16px">**HMI/SCADA Features**</span> |||
 | Number of Workviews | Extended | Maximum number of Workviews that can be used in the application. |
 | Themes | Extended | Enables the application to define and switch between color schemes. |

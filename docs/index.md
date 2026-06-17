@@ -1,5 +1,6 @@
 ---
 template: home.html
+description: WideQuick documentation home — explore guides, references, and module documentation for all WideQuick products.
 hide:
   - navigation
   - toc
@@ -41,7 +42,7 @@ hide:
         <div class="hp-product__rule"></div>
         <div class="hp-product__desc">The shared engine. Modules, scripts, templates, and deployment tools.</div>
         <div class="hp-product__pills">
-          <span>Get started</span><span>Modules</span><span>Object Libraries</span>
+          <span>Get started</span><span>Modules</span><span>Guides</span><span>Object Libraries</span>
         </div>
         <div class="hp-product__cta-row">
           <span class="hp-product__cta">Explore MOD →</span>
@@ -58,7 +59,7 @@ hide:
         <div class="hp-product__rule"></div>
         <div class="hp-product__desc">Monitor buildings, reduce energy costs, and increase tenant comfort from a single unified interface.</div>
         <div class="hp-product__pills">
-          <span>Get started</span><span>Examples</span><span>Releases</span>
+          <span>Get started</span><span>Guides</span><span>References</span><span>Releases</span>
         </div>
         <div class="hp-product__cta-row">
           <span class="hp-product__cta">Explore BMS →</span>
@@ -75,7 +76,7 @@ hide:
         <div class="hp-product__rule"></div>
         <div class="hp-product__desc">Ensure production continuity, optimize maintenance, and monitor water facilities end to end.</div>
         <div class="hp-product__pills">
-          <span>Get started</span><span>Releases</span>
+          <span>Get started</span><span>Guides</span><span>References</span><span>Releases</span>
         </div>
         <div class="hp-product__cta-row">
           <span class="hp-product__cta">Explore WWT →</span>

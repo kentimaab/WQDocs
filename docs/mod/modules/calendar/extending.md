@@ -1,15 +1,17 @@
 ---
-title: Calendar — Extending
+title: Calendar - Extending
 description: Extend the Calendar module and troubleshoot common issues.
 product: mod
 page_type: extending
 doc_id: DOC-M13
 status: draft
 last_reviewed: 2026-05-26
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Calendar — Extending
+# Calendar - Extending
 
 ## Reminder Configuration { #reminder-configuration }
 

@@ -1,5 +1,8 @@
----
+﻿---
+description: Record and organise free-text notes tied to specific parts of the system.
 title: Logbook
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

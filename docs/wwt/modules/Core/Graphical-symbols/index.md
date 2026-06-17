@@ -1,5 +1,8 @@
----
+﻿---
+description: Overview of the WideQuick symbol libraries and how to use them.
 title: Graphical symbols
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

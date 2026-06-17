@@ -1,9 +1,13 @@
----
-title: Maps — Get started
+﻿---
+description: Get up and running with the Maps & Indicators module.
+title: Maps - Get started
 scripts:
   - scMap
-object_libraries:  `Map Indicators,WEATHER `
-
+object_libraries:
+  - Map Indicators
+  - WEATHER
+tags: 
+ - BMS
 ---
 
 --8<-- "mod/modules/maps/get-started.md:body"

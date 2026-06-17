@@ -5,6 +5,8 @@ product: bms
 page_type: getstarted
 status: draft
 last_reviewed: 2026-06-02
+tags: 
+ - BMS
 ---
 
 # Download WideQuick BMS
@@ -19,7 +21,7 @@ The download includes everything needed to get started:
 
 The project can be opened and explored freely in WideQuick Designer, but commissioning a live system requires a **WideQuick Advanced** license or higher. 
 
-If you are in need of a WideQuick License please get in contact with the Kentima [sales team](https://www.kentima.com/en-GB/Kontakt)
+If you are in need of a WideQuick License please get in contact with the Kentima [sales team](https://www.kentima.com/en-GB/Kontakt){target="_blank"}
 
 ## Template vs Demo application
 

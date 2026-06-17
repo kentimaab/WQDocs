@@ -1,7 +1,5 @@
 ---
 title: Dashboards
-tags:
-  - test
 description: Configurable views for monitoring signals, values and status from different parts of the system.
 product: mod
 page_type: concept
@@ -10,6 +8,8 @@ size: M
 priority: p0
 status: draft
 last_reviewed: 2026-05-26
+tags:
+  - MOD
 ---
 
 <!-- --8<-- [start:body] -->
@@ -47,7 +47,7 @@ and maintenance status.
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/dashboards.md) { #troubleshooting }
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
 
-- [**Common Issues**](../../Troubleshooting/dashboards.md) — Common issues and how to fix them.
+- [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

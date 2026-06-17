@@ -1,5 +1,10 @@
----
-title: Alarms — Get started
+﻿---
+description: Get up and running with the Alarms module.
+title: Alarms - Get started
+scripts:
+  - scAlarm
+tags: 
+ - BMS
 ---
 
 --8<-- "mod/modules/Core/alarms/get-started.md:body"

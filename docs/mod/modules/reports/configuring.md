@@ -1,15 +1,17 @@
 ---
-title: Reports — Configuring
+title: Reports - Configuring
 description: Configure and customise the Reports module.
 product: mod
 page_type: howto
 doc_id: DOC-M17
 status: draft
 last_reviewed: 2026-05-19
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Reports — Configuring
+# Reports - Configuring
 
 This section covers how to configure the four report templates in WideQuick Mod to fit 
 your needs, as well as how to use the built-in Report History to recreate or resend 
@@ -34,7 +36,7 @@ However, if you want to set up a separate logger for alarms, the report must be 
 accordingly. Follow these steps:
 
 * Set up the new logger with the type Alarm and select your desired database. See 
-[Loggers](../Loggers.md) for more information.
+[Loggers](../../guides/Loggers.md) for more information.
 * Update the macro call in the report template (see image).
 * Update the view called **Alarm_Report** to reference the new logger.
 
@@ -193,4 +195,7 @@ successfully sent.
 Use the navigation buttons to select a specific day and view detailed information. The 
 popup lists all reports for that day along with their status. Failed reports, sent 
 emails, and failed emails can be reconfigured to be recreated or resent.
+## Next Steps { #next-steps }
+
+* [Extending](extending.md) — creating custom templates and report controllers
 <!-- --8<-- [end:body] -->

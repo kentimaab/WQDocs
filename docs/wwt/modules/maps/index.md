@@ -1,5 +1,8 @@
----
+﻿---
+description: Floorplan views and map indicators â€” configuration and usage.
 title: Maps
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

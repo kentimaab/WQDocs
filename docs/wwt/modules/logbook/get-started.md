@@ -1,7 +1,10 @@
----
-title: Logbook — Get started
+﻿---
+description: Get up and running with the Logbook module.
+title: Logbook - Get started
 scripts:
   - scDoc
+tags: 
+ - WWT
 ---
 
 --8<-- "mod/modules/logbook/get-started.md:body"

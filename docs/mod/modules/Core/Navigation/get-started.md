@@ -1,5 +1,5 @@
 ---
-title: Navigation — Get started
+title: Navigation - Get started
 description: Get up and running with the Navigation module.
 product: mod
 page_type: getstarted
@@ -10,10 +10,12 @@ scripts:
   - scNav
   - scSubNavPopup
   - scLinking
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Navigation — Get started
+# Navigation - Get started
 ???+ info "Requirements"
     The following scripts are required to use Navigation and all
     related functionality covered in the Navigation guides:
@@ -28,10 +30,6 @@ scripts:
     * `scThemes`
     * `scUsers`
     * `scAlert`
-    
-    And the following Object Libraries:
-    
-    * `Navigation`
 
 This section covers the basics of the Navigation module, including how to add 
 **Workviews** to the navigation menu and how the Fullscreen Menu works. The Navigation 
@@ -111,3 +109,8 @@ remain navigable.
 
 ![FullScreen_Menu](/Images/Navigation/Nav_2Stor.png)
 
+## Next Steps { #next-steps }
+
+* [Configuring](configuring.md) — privilege requirements on views and display settings for restricted views
+* [Extending](extending.md) — GoTo function and custom navigation icons
+<!-- --8<-- [end:body] -->

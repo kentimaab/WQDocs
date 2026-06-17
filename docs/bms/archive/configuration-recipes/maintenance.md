@@ -1,4 +1,6 @@
----
+﻿---
+search:
+  exclude: true
 title: Configure Maintenance for BMS scenarios
 description: BMS maintenance template patterns and recurring task setup.
 product: bms
@@ -8,7 +10,11 @@ size: M
 priority: p1
 status: draft
 last_reviewed: 2026-05-19
+tags: 
+ - BMS
 ---
+search:
+  exclude: true
 
 # Configure Maintenance for BMS scenarios
 

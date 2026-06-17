@@ -1,15 +1,17 @@
 ---
-title: Documents — Extending
+title: Documents - Extending
 description: Extend the Documents module — privilege reference.
 product: mod
 page_type: extending
 doc_id: DOC-M16
 status: draft
 last_reviewed: 2026-05-27
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Documents — Extending
+# Documents - Extending
 
 ## Privileges { #privileges }
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Users and Privileges
 description: Create and manage users and privileges in WideQuick.
 product: mod
@@ -7,10 +7,18 @@ status: draft
 last_reviewed: 2026-06-08
 scripts:
   - scUsers
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
 # Users and Privileges
+???+ info "Requirements"
+    The following scripts are required to use Users and Privileges and all
+    related functionality covered in the Users and Privileges guides:
+    
+    * `scUsers`
+    * `scAlert`
 
 WideQuick allows user profiles to be created with specific privileges, enabling
 role-based access control across the application. Profiles can be configured to

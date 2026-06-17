@@ -9,10 +9,16 @@ hide:
 
 <div class="wq-lp">
 
-<p class="wq-page-lead">An HMI/SCADA/PSIM platform built without lock-in. Open protocols, flexible deployment modes, and a Modular Framework whose code is yours to read, modify, and extend — so you can deliver exactly the right system for every customer.</p>
-<a href="get-started/" class="wq-docs-pill">Documentation <span class="wq-docs-pill__arrow">→</span></a>
+<div style="position:relative;background:#161616;padding:2.5rem 2rem 2rem;overflow:hidden;margin-bottom:0;border-radius:8px;">
+  <div class="hp-hex-overlay"></div>
+  <div style="position:relative;z-index:1;">
+    <h1 style="color:#fff;margin:0 0 0.1rem;">WideQuick HMI/SCADA/PSIM</h1>
+    <p class="wq-page-lead" style="color:rgba(255,255,255,0.8);">An HMI/SCADA/PSIM platform built without lock-in. Open protocols, flexible deployment modes, and a Modular Framework whose code is yours to read, modify, and extend — so you can deliver exactly the right system for every customer.</p>
+    <a href="get-started/" class="wq-docs-pill" style="color:#fff !important;">Documentation <span class="wq-docs-pill__arrow">→</span></a>
+  </div>
+</div>
 
-<div class="wq-hero-cards">
+<div class="wq-hero-cards" style="margin-top:1rem;">
   <div class="wq-hero-card wq-hero-card--primary">
     <div>
       <div class="wq-hero-card__title">Get WideQuick Designer</div>
@@ -132,26 +138,26 @@ hide:
     <a href="get-started/" class="wq-section__link">All guides</a>
   </div>
   <div class="wq-items wq-items--3">
-    <a href="get-started/install-designer/" class="wq-item">
+    <a href="get-started/Installing-WideQuick/" class="wq-item">
       <div class="wq-item__icon">
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="3" width="16" height="11" rx="1"/><path d="M6 17h8M10 14v3"/>
         </svg>
       </div>
       <div>
-        <div class="wq-item__title">Install Designer</div>
-        <p class="wq-item__desc">Download the IDE and build your application on your own PC.</p>
+        <div class="wq-item__title">Installing WideQuick</div>
+        <p class="wq-item__desc">Install Designer, Runtime, and Remote on Windows or Linux.</p>
       </div>
     </a>
-    <a href="get-started/install-runtime/" class="wq-item">
+    <a href="get-started/install-web-client/" class="wq-item">
       <div class="wq-item__icon">
         <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="3" width="14" height="14" rx="2"/><path d="M8 7.5l5 2.5-5 2.5V7.5z"/>
         </svg>
       </div>
       <div>
-        <div class="wq-item__title">Install Runtime</div>
-        <p class="wq-item__desc">Deploy WideQuick Runtime on your target system for production use.</p>
+        <div class="wq-item__title">Install Web Client</div>
+        <p class="wq-item__desc">Configure and deploy the WideQuick Web Client for browser access.</p>
       </div>
     </a>
     <a href="Guides/Deployment/deployment-options/" class="wq-item">

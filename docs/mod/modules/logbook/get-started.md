@@ -1,5 +1,5 @@
 ---
-title: Logbook — Get Started
+title: Logbook - Get Started
 description: Get up and running with the Logbook module.
 product: mod
 page_type: getstarted
@@ -8,10 +8,12 @@ status: draft
 last_reviewed: 2026-05-26
 scripts:
   - scDoc
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Logbook — Get Started
+# Logbook - Get Started
 ???+ info "Requirements"
     The following scripts are required to use Logbook and all
     related functionality covered in the Logbook guides:

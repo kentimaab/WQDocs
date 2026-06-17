@@ -1,15 +1,17 @@
 ---
-title: Maintenance — Extending
+title: Maintenance - Extending
 description: Extend the Maintenance module — calendar integration and troubleshooting.
 product: mod
 page_type: extending
 doc_id: DOC-M6
 status: draft
 last_reviewed: 2026-05-26
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Maintenance — Extending
+# Maintenance - Extending
 
 ## Calendar Integration { #calendar-integration }
 

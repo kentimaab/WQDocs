@@ -4,6 +4,8 @@ description: WideQuick Building Management System — monitor and optimize build
 product: bms
 hide:
   - toc
+tags: 
+ - BMS
 ---
 
 <div class="lp lp--bms" markdown>
@@ -30,19 +32,13 @@ hide:
 
     Set up the BMS concept app and verify hardware compatibility.
 
-    [Walkthrough →](get-started/)
+    [Walkthrough →](get-started/download.md)
 
 -   **Connect a controller**
 
     Bring in your first signal from an OPC UA, Modbus, or BACnet device.
 
-    [Configure →](configuration-recipes/)
-
--   **The architecture**
-
-    See the BMS system views for ventilation, heating, and electrical panels.
-
-    [Read more →](concepts/)
+    [Your first tag →](get-started/Your%20First%20Tag.md)
 
 </div>
 
@@ -52,23 +48,23 @@ hide:
 
 <div class="lp-browse grid cards" markdown>
 
--   :material-wrench-outline: **Configuration recipes**
+-   :material-view-grid-outline: **Modules**
 
-    Step-by-step guides — alarms, maintenance plans, energy dashboards, schedules.
+    All modules included in WideQuick BMS — configuration, extension, and reference.
 
-    [Recipes →](configuration-recipes/)
+    [Modules →](modules/)
 
--   :material-palette-outline: **Customization**
+-   :material-book-open-outline: **Guides**
 
-    Adapt the BMS concept app's look, feel, and behavior to a specific site or customer.
+    Step-by-step guides for common tasks in WideQuick BMS.
 
-    [Customize →](customization/)
+    [Guides →](guides/)
 
--   :material-cog-outline: **Operations**
+-   :material-file-document-outline: **Reference**
 
-    Build a release, deploy to HMI nodes, troubleshoot a live installation.
+    Tag structure, multiview, suffix system, resources, database schemas.
 
-    [Operate →](operations/)
+    [Reference →](reference/)
 
 -   :material-package-variant: **Releases**
 

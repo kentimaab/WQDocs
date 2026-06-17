@@ -1,13 +1,14 @@
 ---
+title: Theme Builder
+description: Interactive tool for building and previewing custom color themes for WideQuick applications.
 hide:
 - toc
 ---
 
 
-Theme Builder
-====
+# Theme Builder
 
-Here the user can create their custom themes. If your looking for a guide to import your custom theme into WideQuick can be found [here](../mod/modules/Core/themes.md) 
+Here the user can create their custom themes. If you're looking for a guide to import your custom theme into WideQuick can be found [here](../mod/modules/Core/Themes/index.md) 
 
 ## Generate Theme
 <iframe src="https://material-foundation.github.io/material-theme-builder/" style="width: 100%; height: 800px; border: solid;"></iframe>

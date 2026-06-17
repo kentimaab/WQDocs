@@ -1,5 +1,8 @@
----
+﻿---
+description: Overview of the WideQuick symbol libraries and how to use them.
 title: Graphical symbols
+tags: 
+ - BMS
 ---
 
 !!! info "Shared module"

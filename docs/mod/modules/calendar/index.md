@@ -8,6 +8,8 @@ size: M
 priority: p0
 status: draft
 last_reviewed: 2026-05-26
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
@@ -38,6 +40,6 @@ Events come from two sources: custom events created directly in the calendar, an
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/calendar.md) { #troubleshooting }
-* [**Common Issues**](../../Troubleshooting/calendar.md) — Common issues and how to fix them.
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
+* [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

@@ -1,0 +1,11 @@
+﻿---
+description: Record and organise free-text notes tied to specific parts of the system.
+title: Logbook
+tags: 
+ - BMS
+---
+
+!!! info "Shared module"
+    This module is part of the [WideQuick Modular Framework](/mod/modules/logbook/). The documentation below is the canonical version maintained in MOD.
+
+--8<-- "mod/modules/logbook/index.md:body"

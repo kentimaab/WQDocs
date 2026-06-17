@@ -1,15 +1,17 @@
 ---
-title: Maps & Indicators — Extending
+title: Maps & Indicators - Extending
 description: Extend the Maps & Indicators module with scripts and hooks.
 product: mod
 page_type: howto
 doc_id: DOC-M14
 status: draft
 last_reviewed: 2026-05-19
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Maps & Indicators — Extending
+# Maps & Indicators - Extending
 
 This section covers how to extend the Maps & Indicators module with custom
 functionality. This includes connecting an **Alarm** object to a **Map View** for
@@ -44,7 +46,7 @@ scMap.updateAlarmList(scMap.mapView, scMap.alarmList);
 
 !!! note
     Replace `Alarm1` with the name of the **Alarm** object placed in the view.
-    `alarmNames` is an internal DataStore variable containing a comma-separated
+    `alarmNames` is an internal Data Store variable containing a comma-separated
     string of all alarm group names in the system. It does not need to be configured
     manually.
 

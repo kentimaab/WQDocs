@@ -1,5 +1,5 @@
 ---
-title: Alarms — Get Started
+title: Alarms - Get Started
 description: Get up and running with the Alarms module.
 product: mod
 page_type: getstarted
@@ -8,10 +8,12 @@ status: draft
 last_reviewed: 2026-05-29
 scripts:
   - scAlarm
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Alarms — Get Started
+# Alarms - Get Started
 ???+ info "Requirements"
     The following scripts are required to use Alarms and all
     related functionality covered in the Alarms guides:

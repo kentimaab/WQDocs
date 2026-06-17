@@ -8,6 +8,8 @@ size: S
 priority: p1
 status: draft
 last_reviewed: 2026-05-26
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
@@ -15,7 +17,7 @@ last_reviewed: 2026-05-26
 
 The Logbook module provides a way to record free-text notes tied to specific parts of the system. Entries are organized by topic (a hierarchical path that reflects where in the system the note belongs) and optionally grouped into named contexts.
 
-The logbook is available in three places: globally under **Documents & Logbook → Logbook**, in the **Logbook** tab of any object popup, and through the **SpeedDial** menu on process views.
+The logbook is available in three places: globally under **Documents & Logbook → Logbook**, in the [**Logbook**](../../reference/Popup/Logbook.md) tab of any object popup, and through the **SpeedDial** menu on process views.
 
 ## Contents { #contents }
 
@@ -38,6 +40,6 @@ The logbook is available in three places: globally under **Documents & Logbook �
 
 ---
 
-### [Troubleshooting](../../Troubleshooting/logbook.md) { #troubleshooting }
-* [**Common Issues**](../../Troubleshooting/logbook.md) — Common issues and how to fix them.
+### [Troubleshooting](troubleshooting.md) { #troubleshooting }
+* [**Common Issues**](troubleshooting.md) — Common issues and how to fix them.
 <!-- --8<-- [end:body] -->

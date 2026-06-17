@@ -7,6 +7,7 @@ doc_id: DOC-M14
 status: draft
 last_reviewed: 2026-05-19
 ---
+<!-- --8<-- [start:body] -->
 
 # Tag Structure
 
@@ -154,7 +155,7 @@ any display element connected to a signal with that suffix.
 
 !!! note
     Similar alias systems exist for object animations and popups. See
-    [Workview Animations](../guides/workview-animations.md) and [Popups](../modules/Popup/index.md) for more information.
+    [Workview Animations](../guides/workview-animations.md) and [Popups](Popup/index.md) for more information.
 
 ## Special properties on tags { #special-properties-on-tags }
 It is possible to define tag-specific properties and descriptions for a tag, which

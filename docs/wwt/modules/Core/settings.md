@@ -1,5 +1,8 @@
----
+﻿---
+description: Get up and running with the Settings.
 title: Settings
+tags: 
+ - WWT
 ---
 
 !!! info "Shared module"

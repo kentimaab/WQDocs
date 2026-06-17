@@ -6,12 +6,14 @@ page_type: concept
 doc_id: DOC-M15
 status: draft
 last_reviewed: 2026-05-27
+tags: 
+ - MOD
 ---
 <!-- --8<-- [start:body] -->
 
 # Documents
 
-The Documents module gives operators access to files from within the HMI. Both local files stored on the server and links to online resources can be made available. Documents can also be linked to individual objects, making relevant manuals, certificates or datasheets accessible directly from the object popup.
+The Documents module gives operators access to files from within the HMI. Both local files stored on the server and links to online resources can be made available. Documents can also be linked to individual objects, making relevant manuals, certificates or datasheets accessible directly from the [object popup](../../reference/Popup/Documents.md).
 
 ## Contents { #contents }
 
