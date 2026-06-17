@@ -1,0 +1,262 @@
+<style>
+* { box-sizing: border-box; }
+.wrap { padding: 1rem 0; font-family: var(--md-text-font, sans-serif); }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem; }
+.controls button { font-size: 12px; padding: 4px 10px; border-radius: 4px; border: 0.5px solid var(--md-default-fg-color--lighter); background: var(--md-default-bg-color); color: var(--md-default-fg-color); cursor: pointer; font-family: var(--md-text-font, sans-serif); }
+.controls button:hover { background: var(--md-code-bg-color); }
+.controls button.active { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); border-color: var(--md-primary-fg-color); }
+svg text { font-family: var(--md-text-font, sans-serif); }
+.node-g { cursor: pointer; }
+.node-g rect { transition: opacity 0.2s; }
+.node-g:hover rect { opacity: 0.85; }
+#sdg-tooltip { position: fixed; background: var(--md-default-bg-color); border: 0.5px solid var(--md-default-fg-color--lighter); border-radius: 4px; padding: 8px 12px; font-size: 12px; color: var(--md-default-fg-color); pointer-events: none; display: none; z-index: 999; max-width: 220px; font-family: var(--md-text-font, sans-serif); }
+#sdg-tooltip strong { display: block; margin-bottom: 4px; color: var(--md-default-fg-color); }
+#sdg-tooltip span { color: var(--md-default-fg-color--light); }
+</style>
+<div class="wrap">
+<div class="controls" id="sdg-controls">
+  <button class="active" data-layer="all">All layers</button>
+  <button data-layer="0">Layer 0 — standalone</button>
+  <button data-layer="1">Layer 1</button>
+  <button data-layer="2">Layer 2</button>
+  <button data-layer="3">Layer 3</button>
+  <button data-layer="4">Layer 4</button>
+</div>
+<svg id="sdg-g" width="100%" viewBox="0 0 680 820" role="img">
+  <title>Script dependency graph</title>
+  <desc>Layered dependency graph of WideQuick scripts from standalone scripts to complex dependency chains</desc>
+  <defs>
+    <marker id="sdg-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+</svg>
+<div id="sdg-tooltip"></div>
+</div>
+<script>
+(function(){
+function initGraph() {
+const svg = document.getElementById('sdg-g');
+if (!svg || svg.dataset.initialized) return;
+svg.dataset.initialized = '1';
+const deps = {"scAlert":[],"scQuickSort":[],"scKeybindings":[],"scModem":[],"scOSK":[],"scDatabase":["scAlert"],"scObjectFinder":["scAlert"],"scUsers":["scAlert"],"scPrototypes":["scAlert"],"scPlatform":["scAlert"],"scThemes":["scAlert"],"scSuffix":["scAlert"],"scLogBook":["scAlert"],"scAuditTrail":["scAlert"],"scBackUpAndRestore":[],"scRemoteClients":["scAlert"],"scRemoteSystems":["scAlert"],"scTimeChannel":["scAlert"],"scToolTip":["scAlert"],"scTrend":["scAlert"],"scWM":["scAlert"],"scWeather":["scAlert"],"scMapObjects":["scAlert"],"scButtons":["scAlert"],"scInit":["scAlert"],"scMail":["scAlert"],"scReports":["scAlert"],"scMaintenance":["scAlert","scDatabase"],"scSubNav":["scAlert","scUsers","scSuffix"],"scHistory":["scAlert","scPrototypes","scQuickSort","scThemes"],"scNav":["scAlert","scThemes"],"scFilePicker":["scAlert","scThemes"],"scAlarm":["scAlert","scPrototypes"],"scMap":["scAlert","scThemes","scMaintenance"],"scSubNavPopup":["scAlert","scUsers","scSubNav"],"scLinking":["scAlert","scPrototypes","scSubNav","scObjectFinder"],"scSmartPopup":["scAlert","scPrototypes","scUsers","scSuffix"],"scStyrkurva":["scAlert","scSuffix"],"scStyrkurvaTid":["scAlert","scSuffix"],"scWorkviewAnimation":["scAlert","scSuffix"],"scRemoteAlarms":["scAlert","scAlarm"],"scReportScheduler":["scAlert","scReports"],"scAlarmSender":["scAlert","scMail"],"scCalendar":["scAlert","scThemes","scMaintenance"],"scDashboard":["scAlert","scHistory"],"scDoc":["scAlert","scThemes","scLinking"],"scAlarmFinder":["scAlert","scObjectFinder","scLinking","scMap"],"scDayViewManager":["scAlert","scThemes","scCalendar"],"scWeekViewManager":["scAlert","scThemes","scCalendar"]};
+
+function getLayer(s, memo={}) {
+  if (s in memo) return memo[s];
+  if (!deps[s] || deps[s].length===0) { memo[s]=0; return 0; }
+  memo[s] = 1 + Math.max(...deps[s].map(d=>getLayer(d,memo)));
+  return memo[s];
+}
+const layers = {};
+Object.keys(deps).forEach(s=>{ layers[s]=getLayer(s); });
+
+function getAllDeps(s, visited=new Set()) {
+  if (visited.has(s)) return visited;
+  visited.add(s);
+  (deps[s]||[]).forEach(d => getAllDeps(d, visited));
+  return visited;
+}
+
+const layerColors = {
+  0: { fill:'#EEEDFE', stroke:'#534AB7', text:'#26215C' },
+  1: { fill:'#E1F5EE', stroke:'#0F6E56', text:'#04342C' },
+  2: { fill:'#FAEEDA', stroke:'#854F0B', text:'#412402' },
+  3: { fill:'#FAECE7', stroke:'#993C1D', text:'#4A1B0C' },
+  4: { fill:'#FBEAF0', stroke:'#993556', text:'#4B1528' },
+};
+const darkColors = {
+  0: { fill:'#3C3489', stroke:'#AFA9EC', text:'#EEEDFE' },
+  1: { fill:'#085041', stroke:'#5DCAA5', text:'#E1F5EE' },
+  2: { fill:'#633806', stroke:'#EF9F27', text:'#FAEEDA' },
+  3: { fill:'#712B13', stroke:'#F0997B', text:'#FAECE7' },
+  4: { fill:'#72243E', stroke:'#ED93B1', text:'#FBEAF0' },
+};
+const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+const C = dark ? darkColors : layerColors;
+const edgeColor = dark ? '#555' : '#ccc';
+
+const byLayer = {};
+Object.keys(deps).forEach(s=>{
+  const l = layers[s];
+  if (!byLayer[l]) byLayer[l]=[];
+  byLayer[l].push(s);
+});
+
+const nodeW = 148, nodeH = 28, padX = 8, padY = 44;
+const svgW = 680;
+const positions = {};
+
+const layerNums = Object.keys(byLayer).map(Number).sort((a,b)=>a-b);
+let y = 48;
+layerNums.forEach(l => {
+  const nodes = byLayer[l];
+  const cols = Math.min(nodes.length, 4);
+  const totalW = cols * nodeW + (cols-1)*padX;
+  const startX = (svgW - totalW) / 2;
+  nodes.forEach((s,i) => {
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    positions[s] = { x: startX + col*(nodeW+padX), y: y + row*(nodeH+8) };
+  });
+  const rows = Math.ceil(nodes.length/cols);
+  y += rows*(nodeH+8) + padY;
+});
+
+const svgH = y + 20;
+//const svg = document.getElementById('sdg-g');
+svg.setAttribute('viewBox', `0 0 ${svgW} ${svgH}`);
+
+const edgeLayer = document.createElementNS('http://www.w3.org/2000/svg','g');
+edgeLayer.id = 'sdg-edges';
+svg.appendChild(edgeLayer);
+
+const nodeLayer = document.createElementNS('http://www.w3.org/2000/svg','g');
+nodeLayer.id = 'sdg-nodes';
+svg.appendChild(nodeLayer);
+
+layerNums.forEach(l => {
+  const nodes = byLayer[l];
+  const ys = nodes.map(s=>positions[s].y);
+  const minY = Math.min(...ys);
+  const c = C[l];
+  const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
+  lbl.setAttribute('x','16');
+  lbl.setAttribute('y', String(minY + nodeH/2 + 4));
+  lbl.setAttribute('font-size','11');
+  lbl.setAttribute('fill', c.stroke);
+  lbl.setAttribute('font-family','var(--md-text-font, sans-serif)');
+  lbl.textContent = `L${l}`;
+  svg.appendChild(lbl);
+});
+
+Object.keys(deps).forEach(s => {
+  deps[s].forEach(dep => {
+    if (!positions[dep] || !positions[s]) return;
+    const sx = positions[dep].x + nodeW/2;
+    const sy = positions[dep].y + nodeH;
+    const ex = positions[s].x + nodeW/2;
+    const ey = positions[s].y;
+    const midY = (sy + ey) / 2;
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d',`M${sx},${sy} C${sx},${midY} ${ex},${midY} ${ex},${ey}`);
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke', edgeColor);
+    path.setAttribute('stroke-width','0.8');
+    path.setAttribute('marker-end','url(#sdg-arr)');
+    path.dataset.from = dep;
+    path.dataset.to = s;
+    edgeLayer.appendChild(path);
+  });
+});
+
+const tooltip = document.getElementById('sdg-tooltip');
+
+Object.keys(deps).forEach(s => {
+  if (!positions[s]) return;
+  const {x,y} = positions[s];
+  const l = layers[s];
+  const c = C[l];
+  const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+  g.classList.add('node-g');
+  g.dataset.name = s;
+  g.dataset.layer = l;
+  const rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+  rect.setAttribute('x', x); rect.setAttribute('y', y);
+  rect.setAttribute('width', nodeW); rect.setAttribute('height', nodeH);
+  rect.setAttribute('rx','5');
+  rect.setAttribute('fill', c.fill);
+  rect.setAttribute('stroke', c.stroke);
+  rect.setAttribute('stroke-width','0.5');
+  const txt = document.createElementNS('http://www.w3.org/2000/svg','text');
+  txt.setAttribute('x', x + nodeW/2);
+  txt.setAttribute('y', y + nodeH/2 + 1);
+  txt.setAttribute('text-anchor','middle');
+  txt.setAttribute('dominant-baseline','central');
+  txt.setAttribute('font-size','11');
+  txt.setAttribute('font-family','var(--md-text-font, sans-serif)');
+  txt.setAttribute('fill', c.text);
+  txt.textContent = s;
+  g.appendChild(rect); g.appendChild(txt);
+
+  g.addEventListener('mouseenter', e => {
+    const requires = deps[s];
+    const requiredBy = Object.keys(deps).filter(k=>deps[k].includes(s));
+    tooltip.innerHTML = `<strong>${s}</strong><span>Layer ${l}<br>Requires: ${requires.length ? requires.join(', ') : 'none'}<br>Required by: ${requiredBy.length ? requiredBy.join(', ') : 'none'}</span>`;
+    tooltip.style.display = 'block';
+  });
+  g.addEventListener('mousemove', e => {
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top = (e.clientY - 10) + 'px';
+  });
+  g.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+
+  g.addEventListener('click', () => {
+    const allDeps = getAllDeps(s);
+    allDeps.delete(s);
+    const requiredBy = new Set(Object.keys(deps).filter(k=>deps[k].includes(s)));
+    document.querySelectorAll('.node-g').forEach(n => {
+      const name = n.dataset.name;
+      const r = n.querySelector('rect');
+      const t = n.querySelector('text');
+      if (name === s) {
+        r.setAttribute('stroke-width','2'); r.setAttribute('opacity','1'); t.setAttribute('opacity','1');
+      } else if (allDeps.has(name) || requiredBy.has(name)) {
+        r.setAttribute('stroke-width','1'); r.setAttribute('opacity','0.55'); t.setAttribute('opacity','0.55');
+      } else {
+        r.setAttribute('stroke-width','0.5'); r.setAttribute('opacity','0.08'); t.setAttribute('opacity','0.08');
+      }
+    });
+    document.querySelectorAll('#sdg-edges path').forEach(p => {
+      const from = p.dataset.from, to = p.dataset.to;
+      if ((to===s && allDeps.has(from)) || (from===s && requiredBy.has(to))) {
+        p.style.opacity='0.6'; p.setAttribute('stroke-width','1.2');
+      } else {
+        p.style.opacity='0.04'; p.setAttribute('stroke-width','0.8');
+      }
+    });
+  });
+
+  nodeLayer.appendChild(g);
+});
+
+document.getElementById('sdg-controls').addEventListener('click', e => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  document.querySelectorAll('#sdg-controls button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const layer = btn.dataset.layer;
+  document.querySelectorAll('.node-g').forEach(n => {
+    const r = n.querySelector('rect');
+    const t = n.querySelector('text');
+    r.setAttribute('stroke-width','0.5');
+    const show = layer==='all' || n.dataset.layer===layer;
+    r.setAttribute('opacity', show ? '1' : '0.1');
+    t.setAttribute('opacity', show ? '1' : '0.1');
+  });
+  document.querySelectorAll('#sdg-edges path').forEach(p => {
+    p.setAttribute('stroke-width','0.8');
+    if (layer==='all') { p.style.opacity=''; return; }
+    const fromL = layers[p.dataset.from], toL = layers[p.dataset.to];
+    p.style.opacity = (String(fromL)===layer||String(toL)===layer) ? '1' : '0.05';
+  });
+});
+
+svg.addEventListener('click', e => {
+  if (!e.target.closest('.node-g')) {
+    document.querySelectorAll('.node-g').forEach(n => {
+      const r = n.querySelector('rect');
+      r.setAttribute('stroke-width','0.5'); r.setAttribute('opacity','1');
+      n.querySelector('text').setAttribute('opacity','1');
+    });
+    document.querySelectorAll('#sdg-edges path').forEach(p => {
+      p.style.opacity=''; p.setAttribute('stroke-width','0.8');
+    });
+  }
+});
+}
+initGraph();
+if (typeof document$ !== 'undefined') {
+  document$.subscribe(function() { if (document.getElementById('sdg-g')) initGraph(); });
+}
+})();
+</script>

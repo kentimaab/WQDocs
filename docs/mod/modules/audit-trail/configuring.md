@@ -1,6 +1,6 @@
 ---
-title: Audit Trail (Trace Log) - Configuring
-description: Configure which Data Store variables are tracked by the Trace Log.
+title: Audit Trail - Configuring
+description: Configure which Data Store variables are tracked by the Audit Trail.
 product: mod
 page_type: howto
 doc_id: DOC-M19
@@ -11,11 +11,11 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Audit Trail (Trace Log) - Configuring
+# Audit Trail - Configuring
 
 ## Configuring Variables to Track { #configuring-variables-to-track }
 
-Navigate to **History → Logs → Trace log → Audit Trail - Settings**.
+Navigate to **History → Logs → Audit trail → Audit Trail - Settings**.
 
 ![Audit Trail - Settings view](/Images/Audit_Trail/audit-trail-settings.png){align=center}
 
@@ -26,5 +26,5 @@ To start tracking a variable, select it in the left panel and click the **>** bu
 Variables can be added at any level of the Data Store tree. Selecting a parent node and clicking **>** adds all variables under that node at once.
 
 !!! warning
-    Avoid tracking variables that change continuously, such as measured values and sensor readings. This will generate a very large number of log entries and make the log difficult to use. The Trace Log is intended for variables that change infrequently and deliberately, such as setpoints, control signals, and configuration values.
+    Avoid tracking variables that change continuously, such as measured values and sensor readings. This will generate a very large number of log entries and make the log difficult to use. The Audit Trail is intended for variables that change infrequently and deliberately, such as setpoints, control signals, and configuration values.
 <!-- --8<-- [end:body] -->
