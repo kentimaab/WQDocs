@@ -1,0 +1,556 @@
+[project]
+
+site_name = "WideQuick Docs"
+site_description = "Dokumentation för WideQuick Modular Framework och dess vertikaler"
+site_author = "johan.vikstrand@kentima.se"
+site_url = "https://www.widequick.com/sv/"
+docs_dir = "docs-sv"
+site_dir = "site/sv"
+
+copyright = """Kentima AB
+Copyright &copy; 2026 The authors
+"""
+
+nav = [
+  { "Hem" = "index.md" },
+  { "WideQuick" = [
+    { "Översikt" = "wq/index.md" },
+    { "Kom igång" = [
+      { "Översikt" = "wq/get-started/index.md" },
+      { "Installera WideQuick" = "wq/get-started/Installing-WideQuick.md" },
+      { "Installera webbklient" = "wq/get-started/install-web-client.md" },
+    ]},
+    { "Guider" = [
+      { "Distribution" = [
+        { "Distributionsalternativ" = "wq/Guides/Deployment/deployment-options.md" },
+        { "Containrar" = [
+          { "WideQuick i containrar" = "wq/Guides/Deployment/Containers/widequick-in-containers.md" },
+        ]},
+      ]},
+      { "Licensiering" = [
+        { "Förstå licensalternativ" = "wq/Guides/Licensing/understanding-license-options.md" },
+        { "Universallicens" = "wq/Guides/Licensing/universal-license.md" },
+      ]},
+    ]},
+  ]},
+  { "Modular Framework" = [
+    { "Översikt" = "mod/index.md" },
+    { "Kom igång" = [
+      { "Översikt" = "mod/get-started/index.md" },
+      { "Koncept" = "mod/concepts/index.md" },
+      { "Ladda ned" = "mod/get-started/download.md" },
+      { "Din första tagg" = "mod/get-started/Your First Tag.md" },
+    ]},
+    { "Moduler" = [
+      { "Översikt" = "mod/modules/index.md" },
+      { "Kärna" = [
+        { "Översikt" = "mod/modules/Core/index.md" },
+        { "Inställningar" = "mod/modules/Core/settings.md" },
+        { "Användare och behörigheter" = "mod/modules/Core/users-privileges.md" },
+        { "Larm" = [
+          { "Översikt" = "mod/modules/Core/alarms/index.md" },
+          { "Kom igång" = "mod/modules/Core/alarms/get-started.md" },
+          { "Konfigurering" = "mod/modules/Core/alarms/configuring.md" },
+          { "Utökning" = "mod/modules/Core/alarms/extending.md" },
+        ]},
+        { "Teman" = [
+          { "Översikt" = "mod/modules/Core/Themes/index.md" },
+          { "Kom igång" = "mod/modules/Core/Themes/get-started.md" },
+          { "Konfigurering" = "mod/modules/Core/Themes/configuring.md" },
+          { "Utökning" = "mod/modules/Core/Themes/extending.md" },
+        ]},
+        { "Navigation" = [
+          { "Översikt" = "mod/modules/Core/Navigation/index.md" },
+          { "Kom igång" = "mod/modules/Core/Navigation/get-started.md" },
+          { "Konfigurering" = "mod/modules/Core/Navigation/configuring.md" },
+          { "Utökning" = "mod/modules/Core/Navigation/extending.md" },
+        ]},
+        { "Grafiska symboler" = [
+          { "Översikt" = "mod/modules/Core/Graphical-symbols/index.md" },
+          { "Symbolbibliotek" = "mod/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Äldre symboler" = "mod/modules/Core/Graphical-symbols/legacy.md" },
+        ]},
+      ]},
+      { "Instrumentpaneler" = [
+        { "Översikt" = "mod/modules/dashboards/index.md" },
+        { "Kom igång" = "mod/modules/dashboards/get-started.md" },
+        { "Konfigurering" = "mod/modules/dashboards/configuring.md" },
+        { "Utökning" = "mod/modules/dashboards/extending.md" },
+        { "Felsökning" = "mod/modules/dashboards/troubleshooting.md" },
+      ]},
+      { "Kalender" = [
+        { "Översikt" = "mod/modules/calendar/index.md" },
+        { "Kom igång" = "mod/modules/calendar/get-started.md" },
+        { "Konfigurering" = "mod/modules/calendar/configuring.md" },
+        { "Utökning" = "mod/modules/calendar/extending.md" },
+        { "Felsökning" = "mod/modules/calendar/troubleshooting.md" },
+      ]},
+      { "Historik" = [
+        { "Översikt" = "mod/modules/history/index.md" },
+        { "Kom igång" = "mod/modules/history/get-started.md" },
+        { "Konfigurering" = "mod/modules/history/configuring.md" },
+        { "Utökning" = "mod/modules/history/extending.md" },
+        { "Felsökning" = "mod/modules/history/troubleshooting.md" },
+      ]},
+      { "Loggbok" = [
+        { "Översikt" = "mod/modules/logbook/index.md" },
+        { "Kom igång" = "mod/modules/logbook/get-started.md" },
+        { "Konfigurering" = "mod/modules/logbook/configuring.md" },
+        { "Utökning" = "mod/modules/logbook/extending.md" },
+        { "Felsökning" = "mod/modules/logbook/troubleshooting.md" },
+      ]},
+      { "Underhåll" = [
+        { "Översikt" = "mod/modules/maintenance/index.md" },
+        { "Kom igång" = "mod/modules/maintenance/get-started.md" },
+        { "Konfigurering" = "mod/modules/maintenance/configuring.md" },
+        { "Utökning" = "mod/modules/maintenance/extending.md" },
+        { "Felsökning" = "mod/modules/maintenance/troubleshooting.md" },
+      ]},
+      { "Kartor" = [
+        { "Översikt" = "mod/modules/maps/index.md" },
+        { "Kom igång" = "mod/modules/maps/get-started.md" },
+        { "Konfigurering" = "mod/modules/maps/configuring.md" },
+        { "Utökning" = "mod/modules/maps/extending.md" },
+      ]},
+      { "Dokument" = [
+        { "Översikt" = "mod/modules/documents/index.md" },
+        { "Kom igång" = "mod/modules/documents/get-started.md" },
+        { "Konfigurering" = "mod/modules/documents/configuring.md" },
+        { "Utökning" = "mod/modules/documents/extending.md" },
+      ]},
+      { "Rapporter" = [
+        { "Översikt" = "mod/modules/reports/index.md" },
+        { "Kom igång" = "mod/modules/reports/get-started.md" },
+        { "Konfigurering" = "mod/modules/reports/configuring.md" },
+        { "Utökning" = "mod/modules/reports/extending.md" },
+        { "Felsökning" = "mod/modules/reports/troubleshooting.md" },
+      ]},
+      { "Spårningslogg" = [
+        { "Översikt" = "mod/modules/audit-trail/index.md" },
+        { "Kom igång" = "mod/modules/audit-trail/get-started.md" },
+        { "Konfigurering" = "mod/modules/audit-trail/configuring.md" },
+      ]},
+      { "Säkerhetskopiering och återställning" = [
+        { "Översikt" = "mod/modules/backup-and-restore/index.md" },
+        { "Kom igång" = "mod/modules/backup-and-restore/get-started.md" },
+        { "Konfigurering" = "mod/modules/backup-and-restore/configuring.md" },
+      ]},
+    ]},
+    { "Guider" = [
+      { "Översikt" = "mod/guides/index.md" },
+      { "Automatisk skalning" = "mod/guides/automatic-scaling.md" },
+      { "Skapa popup" = "mod/guides/create-a-popup.md" },
+      { "Skapa objekt" = "mod/guides/create-an-object.md" },
+      { "Språk" = "mod/guides/languages.md" },
+      { "Loggare" = "mod/guides/Loggers.md" },
+      { "Inloggningskonfiguration" = "mod/guides/Login Config.md" },
+      { "Fjärrsystem" = "mod/guides/remote-systems.md" },
+      { "Workview-animationer" = "mod/guides/workview-animations.md" },
+    ]},
+    { "Referens" = [
+      { "Översikt" = "mod/reference/index.md" },
+      { "MultiView" = "mod/reference/multiview.md" },
+      { "Resurser och Resurspaket" = "mod/reference/resources-and-resurspaket.md" },
+      { "Suffixsystem" = "mod/reference/suffix-system.md" },
+      { "Taggstruktur" = "mod/reference/tag-structure.md" },
+      { "Skripthierarki" = "mod/reference/ScriptHierarchy.md" },
+      { "Popups" = [
+        { "Översikt" = "mod/reference/Popup/index.md" },
+        { "Flik" = "mod/reference/Popup/Tab.md" },
+        { "Historik" = "mod/reference/Popup/History.md" },
+        { "Trend" = "mod/reference/Popup/Trend.md" },
+        { "Objektinfo" = "mod/reference/Popup/ObjectInfo.md" },
+        { "Underhåll" = "mod/reference/Popup/Maintenance.md" },
+        { "Loggbok" = "mod/reference/Popup/Logbook.md" },
+        { "Dokument" = "mod/reference/Popup/Documents.md" },
+        { "Process" = "mod/reference/Popup/Process.md" },
+        { "Manöver" = "mod/reference/Popup/Maneuver.md" },
+        { "Tidkanal" = "mod/reference/Popup/Time-channel.md" },
+        { "Styrkurva" = "mod/reference/Popup/Control curve.md" },
+      ]},
+      { "Databasscheman" = [
+        { "Översikt" = "mod/reference/database-schemas/index.md" },
+        { "Config.db" = "mod/reference/database-schemas/config-db.md" },
+        { "History.db" = "mod/reference/database-schemas/history-db.md" },
+        { "Maintenance.db" = "mod/reference/database-schemas/maintenance-db.md" },
+        { "SuffixConfig.db" = "mod/reference/database-schemas/suffixconfig-db.md" },
+      ]},
+    ]},
+    { "Versioner" = "mod/releases/index.md" },
+  ]},
+  { "Fastighetsstyrning (BMS)" = [
+    { "Översikt" = "bms/index.md" },
+    { "Kom igång" = [
+      { "Översikt" = "bms/get-started/index.md" },
+      { "Ladda ned" = "bms/get-started/download.md" },
+      { "Din första tagg" = "bms/get-started/Your First Tag.md" },
+    ]},
+    { "Moduler" = [
+      { "Översikt" = "bms/modules/index.md" },
+      { "Kärna" = [
+        { "Översikt" = "bms/modules/Core/index.md" },
+        { "Inställningar" = "bms/modules/Core/settings.md" },
+        { "Användare och behörigheter" = "bms/modules/Core/users-privileges.md" },
+        { "Larm" = [
+          { "Översikt" = "bms/modules/Core/alarms/index.md" },
+          { "Kom igång" = "bms/modules/Core/alarms/get-started.md" },
+          { "Konfigurering" = "bms/modules/Core/alarms/configuring.md" },
+          { "Utökning" = "bms/modules/Core/alarms/extending.md" },
+        ]},
+        { "Teman" = [
+          { "Översikt" = "bms/modules/Core/Themes/index.md" },
+          { "Kom igång" = "bms/modules/Core/Themes/get-started.md" },
+          { "Konfigurering" = "bms/modules/Core/Themes/configuring.md" },
+          { "Utökning" = "bms/modules/Core/Themes/extending.md" },
+        ]},
+        { "Navigation" = [
+          { "Översikt" = "bms/modules/Core/Navigation/index.md" },
+          { "Kom igång" = "bms/modules/Core/Navigation/get-started.md" },
+          { "Konfigurering" = "bms/modules/Core/Navigation/configuring.md" },
+          { "Utökning" = "bms/modules/Core/Navigation/extending.md" },
+        ]},
+        { "Grafiska symboler" = [
+          { "Översikt" = "bms/modules/Core/Graphical-symbols/index.md" },
+          { "Symbolbibliotek" = "bms/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Äldre symboler" = "bms/modules/Core/Graphical-symbols/legacy.md" },
+        ]},
+      ]},
+      { "Instrumentpaneler" = [
+        { "Översikt" = "bms/modules/dashboards/index.md" },
+        { "Kom igång" = "bms/modules/dashboards/get-started.md" },
+        { "Konfigurering" = "bms/modules/dashboards/configuring.md" },
+        { "Utökning" = "bms/modules/dashboards/extending.md" },
+        { "Felsökning" = "bms/modules/dashboards/troubleshooting.md" },
+      ]},
+      { "Kalender" = [
+        { "Översikt" = "bms/modules/calendar/index.md" },
+        { "Kom igång" = "bms/modules/calendar/get-started.md" },
+        { "Konfigurering" = "bms/modules/calendar/configuring.md" },
+        { "Utökning" = "bms/modules/calendar/extending.md" },
+        { "Felsökning" = "bms/modules/calendar/troubleshooting.md" },
+      ]},
+      { "Historik" = [
+        { "Översikt" = "bms/modules/history/index.md" },
+        { "Kom igång" = "bms/modules/history/get-started.md" },
+        { "Konfigurering" = "bms/modules/history/configuring.md" },
+        { "Utökning" = "bms/modules/history/extending.md" },
+        { "Felsökning" = "bms/modules/history/troubleshooting.md" },
+      ]},
+      { "Loggbok" = [
+        { "Översikt" = "bms/modules/logbook/index.md" },
+        { "Kom igång" = "bms/modules/logbook/get-started.md" },
+        { "Konfigurering" = "bms/modules/logbook/configuring.md" },
+        { "Utökning" = "bms/modules/logbook/extending.md" },
+        { "Felsökning" = "bms/modules/logbook/troubleshooting.md" },
+      ]},
+      { "Underhåll" = [
+        { "Översikt" = "bms/modules/maintenance/index.md" },
+        { "Kom igång" = "bms/modules/maintenance/get-started.md" },
+        { "Konfigurering" = "bms/modules/maintenance/configuring.md" },
+        { "Utökning" = "bms/modules/maintenance/extending.md" },
+        { "Felsökning" = "bms/modules/maintenance/troubleshooting.md" },
+      ]},
+      { "Kartor" = [
+        { "Översikt" = "bms/modules/maps/index.md" },
+        { "Kom igång" = "bms/modules/maps/get-started.md" },
+        { "Konfigurering" = "bms/modules/maps/configuring.md" },
+        { "Utökning" = "bms/modules/maps/extend.md" },
+      ]},
+      { "Dokument" = [
+        { "Översikt" = "bms/modules/documents/index.md" },
+        { "Kom igång" = "bms/modules/documents/get-started.md" },
+        { "Konfigurering" = "bms/modules/documents/configuring.md" },
+        { "Utökning" = "bms/modules/documents/extending.md" },
+      ]},
+      { "Rapporter" = [
+        { "Översikt" = "bms/modules/reports/index.md" },
+        { "Kom igång" = "bms/modules/reports/get-started.md" },
+        { "Konfigurering" = "bms/modules/reports/configuring.md" },
+        { "Utökning" = "bms/modules/reports/extending.md" },
+        { "Felsökning" = "bms/modules/reports/troubleshooting.md" },
+      ]},
+      { "Spårningslogg" = [
+        { "Översikt" = "bms/modules/audit-trail/index.md" },
+        { "Kom igång" = "bms/modules/audit-trail/get-started.md" },
+        { "Konfigurering" = "bms/modules/audit-trail/configuring.md" },
+      ]},
+      { "Säkerhetskopiering och återställning" = [
+        { "Översikt" = "bms/modules/backup-and-restore/index.md" },
+        { "Kom igång" = "bms/modules/backup-and-restore/get-started.md" },
+        { "Konfigurering" = "bms/modules/backup-and-restore/configuring.md" },
+      ]},
+    ]},
+    { "Guider" = [
+      { "Översikt" = "bms/guides/index.md" },
+      { "Automatisk skalning" = "bms/guides/automatic-scaling/index.md" },
+      { "Skapa objekt" = "bms/guides/create-object/index.md" },
+      { "Skapa popup" = "bms/guides/create-popup/index.md" },
+      { "Språk" = "bms/guides/languages/index.md" },
+      { "Loggare" = "bms/guides/loggers/index.md" },
+      { "Inloggningskonfiguration" = "bms/guides/login-config/index.md" },
+      { "Fjärrsystem" = "bms/guides/remote-system/index.md" },
+      { "Workview-animationer" = "bms/guides/workview-animations/index.md" },
+    ]},
+    { "Referens" = [
+      { "Översikt" = "bms/reference/index.md" },
+      { "MultiView" = "bms/reference/multiview.md" },
+      { "Resurser och Resurspaket" = "bms/reference/resources-and-resurspaket.md" },
+      { "Suffixsystem" = "bms/reference/suffix-system.md" },
+      { "Taggstruktur" = "bms/reference/tag-structure.md" },
+      { "Skripthierarki" = "bms/reference/ScriptHierarchy.md" },
+      { "Popups" = [
+        { "Översikt" = "bms/reference/Popup/index.md" },
+        { "Flik" = "bms/reference/Popup/Tab.md" },
+        { "Historik" = "bms/reference/Popup/History.md" },
+        { "Trend" = "bms/reference/Popup/Trend.md" },
+        { "Objektinfo" = "bms/reference/Popup/ObjectInfo.md" },
+        { "Underhåll" = "bms/reference/Popup/Maintenance.md" },
+        { "Loggbok" = "bms/reference/Popup/Logbook.md" },
+        { "Dokument" = "bms/reference/Popup/Documents.md" },
+        { "Process" = "bms/reference/Popup/Process.md" },
+        { "Manöver" = "bms/reference/Popup/Maneuver.md" },
+        { "Tidkanal" = "bms/reference/Popup/Time-channel.md" },
+        { "Styrkurva" = "bms/reference/Popup/Control curve.md" },
+      ]},
+      { "Databasscheman" = [
+        { "Översikt" = "bms/reference/database-schemas/index.md" },
+        { "Config.db" = "bms/reference/database-schemas/config-db.md" },
+        { "History.db" = "bms/reference/database-schemas/history-db.md" },
+        { "Maintenance.db" = "bms/reference/database-schemas/maintenance-db.md" },
+        { "SuffixConfig.db" = "bms/reference/database-schemas/suffixconfig-db.md" },
+      ]},
+    ]},
+    { "Versioner" = "bms/releases/index.md" },
+  ]},
+  { "Vatten och avloppsrening (WWT)" = [
+    { "Översikt" = "wwt/index.md" },
+    { "Kom igång" = [
+      { "Översikt" = "wwt/get-started/index.md" },
+      { "Ladda ned" = "wwt/get-started/download.md" },
+      { "Din första tagg" = "wwt/get-started/Your First Tag.md" },
+    ]},
+    { "Moduler" = [
+      { "Översikt" = "wwt/modules/index.md" },
+      { "Kärna" = [
+        { "Översikt" = "wwt/modules/Core/index.md" },
+        { "Inställningar" = "wwt/modules/Core/settings.md" },
+        { "Användare och behörigheter" = "wwt/modules/Core/users-privileges.md" },
+        { "Larm" = [
+          { "Översikt" = "wwt/modules/Core/alarms/index.md" },
+          { "Kom igång" = "wwt/modules/Core/alarms/get-started.md" },
+          { "Konfigurering" = "wwt/modules/Core/alarms/configuring.md" },
+          { "Utökning" = "wwt/modules/Core/alarms/extending.md" },
+        ]},
+        { "Teman" = [
+          { "Översikt" = "wwt/modules/Core/Themes/index.md" },
+          { "Kom igång" = "wwt/modules/Core/Themes/get-started.md" },
+          { "Konfigurering" = "wwt/modules/Core/Themes/configuring.md" },
+          { "Utökning" = "wwt/modules/Core/Themes/extending.md" },
+        ]},
+        { "Navigation" = [
+          { "Översikt" = "wwt/modules/Core/Navigation/index.md" },
+          { "Kom igång" = "wwt/modules/Core/Navigation/get-started.md" },
+          { "Konfigurering" = "wwt/modules/Core/Navigation/configuring.md" },
+          { "Utökning" = "wwt/modules/Core/Navigation/extending.md" },
+        ]},
+        { "Grafiska symboler" = [
+          { "Översikt" = "wwt/modules/Core/Graphical-symbols/index.md" },
+          { "Symbolbibliotek" = "wwt/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Äldre symboler" = "wwt/modules/Core/Graphical-symbols/legacy.md" },
+        ]},
+      ]},
+      { "Instrumentpaneler" = [
+        { "Översikt" = "wwt/modules/dashboards/index.md" },
+        { "Kom igång" = "wwt/modules/dashboards/get-started.md" },
+        { "Konfigurering" = "wwt/modules/dashboards/configuring.md" },
+        { "Utökning" = "wwt/modules/dashboards/extending.md" },
+        { "Felsökning" = "wwt/modules/dashboards/troubleshooting.md" },
+      ]},
+      { "Kalender" = [
+        { "Översikt" = "wwt/modules/calendar/index.md" },
+        { "Kom igång" = "wwt/modules/calendar/get-started.md" },
+        { "Konfigurering" = "wwt/modules/calendar/configuring.md" },
+        { "Utökning" = "wwt/modules/calendar/extending.md" },
+        { "Felsökning" = "wwt/modules/calendar/troubleshooting.md" },
+      ]},
+      { "Historik" = [
+        { "Översikt" = "wwt/modules/history/index.md" },
+        { "Kom igång" = "wwt/modules/history/get-started.md" },
+        { "Konfigurering" = "wwt/modules/history/configuring.md" },
+        { "Utökning" = "wwt/modules/history/extending.md" },
+        { "Felsökning" = "wwt/modules/history/troubleshooting.md" },
+      ]},
+      { "Loggbok" = [
+        { "Översikt" = "wwt/modules/logbook/index.md" },
+        { "Kom igång" = "wwt/modules/logbook/get-started.md" },
+        { "Konfigurering" = "wwt/modules/logbook/configuring.md" },
+        { "Utökning" = "wwt/modules/logbook/extending.md" },
+        { "Felsökning" = "wwt/modules/logbook/troubleshooting.md" },
+      ]},
+      { "Underhåll" = [
+        { "Översikt" = "wwt/modules/maintenance/index.md" },
+        { "Kom igång" = "wwt/modules/maintenance/get-started.md" },
+        { "Konfigurering" = "wwt/modules/maintenance/configuring.md" },
+        { "Utökning" = "wwt/modules/maintenance/extending.md" },
+        { "Felsökning" = "wwt/modules/maintenance/troubleshooting.md" },
+      ]},
+      { "Kartor" = [
+        { "Översikt" = "wwt/modules/maps/index.md" },
+        { "Kom igång" = "wwt/modules/maps/get-started.md" },
+        { "Konfigurering" = "wwt/modules/maps/configuring.md" },
+        { "Utökning" = "wwt/modules/maps/extending.md" },
+      ]},
+      { "Dokument" = [
+        { "Översikt" = "wwt/modules/documents/index.md" },
+        { "Kom igång" = "wwt/modules/documents/get-started.md" },
+        { "Konfigurering" = "wwt/modules/documents/configuring.md" },
+        { "Utökning" = "wwt/modules/documents/extending.md" },
+      ]},
+      { "Rapporter" = [
+        { "Översikt" = "wwt/modules/reports/index.md" },
+        { "Kom igång" = "wwt/modules/reports/get-started.md" },
+        { "Konfigurering" = "wwt/modules/reports/configuring.md" },
+        { "Utökning" = "wwt/modules/reports/extending.md" },
+        { "Felsökning" = "wwt/modules/reports/troubleshooting.md" },
+      ]},
+      { "Spårningslogg" = [
+        { "Översikt" = "wwt/modules/audit-trail/index.md" },
+        { "Kom igång" = "wwt/modules/audit-trail/get-started.md" },
+        { "Konfigurering" = "wwt/modules/audit-trail/configuring.md" },
+      ]},
+      { "Säkerhetskopiering och återställning" = [
+        { "Översikt" = "wwt/modules/backup-and-restore/index.md" },
+        { "Kom igång" = "wwt/modules/backup-and-restore/get-started.md" },
+        { "Konfigurering" = "wwt/modules/backup-and-restore/configuring.md" },
+      ]},
+    ]},
+    { "Guider" = [
+      { "Översikt" = "wwt/guides/index.md" },
+      { "Automatisk skalning" = "wwt/guides/automatic-scaling/index.md" },
+      { "Skapa objekt" = "wwt/guides/create-object/index.md" },
+      { "Skapa popup" = "wwt/guides/create-popup/index.md" },
+      { "Språk" = "wwt/guides/languages/index.md" },
+      { "Loggare" = "wwt/guides/loggers/index.md" },
+      { "Inloggningskonfiguration" = "wwt/guides/login-config/index.md" },
+      { "Fjärrsystem" = "wwt/guides/remote-system/index.md" },
+      { "Workview-animationer" = "wwt/guides/workview-animations/index.md" },
+    ]},
+    { "Referens" = [
+      { "Översikt" = "wwt/reference/index.md" },
+      { "MultiView" = "wwt/reference/multiview.md" },
+      { "Resurser och Resurspaket" = "wwt/reference/resources-and-resurspaket.md" },
+      { "Suffixsystem" = "wwt/reference/suffix-system.md" },
+      { "Taggstruktur" = "wwt/reference/tag-structure.md" },
+      { "Skripthierarki" = "wwt/reference/ScriptHierarchy.md" },
+      { "Popups" = [
+        { "Översikt" = "wwt/reference/Popup/index.md" },
+        { "Flik" = "wwt/reference/Popup/Tab.md" },
+        { "Historik" = "wwt/reference/Popup/History.md" },
+        { "Trend" = "wwt/reference/Popup/Trend.md" },
+        { "Objektinfo" = "wwt/reference/Popup/ObjectInfo.md" },
+        { "Underhåll" = "wwt/reference/Popup/Maintenance.md" },
+        { "Loggbok" = "wwt/reference/Popup/Logbook.md" },
+        { "Dokument" = "wwt/reference/Popup/Documents.md" },
+        { "Process" = "wwt/reference/Popup/Process.md" },
+        { "Manöver" = "wwt/reference/Popup/Maneuver.md" },
+        { "Tidkanal" = "wwt/reference/Popup/Time-channel.md" },
+        { "Styrkurva" = "wwt/reference/Popup/Control curve.md" },
+      ]},
+      { "Databasscheman" = [
+        { "Översikt" = "wwt/reference/database-schemas/index.md" },
+        { "Config.db" = "wwt/reference/database-schemas/config-db.md" },
+        { "History.db" = "wwt/reference/database-schemas/history-db.md" },
+        { "Maintenance.db" = "wwt/reference/database-schemas/maintenance-db.md" },
+        { "SuffixConfig.db" = "wwt/reference/database-schemas/suffixconfig-db.md" },
+      ]},
+    ]},
+    { "Versioner" = "wwt/releases/index.md" },
+  ]},
+  { "Verktyg" = [
+    { "Taggnamnsvalidator" = "Tools/tag-name-validator.md" },
+    { "Temabyggare" = "Tools/theme-builder.md" },
+  ]},
+]
+
+extra_css = ["assets/stylesheets/extra.css"]
+extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js"]
+
+[project.extra]
+alternate = [
+    { name = "English", link = "/", lang = "en" },
+    { name = "Svenska", link = "/sv/", lang = "sv" },
+]
+
+[project.theme]
+custom_dir = "overrides"
+favicon = "assets/favicon.ico"
+language = "sv"
+features = [
+    "announce.dismiss",
+    "content.code.annotate",
+    "content.code.copy",
+    "content.code.select",
+    "content.footnote.tooltips",
+    "content.tabs.link",
+    "content.tooltips",
+    "navigation.footer",
+    "navigation.indexes",
+    "navigation.instant",
+    "navigation.instant.prefetch",
+    "navigation.path",
+    "navigation.sections",
+    "navigation.tabs",
+    "navigation.top",
+    "navigation.tracking",
+    "search.highlight",
+]
+logo = "assets/logo.svg"
+
+[[project.theme.palette]]
+scheme = "kentima"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "kentima-dark"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to light mode"
+
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+permalink = true
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+[project.markdown_extensions.pymdownx.betterem]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.emoji]
+emoji_generator = "zensical.extensions.emoji.to_svg"
+emoji_index = "zensical.extensions.emoji.twemoji"
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.magiclink]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+[project.markdown_extensions.pymdownx.tilde]
+[project.markdown_extensions.pymdownx.snippets]
+base_path = ["docs-sv"]
+check_paths = true

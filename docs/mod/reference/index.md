@@ -41,15 +41,15 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 * [**Logbook**](Popup/Logbook.md) — Logbook entries for the object.
 * [**Documents**](Popup/Documents.md) — Documents linked to the object.
 * [**Process**](Popup/Process.md) — Process values and status signals (suffix-dependent).
-* [**Manover**](Popup/Manover.md) — Operating mode switching and manual setpoint control (suffix-dependent).
-* [**TimeChannel**](Popup/Timechannel.md) — Time-based schedule configuration (suffix-dependent).
+* [**Maneuver**](Popup/Maneuver.md) — Operating mode switching and manual setpoint control (suffix-dependent).
+* [**Time Channel**](Popup/Time-channelmd) — Time-based schedule configuration (suffix-dependent).
 * [**Control Curve**](Popup/Control curve.md) — Non-linear control curve editor (suffix-dependent).
 
 ---
 
-### [Resources and Resurspaket](resources-and-resurspaket.md) { #resources-and-resurspaket }
+### [Resources and Resource package](Resources-and-Resource-package.md) { #resources-and-resource-package }
 
-* [**Resources and Resurspaket**](resources-and-resurspaket.md) — Exporting and importing resources between projects.
+* [**Resources and Resource package**](Resources-and-Resource-package.md) — Exporting and importing resources between projects.
 
 ---
 
