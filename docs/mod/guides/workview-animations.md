@@ -15,10 +15,10 @@ tags:
 ???+ info "Requirements"
     The following scripts are required to use Workview Animations:
 
-    * `scWorkviewAnimation` script
-    * `scAlert` script
-    * `scSuffix` script
-    * `scPrototypes` script
+    * `scWorkviewAnimation` 
+    * `scAlert` 
+    * `scSuffix` 
+    * `scPrototypes` 
 
 WideQuick Modular Framework includes a built-in animation system that displays
 status colors on objects to indicate their current state — from alarms and warnings
