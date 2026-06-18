@@ -3,6 +3,7 @@ title: Releases - BMS
 description: Release notes for WideQuick BMS.
 product: bms
 page_type: release
+status: draft
 last_reviewed: 2026-06-03
 tags: 
  - BMS
@@ -13,12 +14,12 @@ tags:
 Release notes for WideQuick BMS. The newest release is listed first and expanded;
 older releases are collapsed, click a release to expand it. Each release is built on
 a specific WideQuick Modular Framework version, linked under its heading. For the full
-framework changelog see the [MOD releases](../../mod/releases/index).
+framework changelog see the [MOD releases](../../mod/releases/index.md).
 
 
 ## WideQuick BMS 2026.1.0 { #bms-2026-1-0 }
 __Released 2026-05-21__
-Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index#mod-2026-1-0) 
+Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0) 
 <details class="release" markdown="1" open>
 <summary>Release notes</summary>
 

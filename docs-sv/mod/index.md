@@ -28,23 +28,23 @@ tags:
 
 <div class="lp-quickstart" markdown>
 
--   **Installera & starta**
+-   **Konceptet**
 
-    Installera WideQuick, öppna Modular Framework-konceptappen och verifiera att den körs från start till slut.
-
-    [Genomgång →](get-started/download.md)
-
--   **Första arbetsvy**
-
-    Bygg en arbetsvy, lägg till ett grafiskt objekt och bind det till en Data Store-variabel.
-
-    [Bygg det →](get-started/Your%20First%20Tag.md)
-
--   **Arkitekturen**
-
-    Se hur moduler, lösningar, mallar och körningsmiljön hänger ihop.
+    Hur moduler, konceptapplikationer och körningsmiljön hänger ihop.
 
     [Läs mer →](concepts/)
+
+-   **Ladda ner MOD**
+
+    Var du hittar mall- och demoprojekt och hur du öppnar dem i **WideQuick Designer®**.
+
+    [Ladda ner →](get-started/download.md)
+
+-   **Din första tagg**
+
+    Koppla en tagg från start till mål och verifiera den på en processpopup.
+
+    [Skapa den →](get-started/Your%20First%20Tag.md)
 
 </div>
 
@@ -53,12 +53,6 @@ tags:
 </div>
 
 <div class="lp-browse grid cards" markdown>
-
--   :material-lightbulb-outline: **Koncept**
-
-    Ramverkets arkitektur, lösningar och hur MOD relaterar till BMS och WWT.
-
-    [Koncept →](concepts/)
 
 -   :material-puzzle-outline: **Moduler**
 

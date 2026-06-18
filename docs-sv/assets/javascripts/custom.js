@@ -383,7 +383,7 @@ if (themeFileEl) themeFileEl.addEventListener('change', function () {
 
 // Convert specific nav section headers into collapsible items, starting collapsed
 (function () {
-    const COLLAPSED = ['Guides', 'Reference'];
+    const COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens'];
 
     function collapseNavSections() {
         document.querySelectorAll('.md-nav__item--section').forEach(function (item) {
