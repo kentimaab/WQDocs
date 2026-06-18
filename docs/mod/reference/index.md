@@ -25,7 +25,7 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 
 ---
 
-### [Multiview](multiview.md) { #multiview }
+### Multiview
 
 * [**Multiview**](multiview.md) — How to configure workview linking so the system can navigate between views based on object actions.
 
@@ -47,25 +47,25 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 
 ---
 
-### [Resources and Resource package](Resources-and-Resource-package.md) { #resources-and-resource-package }
+### Resources and Resource package
 
 * [**Resources and Resource package**](Resources-and-Resource-package.md) — Exporting and importing resources between projects.
 
 ---
 
-### [Script Hierarchy](ScriptHierarchy.md) { #script-hierarchy }
+### Script Hierarchy
 
 * [**Script Hierarchy**](ScriptHierarchy.md) — Dependency map for all scripts in WideQuick MOD.
 
 ---
 
-### [Suffix System](suffix-system.md) { #suffix-system }
+### Suffix System
 
 * [**Suffix System**](suffix-system.md) — How suffix objects are structured, their attributes, and how they associate with popups.
 
 ---
 
-### [Tag Structure](tag-structure.md) { #tag-structure }
+### Tag Structure
 
 * [**Tag Structure**](tag-structure.md) — Tag naming conventions and configuration for WideQuick MOD.
 

@@ -28,17 +28,18 @@ tags:
 
 <div class="lp-quickstart" markdown>
 
--   **Install BMS**
+-   **Download BMS**
 
-    Set up the BMS concept app and verify hardware compatibility.
+    Where to get the template and demo projects, and how to open them in
+    **WideQuick Designer®**.
 
-    [Walkthrough →](get-started/download.md)
+    [Download →](get-started/download.md)
 
--   **Connect a controller**
+-   **Your first tag**
 
-    Bring in your first signal from an OPC UA, Modbus, or BACnet device.
+    Wire a tag end-to-end and verify it on a Process popup.
 
-    [Your first tag →](get-started/Your%20First%20Tag.md)
+    [Create it →](get-started/Your%20First%20Tag.md)
 
 </div>
 

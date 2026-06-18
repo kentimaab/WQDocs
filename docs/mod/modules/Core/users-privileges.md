@@ -69,6 +69,30 @@ clicking **Grant** or **Deny**
 
 ![Privilege](/Images/User_and_privileges/Privilege.png)
 
+## Virtual privileges { #virtual-privileges }
+
+A virtual privilege allows a single privilege to automatically grant one or more
+additional privileges. When a user is assigned a privilege that contains virtual
+privileges, they are also granted all the privileges listed under it — without
+needing to assign each one individually.
+
+**Example:** If the privilege `EditUsers` has `EditName` and `EditPassword` as
+virtual privileges, any user assigned `EditUsers` will automatically also have
+`EditName` and `EditPassword`.
+
+Virtual privileges are configured in the privilege properties in **WideQuick
+Designer®**. In the project tree, privileges that contain virtual privileges are
+marked with a special icon.
+
+<figure markdown="span">
+  ![VirtualPrivilege](/Images/User_and_privileges/Virtual.png)
+  <figcaption>Icon in project tree.</figcaption>
+</figure>
+
+To add virtual privileges to a privilege, open the privilege properties and click
+the **Virtual privilege** button to select which privileges should be included.
+
+
 ## Restricting Workviews by privilege { #restricting-workviews-by-privilege }
 
 Access to specific **Workviews** can be restricted based on privileges. Navigate

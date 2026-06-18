@@ -19,25 +19,25 @@ WideQuick MOD uses several SQLite databases stored in the `Data/` folder of the 
 
 ## Contents { #contents }
 
-### [Config.db](config-db.md) { #config-db }
+### Config.db
 
 * [**Config.db**](config-db.md) — The central configuration database. Stores navigation structures, object registrations, scheduled jobs, report queues, logbook entries, document references, and saved user settings across most MOD modules.
 
 ---
 
-### [History.db](history-db.md) { #history-db }
+### History.db
 
 * [**History.db**](history-db.md) — Stores logged signal data. Tables are generated dynamically by loggers — each logger produces a data table and a meta table identified by a hash of the logger name.
 
 ---
 
-### [maintenance.db](maintenance-db.md) { #maintenance-db }
+### Maintenance.db
 
-* [**maintenance.db**](maintenance-db.md) — Stores maintenance task configurations, the task log, change history, calendar events, and the registry of known remote systems.
+* [**Maintenance.db**](maintenance-db.md) — Stores maintenance task configurations, the task log, change history, calendar events, and the registry of known remote systems.
 
 ---
 
-### [SuffixConfig.db](suffixconfig-db.md) { #suffixconfig-db }
+### SuffixConfig.db
 
 * [**SuffixConfig.db**](suffixconfig-db.md) — Stores the suffix object configuration as JSON. Used by the suffix system to resolve tag structures at runtime.
 
