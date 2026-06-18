@@ -49,12 +49,12 @@ en tydlig bakgrundmarkering som förblir synlig även när den inre cirkeln inte
 och växlar mellan larm-, varnings- och servicetillstånd
 
 Det innebär att en användare direkt kan se både att ett larm är aktivt och dess
-allvarlighetsgrad, utan att behöva öppna popup-fönstret. Tvålagersystemet innebär
+larmklass, utan att behöva öppna popup-fönstret. Tvålagersystemet innebär
 också att flera tillstånd kan kommuniceras samtidigt — till exempel en aktiv
 varning med en bakgrundslarmsmarkering.
 
 Alla nya symboler är fullt kompatibla med
-[Workview Animation](../../../guides/workview-animations.md)-systemet, vilket innebär
+[arbetsvy Animation](../../../guides/arbetsvy-animations.md)-systemet, vilket innebär
 att de automatiskt svarar på alla konfigurerade animationskategorier utan någon
 ytterligare konfiguration.
 

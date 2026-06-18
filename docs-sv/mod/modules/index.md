@@ -18,7 +18,7 @@ WideQuick MOD organiserar sina funktioner i moduler. Varje modul täcker ett ege
 
 * [**Larm**](Core/alarms/index.md) — Larmvyer, kvittering, grupper och notifikationsscheman.
 * [**Grafiska symboler**](Core/Graphical-symbols/index.md) — Symbolbibliotek: komponenter, spjäll, motorer, sensorer och ventiler.
-* [**Navigation**](Core/Navigation/index.md) — Workview-navigation, behörighetskrav och GoTo-funktionen.
+* [**Navigation**](Core/Navigation/index.md) — arbetsvy-navigation, behörighetskrav och GoTo-funktionen.
 * [**Inställningar**](Core/settings.md) — Projektövergripande inställningar för Core-modulen.
 * [**Teman**](Core/Themes/index.md) — Ljust och mörkt läge, anpassade färger och hur objekt följer teman.
 * [**Användare och behörigheter**](Core/users-privileges.md) — Användarhantering och behörighetskonfiguration.
@@ -47,11 +47,11 @@ WideQuick MOD organiserar sina funktioner i moduler. Varje modul täcker ett ege
 
 ---
 
-### [Instrumentpaneler](dashboards/index.md) { #dashboards }
+### [dashboards](dashboards/index.md) { #dashboards }
 
-* [**Kom igång**](dashboards/get-started.md) — Konfigurera instrumentpaneler, widgets och rutnätslayout.
+* [**Kom igång**](dashboards/get-started.md) — Konfigurera dashboards, widgets och rutnätslayout.
 * [**Konfigurera**](dashboards/configuring.md) — Widgetparametrar och tillgängliga widgets.
-* [**Utöka**](dashboards/extending.md) — Anpassade widgets och rollbaserade instrumentpaneler.
+* [**Utöka**](dashboards/extending.md) — Anpassade widgets och rollbaserade dashboards.
 
 ---
 

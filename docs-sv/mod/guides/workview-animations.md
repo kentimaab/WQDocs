@@ -1,5 +1,5 @@
 ---
-title: Workview-animationer
+title: arbetsvy-animationer
 product: mod
 page_type: guide
 status: draft
@@ -9,10 +9,10 @@ tags:
 ---
 
 <!-- --8<-- [start:body] -->
-# Workview-animationer
+# arbetsvy-animationer
 
 ???+ info "Krav"
-    Följande skript krävs för att använda Workview-animationer:
+    Följande skript krävs för att använda arbetsvy-animationer:
 
     * `scWorkviewAnimation`-skript
     * `scAlert`-skript
@@ -56,7 +56,7 @@ egna animerade objekt beskrivs i
 Animationskategorierna och deras suffixalias konfigureras i **WideQuick
 Runtime®** genom att navigera till **Inställningar → Suffix → Suffix - Larm**.
 
-![Lista med Workview-animationer](/Images/Workview_Animations/Workview_animations_list.png)
+![Lista med arbetsvy-animationer](/Images/Workview_Animations/Workview_animations_list.png)
 
 Inställningarna är organiserade i två nivåer:
 
@@ -301,7 +301,7 @@ med alla underobjekt i gruppen.
 
 !!! note
     Egenskaperna **Connection**, **Device** och **Sys** kan också ställas in på
-    **Workview**-egenskaperna istället för på varje `DynTouch`-objekt individuellt. Se
+    **arbetsvy**-egenskaperna istället för på varje `DynTouch`-objekt individuellt. Se
     [Taggstruktur](../reference/tag-structure.md) för mer information.
 
 ### Steg 6 - Testa i driftsättning { #step-6-test-in-runtime }

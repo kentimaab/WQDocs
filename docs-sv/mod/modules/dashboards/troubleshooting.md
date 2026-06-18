@@ -1,5 +1,5 @@
 ---
-title: Instrumentpaneler
+title: dashboards
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Instrumentpaneler
+# dashboards
 
 ## Vanliga problem { #common-issues }
 

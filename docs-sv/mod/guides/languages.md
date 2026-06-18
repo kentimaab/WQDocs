@@ -32,7 +32,7 @@ Knapparna i mitten hanterar `.ts`-filer:
 * **Edit** — öppna den valda `.ts`-filen för redigering.
 * **Remove** — ta bort den valda `.ts`-filen.
 * **Rename** — byt namn på den valda `.ts`-filen.
-* **Update** — genomsök alla workviews (`.kvie`) och komponentbibliotek (`.klib`) i projektet efter textegenskaper och lägg till eventuella nya källsträngar i alla `.ts`-filer. Strängar som inte längre förekommer i projektet markeras som föråldrade.
+* **Update** — genomsök alla arbetsvyer (`.kvie`) och komponentbibliotek (`.klib`) i projektet efter textegenskaper och lägg till eventuella nya källsträngar i alla `.ts`-filer. Strängar som inte längre förekommer i projektet markeras som föråldrade.
 
 ### Redigera enskilda översättningar { #editing-translations }
 
@@ -43,7 +43,7 @@ För att redigera en specifik sträng, bläddra i trädet till höger för att h
 
 ## Översätta strängar som sätts av skript { #translating-script-strings }
 
-Etiketter, texter och knapptexter som placeras direkt på en workview i Designer plockas upp automatiskt när **Update Translations** körs. Dessa strängar översätts utan någon skriptkod.
+Etiketter, texter och knapptexter som placeras direkt på en arbetsvy i Designer plockas upp automatiskt när **Update Translations** körs. Dessa strängar översätts utan någon skriptkod.
 
 Strängar som ett skript skriver eller sätter under körning är annorlunda. Om ett skript tilldelar en etiketts värde, bygger ett meddelande eller returnerar visningstext behöver dessa strängar `Language.translate()` för att följa det aktiva språket.
 
@@ -61,7 +61,7 @@ Om ingen översättning finns för det aktiva språket returneras källsträngen
 
 För att `Language.translate()` ska fungera måste strängen finnas som en textegenskap i projektet, och i MOD placeras de i `Translations.klib`. Så här lägger du till en ny sträng:
 
-1. Lägg till ett textobjekt i valfri workview i **WideQuick Designer®** och ange dess text till den sträng som ska översättas.
+1. Lägg till ett textobjekt i valfri arbetsvy i **WideQuick Designer®** och ange dess text till den sträng som ska översättas.
 2. Dra objektet till **Translations** under Object Library.
 3. (Valfritt) Byt namn på objektet så att det matchar strängen. Det gör det lättare att hitta senare.
 

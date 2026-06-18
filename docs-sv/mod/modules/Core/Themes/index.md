@@ -30,6 +30,7 @@ Eftersom teman följer M3-standarden kan ett komplett tema med alla färgroller,
 * [**Ändra en färg**](configuring.md#changing-a-color) — Redigera färgvärden i temaredigeraren.
 * [**Hur färger appliceras på objekt**](configuring.md#how-colors-are-applied-to-objects) — Hur objekt refererar till temafärger via skript.
 * [**Anpassade färger**](configuring.md#custom-colors) — Projektspecifika färger och hur man lägger till dem.
+* [**Modulspecifika färgpaletter**](configuring.md#module-specific-color-palettes) — Separata paletter för Kalender, Historia, Underhåll, Kartor, Rör och Värdevisning.
 
 ---
 

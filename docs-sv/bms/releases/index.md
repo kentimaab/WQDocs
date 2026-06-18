@@ -30,7 +30,7 @@ Detta är den första versionen av WideQuick BMS i Modular Framework-familjen �
 | --- | --- |
 | **Flerspråksstöd** | Vyer, skript, objektbiblioteket, dynamik och datalager är nu fullt översättningsbara, med en inbyggd språkväljare och flaggikoner för att byta språk vid körning. |
 | **Verktygstipsystem** | En ny verktygstipsmekanism (`scToolTip`) lägger till kontextuella hjälprutor i hela systemet, inklusive historik- och kartobjekt. |
-| **Omskrivet workview-animationssystem** | Animationssystemet har byggts om från grunden för att vara mer mångsidigt och enklare att konfigurera, med en tillhörande inställningsvy och hjälpfunktioner för att läsa användardefinierade temafärger. |
+| **Omskrivet arbetsvy-animationssystem** | Animationssystemet har byggts om från grunden för att vara mer mångsidigt och enklare att konfigurera, med en tillhörande inställningsvy och hjälpfunktioner för att läsa användardefinierade temafärger. |
 | **ObjectFinder & goTo** | Varje objekt indexeras automatiskt med sin vysökväg och sitt namn, och den nya funktionen `goTo` låter dig hoppa direkt till vilket objekt som helst från var som helst i projektet. |
 | **Konfigurerbart körningsbeteende** | Uppdateringsfrekvensen för värdevisning kan nu justeras vid körning, och valt tema (ljust/mörkt) sparas och återställs vid nästa uppstart. |
 | **Automatisk datalagring** | Loggrar och historik rensar nu automatiskt data som är äldre än en angiven ålder (t.ex. två år), vilket hindrar databaser från att växa obegränsat över tid. |
@@ -53,7 +53,7 @@ Detta är den första versionen av WideQuick BMS i Modular Framework-familjen �
 | **Historik** | Historik kan nu visas för hela projektet, inte bara ett enskilt objekt, med automatisk decimalskalning och en bredare färgspridning för lättlästa flerkurvstrender. |
 | **Underhåll** | Väsentligt utökad: återkommande underhållsuppgifter med ett trädvyobjektväljare, realtidssynkronisering över alla anslutna klienter, uppdateringsknappar, en per-användare underhållsräknare på översiktsbilden, samt status- och prioritetsfärger genomgående. En ny **systemidentitets**-mekanism registrerar varje system, märker uppgifter efter system och lägger till en Systemkolumn och ett filter så att en enda underhållsdatabas kan betjäna flera installationer. |
 | **Rapporter** | Rapportschemaläggaren stöder nu två tidsintervall per dag och schemaläggning med alias, visar tydliga statusmeddelanden och kan skapas och köras från fjärrklienter. Rapporter från en befintlig WideQuick-installation kan också migreras till ett Modular Framework-projekt. |
-| **Larm** | En ny larmfrekvensvy visar hur ofta larm uppstår, fjärrlarm kan schemaläggas i larmscheman med allvarlighetsgrad och grupp, larmscheman fick knappar för att markera/avmarkera alla larmgrupper, knappen "Visa information" stöder visningsskript, och larmlognhändelser registreras inte längre dubbelt. Larmlistans statusfärger följer den standardiserade BMS-larmfärgkonfigurationen. |
+| **Larm** | En ny larmfrekvensvy visar hur ofta larm uppstår, fjärrlarm kan schemaläggas i larmscheman med larmklass och grupp, larmscheman fick knappar för att markera/avmarkera alla larmgrupper, knappen "Visa information" stöder visningsskript, och larmlognhändelser registreras inte längre dubbelt. Larmlistans statusfärger följer den standardiserade BMS-larmfärgkonfigurationen. |
 
 ### Ändringar
 

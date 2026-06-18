@@ -90,11 +90,11 @@ Varje post i `Views` definierar en taggkategori som används av statusindikators
 
 | Attribut | Typ | Beskrivning |
 |---|---|---|
-| `vector` | sträng | Namnet på den körtidsarray som ska hålla matchande taggnamn för denna kategori. |
+| `vector` | sträng | Namnet på den körningsarray som ska hålla matchande taggnamn för denna kategori. |
 | `blink` | sträng | Anger om indikatorn blinkar när taggar i denna kategori är aktiva. `"true"` eller `"false"`. |
 | `suffixes` | objekt | Suffixdefinitioner som skannas för att bygga kategorins tagglista. Endast `suffix` och `desc` används här. |
 
-## Taggupplösning vid körtid { #tag-resolution }
+## Taggupplösning vid körning { #tag-resolution }
 
 När ett DynTouch-objekt klickas sätts bastaggnamnet samman från objektets egenskaper:
 
@@ -127,7 +127,7 @@ Denna bootstrap körs automatiskt. Ingen manuell hantering behövs i popup-arbet
 
 ## Redigera konfigurationen { #editing }
 
-Suffixkonfigurationen lagras som JSON i `SuffixConfig.db` och laddas in i minnet av `scSuffix` vid uppstart. Ändringar träder i kraft efter att körtiden startas om eller skriptet laddas om.
+Suffixkonfigurationen lagras som JSON i `SuffixConfig.db` och laddas in i minnet av `scSuffix` vid uppstart. Ändringar träder i kraft efter att körningen startas om eller skriptet laddas om.
 
 `scSuffix` hanterar migrering automatiskt: om den hittar det äldre enkolumns-`JSON`-formatet i `SuffixObj` delar den upp innehållet i de tre separata kolumnerna (`Popups`, `ProcessViews`, `Views`) vid första läsningen.
 

@@ -92,7 +92,7 @@ Diagrammet nedan visar hur hela stacken passar ihop: från WideQuick HMI/SCADA-p
         <div class="arch-sublabel-col arch-sublabel-col--light"><span>Core</span></div>
         <div class="arch-content arch-content--core">
           <div class="arch-mini-chips">
-            <span>Workviews</span><span>Graphical Objects</span><span>Interactive Objects</span><span>Dynamics</span><span>Alarms</span><span>History</span><span>Events</span><span>Users</span><span>Themes</span><span>Language</span><span>Data Store</span>
+            <span>arbetsvyer</span><span>Graphical Objects</span><span>Interactive Objects</span><span>Dynamics</span><span>Alarms</span><span>History</span><span>Events</span><span>Users</span><span>Themes</span><span>Language</span><span>Data Store</span>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@ Diagrammet nedan visar hur hela stacken passar ihop: från WideQuick HMI/SCADA-p
 
 Börja nerifrån. **WideQuick HMI/SCADA** är plattformslagret: körningsmiljön, den grafiska motorn, kommunikationsprotokoll och kärnfunktioner som larm, historik och användarhantering. Det är det som alla WideQuick-projekt körs på.
 
-Ett lager upp sitter WideQuick MOD. Det lägger till en strukturerad projektmodell ovanpå WideQuick och ett bibliotek av färdigbyggda moduler: larm, underhåll, instrumentpaneler, historik, navigering och mer. Integratörer väljer vad projektet behöver och lämnar bort resten.
+Ett lager upp sitter WideQuick MOD. Det lägger till en strukturerad projektmodell ovanpå WideQuick och ett bibliotek av färdigbyggda moduler: larm, underhåll, dashboards, historik, navigering och mer. Integratörer väljer vad projektet behöver och lämnar bort resten.
 
 Längst upp finns **konceptapplikationerna**, BMS och WWT. Dessa är inte separata produkter. De är förkonfigurerade implementationer av WideQuick MOD, byggda för en specifik bransch, med ett bestämt modulurval och en projektstruktur som redan finns på plats.
 
@@ -141,7 +141,7 @@ Många framgångsrika driftsättningar använder aldrig en konceptapplikation al
 
 Varje modul i ramverket är oberoende. Det finns inga dolda beroenden mellan exempelvis Kalendermodulen och Larmmodulen. Var och en kan inkluderas eller exkluderas utan att påverka de andra.
 
-För en systemintegratör innebär detta att den levererade applikationen kan avgränsas exakt till vad slutkunden behöver. En mindre installation kan köras med Larm, Historik och en Instrumentpanel. En större lägger till Underhållsschemaläggning, Rapporter och Kartor. Inget av projekten kräver tillfälliga lösningar eller stub-implementationer för de funktioner som lämnades bort.
+För en systemintegratör innebär detta att den levererade applikationen kan avgränsas exakt till vad slutkunden behöver. En mindre installation kan köras med Larm, Historik och en dashboard. En större lägger till Underhållsschemaläggning, Rapporter och Kartor. Inget av projekten kräver tillfälliga lösningar eller stub-implementationer för de funktioner som lämnades bort.
 
 Det praktiska arbetsflödet är att börja från mallapplikationen, inkludera de relevanta modulerna och ta bort resten. Det som återstår är en ren, ändamålsenlig applikation utan döda vyer eller oanvänd konfiguration.
 

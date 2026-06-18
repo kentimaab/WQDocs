@@ -23,7 +23,7 @@ WideQuick Modular Framework inkluderar en inbyggd modul för Kartor och indikato
 ---
 
 ### [Konfigurera](configuring.md) { #configuring }
-* [**Nålstatus**](configuring.md#pin-status) — Hur man konfigurerar nålstatusobjekt för live-statusvisning av **Workview**.
+* [**Nålstatus**](configuring.md#pin-status) — Hur man konfigurerar nålstatusobjekt för live-statusvisning av **arbetsvy**.
 * [**Klustrade nålar**](configuring.md#cluster-pins) — Hur man konfigurerar klustrade nålar för att gruppera underliggande nålar och minska röran.
 * [**Linjer**](configuring.md#lines) — Hur man konfigurerar linjnätverk för att visualisera vägar och rör.
 * [**Filter**](configuring.md#filter) — Hur man lägger till ett filterobjekt för att växla synligheten för linjnätverk.

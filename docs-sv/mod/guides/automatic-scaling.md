@@ -29,9 +29,9 @@ Huvudvyn skalas automatiskt — ingen konfiguration krävs. `scWM` applicerar ko
 
 ## Skalning av popup-fönster { #popup-scaling }
 
-Popup-fönster skalas inte automatiskt. För att skala ett popup-fönster proportionellt mot huvudvyn och placera det på skärmen, anropa `scWM.scaleAndPlacePopup()` i popup-workviewens **onLoad**-skript. För att hitta onLoad-skriptet, högerklicka på workviewen i projektträdet i **WideQuick Designer®**, välj **Egenskaper**, öppna fliken **Åtgärd** och dubbelklicka på **load**.
+Popup-fönster skalas inte automatiskt. För att skala ett popup-fönster proportionellt mot huvudvyn och placera det på skärmen, anropa `scWM.scaleAndPlacePopup()` i popup-arbetsvyns **onLoad**-skript. För att hitta onLoad-skriptet, högerklicka på arbetsvyn i projektträdet i **WideQuick Designer®**, välj **Egenskaper**, öppna fliken **Åtgärd** och dubbelklicka på **load**.
 
-```javascript title="Popup workview — onLoad"
+```javascript title="Popup arbetsvy — onLoad"
 scWM.scaleAndPlacePopup(this);
 ```
 
@@ -47,27 +47,27 @@ Som standard centreras popup-fönstret inom huvudinnehållsområdet, exklusive n
 | `"left"` | Förankrad till vänster på skärmen |
 | `"right"` | Förankrad till höger på skärmen |
 
-```javascript title="Popup workview — onLoad (bottom alignment)"
+```javascript title="Popup arbetsvy — onLoad (bottom alignment)"
 scWM.scaleAndPlacePopup(this, "bottom");
 ```
 
 ### Aktivera Pannable/Zoomable { #enabling-pannablezoomable }
 
-Skalning av popup-fönster kräver att **Pannable/Zoomable** är aktiverat på popup-workviewen. I **WideQuick Designer®**, högerklicka på workviewen i projektträdet och välj **Egenskaper**. Öppna fliken **Layout** och markera **Pannable/Zoomable**.
+Skalning av popup-fönster kräver att **Pannable/Zoomable** är aktiverat på popup-arbetsvyn. I **WideQuick Designer®**, högerklicka på arbetsvyn i projektträdet och välj **Egenskaper**. Öppna fliken **Layout** och markera **Pannable/Zoomable**.
 
-![Pannable/Zoomable setting in workview properties](/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
+![Pannable/Zoomable setting in arbetsvy properties](/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
 
 ## Placering utan skalning { #placement-without-scaling }
 
 För mindre popup-fönster som inte behöver ändra storlek, använd `scWM.placePopup()` för att centrera popup-fönstret utan att skala det:
 
-```javascript title="Popup workview — onLoad"
+```javascript title="Popup arbetsvy — onLoad"
 scWM.placePopup(this);
 ```
 
 ## Ladda om en vy { #reloading-a-view }
 
-För att tvinga en workview att återinitialiseras, använd `scWM.reloadPage()`:
+För att tvinga en arbetsvy att återinitialiseras, använd `scWM.reloadPage()`:
 
 ```javascript title="Button or script"
 scWM.reloadPage("ViewName");

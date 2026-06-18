@@ -1,5 +1,5 @@
 ---
-title: Loggbok — Utökning
+title: Loggbok — Utöka
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Loggbok — Utökning
+# Loggbok — Utöka
 
 ## Behörigheter { #privileges }
 

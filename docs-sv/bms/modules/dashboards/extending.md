@@ -1,5 +1,5 @@
 ---
-title: Dashboards - Utökning
+title: Dashboards - Utöka
 product: bms
 page_type: module
 status: draft

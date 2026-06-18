@@ -104,13 +104,13 @@ Pins lämpar sig väl för att markera platser av intresse, till exempel en anl�
 övervakas eller styrs. Lägg till en pin på samma sätt som vilket annat objekt som helst i en **Map View**,
 och tilldela den longitud och latitud för platsen.
 
-För att göra pinnen klickbar och länka den till en relaterad **Workview**, redigera
+För att göra pinnen klickbar och länka den till en relaterad **arbetsvy**, redigera
 egenskapen **linkedView**:
 
 ![Pin Settings](/Images/Map_Indicators/PinSettings.png)
 
-Värdet ska vara en sökväg till en **Workview** i mappen **Main_Menu** eller **System**.
-I exemplet ovan pekar den på processvyn **Workview** **Inlopp**,
+Värdet ska vara en sökväg till en **arbetsvy** i mappen **Main_Menu** eller **System**.
+I exemplet ovan pekar den på processvyn **arbetsvy** **Inlopp**,
 som finns på `System/Videdal/Inlopp.kvie`.
 
 ### Väder-widget { #weather-widget }

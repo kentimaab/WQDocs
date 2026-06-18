@@ -1,5 +1,5 @@
 ---
-title: Rapporter — Utökning
+title: Rapporter — Utöka
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Rapporter — Utökning
+# Rapporter — Utöka
 WideQuick levereras med en uppsättning standardrapportmallar, men det är också möjligt att 
 skapa helt anpassade mallar som är skräddarsydda för dina specifika behov. Det här avsnittet 
 täcker hela processen för att skapa en anpassad rapportmall och tillhörande 
@@ -24,7 +24,7 @@ Om inte, se [Rapporter — Kom igång](get-started.md) & [Rapporter — Konfigur
 Processen för att skapa egna rapportmallar består av tre steg:
 
 1. Designa din mall i Excel
-2. Konfigurera datablad, makron och loggrar
+2. Konfigurera datablad, makron och loggenheter
 3. Koppla ihop allt
 
 ### Designa din mall { #designing-your-template }
@@ -40,7 +40,7 @@ alla andra visuella element som rapporten ska visa.
 bladet matar presentationsbladet med data. Databladet är enklare att konfigurera i 
 **WideQuick Designer®**, där dolda blad är synliga, jämfört med direkt i Excel.
 * Metablad — Ett dolt blad som innehåller allmän information om rapporten, som 
-rapporttitel, aktuellt datum och tid, vald loggare och valda signaler. Det här 
+rapporttitel, aktuellt datum och tid, vald loggenhet och valda signaler. Det här 
 bladet är användbart för att visa rapportmetadata på presentationsbladet.
 
 !!! tip "Kom igång"
@@ -63,7 +63,7 @@ För att dölja bladet, högerklicka på bladfliken och välj **Hide Sheet**.
     generera en rapport med bladet synligt när makrokommandot är inställt, för att få 
     en känsla för hur datan är orienterad.
 
-### Konfigurera datablad, makron och loggrar { #configuring-the-data-sheet-macros-and-loggers }
+### Konfigurera datablad, makron och loggenheter { #configuring-the-data-sheet-macros-and-loggers }
 Databladet är ett dolt blad i rapportmallen som fungerar som behållare 
 för rådata hämtad från databasen. När en rapport genereras använder WideQuick 
 makrokommandon placerade i databladet för att fråga databasen och fylla den med data.
@@ -81,7 +81,7 @@ Nedan beskrivs varje fält:
 * **Variable** — Definierar vilken signal som ska frågas. Två alternativ är tillgängliga:
     * `variable_ref[#]` — Frågar en specifik signal, där `#` är signalens index. 
     Ett separat makroanrop krävs för varje signal.
-    * `alarms` — En jokertecken som hämtar alla larm i den valda loggaren.
+    * `alarms` — En jokertecken som hämtar alla larm i den valda loggenheten.
 
 * **Values** — Definierar vilka datakolumner som ska inkluderas. Beror på typen av data 
 som frågas:
@@ -89,7 +89,7 @@ som frågas:
     * Larmdata: `name`, `state`, `severity`, `timestamp`, `text`, `group` — inkludera 
     bara de fält som behövs för rapporten.
 
-* **Logger** — Loggaren som rapporten hämtar data från. Denna måste anges statiskt 
+* **Logger** — Loggenheten som rapporten hämtar data från. Denna måste anges statiskt 
 och kan inte ändras dynamiskt.
 * **Fixed/Range timespan** — Rapportören använder **Range timespan** som standard, med 
 `Report_Reference.from_time` och `Report_Reference.to_time` som start- och sluttider. 
@@ -139,11 +139,11 @@ användaren i ReportController vid generering av rapporten.
 
 !!! tip "Metablad"
     Metabladet är ett användbart ställe att lagra allmän rapportinformation som inte 
-    hämtas från loggaren. Det använder `$()` -uttryck för att skriva ut interna eller systemvariabler 
+    hämtas från loggenheten. Det använder `$()` -uttryck för att skriva ut interna eller systemvariabler 
     direkt i celler. Till exempel:
 
     * `$(Report_Reference.title)` — Rapporttiteln angiven av användaren.
-    * `$(Report_Reference.logger)` — Loggaren som används för rapporten.
+    * `$(Report_Reference.logger)` — Loggenheten som används för rapporten.
     * `$(Report_Reference.from_time)` — Rapportens starttid.
     * `$(Report_Reference.to_time)` — Rapportens sluttid.
     * `$(Report_Reference.limit)` — Det maximala antalet händelser.
@@ -193,7 +193,7 @@ För att komma igång, navigera till **Templates** i projektträdet och duplicer
 och döp om det för att matcha rapportmallens namn.
 
 När en ReportController-vy laddas, initierar dess mallskript ett `view.data`-objekt 
-med standardvärden såsom rapporttyp, tidsintervall, loggare och signalreferenser.
+med standardvärden såsom rapporttyp, tidsintervall, loggenhet och signalreferenser.
 Varje objekt placerat i vyn — som `to_time`, `Report_CustomTitle` och 
 `LoggerList` — läser från och skriver till detta delade `view.data`-objekt när användaren 
 interagerar med dem.
@@ -219,8 +219,8 @@ För att bygga vyn finns en uppsättning färdiga objekt tillgängliga i objektb
 
 | Objekt | Använd när |
 |---|---|
-| `LoggerList` | Du behöver att användaren väljer signaler från en loggare |
-| `LarmLogger_list` | Du behöver att användaren väljer larm från en larmloggare |
+| `LoggerList` | Du behöver att användaren väljer signaler från en loggenhet |
+| `LarmLogger_list` | Du behöver att användaren väljer larm från en larmloggenhet |
 | `Report_CustomTitle` | Du vill att användaren ska ange en anpassad rapporttitel |
 | `Button_CreateReport` | Alltid — detta krävs för att generera rapporten |
 | `Report_output_type` | Du vill att användaren ska kunna välja mellan PDF- och Excel-utdata |
@@ -231,25 +231,25 @@ För att bygga vyn finns en uppsättning färdiga objekt tillgängliga i objektb
 
 ### LoggerList { #loggerlist }
 `LoggerList`-objektet är en TreeView konfigurerad för att visa signalerna som loggas av en 
-specifik loggare. När en signal väljs visas en grön bockmarkering bredvid den i 
-TreeView. Objektet inkluderar även två textrutor som visar den aktuellt valda loggaren 
+specifik loggenhet. När en signal väljs visas en grön bockmarkering bredvid den i 
+TreeView. Objektet inkluderar även två textrutor som visar den aktuellt valda loggenheten 
 och antalet valda signaler av det maximalt tillåtna.
 
-Loggaren som ska visas och det maximala antalet valbara signaler konfigureras båda 
+Loggenheten som ska visas och det maximala antalet valbara signaler konfigureras båda 
 som egenskaper på objektet. Tilldela önskade värden när du placerar objektet i en 
 ReportController.
 
 ### LarmLogger_list { #larmlogger_list }
 `LarmLogger_list`-objektet är en specialiserad version av `LoggerList`, byggd 
-för att visa larm loggade av en loggare. Till skillnad från `LoggerList` bygger den automatiskt 
+för att visa larm loggade av en loggenhet. Till skillnad från `LoggerList` bygger den automatiskt 
 sitt träd baserat på larmgrupper och utelämnar redundant information. Om till exempel alla 
-larm i loggaren följer mönstret `AS01.AS01_XXX_XX`, kommer TreeView att visa 
+larm i loggenheten följer mönstret `AS01.AS01_XXX_XX`, kommer TreeView att visa 
 dem enkelt som `XXX_XX`.
 
 Det här objektet har två egenskaper som måste konfigureras:
 
-* **Logger** — Bestämmer vilken loggare som TreeView byggs från. Detta bör alltid 
-matcha loggaren som rapporten frågar mot.
+* **Logger** — Bestämmer vilken loggenhet som TreeView byggs från. Detta bör alltid 
+matcha loggenheten som rapporten frågar mot.
 * **Signals** — Styr hur många signaler som kan väljas för rapporten. Standardvärdet för 
 maximum är 15, men detta kan ändras — se [här](#changing-the-maximum-of-signals-to-be-selected). 
 Den här egenskapen bör alltid anges till ett numeriskt värde, om inte TreeView är 

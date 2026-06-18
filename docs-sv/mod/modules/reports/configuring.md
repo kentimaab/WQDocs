@@ -52,7 +52,7 @@ uttrycksredigeraren.
 </figure>
 
 För att ändra vilken logger som visas när rapporten skapas, navigera till 
-**Workviews → Partials → ReportController → Alarm_Report** i **WideQuick Designer®**. 
+**arbetsvyer → Partials → ReportController → Alarm_Report** i **WideQuick Designer®**. 
 Välj objektet `LarmLogger_list`, gå till **Properties** och uppdatera egenskapen **Logger** 
 till önskad logger.
 
@@ -126,7 +126,7 @@ GIF-bilden nedan:
 
 Nu visar rapportmallen bara innevarande år. Den hämtar dock fortfarande data från 
 tre år bakåt, så ytterligare ändringar krävs. Navigera till 
-**Workviews → Partials → ReportController → Energy_Report** i **WideQuick Designer®**. 
+**arbetsvyer → Partials → ReportController → Energy_Report** i **WideQuick Designer®**. 
 Välj objektet `to_time_Singel`, gå till **Properties** och ändra värdet för 
 **YearsPrior** till 1. Rapporten är nu konfigurerad för att producera en Energirapport för 
 innevarande år.
@@ -143,7 +143,7 @@ Välj sedan rad 113 i rubrikbladet och klistra in följande:
 ```
 
 Spara Excel-filen och öppna **WideQuick Designer®**. Navigera till 
-**Workviews → Partials → ReportController → Energy_Report**. Välj 
+**arbetsvyer → Partials → ReportController → Energy_Report**. Välj 
 objektet `to_time_Singel` och ändra egenskapen **YearsPrior** till 1.
 
 Rapporteraren producerar nu en fullständig årsrapport från det angivna datumet, med ett 

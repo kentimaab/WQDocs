@@ -1,5 +1,5 @@
 ---
-title: Historik - Utökning
+title: Historik - Utöka
 product: bms
 page_type: module
 status: draft

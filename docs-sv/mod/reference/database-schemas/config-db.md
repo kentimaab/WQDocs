@@ -27,14 +27,14 @@ Config.db är den centrala konfigurationsdatabasen. Den lagrar beständigt appli
 |---|---|
 | `navMenu` | Huvudnavigationsmenyn, lagrad som JSON. Byggs och uppdateras av `scNav` vid körning. |
 | `subNavs` | Undernavigationsstrukturer för enskilda vyer, lagrade som JSON. Hanteras av `scSubNav`. |
-| `viewPrivilegies` | Behörighetskrav per workview-namn. Styr vilka användare som har åtkomst till en given vy. |
+| `viewPrivilegies` | Behörighetskrav per arbetsvy-namn. Styr vilka användare som har åtkomst till en given vy. |
 
 ## Historik { #history }
 
 | Tabell | Beskrivning |
 |---|---|
 | `History_SavedSignals_Project` | Projektövergripande sparade signalgrupper i historikmodulen. Tillgängliga för alla användare. |
-| `History_SavedSignals_View` | Vyspecifika sparade signalgrupper i historikmodulen. Begränsade till en specifik workview. |
+| `History_SavedSignals_View` | Vyspecifika sparade signalgrupper i historikmodulen. Begränsade till en specifik arbetsvy. |
 
 ## Loggbok { #logbook }
 
@@ -48,7 +48,7 @@ Config.db är den centrala konfigurationsdatabasen. Den lagrar beständigt appli
 | Tabell | Beskrivning |
 |---|---|
 | `ReportQueue` | Väntande rapportgenereringsjobb som väntar på att bearbetas av `scReports`. |
-| `reportSchedules` | Schemalagda automatiska rapportkonfigurationer — frekvens, tidsfönster, loggare, mottagare och utdataformat. |
+| `reportSchedules` | Schemalagda automatiska rapportkonfigurationer — frekvens, tidsfönster, loggenhet, mottagare och utdataformat. |
 | `reportStats` | Historik över slutförda och misslyckade rapportjobb, inklusive felräkningar och tidsstämplar. |
 
 ## Dokument { #documents }
@@ -63,7 +63,7 @@ Config.db är den centrala konfigurationsdatabasen. Den lagrar beständigt appli
 
 | Tabell | Beskrivning |
 |---|---|
-| `ObjectList` | Mappar processobjekt till de workviews de visas i och deras DataStore-namn. Används av `scObjectFinder` och `scLinking` för att lösa upp objektplatser vid körning. |
+| `ObjectList` | Mappar processobjekt till de arbetsvyer de visas i och deras DataStore-namn. Används av `scObjectFinder` och `scLinking` för att lösa upp objektplatser vid körning. |
 
 ## Styrkurvor { #control-curves }
 

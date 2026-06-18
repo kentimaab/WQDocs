@@ -1,5 +1,5 @@
 ---
-title: Dokument - Utökning
+title: Dokument - Utöka
 product: bms
 page_type: module
 status: draft

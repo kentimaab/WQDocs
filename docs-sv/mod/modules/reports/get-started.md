@@ -73,7 +73,7 @@ rapporter via e-post kräver att en SMTP-server är konfigurerad, vilket förkla
 
 <figure markdown="span">
   ![Report](/Images/Reports/Report.png)
-  <figcaption>Listworkviewen för rapporter i WideQuick Runtime.</figcaption>
+  <figcaption>Listarbetsvyn för rapporter i WideQuick Runtime.</figcaption>
 </figure>
 
 För att skapa en ny rapport, klicka på **Skapa rapport**. En konfigurationsmeny visas
@@ -106,7 +106,7 @@ mellan dem genom att ändra rullgardinsmenyn **Rapportmall**.
 </div>
 
 De fyra ReportControllers delar en liknande struktur men skiljer sig åt i vilka alternativ som
-är tillgängliga och vilka loggrar som visas i TreeView. Nedan finns en beskrivning av varje
+är tillgängliga och vilka loggenheter som visas i TreeView. Nedan finns en beskrivning av varje
 alternativ:
 
 * **Rapportmall** — Den rapportmall som ska användas. Standardvärde är **Alarm_Report**. En guide
@@ -139,7 +139,7 @@ För att schemalägga en rapport, navigera till
 
 <figure markdown="span">
   ![Report schedule](/Images/Reports/Report_schedule.png)
-  <figcaption>Workviewen Rapportschema i WideQuick Runtime.</figcaption>
+  <figcaption>arbetsvyn Rapportschema i WideQuick Runtime.</figcaption>
 </figure>
 
 Klicka på **Nytt schema** för att skapa ett nytt schema. En meny med tre sidor visas
