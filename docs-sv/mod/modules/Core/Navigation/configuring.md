@@ -62,5 +62,5 @@ inaktiverat visas inte dess undermenyer oavsett inställningen för **Visa låst
 
 ## Nästa steg { #next-steps }
 
-* [Utökning](extending.md) — GoTo-funktion och anpassade navigationsikoner
+* [Utöka](extending.md) — GoTo-funktion och anpassade navigationsikoner
 <!-- --8<-- [end:body] -->

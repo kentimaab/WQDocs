@@ -1,5 +1,5 @@
 ---
-title: Kartor - Utökning
+title: Kartor - Utöka
 product: bms
 page_type: module
 status: draft

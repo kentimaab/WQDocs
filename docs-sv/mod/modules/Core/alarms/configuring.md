@@ -69,7 +69,7 @@ Fältet **Measure** på ett larm aktiverar en åtgärdskolumn i larmlistan. Geno
 Vyn **Alarm - Schedule** styr när och till vem larmnotifieringar skickas via e-post eller SMS. Den visar ett stapeldiagram över skickade och misslyckade e-postmeddelanden och SMS under den senaste månaden, en lista med alla konfigurerade scheman samt en statuspanel med schemantal, aktuellt larmantal och SMTP-status.
 
 !!! note "Krav"
-    Notifieringsscheman kräver att `scAlarmSender` körs samt en konfigurerad e-post- eller SMS-kanal. Se [Utökning](extending.md).
+    Notifieringsscheman kräver att `scAlarmSender` körs samt en konfigurerad e-post- eller SMS-kanal. Se [Utöka](extending.md).
 
 ![Vyn Alarm - Schedule](/Images/Alarms/alarm-schedule-view.png){align=center}
 
@@ -113,5 +113,5 @@ Klicka på **Delete schedule** för att ta bort det valda schemat.
 
 ## Nästa steg { #next-steps }
 
-* [Utökning](extending.md) — konfigurera e-post och SMS för larmnotifieringar
+* [Utöka](extending.md) — konfigurera e-post och SMS för larmnotifieringar
 <!-- --8<-- [end:body] -->

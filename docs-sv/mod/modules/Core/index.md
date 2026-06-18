@@ -20,7 +20,7 @@ Kärna är grunden i varje WideQuick MOD-installation. Till skillnad från valfr
 
 * [**Kom igång**](alarms/get-started.md) — Larmvyer, kvittering av larm och larmlistor i processvyer.
 * [**Konfigurering**](alarms/configuring.md) — Skapa larmgrupper, lägga till larm och notifieringsscheman.
-* [**Utökning**](alarms/extending.md) — E-post- och SMS-notifieringar.
+* [**Utöka**](alarms/extending.md) — E-post- och SMS-notifieringar.
 
 ---
 
@@ -35,7 +35,7 @@ Kärna är grunden i varje WideQuick MOD-installation. Till skillnad från valfr
 
 * [**Kom igång**](Navigation/get-started.md) — Lägga till arbetsvyer i navigationen, helskärmsmenyn.
 * [**Konfigurering**](Navigation/configuring.md) — Behörighetskrav på vyer, visningsinställningar för begränsade vyer.
-* [**Utökning**](Navigation/extending.md) — GoTo-funktion, anpassade navigationsikoner.
+* [**Utöka**](Navigation/extending.md) — GoTo-funktion, anpassade navigationsikoner.
 
 ---
 
@@ -49,7 +49,7 @@ Kärna är grunden i varje WideQuick MOD-installation. Till skillnad från valfr
 
 * [**Kom igång**](Themes/get-started.md) — Ljust och mörkt läge, byta tema, hur objekt följer teman.
 * [**Konfigurering**](Themes/configuring.md) — Ändra färger, hur färger appliceras på objekt, anpassade färger.
-* [**Utökning**](Themes/extending.md) — Skapa anpassade teman och de inbyggda teman som levereras med MOD.
+* [**Utöka**](Themes/extending.md) — Skapa anpassade teman och de inbyggda teman som levereras med MOD.
 
 ---
 

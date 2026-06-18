@@ -20,7 +20,7 @@ Nedladdningen innehåller allt som behövs för att komma igång:
 
 Projektet kan öppnas och utforskas fritt i WideQuick Designer, men driftsättning av ett levande system kräver licensen **WideQuick Advanced** eller högre.
 
-Om du behöver en WideQuick-licens, vänligen kontakta Kentimas [säljavdelning](https://www.kentima.com/en-GB/Kontakt)
+Om du behöver en WideQuick-licens, vänligen kontakta Kentimas [säljavdelning](https://www.kentima.com/en-GB/Kontakt){target="_blank"}
 
 ## Mall- kontra demoapplication
 

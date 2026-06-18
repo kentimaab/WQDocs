@@ -49,9 +49,9 @@ Om du klickar på en underhållshändelse öppnas ett popup-fönster som visar o
 
 En påminnelsehändelse kan visas i kalendern ett angivet antal dagar före en underhållsdeadline. Påminnelsen visas som en separat post med färgen **Påminnelse**, skild från själva deadlinehändelsen.
 
-Påminnelser är aktiverade som standard för uppgifter som skapas utan en mall. Uppgifter som skapas från en mall använder mallens påminnelseinställning, som är avstängd som standard. Standard påminnelseförskjutningen är 3 dagar. Se [Utökning](extending.md#reminder-configuration) för hur du ändrar dessa inställningar.
+Påminnelser är aktiverade som standard för uppgifter som skapas utan en mall. Uppgifter som skapas från en mall använder mallens påminnelseinställning, som är avstängd som standard. Standard påminnelseförskjutningen är 3 dagar. Se [Utöka](extending.md#reminder-configuration) för hur du ändrar dessa inställningar.
 
 ## Nästa steg { #next-steps }
 
-* [Utökning](extending.md) — konfiguration av påminnelseförskjutning
+* [Utöka](extending.md) — konfiguration av påminnelseförskjutning
 <!-- --8<-- [end:body] -->

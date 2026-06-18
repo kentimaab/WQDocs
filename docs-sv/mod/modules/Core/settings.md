@@ -48,7 +48,7 @@ och mörkt läge.
 
 **SMTP-inställningar** — konfigurerar den SMTP-server som används för att skicka e-postaviseringar.
 Klicka på **Redigera** för att öppna konfigurationsdialogen. Se
-[Larm — Utökning](../Core/alarms/extending.md#email-notifications) för mer
+[Larm — Utöka](../Core/alarms/extending.md#email-notifications) för mer
 information.
 
 **Fjärrsystem** — hanterar anslutningar till fjärranslutna WideQuick Runtime-instanser. Klicka
@@ -96,12 +96,12 @@ användaren.
 
 **Kräv inloggning** — när aktiverat måste användare logga in innan de får tillgång till systemet.
 När inaktiverat kringgås inloggningsskärmen och användaren går in som oautentiserad.
-Se [Inloggningskonfigurationer](../../guides/Login%20Config.md#require-login) för mer
+Se [Inloggningskonfigurationer](../../guides/Login%20Config/#require-login) för mer
 information.
 
 **Kräv användarnamn** — när aktiverat måste användare skriva sitt fullständiga användarnamn när
 de loggar in. När inaktiverat visas istället en kombinationsruta med alla tillgängliga användare.
-Se [Inloggningskonfigurationer](../../guides/Login%20Config.md#require-username)
+Se [Inloggningskonfigurationer](../../guides/Login%20Config/#require-username)
 för mer information.
 
 ---
@@ -121,7 +121,7 @@ för mer information.
 **Helskärm** — växlar huruvida applikationen körs i helskärmsläge.
 
 **Direktnavigering (karta)** — när aktiverat navigerar ett klick på ett nålobjekt på en karta
-direkt till dess länkade **Workview**. När inaktiverat visas först en informationspanel
+direkt till dess länkade **arbetsvy**. När inaktiverat visas först en informationspanel
 som låter användaren välja om denne vill navigera. Se
 [Kartor — Konfigurering](../maps/configuring.md) för mer information.
 
@@ -140,6 +140,6 @@ Användbart för att diagnostisera problem i produktionsmiljöer.
 
 **GSM-modem** — konfigurerar det GSM-modem som används för SMS-larmaviseringar. Klicka
 på **Ändra GSM-inställningar** för att öppna konfigurationsdialogen. Se
-[Larm — Utökning](alarms/extending.md#sms-notifications) för mer
+[Larm — Utöka](alarms/extending.md#sms-notifications) för mer
 information.
 <!-- --8<-- [end:body] -->

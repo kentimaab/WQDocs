@@ -1,5 +1,5 @@
 ---
-title: Rapporter - Utökning
+title: Rapporter - Utöka
 product: wwt
 page_type: module
 status: draft

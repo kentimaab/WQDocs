@@ -1,5 +1,5 @@
 ---
-title: Underhåll - Utökning
+title: Underhåll - Utöka
 product: bms
 page_type: module
 status: draft

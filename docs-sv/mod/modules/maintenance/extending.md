@@ -1,5 +1,5 @@
 ---
-title: Underhåll — Utökning
+title: Underhåll — Utöka
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Underhåll — Utökning
+# Underhåll — Utöka
 
 ## Kalenderintegration { #calendar-integration }
 
@@ -18,7 +18,7 @@ Underhållsuppgifter med kommande deadlines visas automatiskt som händelser i k
 
 Kalendern läser uppgifter från underhållsdatabasen och visar dem utifrån deras deadline-datum. Uppgifter med status **Done**, **Done - Delayed** eller **Removed** exkluderas.
 
-En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppgifts deadline. Standardförskjutningen för påminnelser är 3 dagar. Förskjutningen och påminnelseväxeln per mall kan båda konfigureras via ett skript — se [Kalender — Utökning](../calendar/extending.md#reminder-configuration).
+En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppgifts deadline. Standardförskjutningen för påminnelser är 3 dagar. Förskjutningen och påminnelseväxeln per mall kan båda konfigureras via ett skript — se [Kalender — Utöka](../calendar/extending.md#reminder-configuration).
 
 ![Underhållsuppgifter synliga som händelser i kalendervyn](/Images/Maintenance/maintenance-in-calendar.png){align=center}
 

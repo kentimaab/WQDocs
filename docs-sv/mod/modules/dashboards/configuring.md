@@ -1,5 +1,5 @@
 ---
-title: Instrumentpaneler — Konfigurering
+title: dashboards — Konfigurering
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Instrumentpaneler — Konfigurering
+# dashboards — Konfigurering
 
 ## Parametrar — Gemensamma inställningar för alla widgetar { #parameters-common-settings-shared-by-all-widgets }
 
@@ -46,7 +46,7 @@ Visar larmantal — totalt, kvitterade och okvitterade.
 
 ### Larmrad { #alarm-row }
 
-En kompakt larmindikator i en enda rad. Avsedd att placeras överst eller underst på en instrumentpanel som ett tunt statusband.
+En kompakt larmindikator i en enda rad. Avsedd att placeras överst eller underst på en dashboard som ett tunt statusband.
 
 ![Alarm Row](/Images/Dashboard/AlarmRow.png){align=center}
 
@@ -94,7 +94,7 @@ Visar hur ofta larm har utlösts.
 
 ### Larmgraf { #alarm-graph }
 
-En större graf för larmtrender och larmfördelning. Lämpar sig för instrumentpaneler där larmanalys är i fokus.
+En större graf för larmtrender och larmfördelning. Lämpar sig för dashboards där larmanalys är i fokus.
 
 ![Alarm Graph](/Images/Dashboard/AlarmGraph.png){align=center}
 
@@ -106,9 +106,9 @@ Visar historiska signalvärden som en trendgraf. Legenden visar aktuella värden
 
 ![History](/Images/Dashboard/History.png){align=center}
 
-Fälten **Från** och **Till** längst upp på instrumentpanelen anger tidsintervallet. Hur intervallet tillämpas beror på vilken knapp som används:
+Fälten **Från** och **Till** längst upp på dashboarden anger tidsintervallet. Hur intervallet tillämpas beror på vilken knapp som används:
 
-* **Tillämpa** — tillämpar Från/Till-intervallet på alla Historik-widgetinstanser på instrumentpanelen.
+* **Tillämpa** — tillämpar Från/Till-intervallet på alla Historik-widgetinstanser på dashboarden.
 * **Kalenderikon** (på en enskild widget) — tillämpar Från/Till-intervallet enbart på den widgetinstansen, utan att påverka de övriga.
 * **Återställ** — återställer alla Historik-widgetinstanser till standardfönstret på 5 minuter.
 
@@ -184,5 +184,5 @@ Visar underhållsuppgiftsstatus — aktiva, planerade och missade uppgifter. Ans
 
 ## Nästa steg { #next-steps }
 
-* [Utökning](extending.md) — egna widgetar, designmönster och felsökning
+* [Utöka](extending.md) — egna widgetar, designmönster och felsökning
 <!-- --8<-- [end:body] -->

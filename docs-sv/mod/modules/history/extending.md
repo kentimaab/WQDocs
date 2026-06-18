@@ -1,5 +1,5 @@
 ---
-title: Historik — Utökning
+title: Historik — Utöka
 product: mod
 page_type: module
 status: draft
@@ -10,11 +10,11 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Historik — Utökning
+# Historik — Utöka
 
 ## Öppna vyspecifik historik { #opening-view-specific-history }
 
-Den vyspecifika historikpopupen öppnas från en workview med hjälp av ett skript. Vyn skickar med sitt eget länknamn så att popupen vet vilka objekt som ska inkluderas:
+Den vyspecifika historikpopupen öppnas från en arbetsvy med hjälp av ett skript. Vyn skickar med sitt eget länknamn så att popupen vet vilka objekt som ska inkluderas:
 
 ```javascript
 app.popOut.newData = { linkName: view.linkName };

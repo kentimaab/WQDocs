@@ -31,6 +31,7 @@ Because themes follow the M3 standard, a complete theme with all color roles, el
 * [**Changing a color**](configuring.md#changing-a-color) — Editing color values in the theme editor.
 * [**How colors are applied to objects**](configuring.md#how-colors-are-applied-to-objects) — How objects reference theme colors through scripts.
 * [**Custom colors**](configuring.md#custom-colors) — Project-specific colors and how to add them.
+* [**Module-specific color palettes**](configuring.md#module-specific-color-palettes) — Separate palettes for Calendar, History, Maintenance, Maps, Pipes, and Value Display.
 
 ---
 

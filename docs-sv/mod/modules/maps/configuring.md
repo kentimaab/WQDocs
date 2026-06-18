@@ -24,11 +24,11 @@ läggs till på samma sätt som beskrivs i
 måste konfigureras för att fungera korrekt — dessa beskrivs i avsnitten nedan.
 
 ### Pin Status { #pin-status }
-Pin Status-objekt är nyckeln till att koppla en **Map View** till **Workviews**. De
+Pin Status-objekt är nyckeln till att koppla en **Map View** till **arbetsvyer**. De
 implementeras på samma sätt som en vanlig pinne, men med mer logik bakom sig. När
-de är korrekt länkade till en **Workview** kan användaren navigera direkt till den
-**Workview** med ett klick. Pinnens bakgrundsfärg visar också den aktiva statusen
-för **Workview** — om den är aktiv, har en varning eller har ett larm. Pinnen kan
+de är korrekt länkade till en **arbetsvy** kan användaren navigera direkt till den
+**arbetsvy** med ett klick. Pinnens bakgrundsfärg visar också den aktiva statusen
+för **arbetsvy** — om den är aktiv, har en varning eller har ett larm. Pinnen kan
 dessutom visa antalet aktiva larm och varningar. Tillsammans gör dessa funktioner
 `PinStatus`-objekt till grunden för systemkontroll via en karta.
 

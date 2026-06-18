@@ -41,6 +41,24 @@ System.themes.color("Symbol_Alarm")
 
 För att lägga till en ny anpassad färg, klicka på **+** längst ned på fliken **Custom colors** (den läggs till som ColorX), tilldela ett namn och ange ett värde. Använd samma namn i alla teman så att färgen löses korrekt vid byte mellan teman.
 
+## Modulspecifika färgpaletter { #module-specific-color-palettes }
+
+Utöver de M3-roller som utgör huvudtemat innehåller WideQuick MOD ett antal separata färgpaletter som används av specifika moduler. Dessa paletter visas under temavarianten i **WideQuick Designer®** och kan redigeras på samma sätt som övriga temafärger, men de påverkas inte av ljust/mörkt-växlingen — de gäller oavsett vilket tema som är aktivt.
+
+| Palett | Modul | Vad den styr |
+|---|---|---|
+| CalendarColors | Kalender | Färger per händelsekategori (ENERGY, SAFETY, HVAC m.fl.) i kalendervy |
+| HistoryGraphColors | Historia | 13 färger som tilldelas mätvärdeskurvor automatiskt i trenddiagram |
+| MaintenanceColors | Underhåll | Status- och prioritetsfärger för underhållsordrar |
+| mapIndicators | Kartor | Indikatorfärger för linjer och statussymboler på systemkartor |
+| pipeColors | Rör | Rörmediefärger (t.ex. Rinse\_Water, Sewage, Chemical) |
+| ValueDisplay\_dark | Värdevisning | BV-, MV- och mätarspårsfärger i mörkt tema |
+| ValueDisplay\_light | Värdevisning | BV-, MV- och mätarspårsfärger i ljust tema |
+
+`ValueDisplay_dark` och `ValueDisplay_light` är undantaget — de växlas automatiskt av komponenten baserat på om det aktiva temats namn innehåller `_Dark`. Övriga paletter är statiska oavsett aktivt tema.
+
+För att redigera en palett, öppna grenen **Themes** i projektträdet, välj önskad palett och dubbelklicka på en färgkod.
+
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — skapa ett anpassat tema som följer en grafisk profil

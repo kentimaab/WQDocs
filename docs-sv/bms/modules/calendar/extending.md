@@ -1,5 +1,5 @@
 ---
-title: Kalender - Utökning
+title: Kalender - Utöka
 product: bms
 page_type: module
 status: draft

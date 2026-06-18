@@ -21,7 +21,7 @@ tags:
     * `scAlert`
     * `scQuickSort`
 
-Historikmodulen visar loggade signaldata som interaktiva linjediagram. Det finns tre sätt att komma åt den: den projektövergripande vyn **Historik** från huvudmenyn, ett vyspecifikt **Historik**-popup som öppnas från en workview, och fliken [**Historik**](../../reference/Popup/History.md) i valfritt objektpopup.
+Historikmodulen visar loggade signaldata som interaktiva linjediagram. Det finns tre sätt att komma åt den: den projektövergripande vyn **Historik** från huvudmenyn, ett vyspecifikt **Historik**-popup som öppnas från en arbetsvy, och fliken [**Historik**](../../reference/Popup/History.md) i valfritt objektpopup.
 
 ## Historik-vyn { #the-history-view }
 
@@ -35,7 +35,7 @@ Vyn har ett diagram längst upp och tre paneler längst ned:
 * **Spåra signal** — alternativ för att spåra en livesignal i diagrammet. Innehåller även avsnittet **Sparade grupper** för att spara och läsa in namngivna signalgrupper.
 * **Inställningar** — växlar för teckenförklaring, linjal och Y-axelskalning, samt kontroller för tidsintervall och uppdateringsintervall.
 
-Knappen **Visa variabler som inte loggas** i det övre högra hörnet öppnar ett separat fönster som visar alla signaler som inte är anslutna till en loggare.
+Knappen **Visa variabler som inte loggas** i det övre högra hörnet öppnar ett separat fönster som visar alla signaler som inte är anslutna till en loggenhet.
 
 ## Välja signaler { #selecting-signals }
 
@@ -99,7 +99,7 @@ Varje objekt i projektet har en flik [**Historik**](../../reference/Popup/Histor
 
 ![Fliken Historik i ett objektpopup](/Images/History/history-object-popup.png){align=center}
 
-Signaler som tillhör objektet men saknar konfigurerad loggare listas på höger sida under **Taggar som inte loggas**.
+Signaler som tillhör objektet men saknar konfigurerad loggenhet listas på höger sida under **Taggar som inte loggas**.
 
 Signallistan stödjer tangentbordsnavigering med knapparna **▲** och **▼**. Klicka på **Välj** för att markera den markerade signalen.
 

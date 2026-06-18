@@ -1,5 +1,5 @@
 ---
-title: Workview-animationer
+title: Konfigurera en loggenhet
 product: bms
 page_type: guide
 status: draft
@@ -8,4 +8,4 @@ tags:
  - BMS
 ---
 
---8<-- "mod/guides/workview-animations.md:body"
+--8<-- "mod/guides/Loggers.md:body"

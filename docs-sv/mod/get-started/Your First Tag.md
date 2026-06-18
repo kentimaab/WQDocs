@@ -50,15 +50,15 @@ Den här taggen består av:
 
 För mer information om taggstrukturen, se [Taggstruktur](../reference/tag-structure.md).
 
-## Steg 3 - Skapa en Workview
+## Steg 3 - Skapa en arbetsvy
 
-I **WideQuick Designer®**, skapa en ny **Workview** inuti **System 1**. Den kommer då att visas automatiskt i navigeringsmenyn. För mer information om hur navigeringen fungerar, se [Navigation — Kom igång](../modules/Core/Navigation/get-started.md).
+I **WideQuick Designer®**, skapa en ny **arbetsvy** inuti **System 1**. Den kommer då att visas automatiskt i navigeringsmenyn. För mer information om hur navigeringen fungerar, se [Navigation — Kom igång](../modules/Core/Navigation/get-started.md).
 
-![Workview](/Images/First_tag/CreateWork.gif)
+![arbetsvy](/Images/First_tag/CreateWork.gif)
 
 ## Steg 4 - Placera motorobjektet
 
-Öppna den nya **Workview** och dra objektet `dynMotorPumpR_000` från objektbiblioteket **Motors** in i vyn.
+Öppna den nya **arbetsvy** och dra objektet `dynMotorPumpR_000` från objektbiblioteket **Motors** in i vyn.
 
 Välj objektet `DynTouch` inuti gruppen och navigera till fliken **Egenskaper**. Ange följande:
 
@@ -80,7 +80,7 @@ Starta projektet och navigera till **Inställningar → Suffix → Suffix - Larm
 
 Suffixaliaset **On** är nu en del av gruppen **4 - Aktiv**. Välj sedan **On** i trädvyn och tilldela `_IO` till fältet **Suffix**.
 
-För mer information om hur animationssystemet fungerar, se [Workview-animationer](../guides/workview-animations.md).
+För mer information om hur animationssystemet fungerar, se [arbetsvy-animationer](../guides/arbetsvy-animations.md).
 
 ![Suffix Alarm configuration](/Images/First_tag/SuffixAlarm.gif)
 

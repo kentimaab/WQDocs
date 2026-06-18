@@ -40,9 +40,9 @@ Guiderna beskriver hur man använder specifika funktioner i WideQuick MOD — b�
 
 ---
 
-### [Loggare](Loggers.md) { #logger }
+### [Loggenheter](Loggers.md) { #logger }
 
-* [**Loggare**](Loggers.md) — Hur man skapar och konfigurerar en loggare i WideQuick Designer för användning med Historik, Rapporter och andra databaserade moduler.
+* [**Loggenheter**](Loggers.md) — Hur man skapar och konfigurerar en loggenhet i WideQuick Designer för användning med Historik, Rapporter och andra databaserade moduler.
 
 ---
 
@@ -58,8 +58,8 @@ Guiderna beskriver hur man använder specifika funktioner i WideQuick MOD — b�
 
 ---
 
-### [Arbetsvy-animationer](workview-animations.md) { #workview-animations }
+### [Arbetsvy-animationer](arbetsvy-animations.md) { #arbetsvy-animations }
 
-* [**Arbetsvy-animationer**](workview-animations.md) — Konfigurera och utöka arbetsvy-animationer i WideQuick MOD.
+* [**Arbetsvy-animationer**](arbetsvy-animations.md) — Konfigurera och utöka arbetsvy-animationer i WideQuick MOD.
 
 <!-- --8<-- [end:body] -->

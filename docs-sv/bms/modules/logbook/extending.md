@@ -1,5 +1,5 @@
 ---
-title: Loggbok - Utökning
+title: Loggbok - Utöka
 product: bms
 page_type: module
 status: draft

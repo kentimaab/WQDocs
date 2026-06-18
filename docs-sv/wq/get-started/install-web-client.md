@@ -61,7 +61,7 @@ konsollfönster för felsökning.
 
 * **Threading** — styr trådningsmodellen. `free` tillåter webbklienten att skapa
 så många trådar som behövs. `strict` använder ett fast antal trådar under hela
-processens körtid.
+processens körning.
 
 * **docroot** — katalogen för webbklientens resurser. Standardvärdet är `./data`.
 Ändra detta om du vill använda anpassade resurser.
@@ -135,10 +135,10 @@ på samma maskin.
 * **Cache size** — storleken på filcachen i MB. Ange `0` för att inaktivera
 cachning helt.
 
-* **Workview** — den workview som visas vid anslutning via en webbläsare. Lämna
+* **arbetsvy** — den arbetsvy som visas vid anslutning via en webbläsare. Lämna
 tomt för att använda startvyn som angetts i **WideQuick® Runtime**-projektet.
 
-* **Workviews** — lista över workviews som kan användas som URL-argument, till
+* **arbetsvyer** — lista över arbetsvyer som kan användas som URL-argument, till
 exempel `localhost/?view=Workview2.kvie`. Separerade med mellanslag, lagrade som
 `view_args` i `.ini`-filen.
 
@@ -259,7 +259,7 @@ Där `ServerName` är webbserverns IP-adress, datornamn eller fullständig URL.
 **Dynamik** — alla former av dynamik stöds, med vissa undantag. Se
 [Egenskaper som inte stöds](#egenskaper-som-inte-stods) för detaljer.
 
-**Workviews** — den vy som anges i konfigurationsfilen visas vid anslutning.
+**arbetsvyer** — den vy som anges i konfigurationsfilen visas vid anslutning.
 Navigation är sedan möjlig via funktionen `link()` eller en multiviewer.
 
 **Grupper och instanser** — fullt stöd för grupper och instanser.
@@ -280,7 +280,7 @@ och redigera användare via skript och dialoger.
 **EthirisView** — fullt stöd.
 
 **History-objekt** — stöds som ett avancerat analytiskt verktyg för att studera
-enskilda signaler eller deras inbördes relationer över en eller flera loggrar.
+enskilda signaler eller deras inbördes relationer över en eller flera loggenheter.
 
 **E-post** — e-postsystemet stöds. E-post skickas från den server som
 **WideQuick® Web Client** är ansluten till.
@@ -333,11 +333,11 @@ Följande objekt stöds till största delen, med viss funktionalitet som saknas:
 
 Följande dynamiska egenskap stöds inte:
 
-* Flytta workviews till förgrunden
+* Flytta arbetsvyer till förgrunden
 
-### Workviews
+### arbetsvyer
 
-**WideQuick® Web Client** visar inga menyer i workviews.
+**WideQuick® Web Client** visar inga menyer i arbetsvyer.
 
 ### Objekt
 
@@ -385,7 +385,7 @@ Följande funktioner stöds inte av **WideQuick® Web Client**:
 * **Process-objekt**
 * **SerialPort-objekt**
 * **UnitSystemCollection-objekt**
-* **Workview-objekt** — följande funktioner stöds inte:
+* **arbetsvy-objekt** — följande funktioner stöds inte:
     * `grab()`
     * `print()`
     * `translate()`

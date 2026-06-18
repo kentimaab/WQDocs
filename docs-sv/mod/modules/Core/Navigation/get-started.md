@@ -27,25 +27,25 @@ tags:
     * `scAlert`
 
 Det här avsnittet täcker grunderna i navigationsmodulen, inklusive hur man lägger till
-**Workviews** i navigationsmenyn och hur helskärmsmenyn fungerar. Navigationsmodulen
+**arbetsvyer** i navigationsmenyn och hur helskärmsmenyn fungerar. Navigationsmodulen
 bygger automatiskt menystrukturen utifrån mappstrukturen i
 **WideQuick Designer®**, vilket gör det enkelt att hantera och utöka i takt med att projektet växer.
 
 För åtkomstkontroll och visningsinställningar för begränsade vyer, se
 [Navigation — Konfigurering](configuring). För avancerad funktionalitet som GoTo-genvägar
-och anpassade ikoner, se [Navigation — Utökning](extending).
+och anpassade ikoner, se [Navigation — Utöka](extending).
 
-## Lägga till Workviews i navigationen { #adding-workviews-to-the-navigation }
+## Lägga till arbetsvyer i navigationen { #adding-arbetsvyer-to-the-navigation }
 Den automatiska navigationen består av två delar: mappen **Main_Menu** och mappen
-**System**. Alla **Workviews** som placeras i någon av dessa mappar visas automatiskt
+**System**. Alla **arbetsvyer** som placeras i någon av dessa mappar visas automatiskt
 i menyn.
 
-Det rekommenderas starkt att alla **Workviews** placeras i mappen **System** snarare
+Det rekommenderas starkt att alla **arbetsvyer** placeras i mappen **System** snarare
 än i **Main_Menu**. Framtida uppdateringar av Modular Framework kan lägga till
 ytterligare menygrupper i **Main_Menu**, vilket kan komplicera uppgraderingar om den
 har modifierats.
 
-För att skapa en ny vy i menyn, placera en ny **Workview** inuti en mapp under
+För att skapa en ny vy i menyn, placera en ny **arbetsvy** inuti en mapp under
 **System**-mappen, som visas i exemplet nedan. Att klicka på denna nod i menyn öppnar
 vyn direkt.
 
@@ -57,7 +57,7 @@ vyn direkt.
 
 </div>
 
-Om flera **Workviews** läggs till i samma mapp ändras ikonen i menyn — att klicka på
+Om flera **arbetsvyer** läggs till i samma mapp ändras ikonen i menyn — att klicka på
 den öppnar en undermeny istället, som visas nedan. Ytterligare mappar kan nästlas inuti
 för att bygga ännu djupare navigationsstrukturer.
 
@@ -79,17 +79,17 @@ innebär att designbeslut som tas där återspeglas direkt i körläget.
 
 ![FullScreen_Toggle](/Images/Navigation/ToggleFullNav.png)
 
-Helskärmsmenyn är utformad för att visa så många **Workviews** som möjligt och samtidigt
+Helskärmsmenyn är utformad för att visa så många **arbetsvyer** som möjligt och samtidigt
 förbli organiserad. Layouten följer dessa regler:
 
-* Enbart **Workviews** — Om en katalog enbart innehåller **Workviews** utan
-underkataloger arrangeras **Workviews** i rader.
+* Enbart **arbetsvyer** — Om en katalog enbart innehåller **arbetsvyer** utan
+underkataloger arrangeras **arbetsvyer** i rader.
 * Enbart kataloger — Om en katalog enbart innehåller underkataloger arrangeras
 toppnivåkatalogerna i kolumner, med sina underordnade visade i samma kolumn.
-* Blandat innehåll — Alla **Workviews** på toppnivå placeras i den första kolumnen,
+* Blandat innehåll — Alla **arbetsvyer** på toppnivå placeras i den första kolumnen,
 följt av kataloger arrangerade kolumnvis.
 
-Helskärmsmenyn kan visa upp till 90 kataloger och **Workviews** samtidigt. Om denna
+Helskärmsmenyn kan visa upp till 90 kataloger och **arbetsvyer** samtidigt. Om denna
 gräns överskrids anpassar menyn sig automatiskt på två sätt:
 
 * **Kolumnspill** — Om en enskild kolumn överskrider det maximala antalet rader visas
@@ -107,5 +107,5 @@ menyn alltid att vara navigerbar.
 ## Nästa steg { #next-steps }
 
 * [Konfigurering](configuring.md) — behörighetskrav på vyer och visningsinställningar för begränsade vyer
-* [Utökning](extending.md) — GoTo-funktion och anpassade navigationsikoner
+* [Utöka](extending.md) — GoTo-funktion och anpassade navigationsikoner
 <!-- --8<-- [end:body] -->

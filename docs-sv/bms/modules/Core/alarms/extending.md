@@ -1,5 +1,5 @@
 ---
-title: Larm - Utökning
+title: Larm - Utöka
 product: bms
 page_type: module
 status: draft
