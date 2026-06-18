@@ -10,6 +10,8 @@ tags:
 
 # Kom igång med WideQuick BMS
 
+<img src="../../assets/BMS-1_1000x246.png" style="width:100%;box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"></img>
+
 ## Vad är WideQuick BMS?
 
 WideQuick BMS är en konceptapplikation för byggnadsstyrning (Building Management System) byggd ovanpå
@@ -40,6 +42,12 @@ Följande moduler ingår direkt:
 * **Säkerhetskopiering av parametrar** — Spara viktiga parametrar för att kunna återställa dem vid ett senare tillfälle.
 * **Automatisk navigering** — Plug and play-navigering som bygger sig själv. Inkluderar funktioner för adaptiv navigering baserat på användarbehörigheter.
 
+
+## Nyheter i 2026.1
+
+2026.1 är en stor release av WideQuick BMS — nästan varje modul har uppdaterats, med helt nya moduler som Kalender, Dashboards och Dokument.
+
+[Versionsinformation](../releases/index.md){ .md-button .md-button--primary }
 
 ## Ladda ned WideQuick BMS
 

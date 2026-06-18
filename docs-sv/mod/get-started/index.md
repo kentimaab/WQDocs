@@ -11,6 +11,10 @@ tags:
 
 # Kom igång med WideQuick MOD
 
+<img src="../../assets/MOD-2.png" style="width:100%;box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"></img>
+
+## Vad är WideQuick MOD
+
 WideQuick MOD är Kentimas modulära ramverk för att bygga HMI- och SCADA-applikationer.
 Det ger en strukturerad projektgrund med ett bibliotek av produktionsklara moduler
 som täcker de funktioner varje system behöver — från larm och navigation till underhålls-
@@ -48,6 +52,12 @@ WideQuick MOD är tillgängligt kostnadsfritt för Kentimas partners. Om du änn
 är partner, besök [kentima.com](https://www.kentima.com){target="_blank"} för att läsa
 mer och ta kontakt. Om du behöver en WideQuick-licens, kontakta gärna Kentimas
 [säljteam](https://www.kentima.com/en-GB/Kontakt){target="_blank"}.
+
+## Versionsinformation
+
+För en fullständig lista över ändringar, nya funktioner och migreringsvägledning, se versionsinformationen.
+
+[Versionsinformation](../releases/index.md){ .md-button .md-button--primary }
 
 ## Ladda ner
 
