@@ -68,7 +68,7 @@ När taggarna har importerats är nästa steg att konfigurera dem och koppla dem
 till popupen. Detta görs i några steg:
 
 * Starta projektet.
-* Navigera till **Inställningar → Suffix → Suffix - Popups**.
+* Navigera till **Inställningar → Suffix → Suffix Alias - Popups**.
 
 ![Navigering till inställningar](/Images/Create_Popup/Navigation.gif){width="400"}
 

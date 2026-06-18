@@ -13,12 +13,12 @@ tags:
 Versionsnoteringar för WideQuick BMS. Den senaste versionen visas först och är expanderad;
 äldre versioner är ihopfällda, klicka på en version för att expandera den. Varje version bygger på
 en specifik version av WideQuick Modular Framework, länkad under respektive rubrik. För hela
-ramverkets ändringslogg, se [MOD-versioner](../../mod/releases/index).
+ramverkets ändringslogg, se [MOD-versioner](../../mod/releases/index.md).
 
 
 ## WideQuick BMS 2026.1.0 { #bms-2026-1-0 }
 __Utgiven 2026-05-21__
-Modular Framework-version: [WideQuick MOD 2026.1.0](../../mod/releases/index#mod-2026-1-0) 
+Modular Framework-version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0) 
 <details class="release" markdown="1" open>
 <summary>Versionsnoteringar</summary>
 

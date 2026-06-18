@@ -21,7 +21,7 @@ symboler, se [Varför de nya symbolerna](Symbols.md#why-the-new-symbols).
 
 ---
 
-### [Grundläggande symboler](Symbols.md#components)
+### [Symboler](Symbols.md)
 * [**KOMPONENTER**](Symbols.md#components) — Bassymboler för att bygga
 anpassade processobjekt, inklusive motorer, pumpar, ventiler, sensorer och mer.
 
