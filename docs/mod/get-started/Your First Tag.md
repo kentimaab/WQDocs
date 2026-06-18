@@ -38,12 +38,16 @@ The following connection types are also supported:
 
 ![OPCUA](/Images/First_tag/OPCUA.gif)
 
-## Step 2 - Create the tag
+## Step 2 — Create the tag in WideQuick
 
-In **WideQuick Designer®**, open the **Tag Editor** and create a new boolean tag
-following the tag structure:
+In **WideQuick Designer®**, open the **Tag Editor** and click **Browse** to open
+the OPC UA browser. Navigate the server tree to find the signal you want to import
+and select it.
 
-`OPC.AS01_VS10_PV01_IO`
+Once selected, rename the tag in the **WideQuick name** field to follow the tag
+structure:
+
+`OPC.AS01.VS10_PV01_IO`
 
 This tag consists of:
 
