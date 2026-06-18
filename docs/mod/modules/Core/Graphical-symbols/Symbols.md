@@ -53,7 +53,7 @@ multiple states can be communicated simultaneously — for example an active war
 with a background alarm highlight.
 
 All new symbols are fully compatible with the
-[Workview Animation](../../../guides/workview-animations.md)system, meaning they respond
+[Workview Animation](../../../guides/workview-animations.md) system, meaning they respond
 automatically to all configured animation categories without any additional setup.
 
 ## Basic symbols - COMPONENTS {#components}

@@ -21,7 +21,7 @@ symbols, see [Why the new symbols](Symbols.md#why-the-new-symbols).
 
 ---
 
-### [Basic symbols](Symbols.md#components)
+### [Symbols](Symbols.md)
 * [**COMPONENTS**](Symbols.md#components) — Base symbols for building
 custom process objects, including motors, pumps, valves, sensors and more.
 
