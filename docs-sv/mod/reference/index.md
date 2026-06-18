@@ -47,9 +47,9 @@ Tekniskt referensmaterial för WideQuick MOD. Dessa sidor beskriver hur systemet
 
 ---
 
-### [Resurser och Resurspaket](resources-and-resurspaket.md) { #resources-and-resurspaket }
+### [Resurser och Resurspaket](Resources-and-Resource-package.md) { #resources-and-resurspaket }
 
-* [**Resurser och Resurspaket**](resources-and-resurspaket.md) — Export och import av resurser mellan projekt.
+* [**Resurser och Resurspaket**](Resources-and-Resource-package.md) — Export och import av resurser mellan projekt.
 
 ---
 
