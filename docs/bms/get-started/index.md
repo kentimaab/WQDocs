@@ -11,6 +11,8 @@ tags:
 
 # Get Started with WideQuick BMS
 
+<img src="../../assets/BMS-1_1000x246.png" style="width:100%;box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"></img>
+
 ## What is WideQuick BMS?
 
 WideQuick BMS is a concept application for Building Management System built on top of
@@ -41,6 +43,12 @@ The following modules are included out of the box:
 * **Backup of parameters** — Save crucial parameters to be restored at a later point in time.
 * **Automatic navigation** — Plug and play navigation that builds itself. Includes features for adaptive navigation based on user privilegies.
 
+
+## What's new in 2026.1
+
+2026.1 is a major release of WideQuick BMS — nearly every module has been updated, with complety new modules such as Calendar, Dashboards, and Documents.
+
+[Release notes](../releases/index.md){ .md-button .md-button--primary }
 
 ## Download WideQuick BMS
 
