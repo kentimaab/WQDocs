@@ -1,5 +1,5 @@
 ---
-title: dashboards — Utöka
+title: Dashboards — Utöka
 product: mod
 page_type: module
 status: draft
@@ -9,7 +9,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# dashboards — Utöka
+# Dashboards — Utöka
 
 ## Anpassade widgetar — Bygga nya widgetar från befintliga mallar { #custom-widgets-building-new-widgets-from-existing-templates }
 

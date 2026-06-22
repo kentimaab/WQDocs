@@ -71,7 +71,7 @@ nav = [
           { "Äldre symboler" = "mod/modules/Core/Graphical-symbols/legacy.md" },
         ]},
       ]},
-      { "Instrumentpaneler" = [
+      { "Dashboard" = [
         { "Översikt" = "mod/modules/dashboards/index.md" },
         { "Kom igång" = "mod/modules/dashboards/get-started.md" },
         { "Konfigurering" = "mod/modules/dashboards/configuring.md" },
@@ -215,7 +215,7 @@ nav = [
           { "Äldre symboler" = "bms/modules/Core/Graphical-symbols/legacy.md" },
         ]},
       ]},
-      { "Instrumentpaneler" = [
+      { "Dashboard" = [
         { "Översikt" = "bms/modules/dashboards/index.md" },
         { "Kom igång" = "bms/modules/dashboards/get-started.md" },
         { "Konfigurering" = "bms/modules/dashboards/configuring.md" },
@@ -359,7 +359,7 @@ nav = [
           { "Äldre symboler" = "wwt/modules/Core/Graphical-symbols/legacy.md" },
         ]},
       ]},
-      { "Instrumentpaneler" = [
+      { "Dashboard" = [
         { "Översikt" = "wwt/modules/dashboards/index.md" },
         { "Kom igång" = "wwt/modules/dashboards/get-started.md" },
         { "Konfigurering" = "wwt/modules/dashboards/configuring.md" },

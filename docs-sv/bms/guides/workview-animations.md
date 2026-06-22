@@ -8,4 +8,4 @@ tags:
  - BMS
 ---
 
---8<-- "mod/guides/arbetsvy-animations.md:body"
+--8<-- "mod/guides/workview-animations.md:body"

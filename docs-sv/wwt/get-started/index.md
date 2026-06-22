@@ -26,6 +26,13 @@ WideQuick Modular Framework gör det enkelt för användare att lägga till elle
 
 WideQuick Water and Wastewater Treatment är tillgängligt för alla partners till Kentima. För att bli partner, vänligen kontakta vårt säljteam via vår webbplats [här](https://www.kentima.com/en-GB/Kontakt)
 
+##  Verisioner
+
+För en fullständig lista över ändringar, nya funktioner och migreringsvägledning, se versionsinformationen.
+
+[Versionsinformation](../releases/index.md){ .md-button .md-button--primary }
+
+
 ## Ladda ner WideQuick WWT
 
 Konceptapplikationen nås via Kentimas partnernedladdningssidor. Följ den här guiden:

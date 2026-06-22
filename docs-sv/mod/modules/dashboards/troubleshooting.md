@@ -1,5 +1,5 @@
 ---
-title: dashboards
+title: Dashboards
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# dashboards
+# Dashboards
 
 ## Vanliga problem { #common-issues }
 
