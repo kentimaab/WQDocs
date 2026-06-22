@@ -53,7 +53,7 @@ navigera till botten av bladflikarna. Klicka på **Create New Sheet**, se bilden
 För att dölja bladet, högerklicka på bladfliken och välj **Hide Sheet**.
 
 <figure markdown="span">
-  ![newSheet](/Images/Reports/newSheet.png)
+  ![newSheet](/Images/Reports/NewSheet.png)
   <figcaption>Lägger till ett nytt blad i mallen i WideQuick Designer.</figcaption>
 </figure>
 

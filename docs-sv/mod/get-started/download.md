@@ -51,7 +51,6 @@ Demoprojektet är ett fullt implementerat exempel som visar all funktionalitet i
 WideQuick Mod 2024.1.0 i användning. Det är användbart både för att förstå hur systemet
 fungerar och för att hämta inspiration till implementationen.
 
-<!-- PIN: add demo project systems and views -->
 
 ![Demo project](/Images/Mod_Intro/Demo.png)
 

@@ -76,7 +76,7 @@ till popupen. Detta görs i några steg:
 den nya kategorin ett namn. Eftersom vi skapar en popup för pumpstyring, namnge den
 **Pump Control**.
 
-![Lägga till kategori](/Images/Create_Popup/Adding%20Category.gif)
+![Lägga till kategori](/Images/Create_Popup/Adding%20category.gif)
 
 * Markera den nya kategorin i listan och klicka på **Lägg till nytt suffixalias i vald kategori**. I det här exemplet börjar vi med taggen med suffixet `_IO`, som visar
 om pumpen är på eller inte. Namnge detta suffix **Active**.

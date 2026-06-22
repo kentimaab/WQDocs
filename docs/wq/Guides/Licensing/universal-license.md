@@ -57,19 +57,19 @@ When you launch WideQuick, the application contacts the license server. If a lic
 
 === "On Windows"
     
-    To set an environment variable on Window do the following:
+    To set an environment variable on Windows do the following:
 
     1.	Press Windows key, search for "Edit Environment Variables," and select "Edit the system environment variables."
     
-    ![Screenshot showing Windows search for 'Edit Environment Variables'](./Images/image.png)
+        ![Screenshot showing Windows search for 'Edit Environment Variables'](./Images/image.png)
     
     2.	Click "Environment Variables" button.
     
-    ![Screenshot of System Properties window with Environment Variables button highlighted](./Images/pressENV.png)
+        ![Screenshot of System Properties window with Environment Variables button highlighted](./Images/pressENV.png)
     
     3.	Under "System variables" (for all users) or "User variables" (for you only), click "New." If you already have an environment variable named WQ_CLOUD_LICENSE press edit instead.
     
-    ![Screenshot of Environment Variables window showing system variables section](./Images/EditEnv.png)
+        ![Screenshot of Environment Variables window showing system variables section](./Images/EditEnv.png)
 
     4.	Enter Variable name: WQ_CLOUD_LICENSE and Variable value: 1.
         

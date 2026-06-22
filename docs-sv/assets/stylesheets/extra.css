@@ -496,6 +496,13 @@ img {
     color: #fff;
 }
 
+.md-header__source {
+    display: none;
+}
+.md-search {
+    margin-right: 0.6rem;
+}
+
 .md-tabs {
     background: #eee;
     color: #444;

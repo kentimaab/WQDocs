@@ -63,15 +63,15 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
     1.	Tryck på Windows-tangenten, sök efter "Redigera miljövariabler" och välj "Redigera systemmiljövariabler."
     
-    ![Screenshot showing Windows search for 'Edit Environment Variables'](./Images/image.png)
+        ![Screenshot showing Windows search for 'Edit Environment Variables'](./Images/image.png)
     
     2.	Klicka på knappen "Miljövariabler."
     
-    ![Screenshot of System Properties window with Environment Variables button highlighted](./Images/pressENV.png)
+        ![Screenshot of System Properties window with Environment Variables button highlighted](./Images/pressENV.png)
     
     3.	Under "Systemvariabler" (för alla användare) eller "Användarvariabler" (bara för dig), klicka på "Ny." Om du redan har en miljövariabel med namnet WQ_CLOUD_LICENSE klickar du på Redigera istället.
     
-    ![Screenshot of Environment Variables window showing system variables section](./Images/EditEnv.png)
+        ![Screenshot of Environment Variables window showing system variables section](./Images/EditEnv.png)
 
     4.	Ange Variabelnamn: WQ_CLOUD_LICENSE och Variabelvärde: 1.
         

@@ -14,7 +14,7 @@ WideQuick MOD organiserar sina funktioner i moduler. Varje modul täcker ett ege
 <!-- --8<-- [start:body] -->
 ## Innehåll { #contents }
 
-### [Core](Core/index.md) { #core }
+### [Kärna](Core/index.md) { #core }
 
 * [**Larm**](Core/alarms/index.md) — Larmvyer, kvittering, grupper och notifikationsscheman.
 * [**Grafiska symboler**](Core/Graphical-symbols/index.md) — Symbolbibliotek: komponenter, spjäll, motorer, sensorer och ventiler.

@@ -24,7 +24,7 @@ Detta öppnar följande fönster
 
 Härifrån klickar du på ++"File"++ och väljer ny, eller använder kortkommandot "ctrl + n". Detta gör att användaren kan skapa sin .wqrc-fil med de resurser som ska exporteras. Välj ett lämpligt namn och var filen ska sparas. När detta är gjort öppnas följande fönster
 
-![Resource_export](../Images/Resources/Resource_export.png)
+![Resource_export](../../Images/Resources/Resource_export.png)
 
 Vänster sida representerar resurserna i det aktuella projektet medan höger sida är exportfilen. Välj de filer i projektet som ska exporteras. När filerna är valda, tryck på ++"Add to resources"++ — detta skapar en kopia av filerna i exportfilen, och de kopierade filerna markeras på exportsidan. När alla filer som ska exporteras har kopierats till exportsidan, tryck på ++"File"++ och ++"Save"++. Nu har exportfilen sparats och är redo att importeras till ett nytt projekt. 
 

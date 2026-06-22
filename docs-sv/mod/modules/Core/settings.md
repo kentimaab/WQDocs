@@ -15,7 +15,7 @@ Vyn **Inställningar** i **WideQuick Runtime®** ger tillgång till alla
 systemkonfigurationsalternativ. Navigera till **Inställningar** i huvudmenyn och
 öppna vyn **Inställningar**.
 
-![Settings](/Images/Settings/settings.png)
+![Settings](/Images/Settings/Settings.png)
 
 ---
 

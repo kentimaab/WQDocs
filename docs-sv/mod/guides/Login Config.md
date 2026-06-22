@@ -98,7 +98,7 @@ Högerklicka var som helst i vyn och välj **Object** och sedan **MultiviewerPag
 snabbmenyn. På fliken **Properties**, lokalisera egenskapen **Multiviewer** och
 välj önskad **arbetsvy** från rullgardinsmenyn. Den fullständiga sökvägen behöver inte anges manuellt.
 
-![Start arbetsvy configuration](/Images/Login/start-arbetsvy.gif)
+![Start arbetsvy configuration](/Images/Login/start-workview.gif)
 
 Standard-**Start-arbetsvy** i mallprojektet är **Dashboard Energi**. **Start-arbetsvy**
 bör vara en **arbetsvy** som finns i antingen mappen **Main_Menu** eller

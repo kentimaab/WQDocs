@@ -16,7 +16,7 @@ Nedladdningen inkluderar allt som behövs för att komma igång:
 - systemlogik förkonfigurerad
 - ett fullt implementerat demoprojekt som referens.
 
-Projektet kan öppnas och utforskas fritt i WideQuick Designer, men driftsättning av ett live-system kräver en [WideQuick-licens](#). <!-- PIN: confirm license requirement -->
+Projektet kan öppnas och utforskas fritt i WideQuick Designer, men driftsättning av ett levande system kräver licensen **WideQuick Advanced** eller högre.
 
 Om du behöver en WideQuick-licens, vänligen kontakta Kentimas [säljavdelning](https://www.kentima.com/en-GB/Kontakt){target="_blank"}.
 
@@ -39,7 +39,6 @@ Mallprojektet är ett nytt, implementationsklart projekt som innehåller den ful
 
 Demoprojektet är ett fullt implementerat exempel som visar all funktionalitet i WideQuick Water and Wastewater Treatment 2024.1.0 i användning. Det är användbart både för att förstå hur systemet fungerar och för att hämta inspiration till implementationen.
 
-<!-- PIN: add demo project systems and views -->
 
 ![Demo project](/Images/WWT_Intro/Demo.png)
 

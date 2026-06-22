@@ -42,7 +42,7 @@ hide:
         <div class="hp-product__rule"></div>
         <div class="hp-product__desc">Den gemensamma grunden. Moduler, skript, mallar och driftsättningsverktyg.</div>
         <div class="hp-product__pills">
-          <span>Kom igång</span><span>Moduler</span><span>Objektbibliotek</span>
+          <span>Kom igång</span><span>Moduler</span><span>Guider</span><span>Objektbibliotek</span>
         </div>
         <div class="hp-product__cta-row">
           <span class="hp-product__cta">Utforska MOD →</span>
@@ -59,7 +59,7 @@ hide:
         <div class="hp-product__rule"></div>
         <div class="hp-product__desc">Övervaka byggnader, minska energikostnader och öka hyresgästers komfort via ett och samma gränssnitt.</div>
         <div class="hp-product__pills">
-          <span>Kom igång</span><span>Exempel</span><span>Releaser</span>
+          <span>Kom igång</span><span>Guider</span><span>Referenser</span><span>Verisioner</span>
         </div>
         <div class="hp-product__cta-row">
           <span class="hp-product__cta">Utforska BMS →</span>
@@ -76,7 +76,7 @@ hide:
         <div class="hp-product__rule"></div>
         <div class="hp-product__desc">Säkerställ driftskontinuitet, optimera underhåll och övervaka vattensystem från start till slut.</div>
         <div class="hp-product__pills">
-          <span>Kom igång</span><span>Releaser</span>
+          <span>Kom igång</span><span>Guider</span><span>Referenser</span><span>Verisioner</span>
         </div>
         <div class="hp-product__cta-row">
           <span class="hp-product__cta">Utforska WWT →</span>

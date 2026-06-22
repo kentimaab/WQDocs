@@ -1,5 +1,5 @@
 ---
-title: Installera WideQuick-webbklient
+title: Installera WideQuick Web Client
 product: wq
 page_type: getstarted
 status: draft
@@ -8,7 +8,7 @@ tags:
  - WQ
 ---
 
-# Installera WideQuick-webbklient
+# Installera WideQuick Web Client
 
 ## WideQuick® Web Client Config Tool
 
@@ -135,10 +135,10 @@ på samma maskin.
 * **Cache size** — storleken på filcachen i MB. Ange `0` för att inaktivera
 cachning helt.
 
-* **arbetsvy** — den arbetsvy som visas vid anslutning via en webbläsare. Lämna
+* **Workview** — den arbetsvy som visas vid anslutning via en webbläsare. Lämna
 tomt för att använda startvyn som angetts i **WideQuick® Runtime**-projektet.
 
-* **arbetsvyer** — lista över arbetsvyer som kan användas som URL-argument, till
+* **Workviews** — lista över arbetsvyer som kan användas som URL-argument, till
 exempel `localhost/?view=Workview2.kvie`. Separerade med mellanslag, lagrade som
 `view_args` i `.ini`-filen.
 
@@ -259,7 +259,7 @@ Där `ServerName` är webbserverns IP-adress, datornamn eller fullständig URL.
 **Dynamik** — alla former av dynamik stöds, med vissa undantag. Se
 [Egenskaper som inte stöds](#egenskaper-som-inte-stods) för detaljer.
 
-**arbetsvyer** — den vy som anges i konfigurationsfilen visas vid anslutning.
+**Arbetsvyer** — den vy som anges i konfigurationsfilen visas vid anslutning.
 Navigation är sedan möjlig via funktionen `link()` eller en multiviewer.
 
 **Grupper och instanser** — fullt stöd för grupper och instanser.
@@ -335,7 +335,7 @@ Följande dynamiska egenskap stöds inte:
 
 * Flytta arbetsvyer till förgrunden
 
-### arbetsvyer
+### Arbetsvyer
 
 **WideQuick® Web Client** visar inga menyer i arbetsvyer.
 
@@ -385,7 +385,7 @@ Följande funktioner stöds inte av **WideQuick® Web Client**:
 * **Process-objekt**
 * **SerialPort-objekt**
 * **UnitSystemCollection-objekt**
-* **arbetsvy-objekt** — följande funktioner stöds inte:
+* **Arbetsvy-objekt** — följande funktioner stöds inte:
     * `grab()`
     * `print()`
     * `translate()`

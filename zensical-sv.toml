@@ -18,7 +18,7 @@ nav = [
     { "Kom igång" = [
       { "Översikt" = "wq/get-started/index.md" },
       { "Installera WideQuick" = "wq/get-started/Installing-WideQuick.md" },
-      { "Installera webbklient" = "wq/get-started/install-web-client.md" },
+      { "Installera Web Client" = "wq/get-started/install-web-client.md" },
     ]},
     { "Guider" = [
       { "Distribution" = [
@@ -45,19 +45,16 @@ nav = [
       { "Översikt" = "mod/modules/index.md" },
       { "Kärna" = [
         { "Översikt" = "mod/modules/Core/index.md" },
-        { "Inställningar" = "mod/modules/Core/settings.md" },
-        { "Användare och behörigheter" = "mod/modules/Core/users-privileges.md" },
         { "Larm" = [
           { "Översikt" = "mod/modules/Core/alarms/index.md" },
           { "Kom igång" = "mod/modules/Core/alarms/get-started.md" },
           { "Konfigurering" = "mod/modules/Core/alarms/configuring.md" },
           { "Utöka" = "mod/modules/Core/alarms/extending.md" },
         ]},
-        { "Teman" = [
-          { "Översikt" = "mod/modules/Core/Themes/index.md" },
-          { "Kom igång" = "mod/modules/Core/Themes/get-started.md" },
-          { "Konfigurering" = "mod/modules/Core/Themes/configuring.md" },
-          { "Utöka" = "mod/modules/Core/Themes/extending.md" },
+         { "Grafiska symboler" = [
+          { "Översikt" = "mod/modules/Core/Graphical-symbols/index.md" },
+          { "Symbolbibliotek" = "mod/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Äldre symboler" = "mod/modules/Core/Graphical-symbols/legacy.md" },
         ]},
         { "Navigation" = [
           { "Översikt" = "mod/modules/Core/Navigation/index.md" },
@@ -65,11 +62,14 @@ nav = [
           { "Konfigurering" = "mod/modules/Core/Navigation/configuring.md" },
           { "Utöka" = "mod/modules/Core/Navigation/extending.md" },
         ]},
-        { "Grafiska symboler" = [
-          { "Översikt" = "mod/modules/Core/Graphical-symbols/index.md" },
-          { "Symbolbibliotek" = "mod/modules/Core/Graphical-symbols/Symbols.md" },
-          { "Äldre symboler" = "mod/modules/Core/Graphical-symbols/legacy.md" },
+        { "Inställningar" = "mod/modules/Core/settings.md" },
+        { "Teman" = [
+          { "Översikt" = "mod/modules/Core/Themes/index.md" },
+          { "Kom igång" = "mod/modules/Core/Themes/get-started.md" },
+          { "Konfigurering" = "mod/modules/Core/Themes/configuring.md" },
+          { "Utöka" = "mod/modules/Core/Themes/extending.md" },
         ]},
+        { "Användare och behörigheter" = "mod/modules/Core/users-privileges.md" },
       ]},
       { "Dashboard" = [
         { "Översikt" = "mod/modules/dashboards/index.md" },
@@ -189,19 +189,16 @@ nav = [
       { "Översikt" = "bms/modules/index.md" },
       { "Kärna" = [
         { "Översikt" = "bms/modules/Core/index.md" },
-        { "Inställningar" = "bms/modules/Core/settings.md" },
-        { "Användare och behörigheter" = "bms/modules/Core/users-privileges.md" },
         { "Larm" = [
           { "Översikt" = "bms/modules/Core/alarms/index.md" },
           { "Kom igång" = "bms/modules/Core/alarms/get-started.md" },
           { "Konfigurering" = "bms/modules/Core/alarms/configuring.md" },
           { "Utöka" = "bms/modules/Core/alarms/extending.md" },
         ]},
-        { "Teman" = [
-          { "Översikt" = "bms/modules/Core/Themes/index.md" },
-          { "Kom igång" = "bms/modules/Core/Themes/get-started.md" },
-          { "Konfigurering" = "bms/modules/Core/Themes/configuring.md" },
-          { "Utöka" = "bms/modules/Core/Themes/extending.md" },
+        { "Grafiska symboler" = [
+          { "Översikt" = "bms/modules/Core/Graphical-symbols/index.md" },
+          { "Symbolbibliotek" = "bms/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Äldre symboler" = "bms/modules/Core/Graphical-symbols/legacy.md" },
         ]},
         { "Navigation" = [
           { "Översikt" = "bms/modules/Core/Navigation/index.md" },
@@ -209,11 +206,14 @@ nav = [
           { "Konfigurering" = "bms/modules/Core/Navigation/configuring.md" },
           { "Utöka" = "bms/modules/Core/Navigation/extending.md" },
         ]},
-        { "Grafiska symboler" = [
-          { "Översikt" = "bms/modules/Core/Graphical-symbols/index.md" },
-          { "Symbolbibliotek" = "bms/modules/Core/Graphical-symbols/Symbols.md" },
-          { "Äldre symboler" = "bms/modules/Core/Graphical-symbols/legacy.md" },
+        { "Inställningar" = "bms/modules/Core/settings.md" },
+        { "Teman" = [
+          { "Översikt" = "bms/modules/Core/Themes/index.md" },
+          { "Kom igång" = "bms/modules/Core/Themes/get-started.md" },
+          { "Konfigurering" = "bms/modules/Core/Themes/configuring.md" },
+          { "Utöka" = "bms/modules/Core/Themes/extending.md" },
         ]},
+        { "Användare och behörigheter" = "bms/modules/Core/users-privileges.md" },
       ]},
       { "Dashboard" = [
         { "Översikt" = "bms/modules/dashboards/index.md" },
@@ -333,19 +333,16 @@ nav = [
       { "Översikt" = "wwt/modules/index.md" },
       { "Kärna" = [
         { "Översikt" = "wwt/modules/Core/index.md" },
-        { "Inställningar" = "wwt/modules/Core/settings.md" },
-        { "Användare och behörigheter" = "wwt/modules/Core/users-privileges.md" },
         { "Larm" = [
           { "Översikt" = "wwt/modules/Core/alarms/index.md" },
           { "Kom igång" = "wwt/modules/Core/alarms/get-started.md" },
           { "Konfigurering" = "wwt/modules/Core/alarms/configuring.md" },
           { "Utöka" = "wwt/modules/Core/alarms/extending.md" },
         ]},
-        { "Teman" = [
-          { "Översikt" = "wwt/modules/Core/Themes/index.md" },
-          { "Kom igång" = "wwt/modules/Core/Themes/get-started.md" },
-          { "Konfigurering" = "wwt/modules/Core/Themes/configuring.md" },
-          { "Utöka" = "wwt/modules/Core/Themes/extending.md" },
+        { "Grafiska symboler" = [
+          { "Översikt" = "wwt/modules/Core/Graphical-symbols/index.md" },
+          { "Symbolbibliotek" = "wwt/modules/Core/Graphical-symbols/Symbols.md" },
+          { "Äldre symboler" = "wwt/modules/Core/Graphical-symbols/legacy.md" },
         ]},
         { "Navigation" = [
           { "Översikt" = "wwt/modules/Core/Navigation/index.md" },
@@ -353,11 +350,14 @@ nav = [
           { "Konfigurering" = "wwt/modules/Core/Navigation/configuring.md" },
           { "Utöka" = "wwt/modules/Core/Navigation/extending.md" },
         ]},
-        { "Grafiska symboler" = [
-          { "Översikt" = "wwt/modules/Core/Graphical-symbols/index.md" },
-          { "Symbolbibliotek" = "wwt/modules/Core/Graphical-symbols/Symbols.md" },
-          { "Äldre symboler" = "wwt/modules/Core/Graphical-symbols/legacy.md" },
+        { "Inställningar" = "wwt/modules/Core/settings.md" },
+        { "Teman" = [
+          { "Översikt" = "wwt/modules/Core/Themes/index.md" },
+          { "Kom igång" = "wwt/modules/Core/Themes/get-started.md" },
+          { "Konfigurering" = "wwt/modules/Core/Themes/configuring.md" },
+          { "Utöka" = "wwt/modules/Core/Themes/extending.md" },
         ]},
+        { "Användare och behörigheter" = "wwt/modules/Core/users-privileges.md" },
       ]},
       { "Dashboard" = [
         { "Översikt" = "wwt/modules/dashboards/index.md" },
