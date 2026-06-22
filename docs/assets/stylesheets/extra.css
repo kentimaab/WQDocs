@@ -495,6 +495,14 @@ img {
     background: linear-gradient(to right, #f9991b, #fcab43);
     color: #fff;
 }
+/* No repo_url configured — collapse the reserved source slot so the
+   search bar and dark-mode toggle right-align with the content column */
+.md-header__source {
+    display: none;
+}
+.md-search {
+    margin-right: 0.6rem;
+}
 
 .md-tabs {
     background: #eee;
@@ -938,7 +946,7 @@ img {
 
 .hp-product__name {
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #111;
     line-height: 1.1;
@@ -2186,7 +2194,14 @@ a.md-nav__link .md-status,
             color-mix(in srgb, var(--lp-accent) 10%, transparent) 0%,
             transparent 80%
         ),
-        var(--lp-accent);
+        linear-gradient(
+            to right,
+            var(--lp-accent) 55%,
+            color-mix(in srgb, var(--lp-accent) 85%, transparent) 63%,
+            color-mix(in srgb, var(--lp-accent) 55%, transparent) 70%,
+            color-mix(in srgb, var(--lp-accent) 25%, transparent) 78%,
+            transparent 86%
+        );
 }
 
 /* Right-side background image, fades out to the left so text stays legible */
@@ -2204,18 +2219,24 @@ a.md-nav__link .md-status,
     -webkit-mask-image: linear-gradient(
         to right,
         transparent 0%,
-        rgba(0, 0, 0, 0.12) 25%,
-        rgba(0, 0, 0, 0.35) 50%,
-        rgba(0, 0, 0, 0.7) 80%,
-        #000 100%
+        rgba(0, 0, 0, 0.12) 20%,
+        rgba(0, 0, 0, 0.35) 38%,
+        #000 55%,
+        rgba(0, 0, 0, 0.85) 63%,
+        rgba(0, 0, 0, 0.55) 70%,
+        rgba(0, 0, 0, 0.25) 78%,
+        transparent 86%
     );
     mask-image: linear-gradient(
         to right,
         transparent 0%,
-        rgba(0, 0, 0, 0.12) 25%,
-        rgba(0, 0, 0, 0.35) 50%,
-        rgba(0, 0, 0, 0.7) 80%,
-        #000 100%
+        rgba(0, 0, 0, 0.12) 20%,
+        rgba(0, 0, 0, 0.35) 38%,
+        #000 55%,
+        rgba(0, 0, 0, 0.85) 63%,
+        rgba(0, 0, 0, 0.55) 70%,
+        rgba(0, 0, 0, 0.25) 78%,
+        transparent 86%
     );
     opacity: 0.92;
     z-index: 0;

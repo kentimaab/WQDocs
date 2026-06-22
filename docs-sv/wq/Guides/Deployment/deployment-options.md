@@ -12,7 +12,7 @@ tags:
 
 WideQuick kan köras på ett brett spektrum av hårdvara och miljöer, från kompakta inbyggda enheter till distribuerade kluster i molnet.
 
-Distributionsflexibiliteten bygger på en plattformsoberoende körtidsmiljö som stöder Windows, GNU/Linux och containerisering, vilket möjliggör skalbarhet från enpanelssystem för enskilda operatörer till flernodsystem med centraliserad databehandling.
+Distributionsflexibiliteten bygger på en plattformsoberoende körningsmiljö som stöder Windows, GNU/Linux och containerisering, vilket möjliggör skalbarhet från enpanelssystem för enskilda operatörer till flernodsystem med centraliserad databehandling.
 
 
 ## Inbyggda HMI-paneler
@@ -40,7 +40,7 @@ WideQuick skalar till virtuella maskiner eller fysiska servrar för centralisera
 - **Virtuella maskiner/Hypervisorer**: Distribuera på VMware, Hyper-V eller Proxmox med flera virtuella WideQuick-instanser som delar hårdvara.
 - **Windows/Linux-servrar**: Rackmonterade eller lokala servrar som hanterar stora projekt, larm, trender och historikerfunktioner för dussintals klienter.
 
-Projekt överförs sömlöst mellan inbyggda körtidsmiljöer och serverkörtidsmiljöer.
+Projekt överförs sömlöst mellan inbyggda körningsmiljöer och serverkörningsmiljöer.
 
 ## Containeriserade distributioner
 

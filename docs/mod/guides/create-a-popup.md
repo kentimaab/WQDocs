@@ -69,7 +69,7 @@ Once the tags have been imported, the next step is to configure them and connect
 to the popup. This is done in a few steps:
 
 * Start the project.
-* Navigate to **Settings → Suffix → Suffix - Popups**.
+* Navigate to **Settings → Suffix → Suffix Alias - Popups**.
 
 ![Navigation to settings](/Images/Create_Popup/Navigation.gif){width="400"}
 
@@ -275,7 +275,7 @@ visual separation from the underlying view.
 
 By default, clicking a `DynTouch` object opens the tab navigation first, allowing
 the user to select which popup to view. In cases where users frequently navigate
-to a specific popup — such as **Maneuver** — it is possible to bypass the tab
+to a specific popup — such as **Manover** — it is possible to bypass the tab
 navigation and open that popup directly.
 
 This is done by using the `_DynTouch_DirectLink` or `_DynTouchRounded_DirectLink`

@@ -1,5 +1,5 @@
 ---
-title: Dashboards - Utökning
+title: Dashboards - Utöka
 product: wwt
 page_type: module
 status: draft

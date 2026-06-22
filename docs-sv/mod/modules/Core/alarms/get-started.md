@@ -78,10 +78,10 @@ Larmdata kan också visas på en dashboard med larmwidgetar — Larmstatus, Larm
 
 ## Objektanimationer { #object-animations }
 
-Objekt med aktiva larm kan konfigureras att visa visuell återkoppling — till exempel blinkande rött när ett larm utlöses. Detta hanteras av animationssystemet och beskrivs i [Workview Animations](/mod/guides/workview-animations/).
+Objekt med aktiva larm kan konfigureras att visa visuell återkoppling — till exempel blinkande rött när ett larm utlöses. Detta hanteras av animationssystemet och beskrivs i [arbetsvy Animations](/mod/guides/arbetsvy-animations/).
 
 ## Nästa steg { #next-steps }
 
 * [Konfigurering](configuring.md) — skapa larmgrupper, definiera larm och konfigurera notifieringsscheman
-* [Utökning](extending.md) — konfigurera e-post och SMS för larmnotifieringar
+* [Utöka](extending.md) — konfigurera e-post och SMS för larmnotifieringar
 <!-- --8<-- [end:body] -->

@@ -155,7 +155,7 @@ hide:
             <div class="arch-sublabel-col arch-sublabel-col--light"><span>Kärna</span></div>
             <div class="arch-content arch-content--core">
               <div class="arch-mini-chips">
-                <span>Workviews</span><span>Grafiska objekt</span><span>Interaktiva objekt</span><span>Dynamik</span><span>Larm</span><span>Historik</span><span>Händelser</span><span>Användare</span><span>Teman</span><span>Språk</span><span>Data Store</span>
+                <span>arbetsvyer</span><span>Grafiska objekt</span><span>Interaktiva objekt</span><span>Dynamik</span><span>Larm</span><span>Historik</span><span>Händelser</span><span>Användare</span><span>Teman</span><span>Språk</span><span>Data Store</span>
               </div>
             </div>
           </div>

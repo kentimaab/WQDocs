@@ -12,7 +12,7 @@ tags:
 
 # Your first tag
 
-This guide walks through connecting a single tag end-to-end — from creating an OPC UA
+This guide walks through connecting a single tag end-to-end, from creating an OPC UA
 tag to verifying it on a Process popup. It is the quickest way to confirm that your
 project is correctly set up and ready for implementation.
 
@@ -38,12 +38,16 @@ The following connection types are also supported:
 
 ![OPCUA](/Images/First_tag/OPCUA.gif)
 
-## Step 2 - Create the tag
+## Step 2 — Create the tag in WideQuick
 
-In **WideQuick Designer®**, open the **Tag Editor** and create a new boolean tag
-following the tag structure:
+In **WideQuick Designer®**, open the **Tag Editor** and click **Browse** to open
+the OPC UA browser. Navigate the server tree to find the signal you want to import
+and select it.
 
-`OPC.AS01_VS10_PV01_IO`
+Once selected, rename the tag in the **WideQuick name** field to follow the tag
+structure:
+
+`OPC.AS01.VS10_PV01_IO`
 
 This tag consists of:
 

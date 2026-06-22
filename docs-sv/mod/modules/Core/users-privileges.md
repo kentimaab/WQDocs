@@ -67,17 +67,17 @@ klicka på **Bevilja** eller **Neka**
 
 ![Privilege](/Images/User_and_privileges/Privilege.png)
 
-## Begränsa arbetsvyer med behörighet { #restricting-workviews-by-privilege }
+## Begränsa arbetsvyer med behörighet { #restricting-arbetsvyer-by-privilege }
 
 Åtkomst till specifika **arbetsvyer** kan begränsas baserat på behörigheter. Navigera
 till **Inställningar → Arbetsvyer → Arbetsvyer - Behörighet** i huvudmenyn.
 
-![WorkView Privilege](/Images/User_and_privileges/WorkView_privleage.png)
+![arbetsvy Privilege](/Images/User_and_privileges/WorkView_privleage.png)
 
 Välj den **arbetsvy** där begränsningen ska tillämpas. Konfigurationsalternativ
 visas på höger sida av vyn.
 
-![Workview Settings](/Images/User_and_privileges/Settings.png)
+![arbetsvy Settings](/Images/User_and_privileges/Settings.png)
 
 Välj den önskade behörigheten från rullgardinsmenyn och klicka på **Spara** för att tillämpa
 ändringen.

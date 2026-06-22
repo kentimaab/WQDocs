@@ -1,5 +1,5 @@
 ---
-title: Kalender — Utökning
+title: Kalender — Utöka
 product: mod
 page_type: module
 status: draft
@@ -9,7 +9,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Kalender — Utökning
+# Kalender — Utöka
 
 ## Påminnelsekonfiguration { #reminder-configuration }
 

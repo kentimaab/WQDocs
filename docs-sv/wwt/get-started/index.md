@@ -12,7 +12,7 @@ tags:
 
 <img src="../pics/WWT-1_1000x246.png" style="width:100%;box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"></img>
 
-**WideQuick Water and Wastewater Treatment bygger på [WideQuick Modular Framework](../../mod/index.md). Utöver all generell funktionalitet i Modular Framework erbjuder Water and Wastewater-konceptet branschspecifik funktionalitet såsom kartobjekt, anpassade instrumentpaneler och färdiga objekt.**
+**WideQuick Water and Wastewater Treatment bygger på [WideQuick Modular Framework](../../mod/index.md). Utöver all generell funktionalitet i Modular Framework erbjuder Water and Wastewater-konceptet branschspecifik funktionalitet såsom kartobjekt, anpassade dashboards och färdiga objekt.**
 
 ## Omfattande symbol- och objektbibliotek
 

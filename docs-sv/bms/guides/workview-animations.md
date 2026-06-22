@@ -1,5 +1,5 @@
 ---
-title: Konfigurera en loggare
+title: arbetsvy-animationer
 product: bms
 page_type: guide
 status: draft
@@ -8,4 +8,4 @@ tags:
  - BMS
 ---
 
---8<-- "mod/guides/Loggers.md:body"
+--8<-- "mod/guides/arbetsvy-animations.md:body"

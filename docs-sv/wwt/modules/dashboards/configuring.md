@@ -1,5 +1,5 @@
 ---
-title: Instrumentpaneler - Konfigurering
+title: dashboards - Konfigurering
 product: wwt
 page_type: module
 status: draft

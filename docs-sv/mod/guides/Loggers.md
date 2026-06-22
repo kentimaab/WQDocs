@@ -1,5 +1,5 @@
 ---
-title: Konfigurera en loggare
+title: Konfigurera en loggenhet
 product: mod
 page_type: guide
 status: draft
@@ -10,23 +10,23 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Konfigurera en loggare
+# Konfigurera en loggenhet
 
-En loggare definierar när data ska lagras och var den ska sparas. Loggare
+En loggenhet definierar när data ska lagras och var den ska sparas. Loggningsenhet
 konfigureras i **WideQuick Designer®** och skriver data till en ansluten databas,
 som sedan kan användas av vyn **Historik**, **Rapporter** och andra moduler som
 förlitar sig på historisk data.
 
-Flera loggare kan dela samma databasanslutning. För att skapa en loggare
-högerklickar du på **Loggare** i projektträdet och väljer **Lägg till loggare**.
+Flera loggenhet kan dela samma databasanslutning. För att skapa en loggenhet
+högerklickar du på **Loggningsenhet** i projektträdet och väljer **Lägg till loggenhet**.
 
 ![Logger settings](/Images/Loggers/logger_settings.png)
 
-## Loggarinställningar
+## Loggningsenhetsinställningar
 
-### Loggartyp
+### Loggningsenhetstyp
 
-Loggartypen avgör vad som utlöser att data lagras.
+Loggningsenhetstypen avgör vad som utlöser att data lagras.
 
 | Typ | Beskrivning |
 |---|---|
@@ -48,7 +48,7 @@ Välj **Databas** eller **Fil** som lagringsmål.
 
 !!! tip
     **Databas** rekommenderas starkt. Fillagring är mindre tillförlitlig, skalar
-    dåligt och har reducerad precision vid användning med loggartypen Ändring eller Utlösare.
+    dåligt och har reducerad precision vid användning med loggenhetstypen Ändring eller Utlösare.
 
 ### Intervall
 
@@ -57,8 +57,8 @@ minsta intervallet är `0s 100ms` och det högsta är `3600s`.
 
 ### Aktiveringsvariabel
 
-En valfri boolesk signal som aktiverar eller inaktiverar loggaren. När signalen är
-`false` pausas loggaren. Användbart för att begränsa loggningen till specifika tidsperioder
+En valfri boolesk signal som aktiverar eller inaktiverar loggenheten. När signalen är
+`false` pausas loggenheten. Användbart för att begränsa loggningen till specifika tidsperioder
 eller villkor.
 
 ---
@@ -75,18 +75,18 @@ lagringseffektiv och använder binär blob-kodning för att minska databasstorle
 De viktigaste skillnaderna mellan versionerna är:
 
 * **Version 1** kan inte logga variabler av typen `Int64` eller `UInt64`
-* **Version 1** skapar två tabeller namngivna efter loggaren, medan **Version 2**
+* **Version 1** skapar två tabeller namngivna efter loggenheten, medan **Version 2**
 skapar flera automatiskt genererade tabeller beroende på antalet loggade variabler
 * **Version 2** lagrar all data i binärt format (databas-blobbar), medan
 **Version 1** lagrar data som motsvarande databastyper
 
 !!! note
-    För att hämta data från en Version 2-loggare, använd `Logger.data()` istället för
+    För att hämta data från en Version 2-loggenhet, använd `Logger.data()` istället för
     att fråga databastabellerna direkt.
 
 ### Databasanslutning
 
-Väljer vilken databasanslutning den loggade datan lagras i. Flera loggare
+Väljer vilken databasanslutning den loggade datan lagras i. Flera loggenheter
 kan dela samma databasanslutning.
 
 ### Ta bort data äldre än

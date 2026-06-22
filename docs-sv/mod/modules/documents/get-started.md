@@ -78,5 +78,5 @@ De flesta filtyper kan förhandsgranskas direkt — bilder, PDF:er och webbsidor
 ## Nästa steg { #next-steps }
 
 * [Konfigurering](configuring.md) — länka dokument till objekt och hålla filer synkroniserade
-* [Utökning](extending.md) — behörighetsreferens
+* [Utöka](extending.md) — behörighetsreferens
 <!-- --8<-- [end:body] -->

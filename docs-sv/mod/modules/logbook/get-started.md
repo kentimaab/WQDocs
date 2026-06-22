@@ -66,5 +66,5 @@ Klicka på **Tillämpa** för att använda filtren, **Rensa filter** för att å
 ## Nästa steg { #next-steps }
 
 * [Konfigurering](configuring.md) — ämnen, kontexter och åtkomstmönster
-* [Utökning](extending.md) — lägga till en loggbok i en anpassad vy eller knapp
+* [Utöka](extending.md) — lägga till en loggbok i en anpassad vy eller knapp
 <!-- --8<-- [end:body] -->

@@ -12,7 +12,7 @@ tags:
 
 # Historik
 
-Historikmodulen tillhandahåller grafiska vyer av loggade signaldata. Signaler kan visas i ett projektövergripande diagram, i ett diagram begränsat till en specifik workview, eller inifrån ett objektpopup.
+Historikmodulen tillhandahåller grafiska vyer av loggade signaldata. Signaler kan visas i ett projektövergripande diagram, i ett diagram begränsat till en specifik arbetsvy, eller inifrån ett objektpopup.
 
 Alla tre vyer är byggda på samma diagramkomponent och delar samma kontroller för att välja signaler, justera tidsintervall och skala y-axeln.
 
@@ -22,7 +22,7 @@ Alla tre vyer är byggda på samma diagramkomponent och delar samma kontroller f
 * [**Historikvy**](get-started.md#the-history-view) — Layout för diagrammet och kontrollpanelerna.
 * [**Välja signaler**](get-started.md#selecting-signals) — Hur du väljer signaler från trädet och applicerar dem på diagrammet.
 * [**Inställningar**](get-started.md#settings) — Tidsintervall, uppdateringsintervall och visningsalternativ.
-* [**Vyspecifik historik**](get-started.md#view-specific-history) — Historik begränsad till en enskild workview.
+* [**Vyspecifik historik**](get-started.md#view-specific-history) — Historik begränsad till en enskild arbetsvy.
 * [**Objektpopup**](get-started.md#object-popup-history-tab) — Visa historik för ett enskilt objekt.
 
 ---
@@ -34,7 +34,7 @@ Alla tre vyer är byggda på samma diagramkomponent och delar samma kontroller f
 ---
 
 ### [Utöka](extending.md) { #extending }
-* [**Öppna vyspecifik historik**](extending.md#opening-view-specific-history) — Skript för att öppna det vybaserade historikpopupen från en workview.
+* [**Öppna vyspecifik historik**](extending.md#opening-view-specific-history) — Skript för att öppna det vybaserade historikpopupen från en arbetsvy.
 * [**Signaler som inte loggas**](extending.md#signals-not-logged) — Visa signaler som finns men inte loggas.
 
 ---

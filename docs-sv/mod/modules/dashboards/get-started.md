@@ -1,5 +1,5 @@
 ---
-title: Instrumentpaneler — Kom igång
+title: dashboards — Kom igång
 product: mod
 page_type: module
 status: draft
@@ -9,10 +9,10 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Instrumentpaneler — Kom igång
+# dashboards — Kom igång
 ???+ info "Krav"
-    Följande skript krävs för att använda Instrumentpaneler och all
-    relaterad funktionalitet som täcks i guiderna för Instrumentpaneler:
+    Följande skript krävs för att använda dashboards och all
+    relaterad funktionalitet som täcks i guiderna för dashboards:
     
     * `scDashboard`
     * `scAlarm`
@@ -26,20 +26,20 @@ tags:
     
     * `Dashboard Widgets`
 
-WideQuick MOD levereras med tre exempelinstrumentpaneler som kan användas som startpunkt eller anpassas för att passa ett projekt.
-Nya instrumentpaneler kan skapas antingen från mallen eller från grunden beroende på vad användaren vill.
+WideQuick MOD levereras med tre exempeldashboards som kan användas som startpunkt eller anpassas för att passa ett projekt.
+Nya dashboards kan skapas antingen från mallen eller från grunden beroende på vad användaren vill.
 <figure markdown="span">
-    ![Dashboard](/Images/Dashboard/Dashboard.png)  <figcaption>Energiinstrumentpanelen i WideQuick Runtime</figcaption>
+    ![Dashboard](/Images/Dashboard/Dashboard.png)  <figcaption>Energidashboarden i WideQuick Runtime</figcaption>
 </figure>
 
-## Konfigurera en ny instrumentpanel { #setting-up-a-new-dashboard }
+## Konfigurera en ny dashboard { #setting-up-a-new-dashboard }
 
-Duplicera instrumentpanelsmallen i **WideQuick Designer®** genom att högerklicka på mallen i projektträdet och flytta den till rätt mapp i projektstrukturen.
+Duplicera dashboardmallen i **WideQuick Designer®** genom att högerklicka på mallen i projektträdet och flytta den till rätt mapp i projektstrukturen.
 
 ![Setting up a dashboard](/Images/Dashboard/SetupDashboard.gif){align=center}
-## Widgets — färdiga komponenter för instrumentpanelen { #widgets-pre-built-components-for-the-dashboard }
+## Widgets — färdiga komponenter för dashboarden { #widgets-pre-built-components-for-the-dashboard }
 
-Instrumentpaneler byggs med färdiga widgets från biblioteket `Dashboard Widgets`.
+dashboards byggs med färdiga widgets från biblioteket `Dashboard Widgets`.
 Varje widget är utformad för en specifik typ av data och kan placeras och
 konfigureras direkt utan någon egen utveckling. De flesta widgets finns även i olika storlekar.
 
@@ -47,14 +47,14 @@ konfigureras direkt utan någon egen utveckling. De flesta widgets finns även i
 
 ## Rutnätslayout — placera widgets i redigeraren { #grid-layout-positioning-widgets-in-the-editor }
 
-Instrumentpanelerna i **WideQuick Designer®** använder ett 4×4-rutnät som hjälp vid widgetplacering. Varje rutnätsposition markeras med en ellips som fungerar som placeringsguide. Dessa ellipser
+dashboarderna i **WideQuick Designer®** använder ett 4×4-rutnät som hjälp vid widgetplacering. Varje rutnätsposition markeras med en ellips som fungerar som placeringsguide. Dessa ellipser
 visas inte vid körning.
 
 ![Grid](/Images/Dashboard/Grid.png){align=center}
 
 ## Lägga till en widget { #adding-a-widget }
 
-Lägg till en widget genom att dra den från biblioteket `Dashboard Widgets` till instrumentpanelen och fyll sedan i relevanta parametrar i egenskapspanelen. En fullständig lista över tillgängliga widgets och deras parametrar finns i [Konfigurera](configuring.md).
+Lägg till en widget genom att dra den från biblioteket `Dashboard Widgets` till dashboarden och fyll sedan i relevanta parametrar i egenskapspanelen. En fullständig lista över tillgängliga widgets och deras parametrar finns i [Konfigurera](configuring.md).
 
 ![Adding a widget](/Images/Dashboard/UseWidget.gif){align=center}
 

@@ -38,7 +38,7 @@ Temat kan växlas mellan ljust och mörkt under körning utan att applikationen 
 
 Alla objekt i projektet använder temafärgsroller i stället för fasta färger. När temat ändras uppdateras varje bakgrund, textfärg, kant och yta automatiskt. Ingen manuell justering behövs per objekt.
 
-Detta gäller även larmstatussfärger. Objekt med aktiva larm visar färger såsom larm- och varningsindikatorer definierade i temat, vilket säkerställer visuell konsekvens mellan teman. Se [Workview-animationer](../../../guides/workview-animations.md) för hur larmstatusanimationer konfigureras.
+Detta gäller även larmstatussfärger. Objekt med aktiva larm visar färger såsom larm- och varningsindikatorer definierade i temat, vilket säkerställer visuell konsekvens mellan teman. Se [arbetsvy-animationer](../../../guides/arbetsvy-animations.md) för hur larmstatusanimationer konfigureras.
 
 ## Nästa steg { #next-steps }
 

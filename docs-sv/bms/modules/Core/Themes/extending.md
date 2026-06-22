@@ -1,5 +1,5 @@
 ---
-title: Teman - Utökning
+title: Teman - Utöka
 product: bms
 page_type: module
 status: draft

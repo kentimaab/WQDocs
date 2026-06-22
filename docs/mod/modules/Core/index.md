@@ -42,7 +42,7 @@ Core is the foundation of every WideQuick MOD installation. Unlike optional modu
 
 ---
 
-### [Settings](settings.md) { #settings }
+### Settings
 
 * [**Settings**](settings.md) — Project-wide settings for the Core module.
 
@@ -56,7 +56,7 @@ Core is the foundation of every WideQuick MOD installation. Unlike optional modu
 
 ---
 
-### [Users & Privileges](users-privileges.md) { #users-privileges }
+### Users & Privileges
 
 * [**Users & Privileges**](users-privileges.md) — User management and privilege configuration across the installation.
 

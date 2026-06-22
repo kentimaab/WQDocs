@@ -40,7 +40,7 @@ använder den.
 
 ---
 
-### [Utökning](extending.md) { #extending }
+### [Utöka](extending.md) { #extending }
 * [**Skapa mallar**](extending.md#creating-templates) — Hur du designar och
 konfigurerar din egen rapportmall.
 * [**Skapa en ReportController**](extending.md#creating-the-reportcontroller-view) —

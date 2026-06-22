@@ -1,5 +1,5 @@
 ---
-title: Larm — Utökning
+title: Larm — Utöka
 product: mod
 page_type: module
 status: draft
@@ -9,7 +9,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Larm — Utökning
+# Larm — Utöka
 
 ## E-postnotifieringar { #email-notifications }
 

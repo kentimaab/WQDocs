@@ -23,7 +23,7 @@ WideQuick MOD använder flera SQLite-databaser som lagras i mappen `Data/` i pro
 
 ### [History.db](history-db.md) { #history-db }
 
-* [**History.db**](history-db.md) — Lagrar loggad signaldata. Tabeller genereras dynamiskt av loggare — varje loggare skapar en datatabell och en metatabell identifierad med en hash av loggarens namn.
+* [**History.db**](history-db.md) — Lagrar loggad signaldata. Tabeller genereras dynamiskt av loggenheter — varje loggenhet skapar en datatabell och en metatabell identifierad med en hash av loggenhetens namn.
 
 ---
 

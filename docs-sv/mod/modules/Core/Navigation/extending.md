@@ -1,5 +1,5 @@
 ---
-title: Navigation — Utökning
+title: Navigation — Utöka
 product: mod
 page_type: module
 status: draft
@@ -9,7 +9,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Navigation — Utökning
+# Navigation — Utöka
 
 Det här avsnittet beskriver hur du utökar navigationsmodulen med anpassad funktionalitet.
 Det inkluderar att skapa genvägar till specifika objekt med GoTo samt att lägga till anpassade

@@ -11,6 +11,10 @@ tags:
 
 # Get Started with WideQuick MOD
 
+<img src="../../assets/MOD-2.png" style="width:100%;box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"></img>
+
+## What is WideQuick MOD
+
 WideQuick MOD is Kentima's modular framework for building HMI and SCADA applications.
 It provides a structured project foundation with a library of production-ready modules
 covering the features every system needs — from alarms and navigation to maintenance
@@ -49,8 +53,15 @@ a partner, visit [kentima.com](https://www.kentima.com){target="_blank"} to lear
 more and get in touch. If you are in need of a WideQuick license, please contact
 the Kentima [sales team](https://www.kentima.com/en-GB/Kontakt){target="_blank"}.
 
+## Release notes
+
+For a full list of changes, new features, and migration guidance see the release notes.
+
+[Release notes](../releases/index.md){ .md-button .md-button--primary }
+
 ## Download
 
 The framework is accessed through the Kentima Partner Download pages:
 
 [Download WideQuick MOD](./download.md){ .md-button .md-button--primary }
+

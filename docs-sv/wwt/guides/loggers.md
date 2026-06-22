@@ -1,5 +1,5 @@
 ---
-title: Konfigurera en loggare
+title: Konfigurera en loggenhet
 product: wwt
 page_type: guide
 status: draft

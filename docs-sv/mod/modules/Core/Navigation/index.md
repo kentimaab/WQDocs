@@ -21,7 +21,7 @@ direkt objektlänkning via GoTo.
 ---
 
 ### [Kom igång](get-started.md) { #get-started }
-* [**Lägga till arbetsbilder i navigationen**](get-started.md#adding-workviews-to-the-navigation) — Hur man lägger till **arbetsbilder** i navigationssystemet.
+* [**Lägga till arbetsbilder i navigationen**](get-started.md#adding-arbetsvyer-to-the-navigation) — Hur man lägger till **arbetsbilder** i navigationssystemet.
 * [**Helskärmsmeny**](get-started.md#fullscreen-menu) — Hur man öppnar helskärmsmenyn och hur den fungerar.
 
 ---
@@ -32,6 +32,6 @@ direkt objektlänkning via GoTo.
 
 ---
 
-### [Utökning](extending.md) { #extending }
+### [Utöka](extending.md) { #extending }
 * [**GoTo**](extending.md#goto) — Hur man använder funktionen `goTo()` och hur den integreras med larm.
 * [**Anpassade navigationsikoner**](extending.md#custom-navigation-icons) — Hur man implementerar anpassade ikoner för **arbetsbilder** och mappar.

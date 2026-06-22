@@ -175,7 +175,7 @@ hide:
 
   <div class="hp-kentima">
     <div class="hp-kentima__inner">
-      <img src="assets/Images/logo.svg" class="hp-kentima__logo" alt="Kentima">
+      <img src="assets/Kentima.svg" class="hp-kentima__logo" alt="Kentima">
       <div class="hp-kentima__text">
         <div class="hp-kentima__name">Made by Kentima</div>
         <div class="hp-kentima__desc">Kentima develops HMI/SCADA software and industrial automation solutions. WideQuick is Kentima's platform for building tailored monitoring and control systems.</div>

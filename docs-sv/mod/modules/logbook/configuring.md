@@ -25,7 +25,7 @@ MB/AS01/VS10/PT01
 MB/AS02
 ```
 
-När loggboken öppnas från ett objektpopup sätts ämnet automatiskt utifrån objektets taggsökväg. När den öppnas från en vyknapp kan ämnet sättas från vyns namn eller skickas in explicit. Se [Utökning](extending.md) för hur man gör detta i ett skript.
+När loggboken öppnas från ett objektpopup sätts ämnet automatiskt utifrån objektets taggsökväg. När den öppnas från en vyknapp kan ämnet sättas från vyns namn eller skickas in explicit. Se [Utöka](extending.md) för hur man gör detta i ett skript.
 
 ![Ämnesträd som visar en nästlad hierarki](/Images/Logbook/topic-tree.png){align=center}
 
@@ -53,9 +53,9 @@ Varje objekt i projektet har en flik [**Loggbok**](../../reference/Popup/Logbook
 
 ### Vybegränsad { #view-scoped }
 
-Menyn **SpeedDial** i processvyer innehåller en knapp som öppnar en loggbok begränsad till den aktuella vyn. Endast poster som matchar vyns ämne visas, och nya poster som skapas härifrån tilldelas automatiskt rätt ämne. Se [Utökning](extending.md) för installationsdetaljer.
+Menyn **SpeedDial** i processvyer innehåller en knapp som öppnar en loggbok begränsad till den aktuella vyn. Endast poster som matchar vyns ämne visas, och nya poster som skapas härifrån tilldelas automatiskt rätt ämne. Se [Utöka](extending.md) för installationsdetaljer.
 
 ## Nästa steg { #next-steps }
 
-* [Utökning](extending.md) — lägga till en loggbok i en anpassad vy eller knapp
+* [Utöka](extending.md) — lägga till en loggbok i en anpassad vy eller knapp
 <!-- --8<-- [end:body] -->

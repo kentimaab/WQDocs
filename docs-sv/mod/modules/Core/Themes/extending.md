@@ -1,5 +1,5 @@
 ---
-title: Teman — Utökning
+title: Teman — Utöka
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Teman — Utökning
+# Teman — Utöka
 
 ## Skapa ett anpassat tema { #creating-a-custom-theme }
 

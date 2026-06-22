@@ -1,5 +1,5 @@
 ---
-title: Kartor och indikatorer — Utökning
+title: Kartor och indikatorer — Utöka
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Kartor och indikatorer — Utökning
+# Kartor och indikatorer — Utöka
 
 Det här avsnittet beskriver hur du utökar modulen Kartor och indikatorer med anpassad
 funktionalitet. Det inkluderar att koppla ett **Alarm**-objekt till en **Kartvy** för
@@ -30,7 +30,7 @@ användaren både en fullständig systemöversikt och stationsspecifik kontroll.
 Lägg till följande onLoad-skript i den **Arbetsvy** som innehåller både
 **Kartvyn** och **Alarm**-objektet. Detta aktiverar alla systemlarm i larmlistan:
 
-```javascript title="Workview — onLoad"
+```javascript title="arbetsvy — onLoad"
 var local = alarmNames.split(",");
 
 for (var index = 0; index < local.length; index++) {
@@ -120,7 +120,7 @@ För att länka en indikator till en **Arbetsvy**, lägg till en **linkedView**-
 dess värde till sökvägen för den önskade **Arbetsvy** som slutar med `.kvie`. Lägg sedan
 till följande onClick-skript:
 
-```javascript title="Custom indicator — onClick (Workview)"
+```javascript title="Custom indicator — onClick (arbetsvy)"
 app.MultiViewer.setView(this.linkedView);
 ```
 
@@ -149,7 +149,7 @@ scLinking.goTo(this.targetObject);
 ```
 
 Det navigerar till den **Arbetsvy** som innehåller målobjektet och markerar det.
-För mer information om GoTo, se [Navigation — Utökning](../Core/Navigation/extending.md#goto).
+För mer information om GoTo, se [Navigation — Utöka](../Core/Navigation/extending.md#goto).
 
 !!! tip
     Använd **linkedView** med en `.kvie`-sökväg för att navigera till en specifik **Arbetsvy**,

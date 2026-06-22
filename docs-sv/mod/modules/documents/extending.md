@@ -1,5 +1,5 @@
 ---
-title: Dokument — Utökning
+title: Dokument — Utöka
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# Dokument — Utökning
+# Dokument — Utöka
 
 ## Behörigheter { #privileges }
 
