@@ -42,8 +42,8 @@ Tekniskt referensmaterial för WideQuick MOD. Dessa sidor beskriver hur systemet
 * [**Dokument**](Popup/Documents.md) — Dokument kopplade till objektet.
 * [**Process**](Popup/Process.md) — Processvärden och statussignaler (suffixberoende).
 * [**Manöver**](Popup/Maneuver.md) — Byte av driftläge och manuell börvärdesstyrning (suffixberoende).
-* [**Tidskanal**](Popup/Time-channelmd) — Konfiguration av tidsbaserat schema (suffixberoende).
-* [**Styrkurva**](Popup/Control curve.md) — Icke-linjär styrkurveeditor (suffixberoende).
+* [**Tidskanal**](Popup/Time-channel.md) — Konfiguration av tidsbaserat schema (suffixberoende).
+* [**Styrkurva**](Popup/Control%20curve.md) — Icke-linjär styrkurveeditor (suffixberoende).
 
 ---
 
