@@ -25,7 +25,7 @@ Tekniskt referensmaterial för WideQuick MOD. Dessa sidor beskriver hur systemet
 
 ---
 
-### [Multivy](multiview.md) { #multiview }
+### Multivy
 
 * [**Multivy**](multiview.md) — Hur man konfigurerar länkning av arbetsvyer så att systemet kan navigera mellan vyer baserat på objektåtgärder.
 
@@ -47,25 +47,25 @@ Tekniskt referensmaterial för WideQuick MOD. Dessa sidor beskriver hur systemet
 
 ---
 
-### [Resurser och Resurspaket](Resources-and-Resource-package.md) { #resources-and-resurspaket }
+### Resurser och Resurspaket
 
 * [**Resurser och Resurspaket**](Resources-and-Resource-package.md) — Export och import av resurser mellan projekt.
 
 ---
 
-### [Skripthierarki](ScriptHierarchy.md) { #script-hierarchy }
+### Skripthierarki
 
 * [**Skripthierarki**](ScriptHierarchy.md) — Beroendestruktur för alla skript i WideQuick MOD.
 
 ---
 
-### [Suffixsystem](suffix-system.md) { #suffix-system }
+### Suffixsystem
 
 * [**Suffixsystem**](suffix-system.md) — Hur suffixobjekt är strukturerade, deras attribut och hur de associeras med popup-fönster.
 
 ---
 
-### [Taggstruktur](tag-structure.md) { #tag-structure }
+### Taggstruktur
 
 * [**Taggstruktur**](tag-structure.md) — Taggnamnskonventioner och konfiguration för WideQuick MOD.
 

@@ -16,50 +16,50 @@ Guiderna beskriver hur man använder specifika funktioner i WideQuick MOD — b�
 
 ## Innehåll { #contents }
 
-### [Automatisk skalning](automatic-scaling.md) { #automatic-scaling }
+### Automatisk skalning
 
 * [**Automatisk skalning**](automatic-scaling.md) — Hur WideQuick MOD automatiskt skalar vyer och popups till valfri skärmupplösning.
 
 ---
 
-### [Skapa objekt](create-an-object.md) { #create-object }
+### Skapa objekt
 
 * [**Skapa objekt**](create-an-object.md) — Hur man skapar och ansluter ett processobjekt i en WideQuick-arbetsvy, och hur man skapar objekt dynamiskt från skript.
 
 ---
 
-### [Skapa popup](create-a-popup.md) { #create-popup }
+### Skapa popup
 
 * [**Skapa popup**](create-a-popup.md) — Hur man skapar en anpassad popup i WideQuick MOD.
 
 ---
 
-### [Språk](languages.md) { #languages }
+### Språk
 
 * [**Språk**](languages.md) — Lägg till språk, skapa översättningsfiler och använd `Language.translate()` för att byta språk vid körning.
 
 ---
 
-### [Loggenheter](Loggers.md) { #logger }
+### Loggenheter
 
 * [**Loggenheter**](Loggers.md) — Hur man skapar och konfigurerar en loggenhet i WideQuick Designer för användning med Historik, Rapporter och andra databaserade moduler.
 
 ---
 
-### [Inloggningskonfiguration](Login Config.md) { #login-config }
+### Inloggningskonfiguration
 
 * [**Inloggningskonfiguration**](Login Config.md) — Konfigurera inloggningsskärmen, hoppa över inloggning, metod för användarval, bakgrundsbild och startarbetsvy.
 
 ---
 
-### [Fjärrsystem](remote-systems.md) { #remote-systems }
+### Fjärrsystem
 
 * [**Fjärrsystem**](remote-systems.md) — Anslut WideQuick-applikationer till varandra för centraliserad övervakning och larmaggregering.
 
 ---
 
-### [Arbetsvy-animationer](arbetsvy-animations.md) { #arbetsvy-animations }
+### Arbetsvy-animationer
 
-* [**Arbetsvy-animationer**](arbetsvy-animations.md) — Konfigurera och utöka arbetsvy-animationer i WideQuick MOD.
+* [**Arbetsvy-animationer**](workview-animations.md) — Konfigurera och utöka arbetsvy-animationer i WideQuick MOD.
 
 <!-- --8<-- [end:body] -->
