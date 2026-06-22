@@ -48,7 +48,7 @@ Guiderna beskriver hur man använder specifika funktioner i WideQuick MOD — b�
 
 ### Inloggningskonfiguration
 
-* [**Inloggningskonfiguration**](Login Config.md) — Konfigurera inloggningsskärmen, hoppa över inloggning, metod för användarval, bakgrundsbild och startarbetsvy.
+* [**Inloggningskonfiguration**](Login Config.md) — Konfigurera inloggningsskärmen, hoppa över inloggning, metod för användarval, bakgrundsbild och startvy.
 
 ---
 

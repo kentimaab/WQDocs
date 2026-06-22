@@ -50,15 +50,15 @@ Den här taggen består av:
 
 För mer information om taggstrukturen, se [Taggstruktur](../reference/tag-structure.md).
 
-## Steg 3 - Skapa en arbetsvy
+## Steg 3 - Skapa en Arbetsvy
 
-I **WideQuick Designer®**, skapa en ny **arbetsvy** inuti **System 1**. Den kommer då att visas automatiskt i navigeringsmenyn. För mer information om hur navigeringen fungerar, se [Navigation — Kom igång](../modules/Core/Navigation/get-started.md).
+I **WideQuick Designer®**, skapa en ny **Arbetsvy** inuti **System 1**. Den kommer då att visas automatiskt i navigeringsmenyn. För mer information om hur navigeringen fungerar, se [Navigation — Kom igång](../modules/Core/Navigation/get-started.md).
 
 ![arbetsvy](/Images/First_tag/CreateWork.gif)
 
 ## Steg 4 - Placera motorobjektet
 
-Öppna den nya **arbetsvy** och dra objektet `dynMotorPumpR_000` från objektbiblioteket **Motors** in i vyn.
+Öppna den nya **Arbetsvy** och dra objektet `dynMotorPumpR_000` från objektbiblioteket **Motors** in i vyn.
 
 Välj objektet `DynTouch` inuti gruppen och navigera till fliken **Egenskaper**. Ange följande:
 

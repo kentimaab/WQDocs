@@ -32,7 +32,7 @@ Knapparna i mitten hanterar `.ts`-filer:
 * **Edit** — öppna den valda `.ts`-filen för redigering.
 * **Remove** — ta bort den valda `.ts`-filen.
 * **Rename** — byt namn på den valda `.ts`-filen.
-* **Update** — genomsök alla arbetsvyer (`.kvie`) och komponentbibliotek (`.klib`) i projektet efter textegenskaper och lägg till eventuella nya källsträngar i alla `.ts`-filer. Strängar som inte längre förekommer i projektet markeras som föråldrade.
+* **Update** — genomsök alla Arbetsvyer (`.kvie`) och komponentbibliotek (`.klib`) i projektet efter textegenskaper och lägg till eventuella nya källsträngar i alla `.ts`-filer. Strängar som inte längre förekommer i projektet markeras som föråldrade.
 
 ### Redigera enskilda översättningar { #editing-translations }
 

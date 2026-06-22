@@ -27,7 +27,7 @@ Tekniskt referensmaterial för WideQuick MOD. Dessa sidor beskriver hur systemet
 
 ### Multivy
 
-* [**Multivy**](multiview.md) — Hur man konfigurerar länkning av arbetsvyer så att systemet kan navigera mellan vyer baserat på objektåtgärder.
+* [**Multivy**](multiview.md) — Hur man konfigurerar länkning av Arbetsvyer så att systemet kan navigera mellan vyer baserat på objektåtgärder.
 
 ---
 

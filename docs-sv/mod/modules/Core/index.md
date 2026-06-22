@@ -33,7 +33,7 @@ Kärna är grunden i varje WideQuick MOD-installation. Till skillnad från valfr
 
 ### [Navigation](Navigation/index.md) { #navigation }
 
-* [**Kom igång**](Navigation/get-started.md) — Lägga till arbetsvyer i navigationen, helskärmsmenyn.
+* [**Kom igång**](Navigation/get-started.md) — Lägga till Arbetsvyer i navigationen, helskärmsmenyn.
 * [**Konfigurering**](Navigation/configuring.md) — Behörighetskrav på vyer, visningsinställningar för begränsade vyer.
 * [**Utöka**](Navigation/extending.md) — GoTo-funktion, anpassade navigationsikoner.
 

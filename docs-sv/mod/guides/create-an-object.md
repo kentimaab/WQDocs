@@ -20,7 +20,7 @@ avancerade användningsfall där antalet objekt inte är känt vid designtillfä
 
 ## Skapa ett processobjekt visuellt
 
-Att skapa ett processobjekt i en **arbetsvy** består av tre steg:
+Att skapa ett processobjekt i en **Arbetsvy** består av tre steg:
 
 1. Välj en komponent som representerar objektet visuellt
 2. Lägg till stödobjekt för att visa taggvärden och status
@@ -42,13 +42,13 @@ Det första steget är att välja en komponent som representerar objektet visuel
 användas — valet beror på vad objektet representerar i processvyn.
 
 I det här exemplet används **Centrifugal Pumps 01** från biblioteket **PID Pumps**
-under **PI&D**. Dra komponenten till **arbetsvy**. Det är möjligt att kombinera
+under **PI&D**. Dra komponenten till **Arbetsvy**. Det är möjligt att kombinera
 flera komponenter för att representera mer komplexa objekt — till exempel en pump
 med en ventil. Gruppera dem inte ännu.
 
 Alla komponenter som är utformade för att representera fysiska objekt — som pumpar,
 fläktar och ventiler — är kompatibla med systemet för
-[arbetsvy Animation](./workview-animations.md), vilket innebär att de kan byta färg
+[Arbetsvy Animation](./workview-animations.md), vilket innebär att de kan byta färg
 för att spegla objektets aktuella tillstånd — aktivt, larm, varning eller under service.
 
 ### Stödobjekt
@@ -62,7 +62,7 @@ Detta kopplar visningen till den signal som är mappad till det aliaset. Mer
 information om suffixalias och hur de fungerar finns i
 [Taggstruktur — Suffix Alias](../reference/tag-structure.md#suffix-alias).
 
-Dra de relevanta stödobjekten från biblioteket till **arbetsvy** och placera dem i
+Dra de relevanta stödobjekten från biblioteket till **Arbetsvy** och placera dem i
 förhållande till komponenten. Gruppera ingenting ännu.
 
 ### Färdigställ objektet
@@ -71,7 +71,7 @@ Det sista steget är att konvertera komponenten och stödobjekten till ett grupp
 objekt med hjälp av ett `DynTouch`-objekt. `DynTouch`-objektet definierar det
 klickbara området och binder samman alla visuella element.
 
-Dra `DynTouch`-objektet från biblioteket till **arbetsvy** och ändra storleken så
+Dra `DynTouch`-objektet från biblioteket till **Arbetsvy** och ändra storleken så
 att det täcker komponenten och alla stödobjekt helt. Ingenting får hamna utanför
 `DynTouch`-objektets gräns — ett element utanför gränsen ingår inte i gruppen och
 kan orsaka problem med klickning och val.
@@ -92,7 +92,7 @@ Mer information om hur taggar är strukturerade och hur suffixsystemet fungerar 
 
 !!! tip
     För att lära dig hur du bygger ett helt anpassat objekt från grunden och applicerar
-    animationer, se exemplet [arbetsvy Animations](./workview-animations.md#example-building-a-custom-animated-motor-object).
+    animationer, se exemplet [Arbetsvy Animations](./workview-animations.md#example-building-a-custom-animated-motor-object).
 
 ## Skapa objekt från skript
 
@@ -103,7 +103,7 @@ post per datasignal istället för att placera ett fast antal tomma objekt i vyn
 skillnad från det visuella tillvägagångssättet kräver den här metoden
 skriptkunskaper och lämpar sig bättre för avancerade användningsfall.
 
-`createObject()` finns i listan **Functions** under **arbetsvy** i
+`createObject()` finns i listan **Functions** under **Arbetsvy** i
 **WideQuick Designer®**, tillsammans med konstanterna `ObjectType*`.
 
 ### Syntax

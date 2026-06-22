@@ -123,7 +123,7 @@ beroende på popupens komplexitet och mängden innehåll som ska visas:
 | **Template_Popup_Medium** | 980px | Mer komplexa popups med mer innehåll |
 | **Template_Popup_Large** | 1480px | Omfattande popups med maximalt innehåll |
 
-Alla tre mallar finns under **arbetsvyer → Templates**. Knapparna och layouten
+Alla tre mallar finns under **Arbetsvyer → Templates**. Knapparna och layouten
 skalas automatiskt med mallstorleken, så processen för att bygga en popup är
 densamma oavsett vilken mall som väljs.
 
@@ -138,11 +138,11 @@ densamma oavsett vilken mall som väljs.
 Det sista steget är att bygga popup-vyn för att styra pumpen och visa
 information.
 
-Det finns två sätt att angripa detta — börja från en ny **arbetsvy** eller kopiera en
+Det finns två sätt att angripa detta — börja från en ny **Arbetsvy** eller kopiera en
 befintlig mallvy. Det enklaste sättet är att börja med mallvyn,
-som innehåller alla nödvändiga skript och konfigurationer. Kopiera **arbetsvy**
-**Template_Popup_Small** som finns under **arbetsvyer → Templates** och namnge den nya
-**arbetsvy** **Pump Control**.
+som innehåller alla nödvändiga skript och konfigurationer. Kopiera **Arbetsvyn:**
+**Template_Popup_Small** som finns under **Arbetsvyer → Templates** och namnge den nya
+**Arbetsvyn:** **Pump Control**.
 
 !!! note "Namngivning av popups"
     Popupen behöver inte heta samma sak som suffixgruppen som skapades i
@@ -196,7 +196,7 @@ som visas nedan:
 ![Popup-konfiguration](/Images/Create_Popup/view_config.png)
 
 Allt som återstår är att starta projektet och klicka på `pump06` för att se popupen **Pump Control**. Se [Skapa objekt](create-an-object.md) för att skapa ett objekt i en
-**arbetsvy**.
+**Arbetsvy**.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 

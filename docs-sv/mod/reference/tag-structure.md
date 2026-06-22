@@ -106,7 +106,7 @@ taggar som är anslutna till objektet.
 
 För att snabba upp processen att ansluta flera objekt till sina taggar behöver man inte
 ange samma **Anslutnings**-, **Enhets**- och **System**-information på varje objekt i
-vyn. Dessa egenskaper kan i stället anges på **arbetsvy**-egenskaperna. Om ett
+vyn. Dessa egenskaper kan i stället anges på **Arbetsvy**-egenskaperna. Om ett
 `DynTouch`-objekt lämnas tomt försöker det hämta informationen från vyn i stället.
 
 ![Tag structure view](/Images/Tag_Structure/tagStructure%20view.png)
@@ -139,7 +139,7 @@ tillämpas på alla objekt i systemet.
 ### Konfigurera suffixalias { #configuring-suffix-aliases }
 
 Suffixalias konfigureras i **WideQuick Runtime®** genom att navigera till
-**Inställningar → Suffix → Suffix Alias - arbetsvyer**.
+**Inställningar → Suffix → Suffix Alias - Arbetsvyer**.
 
 ![Suffix settings](/Images/Tag_Structure/SuffixAlias_Procces.png)
 
@@ -155,7 +155,7 @@ alla visningselement som är anslutna till en signal med det suffixet.
 
 !!! note
     Liknande aliassystem finns för objektanimationer och popuper. Se
-    [arbetsvy Animations](../guides/workview-animations.md) och [Popups](Popup/index.md) för mer information.
+    [Arbetsvy Animations](../guides/workview-animations.md) och [Popups](Popup/index.md) för mer information.
 
 ## Specialegenskaper på taggar { #special-properties-on-tags }
 Det är möjligt att definiera taggspecifika egenskaper och beskrivningar för en tagg, vilket
