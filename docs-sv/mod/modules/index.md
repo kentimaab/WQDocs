@@ -47,7 +47,7 @@ WideQuick MOD organiserar sina funktioner i moduler. Varje modul täcker ett ege
 
 ---
 
-### [dashboards](dashboards/index.md) { #dashboards }
+### [Dashboards](dashboards/index.md) { #dashboards }
 
 * [**Kom igång**](dashboards/get-started.md) — Konfigurera dashboards, widgets och rutnätslayout.
 * [**Konfigurera**](dashboards/configuring.md) — Widgetparametrar och tillgängliga widgets.
@@ -87,7 +87,7 @@ WideQuick MOD organiserar sina funktioner i moduler. Varje modul täcker ett ege
 
 ---
 
-### [Kartor och indikatorer](maps/index.md) { #maps-indicators }
+### [Kartor & indikatorer](maps/index.md) { #maps-indicators }
 
 * [**Kom igång**](maps/get-started.md) — Konfigurera en kartvy och lägga till indikatorer.
 * [**Konfigurera**](maps/configuring.md) — Nålstatus, klustrade nålar, linjer och filter.

@@ -42,8 +42,8 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 * [**Documents**](Popup/Documents.md) — Documents linked to the object.
 * [**Process**](Popup/Process.md) — Process values and status signals (suffix-dependent).
 * [**Maneuver**](Popup/Maneuver.md) — Operating mode switching and manual setpoint control (suffix-dependent).
-* [**Time Channel**](Popup/Time-channelmd) — Time-based schedule configuration (suffix-dependent).
-* [**Control Curve**](Popup/Control curve.md) — Non-linear control curve editor (suffix-dependent).
+* [**Time Channel**](Popup/Time-channel.md) — Time-based schedule configuration (suffix-dependent).
+* [**Control Curve**](Popup/Control%20curve.md) — Non-linear control curve editor (suffix-dependent).
 
 ---
 

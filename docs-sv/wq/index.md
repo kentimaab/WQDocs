@@ -1,11 +1,10 @@
 ---
 title: WideQuick HMI/SCADA/PSIM
+description: En HMI/SCADA/PSIM-plattform byggd utan inlåsning — öppna protokoll, flexibla driftsättningslägen och ett fullt redigerbart Modular Framework.
 product: wq
-page_type: overview
-status: draft
-last_reviewed: 2026-06-16
-tags:
- - WQ
+hide:
+  - toc
+  - navigation
 ---
 
 <div class="wq-lp">

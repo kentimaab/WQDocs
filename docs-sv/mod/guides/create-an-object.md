@@ -48,7 +48,7 @@ med en ventil. Gruppera dem inte ännu.
 
 Alla komponenter som är utformade för att representera fysiska objekt — som pumpar,
 fläktar och ventiler — är kompatibla med systemet för
-[arbetsvy Animation](./arbetsvy-animations.md), vilket innebär att de kan byta färg
+[arbetsvy Animation](./workview-animations.md), vilket innebär att de kan byta färg
 för att spegla objektets aktuella tillstånd — aktivt, larm, varning eller under service.
 
 ### Stödobjekt
@@ -92,7 +92,7 @@ Mer information om hur taggar är strukturerade och hur suffixsystemet fungerar 
 
 !!! tip
     För att lära dig hur du bygger ett helt anpassat objekt från grunden och applicerar
-    animationer, se exemplet [arbetsvy Animations](./arbetsvy-animations.md#example-building-a-custom-animated-motor-object).
+    animationer, se exemplet [arbetsvy Animations](./workview-animations.md#example-building-a-custom-animated-motor-object).
 
 ## Skapa objekt från skript
 

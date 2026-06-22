@@ -54,7 +54,7 @@ också att flera tillstånd kan kommuniceras samtidigt — till exempel en aktiv
 varning med en bakgrundslarmsmarkering.
 
 Alla nya symboler är fullt kompatibla med
-[arbetsvy Animation](../../../guides/arbetsvy-animations.md)-systemet, vilket innebär
+[arbetsvy Animation](../../../guides/workview-animations.md)-systemet, vilket innebär
 att de automatiskt svarar på alla konfigurerade animationskategorier utan någon
 ytterligare konfiguration.
 

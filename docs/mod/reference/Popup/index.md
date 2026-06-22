@@ -55,8 +55,8 @@ aliases:
 object.
 * [**Maneuver**](Maneuver.md) — provides control actions such as switching between
 operating modes or setting manual values.
-* [**Time Channel**](Time-channelmd) — allows time-based schedules to be configured
+* [**Time Channel**](Time-channel.md) — allows time-based schedules to be configured
 for the object.
-* [**Control Curve**](Control curve.md) — a control curve editor for configuring
+* [**Control Curve**](Control%20curve.md) — a control curve editor for configuring
 non-linear control relationships.
 <!-- --8<-- [end:body] -->

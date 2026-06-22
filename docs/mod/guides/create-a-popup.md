@@ -77,7 +77,7 @@ to the popup. This is done in a few steps:
 new category a name. Since we are creating a popup for pump control, name it
 **Pump Control**.
 
-![Adding category](/Images/Create_Popup/Adding%20Category.gif)
+![Adding category](/Images/Create_Popup/Adding%20category.gif)
 
 * Select the new category in the list and click **Add new suffix alias in selected category**. In this example we start with the tag with suffix `_IO`, which displays
 whether the pump is on or not. Name this suffix **Active**.
