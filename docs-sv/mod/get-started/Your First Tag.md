@@ -80,7 +80,7 @@ Starta projektet och navigera till **Inställningar → Suffix → Suffix - Larm
 
 Suffixaliaset **On** är nu en del av gruppen **4 - Aktiv**. Välj sedan **On** i trädvyn och tilldela `_IO` till fältet **Suffix**.
 
-För mer information om hur animationssystemet fungerar, se [arbetsvy-animationer](../guides/arbetsvy-animations.md).
+För mer information om hur animationssystemet fungerar, se [arbetsvy-animationer](../guides/workview-animations.md).
 
 ![Suffix Alarm configuration](/Images/First_tag/SuffixAlarm.gif)
 

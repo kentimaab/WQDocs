@@ -1,5 +1,5 @@
 ---
-title: dashboards
+title: Dashboards
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# dashboards
+# Dashboards
 
 En dashboard är en konfigurerbar vy för att övervaka signaler, värden och status
 från olika delar av systemet på ett och samma ställe. Istället för att navigera mellan

@@ -1,5 +1,5 @@
 ---
-title: dashboards — Konfigurering
+title: Dashboards — Konfigurering
 product: mod
 page_type: module
 status: draft
@@ -10,7 +10,7 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# dashboards — Konfigurering
+# Dashboards — Konfigurering
 
 ## Parametrar — Gemensamma inställningar för alla widgetar { #parameters-common-settings-shared-by-all-widgets }
 

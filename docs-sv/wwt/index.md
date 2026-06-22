@@ -1,9 +1,9 @@
 ---
 title: WideQuick WWT
+description: WideQuick Water & Wastewater Treatment — övervaka anläggningar, säkerställ produktion, optimera underhåll.
 product: wwt
-page_type: overview
-status: draft
-last_reviewed: 2026-06-16
+hide:
+  - toc
 tags:
  - WWT
 ---
@@ -23,28 +23,26 @@ tags:
 </div>
 
 <div class="lp-section-head">
-  <span class="lp-section-num">§ 01</span>
   <span class="lp-section-label">Kom igång</span>
 </div>
 
 <div class="lp-quickstart" markdown>
 
--   **Installera WWT**
+-   **Ladda ner WWT**
 
-    Konfigurera WWT-konceptappen och verifiera maskinvarukompatibilitet.
+    Var du hittar mall- och demoprojekt och hur du öppnar dem i **WideQuick Designer®**.
 
-    [Genomgång →](get-started/download.md)
+    [Ladda ner →](get-started/download.md)
 
--   **Anslut en station**
+-   **Din första tagg**
 
-    Hämta in din första signal från en pumpstation, bassäng eller reningslinje.
+    Koppla en tagg från start till mål och verifiera den på en processpopup.
 
-    [Din första tagg →](get-started/Your%20First%20Tag.md)
+    [Skapa den →](get-started/Your%20First%20Tag.md)
 
 </div>
 
 <div class="lp-section-head">
-  <span class="lp-section-num">§ 02</span>
   <span class="lp-section-label">Utforska produkten</span>
 </div>
 

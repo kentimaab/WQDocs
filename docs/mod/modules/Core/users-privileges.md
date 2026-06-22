@@ -98,7 +98,7 @@ the **Virtual privilege** button to select which privileges should be included.
 Access to specific **Workviews** can be restricted based on privileges. Navigate
 to **Settings → Workviews → Workviews - Privilege** in the main menu.
 
-![WorkView Privilege](/Images/User_and_privileges/WorkView_privleage.png)
+![WorkView Privilege](/Images/User_and_privileges/Workview_privleage.png)
 
 Select the **Workview** where the restriction should be applied. Configuration
 options will appear on the right side of the view.

@@ -62,4 +62,7 @@ To edit a palette, open the **Themes** branch in the project tree, select the de
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — creating a custom theme that follows a graphical profile
+
+!!! tip
+    If you want to read more about M3: [Material Design 3](https://m3.material.io/)
 <!-- --8<-- [end:body] -->

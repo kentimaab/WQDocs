@@ -1,9 +1,9 @@
 ---
 title: WideQuick BMS
+description: WideQuick Building Management System — övervaka och optimera byggnader, sänk kostnader, öka komfort.
 product: bms
-page_type: overview
-status: draft
-last_reviewed: 2026-06-16
+hide:
+  - toc
 tags:
  - BMS
 ---
@@ -28,17 +28,17 @@ tags:
 
 <div class="lp-quickstart" markdown>
 
--   **Installera BMS**
+-   **Ladda ner BMS**
 
-    Konfigurera BMS-konceptappen och verifiera maskinvarukompatibilitet.
+    Var du hittar mall- och demoprojekt och hur du öppnar dem i **WideQuick Designer®**.
 
-    [Genomgång →](get-started/download.md)
+    [Ladda ner →](get-started/download.md)
 
--   **Anslut en styrenhet**
+-   **Din första tagg**
 
-    Hämta in din första signal från en OPC UA-, Modbus- eller BACnet-enhet.
+    Koppla en tagg från start till mål och verifiera den på en processpopup.
 
-    [Din första tagg →](get-started/Your%20First%20Tag.md)
+    [Skapa den →](get-started/Your%20First%20Tag.md)
 
 </div>
 

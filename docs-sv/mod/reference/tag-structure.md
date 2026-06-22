@@ -155,7 +155,7 @@ alla visningselement som är anslutna till en signal med det suffixet.
 
 !!! note
     Liknande aliassystem finns för objektanimationer och popuper. Se
-    [arbetsvy Animations](../guides/arbetsvy-animations.md) och [Popups](Popup/index.md) för mer information.
+    [arbetsvy Animations](../guides/workview-animations.md) och [Popups](Popup/index.md) för mer information.
 
 ## Specialegenskaper på taggar { #special-properties-on-tags }
 Det är möjligt att definiera taggspecifika egenskaper och beskrivningar för en tagg, vilket

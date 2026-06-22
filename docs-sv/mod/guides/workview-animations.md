@@ -1,5 +1,5 @@
 ---
-title: arbetsvy-animationer
+title: Arbetsvy-animationer
 product: mod
 page_type: guide
 status: draft
@@ -14,10 +14,10 @@ tags:
 ???+ info "Krav"
     Följande skript krävs för att använda arbetsvy-animationer:
 
-    * `scWorkviewAnimation`-skript
-    * `scAlert`-skript
-    * `scSuffix`-skript
-    * `scPrototypes`-skript
+    * `scWorkviewAnimation`
+    * `scAlert`
+    * `scSuffix`
+    * `scPrototypes`
 
 WideQuick Modular Framework innehåller ett inbyggt animationssystem som visar
 statusindikatorer på objekt för att indikera deras aktuella tillstånd — från larm och varningar

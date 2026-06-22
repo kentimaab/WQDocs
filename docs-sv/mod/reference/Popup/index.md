@@ -54,8 +54,8 @@ suffix-aliasena:
 * [**Process**](Process.md) — visar processvärden och statussignaler för objektet.
 * [**Maneuver**](Maneuver.md) — ger styrningsåtgärder såsom att växla mellan
 driftlägen eller ange manuella värden.
-* [**Time Channel**](Time-channelmd) — möjliggör att tidsbaserade scheman
+* [**Time Channel**](Time-channel.md) — möjliggör att tidsbaserade scheman
 konfigureras för objektet.
-* [**Control Curve**](Control curve.md) — en styrningskurveredigerare för att
+* [**Control Curve**](Control%20curve.md) — en styrningskurveredigerare för att
 konfigurera icke-linjära styrningsrelationer.
 <!-- --8<-- [end:body] -->

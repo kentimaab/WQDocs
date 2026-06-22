@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: All modules available in WideQuick WWT — from core system components to optional feature modules.
-product: WWT
+product: wwt
 page_type: concept
 status: draft
 last_reviewed: 2026-06-12

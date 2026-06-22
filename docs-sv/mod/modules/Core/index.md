@@ -39,7 +39,7 @@ Kärna är grunden i varje WideQuick MOD-installation. Till skillnad från valfr
 
 ---
 
-### [Inställningar](settings.md) { #settings }
+### Inställningar
 
 * [**Inställningar**](settings.md) — Projektövergripande inställningar för Kärna-modulen.
 
@@ -53,7 +53,7 @@ Kärna är grunden i varje WideQuick MOD-installation. Till skillnad från valfr
 
 ---
 
-### [Användare och behörigheter](users-privileges.md) { #users-privileges }
+### Användare och behörigheter
 
 * [**Användare och behörigheter**](users-privileges.md) — Användarhantering och behörighetskonfiguration i installationen.
 

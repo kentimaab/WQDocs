@@ -1,5 +1,5 @@
 ---
-title: dashboards — Kom igång
+title: Dashboards — Kom igång
 product: mod
 page_type: module
 status: draft
@@ -9,7 +9,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# dashboards — Kom igång
+# Dashboards — Kom igång
 ???+ info "Krav"
     Följande skript krävs för att använda dashboards och all
     relaterad funktionalitet som täcks i guiderna för dashboards:
