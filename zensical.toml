@@ -513,6 +513,12 @@ nav = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
+exclude_docs = """
+bms/archive/
+wwt/archive/
+mod/archive/
+"""
+
 extra_css = ["assets/stylesheets/extra.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your

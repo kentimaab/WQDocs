@@ -15,7 +15,7 @@ The **Settings** view in **WideQuick Runtime®** provides access to all system
 configuration options. Navigate to **Settings** in the main menu and open the
 **Settings** view.
 
-![Settings](/Images/Settings/settings.png)
+![Settings](/Images/Settings/Settings.png)
 
 ---
 

@@ -54,7 +54,7 @@ navigate to the bottom of the sheet tabs. Click **Create New Sheet**, see image 
 To hide the sheet, right-click the sheet tab and select **Hide Sheet**.
 
 <figure markdown="span">
-  ![newSheet](/Images/Reports/newSheet.png)
+  ![newSheet](/Images/Reports/NewSheet.png)
   <figcaption>Adding a new sheet to the template in WideQuick Designer.</figcaption>
 </figure>
 
