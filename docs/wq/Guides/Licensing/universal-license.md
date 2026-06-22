@@ -10,7 +10,7 @@ tags:
 
 ## Introduction 
 
-WideQuick License Config is a tool provided by Kentima AB to create and manage universal licenses keys tailored to running WideQuick with a Universal License. 
+WideQuick License Config is a tool provided by Kentima AB to create and manage universal license keys tailored to running WideQuick with a Universal License. 
 This guide provides step-by-step instructions for generating a universal license key (wqlicense.key).
 
 ### What is WideQuick Universal License?
@@ -57,7 +57,7 @@ When you launch WideQuick, the application contacts the license server. If a lic
 
 === "On Windows"
     
-    To set a environment variable on Window do the following:
+    To set an environment variable on Window do the following:
 
     1.	Press Windows key, search for "Edit Environment Variables," and select "Edit the system environment variables."
     
@@ -67,7 +67,7 @@ When you launch WideQuick, the application contacts the license server. If a lic
     
     ![Screenshot of System Properties window with Environment Variables button highlighted](./Images/pressENV.png)
     
-    3.	Under "System variables" (for all users) or "User variables" (for you only), click "New." If you already have a environment variable named WQ_CLOUD_LICENSE press edit instead.
+    3.	Under "System variables" (for all users) or "User variables" (for you only), click "New." If you already have an environment variable named WQ_CLOUD_LICENSE press edit instead.
     
     ![Screenshot of Environment Variables window showing system variables section](./Images/EditEnv.png)
 
@@ -81,7 +81,7 @@ When you launch WideQuick, the application contacts the license server. If a lic
 
     To set an environment variable on a GNU/Linux system:
 
-    1.	Open a terminal and edit your shell profile, you can do this with for example nano via you terminal by entering: 
+    1.	Open a terminal and edit your shell profile, you can do this with for example nano via your terminal by entering: 
         
         ![Screenshot of terminal window showing nano command](./Images/image-4.png)
         
@@ -94,7 +94,7 @@ When you launch WideQuick, the application contacts the license server. If a lic
             sudo nano /etc/environment
             ```
 
-    2.	Add this line at the end add: 
+    2.	Add this line at the end: 
         
         ![Screenshot of nano editor with export WQ_CLOUD_LICENSE=1 line](./Images/image-5.png)
 
@@ -156,7 +156,7 @@ When you launch WideQuick, the application contacts the license server. If a lic
   
   ![Screenshot of product level dropdown in WideQuick License Config tool](./Images/image-11.png)
 
-  As you do so you will notice that values in the list of licensed functions will change and become highlighted. With the higher licenses also allowing you to pick more optional feature and a larger set of External Variables.
+  As you do so you will notice that values in the list of licensed functions will change and become highlighted. With the higher licenses also allowing you to pick more optional features and a larger set of External Variables.
 
 ### 7.	Configure External Variables
 
@@ -168,7 +168,7 @@ When you launch WideQuick, the application contacts the license server. If a lic
 
   ![Screenshot of WideQuick Designer showing variable counter in bottom-right corner](./Images/image-12.png)
 
-  The number of internal variables you are allowed to use are about twice as many variables but within the specified range. The specifics of this you can find in the WideQuick Licensing Table available for download on our website.
+  The number of internal variables you are allowed to use is about twice as many variables but within the specified range. The specifics of this you can find in the WideQuick Licensing Table available for download on our website.
 
 ### 8.	Enable Options
 
@@ -206,7 +206,7 @@ When you launch WideQuick, the application contacts the license server. If a lic
 
   Verify that the Product Key is indeed invalid by entering it into the product key field in the WideQuick License Config Tool.
   
-  If it indeed seems to be incorrect, control that you have the assigned key given to you at the time of purchase.
+  If it indeed seems to be incorrect, verify that you have the assigned key given to you at the time of purchase.
   
   If previous measures did not help. Contact support@kentima.se with your purchase details.
 
