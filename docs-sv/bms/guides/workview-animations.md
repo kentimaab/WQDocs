@@ -1,5 +1,5 @@
 ---
-title: arbetsvy-animationer
+title: Arbetsvy-animationer
 product: bms
 page_type: guide
 status: draft

@@ -30,17 +30,15 @@ tags:
 
 -   **Ladda ner BMS**
 
-    Vart du laddar ner mall och demo projekten, och hur du öppnar dem i **WideQuick Designer®**
+    Var du hittar mall- och demoprojekt och hur du öppnar dem i **WideQuick Designer®**.
 
     [Ladda ner →](get-started/download.md)
 
 -   **Din första tagg**
 
-    Koppla en tagg från början till slut och verifiera den i ett processpopup.
+    Koppla en tagg från start till mål och verifiera den på en processpopup.
 
     [Skapa den →](get-started/Your%20First%20Tag.md)
-
-
 
 </div>
 

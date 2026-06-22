@@ -254,7 +254,7 @@ nav = [
         { "Översikt" = "bms/modules/maps/index.md" },
         { "Kom igång" = "bms/modules/maps/get-started.md" },
         { "Konfigurering" = "bms/modules/maps/configuring.md" },
-        { "Utöka" = "bms/modules/maps/extend.md" },
+        { "Utöka" = "bms/modules/maps/extending.md" },
       ]},
       { "Dokument" = [
         { "Översikt" = "bms/modules/documents/index.md" },
@@ -289,7 +289,7 @@ nav = [
       { "Loggenheter" = "bms/guides/loggers.md" },
       { "Inloggningskonfiguration" = "bms/guides/login-config.md" },
       { "Fjärrsystem" = "bms/guides/remote-systems.md" },
-      { "Workview-animationer" = "bms/guides/workview-animations.md" },
+      { "Arbetsvy-animationer" = "bms/guides/workview-animations.md" },
     ]},
     { "Referens" = [
       { "Översikt" = "bms/reference/index.md" },

@@ -43,9 +43,9 @@ Följande moduler ingår direkt:
 * **Automatisk navigering** — Plug and play-navigering som bygger sig själv. Inkluderar funktioner för adaptiv navigering baserat på användarbehörigheter.
 
 
-## Vad är nytt i 2026.1 
+## Nyheter i 2026.1
 
-2026.1 är en större release av WideQuick BMS — nästan varje modul har uppdaterats, med helt nya moduler som Kalender, Dashboard och Dokument.
+2026.1 är en stor release av WideQuick BMS — nästan varje modul har uppdaterats, med helt nya moduler som Kalender, Dashboard och Dokument.
 
 [Versionsinformation](../releases/index.md){ .md-button .md-button--primary }
 
