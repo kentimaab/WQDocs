@@ -37,7 +37,7 @@ Använd dessa dimensioner för att säkerställa att nya widgetar anpassas till 
 För att förstå hur en widget hanterar signaler, egenskaper eller layout dubbelklickar du på den i bibliotekslistan. Detta öppnar en redigerbar version av widgeten där skriptet och dynamiken för varje del kan granskas och användas som referens.
 
 !!! tip
-    Högerklicka på en placerad widget i en arbetsvy och välj **Show template** för att öppna biblioteket och markera källobjektet — praktiskt för att hitta vilken mall en widget på dashboarden kommer från.
+    Högerklicka på en placerad widget i en Arbetsvy och välj **Show template** för att öppna biblioteket och markera källobjektet — praktiskt för att hitta vilken mall en widget på dashboarden kommer från.
 
 ---
 
@@ -45,13 +45,13 @@ För att förstå hur en widget hanterar signaler, egenskaper eller layout dubbe
 
 ### Ange visningsbehörigheter { #setting-view-privileges }
 
-Visningsbehörigheter begränsar vilka användare som har åtkomst till en given dashboard. Ange dem vid körning genom att navigera till **Huvudmeny → Inställningar → arbetsvy Privileges**. Välj arbetsvyn från trädet till vänster och ange sedan den nödvändiga behörighetsnivån i listrutan **Privilege** till höger.
+Visningsbehörigheter begränsar vilka användare som har åtkomst till en given dashboard. Ange dem vid körning genom att navigera till **Huvudmeny → Inställningar → Arbetsvy Privileges**. Välj Arbetsvyn från trädet till vänster och ange sedan den nödvändiga behörighetsnivån i listrutan **Privilege** till höger.
 
 ![arbetsvy privileges](/Images/Dashboard/WVPriv.png){align=center}
 
 ### Ange standardvy per roll { #setting-default-view-per-role }
 
-För att ange en annan standarddashboard per roll lägger du till logiken i `onLoad`-skriptet för arbetsvyn `Workspace.kvie` i **WideQuick Designer®**. Använd `_sys_user_name` för att matcha en specifik användare eller `System.currentUser().hasPrivilege()` för att matcha en behörighetsnivå.
+För att ange en annan standarddashboard per roll lägger du till logiken i `onLoad`-skriptet för Arbetsvyn `Workspace.kvie` i **WideQuick Designer®**. Använd `_sys_user_name` för att matcha en specifik användare eller `System.currentUser().hasPrivilege()` för att matcha en behörighetsnivå.
 
 ```javascript title="Workspace.kvie — onLoad"
 app.MultiViewer = this.MultiviewerPage;

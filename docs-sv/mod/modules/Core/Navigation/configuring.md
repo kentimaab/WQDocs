@@ -25,12 +25,12 @@ på det traditionella sättet via säkerhetsfliken. Istället hanteras behörigh
 inställningar i **WideQuick Runtime®**.
 
 För att komma åt dessa inställningar, starta projektet och navigera till
-**Huvudmeny → Inställningar → Arbetsbilder → Arbetsbilder - Behörighet**.
+**Huvudmeny → Inställningar → Arbetsvyer → Arbetsvyer - Behörighet**.
 
 Här visas två menygrupper: **Main_Menu** och **System**. Expandera dessa för att välja
 en specifik vy eller en **Arbetsbild**-mapp och tilldela sedan önskad **Behörighet** från
 listan. **Arbetsbilden** är sedan bara tillgänglig för användare med rätt behörighet.
-Behörigheter kan tillämpas på både enskilda **Arbetsbilder** och hela **Arbetsbild**-mappar.
+Behörigheter kan tillämpas på både enskilda **Arbetsvy** och hela **Arbetsvy**-mappar.
 
 ![SettingPriv](/Images/Navigation/SettingPriv.png)
 

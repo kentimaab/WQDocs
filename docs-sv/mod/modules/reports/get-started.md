@@ -139,7 +139,7 @@ För att schemalägga en rapport, navigera till
 
 <figure markdown="span">
   ![Report schedule](/Images/Reports/Report_schedule.png)
-  <figcaption>arbetsvyn Rapportschema i WideQuick Runtime.</figcaption>
+  <figcaption>Arbetsvyn Rapportschema i WideQuick Runtime.</figcaption>
 </figure>
 
 Klicka på **Nytt schema** för att skapa ett nytt schema. En meny med tre sidor visas

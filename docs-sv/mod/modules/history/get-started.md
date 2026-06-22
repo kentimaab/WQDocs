@@ -21,7 +21,7 @@ tags:
     * `scAlert`
     * `scQuickSort`
 
-Historikmodulen visar loggade signaldata som interaktiva linjediagram. Det finns tre sätt att komma åt den: den projektövergripande vyn **Historik** från huvudmenyn, ett vyspecifikt **Historik**-popup som öppnas från en arbetsvy, och fliken [**Historik**](../../reference/Popup/History.md) i valfritt objektpopup.
+Historikmodulen visar loggade signaldata som interaktiva linjediagram. Det finns tre sätt att komma åt den: den projektövergripande vyn **Historik** från huvudmenyn, ett vyspecifikt **Historik**-popup som öppnas från en Arbetsvy, och fliken [**Historik**](../../reference/Popup/History.md) i valfritt objektpopup.
 
 ## Historik-vyn { #the-history-view }
 

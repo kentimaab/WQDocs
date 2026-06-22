@@ -92,7 +92,7 @@ Diagrammet nedan visar hur hela stacken passar ihop: från WideQuick HMI/SCADA-p
         <div class="arch-sublabel-col arch-sublabel-col--light"><span>Core</span></div>
         <div class="arch-content arch-content--core">
           <div class="arch-mini-chips">
-            <span>arbetsvyer</span><span>Graphical Objects</span><span>Interactive Objects</span><span>Dynamics</span><span>Alarms</span><span>History</span><span>Events</span><span>Users</span><span>Themes</span><span>Language</span><span>Data Store</span>
+            <span>Arbetsvyer</span><span>Graphical Objects</span><span>Interactive Objects</span><span>Dynamics</span><span>Alarms</span><span>History</span><span>Events</span><span>Users</span><span>Themes</span><span>Language</span><span>Data Store</span>
           </div>
         </div>
       </div>

@@ -63,7 +63,7 @@ Config.db är den centrala konfigurationsdatabasen. Den lagrar beständigt appli
 
 | Tabell | Beskrivning |
 |---|---|
-| `ObjectList` | Mappar processobjekt till de arbetsvyer de visas i och deras DataStore-namn. Används av `scObjectFinder` och `scLinking` för att lösa upp objektplatser vid körning. |
+| `ObjectList` | Mappar processobjekt till de Arbetsvyer de visas i och deras DataStore-namn. Används av `scObjectFinder` och `scLinking` för att lösa upp objektplatser vid körning. |
 
 ## Styrkurvor { #control-curves }
 

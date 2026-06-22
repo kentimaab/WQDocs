@@ -26,7 +26,7 @@ Gör så här: navigera till **Inställningar** i huvudmenyn och öppna vyn **In
 ![Require login setting](/Images/Login/require-login.png)
 
 När inloggning är inaktiverat hoppas inloggningsskärmen över helt och systemet navigerar
-direkt till den konfigurerade start-**arbetsvy**.
+direkt till den konfigurerade startvyn.
 
 Användaren loggas in som oautentiserad, vilket innebär att vyer eller åtgärder som kräver behörighet fortfarande är begränsade.
 
@@ -61,7 +61,7 @@ systemet. Användaren väljer sitt namn i listan och anger sedan sitt lösenord 
 ## Bakgrundsbild
 
 Bakgrundsbilden på inloggningsskärmen konfigureras i **WideQuick Designer®**. I
-projektträdet under **arbetsvyer**, navigera till **Login** **arbetsvy**. Välj
+projektträdet under **Arbetsvyer**, navigera till **Login** **Arbetsvy**. Välj
 objektet `Image1` och öppna egenskapen **Image**. Ta bort standardbilderna och lägg till
 önskad/önskade bild(er).
 
@@ -88,24 +88,24 @@ Den rekommenderade bildupplösningen är `1085x1080` pixlar. Objektet `Image1` s
     För bästa resultat, använd en bild med den rekommenderade upplösningen `1085x1080`
     med **Behåll bildförhållande** aktiverat.
 
-## Start-arbetsvy
+## Start-Arbetsvy
 
-**Start-arbetsvy** är den vy som öppnas efter inloggning. Den konfigureras i
-**WideQuick Designer®** genom att navigera till **WORKSPACE** **arbetsvy** i
-projektträdet under **arbetsvyer**.
+**Start-Arbetsvy** är den vy som öppnas efter inloggning. Den konfigureras i
+**WideQuick Designer®** genom att navigera till **WORKSPACE** **Arbetsvy** i
+projektträdet under **Arbetsvyer**.
 
 Högerklicka var som helst i vyn och välj **Object** och sedan **MultiviewerPage** från
 snabbmenyn. På fliken **Properties**, lokalisera egenskapen **Multiviewer** och
-välj önskad **arbetsvy** från rullgardinsmenyn. Den fullständiga sökvägen behöver inte anges manuellt.
+välj önskad **Arbetsvy** från rullgardinsmenyn. Den fullständiga sökvägen behöver inte anges manuellt.
 
 ![Start arbetsvy configuration](/Images/Login/start-workview.gif)
 
-Standard-**Start-arbetsvy** i mallprojektet är **Dashboard Energi**. **Start-arbetsvy**
-bör vara en **arbetsvy** som finns i antingen mappen **Main_Menu** eller
+Standard-**Start-Arbetsvy** i mallprojektet är **Dashboard Energi**. **Start-Arbetsvy**
+bör vara en **Arbetsvy** som finns i antingen mappen **Main_Menu** eller
 **System**.
 
 !!! tip
-    **Start-arbetsvy** är systemövergripande som standard. Det är dock möjligt att
+    **Start-Arbetsvy** är systemövergripande som standard. Det är dock möjligt att
     konfigurera olika landningsvyer per användare genom att lägga till flera vyer på
     fliken **Multiviewer** och använda ett laddningsskript för att välja rätt vy baserat på
     den inloggade användaren.

@@ -121,7 +121,7 @@ för mer information.
 **Helskärm** — växlar huruvida applikationen körs i helskärmsläge.
 
 **Direktnavigering (karta)** — när aktiverat navigerar ett klick på ett nålobjekt på en karta
-direkt till dess länkade **arbetsvy**. När inaktiverat visas först en informationspanel
+direkt till dess länkade **Arbetsvy**. När inaktiverat visas först en informationspanel
 som låter användaren välja om denne vill navigera. Se
 [Kartor — Konfigurering](../maps/configuring.md) för mer information.
 
