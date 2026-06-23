@@ -31,7 +31,7 @@ Read-only.
 **View system info** to open the dialog, which shows the server and client Runtime
 name, IP address, and port.
 
-**BMS version** — displays the currently installed version of **WideQuick BMS**.
+**XXX version** — displays the currently installed framework of **WideQuick®**.
 Read-only.
 
 **Lang** — the display language of the application. Click **Set lang** to change
@@ -118,7 +118,7 @@ are visible to unauthenticated users. See
 [Navigation — Configuring](Navigation/configuring.md#setting-privilege-requirements-on-views)
 for more information.
 
-**Fullscreen** — toggles whether the application runs in fullscreen mode.
+**Fullscreen** — toggles whether the navigation runs in fullscreen mode.
 
 **Direct navigation (map)** — when enabled, clicking a pin object on a map
 navigates directly to its linked **Workview**. When disabled, an information panel

@@ -67,6 +67,30 @@ klicka på **Bevilja** eller **Neka**
 
 ![Privilege](/Images/User_and_privileges/Privilege.png)
 
+## Virtuella privilegier { #virtual-privileges }
+
+Ett virtuellt privilegium gör det möjligt för ett enskilt privilegium att automatiskt
+tilldela ett eller flera ytterligare privilegier. När en användare tilldelas ett
+privilegium som innehåller virtuella privilegier får de även tillgång till alla
+privilegier som ingår i det — utan att behöva tilldela dem individuellt.
+
+**Exempel:** Om privilegiet `EditUsers` har `EditName` och `EditPassword` som
+virtuella privilegier kommer alla användare som tilldelats `EditUsers` automatiskt
+även att ha `EditName` och `EditPassword`.
+
+Virtuella privilegier konfigureras i privilegieegenskaperna i **WideQuick
+Designer®**. I projektträdet markeras privilegier som innehåller virtuella privilegier
+med en särskild ikon.
+
+<figure markdown="span">
+  ![VirtualPrivilege](/Images/User_and_privileges/Virtual.png)
+  <figcaption>Ikon i projektträdet.</figcaption>
+</figure>
+
+För att lägga till virtuella privilegier till ett privilegium, öppna
+privilegieegenskaperna och klicka på knappen **Virtuellt privilegium** för att välja
+vilka privilegier som ska ingå.
+
 ## Begränsa Arbetsvyer med behörighet { #restricting-arbetsvyer-by-privilege }
 
 Åtkomst till specifika **Arbetsvyer** kan begränsas baserat på behörigheter. Navigera

@@ -32,7 +32,7 @@ För mer information om taggsuffix, se [Taggstruktur](../reference/tag-structure
 
 När ett `DynTouch`-objekt placeras på ett objekt i **WideQuick Designer®** anropas
 `AnimationHandler()`-funktionen i `scWorkviewAnimation`-skriptet automatiskt.
-Detta skapar en hanterare som bevakar alla DataStore-signaler som matchar
+Detta skapar en hanterare som bevakar alla Datalager-signaler som matchar
 objektets taggnamn kombinerat med de konfigurerade suffixen. Hanteraren exponerar ett
 booleskt värde för varje kategori — till exempel `animation.alarm` eller `animation.warning`,
 där `animation` är referensen till hanteraren — som är `true` när någon signal
@@ -318,7 +318,7 @@ aktivsuffix är aktiv.
 
 !!! tip
     För att testa utan en PLC ansluten, högerklicka på objektet i **WideQuick Runtime®**
-    för att öppna felsökningspopupen. Härifrån kan DataStore-variablerna växlas mellan
+    för att öppna felsökningspopupen. Härifrån kan Datalager-variablerna växlas mellan
     `true` och `false` för att verifiera att animationerna fungerar som förväntat.
 
 <!-- --8<-- [end:body] -->

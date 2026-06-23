@@ -120,7 +120,7 @@ Fälten **Från** och **Till** längst upp på dashboarden anger tidsintervallet
 
 ### Nyckelvärde { #key-value }
 
-Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accepterar vilket värde som helst i DataStore — interna variabler, drivsignaler och systemvariabler.
+Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accepterar vilket värde som helst i Datalager — interna variabler, drivsignaler och systemvariabler.
 
 ![Key Value](/Images/Dashboard/KeyValue.png){align=center}
 
@@ -132,7 +132,7 @@ Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accept
 
 ### Signalvärdesvisning { #signal-value-display }
 
-Visar aktuella livevärden för en eller flera signaler. Löser automatiskt upp enheter och decimalprecision från DataStore.
+Visar aktuella livevärden för en eller flera signaler. Löser automatiskt upp enheter och decimalprecision från Datalager.
 
 ![Signal Value Display](/Images/Dashboard/SignalValueDisplay.png){align=center}
 

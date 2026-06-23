@@ -11,7 +11,7 @@ tags:
 
 # Spårningslogg (Spårningslogg)
 
-Spårningsloggen registrerar ändringar av valda DataStore-variabler och ger en fullständig historik över ändringar av underhållsuppgifter. För spårade variabler lagrar varje post det gamla värdet, det nya värdet, variabelns sökväg, användaren som gjorde ändringen samt en tidsstämpel. Ändringar av underhållsuppgifter registreras automatiskt. Ingen konfiguration krävs.
+Spårningsloggen registrerar ändringar av valda Datalager-variabler och ger en fullständig historik över ändringar av underhållsuppgifter. För spårade variabler lagrar varje post det gamla värdet, det nya värdet, variabelns sökväg, användaren som gjorde ändringen samt en tidsstämpel. Ändringar av underhållsuppgifter registreras automatiskt. Ingen konfiguration krävs.
 
 Spårningsloggen finns under **Historik → Loggar → Spårningslogg**.
 

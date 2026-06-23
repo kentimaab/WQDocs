@@ -110,7 +110,7 @@ hantera databasstorleken över tid.
 Fliken **Variabler** definierar vilka signaler som loggas. Signaler kan läggas till på
 två sätt:
 
-* **Bläddra** — öppnar DataStore-webbläsaren för att välja en specifik signal
+* **Bläddra** — öppnar Datalager-webbläsaren för att välja en specifik signal
 * **Lägg till** — lägger till en tom rad där ett signalnamn kan anges manuellt
 
 Jokerteckensuffix stöds. Till exempel loggar `*_kWh` alla signaler som slutar på

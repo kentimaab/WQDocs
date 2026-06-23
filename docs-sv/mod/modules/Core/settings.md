@@ -31,7 +31,7 @@ Skrivskyddat.
 på **Visa systeminformation** för att öppna dialogen, som visar server- och klient-Runtime-namn,
 IP-adress och port.
 
-**BMS-version** — visar den för tillfället installerade versionen av **WideQuick BMS**.
+**XXX-version** — visar den för tillfället installerade ramverket av **WideQuick®**.
 Skrivskyddat.
 
 **Språk** — applikationens visningsspråk. Klicka på **Ange språk** för att byta
@@ -118,7 +118,7 @@ för mer information.
 [Navigering — Konfigurering](Navigation/configuring.md#setting-privilege-requirements-on-views)
 för mer information.
 
-**Helskärm** — växlar huruvida applikationen körs i helskärmsläge.
+**Helskärm** — växlar huruvida navigationen körs i helskärmsläge.
 
 **Direktnavigering (karta)** — när aktiverat navigerar ett klick på ett nålobjekt på en karta
 direkt till dess länkade **Arbetsvy**. När inaktiverat visas först en informationspanel
@@ -130,7 +130,7 @@ som låter användaren välja om denne vill navigera. Se
 ## Avancerade inställningar
 
 **Felsökningsträd** — klicka på **DebugTree** för att öppna felsökningsträdet, som visar
-hela DataStore-variabelhierarkin. Användbart för felsökning av taggkopplingar.
+hela Datalager-variabelhierarkin. Användbart för felsökning av taggkopplingar.
 
 **Konsol** — klicka på **Öppna konsol** för att öppna skriptkonsolen, som visar
 skriptutdata och fel under körning.

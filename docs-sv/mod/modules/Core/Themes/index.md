@@ -11,7 +11,7 @@ tags:
 
 # Teman
 
-WideQuick MOD använder ett temasystem byggt på [Material Design 3](https://m3.material.io/) (M3). Varje färg i applikationen, inklusive bakgrunder, text, kanter, ytor och statusindikatorer, hämtas från det aktiva temat snarare än att vara ett fast värde. Att byta tema uppdaterar hela applikationen på en gång.
+WideQuick MOD använder ett temasystem byggt på [Material Design 3](https://m3.material.io/){target="_blank"} (M3). Varje färg i applikationen, inklusive bakgrunder, text, kanter, ytor och statusindikatorer, hämtas från det aktiva temat snarare än att vara ett fast värde. Att byta tema uppdaterar hela applikationen på en gång.
 
 Teman levereras i ljusa och mörka varianter. Båda kan väljas i **WideQuick Designer®** och växlas under körning. Det aktiva valet sparas mellan omstarter.
 

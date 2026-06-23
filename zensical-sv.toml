@@ -156,7 +156,7 @@ nav = [
         { "Maintenance.db" = "mod/reference/database-schemas/maintenance-db.md" },
         { "SuffixConfig.db" = "mod/reference/database-schemas/suffixconfig-db.md" },
       ]},
-      { "MultiView" = "mod/reference/multiview.md" },
+      { "Multiview" = "mod/reference/multiview.md" },
       { "Popups" = [
         { "Översikt" = "mod/reference/Popup/index.md" },
         { "Flik" = "mod/reference/Popup/Tab.md" },
@@ -300,7 +300,7 @@ nav = [
         { "Maintenance.db" = "bms/reference/database-schemas/maintenance-db.md" },
         { "SuffixConfig.db" = "bms/reference/database-schemas/suffixconfig-db.md" },
       ]},
-      { "MultiView" = "bms/reference/multiview.md" },
+      { "Multiview" = "bms/reference/multiview.md" },
       { "Popups" = [
         { "Översikt" = "bms/reference/Popup/index.md" },
         { "Flik" = "bms/reference/Popup/Tab.md" },
@@ -433,7 +433,7 @@ nav = [
       { "Loggenheter" = "wwt/guides/loggers.md" },
       { "Inloggningskonfiguration" = "wwt/guides/login-config.md" },
       { "Fjärrsystem" = "wwt/guides/remote-systems.md" },
-      { "Workview-animationer" = "wwt/guides/workview-animations.md" },
+      { "Arbetsvy-animationer" = "wwt/guides/workview-animations.md" },
     ]},
     { "Referens" = [
       { "Översikt" = "wwt/reference/index.md" },
@@ -444,7 +444,7 @@ nav = [
         { "Maintenance.db" = "wwt/reference/database-schemas/maintenance-db.md" },
         { "SuffixConfig.db" = "wwt/reference/database-schemas/suffixconfig-db.md" },
       ]},
-      { "MultiView" = "wwt/reference/multiview.md" },
+      { "Multiview" = "wwt/reference/multiview.md" },
       { "Popups" = [
         { "Översikt" = "wwt/reference/Popup/index.md" },
         { "Flik" = "wwt/reference/Popup/Tab.md" },

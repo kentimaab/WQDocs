@@ -12,7 +12,7 @@ tags:
 
 # Themes
 
-WideQuick MOD uses a theme system built on [Material Design 3](https://m3.material.io/) (M3). Every color in the application, including backgrounds, text, borders, surfaces, and status indicators, is drawn from the active theme rather than set as a fixed value. Switching the theme updates the entire application at once.
+WideQuick MOD uses a theme system built on [Material Design 3](https://m3.material.io/){target="_blank"} (M3). Every color in the application, including backgrounds, text, borders, surfaces, and status indicators, is drawn from the active theme rather than set as a fixed value. Switching the theme updates the entire application at once.
 
 Themes ship in light and dark variants. Both can be selected in **WideQuick Designer®** and toggled at runtime. The active preference persists across restarts.
 

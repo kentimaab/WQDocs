@@ -93,11 +93,11 @@ Om ett fjärrsystem kopplas från tas dess larm automatiskt bort från listan oc
 
 ### Integrera en icke-MOD-applikation { #integrating-a-non-mod-application }
 
-Larmaggregering fungerar med vilken WideQuick-applikation som helst — inte bara MOD — så länge fjärrapplikationen exponerar följande variabler i sin DataStore:
+Larmaggregering fungerar med vilken WideQuick-applikation som helst — inte bara MOD — så länge fjärrapplikationen exponerar följande variabler i sin Datalager:
 
 * `activeAckAlarms` — aktuellt antal aktiva kvitterade larm.
 * `activeNoAckAlarms` — aktuellt antal aktiva okvitterade larm.
-* `alarmNames` — en kommaseparerad lista med larmgruppsnamn. Varje namn i listan måste också finnas som ett `AlarmGroup`-objekt i DataStore.
+* `alarmNames` — en kommaseparerad lista med larmgruppsnamn. Varje namn i listan måste också finnas som ett `AlarmGroup`-objekt i Datalager.
 
 Det är dessa variabler som `scAlarm` underhåller i MOD. En icke-MOD-applikation som håller dessa uppdaterade kommer automatiskt att kännas igen av `scRemoteAlarms` när fjärrsystemanslutningen är upprättad.
 

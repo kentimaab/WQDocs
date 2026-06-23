@@ -12,7 +12,7 @@ tags:
 
 # Säkerhetskopiering och återställning
 
-Funktionen Säkerhetskopiering och återställning låter dig spara aktuella värden för valda DataStore-variabler som en namngiven säkerhetskopia och återställa dem vid ett senare tillfälle. Detta kan användas för att bevara kända fungerande tillstånd, driftsättningsreferenser eller inställningskonfigurationer.
+Funktionen Säkerhetskopiering och återställning låter dig spara aktuella värden för valda Datalager-variabler som en namngiven säkerhetskopia och återställa dem vid ett senare tillfälle. Detta kan användas för att bevara kända fungerande tillstånd, driftsättningsreferenser eller inställningskonfigurationer.
 
 Funktionen finns under **Inställningar → Säkerhetskopiering** med två vyer: **Skapa** för att skapa säkerhetskopior och **Återställ** för att återställa och hantera dem.
 

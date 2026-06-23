@@ -11,7 +11,7 @@ tags:
 
 # Trend
 
-Trend-popupen visar livevärden för den valda objektets signaler i ett realtidsdiagram. Till skillnad från [Historik](./History.md)-popupen, som begränsas av hur ofta signaler loggas, läser Trend-popupen direkt från DataStore och uppdateras kontinuerligt. Den är alltid synlig i Tab-menyn oavsett vilka suffix objektet har.
+Trend-popupen visar livevärden för den valda objektets signaler i ett realtidsdiagram. Till skillnad från [Historik](./History.md)-popupen, som begränsas av hur ofta signaler loggas, läser Trend-popupen direkt från Datalager och uppdateras kontinuerligt. Den är alltid synlig i Tab-menyn oavsett vilka suffix objektet har.
 
 ![Trend popup](/Images/Popups/Trend.png)
 

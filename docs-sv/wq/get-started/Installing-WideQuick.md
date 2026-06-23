@@ -15,13 +15,13 @@ tags:
 
 **WideQuick® Designer** är utvecklingsmiljön som används för att bygga
 användargränssnittet för ett projekt. Den arbetar med kollaborativa arbetsbilder
-som innehåller objekt kopplade till variabler i DataStore och skapar dynamiska
+som innehåller objekt kopplade till variabler i Datalager och skapar dynamiska
 effekter. Objekt och arbetsbilder visas statiska i Designer — dynamiken aktiveras
 först i Runtime.
 
 **WideQuick® Runtime** är ett fristående program som installeras på målmaskinen
 tillsammans med ett projekt skapat i Designer. När det startas presenterar det
-arbetsbilder och objekt i användargränssnittet, hanterar DataStore och sköter
+arbetsbilder och objekt i användargränssnittet, hanterar Datalager och sköter
 kommunikationen med I/O-moduler och OPC-servrar.
 
 **WideQuick® Remote** gör det möjligt för en eller flera användare att ansluta till
@@ -31,7 +31,7 @@ samtidigt.
 
 Om mer komplexa lösningar behövs — till exempel anpassad styr- och reglationslogik
 — kan ett applikationsprogram kombineras med Runtime via **WideQuick® C API**.
-Applikationsprogram har samma åtkomst till DataStore-variabler som Runtime och kan
+Applikationsprogram har samma åtkomst till Datalager-variabler som Runtime och kan
 användas för att skapa skräddarsydd processkontroll. C API:et ingår inte i
 standardpaketet.
 

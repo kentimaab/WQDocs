@@ -18,7 +18,7 @@ tags:
     * `scAuditTrail`
     * `scAlert`
 
-Spårningsloggen registrerar ändringar av valda DataStore-variabler och underhållsuppgifter. Den finns under **Historik → Loggar → Spårningslogg**.
+Spårningsloggen registrerar ändringar av valda Datalager-variabler och underhållsuppgifter. Den finns under **Historik → Loggar → Spårningslogg**.
 
 ## Visa loggen { #viewing-the-log }
 
@@ -30,7 +30,7 @@ Loggen visar alla registrerade ändringar med följande kolumner:
 
 * **Tid** — när ändringen gjordes.
 * **Händelse** — det gamla värdet och det nya värdet, visas som `old → new`.
-* **Kontext** — den fullständiga variabelsökvägen i DataStore.
+* **Kontext** — den fullständiga variabelsökvägen i Datalager.
 * **Användare** — den inloggade användaren när ändringen gjordes.
 
 Använd panelen **Filter** till vänster för att begränsa loggen:

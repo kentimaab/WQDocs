@@ -18,7 +18,7 @@ tags:
 |---|---|
 | Widget-rubrik visar "undefined" | Bindningen för egenskapen `Header` på widget-instansen är trasig. Kontrollera att bindningen är korrekt inställd på widgeten. |
 | Widget-rubrik visar en rå svensk sträng | Värdet i `Header` är inte registrerat i `Translations.klib`. Lägg till strängen i `Translations.klib` och ange översättningen under **Translations → Project Translation** i projektträdet. |
-| Signalvärdet visar -- eller är tomt | Signalvägen som skickas till widgeten matchar inte någon post i DataStore. Kontrollera stavningen, bekräfta att signalen finns i DataStore och verifiera att drivrutinen är ansluten och skriver värden. |
+| Signalvärdet visar -- eller är tomt | Signalvägen som skickas till widgeten matchar inte någon post i Datalager. Kontrollera stavningen, bekräfta att signalen finns i Datalager och verifiera att drivrutinen är ansluten och skriver värden. |
 | Larmwidgetar visar inga larm trots att aktiva larm finns | Parametern `Grupp` eller `Grupper` är inställd på ett gruppnamn som inte matchar någon larmgrupp i projektet. Lämna parametern tom för att visa alla larm, eller kontrollera det exakta gruppnamnet i larmkonfigurationen. |
 | Underhållswidgeten visar alltid noll för aktiva uppgifter | Bekräfta att anslutningen till underhållsdatabasen är aktiv och att underhållstabellen innehåller poster med de förväntade statusvärdena. |
 

@@ -224,7 +224,7 @@ Projektet måste ha en aktiv port för visningsåtkomst som anger TCP/IP-porten 
 kommunikation mellan **WideQuick® Runtime** och **WideQuick® Web Client**.
 Porten konfigureras i projektegenskaperna, till exempel port `2122`.
 
-### Läs- och skrivåtkomst till DataStore-variabler
+### Läs- och skrivåtkomst till Datalager-variabler
 
 För alla variabler och larm vars värden ska överföras till eller från klienten
 måste visningsåtkomsten ställas in på **Läs** och/eller **Skriv** efter behov.

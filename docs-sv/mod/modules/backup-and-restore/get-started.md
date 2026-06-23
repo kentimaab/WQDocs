@@ -17,11 +17,11 @@ tags:
     
     * `scBackUpAndRestore`
 
-Funktionen Säkerhetskopiering och återställning sparar de aktuella värdena för valda DataStore-variabler som en namngiven säkerhetskopia. Den finns tillgänglig under **Inställningar → Säkerhetskopiering**.
+Funktionen Säkerhetskopiering och återställning sparar de aktuella värdena för valda Datalager-variabler som en namngiven säkerhetskopia. Den finns tillgänglig under **Inställningar → Säkerhetskopiering**.
 
 ## Vad kan säkerhetskopieras { #what-can-be-backed-up }
 
-Variabelträdet visar DataStore-variabler som är tillgängliga för säkerhetskopiering — interna variabler och loggade signaler från processvyer. Systemvariabler med prefixet `_sys_` är undantagna. Alla variabler med ett värde av typen sträng, tal eller boolesk kan säkerhetskopieras.
+Variabelträdet visar Datalager-variabler som är tillgängliga för säkerhetskopiering — interna variabler och loggade signaler från processvyer. Systemvariabler med prefixet `_sys_` är undantagna. Alla variabler med ett värde av typen sträng, tal eller boolesk kan säkerhetskopieras.
 
 En säkerhetskopia fångar värdena för de valda variablerna vid det tillfälle **Skapa säkerhetskopia** klickas. Det är en ögonblicksbild. Värden som ändras efter att säkerhetskopian skapats spåras inte.
 
@@ -31,7 +31,7 @@ Navigera till **Inställningar → Säkerhetskopiering → Skapa**.
 
 ![Variable backup view](/Images/Backup_And_Restore/backup-create.png){align=center}
 
-Vyn har två paneler. Den vänstra panelen listar alla tillgängliga DataStore-variabler med deras aktuella värden. Den högra panelen visar de variabler som kommer att ingå i säkerhetskopian.
+Vyn har två paneler. Den vänstra panelen listar alla tillgängliga Datalager-variabler med deras aktuella värden. Den högra panelen visar de variabler som kommer att ingå i säkerhetskopian.
 
 Skriv i filterfältet längst upp i den vänstra panelen för att begränsa variabelträdet. Klicka på **X** för att rensa filtret.
 

@@ -12,9 +12,9 @@ tags:
 
 # Suffixsystem
 
-Suffixsystemet är hur WideQuick MOD kopplar ett klickbart objekt i en arbetsvy till rätt popup-kontroller och DataStore-taggar. När en operatör klickar på en pump, ventil eller sensor slår suffixsystemet upp vilka parametrar som finns för det objektet och renderar bara de kontroller som är tillämpliga.
+Suffixsystemet är hur WideQuick MOD kopplar ett klickbart objekt i en arbetsvy till rätt popup-kontroller och Datalager-taggar. När en operatör klickar på en pump, ventil eller sensor slår suffixsystemet upp vilka parametrar som finns för det objektet och renderar bara de kontroller som är tillämpliga.
 
-Länken mellan objekt och parameter är en namnkonvention: en kort sträng (suffixet) som läggs till bastaggnamnet. För ett objekt med namnet `MB.AS01.SYS_PUMP1` resulterar suffixet `_BV` i DataStore-taggen `MB.AS01.SYS_PUMP1_BV`. Om den taggen finns visas motsvarande kontroll.
+Länken mellan objekt och parameter är en namnkonvention: en kort sträng (suffixet) som läggs till bastaggnamnet. För ett objekt med namnet `MB.AS01.SYS_PUMP1` resulterar suffixet `_BV` i Datalager-taggen `MB.AS01.SYS_PUMP1_BV`. Om den taggen finns visas motsvarande kontroll.
 
 Konfigurationen lagras i `SuffixConfig.db` som en JSON-struktur kallad `SuffixObj`. Strukturen laddas av `scSuffix` vid uppstart och läses av `scSmartPopup` varje gång en popup öppnas.
 
@@ -56,7 +56,7 @@ Varje post i `Popups` representerar en popup-grupp — en flik eller panel som v
 |---|---|---|
 | `name` | sträng | Visningsnamn som visas som fliketikett. |
 | `viewPath` | sträng | Den `.kvie`-arbetsvy som laddas för denna popup-grupp. |
-| `Always visible` | booleskt | Om `true` visas fliken även om inga suffix finns för det klickade objektet. Om `false` döljs fliken om inte minst en suffixtagg hittas i DataStore. |
+| `Always visible` | booleskt | Om `true` visas fliken även om inga suffix finns för det klickade objektet. Om `false` döljs fliken om inte minst en suffixtagg hittas i Datalager. |
 | `privilage` | sträng | Behörighetsnyckel som krävs för att se denna flik. Tom sträng innebär alla användare. |
 | `suffixes` | objekt | Karta av suffix-aliasnamn till suffixdefinitioner (se nedan). |
 
@@ -64,12 +64,12 @@ Varje post i `Popups` representerar en popup-grupp — en flik eller panel som v
 
 | Attribut | Typ | Beskrivning |
 |---|---|---|
-| `suffix` | sträng | Strängen som läggs till objektets bastaggnamn för att bilda DataStore-nyckeln. |
+| `suffix` | sträng | Strängen som läggs till objektets bastaggnamn för att bilda Datalager-nyckeln. |
 | `desc` | sträng | Läsbar etikett som visas i popup-kontrollen. |
 | `decimals` | nummer | Antal decimaler för numerisk visning. |
 | `writeable` | nummer | `1` om kontrollen tillåter operatörsinmatning, `0` för skrivskyddad visning. |
 | `write_priv` | sträng | Behörighetsnyckel som krävs för skrivning. Tom sträng faller tillbaka på objektets egna behörighet. |
-| `unit` | sträng | Enhetsetikett. Kan lämnas tom om enheten är definierad i DataStore-taggens beskrivning. |
+| `unit` | sträng | Enhetsetikett. Kan lämnas tom om enheten är definierad i Datalager-taggens beskrivning. |
 
 ## Views { #views }
 
@@ -107,13 +107,13 @@ Till exempel: `MB` + `.AS01.` + `SYS` + `_` + `PUMP1` → `MB.AS01.SYS_PUMP1`
 `scSmartPopup` itererar sedan över varje popup-grupp i `SuffixObj.Popups` och kontrollerar om gruppen ska visas:
 
 1. Om `Always visible` är `true` inkluderas fliken villkorslöst.
-2. Annars kontrolleras varje suffix i gruppen. Om `DataStore[tagName + suffix.suffix]` finns inkluderas fliken.
+2. Annars kontrolleras varje suffix i gruppen. Om `Datalager[tagName + suffix.suffix]` finns inkluderas fliken.
 
 Endast flikar som klarar denna kontroll renderas. Det innebär att popup-fönstret automatiskt anpassar sig till de signaler som faktiskt finns för det klickade objektet — ingen manuell konfiguration per objekt behövs.
 
 ## Komponentbindning { #component-binding }
 
-Popup-UI-komponenter använder egenskapen `SuffixAlias` för att deklarera vilket suffix de binder till. När en popup öppnas anropar `scSmartPopup` `activate(suffixObj)` på varje registrerad komponent och skickar den lösta suffixdefinitionen. Komponenten binder sedan sin visning och inmatning till `DataStore[tagName + suffixObj.suffix]`.
+Popup-UI-komponenter använder egenskapen `SuffixAlias` för att deklarera vilket suffix de binder till. När en popup öppnas anropar `scSmartPopup` `activate(suffixObj)` på varje registrerad komponent och skickar den lösta suffixdefinitionen. Komponenten binder sedan sin visning och inmatning till `Datalager[tagName + suffixObj.suffix]`.
 
 Komponenter som har `always_visible` satt till `true` förblir synliga även om suffixtaggen inte finns för det aktuella objektet.
 

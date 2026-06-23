@@ -64,5 +64,5 @@ För att redigera en palett, öppna grenen **Themes** i projektträdet, välj ö
 * [Utöka](extending.md) — skapa ett anpassat tema som följer en grafisk profil
 
 !!! tip
-    Om du vill läsa mer om M3: [Material Design 3](https://m3.material.io/)
+    Om du vill läsa mer om M3: [Material Design 3](https://m3.material.io/){target="_blank"}
 <!-- --8<-- [end:body] -->

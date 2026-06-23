@@ -84,12 +84,12 @@ Antalet **interna variabler** (exempelvis larm och interna taggar skapade direkt
 | OPC DA-serveranslutningar | Premium | Maximalt antal klienter som kan ansluta till en WideQuick OPC DA-server. |
 | OPC UA-serveranslutningar | Premium | Maximalt antal klienter som kan ansluta till en WideQuick OPC UA-server. |
 |<span style = "font-size:16px"> **Kommunikationsdrivrutiner**</span> |||
-| Modbus seriell och TCP-drivrutin | Extended | Gör det möjligt för WideQuick att kommunicera med enheter via Modbus (seriellt och TCP) via DataStore. |
-| OPC DA-drivrutin | Advanced | Gör det möjligt för WideQuick att kommunicera med enheter via OPC DA via DataStore. |
-| OPC UA-drivrutin | Advanced | Gör det möjligt för WideQuick att kommunicera med enheter via OPC UA via DataStore. |
-| MQTT-drivrutin | Advanced | Gör det möjligt för WideQuick att kommunicera med enheter via MQTT via DataStore. |
-| BACnet-drivrutin | Premium | Gör det möjligt för WideQuick att kommunicera med enheter via BACnet via DataStore. |
-| BACnet+-drivrutin | Premium | Gör det möjligt för WideQuick att kommunicera med enheter via BACnet via DataStore och möjliggör ett utökat skriptgränssnitt för djupare integrering. |
+| Modbus seriell och TCP-drivrutin | Extended | Gör det möjligt för WideQuick att kommunicera med enheter via Modbus (seriellt och TCP) via Datalager. |
+| OPC DA-drivrutin | Advanced | Gör det möjligt för WideQuick att kommunicera med enheter via OPC DA via Datalager. |
+| OPC UA-drivrutin | Advanced | Gör det möjligt för WideQuick att kommunicera med enheter via OPC UA via Datalager. |
+| MQTT-drivrutin | Advanced | Gör det möjligt för WideQuick att kommunicera med enheter via MQTT via Datalager. |
+| BACnet-drivrutin | Premium | Gör det möjligt för WideQuick att kommunicera med enheter via BACnet via Datalager. |
+| BACnet+-drivrutin | Premium | Gör det möjligt för WideQuick att kommunicera med enheter via BACnet via Datalager och möjliggör ett utökat skriptgränssnitt för djupare integrering. |
 |<span style = "font-size:16px">**HMI/SCADA-funktioner**</span> |||
 | Antal arbetsbilder | Extended | Maximalt antal arbetsbilder som kan användas i applikationen. |
 | Teman | Extended | Gör det möjligt för applikationen att definiera och växla mellan färgscheman. |

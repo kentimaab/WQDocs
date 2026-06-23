@@ -13,7 +13,7 @@ tags:
 
 Den här guiden visar hur du kopplar en enskild tagg från start till slut — från att skapa en OPC UA-tagg till att verifiera den i ett Processpopup. Det är det snabbaste sättet att bekräfta att ditt projekt är korrekt konfigurerat och redo för implementering.
 
-Innan du börjar, se till att du har mallprojektet öppet i **WideQuick 14** eller senare. Om inte, se [Ladda ner WideQuick MOD](download.md)
+Innan du börjar, se till att du har mallprojektet öppet i **WideQuick 13.4.1** eller senare. Om inte, se [Ladda ner WideQuick MOD](download.md)
 
 <!-- --8<-- [start:body] -->
 
@@ -80,7 +80,7 @@ Starta projektet och navigera till **Inställningar → Suffix → Suffix - Larm
 
 Suffixaliaset **On** är nu en del av gruppen **4 - Aktiv**. Välj sedan **On** i trädvyn och tilldela `_IO` till fältet **Suffix**.
 
-För mer information om hur animationssystemet fungerar, se [arbetsvy-animationer](../guides/workview-animations.md).
+För mer information om hur animationssystemet fungerar, se [Arbetsvy-animationer](../guides/workview-animations.md).
 
 ![Suffix Alarm configuration](/Images/First_tag/SuffixAlarm.gif)
 

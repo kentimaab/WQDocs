@@ -120,7 +120,7 @@ SMHI:s väder-API. Som standard hämtas koordinaterna från mitten av
 sätts i synlighetsdynamikskriptet som beskrivs
 [ovan](#setting-up-a-map-view-object).
 
-Widgeten behöver också pekas mot sin datakälla, som är DataStore-variabeln `weather` som standard. Detta konfigureras på fliken Properties i
+Widgeten behöver också pekas mot sin datakälla, som är Datalager-variabeln `weather` som standard. Detta konfigureras på fliken Properties i
 **Map View**:
 
 ![Weather Widget](/Images/Map_Indicators/WeatherWidgetSettings.png)

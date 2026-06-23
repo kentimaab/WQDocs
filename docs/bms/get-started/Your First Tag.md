@@ -14,7 +14,7 @@ tag to verifying it on a Process popup. It is the quickest way to confirm that y
 project is correctly set up and ready for implementation.
 
 Before getting started, make sure you have the template project open in
-**WideQuick 14** or later. If not, see [Download WideQuick BMS](download.md)
+**WideQuick 13.4.1** or later. If not, see [Download WideQuick BMS](download.md)
 
 
 --8<-- "mod/get-started/Your First Tag.md:body"

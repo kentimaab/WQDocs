@@ -13,7 +13,7 @@ tags:
 # Objektinfo
 
 Popup-fönstret Objektinfo visar en rålista över alla signaler som är kopplade till det
-valda objektet, hämtade direkt från DataStore. Det är alltid synligt i Tab-menyn
+valda objektet, hämtade direkt från Datalager. Det är alltid synligt i Tab-menyn
 oavsett vilka suffix objektet har. Det är främst användbart för felsökning och
 verifiering av att rätt signaler är kopplade till objektet.
 

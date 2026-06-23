@@ -44,7 +44,7 @@ scMap.updateAlarmList(scMap.mapView, scMap.alarmList);
 
 !!! note
     Ersätt `Alarm1` med namnet på det **Alarm**-objekt som är placerat i vyn.
-    `alarmNames` är en intern DataStore-variabel som innehåller en kommaseparerad
+    `alarmNames` är en intern Datalager-variabel som innehåller en kommaseparerad
     sträng med alla larmgruppsnamn i systemet. Den behöver inte konfigureras manuellt.
 
 Nästa steg: onLoad-skriptet för **Kartvyn** hanterar redan uppdateringar av larmlistan
@@ -206,7 +206,7 @@ eller en specifik typ.
 
 För att en anpassad indikator ska plockas upp som ett underordnat element av klustringssystemet
 behöver den en `status`-egenskap. För det inbyggda `PinStatus`-objektet hanteras detta automatiskt
-av dess skript — `status` uppdateras av en `DataStoreListener` när den länkade
+av dess skript — `status` uppdateras av en `DatalagerListener` när den länkade
 **Arbetsvy** ändrar tillstånd.
 
 För en anpassad indikator måste `status` underhållas av ett skript. Värdet ska

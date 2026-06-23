@@ -12,7 +12,7 @@ Det här verktyget låter dig kontrollera att taggnamnen i ditt WideQuick-projek
 
 Genom att kopiera namnkolumnen från din Data Store i WideQuick Designer och klistra in den i textfältet nedan kan du kontrollera vilka av dina signaler som följer taggstrukturen och vilka som inte gör det.
 
-Eftersom WideQuick-namnet skiljer sig åt mellan Modbus och OPC UA/DA finns det två flikar. Skillnaden mellan de två är att Modbus ärver Connection- och Device-delen av syntaxen från sin Connection och Device i DataStore.
+Eftersom WideQuick-namnet skiljer sig åt mellan Modbus och OPC UA/DA finns det två flikar. Skillnaden mellan de två är att Modbus ärver Connection- och Device-delen av syntaxen från sin Connection och Device i Datalager.
 
 För mer information om hur taggstrukturen är avsedd att fungera, besök [Taggstruktur](../mod/reference/tag-structure.md){target=_blank}
 
