@@ -1,5 +1,5 @@
 ---
-title: dashboards - Konfigurering
+title: Dashboards - Konfigurering
 product: wwt
 page_type: module
 status: draft

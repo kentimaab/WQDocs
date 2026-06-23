@@ -15,13 +15,13 @@ Trend-popupen visar livevärden för den valda objektets signaler i ett realtids
 
 ![Trend popup](/Images/Popups/Trend.png)
 
-## Diagram
+## Graf
 
-Diagrammet visar livevärdena för de valda signalerna över tid. En förklaring till vänster visar namn, färg och aktuellt värde för varje aktiv signal.
+Grafen visar livevärdena för de valda signalerna över tid. En förklaring till vänster visar namn, färg och aktuellt värde för varje aktiv signal.
 
 ## Signaler
 
-Panelen **Signaler** till höger listar alla tillgängliga signaler för objektet. Valda signaler markeras med en grön bockmarkering. Använd pilknapparna för att navigera i listan, **Välj** för att välja en signal och **Tillämpa** för att uppdatera diagrammet. Panelen visar hur många signaler som för närvarande är valda av det totala antalet tillgängliga.
+Panelen **Signaler** till höger listar alla tillgängliga signaler för objektet. Valda signaler markeras med en grön bockmarkering. Använd pilknapparna för att navigera i listan, **Välj** för att välja en signal och **Tillämpa** för att uppdatera grafen. Panelen visar hur många signaler som för närvarande är valda av det totala antalet tillgängliga.
 
 ## Inställningar
 

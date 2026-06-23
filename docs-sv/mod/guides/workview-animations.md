@@ -304,7 +304,7 @@ med alla underobjekt i gruppen.
     **Arbetsvy**-egenskaperna istället för på varje `DynTouch`-objekt individuellt. Se
     [Taggstruktur](../reference/tag-structure.md) för mer information.
 
-### Steg 6 - Testa i driftsättning { #step-6-test-in-runtime }
+### Steg 6 - Testa i Runtime { #step-6-test-in-runtime }
 
 Starta projektet och kontrollera att:
 

@@ -24,10 +24,10 @@ projekt.
 För att en tagg ska följa taggstrukturen i WideQuick måste den
 bestå av följande fem delar:
 
-* **Anslutning**
-* **Enhet**
+* **Connection**
+* **Device**
 * **System**
-* **Objektnamn**
+* **Object name**
 * **Suffix**
 
 !!! tip
@@ -43,19 +43,19 @@ Se bilden nedan:
 
 ![tag structure](/Images/Tag_Structure/tagStruct.svg){style="box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"}
 
-### Anslutning { #connection }
-**Anslutning** representerar anslutningstypen, till exempel **Modbus**, **OPC**, eller
+### Connection { #connection }
+**Connection** representerar anslutningstypen, till exempel **Modbus**, **OPC**, eller
 märke och modell på PLC:n, exempelvis **Siemens** eller **SAIA**.
 
-### Enhet { #device }
-**Enhet** representerar ett elskåp, till exempel `AS01` eller liknande.
+### Device { #device }
+**Device** representerar ett elskåp, till exempel `AS01` eller liknande.
 
 ### System { #system }
 **System** representerar vilket system taggen tillhör, till exempel `LB01`, `Intake`
 eller `Outlet`.
 
-### Objektnamn { #object-name }
-**Objektnamn** representerar namnet på själva objektet, till exempel en temperatursensor
+### Object name { #object-name }
+**Object name** representerar namnet på själva objektet, till exempel en temperatursensor
 `GT11`, en motor `M01` eller en pump `P23`.
 
 ### Suffix { #suffix }
@@ -84,7 +84,7 @@ helt enkelt namnges enligt strukturen.
 
 ## Konfigurera taggar i Modbus Serial & Modbus TCP/IP { #configuring-tags-in-modbus-serial-modbus-tcpip }
 **Modbus**-taggar ska också följa samma taggstruktur. Dock hämtas både
-**Anslutnings**- och **Enhets**-delen från anslutningsnamnet respektive enhetsnamnet
+**Connection**- och **Device**-delen från anslutningsnamnet respektive enhetsnamnet
 enligt bilden nedan. Det innebär att taggen i **Tag Editor** bara
 behöver innehålla `Sys_Component_Suffix`.
 
@@ -105,7 +105,7 @@ taggar som är anslutna till objektet.
 ![Configuring DynTouch](/Images/Tag_Structure/DynTouch.png)
 
 För att snabba upp processen att ansluta flera objekt till sina taggar behöver man inte
-ange samma **Anslutnings**-, **Enhets**- och **System**-information på varje objekt i
+ange samma **Connection**-, **Device**- och **System**-information på varje objekt i
 vyn. Dessa egenskaper kan i stället anges på **Arbetsvy**-egenskaperna. Om ett
 `DynTouch`-objekt lämnas tomt försöker det hämta informationen från vyn i stället.
 

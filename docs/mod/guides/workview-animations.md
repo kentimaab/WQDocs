@@ -306,7 +306,7 @@ be shared with all child objects in the group.
     **Workview** properties instead of on each `DynTouch` object individually. See
     [Tag Structure](../reference/tag-structure.md) for more information.
 
-### Step 6 - Test in runtime { #step-6-test-in-runtime }
+### Step 6 - Test in Runtime { #step-6-test-in-runtime }
 
 Start the project and verify that:
 

@@ -192,7 +192,7 @@ Klustringssystemet i **Kartvy** drivs helt av funktionen `initClusters()` i skri
 Den identifierar objekt genom att söka efter två specifika egenskaper:
 
 * Ett objekt med en `roi`-egenskap — behandlas som ett **kluster**
-* Ett objekt med en `status`-egenskap — behandlas som en **pinn** och potentiellt underordnat element
+* Ett objekt med en `status`-egenskap — behandlas som en **pin** och potentiellt underordnat element
 
 Det innebär att valfri anpassad indikator kan delta i klustringssystemet enbart
 genom att ha rätt egenskap. Det finns inget krav på ett specifikt objektnamn

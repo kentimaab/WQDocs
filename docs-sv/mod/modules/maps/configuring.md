@@ -13,7 +13,7 @@ tags:
 # Kartor och indikatorer — Konfigurering
 
 Det här avsnittet beskriver hur du konfigurerar de mer avancerade kartindikatorerna, inklusive Pin
-Status, klusterpinnar, linjer och filter. För att komma igång med att sätta upp ett **Map View**-objekt och
+Status, klusterpinnar, linjer och filter. För att komma igång med att sätta upp ett **Kartvy**-objekt och
 lägga till grundläggande indikatorer, se [Kartor och indikatorer — Kom igång](get-started.md).
 
 ## Konfigurera indikatorer { #configuring-indicators }
@@ -24,7 +24,7 @@ läggs till på samma sätt som beskrivs i
 måste konfigureras för att fungera korrekt — dessa beskrivs i avsnitten nedan.
 
 ### Pin Status { #pin-status }
-Pin Status-objekt är nyckeln till att koppla en **Map View** till **Arbetsvyer**. De
+Pin Status-objekt är nyckeln till att koppla en **Kartvy** till **Arbetsvyer**. De
 implementeras på samma sätt som en vanlig pinne, men med mer logik bakom sig. När
 de är korrekt länkade till en **Arbetsvy** kan användaren navigera direkt till den
 **Arbetsvy** med ett klick. Pinnens bakgrundsfärg visar också den aktiva statusen
@@ -39,7 +39,7 @@ dessutom visa antalet aktiva larm och varningar. Tillsammans gör dessa funktion
     kopia av objektet och ändra SVG på kopian.
 
 För att integrera ett **Alarm**-objekt med en karta och statuspinnar, se
-[Koppla Alarm till Map View](extending.md#connecting-alarm-to-map-view).
+[Koppla Alarm till Kartvy](extending.md#connecting-alarm-to-map-view).
 
 ### Klusterpinnar { #cluster-pins }
 Klusterpinnar kan användas för att gruppera underliggande pinnar till en, vilket minskar röran på
@@ -57,13 +57,13 @@ Följande egenskaper måste konfigureras:
 med kartans zoomintervall ger detta en sömlös navigering — de underordnade
 pinnarna visas när man trycker och klusterpinnen döljs.
 * **roi** — Kärnan i klusterpinnen. Bestämmer det område inom vilket klustret
-samlar andra pinnar som sina underordnade. Om en pinne befinner sig inom **roi** för två kluster-
-pinnar, kommer den närmaste att ta den som sin underordnade.
+samlar andra pinnar som sina underordnade. Om en pin befinner sig inom **roi** för två kluster-
+pins, kommer den närmaste att ta den som sin underordnade.
 
 Klusterpinnen återspeglar också sina underordnade barns status genom sin bakgrundsfärg
 och visar antalet anslutna underordnade.
 
-För att aktivera klusterpinnefunktionen, lägg till följande i **Map View**:s onLoad-
+För att aktivera klusterpinnefunktionen, lägg till följande i **Kartvy**:s onLoad-
 skript:
 
 ```javascript title="Map View — onLoad"

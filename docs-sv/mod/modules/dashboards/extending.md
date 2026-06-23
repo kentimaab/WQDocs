@@ -19,7 +19,7 @@ När ändringarna är klara drar du widgeten från arbetsvyn tillbaka till bibli
 
 Samma sista steg gäller när man bygger en widget från grunden: när den är klar drar du den till biblioteket och byter namn på den där.
 
-Det är även möjligt att redigera befintliga widgetar genom att dubbelklicka på en i biblioteket. Detta öppnar en ny arbetsvy som endast innehåller en redigerbar version av widgeten.
+Det är även möjligt att redigera befintliga widgetar genom att dubbelklicka på en i biblioteket. Detta öppnar en ny Arbetsvy som endast innehåller en redigerbar version av widgeten.
 
 ### Rutnätsdimensioner { #grid-dimensions }
 

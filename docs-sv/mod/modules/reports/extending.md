@@ -81,7 +81,7 @@ Nedan beskrivs varje fält:
 * **Variable** — Definierar vilken signal som ska frågas. Två alternativ är tillgängliga:
     * `variable_ref[#]` — Frågar en specifik signal, där `#` är signalens index. 
     Ett separat makroanrop krävs för varje signal.
-    * `alarms` — En jokertecken som hämtar alla larm i den valda loggenheten.
+    * `alarms` — En "wildcard" som hämtar alla larm i den valda loggenheten.
 
 * **Values** — Definierar vilka datakolumner som ska inkluderas. Beror på typen av data 
 som frågas:

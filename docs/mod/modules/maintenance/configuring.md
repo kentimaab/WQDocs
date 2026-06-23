@@ -17,7 +17,7 @@ tags:
 
 The **Maint. - List** view shows all maintenance tasks in the project in a single scrollable list. Selecting a task and clicking **Open** opens the task details where the deadline, description, status and assignee can be updated.
 
-Tasks do not need to be tied to a tagged object. Leaving **Objekt** empty or typing a free-text name allows maintenance to be tracked for equipment that is not connected to the HMI.
+Tasks do not need to be tied to a tagged object. Leaving **Object** empty or typing a free-text name allows maintenance to be tracked for equipment that is not connected to the HMI.
 
 Click **Filter** to open the filter panel:
 

@@ -1,5 +1,5 @@
 ---
-title: dashboards
+title: Dashboards
 product: wwt
 page_type: module
 status: draft

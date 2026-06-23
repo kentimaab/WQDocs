@@ -42,7 +42,7 @@ Guiderna beskriver hur man använder specifika funktioner i WideQuick MOD — b�
 
 ### Loggenheter
 
-* [**Loggenheter**](Loggers.md) — Hur man skapar och konfigurerar en loggenhet i WideQuick Designer för användning med Historik, Rapporter och andra databaserade moduler.
+* [**Loggenheter**](Loggers.md) — Hur man skapar och konfigurerar en loggenhet i **WideQuick Designer®** för användning med Historik, Rapporter och andra databaserade moduler.
 
 ---
 

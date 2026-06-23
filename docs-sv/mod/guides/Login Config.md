@@ -80,13 +80,13 @@ den läggs till i WideQuick Designer. Vanliga format som stöds är `PNG`, `SVG`
 Den rekommenderade bildupplösningen är `1085x1080` pixlar. Objektet `Image1` stöder
 även följande visningsalternativ, som kan ställas in i dess egenskaper:
 
-* **Behåll bildförhållande** — bibehåller bildens proportioner oavsett objektets storlek
-* **Kaklat** — upprepar bilden för att fylla objektområdet
-* **Sträck ut** — sträcker ut bilden för att fylla objektområdet oavsett proportioner
+* **Keep aspect ratio** — bibehåller bildens proportioner oavsett objektets storlek
+* **Tiled** — upprepar bilden för att fylla objektområdet
+* **Stretch** — sträcker ut bilden för att fylla objektområdet oavsett proportioner
 
 !!! tip
     För bästa resultat, använd en bild med den rekommenderade upplösningen `1085x1080`
-    med **Behåll bildförhållande** aktiverat.
+    med **Keep aspect ratio** aktiverat.
 
 ## Start-Arbetsvy
 

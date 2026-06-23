@@ -26,25 +26,25 @@ tags:
     * `Map Indicators`
     * `WEATHER`
 
-Det här avsnittet beskriver hur du konfigurerar ett **Map View**-objekt i WideQuick och hur du lägger till
+Det här avsnittet beskriver hur du konfigurerar ett **Kartvy**-objekt i WideQuick och hur du lägger till
 grundläggande indikatorer. För konfigurering av mer avancerade indikatorer, såsom Pin Status, Cluster
 Pins och Lines, se [Kartor och indikatorer — Konfigurera](configuring.md). För att koppla
-ett **Alarm**-objekt till en **Map View** och skapa anpassade indikatorer, se
+ett **Alarm**-objekt till en **Kartvy** och skapa anpassade indikatorer, se
 [Kartor och indikatorer — Utöka](extending.md).
 
 ![Map Indicators](/Images/Map_Indicators/Map_Indicators.png)
 
-## Konfigurera ett Map View-objekt { #setting-up-a-map-view-object }
+## Konfigurera ett Kartvy-objekt { #setting-up-a-map-view-object }
 
-För att använda Map Indicators krävs ett **Map View**-objekt. Det finns i
+För att använda Map Indicators krävs ett **Kartvy**-objekt. Det finns i
 Objects Toolbar i **WideQuick Designer®**:
 
 ![Map View object](../../../Images/Map_Indicators/map_view_object.png)
 
 Placera det i den vy där du vill visa din karta.
 
-När det är placerat behöver **Map View**-objektet länkas till skriptet `scMap`. Gör detta
-genom att lägga till följande onLoad-skript på **Map View**-objektet:
+När det är placerat behöver **Kartvy**-objektet länkas till skriptet `scMap`. Gör detta
+genom att lägga till följande onLoad-skript på **Kartvy**-objektet:
 
 ```javascript title="Map View — onLoad"
 scMap.mapView = this;
@@ -52,11 +52,11 @@ scMap.initClusters(this);
 if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 ```
 
-Alla objekt inuti en **Map View** har en egenskap kallad `geo`, som innehåller objektets
+Alla objekt inuti en **Kartvy** har en egenskap kallad `geo`, som innehåller objektets
 geografiska koordinater. För att indikatorerna ska renderas korrekt
-när användaren panorerar och zoomar behöver **Map View** spåra skalan och det synliga
+när användaren panorerar och zoomar behöver **Kartvyw** spåra skalan och det synliga
 området i den aktuella visningsrutan. Detta görs genom att lägga till följande skript i
-synlighetsdynamiken för **Map View**:
+synlighetsdynamiken för **Kartvy**:
 
 ```javascript title="Map View — visibility dynamics"
 mapRatioWidth = this.width * scWM.scalingFactor / this.visibleRect().width
@@ -84,7 +84,7 @@ Du är nu redo att lägga till Map Indicators.
 ## Lägga till grundläggande indikatorer { #adding-basic-indicators }
 Map Indicators finns i objektbiblioteket **Map Indicators** i **WideQuick
 Designer®**. För att lägga till en indikator, dra den från objektbiblioteket och släpp den i
-**Map View**-objektet. De flesta indikatorer kräver att longitud och latitud anges,
+**Kartvy**-objektet. De flesta indikatorer kräver att longitud och latitud anges,
 vilket bestämmer var de visas på kartan.
 
 ![Adding a Map Indicator](/Images/Map_Indicators/AddMapIndicator.gif)
@@ -93,15 +93,15 @@ Följande avsnitt beskriver varje grundläggande indikator och eventuell konfigu
 
 ### Zoomknapp { #zoom-button }
 Att lägga till en zoomknapp är enkelt — den har inga egenskaper att konfigurera. Lägg till den
-på samma sätt som vilket annat objekt som helst i en **Map View**. Om du är osäker på hur du gör detta,
+på samma sätt som vilket annat objekt som helst i en **Kartvy**. Om du är osäker på hur du gör detta,
 se WideQuick-hjälpen genom att trycka på F1 i **WideQuick Designer®**.
 
 Zoomknappen placerar sig automatiskt i nedre högra hörnet av
-**Map View** och kräver ingen longitud- eller latitudinmatning.
+**Kartvy** och kräver ingen longitud- eller latitudinmatning.
 
 ### Pins { #pins }
 Pins lämpar sig väl för att markera platser av intresse, till exempel en anläggning eller ett system som
-övervakas eller styrs. Lägg till en pin på samma sätt som vilket annat objekt som helst i en **Map View**,
+övervakas eller styrs. Lägg till en pin på samma sätt som vilket annat objekt som helst i en **Kartvy**,
 och tilldela den longitud och latitud för platsen.
 
 För att göra pinnen klickbar och länka den till en relaterad **Arbetsvy**, redigera
@@ -116,12 +116,12 @@ som finns på `System/Videdal/Inlopp.kvie`.
 ### Väder-widget { #weather-widget }
 Väder-widgeten visar väderinformation för en given koordinat genom att anropa
 SMHI:s väder-API. Som standard hämtas koordinaterna från mitten av
-**Map View**-objektet med hjälp av de interna variablerna `weatherLon` och `weatherLat`, vilka
+**Kartvy**-objektet med hjälp av de interna variablerna `weatherLon` och `weatherLat`, vilka
 sätts i synlighetsdynamikskriptet som beskrivs
 [ovan](#setting-up-a-map-view-object).
 
 Widgeten behöver också pekas mot sin datakälla, som är Datalager-variabeln `weather` som standard. Detta konfigureras på fliken Properties i
-**Map View**:
+**Kartvy**:
 
 ![Weather Widget](/Images/Map_Indicators/WeatherWidgetSettings.png)
 

@@ -39,7 +39,7 @@ Duplicera dashboardmallen i **WideQuick Designer®** genom att högerklicka på 
 ![Setting up a dashboard](/Images/Dashboard/SetupDashboard.gif){align=center}
 ## Widgets — färdiga komponenter för dashboarden { #widgets-pre-built-components-for-the-dashboard }
 
-dashboards byggs med färdiga widgets från biblioteket `Dashboard Widgets`.
+Dashboards byggs med färdiga widgets från biblioteket `Dashboard Widgets`.
 Varje widget är utformad för en specifik typ av data och kan placeras och
 konfigureras direkt utan någon egen utveckling. De flesta widgets finns även i olika storlekar.
 
