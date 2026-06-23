@@ -18,12 +18,11 @@ jobs:
       - name: Build English docs
         run: |
           python hooks/script_deps.py docs
-          zensical build --clean
+          zensical build --clean --strict
           git checkout docs/
 
       - name: Build Swedish docs
-        run: |
-            zensical build --config-file zensical-sv.toml --clean
+        run: zensical build --config-file zensical-sv.toml --clean --strict
 
       - name: Upload via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4

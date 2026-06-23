@@ -764,8 +764,8 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 [project.extra]
 alternate = [
-    { name = "English", link = "/", lang = "en" },
-    { name = "Svenska", link = "/sv/", lang = "sv" },
+    { name = "English", link = "/docs/", lang = "en" },
+    { name = "Svenska", link = "/docs/sv/", lang = "sv" },
 ]
 
 #[[project.extra.social]]

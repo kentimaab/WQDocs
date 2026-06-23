@@ -477,8 +477,8 @@ extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAn
 
 [project.extra]
 alternate = [
-    { name = "English", link = "/", lang = "en" },
-    { name = "Svenska", link = "/sv/", lang = "sv" },
+    { name = "English", link = "/docs/", lang = "en" },
+    { name = "Svenska", link = "/docs/sv/", lang = "sv" },
 ]
 
 [project.theme]
