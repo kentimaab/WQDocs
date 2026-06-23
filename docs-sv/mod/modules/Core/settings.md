@@ -31,7 +31,7 @@ Skrivskyddat.
 på **Visa systeminformation** för att öppna dialogen, som visar server- och klient-Runtime-namn,
 IP-adress och port.
 
-**XXX-version** — visar den för tillfället installerade ramverket av **WideQuick®**.
+**XXX-version** — visar den för tillfället installerade koncept av **WideQuick®**.
 Skrivskyddat.
 
 **Språk** — applikationens visningsspråk. Klicka på **Ange språk** för att byta

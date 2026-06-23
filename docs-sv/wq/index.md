@@ -156,7 +156,7 @@ hide:
         </svg>
       </div>
       <div>
-        <div class="wq-item__title">Installera webbklient</div>
+        <div class="wq-item__title">Installera Web Client</div>
         <p class="wq-item__desc">Konfigurera och driftsätt WideQuick Web Client för webbläsaråtkomst.</p>
       </div>
     </a>

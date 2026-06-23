@@ -31,7 +31,7 @@ Read-only.
 **View system info** to open the dialog, which shows the server and client Runtime
 name, IP address, and port.
 
-**XXX version** — displays the currently installed framework of **WideQuick®**.
+**XXX version** — displays the currently installed concept of **WideQuick®**.
 Read-only.
 
 **Lang** — the display language of the application. Click **Set lang** to change
