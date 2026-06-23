@@ -77,6 +77,6 @@ Som den första BMS-versionen i Modular Framework-familjen finns det ingen tidig
 | --- | --- |
 | **Import av äldre vyer** | Vyer byggda i WideQuick BMS 8.0 eller tidigare kan lyftas direkt in i detta projekt, där symbolerna målas om till de nya, omdesignade objekten men behåller sina kopplingar. |
 | **Objekt använder SuffixAlias** | Ramverksobjekt refererar sina värden via en `SuffixAlias` snarare än suffixet direkt. Ett suffixalias måste definieras för varje objekt; objekt med ett okonfigurerat alias markeras visuellt i vyerna. |
-| **Underhållssystemidentitet** | Vid första start tillskrivs underhållsuppgifter det aktuella systemet baserat på värdnamn, och en migreringsdialog visas om ett namnbyte på applikationen upptäcks. Granska tilldelningen efteråt för att bekräfta att uppgifterna tillhör rätt system. |
+| **Identitet för underhållssystem** | Vid första start tillskrivs underhållsuppgifter det aktuella systemet baserat på värdnamn, och en migreringsdialog visas om ett namnbyte på applikationen upptäcks. Granska tilldelningen efteråt för att bekräfta att uppgifterna tillhör rätt system. |
 
 </details>
