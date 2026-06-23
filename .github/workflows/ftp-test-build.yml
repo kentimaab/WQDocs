@@ -1,4 +1,4 @@
-name: FTP Upload Build
+name: FTP Upload & Build
 
 on:
   workflow_dispatch:
@@ -22,7 +22,8 @@ jobs:
           git checkout docs/
 
       - name: Build Swedish docs
-        run: zensical build --config-file zensical-sv.toml
+        run: |
+            zensical build --config-file zensical-sv.toml --clean
 
       - name: Upload via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
