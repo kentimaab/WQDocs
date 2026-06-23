@@ -3,7 +3,7 @@
 site_name = "WideQuick Docs"
 site_description = "Dokumentation för WideQuick Modular Framework och dess vertikaler"
 site_author = "johan.vikstrand@kentima.se"
-site_url = "https://www.widequick.com/sv/"
+site_url = "https://www.widequick.com/docs/sv/"
 docs_dir = "docs-sv"
 site_dir = "site/sv"
 
