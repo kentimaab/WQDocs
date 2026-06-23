@@ -22,13 +22,13 @@ To send alarm notifications by email, an SMTP server must be configured. This ca
 1. In the project tree, right-click the **Mail** node and select **Properties...**.
 2. Enter the server details.
 
-![Mail properties dialog](/Images/Alarm_Sender/Mail_properties.png){align=center}
+![Mail properties dialog](/docs/Images/Alarm_Sender/Mail_properties.png){align=center}
 
 ### Configuring SMTP at runtime { #configuring-smtp-at-runtime }
 
 Click **Configure** in the SMTP section of the **Alarm - Schedule** status panel, or call `System.mailManager.edit()` from a script or button action.
 
-![Edit mail settings](/Images/Alarms/alarm-smtp-settings.png){align=center}
+![Edit mail settings](/docs/Images/Alarms/alarm-smtp-settings.png){align=center}
 
 | Field | Description |
 |---|---|
@@ -118,7 +118,7 @@ AT commands over a serial connection is compatible.
 The modem is configured in **WideQuick Runtime®**. Navigate to
 **Settings → GSM Settings** to open the configuration dialog.
 
-![GSM modem settings](/Images/Alarms/alarm-gsm-settings.png){align=center}
+![GSM modem settings](/docs/Images/Alarms/alarm-gsm-settings.png){align=center}
 
 Enter the connection parameters from the device's data sheet:
 

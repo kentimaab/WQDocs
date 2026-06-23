@@ -28,13 +28,13 @@ Klicka på **Filter** för att öppna filterpanelen:
 * **System** — filtrera för att endast visa uppgifter som tillhör ett specifikt system.
 * **Tidsinställningar - deadline** — visa alla uppgifter oavsett deadline (**Alla**), eller begränsa till uppgifter med en deadline inom ett valt datumintervall (**Tidsintervall**).
 
-![Underhållslista med filterpanel öppen](/Images/Maintenance/maintenance-list-filter.png){align=center}
+![Underhållslista med filterpanel öppen](/docs/sv/Images/Maintenance/maintenance-list-filter.png){align=center}
 
 ## Mallar { #templates }
 
 Mallar gör det möjligt att spara och återanvända ofta förekommande underhållstyper. En mall lagrar underhållstyp, prioritet, standarddeadline-intervall och beskrivning så att samma information inte behöver anges varje gång.
 
-![Vyn Underhåll - Mallar](/Images/Maintenance/maintenance-templates-view.png){align=center}
+![Vyn Underhåll - Mallar](/docs/sv/Images/Maintenance/maintenance-templates-view.png){align=center}
 
 Den vänstra panelen listar alla mallar. Att välja en visar dess fält till höger:
 
@@ -64,7 +64,7 @@ Varje konfiguration definierar:
 * Upprepningsregel — hur nästa deadline beräknas
 * Om missade uppgifter automatiskt ska generera en uppföljning
 
-![Konfiguration av återkommande underhåll](/Images/Maintenance/maintenance-recurring.png){align=center}
+![Konfiguration av återkommande underhåll](/docs/sv/Images/Maintenance/maintenance-recurring.png){align=center}
 
 Vyn har tre paneler. Den vänstra panelen listar alla konfigurationer. Den mellersta panelen visar inställningarna för den valda konfigurationen. Den högra panelen är ett objektträd där de objekt som konfigurationen gäller väljs. För utrustning som saknar tagg i systemet, använd fritext-fältet **Anpassat objekt** längst ned i objektpanelen för att ange ett namn manuellt.
 

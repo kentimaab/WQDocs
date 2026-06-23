@@ -32,13 +32,13 @@ A backup captures the values of the selected variables at the moment **Create ba
 
 Navigate to **Settings → Backup → Create**.
 
-![Variable backup view](/Images/Backup_And_Restore/backup-create.png){align=center}
+![Variable backup view](/docs/Images/Backup_And_Restore/backup-create.png){align=center}
 
 The view has two panels. The left panel lists all available Data Store variables with their current values. The right panel shows the variables that will be included in the backup.
 
 Type in the filter field at the top of the left panel to narrow the variable tree. Click **X** to clear the filter.
 
-![Filtering the variable tree](/Images/Backup_And_Restore/backup-filter.png){align=center}
+![Filtering the variable tree](/docs/Images/Backup_And_Restore/backup-filter.png){align=center}
 
 1. Browse or filter the left panel to find the variables to include.
 2. Double-click a variable, or select it and click **>**, to move it to the right panel.

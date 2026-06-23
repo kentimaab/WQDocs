@@ -17,7 +17,7 @@ object. Each day of the week can have up to two active time periods defined by T
 and Turn off times. It only appears in the Tab menu when the object has a signal
 matching the `_TK` suffix.
 
-![Time Channel popup](/Images/Popups/Time-channel.png)
+![Time Channel popup](/docs/Images/Popups/Time-channel.png)
 
 ## Channel status
 

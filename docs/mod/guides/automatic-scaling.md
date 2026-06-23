@@ -37,7 +37,7 @@ Popups do not scale automatically. To scale a popup proportionally to the main v
 scWM.scaleAndPlacePopup(this);
 ```
 
-![Scaled popup centered in the main content area](/Images/Automatic_Scaling/scaling-popup-centered.png){align=center}
+![Scaled popup centered in the main content area](/docs/Images/Automatic_Scaling/scaling-popup-centered.png){align=center}
 
 By default the popup is centered within the main content area, excluding the navigation menu. An optional alignment argument positions it along a screen edge instead:
 
@@ -57,7 +57,7 @@ scWM.scaleAndPlacePopup(this, "bottom");
 
 Popup scaling requires **Pannable/Zoomable** to be enabled on the popup Workview. In **WideQuick Designer®**, right-click the Workview in the project tree and select **Properties**. Open the **Layout** tab and check **Pannable/Zoomable**.
 
-![Pannable/Zoomable setting in Workview properties](/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
+![Pannable/Zoomable setting in Workview properties](/docs/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
 
 ## Placement Without Scaling { #placement-without-scaling }
 

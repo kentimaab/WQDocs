@@ -29,7 +29,7 @@ Panelen **Följ signal** håller diagrammet centrerat på en specifik signal nä
 
 Signalgrupper kan sparas och läsas in igen för att slippa välja om samma signaler varje gång. Sparade grupper hanteras från avsnittet **Sparade grupper** i panelen **Följ signal**.
 
-![Panelen Sparade grupper med fältet för gruppnamn, rullgardinsmeny och importknapp](/Images/History/history-saved-signals.png){align=center}
+![Panelen Sparade grupper med fältet för gruppnamn, rullgardinsmeny och importknapp](/docs/sv/Images/History/history-saved-signals.png){align=center}
 
 **Så här sparar du en signalgrupp:**
 
@@ -51,7 +51,7 @@ Signalgrupper kan sparas och läsas in igen för att slippa välja om samma sign
 
 Både den projektövergripande Historiken och den vyspecifika Historiken låter dig importera sparade grupper som skapats i andra vyer. Det gör att du kan återanvända en grupp som sparats i en vy utan att behöva skapa den på nytt.
 
-![Dialogruta för sparade grupper med Alla sparade till vänster och Valda till höger](/Images/History/history-import-groups.png){align=center}
+![Dialogruta för sparade grupper med Alla sparade till vänster och Valda till höger](/docs/sv/Images/History/history-import-groups.png){align=center}
 
 **Så här importerar du grupper från andra vyer:**
 

@@ -20,7 +20,7 @@ Kalendern läser uppgifter från underhållsdatabasen och visar dem utifrån der
 
 En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppgifts deadline. Standardförskjutningen för påminnelser är 3 dagar. Förskjutningen och påminnelseväxeln per mall kan båda konfigureras via ett skript — se [Kalender — Utöka](../calendar/extending.md#reminder-configuration).
 
-![Underhållsuppgifter synliga som händelser i kalendervyn](/Images/Maintenance/maintenance-in-calendar.png){align=center}
+![Underhållsuppgifter synliga som händelser i kalendervyn](/docs/sv/Images/Maintenance/maintenance-in-calendar.png){align=center}
 
 ## Ändringshistorik { #change-history }
 

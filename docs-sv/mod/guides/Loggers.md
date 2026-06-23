@@ -20,7 +20,7 @@ förlitar sig på historisk data.
 Flera loggenhet kan dela samma databasanslutning. För att skapa en loggenhet
 högerklickar du på **Loggningsenhet** i projektträdet och väljer **Lägg till loggenhet**.
 
-![Logger settings](/Images/Loggers/logger_settings.png)
+![Logger settings](/docs/sv/Images/Loggers/logger_settings.png)
 
 ## Loggningsenhetsinställningar
 
@@ -65,7 +65,7 @@ eller villkor.
 
 ## Databasinställningar
 
-![Database settings](/Images/Loggers/database_settings.png)
+![Database settings](/docs/sv/Images/Loggers/database_settings.png)
 
 ### Version
 
@@ -105,7 +105,7 @@ hantera databasstorleken över tid.
 
 ## Variabler
 
-![Variables](/Images/Loggers/variables.png)
+![Variables](/docs/sv/Images/Loggers/variables.png)
 
 Fliken **Variabler** definierar vilka signaler som loggas. Signaler kan läggas till på
 två sätt:

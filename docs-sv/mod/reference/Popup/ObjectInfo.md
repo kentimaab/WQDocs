@@ -17,7 +17,7 @@ valda objektet, hämtade direkt från Datalager. Det är alltid synligt i Tab-me
 oavsett vilka suffix objektet har. Det är främst användbart för felsökning och
 verifiering av att rätt signaler är kopplade till objektet.
 
-![Objektinfo popup](/Images/Popups/ObjectInfo.png)
+![Objektinfo popup](/docs/sv/Images/Popups/ObjectInfo.png)
 
 ## Objektinformation
 

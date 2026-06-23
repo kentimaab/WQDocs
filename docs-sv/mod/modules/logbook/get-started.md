@@ -35,7 +35,7 @@ Postlistan visar följande kolumner: **Rubrik**, **Meddelande**, **Kontext**, **
 
 Välj en post och klicka på **Redigera anteckning** för att öppna den för redigering, eller **Ta bort anteckning** för att radera den permanent.
 
-![Loggboksvy med ämnesträd och postlista](/Images/Logbook/logbook-overview.png){align=center}
+![Loggboksvy med ämnesträd och postlista](/docs/sv/Images/Logbook/logbook-overview.png){align=center}
 
 ## Skapa en post { #creating-an-entry }
 
@@ -48,7 +48,7 @@ Klicka på **Lägg till anteckning** för att öppna popup-fönstret **Skapa ny 
 
 Klicka på **Spara** för att spara och fortsätta, eller **Spara & Stäng** för att spara och stänga popup-fönstret. Posten visas omedelbart högst upp i postlistan.
 
-![Popup för att skapa post med namngivna fält](/Images/Logbook/create-entry-popup.png){align=center}
+![Popup för att skapa post med namngivna fält](/docs/sv/Images/Logbook/create-entry-popup.png){align=center}
 
 ## Filtrering { #filtering }
 
@@ -61,7 +61,7 @@ Klicka på filterikonen för att öppna panelen **Filtrera loggbok**. Tillgängl
 
 Klicka på **Tillämpa** för att använda filtren, **Rensa filter** för att återställa, eller **Avbryt** för att stänga utan att spara ändringar.
 
-![Filterpanel](/Images/Logbook/logbook-filter.png){align=center}
+![Filterpanel](/docs/sv/Images/Logbook/logbook-filter.png){align=center}
 
 ## Nästa steg { #next-steps }
 

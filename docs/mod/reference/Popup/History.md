@@ -17,7 +17,7 @@ historical values of its logged signals. It is always visible in the Tab menu
 regardless of which suffixes the object has. For more information on how the
 history system works, see [History](../../modules/history/index.md).
 
-![History popup](/Images/Popups/History.png)
+![History popup](/docs/Images/Popups/History.png)
 
 ## Signals
 

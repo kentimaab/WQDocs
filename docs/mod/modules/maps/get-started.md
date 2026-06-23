@@ -38,14 +38,14 @@ Pins, and Lines, see [Maps & Indicators — Configuring](configuring.md). For co
 an **Alarm** object to a **Map View** and creating custom indicators, see
 [Maps & Indicators — Extending](extending.md).
 
-![Map Indicators](/Images/Map_Indicators/Map_Indicators.png)
+![Map Indicators](/docs/Images/Map_Indicators/Map_Indicators.png)
 
 ## Setting up a Map View object { #setting-up-a-map-view-object }
 
 To use Map Indicators, a **Map View** object is required. It can be found in the
 Objects Toolbar in **WideQuick Designer®**:
 
-![Map View object](../../../Images/Map_Indicators/map_view_object.png)
+![Map View object](../../../docs/Images/Map_Indicators/map_view_object.png)
 
 Place it in the view where you want to display your map.
 
@@ -93,7 +93,7 @@ Designer®**. To add an indicator, drag it from the object library and drop it i
 the **Map View** object. Most indicators require a longitude and latitude to be set,
 which determines where they appear on the map.
 
-![Adding a Map Indicator](/Images/Map_Indicators/AddMapIndicator.gif)
+![Adding a Map Indicator](/docs/Images/Map_Indicators/AddMapIndicator.gif)
 
 The following sections describe each basic indicator and any configuration required.
 
@@ -113,7 +113,7 @@ and assign it the longitude and latitude of the location.
 To make the pin clickable and link it to a related **Workview**, edit the
 **linkedView** property:
 
-![Pin Settings](/Images/Map_Indicators/PinSettings.png)
+![Pin Settings](/docs/Images/Map_Indicators/PinSettings.png)
 
 The value should be a path to a **Workview** in the **Main_Menu** or **System**
 folder. In the example above, it points to the process **Workview** **Inlopp**,
@@ -130,7 +130,7 @@ The widget also needs to be pointed to its data source, which is the `weather`
 Data Store variable by default. This is configured in the properties tab of the
 **Map View**:
 
-![Weather Widget](/Images/Map_Indicators/WeatherWidgetSettings.png)
+![Weather Widget](/docs/Images/Map_Indicators/WeatherWidgetSettings.png)
 
 Once configured, the Weather Widget will display current weather information for the
 centre of the visible map area, updating automatically as the user navigates the map.

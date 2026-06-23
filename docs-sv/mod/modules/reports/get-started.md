@@ -32,7 +32,7 @@ För att skapa en ny mall, högerklicka på **Rapporter** i projektträdet och v
 **Lägg till rapport**. Följande fönster öppnas:
 
 <figure markdown="span">
-  ![Add report](/Images/Reports/Add_report.png)
+  ![Add report](/docs/sv/Images/Reports/Add_report.png)
   <figcaption>Dialogrutan Lägg till rapport i WideQuick Designer.</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ destination.
 * **Utdatanamn** — Anpassa rapportfilens namn med hjälp av **Byggaren för utdatanamn**.
 En förhandsgranskning av namnet visas i fältet **Namnförhandsvisning**.
 <figure markdown="span">
-  ![Create new report template](/Images/Reports/Create_new_report_template.gif)
+  ![Create new report template](/docs/sv/Images/Reports/Create_new_report_template.gif)
   <figcaption>Skapa en ny rapportmall från grunden.</figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ Från den här sidan kan rapporter skapas, tas bort eller skickas som e-postbila
 rapporter via e-post kräver att en SMTP-server är konfigurerad, vilket förklaras [här]().
 
 <figure markdown="span">
-  ![Report](/Images/Reports/Report.png)
+  ![Report](/docs/sv/Images/Reports/Report.png)
   <figcaption>Listarbetsvyn för rapporter i WideQuick Runtime.</figcaption>
 </figure>
 
@@ -84,22 +84,22 @@ mellan dem genom att ändra rullgardinsmenyn **Rapportmall**.
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![Alarm Report](/Images/Reports/AlarmReport.png)
+  ![Alarm Report](/docs/sv/Images/Reports/AlarmReport.png)
   <figcaption>Larmrapport-kontroller.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Alarm Report One Alarm](/Images/Reports/AlarmReportOne.png)
+  ![Alarm Report One Alarm](/docs/sv/Images/Reports/AlarmReportOne.png)
   <figcaption>Larmrapport ett larm-kontroller.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Energy Report](/Images/Reports/EnergyReport.png)
+  ![Energy Report](/docs/sv/Images/Reports/EnergyReport.png)
   <figcaption>Energirapport-kontroller.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Energy Report Week](/Images/Reports/EnergyReportWeek.png)
+  ![Energy Report Week](/docs/sv/Images/Reports/EnergyReportWeek.png)
   <figcaption>Energirapport vecka-kontroller.</figcaption>
 </figure>
 
@@ -138,7 +138,7 @@ För att schemalägga en rapport, navigera till
 **Historik → Rapporter → Rapporter - Schema**.
 
 <figure markdown="span">
-  ![Report schedule](/Images/Reports/Report_schedule.png)
+  ![Report schedule](/docs/sv/Images/Reports/Report_schedule.png)
   <figcaption>Arbetsvyn Rapportschema i WideQuick Runtime.</figcaption>
 </figure>
 
@@ -149,17 +149,17 @@ till höger. Observera att den andra sidan ändras beroende på den valda
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![Schedule page 1](/Images/Reports/Report_meny.png)
+  ![Schedule page 1](/docs/sv/Images/Reports/Report_meny.png)
   <figcaption>Sida 1 — schemanamn, mall och frekvens.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Schedule page 2](/Images/Reports/Report_meny2.png)
+  ![Schedule page 2](/docs/sv/Images/Reports/Report_meny2.png)
   <figcaption>Sida 2 — rapportspecifik konfiguration.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Schedule page 3](/Images/Reports/Report_meny3.png)
+  ![Schedule page 3](/docs/sv/Images/Reports/Report_meny3.png)
   <figcaption>Sida 3 — mottagare och utdataformat.</figcaption>
 </figure>
 

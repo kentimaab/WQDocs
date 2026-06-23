@@ -38,7 +38,7 @@ Navigera till **Inställningar** i huvudmenyn och öppna vyn **Inställningar**.
 **Användare och behörigheter** klicka på **Byt användare**. Klicka på **Lägg till...** för att skapa en ny
 användare eller välj en befintlig användare och klicka på **Redigera...** för att ändra den.
 
-![Users](/Images/User_and_privileges/Users.png)
+![Users](/docs/sv/Images/User_and_privileges/Users.png)
 
 #### Användarinställningar
 
@@ -48,7 +48,7 @@ användare eller välj en befintlig användare och klicka på **Redigera...** f�
 * **Behörigheter** — bevilja eller neka behörigheter genom att dubbelklicka på en behörighet, eller
 markera den och klicka på **Bevilja** eller **Neka**
 
-![Edit Users](/Images/User_and_privileges/Edit_Users.png)
+![Edit Users](/docs/sv/Images/User_and_privileges/Edit_Users.png)
 
 ## Lägga till och redigera behörigheter { #adding-and-editing-privileges }
 
@@ -65,7 +65,7 @@ beviljas alla behörigheter som valts här
 * **Användare** — bevilja eller neka användare genom att dubbelklicka på en användare, eller markera den och
 klicka på **Bevilja** eller **Neka**
 
-![Privilege](/Images/User_and_privileges/Privilege.png)
+![Privilege](/docs/sv/Images/User_and_privileges/Privilege.png)
 
 ## Virtuella privilegier { #virtual-privileges }
 
@@ -83,7 +83,7 @@ Designer®**. I projektträdet markeras privilegier som innehåller virtuella pr
 med en särskild ikon.
 
 <figure markdown="span">
-  ![VirtualPrivilege](/Images/User_and_privileges/Virtual.png)
+  ![VirtualPrivilege](/docs/sv/Images/User_and_privileges/Virtual.png)
   <figcaption>Ikon i projektträdet.</figcaption>
 </figure>
 
@@ -96,12 +96,12 @@ vilka privilegier som ska ingå.
 Åtkomst till specifika **Arbetsvyer** kan begränsas baserat på behörigheter. Navigera
 till **Inställningar → Arbetsvyer → Arbetsvyer - Behörighet** i huvudmenyn.
 
-![arbetsvy Privilege](/Images/User_and_privileges/Workview_privleage.png)
+![arbetsvy Privilege](/docs/sv/Images/User_and_privileges/Workview_privleage.png)
 
 Välj den **Arbetsvy** där begränsningen ska tillämpas. Konfigurationsalternativ
 visas på höger sida av vyn.
 
-![arbetsvy Settings](/Images/User_and_privileges/Settings.png)
+![arbetsvy Settings](/docs/sv/Images/User_and_privileges/Settings.png)
 
 Välj den önskade behörigheten från rullgardinsmenyn och klicka på **Spara** för att tillämpa
 ändringen.

@@ -19,7 +19,7 @@ styrrelationer — till exempel för att mappa en utetemperatur till en
 värmeventilinställning. Den visas endast i flikmenyn när objektet har
 signaler som matchar de konfigurerade suffixaliaserna.
 
-![Control Curve popup](/Images/Popups/Control%20Curve.png)
+![Control Curve popup](/docs/sv/Images/Popups/Control%20Curve.png)
 
 ## Styrkurvegraf
 

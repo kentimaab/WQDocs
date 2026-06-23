@@ -1,4 +1,5 @@
 ---
+title: Hem
 template: home.html
 description: Startsida för WideQuick-dokumentation — utforska guider, referensinnehåll och moduldokumentation för alla WideQuick-produkter.
 hide:

@@ -30,23 +30,23 @@ Larmvyerna nås från avsnittet **Larm** i huvudnavigeringen.
 
 Om `scRemoteAlarms` körs och fjärrsystem är anslutna visas även larm från dessa system i listan tillsammans med lokala larm.
 
-![Alarm - List view](/Images/Alarms/alarm-list.png){align=center}
+![Alarm - List view](/docs/sv/Images/Alarms/alarm-list.png){align=center}
 
 ### Larm - Översikt { #alarm-overview }
 
 **Larm - Översikt** ger en bredare bild av larmaktiviteten. Ett stapeldiagram visar antalet larm per dag under de senaste sju dagarna, uppdelat efter larmklass. Ett cirkeldiagram visar fördelningen av larmklasser bland aktuellt aktiva larm, med en topp-fem-lista över de vanligaste larmen. En statistikpanel till höger visar aktuellt antal aktiva larm samt historiska totaler för de senaste 30 dagarna, hittills i år och föregående år.
 
-![Alarm - Overview](/Images/Alarms/alarm-overview.png){align=center}
+![Alarm - Overview](/docs/sv/Images/Alarms/alarm-overview.png){align=center}
 
 Cirkeldiagrammet kan konfigureras genom att klicka på **kugghjulsikonen**. Välj vilka larmgrupper som ska inkluderas, ange antalet dagar som ska visas, välj om grupperingen ska ske efter larmklass eller grupp, och växla enheten mellan procent och antal.
 
-![Alarm - Overview graph settings](/Images/Alarms/alarm-overview-settings.png){align=center}
+![Alarm - Overview graph settings](/docs/sv/Images/Alarms/alarm-overview-settings.png){align=center}
 
 ### Larm - Logg { #alarm-log }
 
 **Larm - Logg** är ett historiskt register över alla larmhändelser och visar larmklass, larmtext, tid, larmnamn, detaljer och fjärrsystem. Aktiva larm markeras i rött.
 
-![Alarm - Log](/Images/Alarms/alarm-log.png){align=center}
+![Alarm - Log](/docs/sv/Images/Alarms/alarm-log.png){align=center}
 
 Larmhistorik kan också exporteras som en rapport. Se [Rapporter](../../reports/configuring.md#alarm-report).
 
@@ -54,7 +54,7 @@ Larmhistorik kan också exporteras som en rapport. Se [Rapporter](../../reports/
 
 **Larm - Frekvens** listar alla larm rangordnade efter hur ofta de har utlösts under en vald tidsperiod. Varje rad visar den totala aktiva tiden och frekvensantalet tillsammans med larmnamn, larmtext och larmklass. Detta hjälper till att identifiera beständiga eller ofta återkommande larm som kan behöva åtgärdas.
 
-![Alarms - Frequency](/Images/Alarms/alarm-frequency.png){align=center}
+![Alarms - Frequency](/docs/sv/Images/Alarms/alarm-frequency.png){align=center}
 
 ## Kvittera larm { #acknowledging-alarms }
 

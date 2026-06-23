@@ -45,19 +45,19 @@ Use the arrow buttons in the top bar to move forward or backward one period at a
 
 The month view shows a full calendar grid for the current month. Events appear as colored indicators on each day. If more events exist on a day than can be displayed, an overflow badge shows how many are hidden.
 
-![Month view with events](/Images/Calendar/calendar-month-events.png){align=center}
+![Month view with events](/docs/Images/Calendar/calendar-month-events.png){align=center}
 
 ### Week { #week }
 
 The week view shows the current 7-day period as a time grid. Events are rendered as blocks with their start and end times visible.
 
-![Week view](/Images/Calendar/calendar-week.png){align=center}
+![Week view](/docs/Images/Calendar/calendar-week.png){align=center}
 
 ### Day { #day }
 
 The day view shows a single day as a time grid. It works the same as the week view but focused on one day at a time.
 
-![Day view](/Images/Calendar/calendar-day.png){align=center}
+![Day view](/docs/Images/Calendar/calendar-day.png){align=center}
 
 
 ## Sidebar { #sidebar }
@@ -68,7 +68,7 @@ The mini calendar highlights the currently selected day.
 
 The upcoming events list shows the next events and maintenance deadlines sorted by date, merging both event sources into a single list.
 
-![Sidebar with upcoming events](/Images/Calendar/calendar-sidebar.png){align=center}
+![Sidebar with upcoming events](/docs/Images/Calendar/calendar-sidebar.png){align=center}
 
 ## Creating an Event { #creating-an-event }
 

@@ -43,7 +43,7 @@ systemvyer. Det finns inga implementerade system eller externa anslutningar sås
 **OPC UA** eller **Modbus**. Det är den rekommenderade startpunkten för integratörer som
 vill bygga ett nytt projekt från grunden.
 
-![Template project](/Images/Mod_Intro/Template.png)
+![Template project](/docs/sv/Images/Mod_Intro/Template.png)
 
 ### Demoprojekt
 
@@ -52,7 +52,7 @@ WideQuick Mod 2024.1.0 i användning. Det är användbart både för att först�
 fungerar och för att hämta inspiration till implementationen.
 
 
-![Demo project](/Images/Mod_Intro/Demo.png)
+![Demo project](/docs/sv/Images/Mod_Intro/Demo.png)
 
 ### Starta applikationen
 

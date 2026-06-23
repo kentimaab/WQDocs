@@ -27,7 +27,7 @@ Fjärrsystem låter en WideQuick-applikation ansluta till en eller flera andra W
 
 För att en WideQuick-applikation ska kunna acceptera inkommande anslutningar från andra applikationer måste en anslutningsport konfigureras i projektinställningarna. I **WideQuick Designer®**, öppna **Project Properties** (genom att högerklicka på toppnoden i projektträdet) och ange **View access** under **Connection Port**. Standardporten är **2122**.
 
-![Connection Port i Project Properties](/Images/Remote_System/remote-connection-port.png){align=center}
+![Connection Port i Project Properties](/docs/sv/Images/Remote_System/remote-connection-port.png){align=center}
 
 Båda applikationerna måste vara nåbara via nätverket på den konfigurerade porten.
 
@@ -46,7 +46,7 @@ Fjärrsystem hanteras under noden **Remote Systems** i projektträdet. Högerkli
 * **Refreshrate** — hur ofta variabeluppdateringar hämtas från detta system, i millisekunder. Lägre värden ger snabbare respons men ökar nätverksbelastningen.
 * **Auto connect on startup** — när aktiverat ansluter applikationen automatiskt till detta system vid uppstart.
 
-![Dialogrutan Add Remote System](/Images/Remote_System/remote-designer-add.png){align=center}
+![Dialogrutan Add Remote System](/docs/sv/Images/Remote_System/remote-designer-add.png){align=center}
 
 ### Via WideQuick Runtime® { #via-widequick-runtime }
 
@@ -54,7 +54,7 @@ Navigera till **Inställningar → Inställningar** i huvudmenyn och klicka på 
 
 Dialogrutan för Fjärrsystem visar alla konfigurerade system. Klicka på **Add** för att lägga till ett nytt, **Edit** för att ändra ett befintligt eller **Remove** för att ta bort det.
 
-![Dialogrutan Remote Systems](/Images/Remote_System/remote-runtime-list.png){align=center}
+![Dialogrutan Remote Systems](/docs/sv/Images/Remote_System/remote-runtime-list.png){align=center}
 
 Avsnittet **Defaults** längst upp anger globala standardvärden för alla system:
 
@@ -64,13 +64,13 @@ Avsnittet **Defaults** längst upp anger globala standardvärden för alla syste
 
 Om du klickar på **Add** öppnas samma fält som i **WideQuick Designer®**.
 
-![Dialogrutan för att lägga till fjärrsystem](/Images/Remote_System/remote-runtime-add.png){align=center}
+![Dialogrutan för att lägga till fjärrsystem](/docs/sv/Images/Remote_System/remote-runtime-add.png){align=center}
 
 ## Navigation { #navigation }
 
 Konfigurerade fjärrsystem visas i avsnittet **Remote Systems** längst ned i huvudnavigeringen. Klicka på **Remote Systems** för att öppna listan.
 
-![Menyn Remote Systems med anslutna och frånkopplade system](/Images/Remote_System/remote-menu.png){align=center}
+![Menyn Remote Systems med anslutna och frånkopplade system](/docs/sv/Images/Remote_System/remote-menu.png){align=center}
 
 Varje post visar systemnamn, beskrivning och en ikon för anslutningsstatus. Statusikonen uppdateras i realtid — grön betyder ansluten, röd betyder inte ansluten. Om **Auto connect on startup** är aktiverat återansluter applikationen automatiskt vid frånkoppling enligt inställningarna för **Max reconnect attempts** och **Reconnect delay**.
 

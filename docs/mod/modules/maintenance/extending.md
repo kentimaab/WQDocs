@@ -21,7 +21,7 @@ The calendar reads tasks from the maintenance database and displays them based o
 
 A reminder event appears in the calendar a set number of days before each task's deadline. The default reminder offset is 3 days. The offset and per-template reminder toggle can both be configured from a script — see [Calendar — Extending](../calendar/extending.md#reminder-configuration).
 
-![Maintenance tasks visible as events in the Calendar view](/Images/Maintenance/maintenance-in-calendar.png){align=center}
+![Maintenance tasks visible as events in the Calendar view](/docs/Images/Maintenance/maintenance-in-calendar.png){align=center}
 
 ## Change History { #change-history }
 

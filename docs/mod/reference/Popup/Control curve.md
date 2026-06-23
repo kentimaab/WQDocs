@@ -18,7 +18,7 @@ lines. It is used to configure non-linear control relationships — for example 
 an outdoor temperature to a heating valve position. It only appears in the Tab menu
 when the object has signals matching the configured suffix aliases.
 
-![Control Curve popup](/Images/Popups/Control%20Curve.png)
+![Control Curve popup](/docs/Images/Popups/Control%20Curve.png)
 
 ## Control curve graph
 

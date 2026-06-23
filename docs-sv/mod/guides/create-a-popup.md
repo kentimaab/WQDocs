@@ -54,7 +54,7 @@ Detta är en skrivskyddad tagg i PLC:n.
 5. Den femte taggen är en felsignal, aktiv när pumpen har stött på ett fel.
 Den ges suffixet `_error`. Detta är en skrivskyddad tagg i PLC:n.
 
-![Importerade taggar](/Images/Create_Popup/tagList_popup.png)
+![Importerade taggar](/docs/sv/Images/Create_Popup/tagList_popup.png)
 
 !!! note "Återanvända taggar"
     En tagg kan visas på flera popups. Det är inte nödvändigt att importera samma
@@ -70,22 +70,22 @@ till popupen. Detta görs i några steg:
 * Starta projektet.
 * Navigera till **Inställningar → Suffix → Suffix Alias - Popups**.
 
-![Navigering till inställningar](/Images/Create_Popup/Navigation.gif){width="400"}
+![Navigering till inställningar](/docs/sv/Images/Create_Popup/Navigation.gif){width="400"}
 
 * Skapa en ny suffixkategori genom att trycka på **Lägg till ny kategori** och ge
 den nya kategorin ett namn. Eftersom vi skapar en popup för pumpstyring, namnge den
 **Pump Control**.
 
-![Lägga till kategori](/Images/Create_Popup/Adding%20category.gif)
+![Lägga till kategori](/docs/sv/Images/Create_Popup/Adding%20category.gif)
 
 * Markera den nya kategorin i listan och klicka på **Lägg till nytt suffixalias i vald kategori**. I det här exemplet börjar vi med taggen med suffixet `_IO`, som visar
 om pumpen är på eller inte. Namnge detta suffix **Active**.
 
-![Lägga till suffix](/Images/Create_Popup/Adding%20suffix.gif)
+![Lägga till suffix](/docs/sv/Images/Create_Popup/Adding%20suffix.gif)
 
 * Fyll i relevant information för detta suffixalias:
 
-![Konfigurera suffix](/Images/Create_Popup/suffix_config.png)
+![Konfigurera suffix](/docs/sv/Images/Create_Popup/suffix_config.png)
 
 * **Suffix** — Suffixet som angetts på taggen, i det här fallet `_IO`.
 * **Writable** — Lämna inaktiverat eftersom detta är en skrivskyddad tagg i PLC:n.
@@ -110,7 +110,7 @@ namnges enligt följande:
 
 Den färdiga listan bör se ut ungefär så här:
 
-![Konfigurerade suffix](/Images/Create_Popup/configured_suffixes.png)
+![Konfigurerade suffix](/docs/sv/Images/Create_Popup/configured_suffixes.png)
 
 ## Välja popup-mall { #choosing-a-popup-template }
 
@@ -158,7 +158,7 @@ Börja med att lägga till ett objekt för att visa om pumpen har startats. Obje
 och öppna fliken **Properties**. Ställ in egenskapen **SuffixAlias** till **Active** för att
 koppla detta objekt till suffixet `_IO`:
 
-![Statusrad](/Images/Create_Popup/StatusRow2.png)
+![Statusrad](/docs/sv/Images/Create_Popup/StatusRow2.png)
 
 !!! note "Suffix"
     **SuffixAlias** på **CustomPopupObjects** refererar till namnet som getts till
@@ -170,7 +170,7 @@ En knapp för start och en för stopp. I det här exemplet stoppar inställninge
 till `0` pumpen och inställningen till `1` startar den. Fyll i egenskaperna
 därefter:
 
-![2 knappar start](/Images/Create_Popup/2Button_start2.png)
+![2 knappar start](/docs/sv/Images/Create_Popup/2Button_start2.png)
 
 Lägg sedan till en rad för att ställa in börvärdet och en annan för att visa det faktiska varvtalet
 med objektet `ValueRow`. Detta objekt tillåter värdesinmatning om **Writable** var
@@ -181,7 +181,7 @@ och ställ in deras **SuffixAlias** till **Setpoint** respektive **RPM**.
 Lägg slutligen till ett `StatusRow` för att visa om pumpen har stött på ett fel.
 Den slutliga vyn bör se ut ungefär så här:
 
-![Felrad](/Images/Create_Popup/Error.png)
+![Felrad](/docs/sv/Images/Create_Popup/Error.png)
 
 Det sista steget är att ändra storlek på vyn för att ta bort tomt utrymme längst ned. Högerklicka
 på vyn i projektträdet och välj **Properties**. Att ställa in höjden till
@@ -193,16 +193,16 @@ Starta applikationen och navigera till **Inställningar → Suffix → Suffix - 
 Välj **Pump Control** och uppdatera **View** till den nyligen skapade vyn **Pump Control**
 som visas nedan:
 
-![Popup-konfiguration](/Images/Create_Popup/view_config.png)
+![Popup-konfiguration](/docs/sv/Images/Create_Popup/view_config.png)
 
 Allt som återstår är att starta projektet och klicka på `pump06` för att se popupen **Pump Control**. Se [Skapa objekt](create-an-object.md) för att skapa ett objekt i en
 **Arbetsvy**.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
-![pump06](/Images/Create_Popup/pump06.png){style="height:500px;"}
+![pump06](/docs/sv/Images/Create_Popup/pump06.png){style="height:500px;"}
 
-![pump control](/Images/Create_Popup/pump%20control.png){style="height:500px;"}
+![pump control](/docs/sv/Images/Create_Popup/pump%20control.png){style="height:500px;"}
 
 </div>
 
@@ -221,12 +221,12 @@ det länkade objektet döljs.
 För att illustrera detta läggs en andra pump kallad `pump07` till. Denna pump har samma
 signaler som `pump06` förutom att den inte har en feltagg (`_error`).
 
-![pump07](/Images/Create_Popup/pump07_tags.png)
+![pump07](/docs/sv/Images/Create_Popup/pump07_tags.png)
 
 När `pump07` klickas på döljer popupen automatiskt felstatusraden
 och skalas om för att ta bort det tomma utrymmet:
 
-![pump control skalad](/Images/Create_Popup/Pump%20control_scaled.png)
+![pump control skalad](/docs/sv/Images/Create_Popup/Pump%20control_scaled.png)
 
 På grund av denna funktion bör popups alltid byggas för att visa det maximala antalet
 taggar — **värsta tänkbara** scenariot — och skalas sedan automatiskt om
@@ -251,12 +251,12 @@ visuell separation från den underliggande vyn.
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![view.link](/Images/Create_Popup/view.link.png)
+  ![view.link](/docs/sv/Images/Create_Popup/view.link.png)
   <figcaption>Använder view.link.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![app.popOut](/Images/Create_Popup/app.popOut.png)
+  ![app.popOut](/docs/sv/Images/Create_Popup/app.popOut.png)
   <figcaption>Använder app.popOut.</figcaption>
 </figure>
 
@@ -284,7 +284,7 @@ objektbibliotek som det vanliga `DynTouch`-objektet.
 För att konfigurera en direktlänk, ställ in egenskapen **startPopup** på objektet till
 namnet på den popup som ska öppnas vid klick:
 
-![DirectLink DynTouch](/Images/Create_Popup/Direct_Link_prop.png)
+![DirectLink DynTouch](/docs/sv/Images/Create_Popup/Direct_Link_prop.png)
 
 !!! tip
     Använd `_DynTouch_DirectLink` när användare ofta navigerar till en specifik popup-flik.

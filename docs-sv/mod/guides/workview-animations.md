@@ -26,7 +26,7 @@ färgen ett objekt visar bestäms av vilka signaler som är aktiva på det objek
 
 För mer information om taggsuffix, se [Taggstruktur](../reference/tag-structure.md).
 
-![Animationstillstånd](/Images/Workview_Animations/AllActive.gif)
+![Animationstillstånd](/docs/sv/Images/Workview_Animations/AllActive.gif)
 
 ## Hur det fungerar { #how-it-works }
 
@@ -56,7 +56,7 @@ egna animerade objekt beskrivs i
 Animationskategorierna och deras suffixalias konfigureras i **WideQuick
 Runtime®** genom att navigera till **Inställningar → Suffix → Suffix - Larm**.
 
-![Lista med Arbetsvy-animationer](/Images/Workview_Animations/Workview_animations_list.png)
+![Lista med Arbetsvy-animationer](/docs/sv/Images/Workview_Animations/Workview_animations_list.png)
 
 Inställningarna är organiserade i två nivåer:
 
@@ -204,7 +204,7 @@ standard. Expandera **3 - Service** och kontrollera om `_SERVICE` visas under
 **suffix**. Om det inte finns där, klicka på **Lägg till nytt suffixalias i vald kategori**,
 ange `_SERVICE` som suffix och ge det en beskrivning som passar dina behov.
 
-![Servicesuffix](/Images/Workview_Animations/Service_suffix.png)
+![Servicesuffix](/docs/sv/Images/Workview_Animations/Service_suffix.png)
 
 ### Steg 2 - Skapa de visuella elementen { #step-2-create-the-visual-elements }
 
@@ -215,7 +215,7 @@ av dessa kategorier är aktiv.
 * En **triangel** — dess kontur ändrar färg när kategorin aktiv är aktiv.
 * Ett `DynTouch`-objekt — detta kopplar animationen till taggen.
 
-![Skapa objekt](/Images/Workview_Animations/Create_object.png)
+![Skapa objekt](/docs/sv/Images/Workview_Animations/Create_object.png)
 
 ### Steg 3 - Lägg till onLoad-skripten { #step-3-add-the-onload-scripts }
 
@@ -235,7 +235,7 @@ this.defaultpColor = this.pen.color;
 Dessa skript sparar de ursprungliga färgerna för varje objekt så att de kan återställas när
 ingen animationskategori är aktiv.
 
-![onLoad-skript](/Images/Workview_Animations/LoadScripts.gif)
+![onLoad-skript](/docs/sv/Images/Workview_Animations/LoadScripts.gif)
 
 !!! note
     Eftersom triangelns **penselgfärg** inte styrs av något animationsuttryck
@@ -263,7 +263,7 @@ if (this.animation.alarm && _sys_pulse_1_Hz) {
 
 GIF:en nedan visar var detta uttryck ska läggas till:
 
-![Penselgfärg-dynamik för cirkel](/Images/Workview_Animations/DynCircel.gif)
+![Penselgfärg-dynamik för cirkel](/docs/sv/Images/Workview_Animations/DynCircel.gif)
 
 **Triangel — pennfärg:**
 
@@ -280,7 +280,7 @@ if (this.animation.active) {
 
 GIF:en nedan visar var detta uttryck ska läggas till:
 
-![Pennfärg-dynamik för triangel](/Images/Workview_Animations/DynTriangel.gif)
+![Pennfärg-dynamik för triangel](/docs/sv/Images/Workview_Animations/DynTriangel.gif)
 
 ### Steg 5 - Gruppera objekten { #step-5-group-the-objects }
 
@@ -314,7 +314,7 @@ Starta projektet och kontrollera att:
 * Triangelns kontur ändras till aktivfärgen när en signal som slutar med ett
 aktivsuffix är aktiv.
 
-![Demonstration](/Images/Workview_Animations/Demonstration.gif)
+![Demonstration](/docs/sv/Images/Workview_Animations/Demonstration.gif)
 
 !!! tip
     För att testa utan en PLC ansluten, högerklicka på objektet i **WideQuick Runtime®**

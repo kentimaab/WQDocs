@@ -17,11 +17,11 @@ tags:
 
 Navigate to **Settings → Backup → Restore**.
 
-![Restore variables from backup view](/Images/Backup_And_Restore/backup-restore.png){align=center}
+![Restore variables from backup view](/docs/Images/Backup_And_Restore/backup-restore.png){align=center}
 
 The view has three panels. The left panel lists all saved backups with their creation date. Selecting a backup shows its metadata below the panels and populates the middle panel with the variables stored in that backup.
 
-![Backup metadata shown below the panels](/Images/Backup_And_Restore/backup-metadata.png){align=center}
+![Backup metadata shown below the panels](/docs/Images/Backup_And_Restore/backup-metadata.png){align=center}
 
 * **Created on** — the date and time the backup was created.
 * **Created By** — the user who created the backup.

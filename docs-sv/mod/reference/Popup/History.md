@@ -14,7 +14,7 @@ tags:
 
 Historik-popupen visar ett trenddiagram för det valda objektet och presenterar historiska värden för dess loggade signaler. Den är alltid synlig i flikmenyn oavsett vilka suffix objektet har. Mer information om hur historiksystemet fungerar finns under [Historik](../../modules/history/index.md).
 
-![History popup](/Images/Popups/History.png)
+![History popup](/docs/sv/Images/Popups/History.png)
 
 ## Signaler
 

@@ -32,7 +32,7 @@ för **Arbetsvy** — om den är aktiv, har en varning eller har ett larm. Pinne
 dessutom visa antalet aktiva larm och varningar. Tillsammans gör dessa funktioner
 `PinStatus`-objekt till grunden för systemkontroll via en karta.
 
-![Pin Status](/Images/Map_Indicators/PinStatus.png)
+![Pin Status](/docs/sv/Images/Map_Indicators/PinStatus.png)
 
 !!! note
     Om du vill visa en annan ikon på `PinStatus`-objektet, ändra dess SVG eller gör en
@@ -46,9 +46,9 @@ Klusterpinnar kan användas för att gruppera underliggande pinnar till en, vilk
 kartan och förbättrar navigationen. En klusterpinne skapas på samma sätt som en vanlig pinne,
 men med ytterligare egenskaper.
 
-![Clusterpin](/Images/Map_Indicators/Cluster.png)
+![Clusterpin](/docs/sv/Images/Map_Indicators/Cluster.png)
 
-![Cluster Settings](/Images/Map_Indicators/Cluster%20Pin.png)
+![Cluster Settings](/docs/sv/Images/Map_Indicators/Cluster%20Pin.png)
 
 Följande egenskaper måste konfigureras:
 
@@ -72,7 +72,7 @@ scMap.initClusters(this);
 if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 ```
 
-![Pin and Cluster](/Images/Map_Indicators/ClusterStatusMap.gif)
+![Pin and Cluster](/docs/sv/Images/Map_Indicators/ClusterStatusMap.gif)
 
 ### Linjer { #lines }
 Linjer är användbara för att visualisera stigar eller rör i en applikation. Eftersom rör sträcker sig över
@@ -101,7 +101,7 @@ nätverket. Det finns ett maximum på 50 segment per nätverk.
 
 Exempelkonfiguration:
 
-![Lines configuration](/Images/Map_Indicators/MapLines.png)
+![Lines configuration](/docs/sv/Images/Map_Indicators/MapLines.png)
 
 #### CSV-fil med koordinater
 För att länka ett linjesnätverk till en CSV-fil, skapa filen i mappen `mapPaths` i ditt
@@ -131,7 +131,7 @@ lat,long
 För att länka CSV-filen till en linjegrupp såsom `MainPipeLines`, ange egenskapen **fileName**
 till filnamnet:
 
-![fileName configuration](/Images/Map_Indicators/fileNameCSV.png)
+![fileName configuration](/docs/sv/Images/Map_Indicators/fileNameCSV.png)
 
 ### Filter { #filter }
 Filter låter användare fokusera på en specifik uppsättning linjer eller nätverk genom att växla deras

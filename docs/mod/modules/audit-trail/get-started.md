@@ -27,7 +27,7 @@ The Audit Trail records changes to selected DataStore variables and maintenance 
 
 Navigate to **History → Logs → Audit trail → Audit trail**.
 
-![Audit trail view](/Images/Audit_Trail/audit-trail-log.png){align=center}
+![Audit trail view](/docs/Images/Audit_Trail/audit-trail-log.png){align=center}
 
 The log shows all recorded changes with the following columns:
 
@@ -48,7 +48,7 @@ Click **Filter** to apply. Click **Clear audit trail** to permanently delete all
 
 Navigate to **History → Logs → Audit trail → Audit Trail - Maintenance**.
 
-![Audit Trail - Maintenance view](/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
+![Audit Trail - Maintenance view](/docs/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
 
 This view shows a full history of changes to maintenance tasks. Every status change, deadline update, priority change, assignee change and description edit is recorded automatically. No configuration is needed.
 

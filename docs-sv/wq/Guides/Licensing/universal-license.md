@@ -37,7 +37,7 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 ## Skapa en licensnyckel
 
 <figure markdown="span">
-    ![Screenshot of the WideQuick License Config tool's main interface](./Images/image-6.png)
+    ![Screenshot of the WideQuick License Config tool's main interface](/docs/sv/Images/Licensing/image-6.png)
    <figcaption>WideQuick License Config grafiskt användargränssnitt.</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
  
   Öppna WideQuick License Config-applikationen från Start-menyn eller genvägen på skrivbordet.
   
-  ![Icon or shortcut for WideQuick License Config application](./Images/image-3.png)
+  ![Icon or shortcut for WideQuick License Config application](/docs/sv/Images/Licensing/image-3.png)
 
   Som standard installeras verktyget i C:\Program Files\Kentima AB\WideQuick License Config följt av ett versionsnummer, till exempel C:\Program Files\Kentima AB\WideQuick License Config 14 
   
@@ -63,19 +63,19 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
     1.	Tryck på Windows-tangenten, sök efter "Redigera miljövariabler" och välj "Redigera systemmiljövariabler."
     
-        ![Screenshot showing Windows search for 'Edit Environment Variables'](./Images/image.png)
+        ![Screenshot showing Windows search for 'Edit Environment Variables'](/docs/sv/Images/Licensing/image.png)
     
     2.	Klicka på knappen "Miljövariabler."
     
-        ![Screenshot of System Properties window with Environment Variables button highlighted](./Images/pressENV.png)
+        ![Screenshot of System Properties window with Environment Variables button highlighted](/docs/sv/Images/Licensing/pressENV.png)
     
     3.	Under "Systemvariabler" (för alla användare) eller "Användarvariabler" (bara för dig), klicka på "Ny." Om du redan har en miljövariabel med namnet WQ_CLOUD_LICENSE klickar du på Redigera istället.
     
-        ![Screenshot of Environment Variables window showing system variables section](./Images/EditEnv.png)
+        ![Screenshot of Environment Variables window showing system variables section](/docs/sv/Images/Licensing/EditEnv.png)
 
     4.	Ange Variabelnamn: WQ_CLOUD_LICENSE och Variabelvärde: 1.
         
-        ![Screenshot of New System Variable dialog with WQ_CLOUD_LICENSE set to 1](./Images/image-2.png)
+        ![Screenshot of New System Variable dialog with WQ_CLOUD_LICENSE set to 1](/docs/sv/Images/Licensing/image-2.png)
 
     5.	Klicka på OK och starta om WideQuick eller starta om datorn för att ändringarna ska träda i kraft.
 
@@ -85,7 +85,7 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
     1.	Öppna en terminal och redigera din skalprofilsfil. Du kan göra detta med till exempel nano via terminalen genom att skriva: 
         
-        ![Screenshot of terminal window showing nano command](./Images/image-4.png)
+        ![Screenshot of terminal window showing nano command](/docs/sv/Images/Licensing/image-4.png)
         
         === "For User"
             ```bash
@@ -98,7 +98,7 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
     2.	Lägg till den här raden i slutet: 
         
-        ![Screenshot of nano editor with export WQ_CLOUD_LICENSE=1 line](./Images/image-5.png)
+        ![Screenshot of nano editor with export WQ_CLOUD_LICENSE=1 line](/docs/sv/Images/Licensing/image-5.png)
 
         === "For User"
             ```nano
@@ -122,7 +122,7 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
   Ange en sökväg i katalogfältet i WideQuick License Config-verktyget. 
 
-  ![Screenshot of WideQuick License Config tool showing directory selection field with browse button](./Images/image-9.png)
+  ![Screenshot of WideQuick License Config tool showing directory selection field with browse button](/docs/sv/Images/Licensing/image-9.png)
   
   Det är i denna katalog som verktyget placerar filen wqlicense.key som gör det möjligt för WideQuick Runtime att hämta en licens från licensservern. 
   
@@ -140,23 +140,23 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
   Ange din 24-tecken långa produktnyckel i formatet XXXX-XXXX-XXXX-XXXX-XXXX-XX. 
   
-  ![Screenshot of product key input field in WideQuick License Config tool](./Images/image-7.png)
+  ![Screenshot of product key input field in WideQuick License Config tool](/docs/sv/Images/Licensing/image-7.png)
 
   Ett rött kryss <span style="color:red">(X)</span> indikerar en ogiltig nyckel. Om en giltig produktnyckel anges visas en grön bock <span style="color:green">(✓)</span> som bekräftelse.
 
-  ![Screenshot showing validation icons for product key: red cross for invalid, green checkmark for valid](./Images/image-8.png)
+  ![Screenshot showing validation icons for product key: red cross for invalid, green checkmark for valid](/docs/sv/Images/Licensing/image-8.png)
 
 ### 5.	 Ange användar-ID
 
   Ange ett användar-ID. Användar-ID:t rapporteras tillbaka till licensservern och är avsett att användas som ett sätt att skilja på till exempel vilken slutanvändare eller vilket projekt som utnyttjar denna licensnyckel.
   
-  ![Screenshot of User ID input field in WideQuick License Config tool](./Images/image-10.png)
+  ![Screenshot of User ID input field in WideQuick License Config tool](/docs/sv/Images/Licensing/image-10.png)
 
 ### 6.	 Välj produktnivå
 
   Välj önskad produktnivå från produktnivå-rullgardinsmenyn som du vill använda i din applikation. 
   
-  ![Screenshot of product level dropdown in WideQuick License Config tool](./Images/image-11.png)
+  ![Screenshot of product level dropdown in WideQuick License Config tool](/docs/sv/Images/Licensing/image-11.png)
 
   När du gör det kommer du att märka att värdena i listan med licensierade funktioner ändras och markeras. Med högre licenser kan du även välja fler valfria funktioner och ett större antal externa variabler.
 
@@ -164,11 +164,11 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
   Ange antalet externa variabler som du avser att använda i din applikation. 
   
-  ![Screenshot of External Variables input field in WideQuick License Config tool](./Images/image-13.png)
+  ![Screenshot of External Variables input field in WideQuick License Config tool](/docs/sv/Images/Licensing/image-13.png)
   
   Ett bra sätt att uppskatta hur många variabler du använder i ditt projekt är att öppna WideQuick-applikationen i WideQuick Designer och titta på variabelräknaren i det nedre högra hörnet av skärmen.
 
-  ![Screenshot of WideQuick Designer showing variable counter in bottom-right corner](./Images/image-12.png)
+  ![Screenshot of WideQuick Designer showing variable counter in bottom-right corner](/docs/sv/Images/Licensing/image-12.png)
 
   Antalet interna variabler du tillåts använda är ungefär dubbelt så många som det angivna antalet externa variabler, men inom det specificerade intervallet. Detaljer om detta hittar du i WideQuick Licensing Table som finns tillgänglig för nedladdning på vår webbplats.
 
@@ -176,7 +176,7 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
   Utöver den funktionalitet som ingår i produktnivån kan du välja att lägga till ytterligare funktionalitet i din licens. 
   
-  ![Screenshot of options section in WideQuick License Config tool for additional functionalities](./Images/image-14.png)
+  ![Screenshot of options section in WideQuick License Config tool for additional functionalities](/docs/sv/Images/Licensing/image-14.png)
 
   Detta sträcker sig från ett ökat antal anslutningar till en viss funktion i WideQuick Runtime till att låsa upp helt ny funktionalitet, till exempel Rapporter, stöd för Active Directory eller åtkomst till andra kommunikationsdrivrutiner och programmeringsgränssnitt för C och Python.
 
@@ -187,7 +187,7 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 !!! Info
     Som nämnts ovan är det viktigt att du verifierar vilken licensnivå du har valt. Det är denna konfiguration som ligger till grund för vad som debiteras. 
 
-  ![Screenshot of configuration summary in WideQuick License Config tool before generating license](./Images/image-15.png)
+  ![Screenshot of configuration summary in WideQuick License Config tool before generating license](/docs/sv/Images/Licensing/image-15.png)
 
   Kontrollera att du är nöjd med ditt val innan du genererar din licens.
 
@@ -195,7 +195,7 @@ När du startar WideQuick kontaktar applikationen licensservern. Om en licenspla
 
   Klicka på Generera nyckel längst ned till höger i WideQuick License Config-skärmen. 
   
-  ![Screenshot of Generate key button in WideQuick License Config tool](./Images/img.png)
+  ![Screenshot of Generate key button in WideQuick License Config tool](/docs/sv/Images/Licensing/img.png)
   
 
   Verktyget skapar sedan din wqlicense.key-fil och placerar den i den valda katalogen du angav i katalogfältet.

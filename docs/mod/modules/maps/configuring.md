@@ -33,7 +33,7 @@ of the **Workview** — whether it is active, has a warning, or has an alarm. Th
 additionally display the number of active alarms and warnings. Together, these features
 make `PinStatus` objects the foundation for system control through a map.
 
-![Pin Status](/Images/Map_Indicators/PinStatus.png)
+![Pin Status](/docs/Images/Map_Indicators/PinStatus.png)
 
 !!! note
     To display a different icon on the `PinStatus` object, change its SVG or make a
@@ -47,9 +47,9 @@ Cluster pins can be used to group underlying pins into one, reducing clutter on 
 map and improving navigation. A cluster pin is created the same way as a regular pin,
 but with additional properties.
 
-![Clusterpin](/Images/Map_Indicators/Cluster.png)
+![Clusterpin](/docs/Images/Map_Indicators/Cluster.png)
 
-![Cluster Settings](/Images/Map_Indicators/Cluster%20Pin.png)
+![Cluster Settings](/docs/Images/Map_Indicators/Cluster%20Pin.png)
 
 The following properties must be configured:
 
@@ -73,7 +73,7 @@ scMap.initClusters(this);
 if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 ```
 
-![Pin and Cluster](/Images/Map_Indicators/ClusterStatusMap.gif)
+![Pin and Cluster](/docs/Images/Map_Indicators/ClusterStatusMap.gif)
 
 ### Lines { #lines }
 Lines are useful for visualising paths or pipes in an application. Since pipes span
@@ -103,7 +103,7 @@ network. There is a maximum of 50 segments per network.
 
 Example configuration:
 
-![Lines configuration](/Images/Map_Indicators/MapLines.png)
+![Lines configuration](/docs/Images/Map_Indicators/MapLines.png)
 
 #### CSV file with coordinates
 To link a line network to a CSV file, create the file in the `mapPaths` folder in your
@@ -133,7 +133,7 @@ lat,long
 To link the CSV to a line group such as `MainPipeLines`, set the **fileName** property
 to the filename:
 
-![fileName configuration](/Images/Map_Indicators/fileNameCSV.png)
+![fileName configuration](/docs/Images/Map_Indicators/fileNameCSV.png)
 
 ### Filter { #filter }
 Filters allow users to focus on a specific set of lines or networks by toggling their

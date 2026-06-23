@@ -89,7 +89,7 @@ objects will read from.
 For more information on how tags are structured and how the suffix system works, see
 [Tag Structure](../reference/tag-structure.md).
 
-![Creating object](/Images/Create_Object/Create-object.gif)
+![Creating object](/docs/Images/Create_Object/Create-object.gif)
 
 !!! tip
     To learn how to build a fully custom object from scratch and apply animations,

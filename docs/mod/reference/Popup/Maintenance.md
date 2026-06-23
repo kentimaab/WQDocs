@@ -17,7 +17,7 @@ object. It is always visible in the Tab menu regardless of which suffixes the
 object has. For more information on how the maintenance system works, see
 [Maintenance](../../modules/maintenance/index.md).
 
-![Maintenance popup](/Images/Popups/Maintenance.png)
+![Maintenance popup](/docs/Images/Popups/Maintenance.png)
 
 ## Maintenance information
 

@@ -36,7 +36,7 @@ The Documents module is available under **Documents & Logbook -> Documents** in 
 
 The view is split into two panels. The left panel shows a file tree with two categories: **Local files** and **Online files**. Local files are stored on the server; online files are links to external URLs. The right panel shows the preview for the selected file. On **WideQuick Web®**, a third category appears for files that cannot be opened in the browser.
 
-![Documents Files view](/Images/Documents/documents-list.png){align=center}
+![Documents Files view](/docs/Images/Documents/documents-list.png){align=center}
 
 The following actions are available at the bottom of the view:
 
@@ -54,7 +54,7 @@ The following actions are available at the bottom of the view:
 4. Optionally click a file name in the queue to rename it before uploading.
 5. Click **Upload files**.
 
-![Upload file tab](/Images/Documents/documents-upload.png){align=center}
+![Upload file tab](/docs/Images/Documents/documents-upload.png){align=center}
 
 The files are copied to the server and added to the document list under **Local files**.
 
@@ -68,7 +68,7 @@ The files are copied to the server and added to the document list under **Local 
 6. Click **Add**.
 7. Click **Upload files**.
 
-![Online resource tab](/Images/Documents/documents-upload-online.png){align=center}
+![Online resource tab](/docs/Images/Documents/documents-upload-online.png){align=center}
 
 The resource is added to the document list under **Online files**. The URL is stored — no file is downloaded to the server.
 

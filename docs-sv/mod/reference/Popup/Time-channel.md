@@ -17,7 +17,7 @@ objektet. Varje veckodag kan ha upp till två aktiva tidsperioder definierade av
 på- och av-tider. Den visas bara i Tab-menyn när objektet har en signal
 med suffixet `_TK`.
 
-![Time Channel popup](/Images/Popups/Time-channel.png)
+![Time Channel popup](/docs/sv/Images/Popups/Time-channel.png)
 
 ## Kanalstatus
 

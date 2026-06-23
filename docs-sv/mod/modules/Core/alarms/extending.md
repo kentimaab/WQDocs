@@ -20,13 +20,13 @@ För att skicka larmnotifieringar via e-post måste en SMTP-server konfigureras.
 1. I projektträdet, högerklicka på noden **Mail** och välj **Egenskaper...**.
 2. Ange serveruppgifterna.
 
-![Mail properties dialog](/Images/Alarm_Sender/Mail_properties.png){align=center}
+![Mail properties dialog](/docs/sv/Images/Alarm_Sender/Mail_properties.png){align=center}
 
 ### Konfigurera SMTP vid körning { #configuring-smtp-at-runtime }
 
 Klicka på **Konfigurera** i SMTP-sektionen i statuspanelen **Larm — Schema**, eller anropa `System.mailManager.edit()` från ett skript eller en knappåtgärd.
 
-![Edit mail settings](/Images/Alarms/alarm-smtp-settings.png){align=center}
+![Edit mail settings](/docs/sv/Images/Alarms/alarm-smtp-settings.png){align=center}
 
 | Fält | Beskrivning |
 |---|---|
@@ -116,7 +116,7 @@ helst som accepterar AT-kommandon via en seriekoppling är kompatibel.
 Modemet konfigureras i **WideQuick Runtime®**. Navigera till
 **Inställningar → GSM-inställningar** för att öppna konfigurationsdialogen.
 
-![GSM modem settings](/Images/Alarms/alarm-gsm-settings.png){align=center}
+![GSM modem settings](/docs/sv/Images/Alarms/alarm-gsm-settings.png){align=center}
 
 Ange anslutningsparametrarna från enhetens datablad:
 

@@ -17,7 +17,7 @@ switching between operating modes or setting manual values. It only appears in t
 Tab menu when the object has signals matching one or more of the configured suffix
 aliases for the Maneuver popup.
 
-![Maneuver popup](/Images/Popups/Maneuver.png)
+![Maneuver popup](/docs/Images/Popups/Maneuver.png)
 
 ## Control
 

@@ -20,7 +20,7 @@ Att lägga till ett nytt språk kräver översättning av ett stort antal strän
 
 Öppna översättningsdialogen genom att högerklicka på **ProjectTranslations** i projektträdet och välja **Properties...**
 
-![Translation Dialog showing the list of .ts files and the translations tree](/Images/Languages/translation-dialog.png){align=center}
+![Translation Dialog showing the list of .ts files and the translations tree](/docs/sv/Images/Languages/translation-dialog.png){align=center}
 
 Den vänstra panelen listar alla `.ts`-filer lagrade i `Regions/ProjectTranslations/`, en per språk. Den högra panelen visar alla översättningsbara strängar i projektet, organiserade efter vy och komponentbibliotek.
 
@@ -72,7 +72,7 @@ När strängen finns i `Translations.klib`, kör **Tools → Update Translations
 
 För att lägga till ett nytt språk, högerklicka på **Languages** i projektträdet. För att redigera ett befintligt språk, högerklicka på språket i stället och välj **Properties**. Båda öppnar samma dialog.
 
-![Edit Language dialog](/Images/Languages/edit-language.png){align=center}
+![Edit Language dialog](/docs/sv/Images/Languages/edit-language.png){align=center}
 
 | Fält | Beskrivning |
 |---|---|
@@ -89,7 +89,7 @@ För att lägga till ett nytt språk, högerklicka på **Languages** i projekttr
 
 Användare byter språk genom att trycka på knappen **Set lang** i **WideQuick Runtime®**, som finns under **Settings → Settings**. Det öppnar ett popup-fönster med en lista över alla tillgängliga språk.
 
-![The Set lang button](/Images/Languages/set-lang.png){align=center}
+![The Set lang button](/docs/sv/Images/Languages/set-lang.png){align=center}
 
 !!! note
     Efter att ha bytt språk måste användaren logga in igen.
@@ -98,5 +98,5 @@ Användare byter språk genom att trycka på knappen **Set lang** i **WideQuick 
 
 Startspråket konfigureras i **WideQuick Designer®**. Högerklicka på projektnamnet i projektträdet och välj **Properties**. I dialogrutan **Project Properties**, ställ in listrutan **Start language** på önskat språk.
 
-![Project Properties dialog with the Start language field](/Images/Languages/project-properties.png){align=center}
+![Project Properties dialog with the Start language field](/docs/sv/Images/Languages/project-properties.png){align=center}
 <!-- --8<-- [end:body] -->

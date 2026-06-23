@@ -55,7 +55,7 @@ This is a read-only tag in the PLC.
 5. The fifth tag is an error signal, active when the pump has encountered an error.
 It will be given the suffix `_error`. This is a read-only tag in the PLC.
 
-![Imported tags](/Images/Create_Popup/tagList_popup.png)
+![Imported tags](/docs/Images/Create_Popup/tagList_popup.png)
 
 !!! note "Reusing tags"
     A tag can be displayed on several popups. It is not necessary to import the same
@@ -71,22 +71,22 @@ to the popup. This is done in a few steps:
 * Start the project.
 * Navigate to **Settings → Suffix → Suffix Alias - Popups**.
 
-![Navigation to settings](/Images/Create_Popup/Navigation.gif){width="400"}
+![Navigation to settings](/docs/Images/Create_Popup/Navigation.gif){width="400"}
 
 * Create a new suffix category by pressing **Add new category** and give the
 new category a name. Since we are creating a popup for pump control, name it
 **Pump Control**.
 
-![Adding category](/Images/Create_Popup/Adding%20category.gif)
+![Adding category](/docs/Images/Create_Popup/Adding%20category.gif)
 
 * Select the new category in the list and click **Add new suffix alias in selected category**. In this example we start with the tag with suffix `_IO`, which displays
 whether the pump is on or not. Name this suffix **Active**.
 
-![Adding suffix](/Images/Create_Popup/Adding%20suffix.gif)
+![Adding suffix](/docs/Images/Create_Popup/Adding%20suffix.gif)
 
 * Fill in the relevant information for this suffix alias:
 
-![Configuring suffix](/Images/Create_Popup/suffix_config.png)
+![Configuring suffix](/docs/Images/Create_Popup/suffix_config.png)
 
 * **Suffix** — The suffix entered on the tag, in this case `_IO`.
 * **Writable** — Leave disabled since this is a read-only tag in the PLC.
@@ -111,7 +111,7 @@ be named as follows:
 
 The finished list should look something like this:
 
-![configured suffixes](/Images/Create_Popup/configured_suffixes.png)
+![configured suffixes](/docs/Images/Create_Popup/configured_suffixes.png)
 
 ## Choosing a popup template { #choosing-a-popup-template }
 
@@ -159,7 +159,7 @@ Start by adding an object to display whether the pump has been started. The
 and open the **Properties** tab. Set the **SuffixAlias** property to **Active** to
 connect this object to the suffix `_IO`:
 
-![Status row](/Images/Create_Popup/StatusRow2.png)
+![Status row](/docs/Images/Create_Popup/StatusRow2.png)
 
 !!! note "Suffixes"
     The **SuffixAlias** on **CustomPopupObjects** refers to the name given to the
@@ -171,7 +171,7 @@ object. One button for start and one for stop. In this example, setting `_start`
 to `0` stops the pump and setting it to `1` starts it. Fill in the properties
 accordingly:
 
-![2 Button start](/Images/Create_Popup/2Button_start2.png)
+![2 Button start](/docs/Images/Create_Popup/2Button_start2.png)
 
 Next, add a row for setting the setpoint and another for displaying the actual RPM
 using the `ValueRow` object. This object allows value entry if **Writable** was
@@ -182,7 +182,7 @@ objects and set their **SuffixAlias** to **Setpoint** and **RPM** respectively.
 Finally, add a `StatusRow` for displaying whether the pump has encountered an error.
 The final view should look something like this:
 
-![error row](/Images/Create_Popup/Error.png)
+![error row](/docs/Images/Create_Popup/Error.png)
 
 The last step is to resize the view to remove empty space at the bottom. Right-click
 the view in the project tree and select **Properties**. Setting the height to
@@ -194,16 +194,16 @@ Start the application and navigate to **Settings → Suffix → Suffix - Popups*
 Select **Pump Control** and update **View** to the newly created view **Pump Control**
 as shown below:
 
-![Popup config](/Images/Create_Popup/view_config.png)
+![Popup config](/docs/Images/Create_Popup/view_config.png)
 
 All that remains is to start the project and click on `pump06` to see the **Pump Control** popup. See [Create Object](create-an-object.md) to create an object in a
 **Workview**.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
-![pump06](/Images/Create_Popup/pump06.png){style="height:500px;"}
+![pump06](/docs/Images/Create_Popup/pump06.png){style="height:500px;"}
 
-![pump control](/Images/Create_Popup/pump%20control.png){style="height:500px;"}
+![pump control](/docs/Images/Create_Popup/pump%20control.png){style="height:500px;"}
 
 </div>
 
@@ -222,12 +222,12 @@ the linked object are hidden.
 To illustrate this, a second pump called `pump07` will be added. This pump has the
 same signals as `pump06` except it does not have an error tag (`_error`).
 
-![pump07](/Images/Create_Popup/pump07_tags.png)
+![pump07](/docs/Images/Create_Popup/pump07_tags.png)
 
 When `pump07` is clicked, the popup will automatically hide the error status row
 and rescale to remove the blank space:
 
-![pump control scaled](/Images/Create_Popup/Pump%20control_scaled.png)
+![pump control scaled](/docs/Images/Create_Popup/Pump%20control_scaled.png)
 
 Because of this feature, popups should always be built to show the maximum number
 of tags — the **worst case** scenario — and will then automatically rescale
@@ -252,12 +252,12 @@ visual separation from the underlying view.
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![view.link](/Images/Create_Popup/view.link.png)
+  ![view.link](/docs/Images/Create_Popup/view.link.png)
   <figcaption>Using view.link.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![app.popOut](/Images/Create_Popup/app.popOut.png)
+  ![app.popOut](/docs/Images/Create_Popup/app.popOut.png)
   <figcaption>Using app.popOut.</figcaption>
 </figure>
 
@@ -285,7 +285,7 @@ object library as the regular `DynTouch` object.
 To configure a direct link, set the **startPopup** property on the object to the
 name of the popup that should open on click:
 
-![DirectLink DynTouch](/Images/Create_Popup/Direct_Link_prop.png)
+![DirectLink DynTouch](/docs/Images/Create_Popup/Direct_Link_prop.png)
 
 !!! tip
     Use `_DynTouch_DirectLink` when users frequently navigate to a specific popup

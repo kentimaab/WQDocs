@@ -47,7 +47,7 @@ simply starts building their system views. There are no implemented systems or
 external connections such as **OPC UA** or **Modbus**. It is the recommended
 starting point for integrators who want to build a new project from scratch.
 
-![Template project](/Images/WWT_Intro/Template.png)
+![Template project](/docs/Images/WWT_Intro/Template.png)
 
 ### Demo project
 
@@ -55,7 +55,7 @@ The demo project is a fully implemented example showing all functionality of
 WideQuick Water and Wastewater Treatment 2024.1.0 in use. It is useful both for
 understanding how the system works and for drawing inspiration for implementation.
 
-![Demo project](/Images/WWT_Intro/Demo.png)
+![Demo project](/docs/Images/WWT_Intro/Demo.png)
 
 ### Start the application
 

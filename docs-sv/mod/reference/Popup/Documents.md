@@ -17,7 +17,7 @@ kan förhandsgranskas direkt i popup-fönstret och nya dokument kan länkas frå
 datorn. Det är alltid synligt i flikmenyn oavsett vilka suffix objektet har. För mer information om hur dokumentsystemet fungerar, se
 [Dokument](../../modules/documents/index.md).
 
-![Documents popup](/Images/Popups/Documents.png)
+![Documents popup](/docs/sv/Images/Popups/Documents.png)
 
 ## Länkade dokument
 

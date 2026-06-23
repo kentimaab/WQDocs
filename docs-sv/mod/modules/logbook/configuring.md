@@ -27,7 +27,7 @@ MB/AS02
 
 När loggboken öppnas från ett objektpopup sätts ämnet automatiskt utifrån objektets taggsökväg. När den öppnas från en vyknapp kan ämnet sättas från vyns namn eller skickas in explicit. Se [Utöka](extending.md) för hur man gör detta i ett skript.
 
-![Ämnesträd som visar en nästlad hierarki](/Images/Logbook/topic-tree.png){align=center}
+![Ämnesträd som visar en nästlad hierarki](/docs/sv/Images/Logbook/topic-tree.png){align=center}
 
 ## Kontexter { #contexts }
 
@@ -37,7 +37,7 @@ Kontexter hanteras från popup-fönstret **Ändra loggbokskontext**, som öppnas
 
 Vid filtrering i loggboken visas, när en kontext väljs, enbart poster tilldelade den kontexten oavsett ämne.
 
-![Vy för kontexthantering](/Images/Logbook/context-management.png){align=center}
+![Vy för kontexthantering](/docs/sv/Images/Logbook/context-management.png){align=center}
 
 ## Åtkomstmönster { #access-patterns }
 
@@ -49,7 +49,7 @@ Den fullständiga loggboken under **Dokument & Loggbok → Loggbok** visar alla 
 
 Varje objekt i projektet har en flik [**Loggbok**](../../reference/Popup/Logbook.md) i sitt popup-fönster. Öppnas den fliken visas enbart poster vars ämne matchar objektets taggsökväg. Nya poster som skapas härifrån tilldelas automatiskt rätt ämne.
 
-![Loggboksfliken i objektets popup-fönster](/Images/Logbook/object-popup-logbook.png){align=center}
+![Loggboksfliken i objektets popup-fönster](/docs/sv/Images/Logbook/object-popup-logbook.png){align=center}
 
 ### Vybegränsad { #view-scoped }
 

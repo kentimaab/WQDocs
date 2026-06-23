@@ -24,7 +24,7 @@ tags:
 
 WideQuick MOD ships with both a light and a dark theme. The two variants share the same color structure but invert the surface hierarchy. Backgrounds that are light in one become dark in the other, and text colors adjust accordingly.
 
-![Light and dark theme comparison](/Images/Themes/theme-light-dark.png){align=center}
+![Light and dark theme comparison](/docs/Images/Themes/theme-light-dark.png){align=center}
 
 ## Switching themes { #switching-themes }
 

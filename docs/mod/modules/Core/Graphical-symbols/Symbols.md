@@ -37,7 +37,7 @@ The new symbols provide richer visual feedback than their predecessors through a
 two-layer animation system built from two concentric circles. The gif below shows
 the new symbol cycling through alarm, warning and active states:
 
-![New symbol](/Images/Symbol_Libraries/new_symbol.gif)
+![New symbol](/docs/Images/Symbol_Libraries/new_symbol.gif)
 
 The older symbols supported basic dynamics — for example a simple color change on
 alarm. The new symbols go further by providing two independent animation layers:
@@ -69,9 +69,9 @@ are the recommended starting point.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
-![Components library1](/Images/Symbol_Libraries/componets1.png)
+![Components library1](/docs/Images/Symbol_Libraries/componets1.png)
 
-![Components  library2](/Images/Symbol_Libraries/componets2.png)
+![Components  library2](/docs/Images/Symbol_Libraries/componets2.png)
 
 </div>
 
@@ -118,7 +118,7 @@ indicators, a manual mode indicator, and a name label — ready to connect to ta
 by filling in the **Connection**, **Device**, **Sys**, and **ObjectName** properties
 on the `DynTouch` object.
 
-![DAMPERS library](/Images/Symbol_Libraries/dampers_library.png)
+![DAMPERS library](/docs/Images/Symbol_Libraries/dampers_library.png)
 
 Each damper object is available in four orientations — **000**, **090**, **180**,
 and **270** degrees — to match the layout of the process view.
@@ -163,11 +163,11 @@ properties on the `DynTouch` object.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
-![MOTORS library1](/Images/Symbol_Libraries/motor_library1.png)
+![MOTORS library1](/docs/Images/Symbol_Libraries/motor_library1.png)
 
-![MOTORS library2](/Images/Symbol_Libraries/motor_library2.png)
+![MOTORS library2](/docs/Images/Symbol_Libraries/motor_library2.png)
 
-![MOTORS library3](/Images/Symbol_Libraries/motor_library3.png)
+![MOTORS library3](/docs/Images/Symbol_Libraries/motor_library3.png)
 
 </div>
 
@@ -229,11 +229,11 @@ on the `DynTouch` object.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
-![Sensor library1](/Images/Symbol_Libraries/sensor_library1.png)
+![Sensor library1](/docs/Images/Symbol_Libraries/sensor_library1.png)
 
-![Sensor library2](/Images/Symbol_Libraries/sensor_library2.png)
+![Sensor library2](/docs/Images/Symbol_Libraries/sensor_library2.png)
 
-![Sensor library3](/Images/Symbol_Libraries/sensor_library3.png)
+![Sensor library3](/docs/Images/Symbol_Libraries/sensor_library3.png)
 
 </div>
 
@@ -299,7 +299,7 @@ indicators, and a name label — ready to connect to tags by filling in the
 **Connection**, **Device**, **Sys**, and **ObjectName** properties on the `DynTouch`
 object.
 
-![VALVES library](/Images/Symbol_Libraries/valves_library.png)
+![VALVES library](/docs/Images/Symbol_Libraries/valves_library.png)
 
 Each valve object is available in four orientations — **000**, **090**, **180**,
 and **270** degrees — to match the layout of the process view.
@@ -336,7 +336,7 @@ object and relevant displays — ready to connect to tags by filling in the
 **Connection**, **Device**, **Sys**, and **ObjectName** properties on the `DynTouch`
 object.
 
-![OTHERS library](/Images/Symbol_Libraries/other_library.png)
+![OTHERS library](/docs/Images/Symbol_Libraries/other_library.png)
 
 The following objects are available:
 

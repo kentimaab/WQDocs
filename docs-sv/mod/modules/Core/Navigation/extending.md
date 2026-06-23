@@ -34,7 +34,7 @@ scLinking.goTo("YOUR_OBJECT.NAME");
 I exemplet nedan tillämpas `goTo()`-funktionen på en knapps **onClick**-åtgärd
 med målobjektet `MB.AS01.LB02_GT43`:
 
-![goTo](/Images/Navigation/goTO.gif)
+![goTo](/docs/sv/Images/Navigation/goTO.gif)
 
 ### GoTo i Larmgrupper { #goto-in-alarm-groups }
 GoTo kan även integreras i **Larmgrupp** och **LarmLista**, vilket gör det möjligt för användare att
@@ -58,7 +58,7 @@ visningstext och välj en färg.
 5. Välj kategorin **Åtgärd** — om du trycker på den här kolumnen för ett specifikt larm
 aktiveras GoTo och navigerar till den **Arbetsvy** där larmet uppstod.
 
-![Alarm_Goto](/Images/Navigation/Alarm_goTo.png)
+![Alarm_Goto](/docs/sv/Images/Navigation/Alarm_goTo.png)
 
 !!! note 
     För att kunna använda GoTo-funktionen på larm krävs skriptet `scAlarmFinder`

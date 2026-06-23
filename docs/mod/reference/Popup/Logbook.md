@@ -17,7 +17,7 @@ Users can create, edit, and delete notes directly from this popup. It is always
 visible in the Tab menu regardless of which suffixes the object has. For more
 information on how the logbook system works, see [Logbook](../../modules/logbook/index.md).
 
-![Logbook popup](/Images/Popups/Logbook.png)
+![Logbook popup](/docs/Images/Popups/Logbook.png)
 
 ## Entries
 

@@ -39,7 +39,7 @@ systemvyer. Det finns inga implementerade system eller externa anslutningar som
 **OPC UA** eller **Modbus**. Det är den rekommenderade utgångspunkten för integratörer som
 vill bygga ett nytt projekt från grunden.
 
-![Template project](/Images/BMS_Intro/Template.png)
+![Template project](/docs/sv/Images/BMS_Intro/Template.png)
 
 ### Demoprojekt
 Demoprojektet är ett fullt implementerat exempel som visar all funktionalitet i
@@ -52,7 +52,7 @@ Demoprojektet innehåller tre implementerade system:
 * **Luftbehandling** — vyer `LB01`, `LB02` och `LB03`
 * **Tavla** — vyer `AS01` och `AS02`
 
-![Demo project](/Images/BMS_Intro/Demo.png)
+![Demo project](/docs/sv/Images/BMS_Intro/Demo.png)
 
 !!! note
     Luftbehandlingssystemet innehåller även kopior av vyerna med äldre ikoner,

@@ -18,7 +18,7 @@ computer. It is always visible in the Tab menu regardless of which suffixes the
 object has. For more information on how the document system works, see
 [Documents](../../modules/documents/index.md).
 
-![Documents popup](/Images/Popups/Documents.png)
+![Documents popup](/docs/Images/Popups/Documents.png)
 
 ## Linked documents
 

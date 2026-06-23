@@ -19,7 +19,7 @@ one or more of the configured suffix aliases for the Process popup.
 For a guide on how to create and configure a custom Process popup, see
 [Create Popup](../../guides/create-a-popup.md).
 
-![Process popup](/Images/Popups/Process.png)
+![Process popup](/docs/Images/Popups/Process.png)
 
 ## Values
 

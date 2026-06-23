@@ -30,7 +30,7 @@ Remote Systems lets a WideQuick application connect to one or more other WideQui
 
 For a WideQuick application to accept incoming connections from other applications, a connection port must be configured in its project settings. In **WideQuick Designer®**, open **Project Properties** (by right clicking the top node of the project tree) and set **View access** under **Connection Port**. The default port is **2122**.
 
-![Connection Port in Project Properties](/Images/Remote_System/remote-connection-port.png){align=center}
+![Connection Port in Project Properties](/docs/Images/Remote_System/remote-connection-port.png){align=center}
 
 Both applications must be reachable over the network on the configured port.
 
@@ -49,7 +49,7 @@ Remote systems are managed under the **Remote Systems** node in the project tree
 * **Refreshrate** — how often variable updates are fetched from this system, in milliseconds. Lower values give faster response but increase network load.
 * **Auto connect on startup** — when enabled, the application connects to this system automatically on startup.
 
-![Add Remote System dialog](/Images/Remote_System/remote-designer-add.png){align=center}
+![Add Remote System dialog](/docs/Images/Remote_System/remote-designer-add.png){align=center}
 
 ### Via WideQuick Runtime® { #via-widequick-runtime }
 
@@ -57,7 +57,7 @@ Navigate to **Settings → Settings** in the main menu and click **Manage remote
 
 The Remote Systems dialog lists all configured systems. Click **Add** to add a new one, **Edit** to modify an existing one, or **Remove** to delete it.
 
-![Remote Systems dialog](/Images/Remote_System/remote-runtime-list.png){align=center}
+![Remote Systems dialog](/docs/Images/Remote_System/remote-runtime-list.png){align=center}
 
 The **Defaults** section at the top sets global fallback values for all systems:
 
@@ -67,13 +67,13 @@ The **Defaults** section at the top sets global fallback values for all systems:
 
 Clicking **Add** opens the same fields as in **WideQuick Designer®**.
 
-![Add remote system dialog](/Images/Remote_System/remote-runtime-add.png){align=center}
+![Add remote system dialog](/docs/Images/Remote_System/remote-runtime-add.png){align=center}
 
 ## Navigation { #navigation }
 
 Configured remote systems appear in the **Remote Systems** section at the bottom of the main navigation. Click **Remote Systems** to open the list.
 
-![Remote Systems menu showing connected and disconnected systems](/Images/Remote_System/remote-menu.png){align=center}
+![Remote Systems menu showing connected and disconnected systems](/docs/Images/Remote_System/remote-menu.png){align=center}
 
 Each entry shows the system name, description, and a connection status icon. The status icon updates in real time — green means connected, red means not connected. If **Auto connect on startup** is enabled, the application reconnects automatically on disconnect according to the **Max reconnect attempts** and **Reconnect delay** settings.
 

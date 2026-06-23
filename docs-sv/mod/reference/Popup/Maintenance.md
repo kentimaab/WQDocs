@@ -17,7 +17,7 @@ objektet. Den är alltid synlig i flikmenyn oavsett vilka suffix objektet har. F
 mer information om hur underhållssystemet fungerar, se
 [Underhåll](../../modules/maintenance/index.md).
 
-![Maintenance popup](/Images/Popups/Maintenance.png)
+![Maintenance popup](/docs/sv/Images/Popups/Maintenance.png)
 
 ## Underhållsinformation
 

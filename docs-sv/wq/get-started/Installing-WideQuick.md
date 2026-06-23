@@ -61,14 +61,14 @@ Installationsprogrammet guidar dig genom följande steg.
 
 ### Välkommen
 
-![Welcome](/Images/Install/Welcome.png)
+![Welcome](/docs/sv/Images/Install/Welcome.png)
 
 Installationsprogrammet öppnas med en välkomstskärm som visar alla steg som
 kommer att genomföras under installationen. Klicka på **Next** för att börja.
 
 ### Installationskatalog
 
-![Installation Directory](/Images/Install/PathDir.png)
+![Installation Directory](/docs/sv/Images/Install/PathDir.png)
 
 Välj den mapp där **WideQuick®** ska installeras. Standardplatsen är
 `C:/Program Files/Kentima AB/WideQuick 14`. Klicka på **...** för att bläddra
@@ -79,7 +79,7 @@ till en annan mapp. Klicka på **Next** för att fortsätta.
 
 ### Välj komponenter
 
-![Select Components](/Images/Install/Select%20Components.png)
+![Select Components](/docs/sv/Images/Install/Select%20Components.png)
 
 Välj vilka komponenter som ska installeras. Längst ned i dialogen visas det
 diskutrymme som krävs för de valda komponenterna. Håll muspekaren över en
@@ -125,7 +125,7 @@ nås på distans:
 
 ### Licensavtal
 
-![License Agreement](/Images/Install/LicenseAgreement.png)
+![License Agreement](/docs/sv/Images/Install/LicenseAgreement.png)
 
 Läs licensavtalet noggrant. Markera **I accept the license** för att godkänna
 villkoren. Klicka på **Next** för att fortsätta.
@@ -135,7 +135,7 @@ villkoren. Klicka på **Next** för att fortsätta.
 
 ### Startmenymapp
 
-![Start Menu Folder](/Images/Install/StartMenuFolder.png)
+![Start Menu Folder](/docs/sv/Images/Install/StartMenuFolder.png)
 
 Välj den Startmenymapp där genvägar till **WideQuick®** ska skapas. Standard är
 **WideQuick 14**. En befintlig mapp kan väljas från listan, eller ett nytt namn
@@ -146,7 +146,7 @@ kan anges i fältet längst upp. Klicka på **Next** för att fortsätta.
 
 ### Produktkod
 
-![Product Code](/Images/Install/ProductCode.png)
+![Product Code](/docs/sv/Images/Install/ProductCode.png)
 
 Ange produktnyckeln för **WideQuick® Runtime**. Produktnyckeln finns i
 orderbekräftelsen som du fått från Kentima.
@@ -160,7 +160,7 @@ Handler** efter att installationen är klar. Klicka på **Next** för att forts�
 
 ### Klar att installera
 
-![Ready to Install](/Images/Install/Ready%20to%20install.png)
+![Ready to Install](/docs/sv/Images/Install/Ready%20to%20install.png)
 
 All nödvändig information har samlats in. Dialogen visar det totala diskutrymme
 som installationen kommer att använda. Klicka på **Install** för att starta
@@ -168,7 +168,7 @@ installationen.
 
 ### Installerar
 
-![Installing](/Images/Install/Installing.png)
+![Installing](/docs/sv/Images/Install/Installing.png)
 
 Installationsprogrammet kopierar och packar nu upp alla valda komponenter.
 En förloppsindikator visar aktuell status. Klicka på **Show Details** för att
@@ -176,7 +176,7 @@ se en detaljerad logg över installationsprocessen.
 
 ### Klar
 
-![Finished](/Images/Install/Finish.png)
+![Finished](/docs/sv/Images/Install/Finish.png)
 
 **WideQuick 14** har installerats. Dialogen bekräftar installationsplatsen.
 Klicka på **Finish** för att stänga installationsprogrammet.

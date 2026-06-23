@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dashboards - Extending
 description: Extend and customise the Dashboards module beyond the defaults.
 product: mod
@@ -49,7 +49,7 @@ To understand how a widget handles signals, properties or layout, double-click i
 
 View privileges restrict which users can access a given dashboard. Set them at runtime by navigating to **Main Menu → Settings → Workview Privileges**. Select the workview from the tree on the left, then set the required privilege level in the **Privilege** dropdown on the right.
 
-![Workview privileges](/Images/Dashboard/WVPriv.png){align=center}
+![Workview privileges](/docs/Images/Dashboard/WVPriv.png){align=center}
 
 ### Setting Default View per Role { #setting-default-view-per-role }
 

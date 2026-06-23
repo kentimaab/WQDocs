@@ -41,7 +41,7 @@ bestå av följande fem delar:
 
 Se bilden nedan:
 
-![tag structure](/Images/Tag_Structure/tagStruct.svg){style="box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"}
+![tag structure](/docs/sv/Images/Tag_Structure/tagStruct.svg){style="box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"}
 
 ### Connection { #connection }
 **Connection** representerar anslutningstypen, till exempel **Modbus**, **OPC**, eller
@@ -79,7 +79,7 @@ mätvärde, ett börvärde eller en statusindikator.
 Att konfigurera **OPC**-taggar så att de följer standarden är enkelt. Taggarna behöver
 helt enkelt namnges enligt strukturen.
 
-![OPC tag structure](/Images/Tag_Structure/tagStructure_OPC.png)
+![OPC tag structure](/docs/sv/Images/Tag_Structure/tagStructure_OPC.png)
 
 
 ## Konfigurera taggar i Modbus Serial & Modbus TCP/IP { #configuring-tags-in-modbus-serial-modbus-tcpip }
@@ -88,7 +88,7 @@ helt enkelt namnges enligt strukturen.
 enligt bilden nedan. Det innebär att taggen i **Tag Editor** bara
 behöver innehålla `Sys_Component_Suffix`.
 
-![Modbus tag structure](/Images/Tag_Structure/tagStructure_MB.png)
+![Modbus tag structure](/docs/sv/Images/Tag_Structure/tagStructure_MB.png)
 
 
 
@@ -102,19 +102,19 @@ Det görs genom att ange tagginformationen i egenskaperna för `DynTouch`-objekt
 enligt bilden nedan. På så sätt kan WideQuick automatiskt hitta alla
 taggar som är anslutna till objektet.
 
-![Configuring DynTouch](/Images/Tag_Structure/DynTouch.png)
+![Configuring DynTouch](/docs/sv/Images/Tag_Structure/DynTouch.png)
 
 För att snabba upp processen att ansluta flera objekt till sina taggar behöver man inte
 ange samma **Connection**-, **Device**- och **System**-information på varje objekt i
 vyn. Dessa egenskaper kan i stället anges på **Arbetsvy**-egenskaperna. Om ett
 `DynTouch`-objekt lämnas tomt försöker det hämta informationen från vyn i stället.
 
-![Tag structure view](/Images/Tag_Structure/tagStructure%20view.png)
+![Tag structure view](/docs/sv/Images/Tag_Structure/tagStructure%20view.png)
 
 !!! tip "Objektnamn"
     Det är möjligt att hoppa över att ange objektnamnet på `DynTouch`-objektet genom
     att namnge objektet till objektnamnet.
-    ![object name](/Images/Tag_Structure/Object%20name.png)
+    ![object name](/docs/sv/Images/Tag_Structure/Object%20name.png)
 
 ## Suffixalias { #suffix-alias }
 
@@ -141,7 +141,7 @@ tillämpas på alla objekt i systemet.
 Suffixalias konfigureras i **WideQuick Runtime®** genom att navigera till
 **Inställningar → Suffix → Suffix Alias - Arbetsvyer**.
 
-![Suffix settings](/Images/Tag_Structure/SuffixAlias_Procces.png)
+![Suffix settings](/docs/sv/Images/Tag_Structure/SuffixAlias_Procces.png)
 
 Varje suffixalias har följande inställningar:
 
@@ -177,7 +177,7 @@ en rättighet i användarsystemet.
 Exemplet nedan anger beskrivningen "Börvärde" med 2 decimaler och
 kräver rättigheten "Config" för att kunna redigera:
 
-![tag desc](/Images/Tag_Structure/tagDesc.png)
+![tag desc](/docs/sv/Images/Tag_Structure/tagDesc.png)
 
 !!! warning
     Taggen måste innehålla en beskrivning för att åsidosättningen ska fungera. Det går inte

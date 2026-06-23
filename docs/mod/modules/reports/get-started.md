@@ -35,7 +35,7 @@ To create a new template, right-click **Reports** in the project tree and select
 **Add Report**. This will open the following window:
 
 <figure markdown="span">
-  ![Add report](/Images/Reports/Add_report.png)
+  ![Add report](/docs/Images/Reports/Add_report.png)
   <figcaption>The Add Report dialog in WideQuick Designer.</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ destination.
 * **Output name** — Customize the report file name using the **Output Name Builder**. 
 A preview of the name is shown in the **Name Preview** field.
 <figure markdown="span">
-  ![Create new report template](/Images/Reports/Create_new_report_template.gif)
+  ![Create new report template](/docs/Images/Reports/Create_new_report_template.gif)
   <figcaption>Creating a new report template from scratch.</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ From this page, reports can be created, removed, or sent as email attachments. S
 reports by email requires an SMTP server to be configured, which is explained [here](../Core/alarms/extending.md#configuring-smtp-in-widequick-designer).
 
 <figure markdown="span">
-  ![Report](/Images/Reports/Report.png)
+  ![Report](/docs/Images/Reports/Report.png)
   <figcaption>The Reports list workview in WideQuick Runtime.</figcaption>
 </figure>
 
@@ -87,22 +87,22 @@ between them by changing the **Report template** dropdown.
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![Alarm Report](/Images/Reports/AlarmReport.png)
+  ![Alarm Report](/docs/Images/Reports/AlarmReport.png)
   <figcaption>Alarm Report controller.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Alarm Report One Alarm](/Images/Reports/AlarmReportOne.png)
+  ![Alarm Report One Alarm](/docs/Images/Reports/AlarmReportOne.png)
   <figcaption>Alarm Report One Alarm controller.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Energy Report](/Images/Reports/EnergyReport.png)
+  ![Energy Report](/docs/Images/Reports/EnergyReport.png)
   <figcaption>Energy Report controller.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Energy Report Week](/Images/Reports/EnergyReportWeek.png)
+  ![Energy Report Week](/docs/Images/Reports/EnergyReportWeek.png)
   <figcaption>Energy Report Week controller.</figcaption>
 </figure>
 
@@ -141,7 +141,7 @@ To schedule a report, navigate to
 **History → Reports → Reports - Schedule**.
 
 <figure markdown="span">
-  ![Report schedule](/Images/Reports/Report_schedule.png)
+  ![Report schedule](/docs/Images/Reports/Report_schedule.png)
   <figcaption>The Report Schedule workview in WideQuick Runtime.</figcaption>
 </figure>
 
@@ -152,17 +152,17 @@ appear on the right. Note that the second page changes depending on the selected
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![Schedule page 1](/Images/Reports/Report_meny.png)
+  ![Schedule page 1](/docs/Images/Reports/Report_meny.png)
   <figcaption>Page 1 — schedule name, template, and frequency.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Schedule page 2](/Images/Reports/Report_meny2.png)
+  ![Schedule page 2](/docs/Images/Reports/Report_meny2.png)
   <figcaption>Page 2 — report-specific configuration.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Schedule page 3](/Images/Reports/Report_meny3.png)
+  ![Schedule page 3](/docs/Images/Reports/Report_meny3.png)
   <figcaption>Page 3 — recipients and output format.</figcaption>
 </figure>
 

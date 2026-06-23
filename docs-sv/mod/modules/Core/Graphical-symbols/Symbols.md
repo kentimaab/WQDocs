@@ -37,7 +37,7 @@ De nya symbolerna ger rikare visuell återkoppling än sina föregångare genom 
 tvålageranimationssystem byggt av två koncentriska cirklar. GIF-bilden nedan visar
 den nya symbolen som växlar mellan larm-, varnings- och aktiva tillstånd:
 
-![New symbol](/Images/Symbol_Libraries/new_symbol.gif)
+![New symbol](/docs/sv/Images/Symbol_Libraries/new_symbol.gif)
 
 De äldre symbolerna stödde grundläggande dynamik — till exempel en enkel
 färgändring vid larm. De nya symbolerna går längre och tillhandahåller två
@@ -72,9 +72,9 @@ inte passar dina behov och du vill bygga ett helt anpassat objekt. I de flesta f
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
-![Components library1](/Images/Symbol_Libraries/componets1.png)
+![Components library1](/docs/sv/Images/Symbol_Libraries/componets1.png)
 
-![Components  library2](/Images/Symbol_Libraries/componets2.png)
+![Components  library2](/docs/sv/Images/Symbol_Libraries/componets2.png)
 
 </div>
 
@@ -121,7 +121,7 @@ statusindikatorer, en indikator för manuellt läge och en namnsetikett — redo
 kopplas till taggar genom att fylla i egenskaperna **Connection**, **Device**,
 **Sys** och **ObjectName** på `DynTouch`-objektet.
 
-![DAMPERS library](/Images/Symbol_Libraries/dampers_library.png)
+![DAMPERS library](/docs/sv/Images/Symbol_Libraries/dampers_library.png)
 
 Varje spjällobjekt finns i fyra orienteringar — **000**, **090**, **180** och
 **270** grader — för att matcha layouten i processvyn.
@@ -166,11 +166,11 @@ redo att kopplas till taggar genom att fylla i egenskaperna **Connection**,
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
-![MOTORS library1](/Images/Symbol_Libraries/motor_library1.png)
+![MOTORS library1](/docs/sv/Images/Symbol_Libraries/motor_library1.png)
 
-![MOTORS library2](/Images/Symbol_Libraries/motor_library2.png)
+![MOTORS library2](/docs/sv/Images/Symbol_Libraries/motor_library2.png)
 
-![MOTORS library3](/Images/Symbol_Libraries/motor_library3.png)
+![MOTORS library3](/docs/sv/Images/Symbol_Libraries/motor_library3.png)
 
 </div>
 
@@ -232,11 +232,11 @@ redo att kopplas till taggar genom att fylla i egenskaperna **Connection**,
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
-![Sensor library1](/Images/Symbol_Libraries/sensor_library1.png)
+![Sensor library1](/docs/sv/Images/Symbol_Libraries/sensor_library1.png)
 
-![Sensor library2](/Images/Symbol_Libraries/sensor_library2.png)
+![Sensor library2](/docs/sv/Images/Symbol_Libraries/sensor_library2.png)
 
-![Sensor library3](/Images/Symbol_Libraries/sensor_library3.png)
+![Sensor library3](/docs/sv/Images/Symbol_Libraries/sensor_library3.png)
 
 </div>
 
@@ -302,7 +302,7 @@ statusindikatorer och en namnsetikett — redo att kopplas till taggar genom att
 i egenskaperna **Connection**, **Device**, **Sys** och **ObjectName** på
 `DynTouch`-objektet.
 
-![VALVES library](/Images/Symbol_Libraries/valves_library.png)
+![VALVES library](/docs/sv/Images/Symbol_Libraries/valves_library.png)
 
 Varje ventolobjekt finns i fyra orienteringar — **000**, **090**, **180** och
 **270** grader — för att matcha layouten i processvyn.
@@ -339,7 +339,7 @@ som inte passar in i de övriga fyra kategorierna. Varje objekt levereras med et
 fylla i egenskaperna **Connection**, **Device**, **Sys** och **ObjectName** på
 `DynTouch`-objektet.
 
-![OTHERS library](/Images/Symbol_Libraries/other_library.png)
+![OTHERS library](/docs/sv/Images/Symbol_Libraries/other_library.png)
 
 Följande objekt finns tillgängliga:
 

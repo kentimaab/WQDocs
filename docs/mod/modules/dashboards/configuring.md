@@ -37,7 +37,7 @@ Widgets that display a signal legend automatically handle overflow. When there a
 
 Displays alarm counts — total, acknowledged and unacknowledged.
 
-![Alarm Status](/Images/Dashboard/AlarmStatus.png){align=center}
+![Alarm Status](/docs/Images/Dashboard/AlarmStatus.png){align=center}
 
 **Parameters**
 
@@ -49,7 +49,7 @@ Displays alarm counts — total, acknowledged and unacknowledged.
 
 A compact single-row alarm indicator. Intended to sit at the top or bottom of a dashboard as a thin status band.
 
-![Alarm Row](/Images/Dashboard/AlarmRow.png){align=center}
+![Alarm Row](/docs/Images/Dashboard/AlarmRow.png){align=center}
 
 **Parameters**
 
@@ -61,7 +61,7 @@ A compact single-row alarm indicator. Intended to sit at the top or bottom of a 
 
 Displays currently active alarms in a scrollable list.
 
-![Alarm List](/Images/Dashboard/AlarmList.png){align=center}
+![Alarm List](/docs/Images/Dashboard/AlarmList.png){align=center}
 
 **Parameters**
 
@@ -73,7 +73,7 @@ Displays currently active alarms in a scrollable list.
 
 Displays historical alarms in a scrollable list.
 
-![Alarm Log](/Images/Dashboard/AlarmLog.png){align=center}
+![Alarm Log](/docs/Images/Dashboard/AlarmLog.png){align=center}
 
 **Parameters**
 
@@ -85,7 +85,7 @@ Displays historical alarms in a scrollable list.
 
 Displays how often alarms have been triggered.
 
-![Alarm Frequency](/Images/Dashboard/AlarmFrequency.png){align=center}
+![Alarm Frequency](/docs/Images/Dashboard/AlarmFrequency.png){align=center}
 
 **Parameters**
 
@@ -97,7 +97,7 @@ Displays how often alarms have been triggered.
 
 A larger alarm trend and distribution graph. Suited for dashboards where alarm analysis is a primary focus.
 
-![Alarm Graph](/Images/Dashboard/AlarmGraph.png){align=center}
+![Alarm Graph](/docs/Images/Dashboard/AlarmGraph.png){align=center}
 
 ---
 
@@ -105,7 +105,7 @@ A larger alarm trend and distribution graph. Suited for dashboards where alarm a
 
 Displays historical signal values as a trend graph. The legend shows current values with units and decimal precision.
 
-![History](/Images/Dashboard/History.png){align=center}
+![History](/docs/Images/Dashboard/History.png){align=center}
 
 The **From** and **To** fields at the top of the dashboard set the time range. How that range is applied depends on which button is used:
 
@@ -123,7 +123,7 @@ The **From** and **To** fields at the top of the dashboard set the time range. H
 
 Displays a single live value with its configured unit and decimal precision. Accepts any value in Data Store — internal variables, driver signals and System variables.
 
-![Key Value](/Images/Dashboard/KeyValue.png){align=center}
+![Key Value](/docs/Images/Dashboard/KeyValue.png){align=center}
 
 **Parameters**
 
@@ -135,7 +135,7 @@ Displays a single live value with its configured unit and decimal precision. Acc
 
 Displays current live values for one or more signals. Automatically resolves units and decimal precision from Data Store.
 
-![Signal Value Display](/Images/Dashboard/SignalValueDisplay.png){align=center}
+![Signal Value Display](/docs/Images/Dashboard/SignalValueDisplay.png){align=center}
 
 **Parameters**
 
@@ -147,7 +147,7 @@ Displays current live values for one or more signals. Automatically resolves uni
 
 Displays real-time signal distribution as a pie chart. Includes an expand button that opens a fullscreen view.
 
-![Pie Chart](/Images/Dashboard/PieChart.png){align=center}
+![Pie Chart](/docs/Images/Dashboard/PieChart.png){align=center}
 
 **Parameters**
 
@@ -159,7 +159,7 @@ Displays real-time signal distribution as a pie chart. Includes an expand button
 
 Displays signal value comparisons as a bar chart across configurable time periods. Suited for energy comparisons over time. Includes an expand button that opens a fullscreen view.
 
-![Bar Chart](/Images/Dashboard/Widget.png){align=center}
+![Bar Chart](/docs/Images/Dashboard/Widget.png){align=center}
 
 **Parameters**
 
@@ -181,7 +181,7 @@ Displays signal value comparisons as a bar chart across configurable time period
 
 Displays maintenance task status — active, planned and missed tasks. Connects directly to the maintenance module. No signal input required.
 
-![Maintenance](/Images/Dashboard/Maintenance.png){align=center}
+![Maintenance](/docs/Images/Dashboard/Maintenance.png){align=center}
 
 ## Next Steps { #next-steps }
 

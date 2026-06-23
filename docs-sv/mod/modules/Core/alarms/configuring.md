@@ -22,13 +22,13 @@ Larm organiseras i grupper i **WideQuick Designer®**. Varje grupp definierar ge
 4. Konfigurera valfritt standardfärger under **Colors** för varje larmstatus, standard **Icons** samt ett standard **Measure** för gruppen.
 5. Klicka på **OK**.
 
-![Dialogruta för att lägga till larmgrupp](/Images/Create_Alarm/AddAlarm.png){align=center}
+![Dialogruta för att lägga till larmgrupp](/docs/sv/Images/Create_Alarm/AddAlarm.png){align=center}
 
 ## Lägga till larm { #adding-alarms }
 
 När en grupp finns, öppna den (dubbelklicka eller högerklicka → **Open**) och klicka på **Add** för att skapa ett nytt larm.
 
-![Dialogruta för nytt larm](/Images/Create_Alarm/NewAlarm.png){align=center}
+![Dialogruta för nytt larm](/docs/sv/Images/Create_Alarm/NewAlarm.png){align=center}
 
 | Fält | Beskrivning |
 |---|---|
@@ -50,7 +50,7 @@ När en grupp finns, öppna den (dubbelklicka eller högerklicka → **Open**) o
 
 Dubbelklicka på fältet **Activation** för att konfigurera utlösaren. Ange variabeln som larmet övervakar och lägg valfritt till en fördröjning — larmet aktiveras bara om villkoret har varit sant under hela fördröjningsperioden.
 
-![Aktiveringsinställningar](/Images/Create_Alarm/Activation.png){align=center}
+![Aktiveringsinställningar](/docs/sv/Images/Create_Alarm/Activation.png){align=center}
 
 ### Kvitteringsregler { #acknowledgement-rules }
 
@@ -62,7 +62,7 @@ Dubbelklicka på fältet **Activation** för att konfigurera utlösaren. Ange va
 
 Fältet **Measure** på ett larm aktiverar en åtgärdskolumn i larmlistan. Genom att konfigurera en GoTo-åtgärd kan operatörer navigera direkt till det objekt som utlöste larmet genom att trycka på åtgärden i listan. Se [GoTo i larmgrupper](../Navigation/extending.md#goto-in-alarm-groups) för installationsanvisningar.
 
-![Åtgärdsinställningar](/Images/Create_Alarm/Measure.png){align=center}
+![Åtgärdsinställningar](/docs/sv/Images/Create_Alarm/Measure.png){align=center}
 
 ## Larmnotifieringsscheman { #alarm-notification-schedules }
 
@@ -71,7 +71,7 @@ Vyn **Alarm - Schedule** styr när och till vem larmnotifieringar skickas via e-
 !!! note "Krav"
     Notifieringsscheman kräver att `scAlarmSender` körs samt en konfigurerad e-post- eller SMS-kanal. Se [Utöka](extending.md).
 
-![Vyn Alarm - Schedule](/Images/Alarms/alarm-schedule-view.png){align=center}
+![Vyn Alarm - Schedule](/docs/sv/Images/Alarms/alarm-schedule-view.png){align=center}
 
 ### Skapa ett schema { #creating-a-schedule }
 
@@ -79,7 +79,7 @@ Klicka på **New schedule** för att öppna skapandeassistenten. Den går igenom
 
 **Steg 1 — När**
 
-![Nytt schema steg 1](/Images/Alarms/alarm-schedule-step-1.png){align=center}
+![Nytt schema steg 1](/docs/sv/Images/Alarms/alarm-schedule-step-1.png){align=center}
 
 * **Name** — namn för schemat.
 * **System** — vilket system det här schemat gäller för: det lokala systemet eller ett anslutet fjärrsystem.
@@ -91,14 +91,14 @@ Klicka på **New schedule** för att öppna skapandeassistenten. Den går igenom
     Att sätta **To** till `23:59` täcker hela dagen inklusive den sista minuten.
 **Steg 2 — Vad**
 
-![Nytt schema steg 2](/Images/Alarms/alarm-schedule-step-2.png){align=center}
+![Nytt schema steg 2](/docs/sv/Images/Alarms/alarm-schedule-step-2.png){align=center}
 
 * **Severity level** — vilka larmklasser som utlöser det här schemat. Lämna tomt för att inkludera alla klasser.
 * **Alarm groups** — vilka larmgrupper som övervakas. Använd **Select all** för att inkludera alla grupper.
 
 **Steg 3 — Vem**
 
-![Nytt schema steg 3](/Images/Alarms/alarm-schedule-step-3.png){align=center}
+![Nytt schema steg 3](/docs/sv/Images/Alarms/alarm-schedule-step-3.png){align=center}
 
 * **Subject line** — ämnesrad som används för utgående e-postnotifieringar.
 * **Recipient** — lägg till enskilda e-postadresser eller telefonnummer direkt.

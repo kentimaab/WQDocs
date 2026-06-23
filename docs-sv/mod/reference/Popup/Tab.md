@@ -15,7 +15,7 @@ Flik-popupen är den standardpopup som öppnas när ett `DynTouch`-objekt klicka
 Den fungerar som ett navigeringsnav för alla andra tillgängliga popupar för det objektet och
 ger en omedelbar överblick över objektets aktuella status.
 
-![Tab popup](/Images/Popups/Tab.png)
+![Tab popup](/docs/sv/Images/Popups/Tab.png)
 
 ## Meny
 

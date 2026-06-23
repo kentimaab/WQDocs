@@ -1,4 +1,4 @@
-﻿---
+---
 title: Logbook - Configuring
 description: Configure topics, contexts and access patterns for the Logbook module.
 product: mod
@@ -29,7 +29,7 @@ MB/AS02
 
 When the logbook is opened from an object popup, the topic is set automatically from the object's tag path. When opened from a view button, the topic can be set from the view name or passed explicitly. See [Extending](extending.md) for how to do this in a script.
 
-![Topic tree showing a nested hierarchy](/Images/Logbook/topic-tree.png){align=center}
+![Topic tree showing a nested hierarchy](/docs/Images/Logbook/topic-tree.png){align=center}
 
 ## Contexts { #contexts }
 
@@ -39,7 +39,7 @@ Contexts are managed from the **Change logbook context** popup, opened by clicki
 
 When filtering the logbook, selecting a context shows only entries assigned to that context, regardless of topic.
 
-![Context management view](/Images/Logbook/context-management.png){align=center}
+![Context management view](/docs/Images/Logbook/context-management.png){align=center}
 
 ## Access Patterns { #access-patterns }
 
@@ -51,7 +51,7 @@ The full logbook under **Documents & Logbook → Logbook** shows all entries fro
 
 Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md) tab in its popup. Opening this tab shows only entries whose topic matches the object's tag path. New entries created from here are automatically assigned the correct topic.
 
-![Logbook tab in the object popup](/Images/Logbook/object-popup-logbook.png){align=center}
+![Logbook tab in the object popup](/docs/Images/Logbook/object-popup-logbook.png){align=center}
 
 ### View-Scoped { #view-scoped }
 

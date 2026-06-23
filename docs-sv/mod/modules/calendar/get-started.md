@@ -39,19 +39,19 @@ Använd pilknapparna i det övre fältet för att flytta framåt eller bakåt en
 
 Månadsvy visar ett fullständigt kalendernät för den aktuella månaden. Händelser visas som färgade indikatorer på varje dag. Om fler händelser finns på en dag än vad som kan visas, visar ett överflödesmärke hur många som är dolda.
 
-![Månadsvy med händelser](/Images/Calendar/calendar-month-events.png){align=center}
+![Månadsvy med händelser](/docs/sv/Images/Calendar/calendar-month-events.png){align=center}
 
 ### Vecka { #week }
 
 Veckovy visar den aktuella 7-dagarsperioden som ett tidsnät. Händelser renderas som block med sina start- och sluttider synliga.
 
-![Veckovy](/Images/Calendar/calendar-week.png){align=center}
+![Veckovy](/docs/sv/Images/Calendar/calendar-week.png){align=center}
 
 ### Dag { #day }
 
 Dagsvy visar en enskild dag som ett tidsnät. Den fungerar på samma sätt som veckovyn men fokuserad på en dag åt gången.
 
-![Dagsvy](/Images/Calendar/calendar-day.png){align=center}
+![Dagsvy](/docs/sv/Images/Calendar/calendar-day.png){align=center}
 
 
 ## Sidopanel { #sidebar }
@@ -62,7 +62,7 @@ Minikalendern markerar den aktuellt valda dagen.
 
 Listan med kommande händelser visar nästa händelser och underhållsdeadlines sorterade efter datum, och slår ihop båda händelsekällorna till en enda lista.
 
-![Sidopanel med kommande händelser](/Images/Calendar/calendar-sidebar.png){align=center}
+![Sidopanel med kommande händelser](/docs/sv/Images/Calendar/calendar-sidebar.png){align=center}
 
 ## Skapa en händelse { #creating-an-event }
 

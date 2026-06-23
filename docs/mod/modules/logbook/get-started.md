@@ -38,7 +38,7 @@ The entry list shows the following columns: **Title**, **Message**, **Context**,
 
 Select an entry and click **Edit note** to open it for editing, or **Delete note** to remove it permanently.
 
-![Logbook view with topic tree and entry list](/Images/Logbook/logbook-overview.png){align=center}
+![Logbook view with topic tree and entry list](/docs/Images/Logbook/logbook-overview.png){align=center}
 
 ## Creating an Entry { #creating-an-entry }
 
@@ -51,7 +51,7 @@ Click **Add note** to open the **Create new logbook entry** popup. Fill in the f
 
 Click **Save** to save and continue, or **Save & Close** to save and close the popup. The entry appears immediately at the top of the entry list.
 
-![Create entry popup with fields labeled](/Images/Logbook/create-entry-popup.png){align=center}
+![Create entry popup with fields labeled](/docs/Images/Logbook/create-entry-popup.png){align=center}
 
 ## Filtering { #filtering }
 
@@ -64,7 +64,7 @@ Click the filter icon to open the **Filter logbook** panel. Available filters:
 
 Click **Apply** to apply the filters, **Clear filter** to reset, or **Cancel** to close without changes.
 
-![Filter panel](/Images/Logbook/logbook-filter.png){align=center}
+![Filter panel](/docs/Images/Logbook/logbook-filter.png){align=center}
 
 ## Next Steps { #next-steps }
 

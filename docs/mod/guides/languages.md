@@ -21,7 +21,7 @@ Adding a new language requires translating a large number of strings, but the pr
 
 Open the Translation Dialog by right-clicking **ProjectTranslations** in the project tree and selecting **Properties...**
 
-![Translation Dialog showing the list of .ts files and the translations tree](/Images/Languages/translation-dialog.png){align=center}
+![Translation Dialog showing the list of .ts files and the translations tree](/docs/Images/Languages/translation-dialog.png){align=center}
 
 The left panel lists all `.ts` files stored in `Regions/ProjectTranslations/`, one per language. The right panel shows all translatable strings in the project, organized by view and component library.
 
@@ -73,7 +73,7 @@ Once the string is in `Translations.klib`, run **Tools → Update Translations**
 
 To add a new language, right-click **Languages** in the project tree. To edit an existing language, right-click the language instead and select **Properties**. Both open the same dialog.
 
-![Edit Language dialog](/Images/Languages/edit-language.png){align=center}
+![Edit Language dialog](/docs/Images/Languages/edit-language.png){align=center}
 
 | Field | Description |
 |---|---|
@@ -90,7 +90,7 @@ To add a new language, right-click **Languages** in the project tree. To edit an
 
 Users switch language by pressing the **Set lang** button in **WideQuick Runtime®**, found under **Settings → Settings**. This opens a popup listing all available languages.
 
-![The Set lang button](/Images/Languages/set-lang.png){align=center}
+![The Set lang button](/docs/Images/Languages/set-lang.png){align=center}
 
 !!! note
     After switching language the user will be required to log in again.
@@ -99,5 +99,5 @@ Users switch language by pressing the **Set lang** button in **WideQuick Runtime
 
 The starting language is configured in **WideQuick Designer®**. Right-click the project name in the project tree and select **Properties**. In the **Project Properties** dialog, set the **Start language** dropdown to the desired language.
 
-![Project Properties dialog with the Start language field](/Images/Languages/project-properties.png){align=center}
+![Project Properties dialog with the Start language field](/docs/Images/Languages/project-properties.png){align=center}
 <!-- --8<-- [end:body] -->

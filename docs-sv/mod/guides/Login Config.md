@@ -23,7 +23,7 @@ Som standard krävs inloggning innan användare får tillgång till systemet.
 Detta kan inaktiveras genom att stänga av **Kräv inloggning**.
 Gör så här: navigera till **Inställningar** i huvudmenyn och öppna vyn **Inställningar**.
 
-![Require login setting](/Images/Login/require-login.png)
+![Require login setting](/docs/sv/Images/Login/require-login.png)
 
 När inloggning är inaktiverat hoppas inloggningsskärmen över helt och systemet navigerar
 direkt till den konfigurerade startvyn.
@@ -44,7 +44,7 @@ till en kombinationsruta genom att stänga av **Kräv användarnamn**.
 
 Navigera till **Inställningar** i huvudmenyn och öppna vyn **Inställningar**.
 
-![Require username setting](/Images/Login/require-username.png)
+![Require username setting](/docs/sv/Images/Login/require-username.png)
 
 När detta är inaktiverat visar inloggningsskärmen en kombinationsruta med alla tillgängliga användare i
 systemet. Användaren väljer sitt namn i listan och anger sedan sitt lösenord som vanligt.
@@ -75,7 +75,7 @@ den läggs till i WideQuick Designer. Vanliga format som stöds är `PNG`, `SVG`
     skriptet roterar genom de åtta standardbilderna — att ta bort det säkerställer att din anpassade
     bild visas istället.
 
-![Background image configuration](/Images/Login/background-image.gif)
+![Background image configuration](/docs/sv/Images/Login/background-image.gif)
 
 Den rekommenderade bildupplösningen är `1085x1080` pixlar. Objektet `Image1` stöder
 även följande visningsalternativ, som kan ställas in i dess egenskaper:
@@ -98,7 +98,7 @@ Högerklicka var som helst i vyn och välj **Object** och sedan **MultiviewerPag
 snabbmenyn. På fliken **Properties**, lokalisera egenskapen **Multiviewer** och
 välj önskad **Arbetsvy** från rullgardinsmenyn. Den fullständiga sökvägen behöver inte anges manuellt.
 
-![Start arbetsvy configuration](/Images/Login/start-workview.gif)
+![Start arbetsvy configuration](/docs/sv/Images/Login/start-workview.gif)
 
 Standard-**Start-Arbetsvy** i mallprojektet är **Dashboard Energi**. **Start-Arbetsvy**
 bör vara en **Arbetsvy** som finns i antingen mappen **Main_Menu** eller

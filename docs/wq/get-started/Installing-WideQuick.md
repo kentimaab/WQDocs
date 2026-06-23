@@ -59,14 +59,14 @@ The installer will guide you through the following steps.
 
 ### Welcome
 
-![Welcome](/Images/Install/Welcome.png)
+![Welcome](/docs/Images/Install/Welcome.png)
 
 The installer opens with a welcome screen showing all the steps that will be
 completed during the installation. Click **Next** to begin.
 
 ### Installation Directory
 
-![Installation Directory](/Images/Install/PathDir.png)
+![Installation Directory](/docs/Images/Install/PathDir.png)
 
 Select the folder where **WideQuick®** will be installed. The default location is
 `C:/Program Files/Kentima AB/WideQuick 14`. Click **...** to browse for a different
@@ -77,7 +77,7 @@ folder. Click **Next** to continue.
 
 ### Select Components
 
-![Select Components](/Images/Install/Select%20Components.png)
+![Select Components](/docs/Images/Install/Select%20Components.png)
 
 Select the components to install. The bottom of the dialog shows the disk space
 required for the selected components. Hovering over a component shows a description
@@ -123,7 +123,7 @@ accessed remotely:
 
 ### License Agreement
 
-![License Agreement](/Images/Install/LicenseAgreement.png)
+![License Agreement](/docs/Images/Install/LicenseAgreement.png)
 
 Read the license agreement carefully. Check **I accept the license** to accept the
 terms and conditions. Click **Next** to continue.
@@ -133,7 +133,7 @@ terms and conditions. Click **Next** to continue.
 
 ### Start Menu Folder
 
-![Start Menu Folder](/Images/Install/StartMenuFolder.png)
+![Start Menu Folder](/docs/Images/Install/StartMenuFolder.png)
 
 Select the Start Menu folder where **WideQuick®** shortcuts will be created. The
 default is **WideQuick 14**. An existing folder can be selected from the list, or
@@ -144,7 +144,7 @@ a new name entered in the field at the top. Click **Next** to continue.
 
 ### Product Code
 
-![Product Code](/Images/Install/ProductCode.png)
+![Product Code](/docs/Images/Install/ProductCode.png)
 
 Enter the product key for **WideQuick® Runtime**. The product key can be found in
 the purchase confirmation received from Kentima.
@@ -158,14 +158,14 @@ Handler** tool after installation is complete. Click **Next** to continue.
 
 ### Ready to Install
 
-![Ready to Install](/Images/Install/Ready%20to%20install.png)
+![Ready to Install](/docs/Images/Install/Ready%20to%20install.png)
 
 All required information has been collected. The dialog shows the total disk space
 that will be used by the installation. Click **Install** to begin the installation.
 
 ### Installing
 
-![Installing](/Images/Install/Installing.png)
+![Installing](/docs/Images/Install/Installing.png)
 
 The installer will now copy and unpack all selected components. A progress bar shows
 the current status. Click **Show Details** to see a detailed log of the installation
@@ -173,7 +173,7 @@ process.
 
 ### Finished
 
-![Finished](/Images/Install/Finish.png)
+![Finished](/docs/Images/Install/Finish.png)
 
 **WideQuick 14** has been successfully installed. The dialog confirms the
 installation location. Click **Finish** to close the installer.

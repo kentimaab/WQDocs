@@ -47,7 +47,7 @@ För att förstå hur en widget hanterar signaler, egenskaper eller layout dubbe
 
 Visningsbehörigheter begränsar vilka användare som har åtkomst till en given dashboard. Ange dem vid körning genom att navigera till **Huvudmeny → Inställningar → Arbetsvy Privileges**. Välj Arbetsvyn från trädet till vänster och ange sedan den nödvändiga behörighetsnivån i listrutan **Privilege** till höger.
 
-![arbetsvy privileges](/Images/Dashboard/WVPriv.png){align=center}
+![arbetsvy privileges](/docs/sv/Images/Dashboard/WVPriv.png){align=center}
 
 ### Ange standardvy per roll { #setting-default-view-per-role }
 

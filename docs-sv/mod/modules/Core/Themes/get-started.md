@@ -22,7 +22,7 @@ tags:
 
 WideQuick MOD levereras med både ett ljust och ett mörkt tema. De två varianterna delar samma färgstruktur men inverterar ytans hierarki. Bakgrunder som är ljusa i den ena varianten blir mörka i den andra, och textfärger justeras därefter.
 
-![Jämförelse av ljust och mörkt tema](/Images/Themes/theme-light-dark.png){align=center}
+![Jämförelse av ljust och mörkt tema](/docs/sv/Images/Themes/theme-light-dark.png){align=center}
 
 ## Byta tema { #switching-themes }
 

@@ -29,13 +29,13 @@ En säkerhetskopia fångar värdena för de valda variablerna vid det tillfälle
 
 Navigera till **Inställningar → Säkerhetskopiering → Skapa**.
 
-![Variable backup view](/Images/Backup_And_Restore/backup-create.png){align=center}
+![Variable backup view](/docs/sv/Images/Backup_And_Restore/backup-create.png){align=center}
 
 Vyn har två paneler. Den vänstra panelen listar alla tillgängliga Datalager-variabler med deras aktuella värden. Den högra panelen visar de variabler som kommer att ingå i säkerhetskopian.
 
 Skriv i filterfältet längst upp i den vänstra panelen för att begränsa variabelträdet. Klicka på **X** för att rensa filtret.
 
-![Filtering the variable tree](/Images/Backup_And_Restore/backup-filter.png){align=center}
+![Filtering the variable tree](/docs/sv/Images/Backup_And_Restore/backup-filter.png){align=center}
 
 1. Bläddra eller filtrera den vänstra panelen för att hitta de variabler som ska inkluderas.
 2. Dubbelklicka på en variabel, eller markera den och klicka på **>**, för att flytta den till den högra panelen.

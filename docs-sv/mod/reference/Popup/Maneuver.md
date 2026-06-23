@@ -17,7 +17,7 @@ att växla mellan driftlägen eller ange manuella värden. Den visas endast i
 Tab-menyn när objektet har signaler som matchar en eller flera av de konfigurerade
 suffixaliaserna för Manöver-popupen.
 
-![Maneuver popup](/Images/Popups/Maneuver.png)
+![Maneuver popup](/docs/sv/Images/Popups/Maneuver.png)
 
 ## Styrning
 

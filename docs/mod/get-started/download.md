@@ -43,7 +43,7 @@ system views. There are no implemented systems or external connections such as
 **OPC UA** or **Modbus**. It is the recommended starting point for integrators who
 want to build a new project from scratch.
 
-![Template project](/Images/Mod_Intro/Template.png)
+![Template project](/docs/Images/Mod_Intro/Template.png)
 
 ### Demo project
 
@@ -52,7 +52,7 @@ WideQuick Mod 2024.1.0 in use. It is useful both for understanding how the syste
 works and for drawing inspiration for implementation.
 
 
-![Demo project](/Images/Mod_Intro/Demo.png)
+![Demo project](/docs/Images/Mod_Intro/Demo.png)
 
 ### Start the application
 

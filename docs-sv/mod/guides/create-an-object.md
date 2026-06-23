@@ -88,7 +88,7 @@ Efter grupperingen måste objektet kopplas till taggar. Öppna egenskaperna för
 Mer information om hur taggar är strukturerade och hur suffixsystemet fungerar finns i
 [Taggstruktur](../reference/tag-structure.md).
 
-![Creating object](/Images/Create_Object/Create-object.gif)
+![Creating object](/docs/sv/Images/Create_Object/Create-object.gif)
 
 !!! tip
     För att lära dig hur du bygger ett helt anpassat objekt från grunden och applicerar

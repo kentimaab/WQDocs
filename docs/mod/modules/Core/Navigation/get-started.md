@@ -55,9 +55,9 @@ open the view directly.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
-![Single Depth](/Images/Navigation/Navigation_depth.png)
+![Single Depth](/docs/Images/Navigation/Navigation_depth.png)
 
-![Single Depth Menu](/Images/Navigation/Navigation_single_menu.png)
+![Single Depth Menu](/docs/Images/Navigation/Navigation_single_menu.png)
 
 </div>
 
@@ -67,9 +67,9 @@ can be nested inside to build even deeper navigation structures.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
-![Depth](/Images/Navigation/Navigation_single.png)
+![Depth](/docs/Images/Navigation/Navigation_single.png)
 
-![Depth Navigation](/Images/Navigation/Navigation_depth_menu.png)
+![Depth Navigation](/docs/Images/Navigation/Navigation_depth_menu.png)
 
 </div>
 
@@ -81,7 +81,7 @@ allows quick navigation to nested views. It can be toggled in **WideQuick Runtim
 The menu is built automatically from the directory structure in **WideQuick Designer®**, 
 meaning design decisions made there are reflected directly in runtime.
 
-![FullScreen_Toggle](/Images/Navigation/ToggleFullNav.png)
+![FullScreen_Toggle](/docs/Images/Navigation/ToggleFullNav.png)
 
 The Fullscreen Menu is designed to display as many **Workviews** as possible while 
 remaining organized. The layout follows these rules:
@@ -107,7 +107,7 @@ Together these two mechanisms allow the Fullscreen Menu to scale to systems of a
 size — no matter how many views or directories a project contains, the menu will always 
 remain navigable.
 
-![FullScreen_Menu](/Images/Navigation/Nav_2Stor.png)
+![FullScreen_Menu](/docs/Images/Navigation/Nav_2Stor.png)
 
 ## Next Steps { #next-steps }
 

@@ -23,13 +23,13 @@ Alarms are organised into groups in **WideQuick Designer®**. Each group defines
 4. Optionally configure default **Colors** for each alarm state, default **Icons**, and a default **Measure** for the group.
 5. Click **OK**.
 
-![Add alarm group dialog](/Images/Create_Alarm/AddAlarm.png){align=center}
+![Add alarm group dialog](/docs/Images/Create_Alarm/AddAlarm.png){align=center}
 
 ## Adding alarms { #adding-alarms }
 
 Once a group exists, open it (double-click or right-click → **Open**) and click **Add** to create a new alarm.
 
-![New alarm dialog](/Images/Create_Alarm/NewAlarm.png){align=center}
+![New alarm dialog](/docs/Images/Create_Alarm/NewAlarm.png){align=center}
 
 | Field | Description |
 |---|---|
@@ -51,7 +51,7 @@ Once a group exists, open it (double-click or right-click → **Open**) and clic
 
 Double-click the **Activation** field to configure the trigger. Set the variable the alarm monitors and optionally add a delay — the alarm will only fire if the condition has been true for the full delay period.
 
-![Activation settings](/Images/Create_Alarm/Activation.png){align=center}
+![Activation settings](/docs/Images/Create_Alarm/Activation.png){align=center}
 
 ### Acknowledgement rules { #acknowledgement-rules }
 
@@ -63,7 +63,7 @@ Double-click the **Activation** field to configure the trigger. Set the variable
 
 The **Measure** field on an alarm enables an action column in the alarm list. Configuring a GoTo measure lets operators navigate directly to the object that triggered the alarm by pressing the measure in the list. See [GoTo in Alarm Groups](../Navigation/extending.md#goto-in-alarm-groups) for setup instructions.
 
-![Measure settings](/Images/Create_Alarm/Measure.png){align=center}
+![Measure settings](/docs/Images/Create_Alarm/Measure.png){align=center}
 
 ## Alarm notification schedules { #alarm-notification-schedules }
 
@@ -72,7 +72,7 @@ The **Alarm - Schedule** view controls when and to whom alarm notifications are 
 !!! note "Requirements"
     Notification schedules require `scAlarmSender` to be running and a configured email or SMS channel. See [Extending](extending.md).
 
-![Alarm - Schedule view](/Images/Alarms/alarm-schedule-view.png){align=center}
+![Alarm - Schedule view](/docs/Images/Alarms/alarm-schedule-view.png){align=center}
 
 ### Creating a schedule { #creating-a-schedule }
 
@@ -80,7 +80,7 @@ Click **New schedule** to open the creation wizard. It steps through three pages
 
 **Step 1 — When**
 
-![New schedule step 1](/Images/Alarms/alarm-schedule-step-1.png){align=center}
+![New schedule step 1](/docs/Images/Alarms/alarm-schedule-step-1.png){align=center}
 
 * **Name** — name for the schedule.
 * **System** — which system this schedule applies to: the local system or a connected
@@ -99,14 +99,14 @@ slot. To receive notifications for the entire day, set **From** to `00:00` and
     Setting **To** to `23:59` covers the full day including the final minute.
 **Step 2 — What**
 
-![New schedule step 2](/Images/Alarms/alarm-schedule-step-2.png){align=center}
+![New schedule step 2](/docs/Images/Alarms/alarm-schedule-step-2.png){align=center}
 
 * **Severity level** — which alarm classes trigger this schedule. Leave empty to include all classes.
 * **Alarm groups** — which alarm groups are monitored. Use **Select all** to include all groups.
 
 **Step 3 — Who**
 
-![New schedule step 3](/Images/Alarms/alarm-schedule-step-3.png){align=center}
+![New schedule step 3](/docs/Images/Alarms/alarm-schedule-step-3.png){align=center}
 
 * **Subject line** — subject used for outgoing email notifications.
 * **Recipient** — add individual email addresses or phone numbers directly.

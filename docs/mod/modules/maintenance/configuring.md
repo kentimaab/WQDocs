@@ -1,4 +1,4 @@
-﻿---
+---
 title: Maintenance - Configuring
 description: Configure the Maintenance module — templates, recurring schedules and status reference.
 product: mod
@@ -29,13 +29,13 @@ Click **Filter** to open the filter panel:
 * **System** — filter to show only tasks belonging to a specific system.
 * **Time settings - deadline** — show all tasks regardless of deadline (**All**), or limit to tasks with a deadline within a selected date range (**Time span**).
 
-![Maintenance list with filter panel open](/Images/Maintenance/maintenance-list-filter.png){align=center}
+![Maintenance list with filter panel open](/docs/Images/Maintenance/maintenance-list-filter.png){align=center}
 
 ## Templates { #templates }
 
 Templates allow frequently used maintenance types to be saved and reused. A template stores the maintenance type, priority, default deadline interval and description so that the same information does not need to be entered each time.
 
-![Maint. templates view](/Images/Maintenance/maintenance-templates-view.png){align=center}
+![Maint. templates view](/docs/Images/Maintenance/maintenance-templates-view.png){align=center}
 
 The left panel lists all templates. Selecting one shows its fields on the right:
 
@@ -65,7 +65,7 @@ Each configuration defines:
 * The repeat rule — how the next deadline is calculated
 * Whether missed tasks should automatically generate a follow-up
 
-![Recurring maintenance configuration](/Images/Maintenance/maintenance-recurring.png){align=center}
+![Recurring maintenance configuration](/docs/Images/Maintenance/maintenance-recurring.png){align=center}
 
 The view has three panels. The left panel lists all configurations. The middle panel shows the settings for the selected configuration. The right panel is an object tree where the objects this configuration applies to are selected. For equipment that has no tag in the system, use the **Custom object** free-text field at the bottom of the object panel to enter a name manually.
 

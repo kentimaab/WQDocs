@@ -54,7 +54,7 @@ navigate to the bottom of the sheet tabs. Click **Create New Sheet**, see image 
 To hide the sheet, right-click the sheet tab and select **Hide Sheet**.
 
 <figure markdown="span">
-  ![newSheet](/Images/Reports/NewSheet.png)
+  ![newSheet](/docs/Images/Reports/NewSheet.png)
   <figcaption>Adding a new sheet to the template in WideQuick Designer.</figcaption>
 </figure>
 
@@ -73,7 +73,7 @@ To add a macro command, right-click a cell in the data sheet and select
 **Edit Expression**. This will open the following popup:
 
 <figure markdown="span">
-  ![MacroConfigure](/Images/Reports/MacroInsertion.png)
+  ![MacroConfigure](/docs/Images/Reports/MacroInsertion.png)
   <figcaption>The Edit Expression popup for inserting a macro command.</figcaption>
 </figure>
 
@@ -108,12 +108,12 @@ populate three columns starting from the macro cell:
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![Signal macro](/Images/Reports/MacroExample.png)
+  ![Signal macro](/docs/Images/Reports/MacroExample.png)
   <figcaption>Signal macro placed on the data sheet.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Signal macro result](/Images/Reports/MacroExample2.png)
+  ![Signal macro result](/docs/Images/Reports/MacroExample2.png)
   <figcaption>Resulting columns populated by the macro.</figcaption>
 </figure>
 
@@ -124,12 +124,12 @@ And for alarm data with `VALUES(name, state, severity, timestamp, text, group)`:
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![Alarm macro](/Images/Reports/MacroAExample.png)
+  ![Alarm macro](/docs/Images/Reports/MacroAExample.png)
   <figcaption>Alarm macro placed on the data sheet.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Alarm macro result](/Images/Reports/MacroAExample2.png)
+  ![Alarm macro result](/docs/Images/Reports/MacroAExample2.png)
   <figcaption>Resulting columns populated for alarm data.</figcaption>
 </figure>
 
@@ -305,7 +305,7 @@ generations. This can easily be changed if more signals are required. First, in
 **Properties...**. This will bring up the following popup:
 
 <figure markdown="span">
-  ![Variable Array](/Images/Reports/Variabel_ref.png)
+  ![Variable Array](/docs/Images/Reports/Variabel_ref.png)
   <figcaption>The variable_ref array properties popup.</figcaption>
 </figure>
 

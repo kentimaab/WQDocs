@@ -18,7 +18,7 @@ matchar ett eller flera av de konfigurerade suffixaliasen för Process-popupen.
 För en guide om hur du skapar och konfigurerar en anpassad Process-popup, se
 [Skapa popup](../../guides/create-a-popup.md).
 
-![Process popup](/Images/Popups/Process.png)
+![Process popup](/docs/sv/Images/Popups/Process.png)
 
 ## Värden
 

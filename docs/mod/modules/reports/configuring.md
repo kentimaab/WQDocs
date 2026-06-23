@@ -50,7 +50,7 @@ the cell containing the macro command and select **Edit Expression** to open the
 expression editor.
 
 <figure markdown="span">
-  ![MacroLogger](/Images/Reports/MacroLogger.png)
+  ![MacroLogger](/docs/Images/Reports/MacroLogger.png)
   <figcaption>Editing the alarms macro to point at a different logger.</figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ Select the `LarmLogger_list` object, go to **Properties**, and update the **Logg
 property to the desired logger.
 
 <figure markdown="span">
-  ![ObjectLogger](/Images/Reports/ObjectLogger.png)
+  ![ObjectLogger](/docs/Images/Reports/ObjectLogger.png)
   <figcaption>Setting the Logger property on the LarmLogger_list object.</figcaption>
 </figure>
 
@@ -122,7 +122,7 @@ First navigate to `\Your_Project\Reports\Templates` and open `EnergyReport.xlsx`
 follow the GIF below:
 
 <figure markdown="span">
-  ![PrintArea](/Images/Reports/PrintArea.gif)
+  ![PrintArea](/docs/Images/Reports/PrintArea.gif)
   <figcaption>Setting the print area for a single-year Energy Report.</figcaption>
 </figure>
 

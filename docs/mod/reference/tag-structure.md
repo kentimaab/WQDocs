@@ -1,4 +1,4 @@
-﻿---
+---
 title: Tag Structure
 description: Tag structure and configuration for WideQuick Modular Framework.
 product: mod
@@ -40,7 +40,7 @@ consist of the following five parts:
 
 See the image below:
 
-![tag structure](/Images/Tag_Structure/tagStruct.svg){style="box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"}
+![tag structure](/docs/Images/Tag_Structure/tagStruct.svg){style="box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"}
 
 ### Connection { #connection }
 **Connection** represents the type of connection, such as **Modbus**, **OPC**, or the
@@ -78,7 +78,7 @@ measurement value, a setpoint, or a status indicator.
 Configuring **OPC** tags to follow the standard is straightforward. The tags simply
 need to be named according to the structure.
 
-![OPC tag structure](/Images/Tag_Structure/tagStructure_OPC.png)
+![OPC tag structure](/docs/Images/Tag_Structure/tagStructure_OPC.png)
 
 
 ## Configuring tags in Modbus Serial & Modbus TCP/IP { #configuring-tags-in-modbus-serial-modbus-tcpip }
@@ -87,7 +87,7 @@ need to be named according to the structure.
 name as shown in the image below. This means that the tag in the **Tag Editor** only
 needs to contain `Sys_Component_Suffix`.
 
-![Modbus tag structure](/Images/Tag_Structure/tagStructure_MB.png)
+![Modbus tag structure](/docs/Images/Tag_Structure/tagStructure_MB.png)
 
 
 
@@ -101,7 +101,7 @@ This is done by entering the tag information in the properties of the `DynTouch`
 object, as shown in the image below. This allows WideQuick to automatically find all
 tags connected to the object.
 
-![Configuring DynTouch](/Images/Tag_Structure/DynTouch.png)
+![Configuring DynTouch](/docs/Images/Tag_Structure/DynTouch.png)
 
 To speed up the process of connecting several objects to their tags, it is not
 necessary to enter the same **Connection**, **Device**, and **System** information on
@@ -109,12 +109,12 @@ every object in the view. Instead, these properties can be set on the **Workview
 properties. If a `DynTouch` object is left empty it will try to retrieve the
 information from the view instead.
 
-![Tag structure view](/Images/Tag_Structure/tagStructure%20view.png)
+![Tag structure view](/docs/Images/Tag_Structure/tagStructure%20view.png)
 
 !!! tip "Object name"
     It is possible to skip entering the object name on the `DynTouch` object by
     naming the object itself to the object name.
-    ![object name](/Images/Tag_Structure/Object%20name.png)
+    ![object name](/docs/Images/Tag_Structure/Object%20name.png)
 
 ## Suffix Alias { #suffix-alias }
 
@@ -141,7 +141,7 @@ is applied to all objects in the system.
 Suffix aliases are configured in **WideQuick Runtime®** by navigating to
 **Settings → Suffix → Suffix Alias - Workviews**.
 
-![Suffix settings](/Images/Tag_Structure/SuffixAlias_Procces.png)
+![Suffix settings](/docs/Images/Tag_Structure/SuffixAlias_Procces.png)
 
 Each suffix alias has the following settings:
 
@@ -177,7 +177,7 @@ a privilege in the user system.
 The example below sets the description to "Börvärde" with 2 decimal places and
 requires the privilege "Config" to edit:
 
-![tag desc](/Images/Tag_Structure/tagDesc.png)
+![tag desc](/docs/Images/Tag_Structure/tagDesc.png)
 
 !!! warning
     The tag must contain a description for the override to work. It is not possible

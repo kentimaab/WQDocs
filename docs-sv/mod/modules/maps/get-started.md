@@ -32,14 +32,14 @@ Pins och Lines, se [Kartor och indikatorer — Konfigurera](configuring.md). Fö
 ett **Alarm**-objekt till en **Kartvy** och skapa anpassade indikatorer, se
 [Kartor och indikatorer — Utöka](extending.md).
 
-![Map Indicators](/Images/Map_Indicators/Map_Indicators.png)
+![Map Indicators](/docs/sv/Images/Map_Indicators/Map_Indicators.png)
 
 ## Konfigurera ett Kartvy-objekt { #setting-up-a-map-view-object }
 
 För att använda Map Indicators krävs ett **Kartvy**-objekt. Det finns i
 Objects Toolbar i **WideQuick Designer®**:
 
-![Map View object](../../../Images/Map_Indicators/map_view_object.png)
+![Map View object](../../../docs/sv/Images/Map_Indicators/map_view_object.png)
 
 Placera det i den vy där du vill visa din karta.
 
@@ -87,7 +87,7 @@ Designer®**. För att lägga till en indikator, dra den från objektbiblioteket
 **Kartvy**-objektet. De flesta indikatorer kräver att longitud och latitud anges,
 vilket bestämmer var de visas på kartan.
 
-![Adding a Map Indicator](/Images/Map_Indicators/AddMapIndicator.gif)
+![Adding a Map Indicator](/docs/sv/Images/Map_Indicators/AddMapIndicator.gif)
 
 Följande avsnitt beskriver varje grundläggande indikator och eventuell konfigurering som krävs.
 
@@ -107,7 +107,7 @@ och tilldela den longitud och latitud för platsen.
 För att göra pinnen klickbar och länka den till en relaterad **Arbetsvy**, redigera
 egenskapen **linkedView**:
 
-![Pin Settings](/Images/Map_Indicators/PinSettings.png)
+![Pin Settings](/docs/sv/Images/Map_Indicators/PinSettings.png)
 
 Värdet ska vara en sökväg till en **Arbetsvy** i mappen **Main_Menu** eller **System**.
 I exemplet ovan pekar den på processvyn **Arbetsvy** **Inlopp**,
@@ -123,7 +123,7 @@ sätts i synlighetsdynamikskriptet som beskrivs
 Widgeten behöver också pekas mot sin datakälla, som är Datalager-variabeln `weather` som standard. Detta konfigureras på fliken Properties i
 **Kartvy**:
 
-![Weather Widget](/Images/Map_Indicators/WeatherWidgetSettings.png)
+![Weather Widget](/docs/sv/Images/Map_Indicators/WeatherWidgetSettings.png)
 
 När widgeten är konfigurerad visar den aktuell väderinformation för
 mitten av det synliga kartområdet och uppdateras automatiskt när användaren navigerar på kartan.

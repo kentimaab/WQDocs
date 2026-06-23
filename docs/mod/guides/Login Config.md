@@ -25,7 +25,7 @@ By default, users are required to log in before accessing the system.
 This can be disabled by toggling **Require login** off. 
 To do this: navigate to **Settings** in the main menu and open the **Settings** view.
 
-![Require login setting](/Images/Login/require-login.png)
+![Require login setting](/docs/Images/Login/require-login.png)
 
 When disabled, the login screen is bypassed entirely and the system navigates
 directly to the configured start **Workview**. 
@@ -46,7 +46,7 @@ to a combobox by toggling the **Require username** off.
 
 Navigate to **Settings** in the main menu and open the **Settings** view.
 
-![Require username setting](/Images/Login/require-username.png)
+![Require username setting](/docs/Images/Login/require-username.png)
 
 When disabled, the login screen displays a combobox showing all available users in
 the system. The user selects their name from the list and still enters their password
@@ -78,7 +78,7 @@ adding it in WideQuick Designer. Supported formats are typically `PNG`, `SVG`, a
     script rotates through the eight default images — removing it ensures your custom
     image is displayed instead.
 
-![Background image configuration](/Images/Login/background-image.gif)
+![Background image configuration](/docs/Images/Login/background-image.gif)
 
 The recommended image resolution is `1085x1080` pixels. The `Image1` object also
 supports the following display options, which can be set in its properties:
@@ -102,7 +102,7 @@ the context menu. In the **Properties** tab, locate the **Multiviewer** property
 select the desired **Workview** from the dropdown. The full path does not need to be
 entered manually.
 
-![Start Workview configuration](/Images/Login/start-workview.gif)
+![Start Workview configuration](/docs/Images/Login/start-workview.gif)
 
 The default start **Workview** in the template project is **Dashboard Energi**. The
 start **Workview** should be a **Workview** located in either the **Main_Menu** or

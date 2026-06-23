@@ -26,7 +26,7 @@ Klicka på en befintlig händelse för att öppna popup-fönstret **Lägg till/r
 
 Öppna händelsen och klicka på **Ta bort**. Detta tar bort händelsen permanent.
 
-![Popup-fönstret Lägg till/redigera kalenderhändelse](/Images/Calendar/edit-event-popup.png){align=center}
+![Popup-fönstret Lägg till/redigera kalenderhändelse](/docs/sv/Images/Calendar/edit-event-popup.png){align=center}
 
 ## Underhållshändelser { #maintenance-events }
 
@@ -43,7 +43,7 @@ Om du klickar på en underhållshändelse öppnas ett popup-fönster som visar o
 | Stoppad | Grå |
 | Påminnelse | Dämpad olivgrön |
 
-![Underhållshändelser med olika statusfärger i månadsvy](/Images/Calendar/maintenance-event-colors.png){align=center}
+![Underhållshändelser med olika statusfärger i månadsvy](/docs/sv/Images/Calendar/maintenance-event-colors.png){align=center}
 
 ## Påminnelser { #reminders }
 

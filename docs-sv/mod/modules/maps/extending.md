@@ -60,7 +60,7 @@ if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 **Alarm**-objektet är nu fullt kopplat till **Kartvyn** och visar
 aktiva larm baserat på vad som för tillfället är synligt på kartan.
 
-![ConnectedAlarm](/Images/Map_Indicators/AlarmConnected.gif)
+![ConnectedAlarm](/docs/sv/Images/Map_Indicators/AlarmConnected.gif)
 
 ## Skapa anpassade kartindikatorer { #creating-custom-map-indicators }
 

@@ -33,14 +33,14 @@ WideQuick Water and Wastewater Treatment 2024.1.0 finns tillgänglig i två vers
 
 Mallprojektet är ett nytt, implementationsklart projekt som innehåller den fullständiga funktionaliteten i WideQuick Water and Wastewater Treatment 2024.1.0. Alla skript, objektbibliotek och systemlogik är förkonfigurerade och på plats — integratören börjar helt enkelt bygga sina systemvyer. Det finns inga implementerade system eller externa anslutningar såsom **OPC UA** eller **Modbus**. Det är den rekommenderade startpunkten för integratörer som vill bygga ett nytt projekt från grunden.
 
-![Template project](/Images/WWT_Intro/Template.png)
+![Template project](/docs/sv/Images/WWT_Intro/Template.png)
 
 ### Demoprojekt
 
 Demoprojektet är ett fullt implementerat exempel som visar all funktionalitet i WideQuick Water and Wastewater Treatment 2024.1.0 i användning. Det är användbart både för att förstå hur systemet fungerar och för att hämta inspiration till implementationen.
 
 
-![Demo project](/Images/WWT_Intro/Demo.png)
+![Demo project](/docs/sv/Images/WWT_Intro/Demo.png)
 
 ### Starta programmet
 

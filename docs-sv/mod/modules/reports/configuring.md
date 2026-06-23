@@ -47,7 +47,7 @@ på cellen som innehåller makrokommandot och välja **Edit Expression** för at
 uttrycksredigeraren.
 
 <figure markdown="span">
-  ![MacroLogger](/Images/Reports/MacroLogger.png)
+  ![MacroLogger](/docs/sv/Images/Reports/MacroLogger.png)
   <figcaption>Redigering av larmmakrot så att det pekar på en annan logger.</figcaption>
 </figure>
 
@@ -57,7 +57,7 @@ Välj objektet `LarmLogger_list`, gå till **Properties** och uppdatera egenskap
 till önskad logger.
 
 <figure markdown="span">
-  ![ObjectLogger](/Images/Reports/ObjectLogger.png)
+  ![ObjectLogger](/docs/sv/Images/Reports/ObjectLogger.png)
   <figcaption>Inställning av Logger-egenskapen på objektet LarmLogger_list.</figcaption>
 </figure>
 
@@ -117,7 +117,7 @@ Navigera först till `\Your_Project\Reports\Templates` och öppna `EnergyReport.
 GIF-bilden nedan:
 
 <figure markdown="span">
-  ![PrintArea](/Images/Reports/PrintArea.gif)
+  ![PrintArea](/docs/sv/Images/Reports/PrintArea.gif)
   <figcaption>Inställning av utskriftsområdet för en Energirapport med ett enda år.</figcaption>
 </figure>
 

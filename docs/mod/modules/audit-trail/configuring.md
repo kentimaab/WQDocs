@@ -17,7 +17,7 @@ tags:
 
 Navigate to **History → Logs → Audit trail → Audit Trail - Settings**.
 
-![Audit Trail - Settings view](/Images/Audit_Trail/audit-trail-settings.png){align=center}
+![Audit Trail - Settings view](/docs/Images/Audit_Trail/audit-trail-settings.png){align=center}
 
 The view has two panels. The left panel shows all available Data Store variables. The right panel shows the variables currently being tracked.
 

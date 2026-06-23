@@ -35,7 +35,7 @@ Popup-fönster skalas inte automatiskt. För att skala ett popup-fönster propor
 scWM.scaleAndPlacePopup(this);
 ```
 
-![Scaled popup centered in the main content area](/Images/Automatic_Scaling/scaling-popup-centered.png){align=center}
+![Scaled popup centered in the main content area](/docs/sv/Images/Automatic_Scaling/scaling-popup-centered.png){align=center}
 
 Som standard centreras popup-fönstret inom huvudinnehållsområdet, exklusive navigeringsmenyn. Ett valfritt justeringsargument placerar det längs en skärmkant istället:
 
@@ -55,7 +55,7 @@ scWM.scaleAndPlacePopup(this, "bottom");
 
 Skalning av popup-fönster kräver att **Pannable/Zoomable** är aktiverat på popup-arbetsvyn. I **WideQuick Designer®**, högerklicka på arbetsvyn i projektträdet och välj **Egenskaper**. Öppna fliken **Layout** och markera **Pannable/Zoomable**.
 
-![Pannable/Zoomable setting in arbetsvy properties](/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
+![Pannable/Zoomable setting in arbetsvy properties](/docs/sv/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
 
 ## Placering utan skalning { #placement-without-scaling }
 

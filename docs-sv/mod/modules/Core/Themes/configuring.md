@@ -16,7 +16,7 @@ tags:
 
 I **WideQuick Designer®**, öppna grenen **Themes** i projektträdet och dubbelklicka på det tema du vill redigera. Dialogrutan **Edit theme** öppnas med tre flikar: **Components**, **Custom colors** och **Keyboard**.
 
-![Theme editor](/Images/Themes/theme-edit-dialog.png){align=center}
+![Theme editor](/docs/sv/Images/Themes/theme-edit-dialog.png){align=center}
 
 Navigera till fliken **Custom colors** och dubbelklicka på en färgkod för att ändra dess värde.
 

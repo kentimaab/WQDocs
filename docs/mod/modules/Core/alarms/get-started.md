@@ -33,23 +33,23 @@ The **Alarm - List** is the primary view for monitoring active alarms. Each row 
 
 If `scRemoteAlarms` is running and remote systems are connected, alarms from those systems also appear in the list alongside local alarms.
 
-![Alarm - List view](/Images/Alarms/alarm-list.png){align=center}
+![Alarm - List view](/docs/Images/Alarms/alarm-list.png){align=center}
 
 ### Alarm - Overview { #alarm-overview }
 
 The **Alarm - Overview** gives a broader picture of alarm activity. A bar chart shows the number of alarms per day over the last seven days, broken down by alarm class. A pie chart shows the distribution of alarm classes among currently active alarms, with a top-five list of the most frequent alarms. A stats panel on the right shows the current active alarm counts and historical totals for the last 30 days, year to date, and last year.
 
-![Alarm - Overview](/Images/Alarms/alarm-overview.png){align=center}
+![Alarm - Overview](/docs/Images/Alarms/alarm-overview.png){align=center}
 
 The pie chart can be configured by clicking the **gear icon**. Select which alarm groups to include, set the number of days to display, choose whether to group by alarm class or group, and switch the unit between percent and count.
 
-![Alarm - Overview graph settings](/Images/Alarms/alarm-overview-settings.png){align=center}
+![Alarm - Overview graph settings](/docs/Images/Alarms/alarm-overview-settings.png){align=center}
 
 ### Alarm - Log { #alarm-log }
 
 The **Alarm - Log** is a historical record of all alarm events, showing alarm class, alarm text, time, alarm name, details, and remote system. Active alarms are highlighted in red.
 
-![Alarm - Log](/Images/Alarms/alarm-log.png){align=center}
+![Alarm - Log](/docs/Images/Alarms/alarm-log.png){align=center}
 
 Alarm history can also be exported as a report. See [Reports](../../reports/configuring.md#alarm-report).
 
@@ -57,7 +57,7 @@ Alarm history can also be exported as a report. See [Reports](../../reports/conf
 
 **Alarms - Frequency** lists all alarms ranked by how often they have triggered over a selected time period. Each row shows the total active time and the frequency count alongside the alarm name, text, and class. This helps identify persistent or frequently recurring alarms that may need attention.
 
-![Alarms - Frequency](/Images/Alarms/alarm-frequency.png){align=center}
+![Alarms - Frequency](/docs/Images/Alarms/alarm-frequency.png){align=center}
 
 ## Acknowledging alarms { #acknowledging-alarms }
 

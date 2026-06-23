@@ -40,7 +40,7 @@ Navigate to **Settings** in the main menu and open the **Settings** view. Under
 **Users and privileges** click **Change user**. Click **Add...** to create a new
 user or select an existing user and click **Edit...** to modify it.
 
-![Users](/Images/User_and_privileges/Users.png)
+![Users](/docs/Images/User_and_privileges/Users.png)
 
 #### User settings
 
@@ -50,7 +50,7 @@ user or select an existing user and click **Edit...** to modify it.
 * **Privileges** — grant or deny privileges by double-clicking a privilege, or
 selecting it and clicking **Grant** or **Deny**
 
-![Edit Users](/Images/User_and_privileges/Edit_Users.png)
+![Edit Users](/docs/Images/User_and_privileges/Edit_Users.png)
 
 ## Adding and editing privileges { #adding-and-editing-privileges }
 
@@ -67,7 +67,7 @@ granted all privileges selected here
 * **Users** — grant or deny users by double-clicking a user, or selecting it and
 clicking **Grant** or **Deny**
 
-![Privilege](/Images/User_and_privileges/Privilege.png)
+![Privilege](/docs/Images/User_and_privileges/Privilege.png)
 
 ## Virtual privileges { #virtual-privileges }
 
@@ -85,7 +85,7 @@ Designer®**. In the project tree, privileges that contain virtual privileges ar
 marked with a special icon.
 
 <figure markdown="span">
-  ![VirtualPrivilege](/Images/User_and_privileges/Virtual.png)
+  ![VirtualPrivilege](/docs/Images/User_and_privileges/Virtual.png)
   <figcaption>Icon in project tree.</figcaption>
 </figure>
 
@@ -98,12 +98,12 @@ the **Virtual privilege** button to select which privileges should be included.
 Access to specific **Workviews** can be restricted based on privileges. Navigate
 to **Settings → Workviews → Workviews - Privilege** in the main menu.
 
-![WorkView Privilege](/Images/User_and_privileges/Workview_privleage.png)
+![WorkView Privilege](/docs/Images/User_and_privileges/Workview_privleage.png)
 
 Select the **Workview** where the restriction should be applied. Configuration
 options will appear on the right side of the view.
 
-![Workview Settings](/Images/User_and_privileges/Settings.png)
+![Workview Settings](/docs/Images/User_and_privileges/Settings.png)
 
 Select the required privilege from the dropdown and click **Save** to apply the
 change.

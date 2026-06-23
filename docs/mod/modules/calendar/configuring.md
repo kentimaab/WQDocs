@@ -1,4 +1,4 @@
-﻿---
+---
 title: Calendar - Configuring
 description: Configure events, maintenance colors and reminder settings in the Calendar module.
 product: mod
@@ -25,7 +25,7 @@ Click an existing event to open the **Add/Edit Calendar Event** popup. All field
 
 Open the event and click **Remove**. This removes the event permanently.
 
-![Add/Edit Calendar Event popup](/Images/Calendar/edit-event-popup.png){align=center}
+![Add/Edit Calendar Event popup](/docs/Images/Calendar/edit-event-popup.png){align=center}
 
 ## Maintenance Events { #maintenance-events }
 
@@ -42,7 +42,7 @@ Clicking a maintenance event opens a popup showing the object, status, deadline 
 | Stopped | Gray |
 | Reminder | Muted olive |
 
-![Maintenance events with different status colors in month view](/Images/Calendar/maintenance-event-colors.png){align=center}
+![Maintenance events with different status colors in month view](/docs/Images/Calendar/maintenance-event-colors.png){align=center}
 
 ## Reminders { #reminders }
 

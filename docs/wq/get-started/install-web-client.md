@@ -15,7 +15,7 @@ Since **WideQuick** version 8 the web client ships with a graphical tool for
 configuring the `.ini` file installed alongside the web client. The tool provides
 a graphical interface for editing all settings in the `.ini` file.
 
-![WideQuick Web Client Config Tool – Web server](pics/install_wq/wqWebClientConfigTool.png)
+![WideQuick Web Client Config Tool – Web server](/docs/Images/install_wq/wqWebClientConfigTool.png)
 
 ### File menu
 
@@ -117,7 +117,7 @@ The **WideQuick® Runtime Server** tab configures the **WideQuick® Runtime**
 instances that **WideQuick® Web Client** can connect to, stored in the
 `[wqre-server]` section of the `.ini` file.
 
-![WideQuick Web Client Config Tool – WideQuick® Runtime Server](pics/install_wq/wqWebRuntimeServer.png)
+![WideQuick Web Client Config Tool – WideQuick® Runtime Server](/docs/Images/install_wq/wqWebRuntimeServer.png)
 
 * **Name** — the name of the server. Can be used as a URL argument, for example
 `localhost/?wqruntime=server1` connects to the server named `server1`. All
@@ -151,7 +151,7 @@ the `.ini` file.
 The **WideQuick® Web Client** tab configures update and synchronisation rates,
 stored in the `[wqweb]` section of the `.ini` file.
 
-![WideQuick Web Client Config Tool – WideQuick® Web Client](pics/install_wq/wqWebConfigWebClient.png)
+![WideQuick Web Client Config Tool – WideQuick® Web Client](/docs/Images/install_wq/wqWebConfigWebClient.png)
 
 * **refreshrate** — how frequently **WideQuick® Web Client** synchronises data
 with **WideQuick® Runtime**.

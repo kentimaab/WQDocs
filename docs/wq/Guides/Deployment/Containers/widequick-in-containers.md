@@ -8,7 +8,7 @@ tags:
 ---
 # Deploying WideQuick in Containers
 
-![WQContainerintro](/assets/Images/WQContainers.png)
+![WQContainerintro](/assets/docs/Images/WQContainers.png)
 
 
 ## Introduction
@@ -95,7 +95,7 @@ When working with WideQuick, it’s important to run containers in Windows conta
 Download and install Docker Desktop for Windows, then switch it to Windows containers mode.
 
 
-![Switch to Windows](/assets/Images/SwitchToWindows.png)
+![Switch to Windows](/assets/docs/Images/SwitchToWindows.png)
 
 
 ### Step 2: Grab your WideQuick Image(s)
@@ -120,7 +120,7 @@ In short, our public Docker Hub repo ensures you can get started with WideQuick 
 
 #### Steps to take
 
-![Pull image from Dockerhub](/assets/Images/pullimage.gif){width=800}
+![Pull image from Dockerhub](/assets/docs/Images/pullimage.gif){width=800}
 
 - In Docker Desktop, search for “Kentima” on Docker Hub.
 - You’ll find images for WideQuick Runtime and WideQuick Web Client.
@@ -145,7 +145,7 @@ With the universal license, you can spin up, move, or scale WideQuick containers
     All versions 13.4 and above support universal license keys and play nicely with containers!
 
 ### Step 4: Run the Container
-![Run a container](/assets/Images/RunNewContainer.png)
+![Run a container](/assets/docs/Images/RunNewContainer.png)
 
 
 - In Docker Desktop, launch the container from the image.

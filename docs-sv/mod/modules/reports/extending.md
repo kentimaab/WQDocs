@@ -53,7 +53,7 @@ navigera till botten av bladflikarna. Klicka på **Create New Sheet**, se bilden
 För att dölja bladet, högerklicka på bladfliken och välj **Hide Sheet**.
 
 <figure markdown="span">
-  ![newSheet](/Images/Reports/NewSheet.png)
+  ![newSheet](/docs/sv/Images/Reports/NewSheet.png)
   <figcaption>Lägger till ett nytt blad i mallen i WideQuick Designer.</figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ För att lägga till ett makrokommando, högerklicka på en cell i databladet oc
 **Edit Expression**. Detta öppnar följande popup:
 
 <figure markdown="span">
-  ![MacroConfigure](/Images/Reports/MacroInsertion.png)
+  ![MacroConfigure](/docs/sv/Images/Reports/MacroInsertion.png)
   <figcaption>Edit Expression-popup för att infoga ett makrokommando.</figcaption>
 </figure>
 
@@ -107,12 +107,12 @@ start från makrocellen:
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![Signal macro](/Images/Reports/MacroExample.png)
+  ![Signal macro](/docs/sv/Images/Reports/MacroExample.png)
   <figcaption>Signalmakro placerat på databladet.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Signal macro result](/Images/Reports/MacroExample2.png)
+  ![Signal macro result](/docs/sv/Images/Reports/MacroExample2.png)
   <figcaption>Resulterande kolumner ifyllda av makrot.</figcaption>
 </figure>
 
@@ -123,12 +123,12 @@ Och för larmdata med `VALUES(name, state, severity, timestamp, text, group)`:
 <div class="figure-row" markdown>
 
 <figure markdown="span">
-  ![Alarm macro](/Images/Reports/MacroAExample.png)
+  ![Alarm macro](/docs/sv/Images/Reports/MacroAExample.png)
   <figcaption>Larmmakro placerat på databladet.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Alarm macro result](/Images/Reports/MacroAExample2.png)
+  ![Alarm macro result](/docs/sv/Images/Reports/MacroAExample2.png)
   <figcaption>Resulterande kolumner ifyllda för larmdata.</figcaption>
 </figure>
 
@@ -302,7 +302,7 @@ rapportgenerering. Detta kan enkelt ändras om fler signaler krävs. Navigera f�
 **Properties...**. Detta öppnar följande popup:
 
 <figure markdown="span">
-  ![Variable Array](/Images/Reports/Variabel_ref.png)
+  ![Variable Array](/docs/sv/Images/Reports/Variabel_ref.png)
   <figcaption>Popup för egenskaper för variable_ref-arrayen.</figcaption>
 </figure>
 

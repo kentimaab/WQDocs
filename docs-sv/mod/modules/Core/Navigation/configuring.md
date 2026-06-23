@@ -32,7 +32,7 @@ en specifik vy eller en **Arbetsvy**-mapp och tilldela sedan önskad **Behörigh
 listan. **Arbetsvyn** är sedan bara tillgänglig för användare med rätt behörighet.
 Behörigheter kan tillämpas på både enskilda **Arbetsvy** och hela **Arbetsvy**-mappar.
 
-![SettingPriv](/Images/Navigation/SettingPriv.png)
+![SettingPriv](/docs/sv/Images/Navigation/SettingPriv.png)
 
 !!! note "Krypterade projekt"
     Om ditt projekt är krypterat kan **WideQuick** inte föreslå behörigheter.
@@ -46,14 +46,14 @@ Det finns flera inställningar som styr hur begränsade mappar visas för använ
 utan den nödvändiga behörigheten. Dessa inställningar finns under **Inställningar** i
 **WideQuick Runtime®**.
 
-![DisplayPriv](/Images/Navigation/Display%20priv.png)
+![DisplayPriv](/docs/sv/Images/Navigation/Display%20priv.png)
 
 Det finns två växlingsalternativ: **Visa låsta menyer** och **Visa låsta undermenyer**. Dessa
 växlar erbjuder tre meningsfulla kombinationer. Observera att om **Visa låsta menyer** är
 inaktiverat visas inte dess undermenyer oavsett inställningen för **Visa låsta undermenyer**.
 
 
-![Kombinationer av visningsinställningar](/Images/Navigation/Combined,%20options.png){align=center}
+![Kombinationer av visningsinställningar](/docs/sv/Images/Navigation/Combined,%20options.png){align=center}
 
 
 * **Vänster** — Båda aktiverade.

@@ -16,7 +16,7 @@ tags:
 
 Navigera till **Historik → Loggar → Spårningslogg → Spårningslogg - Inställningar**.
 
-![Spårningslogg - Inställningsvy](/Images/Audit_Trail/audit-trail-settings.png){align=center}
+![Spårningslogg - Inställningsvy](/docs/sv/Images/Audit_Trail/audit-trail-settings.png){align=center}
 
 Vyn har två paneler. Den vänstra panelen visar alla tillgängliga Datalager-variabler. Den högra panelen visar de variabler som för närvarande spåras.
 

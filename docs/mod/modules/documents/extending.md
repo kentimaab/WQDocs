@@ -17,7 +17,7 @@ tags:
 
 Access to document actions is controlled by privileges. Buttons that require a privilege the current user does not have are visible but disabled. The required privilege is displayed below each disabled button.
 
-![Documents view with privilege notices shown on restricted buttons](/Images/Documents/documents-privileges.png){align=center}
+![Documents view with privilege notices shown on restricted buttons](/docs/Images/Documents/documents-privileges.png){align=center}
 
 | Privilege | Controls |
 |---|---|

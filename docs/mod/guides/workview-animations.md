@@ -27,7 +27,7 @@ color an object displays is determined by which signals are active on that objec
 
 For more information on tag suffixes see [Tag Structure](../reference/tag-structure.md).
 
-![Animation states](/Images/Workview_Animations/AllActive.gif)
+![Animation states](/docs/Images/Workview_Animations/AllActive.gif)
 
 ## How it works { #how-it-works }
 
@@ -58,7 +58,7 @@ custom animated objects is covered in
 The animation categories and their suffix aliases are configured in **WideQuick
 Runtime®** by navigating to **Settings → Suffix → Suffix - Alarms**.
 
-![Workview animations list](/Images/Workview_Animations/Workview_animations_list.png)
+![Workview animations list](/docs/Images/Workview_Animations/Workview_animations_list.png)
 
 The settings are organised in two levels:
 
@@ -206,7 +206,7 @@ default. Expand **3 - Service** and check whether `_SERVICE` appears under
 **suffixes**. If it is not there, click **Add new suffix alias in selected category**,
 enter `_SERVICE` as the suffix and give it a description that fits your needs.
 
-![Service suffix](/Images/Workview_Animations/Service_suffix.png)
+![Service suffix](/docs/Images/Workview_Animations/Service_suffix.png)
 
 ### Step 2 - Create the visual elements { #step-2-create-the-visual-elements }
 
@@ -217,7 +217,7 @@ of those categories are active.
 * A **triangle** — its outline will change color when the active category is active.
 * A `DynTouch` object — this binds the animation to the tag.
 
-![Create objects](/Images/Workview_Animations/Create_object.png)
+![Create objects](/docs/Images/Workview_Animations/Create_object.png)
 
 ### Step 3 - Add the onLoad scripts { #step-3-add-the-onload-scripts }
 
@@ -237,7 +237,7 @@ this.defaultpColor = this.pen.color;
 These scripts save the original colors of each object so they can be restored when
 no animation category is active.
 
-![onLoad scripts](/Images/Workview_Animations/LoadScripts.gif)
+![onLoad scripts](/docs/Images/Workview_Animations/LoadScripts.gif)
 
 !!! note
     Since the triangle's **brush color** is not driven by any animation expression,
@@ -265,7 +265,7 @@ if (this.animation.alarm && _sys_pulse_1_Hz) {
 
 The gif below shows where to add this expression:
 
-![Circle brush color dynamic](/Images/Workview_Animations/DynCircel.gif)
+![Circle brush color dynamic](/docs/Images/Workview_Animations/DynCircel.gif)
 
 **Triangle — pen color:**
 
@@ -282,7 +282,7 @@ if (this.animation.active) {
 
 The gif below shows where to add this expression:
 
-![Triangle pen color dynamic](/Images/Workview_Animations/DynTriangel.gif)
+![Triangle pen color dynamic](/docs/Images/Workview_Animations/DynTriangel.gif)
 
 ### Step 5 - Group the objects { #step-5-group-the-objects }
 
@@ -316,7 +316,7 @@ Start the project and verify that:
 * The triangle outline changes to the active color when a signal ending in an
 active suffix is active.
 
-![Demonstration](/Images/Workview_Animations/Demonstration.gif)
+![Demonstration](/docs/Images/Workview_Animations/Demonstration.gif)
 
 !!! tip
     To test without a PLC connected, right-click the object in **WideQuick Runtime®**

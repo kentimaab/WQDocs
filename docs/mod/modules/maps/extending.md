@@ -63,7 +63,7 @@ if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 The **Alarm** object is now fully linked to the **Map View** and will display
 active alarms based on what is currently visible on the map.
 
-![ConnectedAlarm](/Images/Map_Indicators/AlarmConnected.gif)
+![ConnectedAlarm](/docs/Images/Map_Indicators/AlarmConnected.gif)
 
 ## Creating custom map indicators { #creating-custom-map-indicators }
 

@@ -24,7 +24,7 @@ Spårningsloggen registrerar ändringar av valda Datalager-variabler och underh�
 
 Navigera till **Historik → Loggar → Spårningslogg → Spårningslogg**.
 
-![Audit trail view](/Images/Audit_Trail/audit-trail-log.png){align=center}
+![Audit trail view](/docs/sv/Images/Audit_Trail/audit-trail-log.png){align=center}
 
 Loggen visar alla registrerade ändringar med följande kolumner:
 
@@ -45,7 +45,7 @@ Klicka på **Filter** för att tillämpa. Klicka på **Rensa spårningslogg** f�
 
 Navigera till **Historik → Loggar → Spårningslogg → Spårningslogg - Underhåll**.
 
-![Audit Trail - Maintenance view](/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
+![Audit Trail - Maintenance view](/docs/sv/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
 
 Den här vyn visar en fullständig historik över ändringar av underhållsuppgifter. Varje statusändring, uppdatering av deadline, prioritetsändring, tilldelningsändring och beskrivningsredigering registreras automatiskt. Ingen konfiguration krävs.
 

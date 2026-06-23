@@ -16,7 +16,7 @@ tags:
 
 In **WideQuick Designer®**, open the **Themes** branch in the project tree and double-click the theme to edit. The **Edit theme** dialog opens with three tabs: **Components**, **Custom colors**, and **Keyboard**.
 
-![Theme editor](/Images/Themes/theme-edit-dialog.png){align=center}
+![Theme editor](/docs/Images/Themes/theme-edit-dialog.png){align=center}
 
 Navigate to the **Custom colors** tab and double-click a color code to change its value.
 

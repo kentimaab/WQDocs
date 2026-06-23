@@ -27,7 +27,7 @@ Historikmodulen visar loggade signaldata som interaktiva linjediagram. Det finns
 
 Den projektövergripande vyn **Historik** är tillgänglig från huvudmenyn. Den visar signaler från hela projektet.
 
-![Historik-vy med en plottad signal](/Images/History/history-view.png){align=center}
+![Historik-vy med en plottad signal](/docs/sv/Images/History/history-view.png){align=center}
 
 Vyn har ett diagram längst upp och tre paneler längst ned:
 
@@ -50,7 +50,7 @@ Den andra kolumnen i trädet visar linjetypen för varje vald signal. Att klicka
 
 Panelen **Inställningar** styr hur diagrammet ser ut och hur ofta det uppdateras.
 
-![Inställningspanelen med växlar och intervallkontroller](/Images/History/history-panels.png){align=center}
+![Inställningspanelen med växlar och intervallkontroller](/docs/sv/Images/History/history-panels.png){align=center}
 
 | Inställning | Beskrivning |
 |---|---|
@@ -74,13 +74,13 @@ Panelen **Inställningar** styr hur diagrammet ser ut och hur ofta det uppdatera
 
 Menyn **SpeedDial** på processvyer innehåller en knapp som öppnar ett vyspecifikt historikpopup. Det fungerar precis som den projektövergripande vyn men visar bara signaler från objekt som tillhör den vyn.
 
-![Vyspecifikt historikpopup](/Images/History/history-view-specific.png){align=center}
+![Vyspecifikt historikpopup](/docs/sv/Images/History/history-view-specific.png){align=center}
 
 Signalval, tidskontroller, inställningar och sparade signalgrupper fungerar på samma sätt. Sparade signalgrupper i detta popup lagras per vy och är separata från projektövergripande sparade grupper. Du kan också importera sparade grupper från andra vyer via **Importera grupper från vyer** — se [Importera grupper från andra vyer](configuring.md#importing-groups-from-other-views).
 
 Eftersom den vyspecifika historiken bara visar signaler som tillhör den aktuella vyn kan du hämta in signaler från andra vyer med hjälp av **Importera signaler**.
 
-![Dialogrutan Importera signaler med Tillgängliga till vänster och Valda till höger](/Images/History/history-import-signals.png){align=center}
+![Dialogrutan Importera signaler med Tillgängliga till vänster och Valda till höger](/docs/sv/Images/History/history-import-signals.png){align=center}
 
 **Så här importerar du signaler från andra vyer:**
 
@@ -97,7 +97,7 @@ Om du vill ta bort en signal från ditt urval innan import markerar du den i pan
 
 Varje objekt i projektet har en flik [**Historik**](../../reference/Popup/History.md) i sitt popup. Om du öppnar fliken visas de loggade signalerna för det objektet i ett diagram.
 
-![Fliken Historik i ett objektpopup](/Images/History/history-object-popup.png){align=center}
+![Fliken Historik i ett objektpopup](/docs/sv/Images/History/history-object-popup.png){align=center}
 
 Signaler som tillhör objektet men saknar konfigurerad loggenhet listas på höger sida under **Taggar som inte loggas**.
 

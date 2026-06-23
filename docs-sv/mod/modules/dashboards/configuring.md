@@ -36,7 +36,7 @@ Widgetar som visar en signallegende hanterar automatiskt överfyllnad. När det 
 
 Visar larmantal — totalt, kvitterade och okvitterade.
 
-![Alarm Status](/Images/Dashboard/AlarmStatus.png){align=center}
+![Alarm Status](/docs/sv/Images/Dashboard/AlarmStatus.png){align=center}
 
 **Parametrar**
 
@@ -48,7 +48,7 @@ Visar larmantal — totalt, kvitterade och okvitterade.
 
 En kompakt larmindikator i en enda rad. Avsedd att placeras överst eller underst på en dashboard som ett tunt statusband.
 
-![Alarm Row](/Images/Dashboard/AlarmRow.png){align=center}
+![Alarm Row](/docs/sv/Images/Dashboard/AlarmRow.png){align=center}
 
 **Parametrar**
 
@@ -60,7 +60,7 @@ En kompakt larmindikator i en enda rad. Avsedd att placeras överst eller unders
 
 Visar aktiva larm i en rullningsbar lista.
 
-![Alarm List](/Images/Dashboard/AlarmList.png){align=center}
+![Alarm List](/docs/sv/Images/Dashboard/AlarmList.png){align=center}
 
 **Parametrar**
 
@@ -72,7 +72,7 @@ Visar aktiva larm i en rullningsbar lista.
 
 Visar historiska larm i en rullningsbar lista.
 
-![Alarm Log](/Images/Dashboard/AlarmLog.png){align=center}
+![Alarm Log](/docs/sv/Images/Dashboard/AlarmLog.png){align=center}
 
 **Parametrar**
 
@@ -84,7 +84,7 @@ Visar historiska larm i en rullningsbar lista.
 
 Visar hur ofta larm har utlösts.
 
-![Alarm Frequency](/Images/Dashboard/AlarmFrequency.png){align=center}
+![Alarm Frequency](/docs/sv/Images/Dashboard/AlarmFrequency.png){align=center}
 
 **Parametrar**
 
@@ -96,7 +96,7 @@ Visar hur ofta larm har utlösts.
 
 En större graf för larmtrender och larmfördelning. Lämpar sig för dashboards där larmanalys är i fokus.
 
-![Alarm Graph](/Images/Dashboard/AlarmGraph.png){align=center}
+![Alarm Graph](/docs/sv/Images/Dashboard/AlarmGraph.png){align=center}
 
 ---
 
@@ -104,7 +104,7 @@ En större graf för larmtrender och larmfördelning. Lämpar sig för dashboard
 
 Visar historiska signalvärden som en trendgraf. Legenden visar aktuella värden med enheter och decimalprecision.
 
-![History](/Images/Dashboard/History.png){align=center}
+![History](/docs/sv/Images/Dashboard/History.png){align=center}
 
 Fälten **Från** och **Till** längst upp på dashboarden anger tidsintervallet. Hur intervallet tillämpas beror på vilken knapp som används:
 
@@ -122,7 +122,7 @@ Fälten **Från** och **Till** längst upp på dashboarden anger tidsintervallet
 
 Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accepterar vilket värde som helst i Datalager — interna variabler, drivsignaler och systemvariabler.
 
-![Key Value](/Images/Dashboard/KeyValue.png){align=center}
+![Key Value](/docs/sv/Images/Dashboard/KeyValue.png){align=center}
 
 **Parametrar**
 
@@ -134,7 +134,7 @@ Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accept
 
 Visar aktuella livevärden för en eller flera signaler. Löser automatiskt upp enheter och decimalprecision från Datalager.
 
-![Signal Value Display](/Images/Dashboard/SignalValueDisplay.png){align=center}
+![Signal Value Display](/docs/sv/Images/Dashboard/SignalValueDisplay.png){align=center}
 
 **Parametrar**
 
@@ -146,7 +146,7 @@ Visar aktuella livevärden för en eller flera signaler. Löser automatiskt upp 
 
 Visar realtidsfördelning av signaler som ett cirkeldiagram. Inkluderar en expanderingsknapp som öppnar en fullskärmsvy.
 
-![Pie Chart](/Images/Dashboard/PieChart.png){align=center}
+![Pie Chart](/docs/sv/Images/Dashboard/PieChart.png){align=center}
 
 **Parametrar**
 
@@ -158,7 +158,7 @@ Visar realtidsfördelning av signaler som ett cirkeldiagram. Inkluderar en expan
 
 Visar jämförelser av signalvärden som ett stapeldiagram över konfigurerbara tidsperioder. Lämpar sig för energijämförelser över tid. Inkluderar en expanderingsknapp som öppnar en fullskärmsvy.
 
-![Bar Chart](/Images/Dashboard/Widget.png){align=center}
+![Bar Chart](/docs/sv/Images/Dashboard/Widget.png){align=center}
 
 **Parametrar**
 
@@ -180,7 +180,7 @@ Visar jämförelser av signalvärden som ett stapeldiagram över konfigurerbara 
 
 Visar underhållsuppgiftsstatus — aktiva, planerade och missade uppgifter. Ansluter direkt till underhållsmodulen. Ingen signalinmatning krävs.
 
-![Maintenance](/Images/Dashboard/Maintenance.png){align=center}
+![Maintenance](/docs/sv/Images/Dashboard/Maintenance.png){align=center}
 
 ## Nästa steg { #next-steps }
 

@@ -36,7 +36,7 @@ The following connection types are also supported:
 * OPC Server
 * OPC UA
 
-![OPCUA](/Images/First_tag/OPCUA.gif)
+![OPCUA](/docs/Images/First_tag/OPCUA.gif)
 
 ## Step 2 — Create the tag in WideQuick
 
@@ -57,7 +57,7 @@ This tag consists of:
 * **Object name** — `PV01`
 * **Suffix** — `_IO`
 
-![Create](/Images/First_tag/Create.gif)
+![Create](/docs/Images/First_tag/Create.gif)
 
 For more information on the tag structure see
 [Tag Structure](../reference/tag-structure.md).
@@ -68,7 +68,7 @@ In **WideQuick Designer®**, create a new **Workview** inside **System 1**. This
 make it automatically appear in the navigation menu. For more information on how the
 navigation works see [Navigation — Get started](../modules/Core/Navigation/get-started.md).
 
-![Workview](/Images/First_tag/CreateWork.gif)
+![Workview](/docs/Images/First_tag/CreateWork.gif)
 
 ## Step 4 - Place the motor object
 
@@ -83,7 +83,7 @@ Enter the following:
 * **Sys** — `VS10`
 * **ObjectName** — `PV01`
 
-![DynTouch properties](/Images/First_tag/Properties.gif)
+![DynTouch properties](/docs/Images/First_tag/Properties.gif)
 
 !!! tip
     The `dynMotorPumpR_000` object is a pre-built object from the **Motors** object
@@ -103,7 +103,7 @@ in the tree view and assign `_IO` to the **Suffix** field.
 For more information on how the animation system works see
 [Workview Animations](../guides/workview-animations.md).
 
-![Suffix Alarm configuration](/Images/First_tag/SuffixAlarm.gif)
+![Suffix Alarm configuration](/docs/Images/First_tag/SuffixAlarm.gif)
 
 ### Configuring the Process popup
 
@@ -117,7 +117,7 @@ suffix alias in selected category**. When prompted, name the new suffix alias **
 for consistency. Then select the **On** alias and assign `_IO` to the **Suffix**
 field.
 
-![Suffix Popup configuration](/Images/First_tag/SuffixPopup.gif)
+![Suffix Popup configuration](/docs/Images/First_tag/SuffixPopup.gif)
 
 ### Verifying
 
@@ -126,7 +126,7 @@ popup tab. Select **Process** — the toggle for the `_IO` signal will be availa
 here. Toggle it to `true` and verify that the green light on the motor object
 becomes active, confirming that the tag is correctly wired end-to-end.
 
-![Hello World result](/Images/First_tag/HelloWorld_result.png)
+![Hello World result](/docs/Images/First_tag/HelloWorld_result.png)
 
 !!! tip
     If the green light does not appear, verify that the tag name in the **Tag Editor**

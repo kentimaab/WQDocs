@@ -33,7 +33,7 @@ Dokumentmodulen finns under **Dokument & Loggbok -> Dokument** i huvudmenyn. Vyn
 
 Vyn är uppdelad i två paneler. Den vänstra panelen visar ett filträd med två kategorier: **Lokala filer** och **Onlinefiler**. Lokala filer lagras på servern; onlinefiler är länkar till externa URL:er. Den högra panelen visar förhandsvisning för den valda filen. På **WideQuick Web®** visas en tredje kategori för filer som inte kan öppnas i webbläsaren.
 
-![Documents Files view](/Images/Documents/documents-list.png){align=center}
+![Documents Files view](/docs/sv/Images/Documents/documents-list.png){align=center}
 
 Följande åtgärder är tillgängliga längst ned i vyn:
 
@@ -51,7 +51,7 @@ Följande åtgärder är tillgängliga längst ned i vyn:
 4. Klicka valfritt på ett filnamn i kön för att byta namn på det innan uppladdning.
 5. Klicka på **Ladda upp filer**.
 
-![Upload file tab](/Images/Documents/documents-upload.png){align=center}
+![Upload file tab](/docs/sv/Images/Documents/documents-upload.png){align=center}
 
 Filerna kopieras till servern och läggs till i dokumentlistan under **Lokala filer**.
 
@@ -65,7 +65,7 @@ Filerna kopieras till servern och läggs till i dokumentlistan under **Lokala fi
 6. Klicka på **Lägg till**.
 7. Klicka på **Ladda upp filer**.
 
-![Online resource tab](/Images/Documents/documents-upload-online.png){align=center}
+![Online resource tab](/docs/sv/Images/Documents/documents-upload-online.png){align=center}
 
 Resursen läggs till i dokumentlistan under **Onlinefiler**. URL:en lagras — ingen fil laddas ned till servern.
 

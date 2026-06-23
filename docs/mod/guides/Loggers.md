@@ -20,7 +20,7 @@ rely on historical data.
 Multiple loggers can share the same database connection. To create a logger,
 right-click **Loggers** in the project tree and select **Add Logger**.
 
-![Logger settings](/Images/Loggers/logger_settings.png)
+![Logger settings](/docs/Images/Loggers/logger_settings.png)
 
 ## Logger settings
 
@@ -65,7 +65,7 @@ or conditions.
 
 ## Database settings
 
-![Database settings](/Images/Loggers/database_settings.png)
+![Database settings](/docs/Images/Loggers/database_settings.png)
 
 ### Version
 
@@ -105,7 +105,7 @@ time.
 
 ## Variables
 
-![Variables](/Images/Loggers/variables.png)
+![Variables](/docs/Images/Loggers/variables.png)
 
 The **Variables** tab defines which signals are logged. Signals can be added in
 two ways:

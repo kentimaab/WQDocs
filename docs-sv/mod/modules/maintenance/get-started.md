@@ -31,19 +31,19 @@ Listvyn visar alla underhållsuppgifter för samtliga objekt i projektet. Det ä
 * Välj en uppgift och klicka på **Ta bort underhåll** för att ta bort den permanent.
 * Klicka på **Skapa** för att skapa en ny uppgift.
 
-![Underhåll - Listvy](/Images/Maintenance/maintenance-list.png){align=center}
+![Underhåll - Listvy](/docs/sv/Images/Maintenance/maintenance-list.png){align=center}
 
 ### Underhåll - Mallar { #maint-templates }
 
 Mallvyn används för att skapa och hantera underhållsmallar. En mall definierar en återanvändbar uppgiftstyp med förinställd typ, prioritet, intervall och beskrivning. När en ny uppgift skapas kan en mall väljas för att fylla i uppgiftsfälten i förväg.
 
-![Underhåll - Mallvy](/Images/Maintenance/maintenance-templates-view.png){align=center}
+![Underhåll - Mallvy](/docs/sv/Images/Maintenance/maintenance-templates-view.png){align=center}
 
 ### Underhåll - Återkommande { #maintenance-recurring }
 
 Vyn för återkommande underhåll hanterar automatiserade underhållskonfigurationer. Varje konfiguration definierar ett schema för ett eller flera objekt. Systemet genererar och spårar uppgifter automatiskt baserat på det konfigurerade intervallet.
 
-![Underhåll - Återkommande vy](/Images/Maintenance/maintenance-recurring.png){align=center}
+![Underhåll - Återkommande vy](/docs/sv/Images/Maintenance/maintenance-recurring.png){align=center}
 
 ## Objektpopup { #object-popup }
 
@@ -51,7 +51,7 @@ Varje objekt i projektet har en underhållsflik tillgänglig via dess popup. Öp
 
 Kolumnen **Återkommande** visar om varje uppgift har genererats av en återkommande underhållskonfiguration. Värdet **Ja** innebär att uppgiften ingår i ett automatiserat schema — när den slutförs skapas nästa instans automatiskt. Värdet **Nej** innebär att uppgiften skapades manuellt som en engångsåtgärd.
 
-![Underhållsfliken i objektpopupen](/Images/Maintenance/object-popup-maintenance.png){align=center}
+![Underhållsfliken i objektpopupen](/docs/sv/Images/Maintenance/object-popup-maintenance.png){align=center}
 
 ## Skapa en uppgift { #creating-a-task }
 
@@ -59,7 +59,7 @@ Nya underhållsuppgifter kan skapas både från vyn **Underhåll - Lista** och f
 
 Från **Underhåll - Lista**, klicka på **Skapa**. Från objektpopupen, klicka på **Nytt underhåll**.
 
-![Formulär för nytt underhåll](/Images/Maintenance/create-multiple.png){align=center}
+![Formulär för nytt underhåll](/docs/sv/Images/Maintenance/create-multiple.png){align=center}
 
 Fyll i följande fält:
 

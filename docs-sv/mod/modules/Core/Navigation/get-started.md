@@ -51,9 +51,9 @@ vyn direkt.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
-![Single Depth](/Images/Navigation/Navigation_depth.png)
+![Single Depth](/docs/sv/Images/Navigation/Navigation_depth.png)
 
-![Single Depth Menu](/Images/Navigation/Navigation_single_menu.png)
+![Single Depth Menu](/docs/sv/Images/Navigation/Navigation_single_menu.png)
 
 </div>
 
@@ -63,9 +63,9 @@ för att bygga ännu djupare navigationsstrukturer.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
-![Depth](/Images/Navigation/Navigation_single.png)
+![Depth](/docs/sv/Images/Navigation/Navigation_single.png)
 
-![Depth Navigation](/Images/Navigation/Navigation_depth_menu.png)
+![Depth Navigation](/docs/sv/Images/Navigation/Navigation_depth_menu.png)
 
 </div>
 
@@ -77,7 +77,7 @@ möjliggör snabb navigering till nästlade vyer. Den kan aktiveras eller inakti
 Menyn byggs automatiskt utifrån katalogstrukturen i **WideQuick Designer®**, vilket
 innebär att designbeslut som tas där återspeglas direkt i körläget.
 
-![FullScreen_Toggle](/Images/Navigation/ToggleFullNav.png)
+![FullScreen_Toggle](/docs/sv/Images/Navigation/ToggleFullNav.png)
 
 Helskärmsmenyn är utformad för att visa så många **Arbetsvyer** som möjligt och samtidigt
 förbli organiserad. Layouten följer dessa regler:
@@ -102,7 +102,7 @@ Tillsammans gör dessa två mekanismer att helskärmsmenyn kan skalas till syste
 valfri storlek — oavsett hur många vyer eller kataloger ett projekt innehåller kommer
 menyn alltid att vara navigerbar.
 
-![FullScreen_Menu](/Images/Navigation/Nav_2Stor.png)
+![FullScreen_Menu](/docs/sv/Images/Navigation/Nav_2Stor.png)
 
 ## Nästa steg { #next-steps }
 

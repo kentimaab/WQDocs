@@ -1,4 +1,4 @@
-﻿---
+---
 title: History - Configuring
 description: Configure signal selection, chart settings and saved signal groups in the History module.
 product: mod
@@ -30,7 +30,7 @@ The **Track signal** panel keeps the chart centred on a specific signal as its v
 
 Signal groups can be saved and reloaded to avoid re-selecting the same signals each time. Saved groups are managed from the **Saved groups** section in the **Track signal** panel.
 
-![Saved groups panel showing the group name field, dropdown, and import button](/Images/History/history-saved-signals.png){align=center}
+![Saved groups panel showing the group name field, dropdown, and import button](/docs/Images/History/history-saved-signals.png){align=center}
 
 **To save a signal group:**
 
@@ -52,7 +52,7 @@ Signal groups can be saved and reloaded to avoid re-selecting the same signals e
 
 Both the project-wide History and the view-specific History let you import saved groups that were created in other views. This lets you reuse a group saved in one view without having to recreate it.
 
-![Saved groups dialog with All saved on the left and Selected on the right](/Images/History/history-import-groups.png){align=center}
+![Saved groups dialog with All saved on the left and Selected on the right](/docs/Images/History/history-import-groups.png){align=center}
 
 **To import groups from other views:**
 

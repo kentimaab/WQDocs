@@ -17,7 +17,7 @@ att konfigurera `.ini`-filen som installeras tillsammans med webbklienten. Verkt
 tillhandahåller ett grafiskt gränssnitt för att redigera alla inställningar i
 `.ini`-filen.
 
-![WideQuick Web Client Config Tool – Web server](pics/install_wq/wqWebClientConfigTool.png)
+![WideQuick Web Client Config Tool – Web server](/docs/sv/Images/install_wq/wqWebClientConfigTool.png)
 
 ### Arkiv-menyn
 
@@ -119,7 +119,7 @@ Fliken **WideQuick® Runtime Server** konfigurerar de **WideQuick® Runtime**-in
 som **WideQuick® Web Client** kan ansluta till, lagrade i avsnittet `[wqre-server]`
 i `.ini`-filen.
 
-![WideQuick Web Client Config Tool – WideQuick® Runtime Server](pics/install_wq/wqWebRuntimeServer.png)
+![WideQuick Web Client Config Tool – WideQuick® Runtime Server](/docs/sv/Images/install_wq/wqWebRuntimeServer.png)
 
 * **Name** — serverns namn. Kan användas som ett URL-argument, till exempel ansluter
 `localhost/?wqruntime=server1` till servern med namnet `server1`. Alla icke-standardservrar
@@ -153,7 +153,7 @@ lagrade som `export_vars` i `.ini`-filen.
 Fliken **WideQuick® Web Client** konfigurerar uppdaterings- och synkroniseringsfrekvenser,
 lagrade i avsnittet `[wqweb]` i `.ini`-filen.
 
-![WideQuick Web Client Config Tool – WideQuick® Web Client](pics/install_wq/wqWebConfigWebClient.png)
+![WideQuick Web Client Config Tool – WideQuick® Web Client](/docs/sv/Images/install_wq/wqWebConfigWebClient.png)
 
 * **refreshrate** — hur ofta **WideQuick® Web Client** synkroniserar data med
 **WideQuick® Runtime**.

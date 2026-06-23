@@ -30,7 +30,7 @@ Följande anslutningstyper stöds också:
 * OPC Server
 * OPC UA
 
-![OPCUA](/Images/First_tag/OPCUA.gif)
+![OPCUA](/docs/sv/Images/First_tag/OPCUA.gif)
 
 ## Steg 2 - Skapa taggen
 
@@ -46,7 +46,7 @@ Den här taggen består av:
 * **Objektnamn** — `PV01`
 * **Suffix** — `_IO`
 
-![Create](/Images/First_tag/Create.gif)
+![Create](/docs/sv/Images/First_tag/Create.gif)
 
 För mer information om taggstrukturen, se [Taggstruktur](../reference/tag-structure.md).
 
@@ -54,7 +54,7 @@ För mer information om taggstrukturen, se [Taggstruktur](../reference/tag-struc
 
 I **WideQuick Designer®**, skapa en ny **Arbetsvy** inuti **System 1**. Den kommer då att visas automatiskt i navigeringsmenyn. För mer information om hur navigeringen fungerar, se [Navigation — Kom igång](../modules/Core/Navigation/get-started.md).
 
-![arbetsvy](/Images/First_tag/CreateWork.gif)
+![arbetsvy](/docs/sv/Images/First_tag/CreateWork.gif)
 
 ## Steg 4 - Placera motorobjektet
 
@@ -67,7 +67,7 @@ Välj objektet `DynTouch` inuti gruppen och navigera till fliken **Egenskaper**.
 * **Sys** — `VS10`
 * **ObjectName** — `PV01`
 
-![DynTouch properties](/Images/First_tag/Properties.gif)
+![DynTouch properties](/docs/sv/Images/First_tag/Properties.gif)
 
 !!! tip
     Objektet `dynMotorPumpR_000` är ett färdigt objekt från objektbiblioteket **Motors**. För att lära dig hur du skapar egna objekt, se [Skapa ett objekt](../guides/create-an-object.md).
@@ -82,7 +82,7 @@ Suffixaliaset **On** är nu en del av gruppen **4 - Aktiv**. Välj sedan **On** 
 
 För mer information om hur animationssystemet fungerar, se [Arbetsvy-animationer](../guides/workview-animations.md).
 
-![Suffix Alarm configuration](/Images/First_tag/SuffixAlarm.gif)
+![Suffix Alarm configuration](/docs/sv/Images/First_tag/SuffixAlarm.gif)
 
 ### Konfigurera Processpopupen
 
@@ -90,13 +90,13 @@ Nästa steg är att koppla suffixet till **Process**-popupen, så att ett klick 
 
 Den här vyn visar alla konfigurerade standardpopups. För att skapa en anpassad popup, se [Skapa ett popup](../guides/create-a-popup.md). Välj **Process** och klicka på **Lägg till nytt suffixalias i vald kategori**. Ge det nya suffixaliaset namnet **On** för konsekvensens skull. Välj sedan aliaset **On** och tilldela `_IO` till fältet **Suffix**.
 
-![Suffix Popup configuration](/Images/First_tag/SuffixPopup.gif)
+![Suffix Popup configuration](/docs/sv/Images/First_tag/SuffixPopup.gif)
 
 ### Verifiera
 
 Navigera till vyn som innehåller motorobjektet och vänsterklicka på det för att öppna popup-fliken. Välj **Process** — reglaget för signalen `_IO` finns tillgängligt här. Växla den till `true` och kontrollera att det gröna ljuset på motorobjektet aktiveras, vilket bekräftar att taggen är korrekt kopplad från start till slut.
 
-![Hello World result](/Images/First_tag/HelloWorld_result.png)
+![Hello World result](/docs/sv/Images/First_tag/HelloWorld_result.png)
 
 !!! tip
     Om det gröna ljuset inte visas, kontrollera att taggnamnet i **Taggeditorn** exakt matchar egenskaperna som angetts på objektet `DynTouch`, inklusive versalisering.

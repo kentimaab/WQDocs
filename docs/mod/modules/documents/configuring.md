@@ -19,7 +19,7 @@ Documents can be connected to specific objects in the project. When a document i
 
 Navigate to **Documents → Object Refs** to manage links.
 
-![Object references view](/Images/Documents/documents-objects-references.png){align=center}
+![Object references view](/docs/Images/Documents/documents-objects-references.png){align=center}
 
 To link documents to an object:
 
@@ -34,7 +34,7 @@ A document can be linked to multiple objects. The same object can have multiple 
 
 Every object in the project has a [**Documents**](../../reference/Popup/Documents.md) tab available through its popup. Open the popup by clicking on an object and selecting the **Documents** tab. This shows all documents linked to that specific object. Selecting a document and clicking **Open** opens a preview directly in the popup.
 
-![Documents tab in the object popup](/Images/Documents/documents-object-popup.png){align=center}
+![Documents tab in the object popup](/docs/Images/Documents/documents-object-popup.png){align=center}
 
 ## Syncing with the filesystem { #syncing-with-the-filesystem }
 

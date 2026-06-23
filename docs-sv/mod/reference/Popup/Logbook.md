@@ -17,7 +17,7 @@ Användare kan skapa, redigera och ta bort anteckningar direkt från denna popup
 synlig i flikmenyn oavsett vilka suffix objektet har. För mer
 information om hur loggbokssystemet fungerar, se [Loggbok](../../modules/logbook/index.md).
 
-![Logbook popup](/Images/Popups/Logbook.png)
+![Logbook popup](/docs/sv/Images/Popups/Logbook.png)
 
 ## Poster
 

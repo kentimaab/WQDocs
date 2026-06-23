@@ -16,11 +16,11 @@ tags:
 
 Navigera till **Inställningar → Säkerhetskopiering → Återställ**.
 
-![Återställ variabler från säkerhetskopia](/Images/Backup_And_Restore/backup-restore.png){align=center}
+![Återställ variabler från säkerhetskopia](/docs/sv/Images/Backup_And_Restore/backup-restore.png){align=center}
 
 Vyn har tre paneler. Den vänstra panelen listar alla sparade säkerhetskopior med deras skapandedatum. Om du väljer en säkerhetskopia visas dess metadata under panelerna, och den mellersta panelen fylls med de variabler som finns lagrade i den säkerhetskopian.
 
-![Metadata för säkerhetskopia visas under panelerna](/Images/Backup_And_Restore/backup-metadata.png){align=center}
+![Metadata för säkerhetskopia visas under panelerna](/docs/sv/Images/Backup_And_Restore/backup-metadata.png){align=center}
 
 * **Skapad den** — datum och tid då säkerhetskopian skapades.
 * **Skapad av** — den användare som skapade säkerhetskopian.

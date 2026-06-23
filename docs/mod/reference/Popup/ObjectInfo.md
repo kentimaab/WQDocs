@@ -17,7 +17,7 @@ object, pulled directly from the Data Store. It is always visible in the Tab men
 regardless of which suffixes the object has. It is primarily useful for
 troubleshooting and verifying that the correct signals are connected to the object.
 
-![Object Info popup](/Images/Popups/ObjectInfo.png)
+![Object Info popup](/docs/Images/Popups/ObjectInfo.png)
 
 ## Object information
 

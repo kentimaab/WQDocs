@@ -18,7 +18,7 @@ signals are logged, the Trend popup reads directly from the Data Store and updat
 continuously. It is always visible in the Tab menu regardless of which suffixes the
 object has.
 
-![Trend popup](/Images/Popups/Trend.png)
+![Trend popup](/docs/Images/Popups/Trend.png)
 
 ## Graph
 

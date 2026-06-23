@@ -16,7 +16,7 @@ The Tab popup is the default popup that opens when a `DynTouch` object is clicke
 It acts as a navigation hub for all other popups available for that object, and
 provides an immediate overview of the object's current status.
 
-![Tab popup](/Images/Popups/Tab.png)
+![Tab popup](/docs/Images/Popups/Tab.png)
 
 ## Menu
 
