@@ -8,11 +8,11 @@ Exits with code 1 if any broken references are found.
 On Linux the filesystem is case-sensitive, so a wrong-case filename
 that exists on Windows will be caught here before the build.
 
-Run this script prior to upload. It validates that the image links are correct for site launch. It also resolves broken links. 
+Run this script prior to upload. It validates that the image links are correct for site launch. 
 The script also allows for custom paths, meaning a test launch is able to be validated with the custom deployment path. 
 
 Note. This script dosent cover all types of error! Test launch is recomended to validate paths! When testing, apply this script to ftp-test-build.yml 
-This updates all images link with the relative path to the test launch site. If all images resolves correctly and is visible on test site. All image links work and ready for offical launch (remove from ftp-test-build)
+If all images resolves correctly and is visible on test site. All image links work and ready for offical launch (remove from ftp-test-build)
 
 Usage:
     # English docs  (web prefix defaults to /docs/)
