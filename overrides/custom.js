@@ -142,6 +142,104 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const tagTextarea = document.getElementById('tagTextarea-MQTT');
+    const tagResults = document.getElementById('tagResults-MQTT');
+    const filterButton = document.getElementById('filterButton-MQTT');
+    if (!tagTextarea || !tagResults || !filterButton) return;
+
+    const tagPattern = /^[A-Za-z0-9_]+\.[A-Za-z0-9_]+\.[A-Za-z0-9_]+_[A-Za-z0-9_]+_[A-Za-z0-9]+$/;
+
+    let showOnlyInvalid = false;
+
+    function validateTags() {
+        const rows = tagTextarea.value.split('\n');
+        tagResults.innerHTML = '';
+
+        rows.forEach(row => {
+            const resultDiv = document.createElement('div');
+            resultDiv.classList.add('tag-result');
+            resultDiv.textContent = row;
+
+            if (tagPattern.test(row)) {
+                resultDiv.classList.add('valid');
+                resultDiv.innerHTML += ' <span class="icon">✅</span>';
+            } else {
+                resultDiv.classList.add('invalid');
+                resultDiv.innerHTML += ' <span class="icon">❌</span>';
+            }
+
+            if (showOnlyInvalid && resultDiv.classList.contains('valid')) {
+                resultDiv.style.display = 'none';
+            } else {
+                resultDiv.style.display = 'block';
+            }
+
+            tagResults.appendChild(resultDiv);
+        });
+    }
+
+    function toggleFilter() {
+        showOnlyInvalid = !showOnlyInvalid;
+        filterButton.textContent = showOnlyInvalid ? 'Show All Tags' : 'Show Only Invalid Tags';
+        validateTags();
+    }
+
+    tagTextarea.addEventListener('input', validateTags);
+    filterButton.addEventListener('click', toggleFilter);
+    validateTags();
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const tagTextarea = document.getElementById('tagTextarea-BACnet');
+    const tagResults = document.getElementById('tagResults-BACnet');
+    const filterButton = document.getElementById('filterButton-BACnet');
+    if (!tagTextarea || !tagResults || !filterButton) return;
+
+    const tagPattern = /^[A-Za-z0-9_]+\.[A-Za-z0-9_]+\.[A-Za-z0-9_]+_[A-Za-z0-9_]+_[A-Za-z0-9]+$/;
+
+    let showOnlyInvalid = false;
+
+    function validateTags() {
+        const rows = tagTextarea.value.split('\n');
+        tagResults.innerHTML = '';
+
+        rows.forEach(row => {
+            const resultDiv = document.createElement('div');
+            resultDiv.classList.add('tag-result');
+            resultDiv.textContent = row;
+
+            if (tagPattern.test(row)) {
+                resultDiv.classList.add('valid');
+                resultDiv.innerHTML += ' <span class="icon">✅</span>';
+            } else {
+                resultDiv.classList.add('invalid');
+                resultDiv.innerHTML += ' <span class="icon">❌</span>';
+            }
+
+            if (showOnlyInvalid && resultDiv.classList.contains('valid')) {
+                resultDiv.style.display = 'none';
+            } else {
+                resultDiv.style.display = 'block';
+            }
+
+            tagResults.appendChild(resultDiv);
+        });
+    }
+
+    function toggleFilter() {
+        showOnlyInvalid = !showOnlyInvalid;
+        filterButton.textContent = showOnlyInvalid ? 'Show All Tags' : 'Show Only Invalid Tags';
+        validateTags();
+    }
+
+    tagTextarea.addEventListener('input', validateTags);
+    filterButton.addEventListener('click', toggleFilter);
+    validateTags();
+});
+
+
 const modifyBtn = document.getElementById('modifyBtn');
 if (modifyBtn) modifyBtn.addEventListener('click', function () {
     try {

@@ -39,7 +39,7 @@ ett **Alarm**-objekt till en **Kartvy** och skapa anpassade indikatorer, se
 För att använda Map Indicators krävs ett **Kartvy**-objekt. Det finns i
 Objects Toolbar i **WideQuick Designer®**:
 
-![Map View object](../../../docs/sv/Images/Map_Indicators/map_view_object.png)
+![Map View object](/docs/sv/Images/Map_Indicators/map_view_object.png)
 
 Placera det i den vy där du vill visa din karta.
 

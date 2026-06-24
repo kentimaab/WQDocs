@@ -16,19 +16,16 @@ For more information on how the Tag Structure is intended to work please visit [
 === "OPC UA and DA"
 
     <div class="tag-validator" markdown>
-    <textarea id="tagTextarea" placeholder="Enter tag/variable names, one per line"></textarea>
-    <button id="filterButton">Show Only Invalid Tags</button>
+    <textarea id="tagTextarea" class="tag-validator-textarea" placeholder="Enter tag/variable names, one per line"></textarea>
+    <button id="filterButton" class="tag-validator-btn">Show Only Invalid Tags</button>
     <div id="tagResults"></div>
     </div>
 
 === "Modbus Serial and TCP/IP"
 
-    <div class="tag-validator-modbus" markdown>
-    <textarea id="tagTextarea-modbus" placeholder="Enter tag/variable, one per line"></textarea>
-    <button id="filterButton-modbus">Show Only Invalid Tags</button>
+    <div class="tag-validator" markdown>
+    <textarea id="tagTextarea-modbus" class="tag-validator-textarea" placeholder="Enter tag/variable, one per line"></textarea>
+    <button id="filterButton-modbus" class="tag-validator-btn">Show Only Invalid Tags</button>
     <div id="tagResults-modbus"></div>
     </div>
-
-
-
 

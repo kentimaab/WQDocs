@@ -45,7 +45,7 @@ an **Alarm** object to a **Map View** and creating custom indicators, see
 To use Map Indicators, a **Map View** object is required. It can be found in the
 Objects Toolbar in **WideQuick Designer®**:
 
-![Map View object](../../../docs/Images/Map_Indicators/map_view_object.png)
+![Map View object](/docs/Images/Map_Indicators/map_view_object.png)
 
 Place it in the view where you want to display your map.
 

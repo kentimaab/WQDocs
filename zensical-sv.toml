@@ -469,6 +469,7 @@ nav = [
   { "Verktyg" = [
     { "Taggnamnsvalidator" = "Tools/tag-name-validator.md" },
     { "Temabyggare" = "Tools/theme-builder.md" },
+    {"Script Reference Handler" = "Tools/Script-Reference-Handler.md"},
   ]},
 ]
 

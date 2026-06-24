@@ -502,6 +502,7 @@ nav = [
   { "Tools" = [
     { "Tag Name Validator" = "Tools/tag-name-validator.md" },
     { "Theme Builder" = "Tools/theme-builder.md" },
+    {"Script Reference Handler" = "Tools/Script-Reference-Handler.md"},
   ]},
 ]
 

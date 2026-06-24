@@ -10,7 +10,7 @@ tags:
 
 # WideQuick i containrar
 
-![WQContainerintro](/assets/docs/sv/Images/WQContainers.png)
+![WQContainerintro](/docs/sv/Images/Container_wq/WQContainers.png)
 
 
 ## Introduktion
@@ -96,7 +96,7 @@ När du arbetar med WideQuick är det viktigt att köra containrar i Windows-con
 Ladda ner och installera Docker Desktop för Windows och växla sedan till Windows-containerläge.
 
 
-![Switch to Windows](/assets/docs/sv/Images/SwitchToWindows.png)
+![Switch to Windows](/docs/sv/Images/Container_wq/SwitchToWindows.png)
 
 
 ### Steg 2: Hämta din/dina WideQuick-image(ar)
@@ -121,7 +121,7 @@ Kort sagt säkerställer vårt publika Docker Hub-arkiv att du snabbt och tryggt
 
 #### Steg att följa
 
-![Pull image from Dockerhub](/assets/docs/sv/Images/pullimage.gif){width=800}
+![Pull image from Dockerhub](/docs/sv/Images/Container_wq/pullimage.gif){width=800}
 
 - Sök efter "Kentima" på Docker Hub i Docker Desktop.
 - Du hittar imager för WideQuick Runtime och WideQuick Web Client.
@@ -146,7 +146,7 @@ Med den universella licensen kan du starta, flytta eller skala WideQuick-contain
     Alla versioner 13.4 och senare stöder universella licensnycklar och fungerar utmärkt med containrar!
 
 ### Steg 4: Kör containern
-![Run a container](/assets/docs/sv/Images/RunNewContainer.png)
+![Run a container](/docs/sv/Images/Container_wq/RunNewContainer.png)
 
 
 - Starta containern från imagen i Docker Desktop.

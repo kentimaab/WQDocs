@@ -8,6 +8,11 @@ Phase 3: Update remaining /Images/ references to <web_prefix>Images/
 Skips <docs_dir>/assets/ entirely (theme/branding files).
 
 Usage:
+    # The script cleanes up missplaced images. It moves images to their folder docs/Images. First define what directory its looking in with: --docs-dir MYDIR
+    # Do a dry run to get a overview of changes to be executed. Verify the web prefix on serve. Example docs-sv when served has web prefix /docs/sv/ 
+    # The script updates all images reffrences in dir to match the web prefix. Ensuring correct paths on site launch. 
+    # the use of /assets/ are excluded since they are used for CSS. 
+
     # English docs (dry run)
     python hooks/reorganize_images.py
 
