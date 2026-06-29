@@ -59,4 +59,6 @@ operating modes or setting manual values.
 for the object.
 * [**Control Curve**](Control%20curve.md) — a control curve editor for configuring
 non-linear control relationships.
+* [**Contrul Curve Time**](Control%20curveTime.md) — a time-based control curve editor for mapping output values across a 24-hour period. 
+
 <!-- --8<-- [end:body] -->

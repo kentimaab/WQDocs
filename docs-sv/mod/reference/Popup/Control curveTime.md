@@ -32,7 +32,7 @@ dygnet och en rosa horisontell linje visar det aktuella procesvärdet som refere
 
 När en sparad profil läses in visas den som en streckad linje bredvid den aktiva
 kurvan, vilket gör det möjligt att jämföra de två innan profilen tillämpas. Den
-rosa streckade ramen visar det konfigurerade klämintervallet för Y-axeln (se [Klämintervall](#klämintervall)).
+rosa streckade ramen visar det konfigurerade klämintervallet för Y-axeln (se [Klämintervall](#klamintervall)).
 
 Noder på den aktiva kurvan kan dras för att justera kurvans form, eller redigeras
 direkt i datapunktstabellen nedanför grafen.
