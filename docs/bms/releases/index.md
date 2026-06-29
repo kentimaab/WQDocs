@@ -58,6 +58,8 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 | **Control Curve (Styrkurva)** | The popup now displays the current value on the curve. It can also be placed directly inside a workview screen rather than only as a popup. |
 | **Control Curve Time (StyrkurvaTid)** | Brought to feature-parity with the standard Control Curve and visually overhauled. A vertical line tracks the current wall-clock time on the graph in real time; a horizontal line tracks the live Y0 process value. The X-axis label now appends the current HH:MM time. Data point boxes are arranged in two columns (previously a single column), supporting up to 24 visible points. The preview curve now also updates when Y-axis min/max changes, not only when data points are edited. |
 | **Control Curve — independent clamp save/load** | Both Styrkurva and StyrkurvaTid now save and load the upper and lower clamp values independently. Previously, both clamp handles had to be visible for either value to be included in a saved profile. |
+| **Control Curve — duplicate profile name prevention** | Renaming a profile to a name already used by another profile is now blocked. |
+| **Control Curve — audit trail** | `Spårningslogg.kvie` updated with control curve audit trail support. |
 | **Process popup** | Visual update with corrected element placement and spacing. |
 | **Pop-out close** | Pop-outs opened via a link now use the correct close action instead of `app.popup.visible`. |
 | **SubNav popup** | Now lazily initialises the subnav route tree on demand for correct behaviour on web clients. Default fallback view corrected to `Dashboard Energi.kvie`. |
@@ -80,6 +82,7 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 | 6 | Reports | Logger list column ordering was incorrect. Fixed. |
 | 7 | Calendar | Month and day names were rendered using the system locale instead of the active WideQuick language. Fixed. |
 | 8 | Documents | Tag structure `C_c.D_d.S_o_s` was incorrectly split, causing object tree build failures. Fixed with proper parsing. |
+| 9 | Calendar | Maintenance reminders were appearing on two calendar days instead of one. Fixed by snapping the reminder block to the start of the day. |
 
 ---
 
@@ -87,7 +90,7 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 
 | Area | Change |
 |---|---|
-| **New project translation strings** | Alarm acknowledgement, history import labels, settings and privilege labels, dashboard widget labels, report scheduler time controls, calendar month and day names, document group labels, and map indicator tooltips. |
+| **New project translation strings** | Alarm acknowledgement, history import labels, settings and privilege labels, dashboard widget labels, report scheduler time controls, calendar month and day names, document group labels, map indicator tooltips, mail status strings ("Sending…", "Sent!", "Send failed"), and report status strings ("Creating report…", "Report done!"). |
 | **Removed** | Orphaned Swedish source strings. |
 | **Verified** | All Swedish source strings now have a corresponding translation entry. |
 | **Languages updated** | Arabic, Bulgarian, Croatian, Czech, Danish, English, Finnish, French, German, Hungarian, Italian, Mandarin, Norwegian, Polish, Portuguese (PT + BR), Romanian, Slovenian, Spanish, Swedish. |
@@ -104,6 +107,7 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 | `Report.klib` | Report template and layout changes |
 | `COMPONENTS.klib` | Component updates |
 | `COMPONENTS_Legacy.klib` | Legacy component updates |
+| `Dampers_Legacy.klib` | Legacy component updates |
 | `COMMON_STATIC.klib` | Static component updates |
 | `Calendar.klib` | Calendar display updates |
 | `CustomPopupObjects.klib` | Popup object updates |

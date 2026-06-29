@@ -56,6 +56,8 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 | **Styrkurva** | Popup-fönstret visar nu det aktuella värdet på kurvan. Den kan även placeras direkt i en arbetsvy i stället för enbart som ett popup-fönster. |
 | **Styrkurva tid** | Uppdaterad till samma funktionsnivå som den vanliga Styrkurvan och visuellt omarbetad. En vertikal linje spårar aktuell klocktid i realtid på grafen. En horisontell linje spårar det aktuella Y0-procesvärdet. X-axelns etikett visar nu aktuell tid i formatet HH:MM. Datapunktsrutor är arrangerade i två kolumner (tidigare en enda kolumn) med stöd för upp till 24 synliga punkter. Förhandsgranskningskurvan uppdateras nu även när Y-axelns min- och maxvärden ändras, inte bara när datapunkter redigeras. |
 | **Styrkurva — oberoende sparande och laddning av begränsningsvärden** | Både Styrkurva och Styrkurva tid sparar och läser nu in övre och nedre begränsningsvärden oberoende av varandra. Tidigare krävdes att båda begränsningshandtagen var synliga för att något av värdena skulle inkluderas i en sparad profil. |
+| **Styrkurva — förhindra duplicerade profilnamn** | Det är nu blockerat att byta namn på en profil till ett namn som redan används av en annan profil. |
+| **Styrkurva — spårningslogg** | `Spårningslogg.kvie` uppdaterad med stöd för styrkurvans spårningslogg. |
 | **Process-popup** | Visuell uppdatering med korrigerad elementplacering och avstånd. |
 | **Stäng popout** | Popout-fönster som öppnats via en länk använder nu korrekt stängningsåtgärd i stället för `app.popup.visible`. |
 | **SubNav-popup** | Initierar nu subnav-routeträdet vid behov för korrekt beteende i webbklienter. Standardfallback-vy korrigerad till `Dashboard Energi.kvie`. |
@@ -79,6 +81,7 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 | 6 | Rapporter | Kolumnordning i loggerlistan var felaktig. Åtgärdat. |
 | 7 | Kalender | Månads- och dagnamn renderades med systemets locale i stället för det aktiva WideQuick-språket. Åtgärdat. |
 | 8 | Dokument | Taggstrukturen `C_c.D_d.S_o_s` delades felaktigt, vilket orsakade fel vid uppbyggnad av objektträdet. Åtgärdat med korrekt parsning. |
+| 9 | Kalender | Underhållspåminnelser visades på två kalenderdagar i stället för en. Åtgärdat genom att låsa påminnelseblocket till början av dagen. |
 
 ---
 
@@ -86,7 +89,7 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 
 | Område | Förändring |
 |---|---|
-| **Nya projektöversättningssträngar** | Larmkvittering, historikimportetiketter, inställnings- och privilegieetiketter, instrumentpanelens widgetsträngar, rapportschemaläggningens tidskontroller, kalendarns månads- och dagnamn, dokumentgruppsetiketter och kartnålarnas tooltip-texter. |
+| **Nya projektöversättningssträngar** | Larmkvittering, historikimportetiketter, inställnings- och privilegieetiketter, instrumentpanelens widgetsträngar, rapportschemaläggningens tidskontroller, kalendarns månads- och dagnamn, dokumentgruppsetiketter, kartnålarnas tooltip-texter, e-poststatussträngar ("Skickar…", "Skickat!", "Misslyckades") och rapportstatussträngar ("Skapar rapport…", "Rapport klar!"). |
 | **Borttaget** | Överblivna svenska källsträngar. |
 | **Verifierat** | Alla svenska källsträngar har nu en motsvarande översättningspost. |
 | **Uppdaterade språk** | Arabiska, bulgariska, kroatiska, tjeckiska, danska, engelska, finska, franska, tyska, ungerska, italienska, mandarin, norska, polska, portugisiska (PT + BR), rumänska, slovenska, spanska, svenska. |
@@ -103,6 +106,7 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 | `Report.klib` | Ändringar av rapportmall och layout |
 | `COMPONENTS.klib` | Komponentuppdateringar |
 | `COMPONENTS_Legacy.klib` | Uppdateringar av äldre komponenter |
+| `Dampers_Legacy.klib` | Uppdateringar av äldre komponenter |
 | `COMMON_STATIC.klib` | Uppdateringar av statiska komponenter |
 | `Calendar.klib` | Uppdateringar av kalendervisning |
 | `CustomPopupObjects.klib` | Uppdateringar av popup-objekt |
