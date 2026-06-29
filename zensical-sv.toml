@@ -322,7 +322,10 @@ nav = [
       { "Suffixsystem" = "bms/reference/suffix-system.md" },
       { "Taggstruktur" = "bms/reference/tag-structure.md" },
     ]},
-    { "Versioner" = "bms/releases/index.md" },
+    { "Versioner" = [
+      { "Versionsnoteringar" = "bms/releases/index.md" },
+      { "Migreringsguide" = "bms/releases/MigrationGuide.md" },
+    ]},
   ]},
   { "Water & Wastewater Treatment" = [
     { "Översikt" = "wwt/index.md" },

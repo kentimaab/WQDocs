@@ -355,7 +355,10 @@ nav = [
       { "Suffix System" = "bms/reference/suffix-system.md" },
       { "Tag Structure" = "bms/reference/tag-structure.md" },
     ]},
-    { "Releases" = "bms/releases/index.md" },
+    { "Releases" = [
+      { "Release Notes" = "bms/releases/index.md" },
+      { "Migration Guide" = "bms/releases/MigrationGuide.md" },
+    ]},
   ]},
   { "Water & Wastewater Treatment" = [
     { "Overview" = "wwt/index.md" },
