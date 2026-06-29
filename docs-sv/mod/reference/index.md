@@ -44,7 +44,7 @@ Tekniskt referensmaterial för WideQuick MOD. Dessa sidor beskriver hur systemet
 * [**Manöver**](Popup/Maneuver.md) — Byte av driftläge och manuell börvärdesstyrning (suffixberoende).
 * [**Tidskanal**](Popup/Time-channel.md) — Konfiguration av tidsbaserat schema (suffixberoende).
 * [**Styrkurva**](Popup/Control%20curve.md) — Icke-linjär styrkurveeditor (suffixberoende).
-* [**Styrkurva Tid**](Popup/Control%20curveTime.md) — Tidsbaserad styrkruveeditor (suffixberoende).
+* [**Styrkurva Tid**](Popup/Control%20curveTime.md) — Tidsbaserad styrkurveeditor (suffixberoende).
 ---
 
 ### Resurser och Resurspaket
