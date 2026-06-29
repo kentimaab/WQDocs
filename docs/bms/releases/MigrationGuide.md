@@ -56,6 +56,16 @@ panel.
 5. Close the application and start it again.
 
 6. After the second restart all changes are applied. The `scCheck.js` script can
-now safely be deleted from the project.
+now safely be deleted from the project. This script is a one-time migration script
+that runs on startup to add missing suffix aliases, update user privileges, and
+correct database connection settings from the 2026.1.0 release. It is no longer
+needed once the migration is complete.
+
+!!! note
+    The 2026.1.0 Template and Demo projects shipped with a bug where the **Larm**,
+    **Maintenance**, and **History** database connections were missing their database
+    name. `scCheck.js` corrects this automatically, but only if the connections are
+    still in their original bugged state. Any database connections that have already
+    been configured by the integrator will not be touched.
 
 </details>

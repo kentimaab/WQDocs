@@ -57,6 +57,15 @@ resurspanelen.
 5. Stäng applikationen och starta den igen.
 
 6. Efter den andra omstarten är alla ändringar tillämpade. Skriptet `scCheck.js`
-kan nu tas bort från projektet.
+kan nu tas bort från projektet. Detta skript är ett engångsmigrationsskript som
+körs vid uppstart för att lägga till saknade suffixalias, uppdatera
+användarprivilegier och korrigera databasanslutningsinställningar från
+2026.1.0-versionen. Det behövs inte längre när migreringen är klar.
 
+!!! note
+    Template- och Demo-projekten i version 2026.1.0 innehöll ett fel där
+    databasanslutningarna **Larm**, **Underhåll** och **Historik** saknade sitt
+    databasnamn. `scCheck.js` korrigerar detta automatiskt, men endast om
+    anslutningarna fortfarande är i sitt ursprungliga felaktiga skick.
+    Databasanslutningar som redan har konfigurerats av integratören påverkas inte.
 </details>
