@@ -33,7 +33,7 @@ value for reference.
 
 When a saved profile is loaded, it is displayed as a dashed line alongside the live
 curve, allowing the two to be compared before the profile is applied. The pink
-dashed border shows the configured Y-axis clamp range.
+dashed border shows the configured Y-axis clamp range (see [Clamp range](#clamp-range)).
 
 Nodes on the live curve can be dragged to adjust the curve shape, or edited directly
 in the data point table below the graph.
@@ -43,6 +43,18 @@ in the data point table below the graph.
 vertically, preventing accidental changes to the time values
 * **Data point table** — shows the time and Y values for each node with their units.
 Values can be edited directly in the table as an alternative to dragging
+
+## Clamp range
+
+A clamp range sets hard Y-axis limits on the curve. When a clamp is configured,
+nodes cannot be moved above the maximum or below the minimum clamp value,
+restricting edits to a defined operating band.
+
+The clamp boundaries are displayed as a pink dashed border on the graph.
+
+Clamp values are stored as part of the profile and are saved and loaded with it.
+The **Clamp min** and **Clamp max** fields in the profile panel require the
+`ControlCurve_EditProfiles` privilege to edit.
 
 ## Saved profiles
 

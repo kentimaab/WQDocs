@@ -35,6 +35,18 @@ horisontell linje i grafen och indikerar det aktuella indatavärdet.
   enheter. Värdena kan redigeras direkt i tabellen som ett alternativ till att
   dra
 
+## Klämintervall
+
+Ett klämintervall anger hårda gränser för Y-axeln på kurvan. När ett klämintervall
+är konfigurerat kan noder inte flyttas ovanför det högsta eller nedanför det lägsta
+klämvärdet, vilket begränsar redigeringen till ett definierat driftintervall.
+
+Klämbegränsningarna visas som rosa prickade horisontella linjer i grafen.
+
+Klämvärdena lagras som en del av receptet och sparas och läses in tillsammans med
+det. Fälten **Kläm min** och **Kläm max** i receptpanelen kräver privilegiet
+`ControlCurve_EditProfiles` för att redigeras.
+
 ## Sparade recept
 
 Panelen **Sparade recept** gör det möjligt att spara, läsa in och hantera

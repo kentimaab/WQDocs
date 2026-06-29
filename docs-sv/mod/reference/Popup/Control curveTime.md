@@ -32,7 +32,7 @@ dygnet och en rosa horisontell linje visar det aktuella procesvärdet som refere
 
 När en sparad profil läses in visas den som en streckad linje bredvid den aktiva
 kurvan, vilket gör det möjligt att jämföra de två innan profilen tillämpas. Den
-rosa streckade ramen visar det konfigurerade begränsningsintervallet för Y-axeln.
+rosa streckade ramen visar det konfigurerade klämintervallet för Y-axeln (se [Klämintervall](#klämintervall)).
 
 Noder på den aktiva kurvan kan dras för att justera kurvans form, eller redigeras
 direkt i datapunktstabellen nedanför grafen.
@@ -42,6 +42,18 @@ direkt i datapunktstabellen nedanför grafen.
 vertikalt, vilket förhindrar oavsiktliga ändringar av tidsvärdena
 * **Datapunktstabellen** — visar tid- och Y-värden för varje nod med sina enheter.
 Värden kan redigeras direkt i tabellen som ett alternativ till att dra noderna
+
+## Klämintervall
+
+Ett klämintervall anger hårda gränser för Y-axeln på kurvan. När ett klämintervall
+är konfigurerat kan noder inte flyttas ovanför det högsta eller nedanför det lägsta
+klämvärdet, vilket begränsar redigeringen till ett definierat driftintervall.
+
+Klämbegränsningarna visas som en rosa streckad ram i grafen.
+
+Klämvärdena lagras som en del av profilen och sparas och läses in tillsammans med
+den. Fälten **Kläm min** och **Kläm max** i profilpanelen kräver privilegiet
+`ControlCurve_EditProfiles` för att redigeras.
 
 ## Sparade profiler
 

@@ -33,6 +33,18 @@ preventing accidental changes to the X-axis values
 * **Data point table** — shows the X and Y values for each node with their units.
 Values can be edited directly in the table as an alternative to dragging
 
+## Clamp range
+
+A clamp range sets hard Y-axis limits on the curve. When a clamp is configured,
+nodes cannot be moved above the maximum or below the minimum clamp value,
+restricting edits to a defined operating band.
+
+The clamp boundaries are displayed as pink dotted horizontal lines on the graph.
+
+Clamp values are stored as part of the recipe and are saved and loaded with it.
+The **Clamp min** and **Clamp max** fields in the recipe panel require the
+`ControlCurve_EditProfiles` privilege to edit.
+
 ## Saved recipes
 
 The **Saved recipes** panel allows curve configurations to be saved, loaded, and
