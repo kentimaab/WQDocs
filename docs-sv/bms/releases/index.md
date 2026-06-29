@@ -15,11 +15,118 @@ Versionsnoteringar för WideQuick BMS. Den senaste versionen visas först och ä
 en specifik version av WideQuick Modular Framework, länkad under respektive rubrik. För hela
 ramverkets ändringslogg, se [MOD-versioner](../../mod/releases/index.md).
 
+## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
+__Released <!-- DATE -->__
+Modular Framework Version: <!-- MOD VERSION LINK -->
+<details class="release" markdown="1" open>
+<summary>Release notes</summary>
+
+### Nya funktioner
+
+| Funktion | Beskrivning |
+|---|---|
+| **Tidskanalsprofiler** (`scTimeChannel.js`) | Ett nytt skriptbibliotek som låter användare spara och läsa in namngivna tidskanalscheman. En profil sparar på/av-värdena för alla dagtyper — veckodagar, helger, helgdagar och upp till tre specialdagar — för en given tagg och lagrar dem i Config-databasen för senare återanvändning. |
+| **Historik — Importera från alla** | Ny arbetsvy `ImportFromAll.kvie` under `Common_Popup/HistorikPopups/` för att importera historiska signalgrupper från vilken del som helst av projektet. |
+| **Historik — Importera sparade signaler** | Ny arbetsvy `ImportSavedSignals.kvie` för att importera från tidigare sparade signalurval. |
+
+---
+
+### Förbättringar
+
+| Område | Förändring |
+|---|---|
+| **Rapportschemaläggare** | Rapporter kan nu skickas vid en specifik tid på dagen (±5 min noggrannhet). Tre nya databaskolumner har lagts till i `reportSchedules`: `trigger_time`, `trigger_day` och `trigger_month`. `checkTrigger`-logiken har skrivits om och `ReportSchedule1.kvie` har uppdaterats med nya UI-kontroller. |
+| **Kart pins** | Kart pins använder inte längre tooltip-objekt. De skapas nu med `createObject`, vilket ger bättre kontroll över visningen och gör dem mer stabila i webbklienten. |
+| **Karta — navigeringsdjup för mappar** | Navigering från kart pins till mappar var begränsad till 1 nivå djup. Den kan nu navigera till valfritt djup. |
+| **Karta — larmtextöversättning** | Larmtexter som visas i kart pins popup körs nu genom `Language.translate` så att de respekterar det aktiva språket. |
+| **Karta — `mapView`-egenskap** | Alla interna `mapViews`-referenser har korrigerats till `mapView`. Kartan (`Karta.kvie`) visas inte längre ovanför navigeringsfältet i webbklienten. |
+| **Dashboard — stapeldiagram** | Stapeldiagrammet stöder nu grupperingsvy per dagar, veckor och år. |
+| **Dashboard — utökad vy** | Historikens angiven tid gäller nu även i den utökade popup-vyn. Cirkel-, stapel- och historikwidgetar initieras nu vid laddning via `scDashboard`. Den utökade förklaringen visar det aktuella värdet vid linjalens position och andelen i procent där det är tillämpligt. Åtgärdat att kolumnbredder i den utökade listan kunde sträckas ut av långt innehåll. |
+| **Kalender** | Månadsnamn och veckodagsnamn körs nu genom `Language.translate` och matchar det valda gränssnittsspråket. |
+| **Larmsändare — tidslucka 2** | Lade till kolumnen `slot2_active` i `mail_schedules` så att varje veckodag självständigt kan aktivera eller inaktivera sin andra tidslucka. |
+| **Larmsändare — veckodag** | Åtgärdat ett off-by-one-fel där `getDay()` förskjöt alla larmdagar med en dag. Ett måndag-först-index används nu korrekt. |
+| **Larmsändare — midnattssändning** | Tidsluckor med `00:00 – 00:00` behandlas nu som inaktiverade i stället för att utlösa en midnattssändning. |
+| **Larmsändare — timervakt** | Timerfördröjningen skyddar nu mot ett noll eller negativt `timeToSend`-värde och använder minst 2 sekunder som standard. |
+| **Larmschema** | Redigering av ett befintligt schema återställer inte längre `emailActive` till 0 utan att meddela användaren. `00:00 till 00:00` är standardtillståndet för inaktiverade nya scheman. Knappar följer nu det aktiva temat. |
+| **Larm-e-post och SMS** | Alla hårdkodade svenska etiketter körs nu genom `Language.translate` så att de visas på användarens aktiva språk. |
+| **Historik / VySpecifikHistorik** | Kan nu läsa in signalgrupper från andra delar av projektet. Signallistan har bytts från en platt lista till en trädvy. Maximalt antal signaler har sänkts för att förbättra prestanda. Taggar som inte loggas visas nu tydligt. |
+| **Underhåll** | Lade till fältet `reminder_enabled` i underhållsmallar. Gränssnittet visar nu en kryssruta för påminnelse i mallredigeraren. |
+| **Dokument och Underhåll** | Båda modulerna hanterar nu taggstrukturen `C_c.D_d.S_o_s` utöver tidigare stödda format. |
+| **Dokument — UI-etiketter** | Dokumentlistans grupperingsrubriker körs nu genom `Language.translate`. |
+| **Styrkurva** | Popup-fönstret visar nu det aktuella värdet på kurvan. Den kan även placeras direkt i en arbetsvy i stället för enbart som ett popup-fönster. |
+| **Styrkurva tid** | Uppdaterad till samma funktionsnivå som den vanliga Styrkurvan och visuellt omarbetad. En vertikal linje spårar aktuell klocktid i realtid på grafen. En horisontell linje spårar det aktuella Y0-procesvärdet. X-axelns etikett visar nu aktuell tid i formatet HH:MM. Datapunktsrutor är arrangerade i två kolumner (tidigare en enda kolumn) med stöd för upp till 24 synliga punkter. Förhandsgranskningskurvan uppdateras nu även när Y-axelns min- och maxvärden ändras, inte bara när datapunkter redigeras. |
+| **Styrkurva — oberoende sparande och laddning av begränsningsvärden** | Både Styrkurva och Styrkurva tid sparar och läser nu in övre och nedre begränsningsvärden oberoende av varandra. Tidigare krävdes att båda begränsningshandtagen var synliga för att något av värdena skulle inkluderas i en sparad profil. |
+| **Process-popup** | Visuell uppdatering med korrigerad elementplacering och avstånd. |
+| **Stäng popout** | Popout-fönster som öppnats via en länk använder nu korrekt stängningsåtgärd i stället för `app.popup.visible`. |
+| **SubNav-popup** | Initierar nu subnav-routeträdet vid behov för korrekt beteende i webbklienter. Standardfallback-vy korrigerad till `Dashboard Energi.kvie`. |
+| **Inställningar** | Inställningsvyn respekterar nu användarens privilegienivåer. |
+| **`scPlatform`** | Alla timers anropar nu `setSingleShot(true)` för att förhindra upprepade aktiveringar efter den initiala detekteringen. |
+| **Väder** | En dataändringstriggare har lagts till så att väderwidgeten uppdateras automatiskt när underliggande data ändras. |
+| **"E-post"-etikett** | Alla ställen som tidigare visade "Epost" använder nu konsekvent "Email". Textrutor har anpassats för att rymma översatta strängar. |
+| **Språk icon** | Språkikonen är nu kvadratisk för konsekvent visning i inställningar. |
+
+---
+
+### Buggar
+
+| # | Område | Beskrivning |
+|---|---|---|
+| 1 | Larmschema | Redigering av ett schema återställde tyst `emailActive` till 0. Åtgärdat. |
+| 2 | Larmsändare | Off-by-one-fel i veckodagsindex gjorde att alla schemalagda larmfönster hamnade på fel dag. Åtgärdat. |
+| 3 | Karta | Mappnavigering från kartnålar var begränsad till en katalognivå. Åtgärdat för att stödja obegränsat djup. |
+| 4 | Datumkonfiguration | Hantering av översättningssträngar orsakade att datumkonfigurationen misslyckades när locale-formatet producerade en icke-numerisk sträng. Datumjämförelse använder nu numeriska värden direkt. |
+| 5 | Dashboard | Kolumnbredder i den utökade listan sträcktes ut av långt innehåll. Åtgärdat. |
+| 6 | Rapporter | Kolumnordning i loggerlistan var felaktig. Åtgärdat. |
+| 7 | Kalender | Månads- och dagnamn renderades med systemets locale i stället för det aktiva WideQuick-språket. Åtgärdat. |
+| 8 | Dokument | Taggstrukturen `C_c.D_d.S_o_s` delades felaktigt, vilket orsakade fel vid uppbyggnad av objektträdet. Åtgärdat med korrekt parsning. |
+
+---
+
+### Översättningar
+
+| Område | Förändring |
+|---|---|
+| **Nya projektöversättningssträngar** | Larmkvittering, historikimportetiketter, inställnings- och privilegieetiketter, instrumentpanelens widgetsträngar, rapportschemaläggningens tidskontroller, kalendarns månads- och dagnamn, dokumentgruppsetiketter och kartnålarnas tooltip-texter. |
+| **Borttaget** | Överblivna svenska källsträngar. |
+| **Verifierat** | Alla svenska källsträngar har nu en motsvarande översättningspost. |
+| **Uppdaterade språk** | Arabiska, bulgariska, kroatiska, tjeckiska, danska, engelska, finska, franska, tyska, ungerska, italienska, mandarin, norska, polska, portugisiska (PT + BR), rumänska, slovenska, spanska, svenska. |
+
+---
+
+### Biblioteks- och vyändringar
+
+| Fil | Förändring |
+|---|---|
+| `Translations.klib` | Stora strängadditioner och rensning för alla språk |
+| `Dashboard Widgets.klib` | Widget- och språkuppdateringar |
+| `Map Indicators.klib` | Uppdateringar av kart pins, indikatorer och tooltips |
+| `Report.klib` | Ändringar av rapportmall och layout |
+| `COMPONENTS.klib` | Komponentuppdateringar |
+| `COMPONENTS_Legacy.klib` | Uppdateringar av äldre komponenter |
+| `COMMON_STATIC.klib` | Uppdateringar av statiska komponenter |
+| `Calendar.klib` | Uppdateringar av kalendervisning |
+| `CustomPopupObjects.klib` | Uppdateringar av popup-objekt |
+| `WorkviewNameDisplay.klib` | Uppdateringar av arbetsvy-namnvisning |
+| `Buttons.klib` | Nya knappdefintioner |
+| `AlarmSchedule_1.kvie` | Fullständig UI-omarbetning för tidslucka 2 och tema |
+| `ReportSchedule1.kvie` | Nya sändningstidskontroller |
+| `VySpecifikHistorik.kvie` | Laddning av signalgrupper från andra system |
+| `Historik.kvie` | Signalgrupper från andra system, trädvy för signallista, max antal sänkt |
+| `Dashboard *.kvie` | Förbättringar av stapeldiagram, förklaring och laddning |
+| `Karta.kvie` | Rättning av navigeringsfältets z-ordning för webb |
+| `WORKSPACE.kvie` | Uppdateringar av arbetsytelayout |
+| `LB01/LB02/LB03.kvie` | Uppdateringar av VVS-vyer, standard och äldre |
+| `VS11 / VV10–VS20.kvie` | Uppdateringar av värmesystemsvyer |
+| `Larm - Logg.kvie` | Uppdateringar av larmloggsvy |
+| `Inställningar.kvie` | Inställningsvy med privilegiestöd |
+
+</details>
+
 
 ## WideQuick BMS 2026.1.0 { #bms-2026-1-0 }
 __Utgiven 2026-05-21__
 Modular Framework-version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0) 
-<details class="release" markdown="1" open>
+<details class="release" markdown="1" close>
 <summary>Versionsnoteringar</summary>
 
 Detta är den första versionen av WideQuick BMS i Modular Framework-familjen — byggnadsstyrningskonceptet ombyggt på Modular Framework-grunden. Den samlar det fullständiga ramverkets funktionsuppsättning (flerspråksstöd, en systemintegrerad loggbok, en underhållskalender, dokumenthantering samt brett stöd för webb- och fjärrklienter) tillsammans med de byggnadsstyrningsverktyg som definierar BMS-konceptet, såsom tidskanaler, ändamålsenliga suffix, styrkurvor och färdiga byggnadsöversikter.

@@ -19,9 +19,28 @@ matching the `_TK` suffix.
 
 ![Time Channel popup](/docs/Images/Popups/Time-channel.png)
 
+## Save and fetch
+
+The **Save** and **Fetch** buttons allow Time Channel configurations to be stored
+and reused across the project.
+
+**Save** stores the current schedule — including all weekday and special day time
+slots — to the database under the object's tag name. This means each object stores
+its own configuration independently, making it possible to maintain separate
+schedules for different objects.
+
+**Fetch** opens a popup listing all saved Time Channel configurations. Select a
+configuration from the list to load it into the current object. This makes it easy
+to apply a previously saved schedule to a new object, copy schedules between
+objects, or restore a known configuration after changes.
+
+!!! tip
+    Save a baseline configuration before making adjustments. If the new schedule
+    does not work as intended, use **Fetch** to restore a previously saved state.
+
 ## Channel status
 
-The top right panel displays the current status of the time channel — whether it is
+The top right panel displays the current status of the Time Channel — whether it is
 active or inactive — alongside a clock showing the current time.
 
 ## Weekdays
@@ -46,20 +65,16 @@ Each special day supports the same two-period schedule as weekdays.
 
 ## Hand ctrl
 
-The **Hand ctrl** panel allows the time channel to be overridden manually:
+The **Hand ctrl** panel allows the Time Channel to be overridden manually:
 
-* **Auto** — the time channel follows the configured schedule
-* **Hand** — the time channel is controlled manually, ignoring the schedule
+* **Auto** — the Time Channel follows the configured schedule
+* **Hand** — the Time Channel is controlled manually, ignoring the schedule
 
-The current output status of the time channel is also shown:
+The current output status of the Time Channel is also shown:
 
-* **From** — the time channel output is currently off
-* **Till** — the time channel output is currently on
+* **From** — the Time Channel output is currently off
+* **Till** — the Time Channel output is currently on
 
-## Save and fetch
-
-The **Save** and **Fetch** buttons allow the current schedule configuration to be
-saved to the database or retrieved from a previously saved configuration.
 
 ## Default suffix aliases
 
@@ -68,7 +83,7 @@ specific signal. The key suffixes are:
 
 | Suffix alias | Suffix | Description |
 |---|---|---|
-| `timechannelIsActive` | `_TK` | Indicates whether the time channel is active |
+| `timechannelIsActive` | `_TK` | Indicates whether the Time Channel is active |
 | `timechannelManualControl` | `_TK1_0` | Switches between Auto and Hand mode |
 | `timechannelManualCommand` | `_TK4_5` | Sets the output state in Hand mode |
 
