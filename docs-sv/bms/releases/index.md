@@ -16,7 +16,7 @@ en specifik version av WideQuick Modular Framework, länkad under respektive rub
 ramverkets ändringslogg, se [MOD-versioner](../../mod/releases/index.md).
 
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
-__Utgiven 2026-06-30__
+__Utgiven 2026-07-01__
 Modular Framework Version: <!-- MOD VERSION LINK -->
 <details class="release" markdown="1" open>
 <summary>Release notes</summary>

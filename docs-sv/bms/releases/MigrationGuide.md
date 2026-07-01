@@ -45,7 +45,7 @@ resurspanelen.
 
     ![Importera resurs](/docs/sv/Images/Resources/MigrationImport.gif)
 
-    När alla filer är inställda på **Ersätt**, klicka på **Importera** för att
+    När alla filer är inställda på **Ersätt** inklusive Datalager variablerna, klicka på **Importera** för att
     starta processen.
 
     !!! warning

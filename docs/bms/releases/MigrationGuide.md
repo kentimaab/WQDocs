@@ -44,7 +44,7 @@ panel.
 
     ![Import resource](/docs/Images/Resources/MigrationImport.gif)
 
-    When all files are set to **Replace**, click **Import** to start the process.
+    When all files are set to **Replace** including the ones in the Data Store, click **Import** to start the process.
 
     !!! warning
         Once **Import** is clicked, do not interact with the application until it

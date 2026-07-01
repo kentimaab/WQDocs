@@ -18,7 +18,7 @@ framework changelog see the [MOD releases](../../mod/releases/index.md).
 
 
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
-__Released 2026-06-30__
+__Released 2026-07-01__
 Modular Framework Version: <!-- MOD VERSION LINK -->
 <details class="release" markdown="1" open>
 <summary>Release notes</summary>
