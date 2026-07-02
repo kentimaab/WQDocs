@@ -11,7 +11,7 @@ tags:
 
 # WideQuick Water and Wastewater Treatment (WWT)
 
-<img src="../pics/WWT-1_1000x246.png" style="width:100%;box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"></img>
+<img src="/docs/Images/wwt/WWT-1_1000x246.png" style="width:100%;box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);"></img>
 
 WideQuick WWT is a concept application built on the [WideQuick Modular Framework](../../mod/index.md), purpose-built for water and wastewater treatment. Like [WideQuick BMS](../../bms/index.md), it inherits the full MOD foundation — modules, scripting, and tooling — extended with industry-specific functionality for water facilities.
 

@@ -22,7 +22,7 @@ har signaler som matchar de konfigurerade suffixaliasen.
 För den vanliga styrkurvan där X-axeln är ett numeriskt processvärde i stället för
 tid, se [Styrkurva](Control%20curve.md).
 
-![Styrkurva tid-popup](/Images/Popups/Control_CurveTime.png)
+![Styrkurva tid-popup](/docs/sv/Images/Popups/Control_CurveTime.png)
 
 ## Styrkurvegrafen
 
