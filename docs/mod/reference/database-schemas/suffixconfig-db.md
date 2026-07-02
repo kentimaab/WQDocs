@@ -13,9 +13,9 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# SuffixConfig.db
+# SuffixConfig database
 
-SuffixConfig.db contains a single table that stores the suffix object configuration for the project.
+The SuffixConfig database contains a single table that stores the suffix object configuration for the project.
 
 ## Tables { #tables }
 

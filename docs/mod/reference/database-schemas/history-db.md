@@ -13,9 +13,9 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# History.db
+# History database
 
-History.db does not have a fixed set of tables. Tables are created automatically when loggers are configured in **WideQuick Designer®**. Each logger produces a pair of tables identified by a hash derived from the logger name.
+The History database does not have a fixed set of tables. Tables are created automatically when loggers are configured in **WideQuick Designer®**. Each logger produces a pair of tables identified by a hash derived from the logger name.
 
 ## Table naming { #table-naming }
 
@@ -30,6 +30,6 @@ The hash is generated from the logger name and stays stable as long as the logge
 
 ## Querying { #querying }
 
-The `scHistory` script resolves the correct table names at runtime by reading the meta table. Direct queries against History.db should use the meta table to look up column names rather than hardcoding them, as column layout varies between loggers.
+The `scHistory` script resolves the correct table names at runtime by reading the meta table. Direct queries against the History database should use the meta table to look up column names rather than hardcoding them, as column layout varies between loggers.
 
 <!-- --8<-- [end:body] -->

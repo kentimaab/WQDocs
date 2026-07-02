@@ -18,10 +18,13 @@ Tekniskt referensmaterial för WideQuick MOD. Dessa sidor beskriver hur systemet
 
 ### [Databasscheman](database-schemas/index.md) { #database-schemas }
 
-* [**Config.db**](database-schemas/config-db.md) — Navigation, rapporter, loggbok, objekt, dokument och modulkonfiguration.
-* [**History.db**](database-schemas/history-db.md) — Dynamiskt genererade loggartabeller för signalhistorik.
-* [**maintenance.db**](database-schemas/maintenance-db.md) — Underhållsuppgifter, kalenderhändelser och register för fjärrsystem.
-* [**SuffixConfig.db**](database-schemas/suffixconfig-db.md) — Konfiguration av suffixobjekt.
+* [**Config**](database-schemas/config-db.md) — Navigation, rapporter, loggbok, objekt, dokument och modulkonfiguration.
+* [**History**](database-schemas/history-db.md) — Dynamiskt genererade loggartabeller för signalhistorik.
+* [**Maintenance**](database-schemas/maintenance-db.md) — Underhållsuppgifter, kalenderhändelser och register för fjärrsystem.
+* [**SuffixConfig**](database-schemas/suffixconfig-db.md) — Konfiguration av suffixobjekt.
+* [**BackUpAndRestore**](database-schemas/backupandrestore-db.md) — Variabler valda för säkerhetskopiering, sparade säkerhetskopior och deras värden.
+* [**EventList**](database-schemas/eventlist-db.md) — Systemets händelselogg och lista över variabler som bevakas av Spårningslogg.
+* [**Larmlista**](database-schemas/larmlista-db.md) — Loggade statusändringar för larm.
 
 ---
 

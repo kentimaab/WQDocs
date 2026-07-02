@@ -9,9 +9,9 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# SuffixConfig.db
+# SuffixConfig-databas
 
-SuffixConfig.db innehåller en enda tabell som lagrar suffix-objektkonfigurationen för projektet.
+SuffixConfig-databasen innehåller en enda tabell som lagrar suffix-objektkonfigurationen för projektet.
 
 ## Tabeller { #tables }
 

@@ -10,9 +10,9 @@ tags:
 
 <!-- --8<-- [start:body] -->
 
-# History.db
+# History-databas
 
-History.db har ingen fast uppsättning tabeller. Tabeller skapas automatiskt när loggenheter konfigureras i **WideQuick Designer®**. Varje loggenhet skapar ett par tabeller som identifieras av en hash som härleds från loggenhetens namn.
+History-databasen har ingen fast uppsättning tabeller. Tabeller skapas automatiskt när loggenheter konfigureras i **WideQuick Designer®**. Varje loggenhet skapar ett par tabeller som identifieras av en hash som härleds från loggenhetens namn.
 
 ## Tabellnamn { #table-naming }
 
@@ -27,6 +27,6 @@ Hashen genereras från loggenhetens namn och förblir stabil så länge loggenhe
 
 ## Frågor { #querying }
 
-Skriptet `scHistory` löser upp rätt tabellnamn vid körning genom att läsa metatabellen. Direkta frågor mot History.db bör använda metatabellen för att slå upp kolumnnamn i stället för att hårdkoda dem, eftersom kolumnlayouten varierar mellan loggenheter.
+Skriptet `scHistory` löser upp rätt tabellnamn vid körning genom att läsa metatabellen. Direkta frågor mot History-databasen bör använda metatabellen för att slå upp kolumnnamn i stället för att hårdkoda dem, eftersom kolumnlayouten varierar mellan loggenheter.
 
 <!-- --8<-- [end:body] -->

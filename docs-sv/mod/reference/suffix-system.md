@@ -16,7 +16,7 @@ Suffixsystemet är hur WideQuick MOD kopplar ett klickbart objekt i en arbetsvy 
 
 Länken mellan objekt och parameter är en namnkonvention: en kort sträng (suffixet) som läggs till bastaggnamnet. För ett objekt med namnet `MB.AS01.SYS_PUMP1` resulterar suffixet `_BV` i Datalager-taggen `MB.AS01.SYS_PUMP1_BV`. Om den taggen finns visas motsvarande kontroll.
 
-Konfigurationen lagras i `SuffixConfig.db` som en JSON-struktur kallad `SuffixObj`. Strukturen laddas av `scSuffix` vid uppstart och läses av `scSmartPopup` varje gång en popup öppnas.
+Konfigurationen lagras i SuffixConfig-databasen som en JSON-struktur kallad `SuffixObj`. Strukturen laddas av `scSuffix` vid uppstart och läses av `scSmartPopup` varje gång en popup öppnas.
 
 ## SuffixObj-struktur { #suffixobj-structure }
 
@@ -127,7 +127,7 @@ Denna bootstrap körs automatiskt. Ingen manuell hantering behövs i popup-arbet
 
 ## Redigera konfigurationen { #editing }
 
-Suffixkonfigurationen lagras som JSON i `SuffixConfig.db` och laddas in i minnet av `scSuffix` vid uppstart. Ändringar träder i kraft efter att körningen startas om eller skriptet laddas om.
+Suffixkonfigurationen lagras som JSON i SuffixConfig-databasen och laddas in i minnet av `scSuffix` vid uppstart. Ändringar träder i kraft efter att körningen startas om eller skriptet laddas om.
 
 `scSuffix` hanterar migrering automatiskt: om den hittar det äldre enkolumns-`JSON`-formatet i `SuffixObj` delar den upp innehållet i de tre separata kolumnerna (`Popups`, `ProcessViews`, `Views`) vid första läsningen.
 

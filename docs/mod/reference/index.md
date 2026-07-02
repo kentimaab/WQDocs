@@ -18,10 +18,13 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 
 ### [Database Schemas](database-schemas/index.md) { #database-schemas }
 
-* [**Config.db**](database-schemas/config-db.md) — Navigation, reports, logbook, objects, documents, and module configuration.
-* [**History.db**](database-schemas/history-db.md) — Dynamically generated logger tables for signal history.
-* [**maintenance.db**](database-schemas/maintenance-db.md) — Maintenance tasks, calendar events, and remote system registry.
-* [**SuffixConfig.db**](database-schemas/suffixconfig-db.md) — Suffix object configuration.
+* [**Config**](database-schemas/config-db.md) — Navigation, reports, logbook, objects, documents, and module configuration.
+* [**History**](database-schemas/history-db.md) — Dynamically generated logger tables for signal history.
+* [**Maintenance**](database-schemas/maintenance-db.md) — Maintenance tasks, calendar events, and remote system registry.
+* [**SuffixConfig**](database-schemas/suffixconfig-db.md) — Suffix object configuration.
+* [**BackUpAndRestore**](database-schemas/backupandrestore-db.md) — Staged backup variables, saved backups, and their values.
+* [**EventList**](database-schemas/eventlist-db.md) — System event log and Audit Trail tracked-variable list.
+* [**Larmlista**](database-schemas/larmlista-db.md) — Logged alarm status changes.
 
 ---
 

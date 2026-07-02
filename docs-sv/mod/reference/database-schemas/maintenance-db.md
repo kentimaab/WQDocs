@@ -9,9 +9,9 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# maintenance.db
+# Maintenance-databas
 
-maintenance.db lagrar allt som rör modulerna Underhåll och Kalender, inklusive uppgiftskonfigurationer, uppgiftsloggen, ändringshistorik, kalenderhändelser och registret över kända fjärrsystem.
+Maintenance-databasen lagrar allt som rör modulerna Underhåll och Kalender, inklusive uppgiftskonfigurationer, uppgiftsloggen, ändringshistorik, kalenderhändelser och registret över kända fjärrsystem.
 
 ## Underhåll { #maintenance }
 

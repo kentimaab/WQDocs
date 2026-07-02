@@ -17,7 +17,7 @@ The suffix system is how WideQuick MOD connects a clickable object in a Workview
 
 The link between object and parameter is a naming convention: a short string (the suffix) appended to the base tag name. For an object named `MB.AS01.SYS_PUMP1`, a suffix `_BV` resolves to the Data Store tag `MB.AS01.SYS_PUMP1_BV`. If that tag exists, the corresponding control is shown.
 
-Configuration lives in `SuffixConfig.db` as a JSON structure called `SuffixObj`. The structure is loaded by `scSuffix` at startup and read by `scSmartPopup` whenever a popup opens.
+Configuration lives in the SuffixConfig database as a JSON structure called `SuffixObj`. The structure is loaded by `scSuffix` at startup and read by `scSmartPopup` whenever a popup opens.
 
 ## SuffixObj structure { #suffixobj-structure }
 
@@ -128,7 +128,7 @@ This bootstrap runs automatically. No manual handling is needed in popup Workvie
 
 ## Editing the configuration { #editing }
 
-The suffix configuration is stored as JSON in `SuffixConfig.db` and loaded into memory by `scSuffix` on startup. Changes take effect after restarting the runtime or reloading the script.
+The suffix configuration is stored as JSON in the SuffixConfig database and loaded into memory by `scSuffix` on startup. Changes take effect after restarting the runtime or reloading the script.
 
 `scSuffix` handles migration automatically: if it finds the legacy single-column `JSON` format in `SuffixObj`, it splits the content into the three separate columns (`Popups`, `ProcessViews`, `Views`) on first read.
 

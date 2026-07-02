@@ -13,9 +13,9 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# maintenance.db
+# Maintenance database
 
-maintenance.db stores everything related to the Maintenance and Calendar modules, including task configurations, the task log, change history, calendar events, and the registry of known remote systems.
+The Maintenance database stores everything related to the Maintenance and Calendar modules, including task configurations, the task log, change history, calendar events, and the registry of known remote systems.
 
 ## Maintenance { #maintenance }
 

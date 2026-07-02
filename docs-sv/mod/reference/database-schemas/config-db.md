@@ -9,9 +9,9 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Config.db
+# Config-databas
 
-Config.db är den centrala konfigurationsdatabasen. Den lagrar beständigt applikationstillstånd som behöver överleva omstarter — navigationsstrukturer, objektregistreringar, schemalagda jobb, sparade användarinställningar och modulspecifik konfiguration för de flesta MOD-moduler.
+Config-databasen är den centrala konfigurationsdatabasen. Den lagrar beständigt applikationstillstånd som behöver överleva omstarter — navigationsstrukturer, objektregistreringar, schemalagda jobb, sparade användarinställningar och modulspecifik konfiguration för de flesta MOD-moduler.
 
 ## Larm { #alarms }
 

@@ -13,9 +13,9 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Config.db
+# Config database
 
-Config.db is the central configuration database. It stores persistent application state that needs to survive restarts — navigation structures, object registrations, scheduled jobs, saved user settings, and module-specific configuration across most MOD modules.
+The Config database is the central configuration database. It stores persistent application state that needs to survive restarts — navigation structures, object registrations, scheduled jobs, saved user settings, and module-specific configuration across most MOD modules.
 
 ## Alarms { #alarms }
 
