@@ -47,5 +47,5 @@ Demoprojektet är ett fullt implementerat exempel som visar all funktionalitet i
 När nedladdningen är klar, extrahera zip-filen till din önskade mapp. Den extraherade mappen innehåller:
 
 * En projektmapp — som innehåller alla projektfiler
-* `WideQuick_WWT.kpro` — dubbelklicka på den här filen för att starta projektet i **WideQuick Designer®**
+* `WideQuick_WWT.kpro` — dubbelklicka på den här filen för att starta projektet i **WideQuick® Designer**
 * För att köra förhandsvisningen, tryck på **F5** på tangentbordet.

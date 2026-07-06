@@ -41,7 +41,7 @@ New Dashboards can be created either from the template or from scratch depending
 
 ## Setting Up a New Dashboard { #setting-up-a-new-dashboard }
 
-Duplicate the dashboard template in **WideQuick Designer®** by right clicking the template in the project tree and move it to the correct folder in the project structure.
+Duplicate the dashboard template in **WideQuick® Designer** by right clicking the template in the project tree and move it to the correct folder in the project structure.
 
 ![Setting up a dashboard](/docs/Images/Dashboard/SetupDashboard.gif){align=center}
 ## Widgets - Pre-built Components for the Dashboard { #widgets-pre-built-components-for-the-dashboard }
@@ -54,7 +54,7 @@ configured directly without any custom development. Most widgets also exist in d
 
 ## Grid Layout - Positioning Widgets in the Editor { #grid-layout-positioning-widgets-in-the-editor }
 
-The dashboards in **WideQuick Designer®** uses a 4×4 grid to help with widget placement. Each grid
+The dashboards in **WideQuick® Designer** uses a 4×4 grid to help with widget placement. Each grid
 position is marked by an ellipse that acts as a placement guide. These ellipses
 are not visible at runtime.
 

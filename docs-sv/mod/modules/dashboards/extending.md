@@ -13,7 +13,7 @@ tags:
 
 ## Anpassade widgetar — Bygga nya widgetar från befintliga mallar { #custom-widgets-building-new-widgets-from-existing-templates }
 
-För att basera en ny widget på en befintlig drar du den från biblioteket `Dashboard Widgets` till en arbetsvy i **WideQuick Designer®**. Högerklicka på den placerade widgeten och välj **Disconnect from template**. Widgeten kan nu redigeras fritt. Justera layouten, lägg till eller ta bort objekt, och ändra skriptlogiken.
+För att basera en ny widget på en befintlig drar du den från biblioteket `Dashboard Widgets` till en arbetsvy i **WideQuick® Designer**. Högerklicka på den placerade widgeten och välj **Disconnect from template**. Widgeten kan nu redigeras fritt. Justera layouten, lägg till eller ta bort objekt, och ändra skriptlogiken.
 
 När ändringarna är klara drar du widgeten från arbetsvyn tillbaka till bibliotekslistan. Den lagras där som ett nytt objekt. För att byta namn på den högerklickar du på den i bibliotekslistan och anger ett nytt namn.
 
@@ -51,7 +51,7 @@ Visningsbehörigheter begränsar vilka användare som har åtkomst till en given
 
 ### Ange standardvy per roll { #setting-default-view-per-role }
 
-För att ange en annan standarddashboard per roll lägger du till logiken i `onLoad`-skriptet för Arbetsvyn `Workspace.kvie` i **WideQuick Designer®**. Använd `_sys_user_name` för att matcha en specifik användare eller `System.currentUser().hasPrivilege()` för att matcha en behörighetsnivå.
+För att ange en annan standarddashboard per roll lägger du till logiken i `onLoad`-skriptet för Arbetsvyn `Workspace.kvie` i **WideQuick® Designer**. Använd `_sys_user_name` för att matcha en specifik användare eller `System.currentUser().hasPrivilege()` för att matcha en behörighetsnivå.
 
 ```javascript title="Workspace.kvie — onLoad"
 app.MultiViewer = this.MultiviewerPage;

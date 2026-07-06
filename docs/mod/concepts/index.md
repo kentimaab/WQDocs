@@ -125,7 +125,7 @@ At the top are the **concept applications**, BMS and WWT. These are not separate
 
 The same framework runs across fundamentally different application domains. Building management systems track HVAC, access control, and energy. Water and wastewater installations monitor treatment processes, pump stations, and alarms. Batch and process industry applications manage recipes, production logging, and operator workflows.
 
-What these have in common is that they are all built from the same WideQuick MOD foundation, with the same **WideQuick Designer®** toolchain, the same module library, and the same deployment model. The domain-specific logic lives in configuration and module selection, not in a different product.
+What these have in common is that they are all built from the same WideQuick MOD foundation, with the same **WideQuick® Designer** toolchain, the same module library, and the same deployment model. The domain-specific logic lives in configuration and module selection, not in a different product.
 
 This matters for integrators who work across industries: the knowledge, tooling, and project structure transfer directly from one vertical to the next.
 

@@ -23,7 +23,7 @@ Before getting started, make sure you have the template project open in
 
 ## Step 1 - Set up a connection
 
-The first step is to set up a connection in **WideQuick Designer®**. For this example
+The first step is to set up a connection in **WideQuick® Designer**. For this example
 an **OPC UA** connection will be used, named `OPC`. A full guide on configuring OPC UA
 can be found in the WideQuick Manual by pressing ++f1++ in WideQuick Designer.
 
@@ -40,7 +40,7 @@ The following connection types are also supported:
 
 ## Step 2 — Create the tag in WideQuick
 
-In **WideQuick Designer®**, open the **Tag Editor** and click **Browse** to open
+In **WideQuick® Designer**, open the **Tag Editor** and click **Browse** to open
 the OPC UA browser. Navigate the server tree to find the signal you want to import
 and select it.
 
@@ -64,7 +64,7 @@ For more information on the tag structure see
 
 ## Step 3 - Create a Workview
 
-In **WideQuick Designer®**, create a new **Workview** inside **System 1**. This will
+In **WideQuick® Designer**, create a new **Workview** inside **System 1**. This will
 make it automatically appear in the navigation menu. For more information on how the
 navigation works see [Navigation — Get started](../modules/Core/Navigation/get-started.md).
 

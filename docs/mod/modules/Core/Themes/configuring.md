@@ -14,7 +14,7 @@ tags:
 
 ## Changing a color { #changing-a-color }
 
-In **WideQuick Designer®**, open the **Themes** branch in the project tree and double-click the theme to edit. The **Edit theme** dialog opens with three tabs: **Components**, **Custom colors**, and **Keyboard**.
+In **WideQuick® Designer**, open the **Themes** branch in the project tree and double-click the theme to edit. The **Edit theme** dialog opens with three tabs: **Components**, **Custom colors**, and **Keyboard**.
 
 ![Theme editor](/docs/Images/Themes/theme-edit-dialog.png){align=center}
 
@@ -43,7 +43,7 @@ System.themes.color("Symbol_Alarm")
 
 ## Module-specific color palettes { #module-specific-color-palettes }
 
-In addition to the M3 roles that make up the main theme, WideQuick MOD includes a number of separate color palettes used by specific modules. These palettes appear under the theme variant in **WideQuick Designer®** and can be edited the same way as other theme colors, but they are not affected by the light/dark toggle — they apply regardless of which theme is active.
+In addition to the M3 roles that make up the main theme, WideQuick MOD includes a number of separate color palettes used by specific modules. These palettes appear under the theme variant in **WideQuick® Designer** and can be edited the same way as other theme colors, but they are not affected by the light/dark toggle — they apply regardless of which theme is active.
 
 | Palette | Module | What it controls |
 |---|---|---|

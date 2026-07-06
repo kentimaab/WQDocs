@@ -37,7 +37,7 @@ ett **Alarm**-objekt till en **Kartvy** och skapa anpassade indikatorer, se
 ## Konfigurera ett Kartvy-objekt { #setting-up-a-map-view-object }
 
 För att använda Map Indicators krävs ett **Kartvy**-objekt. Det finns i
-Objects Toolbar i **WideQuick Designer®**:
+Objects Toolbar i **WideQuick® Designer**:
 
 ![Map View object](/docs/sv/Images/Map_Indicators/map_view_object.png)
 
@@ -82,8 +82,8 @@ return true;
 Du är nu redo att lägga till Map Indicators.
 
 ## Lägga till grundläggande indikatorer { #adding-basic-indicators }
-Map Indicators finns i objektbiblioteket **Map Indicators** i **WideQuick
-Designer®**. För att lägga till en indikator, dra den från objektbiblioteket och släpp den i
+Map Indicators finns i objektbiblioteket **Map Indicators** i **WideQuick®
+Designer**. För att lägga till en indikator, dra den från objektbiblioteket och släpp den i
 **Kartvy**-objektet. De flesta indikatorer kräver att longitud och latitud anges,
 vilket bestämmer var de visas på kartan.
 
@@ -94,7 +94,7 @@ Följande avsnitt beskriver varje grundläggande indikator och eventuell konfigu
 ### Zoomknapp { #zoom-button }
 Att lägga till en zoomknapp är enkelt — den har inga egenskaper att konfigurera. Lägg till den
 på samma sätt som vilket annat objekt som helst i en **Kartvy**. Om du är osäker på hur du gör detta,
-se WideQuick-hjälpen genom att trycka på F1 i **WideQuick Designer®**.
+se WideQuick-hjälpen genom att trycka på F1 i **WideQuick® Designer**.
 
 Zoomknappen placerar sig automatiskt i nedre högra hörnet av
 **Kartvy** och kräver ingen longitud- eller latitudinmatning.

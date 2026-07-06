@@ -30,7 +30,7 @@ tags:
 
 -   **Ladda ner BMS**
 
-    Var du hittar mall- och demoprojekt och hur du öppnar dem i **WideQuick Designer®**.
+    Var du hittar mall- och demoprojekt och hur du öppnar dem i **WideQuick® Designer**.
 
     [Ladda ner →](get-started/download.md)
 

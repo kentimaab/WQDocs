@@ -39,7 +39,7 @@ A report template typically consists of three sheets:
 any other visual elements the report should display.
 * Data sheet — A hidden sheet containing the raw data pulled from the database. This 
 sheet feeds the presentation sheet with data. The data sheet is easier to configure in 
-**WideQuick Designer®**, where hidden sheets are visible, rather than directly in Excel.
+**WideQuick® Designer**, where hidden sheets are visible, rather than directly in Excel.
 * Meta sheet — A hidden sheet containing general information about the report, such as 
 the report title, current date and time, selected logger, and selected signals. This 
 sheet is useful for displaying report metadata on the presentation sheet.
@@ -49,7 +49,7 @@ sheet is useful for displaying report metadata on the presentation sheet.
     opening Excel. Knowing what data you need and how it should be presented will make 
     configuring the data sheet and macros much easier.
 
-To add a new sheet to the template, open the template in **WideQuick Designer®** and 
+To add a new sheet to the template, open the template in **WideQuick® Designer** and 
 navigate to the bottom of the sheet tabs. Click **Create New Sheet**, see image below. 
 To hide the sheet, right-click the sheet tab and select **Hide Sheet**.
 
@@ -59,7 +59,7 @@ To hide the sheet, right-click the sheet tab and select **Hide Sheet**.
 </figure>
 
 !!! note
-    Hidden sheets are only visible in **WideQuick Designer®** and will not be visible
+    Hidden sheets are only visible in **WideQuick® Designer** and will not be visible
     in the final generated report or when opening the template directly in Excel. Try
     generating a report with the sheet visible once the macro command is set, to get a
     feel for how the data is oriented.
@@ -301,7 +301,7 @@ determines how many events are collected per macro call. This distinction is imp
 ## Changing the maximum of signals to be selected { #changing-the-maximum-of-signals-to-be-selected }
 In the default reporter settings 15 signals are allowed to be selected for report 
 generations. This can easily be changed if more signals are required. First, in 
-**WideQuick Designer®** navigate to **Data Types → Arrays → variable_ref** and select 
+**WideQuick® Designer** navigate to **Data Types → Arrays → variable_ref** and select 
 **Properties...**. This will bring up the following popup:
 
 <figure markdown="span">

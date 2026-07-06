@@ -16,9 +16,9 @@ covers everything from using the default templates to creating fully custom ones
 
 ### [Get started](get-started.md) { #get-started }
 * [**Setting up the Reporter**](get-started.md#setting-up-the-reporter) — How to add 
-and configure report templates in **WideQuick Designer®**.
+and configure report templates in **WideQuick® Designer**.
 * [**Using the Reporter**](get-started.md#using-the-reporter-in-widequick-runtime) — 
-Introduction to generating reports in **WideQuick Runtime®**.
+Introduction to generating reports in **WideQuick® Runtime**.
 * [**Scheduling a report**](get-started.md#scheduling-a-report-in-widequick-runtime) — 
 How to set up recurring scheduled reports.
 

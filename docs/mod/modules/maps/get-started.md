@@ -43,7 +43,7 @@ an **Alarm** object to a **Map View** and creating custom indicators, see
 ## Setting up a Map View object { #setting-up-a-map-view-object }
 
 To use Map Indicators, a **Map View** object is required. It can be found in the
-Objects Toolbar in **WideQuick Designer®**:
+Objects Toolbar in **WideQuick® Designer**:
 
 ![Map View object](/docs/Images/Map_Indicators/map_view_object.png)
 
@@ -88,8 +88,8 @@ return true;
 You are now ready to add Map Indicators.
 
 ## Adding basic indicators { #adding-basic-indicators }
-Map Indicators are found in the **Map Indicators** object library in **WideQuick
-Designer®**. To add an indicator, drag it from the object library and drop it into
+Map Indicators are found in the **Map Indicators** object library in **WideQuick®
+Designer**. To add an indicator, drag it from the object library and drop it into
 the **Map View** object. Most indicators require a longitude and latitude to be set,
 which determines where they appear on the map.
 
@@ -100,7 +100,7 @@ The following sections describe each basic indicator and any configuration requi
 ### Zoom button { #zoom-button }
 Adding a Zoom button is straightforward — it has no properties to configure. Add it
 as you would any other object in a **Map View**. If you are unsure how to do this,
-consult the WideQuick help by pressing F1 in **WideQuick Designer®**.
+consult the WideQuick help by pressing F1 in **WideQuick® Designer**.
 
 The Zoom button automatically repositions itself to the bottom right corner of the
 **Map View** and does not require a longitude or latitude input.

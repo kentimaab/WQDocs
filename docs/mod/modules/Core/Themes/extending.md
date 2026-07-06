@@ -29,7 +29,7 @@ On the same [Theme Builder](../../../../Tools/theme-builder.md) page, scroll dow
 3. Click **Merge new theme into existing themes file**.
 4. Download the updated `Themes.kdat`.
 
-Replace the existing `Themes.kdat` in the project folder with the downloaded file. If **WideQuick Designer®** was open, restart it. The new theme appears under the **Themes** branch in the project tree and can be set as the start theme.
+Replace the existing `Themes.kdat` in the project folder with the downloaded file. If **WideQuick® Designer** was open, restart it. The new theme appears under the **Themes** branch in the project tree and can be set as the start theme.
 
 ## What M3 generates automatically { #what-m3-generates-automatically }
 

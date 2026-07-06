@@ -13,7 +13,7 @@ tags:
 
 WideQuick MOD använder ett temasystem byggt på [Material Design 3](https://m3.material.io/){target="_blank"} (M3). Varje färg i applikationen, inklusive bakgrunder, text, kanter, ytor och statusindikatorer, hämtas från det aktiva temat snarare än att vara ett fast värde. Att byta tema uppdaterar hela applikationen på en gång.
 
-Teman levereras i ljusa och mörka varianter. Båda kan väljas i **WideQuick Designer®** och växlas under körning. Det aktiva valet sparas mellan omstarter.
+Teman levereras i ljusa och mörka varianter. Båda kan väljas i **WideQuick® Designer** och växlas under körning. Det aktiva valet sparas mellan omstarter.
 
 Eftersom teman följer M3-standarden kan ett komplett tema med alla färgroller, höjdytor och mörka/ljusa varianter genereras från en enda varumärkesfärg. Det gör det praktiskt att bygga teman som matchar en kunds grafiska profil, och resultatet är sammanhängande, visuellt distinkt och standardenligt utan att manuellt definiera varje roll.
 
@@ -21,7 +21,7 @@ Eftersom teman följer M3-standarden kan ett komplett tema med alla färgroller,
 
 ### [Kom igång](get-started.md) { #get-started }
 * [**Ljust och mörkt läge**](get-started.md#light-and-dark-mode) — De två temavärianterna och hur de ser ut.
-* [**Byta tema**](get-started.md#switching-themes) — Ställa in starttemat i **WideQuick Designer®** och byta under körning i **WideQuick Runtime®**.
+* [**Byta tema**](get-started.md#switching-themes) — Ställa in starttemat i **WideQuick® Designer** och byta under körning i **WideQuick® Runtime**.
 * [**Hur objekt följer teman**](get-started.md#how-objects-follow-themes) — Hur färger, text och larmtillstånd uppdateras automatiskt med temat.
 
 ---

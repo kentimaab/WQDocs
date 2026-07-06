@@ -26,13 +26,13 @@ WideQuick MOD levereras med både ett ljust och ett mörkt tema. De två variant
 
 ## Byta tema { #switching-themes }
 
-### I WideQuick Designer® { #in-widequick-designer }
+### I WideQuick® Designer { #in-widequick-designer }
 
-Starttema är det tema som applikationen använder när den läses in första gången. Det ställs in i **WideQuick Designer®**. Öppna grenen **Teman** i projektträdet för att se alla tillgängliga teman. Högerklicka på önskat tema och välj **Ange som starttema**.
+Starttema är det tema som applikationen använder när den läses in första gången. Det ställs in i **WideQuick® Designer**. Öppna grenen **Teman** i projektträdet för att se alla tillgängliga teman. Högerklicka på önskat tema och välj **Ange som starttema**.
 
-### I WideQuick Runtime® { #in-widequick-runtime }
+### I WideQuick® Runtime { #in-widequick-runtime }
 
-Temat kan växlas mellan ljust och mörkt under körning utan att applikationen behöver startas om. I **WideQuick Runtime®**, navigera till **Inställningar** och använd temaväxlaren. Inställningen sparas och behålls mellan omstarter.
+Temat kan växlas mellan ljust och mörkt under körning utan att applikationen behöver startas om. I **WideQuick® Runtime**, navigera till **Inställningar** och använd temaväxlaren. Inställningen sparas och behålls mellan omstarter.
 
 ## Hur objekt följer teman { #how-objects-follow-themes }
 

@@ -29,7 +29,7 @@ tags:
 Det här avsnittet täcker grunderna i navigationsmodulen, inklusive hur man lägger till
 **Arbetsvyer** i navigationsmenyn och hur helskärmsmenyn fungerar. Navigationsmodulen
 bygger automatiskt menystrukturen utifrån mappstrukturen i
-**WideQuick Designer®**, vilket gör det enkelt att hantera och utöka i takt med att projektet växer.
+**WideQuick® Designer**, vilket gör det enkelt att hantera och utöka i takt med att projektet växer.
 
 För åtkomstkontroll och visningsinställningar för begränsade vyer, se
 [Navigation — Konfigurering](configuring). För avancerad funktionalitet som GoTo-genvägar
@@ -71,10 +71,10 @@ för att bygga ännu djupare navigationsstrukturer.
 
 ## Helskärmsmeny { #fullscreen-menu }
 Helskärmsmenyn ger användarna en omedelbar överblick över katalogstrukturen och
-möjliggör snabb navigering till nästlade vyer. Den kan aktiveras eller inaktiveras i **WideQuick Runtime®** via
+möjliggör snabb navigering till nästlade vyer. Den kan aktiveras eller inaktiveras i **WideQuick® Runtime** via
 **Inställningar**, så att användarna kan växla utifrån sina preferenser.
 
-Menyn byggs automatiskt utifrån katalogstrukturen i **WideQuick Designer®**, vilket
+Menyn byggs automatiskt utifrån katalogstrukturen i **WideQuick® Designer**, vilket
 innebär att designbeslut som tas där återspeglas direkt i körläget.
 
 ![FullScreen_Toggle](/docs/sv/Images/Navigation/ToggleFullNav.png)

@@ -18,9 +18,9 @@ täcker allt från att använda standardmallarna till att skapa helt egna mallar
 
 ### [Kom igång](get-started.md) { #get-started }
 * [**Konfigurera rapportverktyget**](get-started.md#setting-up-the-reporter) — Hur du lägger till
-och konfigurerar rapportmallar i **WideQuick Designer®**.
+och konfigurerar rapportmallar i **WideQuick® Designer**.
 * [**Använda rapportverktyget**](get-started.md#using-the-reporter-in-widequick-runtime) —
-Introduktion till att generera rapporter i **WideQuick Runtime®**.
+Introduktion till att generera rapporter i **WideQuick® Runtime**.
 * [**Schemalägga en rapport**](get-started.md#scheduling-a-report-in-widequick-runtime) —
 Hur du ställer in återkommande schemalagda rapporter.
 

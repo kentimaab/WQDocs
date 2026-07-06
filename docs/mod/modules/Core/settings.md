@@ -11,7 +11,7 @@ tags:
 <!-- --8<-- [start:body] -->
 # Settings
 
-The **Settings** view in **WideQuick Runtime®** provides access to all system
+The **Settings** view in **WideQuick® Runtime** provides access to all system
 configuration options. Navigate to **Settings** in the main menu and open the
 **Settings** view.
 
@@ -69,7 +69,7 @@ schedule** to configure schedules.
 view.
 
 **Show dynTouch** — toggles whether `DynTouch` object boundaries are visible,
-useful for debugging object placement in **WideQuick Designer®**. 
+useful for debugging object placement in **WideQuick® Designer**. 
 
 **Support object font size** — sets the font size for support objects such as value
 displays. Enter a value or use the arrows to adjust.

@@ -31,7 +31,7 @@ Dokumentmodulen finns under **Dokument & Loggbok -> Dokument** i huvudmenyn. Vyn
 
 ## Filvyn { #files-view }
 
-Vyn är uppdelad i två paneler. Den vänstra panelen visar ett filträd med två kategorier: **Lokala filer** och **Onlinefiler**. Lokala filer lagras på servern; onlinefiler är länkar till externa URL:er. Den högra panelen visar förhandsvisning för den valda filen. På **WideQuick Web®** visas en tredje kategori för filer som inte kan öppnas i webbläsaren.
+Vyn är uppdelad i två paneler. Den vänstra panelen visar ett filträd med två kategorier: **Lokala filer** och **Onlinefiler**. Lokala filer lagras på servern; onlinefiler är länkar till externa URL:er. Den högra panelen visar förhandsvisning för den valda filen. På **WideQuick® Web** visas en tredje kategori för filer som inte kan öppnas i webbläsaren.
 
 ![Documents Files view](/docs/sv/Images/Documents/documents-list.png){align=center}
 
@@ -73,7 +73,7 @@ Resursen läggs till i dokumentlistan under **Onlinefiler**. URL:en lagras — i
 
 Välj en fil i den vänstra panelen och klicka på **Förhandsgranska** för att läsa in den i förhandsgranskningspanelen.
 
-De flesta filtyper kan förhandsgranskas direkt — bilder, PDF:er och webbsidor visas inline. På **WideQuick Web®** kan inte Office-filer (Word, Excel, PowerPoint) förhandsgranskas i webbläsaren och grupperas separat i filträdet.
+De flesta filtyper kan förhandsgranskas direkt — bilder, PDF:er och webbsidor visas inline. På **WideQuick® Web** kan inte Office-filer (Word, Excel, PowerPoint) förhandsgranskas i webbläsaren och grupperas separat i filträdet.
 
 ## Nästa steg { #next-steps }
 

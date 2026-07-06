@@ -13,7 +13,7 @@ tags:
 # Configuring a Logger
 
 A logger defines when data should be stored and where it should be saved. Loggers
-are configured in **WideQuick Designer®** and write data to a connected database,
+are configured in **WideQuick® Designer** and write data to a connected database,
 which can then be used by the **History** view, **Reports**, and other modules that
 rely on historical data.
 

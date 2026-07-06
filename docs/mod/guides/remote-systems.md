@@ -28,7 +28,7 @@ Remote Systems lets a WideQuick application connect to one or more other WideQui
 
 ## Receiving connections { #receiving-connections }
 
-For a WideQuick application to accept incoming connections from other applications, a connection port must be configured in its project settings. In **WideQuick Designer®**, open **Project Properties** (by right clicking the top node of the project tree) and set **View access** under **Connection Port**. The default port is **2122**.
+For a WideQuick application to accept incoming connections from other applications, a connection port must be configured in its project settings. In **WideQuick® Designer**, open **Project Properties** (by right clicking the top node of the project tree) and set **View access** under **Connection Port**. The default port is **2122**.
 
 ![Connection Port in Project Properties](/docs/Images/Remote_System/remote-connection-port.png){align=center}
 
@@ -36,9 +36,9 @@ Both applications must be reachable over the network on the configured port.
 
 ## Configuring a remote system { #configuring-a-remote-system }
 
-A remote system can be added during development in **WideQuick Designer®** or at runtime in **WideQuick Runtime®**.
+A remote system can be added during development in **WideQuick® Designer** or at runtime in **WideQuick® Runtime**.
 
-### Via WideQuick Designer® { #via-widequick-designer }
+### Via WideQuick® Designer { #via-widequick-designer }
 
 Remote systems are managed under the **Remote Systems** node in the project tree. Right-click the node and select **Add Remote Systems...**. Fill in the following fields:
 
@@ -51,7 +51,7 @@ Remote systems are managed under the **Remote Systems** node in the project tree
 
 ![Add Remote System dialog](/docs/Images/Remote_System/remote-designer-add.png){align=center}
 
-### Via WideQuick Runtime® { #via-widequick-runtime }
+### Via WideQuick® Runtime { #via-widequick-runtime }
 
 Navigate to **Settings → Settings** in the main menu and click **Manage remote systems**.
 
@@ -65,7 +65,7 @@ The **Defaults** section at the top sets global fallback values for all systems:
 * **Max reconnect attempts** — how many times to retry after a lost connection. **-1** means retry indefinitely.
 * **Reconnect delay** — seconds between reconnect attempts.
 
-Clicking **Add** opens the same fields as in **WideQuick Designer®**.
+Clicking **Add** opens the same fields as in **WideQuick® Designer**.
 
 ![Add remote system dialog](/docs/Images/Remote_System/remote-runtime-add.png){align=center}
 
@@ -83,10 +83,10 @@ Opening a remote system launches it in a separate client window. The local appli
 
 Each system in the Remote Systems menu can be opened in two ways:
 
-* **Click the system name** — opens the remote application in **WideQuick Remote®**, a native client with full view access and interactive controls.
+* **Click the system name** — opens the remote application in **WideQuick® Remote**, a native client with full view access and interactive controls.
 * **Click the globe icon** — opens the remote application in the web client, a browser-based interface that requires no separate installation.
 
-**WideQuick Remote®** is the preferred option for operator use. The web client is suited to situations where installing the Remote® client is not practical — for example, access from a personal device or an external network.
+**WideQuick® Remote** is the preferred option for operator use. The web client is suited to situations where installing the Remote client is not practical — for example, access from a personal device or an external network.
 ## Remote Alarms { #remote-alarms }
 
 When `scRemoteAlarms` is running, alarms from all connected remote systems appear in the local alarm list alongside local alarms. Each alarm entry shows which system it originates from. The alarm list can be filtered by system to focus on a specific remote installation. Acknowledging an alarm sends the acknowledgement directly to the originating system — no separate login is required.

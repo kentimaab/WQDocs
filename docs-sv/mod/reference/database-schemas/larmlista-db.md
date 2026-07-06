@@ -11,7 +11,7 @@ tags:
 
 # Larmlista-databas
 
-Larmlista-databasen har ingen fast uppsättning tabeller. Den skrivs till av larmloggenheter som konfigureras i **WideQuick Designer®** — se [Konfigurera en loggenhet](../../guides/Loggers.md) för hur loggenhetstyp och version påverkar vilka tabeller som skapas.
+Larmlista-databasen har ingen fast uppsättning tabeller. Den skrivs till av larmloggenheter som konfigureras i **WideQuick® Designer** — se [Konfigurera en loggenhet](../../guides/Loggers.md) för hur loggenhetstyp och version påverkar vilka tabeller som skapas.
 
 ## Tabellnamn { #table-naming }
 

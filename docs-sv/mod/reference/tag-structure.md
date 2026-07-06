@@ -138,7 +138,7 @@ tillämpas på alla objekt i systemet.
 
 ### Konfigurera suffixalias { #configuring-suffix-aliases }
 
-Suffixalias konfigureras i **WideQuick Runtime®** genom att navigera till
+Suffixalias konfigureras i **WideQuick® Runtime** genom att navigera till
 **Inställningar → Suffix → Suffix Alias - Arbetsvyer**.
 
 ![Suffix settings](/docs/sv/Images/Tag_Structure/SuffixAlias_Procces.png)

@@ -19,7 +19,7 @@ Innan du börjar, se till att du har mallprojektet öppet i **WideQuick 13.4.1**
 
 ## Steg 1 - Konfigurera en anslutning
 
-Det första steget är att konfigurera en anslutning i **WideQuick Designer®**. I det här exemplet används en **OPC UA**-anslutning med namnet `OPC`. En fullständig guide för att konfigurera OPC UA finns i WideQuick-manualen genom att trycka på ++f1++ i WideQuick Designer.
+Det första steget är att konfigurera en anslutning i **WideQuick® Designer**. I det här exemplet används en **OPC UA**-anslutning med namnet `OPC`. En fullständig guide för att konfigurera OPC UA finns i WideQuick-manualen genom att trycka på ++f1++ i WideQuick Designer.
 
 Följande anslutningstyper stöds också:
 
@@ -34,7 +34,7 @@ Följande anslutningstyper stöds också:
 
 ## Steg 2 - Skapa taggen
 
-I **WideQuick Designer®**, öppna **Taggeditorn** och skapa en ny boolesk tagg enligt taggstrukturen:
+I **WideQuick® Designer**, öppna **Taggeditorn** och skapa en ny boolesk tagg enligt taggstrukturen:
 
 `OPC.AS01_VS10_PV01_IO`
 
@@ -52,7 +52,7 @@ För mer information om taggstrukturen, se [Taggstruktur](../reference/tag-struc
 
 ## Steg 3 - Skapa en Arbetsvy
 
-I **WideQuick Designer®**, skapa en ny **Arbetsvy** inuti **System 1**. Den kommer då att visas automatiskt i navigeringsmenyn. För mer information om hur navigeringen fungerar, se [Navigation — Kom igång](../modules/Core/Navigation/get-started.md).
+I **WideQuick® Designer**, skapa en ny **Arbetsvy** inuti **System 1**. Den kommer då att visas automatiskt i navigeringsmenyn. För mer information om hur navigeringen fungerar, se [Navigation — Kom igång](../modules/Core/Navigation/get-started.md).
 
 ![arbetsvy](/docs/sv/Images/First_tag/CreateWork.gif)
 

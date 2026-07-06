@@ -14,7 +14,7 @@ tags:
 
 ## Ändra en färg { #changing-a-color }
 
-I **WideQuick Designer®**, öppna grenen **Themes** i projektträdet och dubbelklicka på det tema du vill redigera. Dialogrutan **Edit theme** öppnas med tre flikar: **Components**, **Custom colors** och **Keyboard**.
+I **WideQuick® Designer**, öppna grenen **Themes** i projektträdet och dubbelklicka på det tema du vill redigera. Dialogrutan **Edit theme** öppnas med tre flikar: **Components**, **Custom colors** och **Keyboard**.
 
 ![Theme editor](/docs/sv/Images/Themes/theme-edit-dialog.png){align=center}
 
@@ -43,7 +43,7 @@ För att lägga till en ny anpassad färg, klicka på **+** längst ned på flik
 
 ## Modulspecifika färgpaletter { #module-specific-color-palettes }
 
-Utöver de M3-roller som utgör huvudtemat innehåller WideQuick MOD ett antal separata färgpaletter som används av specifika moduler. Dessa paletter visas under temavarianten i **WideQuick Designer®** och kan redigeras på samma sätt som övriga temafärger, men de påverkas inte av ljust/mörkt-växlingen — de gäller oavsett vilket tema som är aktivt.
+Utöver de M3-roller som utgör huvudtemat innehåller WideQuick MOD ett antal separata färgpaletter som används av specifika moduler. Dessa paletter visas under temavarianten i **WideQuick® Designer** och kan redigeras på samma sätt som övriga temafärger, men de påverkas inte av ljust/mörkt-växlingen — de gäller oavsett vilket tema som är aktivt.
 
 | Palett | Modul | Vad den styr |
 |---|---|---|

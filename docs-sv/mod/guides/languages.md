@@ -11,7 +11,7 @@ tags:
 
 # Språk
 
-WideQuick stöder flera språk och byte av språk under körning. MOD-demoprojektet levereras med 20 språk redan konfigurerade. Alla befintliga översättningar kan ändras eller tas bort, och nya översättningar och språk kan läggas till i **WideQuick Designer®**.
+WideQuick stöder flera språk och byte av språk under körning. MOD-demoprojektet levereras med 20 språk redan konfigurerade. Alla befintliga översättningar kan ändras eller tas bort, och nya översättningar och språk kan läggas till i **WideQuick® Designer**.
 
 Att lägga till ett nytt språk kräver översättning av ett stort antal strängar, men processen är AI-kompatibel.
 
@@ -39,7 +39,7 @@ Knapparna i mitten hanterar `.ts`-filer:
 För att redigera en specifik sträng, bläddra i trädet till höger för att hitta den. Dubbelklicka på översättningsraden (den icke-fetstilta texten) och redigera direkt i den raden.
 
 !!! tip
-    `.ts`-filer är vanlig XML och kan även redigeras i en textredigerare. Starta om **WideQuick Designer®** efter att ha gjort ändringar utanför dialogen så att både `.ts`- och `.qm`-filerna uppdateras.
+    `.ts`-filer är vanlig XML och kan även redigeras i en textredigerare. Starta om **WideQuick® Designer** efter att ha gjort ändringar utanför dialogen så att både `.ts`- och `.qm`-filerna uppdateras.
 
 ## Översätta strängar som sätts av skript { #translating-script-strings }
 
@@ -61,7 +61,7 @@ Om ingen översättning finns för det aktiva språket returneras källsträngen
 
 För att `Language.translate()` ska fungera måste strängen finnas som en textegenskap i projektet, och i MOD placeras de i `Translations.klib`. Så här lägger du till en ny sträng:
 
-1. Lägg till ett textobjekt i valfri arbetsvy i **WideQuick Designer®** och ange dess text till den sträng som ska översättas.
+1. Lägg till ett textobjekt i valfri arbetsvy i **WideQuick® Designer** och ange dess text till den sträng som ska översättas.
 2. Dra objektet till **Translations** under Object Library.
 3. (Valfritt) Byt namn på objektet så att det matchar strängen. Det gör det lättare att hitta senare.
 
@@ -87,7 +87,7 @@ För att lägga till ett nytt språk, högerklicka på **Languages** i projekttr
 
 ## Byta språk under körning { #runtime-switching }
 
-Användare byter språk genom att trycka på knappen **Set lang** i **WideQuick Runtime®**, som finns under **Settings → Settings**. Det öppnar ett popup-fönster med en lista över alla tillgängliga språk.
+Användare byter språk genom att trycka på knappen **Set lang** i **WideQuick® Runtime**, som finns under **Settings → Settings**. Det öppnar ett popup-fönster med en lista över alla tillgängliga språk.
 
 ![The Set lang button](/docs/sv/Images/Languages/set-lang.png){align=center}
 
@@ -96,7 +96,7 @@ Användare byter språk genom att trycka på knappen **Set lang** i **WideQuick 
 
 ## Ange startspråk { #starting-language }
 
-Startspråket konfigureras i **WideQuick Designer®**. Högerklicka på projektnamnet i projektträdet och välj **Properties**. I dialogrutan **Project Properties**, ställ in listrutan **Start language** på önskat språk.
+Startspråket konfigureras i **WideQuick® Designer**. Högerklicka på projektnamnet i projektträdet och välj **Properties**. I dialogrutan **Project Properties**, ställ in listrutan **Start language** på önskat språk.
 
 ![Project Properties dialog with the Start language field](/docs/sv/Images/Languages/project-properties.png){align=center}
 <!-- --8<-- [end:body] -->

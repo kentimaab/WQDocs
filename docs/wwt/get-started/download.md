@@ -64,5 +64,5 @@ contains:
 
 * A project folder — containing all project files
 * `WideQuick_WWT.kpro` — double-click this file to launch the project in
-**WideQuick Designer®**
+**WideQuick® Designer**
 * To run the preview press **F5** on your keyboard.

@@ -60,7 +60,7 @@ systemet. Användaren väljer sitt namn i listan och anger sedan sitt lösenord 
 
 ## Bakgrundsbild
 
-Bakgrundsbilden på inloggningsskärmen konfigureras i **WideQuick Designer®**. I
+Bakgrundsbilden på inloggningsskärmen konfigureras i **WideQuick® Designer**. I
 projektträdet under **Arbetsvyer**, navigera till **Login** **Arbetsvy**. Välj
 objektet `Image1` och öppna egenskapen **Image**. Ta bort standardbilderna och lägg till
 önskad/önskade bild(er).
@@ -91,7 +91,7 @@ Den rekommenderade bildupplösningen är `1085x1080` pixlar. Objektet `Image1` s
 ## Start-Arbetsvy
 
 **Start-Arbetsvy** är den vy som öppnas efter inloggning. Den konfigureras i
-**WideQuick Designer®** genom att navigera till **WORKSPACE** **Arbetsvy** i
+**WideQuick® Designer** genom att navigera till **WORKSPACE** **Arbetsvy** i
 projektträdet under **Arbetsvyer**.
 
 Högerklicka var som helst i vyn och välj **Object** och sedan **MultiviewerPage** från

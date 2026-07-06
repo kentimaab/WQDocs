@@ -55,7 +55,7 @@ expression editor.
 </figure>
 
 To change which logger appears when creating the report, navigate to 
-**Workviews → Partials → ReportController → Alarm_Report** in **WideQuick Designer®**. 
+**Workviews → Partials → ReportController → Alarm_Report** in **WideQuick® Designer**. 
 Select the `LarmLogger_list` object, go to **Properties**, and update the **Logger** 
 property to the desired logger.
 
@@ -127,11 +127,11 @@ follow the GIF below:
 </figure>
 
 !!! note
-    The template cannot be open in **WideQuick Designer®** when making changes in Excel.
+    The template cannot be open in **WideQuick® Designer** when making changes in Excel.
 
 Now the report template only shows the current year. However it still queries data from 
 three years prior, so further changes are required. Navigate to 
-**Workviews → Partials → ReportController → Energy_Report** in **WideQuick Designer®**. 
+**Workviews → Partials → ReportController → Energy_Report** in **WideQuick® Designer**. 
 Select the `to_time_Singel` object, go to **Properties**, and change the value of 
 **YearsPrior** to 1. The report is now configured to produce an Energy Report of the 
 current year.
@@ -147,7 +147,7 @@ Then select row 113 in the header sheet and paste the following:
 =IFERROR("Totalt -- "&TEXT(Meta!B13/86400000+DATE(1970,1,1),"yyyy-mm-dd")&" - "&TEXT(Meta!B14/86400000+DATE(1970,1,1),"yyyy-mm-dd"),"Totalt -- alla år")
 ```
 
-Save the Excel file and open **WideQuick Designer®**. Navigate to 
+Save the Excel file and open **WideQuick® Designer**. Navigate to 
 **Workviews → Partials → ReportController → Energy_Report**. Select the 
 `to_time_Singel` object and change the **YearsPrior** property to 1.
 

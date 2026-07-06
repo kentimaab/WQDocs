@@ -12,7 +12,7 @@ tags:
 
 # Languages
 
-WideQuick supports multiple languages and runtime language switching. The MOD demo project comes with 20 languages already configured. All existing translations can be altered or removed, and new translations and languages can be added in **WideQuick Designer®**.
+WideQuick supports multiple languages and runtime language switching. The MOD demo project comes with 20 languages already configured. All existing translations can be altered or removed, and new translations and languages can be added in **WideQuick® Designer**.
 
 Adding a new language requires translating a large number of strings, but the process is AI-compatible.
 
@@ -40,7 +40,7 @@ The buttons in the middle manage `.ts` files:
 To edit a specific string, browse the tree on the right to locate it. Double-click the translation row (the non-bold text) and edit directly in that row.
 
 !!! tip
-    `.ts` files are plain XML and can also be edited in a text editor. Restart **WideQuick Designer®** after making changes outside the dialog so that both the `.ts` and `.qm` files are updated.
+    `.ts` files are plain XML and can also be edited in a text editor. Restart **WideQuick® Designer** after making changes outside the dialog so that both the `.ts` and `.qm` files are updated.
 
 ## Translating Strings Set by Scripts { #translating-script-strings }
 
@@ -62,7 +62,7 @@ If no translation exists for the active language, the source string is returned 
 
 For `Language.translate()` to work, the string must exist as a text property in the project and in MOD they are placed in `Translations.klib`. To add a new string:
 
-1. Add a text object to any workview in **WideQuick Designer®** and set its text to the string that should be translated.
+1. Add a text object to any workview in **WideQuick® Designer** and set its text to the string that should be translated.
 2. Drag the object into **Translations** under the Object Library.
 3. (Optional) Rename the object to match the string. This makes it easier to find later.
 
@@ -88,7 +88,7 @@ To add a new language, right-click **Languages** in the project tree. To edit an
 
 ## Switching Language at Runtime { #runtime-switching }
 
-Users switch language by pressing the **Set lang** button in **WideQuick Runtime®**, found under **Settings → Settings**. This opens a popup listing all available languages.
+Users switch language by pressing the **Set lang** button in **WideQuick® Runtime**, found under **Settings → Settings**. This opens a popup listing all available languages.
 
 ![The Set lang button](/docs/Images/Languages/set-lang.png){align=center}
 
@@ -97,7 +97,7 @@ Users switch language by pressing the **Set lang** button in **WideQuick Runtime
 
 ## Setting the Starting Language { #starting-language }
 
-The starting language is configured in **WideQuick Designer®**. Right-click the project name in the project tree and select **Properties**. In the **Project Properties** dialog, set the **Start language** dropdown to the desired language.
+The starting language is configured in **WideQuick® Designer**. Right-click the project name in the project tree and select **Properties**. In the **Project Properties** dialog, set the **Start language** dropdown to the desired language.
 
 ![Project Properties dialog with the Start language field](/docs/Images/Languages/project-properties.png){align=center}
 <!-- --8<-- [end:body] -->

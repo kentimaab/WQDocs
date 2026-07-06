@@ -28,13 +28,13 @@ WideQuick MOD ships with both a light and a dark theme. The two variants share t
 
 ## Switching themes { #switching-themes }
 
-### In WideQuick Designer® { #in-widequick-designer }
+### In WideQuick® Designer { #in-widequick-designer }
 
-The start theme is the theme the application uses when it first loads. It is set in **WideQuick Designer®**. Open the **Themes** branch in the project tree to see all available themes. Right-click the desired theme and select **Set as start theme**.
+The start theme is the theme the application uses when it first loads. It is set in **WideQuick® Designer**. Open the **Themes** branch in the project tree to see all available themes. Right-click the desired theme and select **Set as start theme**.
 
-### In WideQuick Runtime® { #in-widequick-runtime }
+### In WideQuick® Runtime { #in-widequick-runtime }
 
-The theme can be switched between light and dark at runtime without restarting the application. In **WideQuick Runtime®**, navigate to **Settings** and use the theme toggle. The preference is saved and persists across restarts.
+The theme can be switched between light and dark at runtime without restarting the application. In **WideQuick® Runtime**, navigate to **Settings** and use the theme toggle. The preference is saved and persists across restarts.
 
 ## How objects follow themes { #how-objects-follow-themes }
 

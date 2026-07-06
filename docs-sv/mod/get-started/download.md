@@ -61,5 +61,5 @@ innehåller:
 
 * En projektmapp — som innehåller alla projektfiler
 * `WideQuick_Mod.kpro` — dubbelklicka på den här filen för att starta projektet i
-**WideQuick Designer®**
+**WideQuick® Designer**
 * För att köra förhandsvisningen, tryck **F5** på tangentbordet.

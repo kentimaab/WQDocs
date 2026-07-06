@@ -12,7 +12,7 @@ tags:
 # Skapa objekt
 
 Det finns två sätt att skapa objekt i WideQuick. Det första är att bygga ett
-processobjekt visuellt i **WideQuick Designer®** genom att kombinera komponenter,
+processobjekt visuellt i **WideQuick® Designer** genom att kombinera komponenter,
 stödobjekt och ett `DynTouch`-objekt. Det andra är att skapa objekt dynamiskt vid
 körning med hjälp av funktionen `createObject()`. Det visuella tillvägagångssättet
 passar integratörer som bygger processvyer, medan skriptmetoden lämpar sig bättre för
@@ -38,7 +38,7 @@ När objektet är byggt kan det sparas i biblioteket och återanvändas i projek
 ### Ikon
 
 Det första steget är att välja en komponent som representerar objektet visuellt i
-**WideQuick Designer®**. Vilken komponent som helst från objektbiblioteken kan
+**WideQuick® Designer**. Vilken komponent som helst från objektbiblioteken kan
 användas — valet beror på vad objektet representerar i processvyn.
 
 I det här exemplet används **Centrifugal Pumps 01** från biblioteket **PID Pumps**
@@ -96,7 +96,7 @@ Mer information om hur taggar är strukturerade och hur suffixsystemet fungerar 
 
 ## Skapa objekt från skript
 
-**WideQuick Runtime®** gör det möjligt att skapa objekt dynamiskt under körning med
+**WideQuick® Runtime** gör det möjligt att skapa objekt dynamiskt under körning med
 hjälp av funktionen `createObject()`. Detta är användbart när antalet objekt inte är
 känt vid designtillfället, eller när det varierar — till exempel för att rendera en
 post per datasignal istället för att placera ett fast antal tomma objekt i vyn. Till
@@ -104,7 +104,7 @@ skillnad från det visuella tillvägagångssättet kräver den här metoden
 skriptkunskaper och lämpar sig bättre för avancerade användningsfall.
 
 `createObject()` finns i listan **Functions** under **Arbetsvy** i
-**WideQuick Designer®**, tillsammans med konstanterna `ObjectType*`.
+**WideQuick® Designer**, tillsammans med konstanterna `ObjectType*`.
 
 ### Syntax
 

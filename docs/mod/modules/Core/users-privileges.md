@@ -26,15 +26,15 @@ restrict or grant access to specific views and actions.
 
 ## Adding and editing users { #adding-and-editing-users }
 
-Users can be managed in either **WideQuick Designer®** or **WideQuick Runtime®**.
+Users can be managed in either **WideQuick® Designer** or **WideQuick® Runtime**.
 
-### WideQuick Designer®
+### WideQuick® Designer
 
 In the project tree, double-click **Users and Privileges**. To add a new user,
 right-click **Users** and select **Add Users...**. To edit an existing user,
 double-click **Users**, right-click the user and select **Properties...**.
 
-### WideQuick Runtime®
+### WideQuick® Runtime
 
 Navigate to **Settings** in the main menu and open the **Settings** view. Under
 **Users and privileges** click **Change user**. Click **Add...** to create a new
@@ -80,8 +80,8 @@ needing to assign each one individually.
 virtual privileges, any user assigned `EditUsers` will automatically also have
 `EditName` and `EditPassword`.
 
-Virtual privileges are configured in the privilege properties in **WideQuick
-Designer®**. In the project tree, privileges that contain virtual privileges are
+Virtual privileges are configured in the privilege properties in **WideQuick®
+Designer**. In the project tree, privileges that contain virtual privileges are
 marked with a special icon.
 
 <figure markdown="span">

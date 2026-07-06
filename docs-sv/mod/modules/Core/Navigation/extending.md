@@ -42,7 +42,7 @@ omedelbart navigera till det objekt som utlöste ett larm och vidta åtgärder.
 
 Följ dessa steg för att aktivera GoTo för larm:
 
-1. I **WideQuick Designer®**, öppna egenskaperna för **Larmgrupp** och navigera till
+1. I **WideQuick® Designer**, öppna egenskaperna för **Larmgrupp** och navigera till
 **Åtgärder**.
 2. Klicka på cirkeln bredvid **Skript** för att aktivera skriptåtgärden och ange
 följande:

@@ -93,7 +93,7 @@ The available components are:
 | **WideQuick Designer** | The development environment for building and configuring WideQuick projects. Does not require a product code. |
 | **WideQuick LED Driver** | Driver for LED hardware integration. |
 | **WideQuick License Handler** | Tool for viewing license information and upgrading licenses. |
-| **WideQuick Manual** | The built-in help manual, accessible in **WideQuick Designer®** by pressing **F1**. |
+| **WideQuick Manual** | The built-in help manual, accessible in **WideQuick® Designer** by pressing **F1**. |
 | **WideQuick Remote** | Connects to a running Runtime instance from another machine, enabling a client/server environment. |
 | **WideQuick Runtime** | Runs a WideQuick project on the target machine. |
 

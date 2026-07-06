@@ -125,7 +125,7 @@ Längst upp finns **konceptapplikationerna**, BMS och WWT. Dessa är inte separa
 
 Samma ramverk används inom fundamentalt olika tillämpningsområden. Fastighetsautomationssystem spårar HVAC, passerkontroll och energi. Vatten- och avloppsanläggningar övervakar reningsprocesser, pumpstationer och larm. Applikationer för batch- och processindustri hanterar recept, produktionsloggning och operatörsarbetsflöden.
 
-Det dessa har gemensamt är att de alla är byggda på samma WideQuick MOD-grund, med samma **WideQuick Designer®**-verktygskedja, samma modulbibliotek och samma driftsättningsmodell. Den domänspecifika logiken finns i konfigurationen och modulvalet, inte i en annan produkt.
+Det dessa har gemensamt är att de alla är byggda på samma WideQuick MOD-grund, med samma **WideQuick® Designer**-verktygskedja, samma modulbibliotek och samma driftsättningsmodell. Den domänspecifika logiken finns i konfigurationen och modulvalet, inte i en annan produkt.
 
 Detta är viktigt för integratörer som arbetar inom flera branscher: kunskapen, verktygen och projektstrukturen överförs direkt från ett vertikalt segment till nästa.
 

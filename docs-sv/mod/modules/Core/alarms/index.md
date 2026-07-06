@@ -11,7 +11,7 @@ tags:
 
 # Larm
 
-Larmmodulen tillhandahåller larmövervakning i realtid för hela WideQuick MOD-installationen. Larm definieras i **WideQuick Designer®** med hjälp av larmgrupper, var och en med konfigurerbara utlösare, larmklasser och kvitteringsregler. Vid körning visas aktiva larm i en uppsättning dedikerade vyer och kan valfritt utlösa e-post- eller SMS-notifieringar.
+Larmmodulen tillhandahåller larmövervakning i realtid för hela WideQuick MOD-installationen. Larm definieras i **WideQuick® Designer** med hjälp av larmgrupper, var och en med konfigurerbara utlösare, larmklasser och kvitteringsregler. Vid körning visas aktiva larm i en uppsättning dedikerade vyer och kan valfritt utlösa e-post- eller SMS-notifieringar.
 
 
 ## Innehåll { #contents }
@@ -24,7 +24,7 @@ Larmmodulen tillhandahåller larmövervakning i realtid för hela WideQuick MOD-
 ---
 
 ### [Konfigurering](configuring.md) { #configuring }
-* [**Skapa larmgrupper**](configuring.md#creating-alarm-groups) — Konfigurera larmgrupper i **WideQuick Designer®**.
+* [**Skapa larmgrupper**](configuring.md#creating-alarm-groups) — Konfigurera larmgrupper i **WideQuick® Designer**.
 * [**Lägga till larm**](configuring.md#adding-alarms) — Definiera enskilda larm och deras utlösningsvillkor.
 * [**Larmnotifieringsscheman**](configuring.md#alarm-notification-schedules) — Konfigurera när och till vem notifieringar skickas.
 

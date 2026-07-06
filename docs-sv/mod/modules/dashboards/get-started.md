@@ -34,7 +34,7 @@ Nya dashboards kan skapas antingen från mallen eller från grunden beroende på
 
 ## Konfigurera en ny dashboard { #setting-up-a-new-dashboard }
 
-Duplicera dashboardmallen i **WideQuick Designer®** genom att högerklicka på mallen i projektträdet och flytta den till rätt mapp i projektstrukturen.
+Duplicera dashboardmallen i **WideQuick® Designer** genom att högerklicka på mallen i projektträdet och flytta den till rätt mapp i projektstrukturen.
 
 ![Setting up a dashboard](/docs/sv/Images/Dashboard/SetupDashboard.gif){align=center}
 ## Widgets — färdiga komponenter för dashboarden { #widgets-pre-built-components-for-the-dashboard }
@@ -47,7 +47,7 @@ konfigureras direkt utan någon egen utveckling. De flesta widgets finns även i
 
 ## Rutnätslayout — placera widgets i redigeraren { #grid-layout-positioning-widgets-in-the-editor }
 
-dashboarderna i **WideQuick Designer®** använder ett 4×4-rutnät som hjälp vid widgetplacering. Varje rutnätsposition markeras med en ellips som fungerar som placeringsguide. Dessa ellipser
+dashboarderna i **WideQuick® Designer** använder ett 4×4-rutnät som hjälp vid widgetplacering. Varje rutnätsposition markeras med en ellips som fungerar som placeringsguide. Dessa ellipser
 visas inte vid körning.
 
 ![Grid](/docs/sv/Images/Dashboard/Grid.png){align=center}

@@ -13,9 +13,9 @@ tags:
 
 ## E-postnotifieringar { #email-notifications }
 
-För att skicka larmnotifieringar via e-post måste en SMTP-server konfigureras. Det kan göras i **WideQuick Designer®** före driftsättning eller i **WideQuick Runtime®** på ett körande system.
+För att skicka larmnotifieringar via e-post måste en SMTP-server konfigureras. Det kan göras i **WideQuick® Designer** före driftsättning eller i **WideQuick® Runtime** på ett körande system.
 
-### Konfigurera SMTP i WideQuick Designer® { #configuring-smtp-in-widequick-designer }
+### Konfigurera SMTP i WideQuick® Designer { #configuring-smtp-in-widequick-designer }
 
 1. I projektträdet, högerklicka på noden **Mail** och välj **Egenskaper...**.
 2. Ange serveruppgifterna.
@@ -113,7 +113,7 @@ helst som accepterar AT-kommandon via en seriekoppling är kompatibel.
 
 ### Konfigurera modemet { #configuring-the-modem }
 
-Modemet konfigureras i **WideQuick Runtime®**. Navigera till
+Modemet konfigureras i **WideQuick® Runtime**. Navigera till
 **Inställningar → GSM-inställningar** för att öppna konfigurationsdialogen.
 
 ![GSM modem settings](/docs/sv/Images/Alarms/alarm-gsm-settings.png){align=center}
