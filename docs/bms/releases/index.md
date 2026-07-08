@@ -27,7 +27,7 @@ __Released 2026-07-08__ — Patch version BMS 2026.1.1.1
 
 | # | Area | Description |
 |---|---|---|
-| 1 | Audit trail | The Spårningslogg filter couldn't combine object, user, and time at the same time (it was capped at two conditions), and the row-count limit didn't reliably return the newest rows. Fixed with a single predicate-based filter. |
+| 1 | Audit trail | The audit trail filter couldn't combine object, user, and time at the same time (it was capped at two conditions), and the row-count limit didn't reliably return the newest rows. Fixed with a single predicate-based filter. |
 | 2 | Maintenance | Recurring tasks stored the interval unit in the active interface language, so the recurring offset could be skipped or misapplied when the language differed from when the task was created. Fixed by normalising units to a canonical form. |
 
 ---
