@@ -18,9 +18,33 @@ framework changelog see the [MOD releases](../../mod/releases/index.md).
 
 
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
+
+__Released 2026-07-08__ — Patch version BMS 2026.1.1.1
+<details class="release" markdown="1" open>
+<summary>Release notes</summary>
+
+### Bugs
+
+| # | Area | Description |
+|---|---|---|
+| 1 | Audit trail | The Spårningslogg filter couldn't combine object, user, and time at the same time (it was capped at two conditions), and the row-count limit didn't reliably return the newest rows. Fixed with a single predicate-based filter. |
+| 2 | Maintenance | Recurring tasks stored the interval unit in the active interface language, so the recurring offset could be skipped or misapplied when the language differed from when the task was created. Fixed by normalising units to a canonical form. |
+
+---
+
+### Library and view changes
+
+| File | Change |
+|---|---|
+| `Spårningslogg.kvie` | Audit trail filter rewritten — predicate-based object/user/time filtering with a newest-N row limit |
+| `scMaintenance.js` | Recurring interval units normalised to a canonical form for language-independent scheduling |
+
+</details>
+
+
 __Released 2026-07-02__
 Modular Framework Version: <!-- MOD VERSION LINK -->
-<details class="release" markdown="1" open>
+<details class="release" markdown="1">
 <summary>Release notes</summary>
 
 ### New features
