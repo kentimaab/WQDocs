@@ -37,7 +37,7 @@ tags:
 -   **Download MOD**
 
     Where to get the template and demo projects, and how to open them in
-    **WideQuick Designer®**.
+    **WideQuick® Designer**.
 
     [Download →](get-started/download.md)
 

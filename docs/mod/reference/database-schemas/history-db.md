@@ -15,7 +15,7 @@ tags:
 
 # History database
 
-The History database does not have a fixed set of tables. Tables are created automatically when loggers are configured in **WideQuick Designer®**. Each logger produces a pair of tables identified by a hash derived from the logger name.
+The History database does not have a fixed set of tables. Tables are created automatically when loggers are configured in **WideQuick® Designer**. Each logger produces a pair of tables identified by a hash derived from the logger name.
 
 ## Table naming { #table-naming }
 

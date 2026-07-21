@@ -31,7 +31,7 @@ For more information on tag suffixes see [Tag Structure](../reference/tag-struct
 
 ## How it works { #how-it-works }
 
-When a `DynTouch` object is placed on an object in **WideQuick Designer®**, it
+When a `DynTouch` object is placed on an object in **WideQuick® Designer**, it
 automatically calls the `AnimationHandler()` function in the `scWorkviewAnimation`
 script. This creates a handler that watches all Data Store signals matching the
 object's tag name combined with the configured suffixes. The handler exposes a
@@ -55,8 +55,8 @@ custom animated objects is covered in
 
 ## Configuring categories and suffixes { #configuring-categories-and-suffixes }
 
-The animation categories and their suffix aliases are configured in **WideQuick
-Runtime®** by navigating to **Settings → Suffix → Suffix - Alarms**.
+The animation categories and their suffix aliases are configured in **WideQuick®
+Runtime** by navigating to **Settings → Suffix → Suffix - Alarms**.
 
 ![Workview animations list](/docs/Images/Workview_Animations/Workview_animations_list.png)
 
@@ -210,7 +210,7 @@ enter `_SERVICE` as the suffix and give it a description that fits your needs.
 
 ### Step 2 - Create the visual elements { #step-2-create-the-visual-elements }
 
-In **WideQuick Designer®**, create the following objects:
+In **WideQuick® Designer**, create the following objects:
 
 * A **circle** — this will blink in the alarm, warning, or service color when any
 of those categories are active.
@@ -319,7 +319,7 @@ active suffix is active.
 ![Demonstration](/docs/Images/Workview_Animations/Demonstration.gif)
 
 !!! tip
-    To test without a PLC connected, right-click the object in **WideQuick Runtime®**
+    To test without a PLC connected, right-click the object in **WideQuick® Runtime**
     to open the debug popup. From here the Data Store variables can be toggled between
     `true` and `false` to verify the animations work as expected.
 

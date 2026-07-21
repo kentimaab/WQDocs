@@ -13,7 +13,7 @@ tags:
 
 # Alarms
 
-The Alarms module provides real-time alarm monitoring across the WideQuick MOD installation. Alarms are defined in **WideQuick Designer®** using alarm groups, each with configurable triggers, alarm classes (severities), and acknowledgement rules. At runtime, active alarms appear across a set of dedicated views and optionally trigger email or SMS notifications.
+The Alarms module provides real-time alarm monitoring across the WideQuick MOD installation. Alarms are defined in **WideQuick® Designer** using alarm groups, each with configurable triggers, alarm classes (severities), and acknowledgement rules. At runtime, active alarms appear across a set of dedicated views and optionally trigger email or SMS notifications.
 
 
 ## Contents { #contents }
@@ -26,7 +26,7 @@ The Alarms module provides real-time alarm monitoring across the WideQuick MOD i
 ---
 
 ### [Configuring](configuring.md) { #configuring }
-* [**Creating alarm groups**](configuring.md#creating-alarm-groups) — Setting up alarm groups in **WideQuick Designer®**.
+* [**Creating alarm groups**](configuring.md#creating-alarm-groups) — Setting up alarm groups in **WideQuick® Designer**.
 * [**Adding alarms**](configuring.md#adding-alarms) — Defining individual alarms and their trigger conditions.
 * [**Alarm notification schedules**](configuring.md#alarm-notification-schedules) — Configuring when and to whom notifications are sent.
 

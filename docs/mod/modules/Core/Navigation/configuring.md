@@ -23,7 +23,7 @@ module. If not, see [Navigation — Get started](get-started.md).
 ## Setting privilege requirements on views { #setting-privilege-requirements-on-views }
 Since the menu system is automatically generated, views cannot be hidden or disabled
 in the traditional way using the security tab. Instead, permissions are managed through
-**WideQuick Runtime®** settings.
+**WideQuick® Runtime** settings.
 
 To access these settings, start the project and navigate to
 **Main Menu → Settings → Workviews → Workviews - Privilege**.
@@ -46,7 +46,7 @@ folders.
 ## Display settings for restricted views { #display-settings-for-restricted-views }
 There are several settings controlling how restricted folders are displayed for users
 without the required privilege. These settings can be found under **Settings** in
-**WideQuick Runtime®**.
+**WideQuick® Runtime**.
 
 ![DisplayPriv](/docs/Images/Navigation/Display%20priv.png)
 

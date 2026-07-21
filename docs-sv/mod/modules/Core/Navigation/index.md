@@ -13,7 +13,7 @@ tags:
 # Navigation
 
 WideQuick Modular Framework inkluderar en inbyggd navigationsmodul som automatiskt
-bygger menystrukturen baserat på mappstrukturen i **WideQuick Designer®**.
+bygger menystrukturen baserat på mappstrukturen i **WideQuick® Designer**.
 Detta gör det enkelt att hantera och skala navigationen i takt med att projektet växer, med
 stöd för nästlade mappar, behörighetsbaserad åtkomstkontroll, anpassade ikoner och
 direkt objektlänkning via GoTo.

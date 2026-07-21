@@ -63,7 +63,7 @@ as normal.
 
 ## Background image
 
-The login screen background image is configured in **WideQuick Designer®**. In the
+The login screen background image is configured in **WideQuick® Designer**. In the
 project tree under **Workviews**, navigate to the **Login** **Workview**. Select the
 `Image1` object and open the **Image** property. Remove the default images and add
 your desired image(s).
@@ -94,7 +94,7 @@ supports the following display options, which can be set in its properties:
 ## Start Workview
 
 The start **Workview** is the view that opens after login. It is configured in
-**WideQuick Designer®** by navigating to the **WORKSPACE** **Workview** in the
+**WideQuick® Designer** by navigating to the **WORKSPACE** **Workview** in the
 project tree under **Workviews**.
 
 Right-click anywhere in the view and select **Object** then **MultiviewerPage** from

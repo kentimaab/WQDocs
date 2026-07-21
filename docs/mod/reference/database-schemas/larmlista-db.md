@@ -15,7 +15,7 @@ tags:
 
 # Larmlista database
 
-The Larmlista database does not have a fixed set of tables. It is written to by Alarm-type loggers configured in **WideQuick Designer®** — see [Configuring a Logger](../../guides/Loggers.md) for how logger type and version affect the tables that are created.
+The Larmlista database does not have a fixed set of tables. It is written to by Alarm-type loggers configured in **WideQuick® Designer** — see [Configuring a Logger](../../guides/Loggers.md) for how logger type and version affect the tables that are created.
 
 ## Table naming { #table-naming }
 

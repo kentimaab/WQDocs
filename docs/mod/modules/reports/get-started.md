@@ -23,13 +23,13 @@ tags:
     * `scAlert`
 
 This section covers the basics of the Report module, including how to add a new 
-template, how to use existing templates in **WideQuick Runtime®**, and how to schedule 
+template, how to use existing templates in **WideQuick® Runtime**, and how to schedule 
 reports to run automatically.
 
 ## Setting up the Reporter { #setting-up-the-reporter }
 WideQuick includes a set of default report templates, found under 
 **Reports** in the project tree. Custom templates can also be created or imported 
-through **WideQuick Designer®**.
+through **WideQuick® Designer**.
 
 To create a new template, right-click **Reports** in the project tree and select 
 **Add Report**. This will open the following window:
@@ -62,8 +62,8 @@ templates, see [here](extending.md#creating-templates).
     When adding a custom template, a corresponding ReportController must also be 
     created. This is explained [here](extending.md#creating-the-reportcontroller-view).
 
-## Using the Reporter in **WideQuick Runtime®** { #using-the-reporter-in-widequick-runtime }
-To manage reports in **WideQuick Runtime®**, navigate to 
+## Using the Reporter in **WideQuick® Runtime** { #using-the-reporter-in-widequick-runtime }
+To manage reports in **WideQuick® Runtime**, navigate to 
 **History → Reports → Reports - List**. This page displays a list of all 
 generated reports with two columns:
 
@@ -136,7 +136,7 @@ configuration of each report type, see [Reports — Configuring](configuring.md)
 
 Once generated, the report is added to the report list where it can be previewed.
 
-## Scheduling a report in **WideQuick Runtime®** { #scheduling-a-report-in-widequick-runtime }
+## Scheduling a report in **WideQuick® Runtime** { #scheduling-a-report-in-widequick-runtime }
 To schedule a report, navigate to 
 **History → Reports → Reports - Schedule**.
 

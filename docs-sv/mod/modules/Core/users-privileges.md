@@ -24,15 +24,15 @@ begränsa eller bevilja åtkomst till specifika vyer och åtgärder.
 
 ## Lägga till och redigera användare { #adding-and-editing-users }
 
-Användare kan hanteras i antingen **WideQuick Designer®** eller **WideQuick Runtime®**.
+Användare kan hanteras i antingen **WideQuick® Designer** eller **WideQuick® Runtime**.
 
-### WideQuick Designer®
+### WideQuick® Designer
 
 I projektträdet, dubbelklicka på **Användare och behörigheter**. För att lägga till en ny användare,
 högerklicka på **Användare** och välj **Lägg till användare...**. För att redigera en befintlig användare,
 dubbelklicka på **Användare**, högerklicka på användaren och välj **Egenskaper...**.
 
-### WideQuick Runtime®
+### WideQuick® Runtime
 
 Navigera till **Inställningar** i huvudmenyn och öppna vyn **Inställningar**. Under
 **Användare och behörigheter** klicka på **Byt användare**. Klicka på **Lägg till...** för att skapa en ny
@@ -78,8 +78,8 @@ privilegier som ingår i det — utan att behöva tilldela dem individuellt.
 virtuella privilegier kommer alla användare som tilldelats `EditUsers` automatiskt
 även att ha `EditName` och `EditPassword`.
 
-Virtuella privilegier konfigureras i privilegieegenskaperna i **WideQuick
-Designer®**. I projektträdet markeras privilegier som innehåller virtuella privilegier
+Virtuella privilegier konfigureras i privilegieegenskaperna i **WideQuick®
+Designer**. I projektträdet markeras privilegier som innehåller virtuella privilegier
 med en särskild ikon.
 
 <figure markdown="span">

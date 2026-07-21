@@ -29,7 +29,7 @@ På samma sida för [Temabyggaren](../../../../Tools/theme-builder.md), scrolla 
 3. Klicka på **Merge new theme into existing themes file**.
 4. Ladda ned den uppdaterade `Themes.kdat`.
 
-Ersätt den befintliga `Themes.kdat` i projektmappen med den nedladdade filen. Om **WideQuick Designer®** var öppet, starta om det. Det nya temat visas under grenen **Themes** i projektträdet och kan anges som starttema.
+Ersätt den befintliga `Themes.kdat` i projektmappen med den nedladdade filen. Om **WideQuick® Designer** var öppet, starta om det. Det nya temat visas under grenen **Themes** i projektträdet och kan anges som starttema.
 
 ## Vad M3 genererar automatiskt { #what-m3-generates-automatically }
 

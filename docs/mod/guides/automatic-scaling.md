@@ -27,11 +27,11 @@ The `scWM` script handles all scaling. It monitors the main window every 500 ms 
 
 ## Main View Scaling { #main-view-scaling }
 
-The main view scales automatically — no configuration is needed. `scWM` continuously applies the correct zoom level as the window resizes. This also works on **WideQuick Remote®** clients and **WideQuick Web®** clients. Web clients scale relative to the browser window rather than the screen resolution.
+The main view scales automatically — no configuration is needed. `scWM` continuously applies the correct zoom level as the window resizes. This also works on **WideQuick® Remote** clients and **WideQuick® Web** clients. Web clients scale relative to the browser window rather than the screen resolution.
 
 ## Popup Scaling { #popup-scaling }
 
-Popups do not scale automatically. To scale a popup proportionally to the main view and place it on screen, call `scWM.scaleAndPlacePopup()` in the popup Workview's **onLoad** script. To find the onLoad script, right-click the Workview in the project tree in **WideQuick Designer®**, select **Properties**, open the **Action** tab and double-click **load**.
+Popups do not scale automatically. To scale a popup proportionally to the main view and place it on screen, call `scWM.scaleAndPlacePopup()` in the popup Workview's **onLoad** script. To find the onLoad script, right-click the Workview in the project tree in **WideQuick® Designer**, select **Properties**, open the **Action** tab and double-click **load**.
 
 ```javascript title="Popup Workview — onLoad"
 scWM.scaleAndPlacePopup(this);
@@ -55,7 +55,7 @@ scWM.scaleAndPlacePopup(this, "bottom");
 
 ### Enabling Pannable/Zoomable { #enabling-pannablezoomable }
 
-Popup scaling requires **Pannable/Zoomable** to be enabled on the popup Workview. In **WideQuick Designer®**, right-click the Workview in the project tree and select **Properties**. Open the **Layout** tab and check **Pannable/Zoomable**.
+Popup scaling requires **Pannable/Zoomable** to be enabled on the popup Workview. In **WideQuick® Designer**, right-click the Workview in the project tree and select **Properties**. Open the **Layout** tab and check **Pannable/Zoomable**.
 
 ![Pannable/Zoomable setting in Workview properties](/docs/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
 

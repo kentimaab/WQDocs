@@ -22,7 +22,7 @@ Om inte, se [Navigation — Kom igång](get-started.md).
 ## Ange behörighetskrav för vyer { #setting-privilege-requirements-on-views }
 Eftersom menysystemet genereras automatiskt kan vyer inte döljas eller inaktiveras
 på det traditionella sättet via säkerhetsfliken. Istället hanteras behörigheter via
-inställningar i **WideQuick Runtime®**.
+inställningar i **WideQuick® Runtime**.
 
 För att komma åt dessa inställningar, starta projektet och navigera till
 **Huvudmeny → Inställningar → Arbetsvyer → Arbetsvyer - Behörighet**.
@@ -44,7 +44,7 @@ Behörigheter kan tillämpas på både enskilda **Arbetsvy** och hela **Arbetsvy
 ## Visningsinställningar för begränsade vyer { #display-settings-for-restricted-views }
 Det finns flera inställningar som styr hur begränsade mappar visas för användare
 utan den nödvändiga behörigheten. Dessa inställningar finns under **Inställningar** i
-**WideQuick Runtime®**.
+**WideQuick® Runtime**.
 
 ![DisplayPriv](/docs/sv/Images/Navigation/Display%20priv.png)
 

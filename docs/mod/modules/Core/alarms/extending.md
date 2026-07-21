@@ -15,9 +15,9 @@ tags:
 
 ## Email notifications { #email-notifications }
 
-To send alarm notifications by email, an SMTP server must be configured. This can be done in **WideQuick Designer®** before deployment or in **WideQuick Runtime®** on a running system.
+To send alarm notifications by email, an SMTP server must be configured. This can be done in **WideQuick® Designer** before deployment or in **WideQuick® Runtime** on a running system.
 
-### Configuring SMTP in WideQuick Designer® { #configuring-smtp-in-widequick-designer }
+### Configuring SMTP in WideQuick® Designer { #configuring-smtp-in-widequick-designer }
 
 1. In the project tree, right-click the **Mail** node and select **Properties...**.
 2. Enter the server details.
@@ -115,7 +115,7 @@ AT commands over a serial connection is compatible.
 
 ### Configuring the modem { #configuring-the-modem }
 
-The modem is configured in **WideQuick Runtime®**. Navigate to
+The modem is configured in **WideQuick® Runtime**. Navigate to
 **Settings → GSM Settings** to open the configuration dialog.
 
 ![GSM modem settings](/docs/Images/Alarms/alarm-gsm-settings.png){align=center}

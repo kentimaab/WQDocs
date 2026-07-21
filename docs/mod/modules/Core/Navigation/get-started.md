@@ -34,7 +34,7 @@ tags:
 This section covers the basics of the Navigation module, including how to add 
 **Workviews** to the navigation menu and how the Fullscreen Menu works. The Navigation 
 module automatically builds the menu structure based on the folder structure in 
-**WideQuick Designer®**, making it easy to manage and extend as the project grows.
+**WideQuick® Designer**, making it easy to manage and extend as the project grows.
 
 For access control and display settings for restricted views, see 
 [Navigation — Configuring](configuring). For advanced functionality such as GoTo 
@@ -75,10 +75,10 @@ can be nested inside to build even deeper navigation structures.
 
 ## Fullscreen Menu { #fullscreen-menu }
 The Fullscreen Menu gives users an immediate overview of the directory structure and 
-allows quick navigation to nested views. It can be toggled in **WideQuick Runtime®**  by navigating to 
+allows quick navigation to nested views. It can be toggled in **WideQuick® Runtime**  by navigating to 
 **Settings**, so users can switch based on their preference.
 
-The menu is built automatically from the directory structure in **WideQuick Designer®**, 
+The menu is built automatically from the directory structure in **WideQuick® Designer**, 
 meaning design decisions made there are reflected directly in runtime.
 
 ![FullScreen_Toggle](/docs/Images/Navigation/ToggleFullNav.png)

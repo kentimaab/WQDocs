@@ -34,7 +34,7 @@ The Documents module is available under **Documents & Logbook -> Documents** in 
 
 ## Files view { #files-view }
 
-The view is split into two panels. The left panel shows a file tree with two categories: **Local files** and **Online files**. Local files are stored on the server; online files are links to external URLs. The right panel shows the preview for the selected file. On **WideQuick Web®**, a third category appears for files that cannot be opened in the browser.
+The view is split into two panels. The left panel shows a file tree with two categories: **Local files** and **Online files**. Local files are stored on the server; online files are links to external URLs. The right panel shows the preview for the selected file. On **WideQuick® Web**, a third category appears for files that cannot be opened in the browser.
 
 ![Documents Files view](/docs/Images/Documents/documents-list.png){align=center}
 
@@ -76,7 +76,7 @@ The resource is added to the document list under **Online files**. The URL is st
 
 Select a file in the left panel and click **Preview** to load it in the preview panel.
 
-Most file types can be previewed inline — images, PDFs and web pages render directly. On **WideQuick Web®**, Office files (Word, Excel, PowerPoint) are not previewable in the browser and are grouped separately in the file tree.
+Most file types can be previewed inline — images, PDFs and web pages render directly. On **WideQuick® Web**, Office files (Word, Excel, PowerPoint) are not previewable in the browser and are grouped separately in the file tree.
 
 ## Next Steps { #next-steps }
 

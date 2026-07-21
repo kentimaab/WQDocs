@@ -236,7 +236,7 @@ according to the actual number of tags available for the object.
 ## Opening a popup { #opening-a-popup }
 The following section covers the two ways a popup can be opened in WideQuick.
 The opening method is determined by how the `DynTouch` object is configured in
-**WideQuick Designer®**.
+**WideQuick® Designer**.
 
 There are two ways to open a popup in WideQuick, each with a different visual
 behaviour:

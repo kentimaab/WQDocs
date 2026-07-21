@@ -28,10 +28,10 @@ __Utgiven 2026-06-26__
 1. Ladda ner resurspaketet **Migration BMS.2026.1.1**.
 
 2. Öppna ditt `WideQuick_BMS_Template_2026_1_0` eller
-`WideQuick_BMS_Demo_2026_1_0`-projekt i **WideQuick Designer®** och importera
+`WideQuick_BMS_Demo_2026_1_0`-projekt i **WideQuick® Designer** och importera
 resurspaketet.
 
-3. I **WideQuick Designer®**, klicka på knappen **Resurser** för att öppna
+3. I **WideQuick® Designer**, klicka på knappen **Resurser** för att öppna
 resurspanelen.
 
     ![Resursknapp](/docs/sv/Images/Resources/Resources%20.png)
@@ -52,7 +52,7 @@ resurspanelen.
         När **Importera** har klickats, rör inte applikationen förrän den är
         klar. Processen tar ungefär 1 minut. Om den kraschar, kör importen igen.
 
-4. Starta projektet i **WideQuick Runtime®**.
+4. Starta projektet i **WideQuick® Runtime**.
 
 5. Stäng applikationen och starta den igen.
 

@@ -45,7 +45,7 @@ immediately navigate to the object that triggered an alarm and take action.
 
 To enable GoTo for alarms, follow these steps:
 
-1. In **WideQuick Designer®**, open the **Alarm Group** properties and navigate to
+1. In **WideQuick® Designer**, open the **Alarm Group** properties and navigate to
 **Measures**.
 2. Click the circle next to **Script** to enable the script action and enter the
 following:

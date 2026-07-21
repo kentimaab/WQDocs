@@ -17,7 +17,7 @@ WideQuick Modular Framework inkluderar en inbyggd modul för Kartor och indikato
 ---
 
 ### [Kom igång](get-started.md) { #get-started }
-* [**Konfigurera ett kartvy-objekt**](get-started.md#setting-up-a-map-view-object) — Hur man ställer in ett **Kartvy**-objekt i **WideQuick Designer®**.
+* [**Konfigurera ett kartvy-objekt**](get-started.md#setting-up-a-map-view-object) — Hur man ställer in ett **Kartvy**-objekt i **WideQuick® Designer**.
 * [**Lägga till grundläggande indikatorer**](get-started.md#adding-basic-indicators) — Hur man lägger till grundläggande indikatorer såsom zoomknapp, nålar och väderwidget.
 
 ---

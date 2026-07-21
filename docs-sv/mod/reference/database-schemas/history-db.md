@@ -12,7 +12,7 @@ tags:
 
 # History-databas
 
-History-databasen har ingen fast uppsättning tabeller. Tabeller skapas automatiskt när loggenheter konfigureras i **WideQuick Designer®**. Varje loggenhet skapar ett par tabeller som identifieras av en hash som härleds från loggenhetens namn.
+History-databasen har ingen fast uppsättning tabeller. Tabeller skapas automatiskt när loggenheter konfigureras i **WideQuick® Designer**. Varje loggenhet skapar ett par tabeller som identifieras av en hash som härleds från loggenhetens namn.
 
 ## Tabellnamn { #table-naming }
 

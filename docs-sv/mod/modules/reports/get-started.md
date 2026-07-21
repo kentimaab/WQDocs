@@ -20,13 +20,13 @@ tags:
     * `scAlert`
 
 Det här avsnittet täcker grunderna i rapportmodulen, inklusive hur man lägger till en ny
-mall, hur man använder befintliga mallar i **WideQuick Runtime®**, och hur man schemalägger
+mall, hur man använder befintliga mallar i **WideQuick® Runtime**, och hur man schemalägger
 rapporter att köras automatiskt.
 
 ## Konfigurera rapportverktyget { #setting-up-the-reporter }
 WideQuick innehåller en uppsättning standardrapportmallar som finns under
 **Rapporter** i projektträdet. Anpassade mallar kan också skapas eller importeras
-via **WideQuick Designer®**.
+via **WideQuick® Designer**.
 
 För att skapa en ny mall, högerklicka på **Rapporter** i projektträdet och välj
 **Lägg till rapport**. Följande fönster öppnas:
@@ -59,8 +59,8 @@ mallar finns [här](extending.md#creating-templates).
     När man lägger till en anpassad mall måste en motsvarande ReportController också
     skapas. Detta förklaras [här](extending.md#creating-the-reportcontroller-view).
 
-## Använda rapportverktyget i **WideQuick Runtime®** { #using-the-reporter-in-widequick-runtime }
-För att hantera rapporter i **WideQuick Runtime®**, navigera till
+## Använda rapportverktyget i **WideQuick® Runtime** { #using-the-reporter-in-widequick-runtime }
+För att hantera rapporter i **WideQuick® Runtime**, navigera till
 **Historik → Rapporter → Rapporter - Lista**. Den här sidan visar en lista över alla
 genererade rapporter med två kolumner:
 
@@ -133,7 +133,7 @@ konfiguration av varje rapporttyp, se [Rapporter — Konfigurera](configuring.md
 
 När den väl har genererats läggs rapporten till i rapportlistan där den kan förhandsgranskas.
 
-## Schemalägga en rapport i **WideQuick Runtime®** { #scheduling-a-report-in-widequick-runtime }
+## Schemalägga en rapport i **WideQuick® Runtime** { #scheduling-a-report-in-widequick-runtime }
 För att schemalägga en rapport, navigera till
 **Historik → Rapporter → Rapporter - Schema**.
 

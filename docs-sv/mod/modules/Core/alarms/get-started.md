@@ -19,7 +19,7 @@ tags:
     * `scPrototypes`
     * `scAlert`
 
-Larmmodulen tillhandahåller realtidsövervakning av larm i hela WideQuick MOD-installationen. Larm definieras i **WideQuick Designer®** och övervakas vid körning via en uppsättning dedikerade vyer som är tillgängliga från huvudnavigeringen.
+Larmmodulen tillhandahåller realtidsövervakning av larm i hela WideQuick MOD-installationen. Larm definieras i **WideQuick® Designer** och övervakas vid körning via en uppsättning dedikerade vyer som är tillgängliga från huvudnavigeringen.
 ## Larmvyer { #alarm-views }
 
 Larmvyerna nås från avsnittet **Larm** i huvudnavigeringen.

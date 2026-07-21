@@ -51,13 +51,13 @@ Examples: **Historik → Rapporter → Rapporter - Lista**
 ---
 
 ### Product names
-The registered trademark symbol and bold formatting apply only to **WideQuick Designer®** and **WideQuick Runtime®**. These are the two named software products.
+Only **WideQuick** is the registered trademark, so the ® attaches directly to **WideQuick** — never to a descriptor. Words like *Designer*, *Runtime*, *Remote*, and *Web Client* are plain descriptors and take no symbol of their own. Write `WideQuick® Designer`, not `WideQuick Designer®`.
 
 The framework itself is referred to as "WideQuick MOD" in prose and "WideQuick Modular Framework" in frontmatter and formal descriptions. Neither form gets the bold + ® treatment.
 
-Syntax: `**Product Name®**`
+Syntax: `**WideQuick® Descriptor**`
 
-Examples: **WideQuick Designer®**, **WideQuick Runtime®**
+Examples: **WideQuick® Designer**, **WideQuick® Runtime**, **WideQuick® Remote**, **WideQuick® Web Client**
 
 ---
 
@@ -184,7 +184,7 @@ Examples:
 ```markdown
 ## Remote Alarms { #remote-alarms }
 ### Alarm - List { #alarm-list }
-### Configuring SMTP in WideQuick Designer® { #configuring-smtp-in-widequick-designer }
+### Configuring SMTP in WideQuick® Designer { #configuring-smtp-in-widequick-designer }
 ## Step 1 — Generate the theme { #step-1-generate-the-theme }
 ```
 
@@ -223,7 +223,7 @@ Example:
 ```markdown
 ### [Get started](get-started.md)
 * [**Setting up the Reporter**](get-started.md#setting-up-the-reporter) — How to add
-and configure report templates in **WideQuick Designer®**.
+and configure report templates in **WideQuick® Designer**.
 ```
 
 ---

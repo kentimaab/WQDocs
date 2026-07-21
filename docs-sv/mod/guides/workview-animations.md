@@ -30,7 +30,7 @@ För mer information om taggsuffix, se [Taggstruktur](../reference/tag-structure
 
 ## Hur det fungerar { #how-it-works }
 
-När ett `DynTouch`-objekt placeras på ett objekt i **WideQuick Designer®** anropas
+När ett `DynTouch`-objekt placeras på ett objekt i **WideQuick® Designer** anropas
 `AnimationHandler()`-funktionen i `scWorkviewAnimation`-skriptet automatiskt.
 Detta skapar en hanterare som bevakar alla Datalager-signaler som matchar
 objektets taggnamn kombinerat med de konfigurerade suffixen. Hanteraren exponerar ett
@@ -53,8 +53,8 @@ egna animerade objekt beskrivs i
 
 ## Konfigurera kategorier och suffix { #configuring-categories-and-suffixes }
 
-Animationskategorierna och deras suffixalias konfigureras i **WideQuick
-Runtime®** genom att navigera till **Inställningar → Suffix → Suffix - Larm**.
+Animationskategorierna och deras suffixalias konfigureras i **WideQuick®
+Runtime** genom att navigera till **Inställningar → Suffix → Suffix - Larm**.
 
 ![Lista med Arbetsvy-animationer](/docs/sv/Images/Workview_Animations/Workview_animations_list.png)
 
@@ -208,7 +208,7 @@ ange `_SERVICE` som suffix och ge det en beskrivning som passar dina behov.
 
 ### Steg 2 - Skapa de visuella elementen { #step-2-create-the-visual-elements }
 
-I **WideQuick Designer®**, skapa följande objekt:
+I **WideQuick® Designer**, skapa följande objekt:
 
 * En **cirkel** — den blinkar i larm-, varnings- eller servicefärgen när någon
 av dessa kategorier är aktiv.
@@ -317,7 +317,7 @@ aktivsuffix är aktiv.
 ![Demonstration](/docs/sv/Images/Workview_Animations/Demonstration.gif)
 
 !!! tip
-    För att testa utan en PLC ansluten, högerklicka på objektet i **WideQuick Runtime®**
+    För att testa utan en PLC ansluten, högerklicka på objektet i **WideQuick® Runtime**
     för att öppna felsökningspopupen. Härifrån kan Datalager-variablerna växlas mellan
     `true` och `false` för att verifiera att animationerna fungerar som förväntat.
 

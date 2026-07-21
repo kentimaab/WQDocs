@@ -15,7 +15,7 @@ tags:
 
 ## Custom Widgets - Building New Widgets from Existing Templates { #custom-widgets-building-new-widgets-from-existing-templates }
 
-To base a new widget on an existing one, drag it from the `Dashboard Widgets` library onto a workview in **WideQuick Designer®**. Right-click the placed widget and select **Disconnect from template**. The widget can now be edited freely. Adjust the layout, add or remove objects, and modify the script logic.
+To base a new widget on an existing one, drag it from the `Dashboard Widgets` library onto a workview in **WideQuick® Designer**. Right-click the placed widget and select **Disconnect from template**. The widget can now be edited freely. Adjust the layout, add or remove objects, and modify the script logic.
 
 Once the changes are done, drag the widget from the workview back into the library list. It is stored there as a new object. To rename it, right-click it in the library list and set a new name.
 
@@ -53,7 +53,7 @@ View privileges restrict which users can access a given dashboard. Set them at r
 
 ### Setting Default View per Role { #setting-default-view-per-role }
 
-To set a different default dashboard per role, add the logic to the `onLoad` script of the `Workspace.kvie` workview in **WideQuick Designer®**. Use `_sys_user_name` to match a specific user or `System.currentUser().hasPrivilege()` to match a privilege level.
+To set a different default dashboard per role, add the logic to the `onLoad` script of the `Workspace.kvie` workview in **WideQuick® Designer**. Use `_sys_user_name` to match a specific user or `System.currentUser().hasPrivilege()` to match a privilege level.
 
 ```javascript title="Workspace.kvie — onLoad"
 app.MultiViewer = this.MultiviewerPage;

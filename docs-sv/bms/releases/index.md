@@ -16,9 +16,33 @@ en specifik version av WideQuick Modular Framework, länkad under respektive rub
 ramverkets ändringslogg, se [MOD-versioner](../../mod/releases/index.md).
 
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
+
+__Utgiven 2026-07-08__ — Patch-version BMS 2026.1.1.1
+<details class="release" markdown="1" open>
+<summary>Versionsnoteringar</summary>
+
+### Buggar
+
+| # | Område | Beskrivning |
+|---|---|---|
+| 1 | Spårningslogg | Spårningsloggens filter kunde inte kombinera objekt, användare och tid samtidigt (det var begränsat till två villkor), och radantalsgränsen returnerade inte tillförlitligt de senaste raderna. Åtgärdat med ett enda predikatbaserat filter. |
+| 2 | Underhåll | Återkommande uppgifter lagrade intervallenheten på det aktiva gränssnittsspråket, så den återkommande förskjutningen kunde hoppas över eller tillämpas felaktigt när språket skilde sig från när uppgiften skapades. Åtgärdat genom att normalisera enheter till en kanonisk form. |
+
+---
+
+### Biblioteks- och vyändringar
+
+| Fil | Förändring |
+|---|---|
+| `Spårningslogg.kvie` | Spårningsloggens filter omskrivet — predikatbaserad filtrering på objekt/användare/tid med en gräns för de N senaste raderna |
+| `scMaintenance.js` | Intervallenheter för återkommande uppgifter normaliserade till en kanonisk form för språkoberoende schemaläggning |
+
+</details>
+
+
 __Utgiven 2026-07-02__
 Modular Framework Version: <!-- MOD VERSION LINK -->
-<details class="release" markdown="1" open>
+<details class="release" markdown="1">
 <summary>Release notes</summary>
 
 ### Nya funktioner

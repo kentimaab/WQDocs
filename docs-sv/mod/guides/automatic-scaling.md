@@ -25,11 +25,11 @@ Skriptet `scWM` hanterar all skalning. Det övervakar huvudfönstret var 500 ms 
 
 ## Skalning av huvudvy { #main-view-scaling }
 
-Huvudvyn skalas automatiskt — ingen konfiguration krävs. `scWM` applicerar kontinuerligt rätt zoomnivå när fönstret ändrar storlek. Detta fungerar även på **WideQuick Remote®**-klienter och **WideQuick Web®**-klienter. Webbklienter skalar relativt till webbläsarfönstret snarare än skärmupplösningen.
+Huvudvyn skalas automatiskt — ingen konfiguration krävs. `scWM` applicerar kontinuerligt rätt zoomnivå när fönstret ändrar storlek. Detta fungerar även på **WideQuick® Remote**-klienter och **WideQuick® Web**-klienter. Webbklienter skalar relativt till webbläsarfönstret snarare än skärmupplösningen.
 
 ## Skalning av popup-fönster { #popup-scaling }
 
-Popup-fönster skalas inte automatiskt. För att skala ett popup-fönster proportionellt mot huvudvyn och placera det på skärmen, anropa `scWM.scaleAndPlacePopup()` i popup-arbetsvyns **onLoad**-skript. För att hitta onLoad-skriptet, högerklicka på arbetsvyn i projektträdet i **WideQuick Designer®**, välj **Egenskaper**, öppna fliken **Åtgärd** och dubbelklicka på **load**.
+Popup-fönster skalas inte automatiskt. För att skala ett popup-fönster proportionellt mot huvudvyn och placera det på skärmen, anropa `scWM.scaleAndPlacePopup()` i popup-arbetsvyns **onLoad**-skript. För att hitta onLoad-skriptet, högerklicka på arbetsvyn i projektträdet i **WideQuick® Designer**, välj **Egenskaper**, öppna fliken **Åtgärd** och dubbelklicka på **load**.
 
 ```javascript title="Popup arbetsvy — onLoad"
 scWM.scaleAndPlacePopup(this);
@@ -53,7 +53,7 @@ scWM.scaleAndPlacePopup(this, "bottom");
 
 ### Aktivera Pannable/Zoomable { #enabling-pannablezoomable }
 
-Skalning av popup-fönster kräver att **Pannable/Zoomable** är aktiverat på popup-arbetsvyn. I **WideQuick Designer®**, högerklicka på arbetsvyn i projektträdet och välj **Egenskaper**. Öppna fliken **Layout** och markera **Pannable/Zoomable**.
+Skalning av popup-fönster kräver att **Pannable/Zoomable** är aktiverat på popup-arbetsvyn. I **WideQuick® Designer**, högerklicka på arbetsvyn i projektträdet och välj **Egenskaper**. Öppna fliken **Layout** och markera **Pannable/Zoomable**.
 
 ![Pannable/Zoomable setting in arbetsvy properties](/docs/sv/Images/Automatic_Scaling/Pannable_zoomable.png){align=center}
 

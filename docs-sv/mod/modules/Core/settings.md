@@ -11,7 +11,7 @@ tags:
 <!-- --8<-- [start:body] -->
 # Inställningar
 
-Vyn **Inställningar** i **WideQuick Runtime®** ger tillgång till alla
+Vyn **Inställningar** i **WideQuick® Runtime** ger tillgång till alla
 systemkonfigurationsalternativ. Navigera till **Inställningar** i huvudmenyn och
 öppna vyn **Inställningar**.
 
@@ -69,7 +69,7 @@ schema** för att konfigurera scheman.
 **Visa namnplåtar** — växlar huruvida objektnamnplåtar är synliga i processvyn.
 
 **Visa dynTouch** — växlar huruvida `DynTouch`-objektgränser är synliga,
-användbart för felsökning av objektplacering i **WideQuick Designer®**.
+användbart för felsökning av objektplacering i **WideQuick® Designer**.
 
 **Teckenstorlek för stödobjekt** — anger teckenstorleken för stödobjekt såsom värdevisningar.
 Ange ett värde eller använd pilarna för att justera.

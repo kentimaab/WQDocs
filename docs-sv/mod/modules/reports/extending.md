@@ -38,7 +38,7 @@ En rapportmall består vanligtvis av tre blad:
 alla andra visuella element som rapporten ska visa.
 * Datablad — Ett dolt blad som innehåller rådata hämtad från databasen. Det här 
 bladet matar presentationsbladet med data. Databladet är enklare att konfigurera i 
-**WideQuick Designer®**, där dolda blad är synliga, jämfört med direkt i Excel.
+**WideQuick® Designer**, där dolda blad är synliga, jämfört med direkt i Excel.
 * Metablad — Ett dolt blad som innehåller allmän information om rapporten, som 
 rapporttitel, aktuellt datum och tid, vald loggenhet och valda signaler. Det här 
 bladet är användbart för att visa rapportmetadata på presentationsbladet.
@@ -48,7 +48,7 @@ bladet är användbart för att visa rapportmetadata på presentationsbladet.
     öppnar Excel. Att veta vilken data du behöver och hur den ska presenteras kommer att 
     göra det mycket enklare att konfigurera databladet och makrona.
 
-För att lägga till ett nytt blad i mallen, öppna mallen i **WideQuick Designer®** och 
+För att lägga till ett nytt blad i mallen, öppna mallen i **WideQuick® Designer** och 
 navigera till botten av bladflikarna. Klicka på **Create New Sheet**, se bilden nedan. 
 För att dölja bladet, högerklicka på bladfliken och välj **Hide Sheet**.
 
@@ -58,7 +58,7 @@ För att dölja bladet, högerklicka på bladfliken och välj **Hide Sheet**.
 </figure>
 
 !!! note
-    Dolda blad är bara synliga i **WideQuick Designer®** och syns inte 
+    Dolda blad är bara synliga i **WideQuick® Designer** och syns inte 
     i den slutgenererade rapporten eller när mallen öppnas direkt i Excel. Försök att 
     generera en rapport med bladet synligt när makrokommandot är inställt, för att få 
     en känsla för hur datan är orienterad.
@@ -298,7 +298,7 @@ bestämmer hur många händelser som samlas in per makroanrop. Denna distinktion
 ## Ändra maximalt antal signaler som kan väljas { #changing-the-maximum-of-signals-to-be-selected }
 I standardinställningarna för rapportören tillåts 15 signaler att väljas för 
 rapportgenerering. Detta kan enkelt ändras om fler signaler krävs. Navigera först i 
-**WideQuick Designer®** till **Data Types → Arrays → variable_ref** och välj 
+**WideQuick® Designer** till **Data Types → Arrays → variable_ref** och välj 
 **Properties...**. Detta öppnar följande popup:
 
 <figure markdown="span">

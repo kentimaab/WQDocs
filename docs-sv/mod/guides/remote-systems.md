@@ -25,7 +25,7 @@ Fjärrsystem låter en WideQuick-applikation ansluta till en eller flera andra W
 
 ## Ta emot anslutningar { #receiving-connections }
 
-För att en WideQuick-applikation ska kunna acceptera inkommande anslutningar från andra applikationer måste en anslutningsport konfigureras i projektinställningarna. I **WideQuick Designer®**, öppna **Project Properties** (genom att högerklicka på toppnoden i projektträdet) och ange **View access** under **Connection Port**. Standardporten är **2122**.
+För att en WideQuick-applikation ska kunna acceptera inkommande anslutningar från andra applikationer måste en anslutningsport konfigureras i projektinställningarna. I **WideQuick® Designer**, öppna **Project Properties** (genom att högerklicka på toppnoden i projektträdet) och ange **View access** under **Connection Port**. Standardporten är **2122**.
 
 ![Connection Port i Project Properties](/docs/sv/Images/Remote_System/remote-connection-port.png){align=center}
 
@@ -33,9 +33,9 @@ Båda applikationerna måste vara nåbara via nätverket på den konfigurerade p
 
 ## Konfigurera ett fjärrsystem { #configuring-a-remote-system }
 
-Ett fjärrsystem kan läggas till under utveckling i **WideQuick Designer®** eller vid körning i **WideQuick Runtime®**.
+Ett fjärrsystem kan läggas till under utveckling i **WideQuick® Designer** eller vid körning i **WideQuick® Runtime**.
 
-### Via WideQuick Designer® { #via-widequick-designer }
+### Via WideQuick® Designer { #via-widequick-designer }
 
 Fjärrsystem hanteras under noden **Remote Systems** i projektträdet. Högerklicka på noden och välj **Add Remote Systems...**. Fyll i följande fält:
 
@@ -48,7 +48,7 @@ Fjärrsystem hanteras under noden **Remote Systems** i projektträdet. Högerkli
 
 ![Dialogrutan Add Remote System](/docs/sv/Images/Remote_System/remote-designer-add.png){align=center}
 
-### Via WideQuick Runtime® { #via-widequick-runtime }
+### Via WideQuick® Runtime { #via-widequick-runtime }
 
 Navigera till **Inställningar → Inställningar** i huvudmenyn och klicka på **Manage remote systems**.
 
@@ -62,7 +62,7 @@ Avsnittet **Defaults** längst upp anger globala standardvärden för alla syste
 * **Max reconnect attempts** — hur många gånger som återanslutning ska försökas efter en förlorad anslutning. **-1** innebär att försök görs i det oändliga.
 * **Reconnect delay** — sekunder mellan återanslutningsförsök.
 
-Om du klickar på **Add** öppnas samma fält som i **WideQuick Designer®**.
+Om du klickar på **Add** öppnas samma fält som i **WideQuick® Designer**.
 
 ![Dialogrutan för att lägga till fjärrsystem](/docs/sv/Images/Remote_System/remote-runtime-add.png){align=center}
 
@@ -80,10 +80,10 @@ Att öppna ett fjärrsystem startar det i ett separat klientfönster. Den lokala
 
 Varje system i menyn för Fjärrsystem kan öppnas på två sätt:
 
-* **Klicka på systemnamnet** — öppnar fjärrapplikationen i **WideQuick Remote®**, en nativ klient med full vyåtkomst och interaktiva kontroller.
+* **Klicka på systemnamnet** — öppnar fjärrapplikationen i **WideQuick® Remote**, en nativ klient med full vyåtkomst och interaktiva kontroller.
 * **Klicka på globikonen** — öppnar fjärrapplikationen i webbklienten, ett webbläsarbaserat gränssnitt som inte kräver någon separat installation.
 
-**WideQuick Remote®** är det rekommenderade alternativet för operatörsanvändning. Webbklienten lämpar sig för situationer där det inte är praktiskt att installera Remote®-klienten — till exempel vid åtkomst från en privat enhet eller ett externt nätverk.
+**WideQuick® Remote** är det rekommenderade alternativet för operatörsanvändning. Webbklienten lämpar sig för situationer där det inte är praktiskt att installera Remote-klienten — till exempel vid åtkomst från en privat enhet eller ett externt nätverk.
 
 ## Fjärrlarm { #remote-alarms }
 

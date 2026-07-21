@@ -14,7 +14,7 @@ tags:
 
 ## Skapa larmgrupper { #creating-alarm-groups }
 
-Larm organiseras i grupper i **WideQuick Designer®**. Varje grupp definierar gemensamma standardvärden — färger, ikoner och åtgärder — som dess larm ärver om de inte åsidosätts individuellt.
+Larm organiseras i grupper i **WideQuick® Designer**. Varje grupp definierar gemensamma standardvärden — färger, ikoner och åtgärder — som dess larm ärver om de inte åsidosätts individuellt.
 
 1. I projektträdet högerklickar du på **Alarms** under **Data Store** och väljer **Add Group...**.
 2. Ange ett **Name** för gruppen.

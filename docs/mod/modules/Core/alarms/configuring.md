@@ -15,7 +15,7 @@ tags:
 
 ## Creating alarm groups { #creating-alarm-groups }
 
-Alarms are organised into groups in **WideQuick Designer®**. Each group defines shared defaults — colors, icons, and measures — that its alarms inherit unless overridden individually.
+Alarms are organised into groups in **WideQuick® Designer**. Each group defines shared defaults — colors, icons, and measures — that its alarms inherit unless overridden individually.
 
 1. In the project tree, right-click **Alarms** under **Data Store** and select **Add Group...**.
 2. Enter a **Name** for the group.

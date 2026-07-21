@@ -23,7 +23,7 @@ what is currently visible on the map.
 ---
 
 ### [Get started](get-started.md) { #get-started }
-* [**Setting up a Map View object**](get-started.md#setting-up-a-map-view-object) — How to set up a **Map View** object in **WideQuick Designer®**.
+* [**Setting up a Map View object**](get-started.md#setting-up-a-map-view-object) — How to set up a **Map View** object in **WideQuick® Designer**.
 * [**Adding basic indicators**](get-started.md#adding-basic-indicators) — How to add basic indicators such as the Zoom button, Pins, and the Weather Widget.
 
 ---

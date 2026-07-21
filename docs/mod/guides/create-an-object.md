@@ -12,7 +12,7 @@ tags:
 # Create Object
 
 There are two ways to create objects in WideQuick. The first is to build a process
-object visually in **WideQuick Designer®** by combining components, support
+object visually in **WideQuick® Designer** by combining components, support
 objects and a `DynTouch` object. The second is to create objects dynamically at
 runtime using the `createObject()` function. The visual approach is suited for
 integrators building process views, while the script approach is better suited for
@@ -38,7 +38,7 @@ Once built, the object can be saved to the library and reused across the project
 ### Icon
 
 The first step is to select a component to represent the object visually in
-**WideQuick Designer®**. Any component from the object libraries can be used —
+**WideQuick® Designer**. Any component from the object libraries can be used —
 the choice depends on what the object represents in the process view.
 
 In this example, a **Centrifugal Pumps 01** from the **PID Pumps** library under
@@ -97,7 +97,7 @@ For more information on how tags are structured and how the suffix system works,
 
 ## Creating objects from script
 
-**WideQuick Runtime®** allows objects to be created dynamically during runtime using
+**WideQuick® Runtime** allows objects to be created dynamically during runtime using
 the `createObject()` function. This is useful when the number of objects is not known
 at design time, or when it varies — for example, rendering one entry per data signal
 instead of placing a fixed number of empty objects in the view. Unlike the visual
@@ -105,7 +105,7 @@ approach, this method requires scripting knowledge and is better suited for adva
 use cases.
 
 `createObject()` is available in the **Functions** list under **WorkView** in
-**WideQuick Designer®**, along with the `ObjectType*` constants.
+**WideQuick® Designer**, along with the `ObjectType*` constants.
 
 ### Syntax
 

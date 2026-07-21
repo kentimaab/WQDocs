@@ -138,7 +138,7 @@ is applied to all objects in the system.
 
 ### Configuring suffix aliases { #configuring-suffix-aliases }
 
-Suffix aliases are configured in **WideQuick Runtime®** by navigating to
+Suffix aliases are configured in **WideQuick® Runtime** by navigating to
 **Settings → Suffix → Suffix Alias - Workviews**.
 
 ![Suffix settings](/docs/Images/Tag_Structure/SuffixAlias_Procces.png)

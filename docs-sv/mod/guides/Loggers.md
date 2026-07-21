@@ -13,7 +13,7 @@ tags:
 # Konfigurera en loggenhet
 
 En loggenhet definierar när data ska lagras och var den ska sparas. Loggningsenhet
-konfigureras i **WideQuick Designer®** och skriver data till en ansluten databas,
+konfigureras i **WideQuick® Designer** och skriver data till en ansluten databas,
 som sedan kan användas av vyn **Historik**, **Rapporter** och andra moduler som
 förlitar sig på historisk data.
 
