@@ -1,4 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
+// Re-runs `fn` on first load AND on every Material "instant navigation" page swap.
+// Plain 'DOMContentLoaded' only fires once per browser session, so widgets on
+// pages reached via instant nav (i.e. not a hard refresh) would never initialize.
+function onPageReady(fn) {
+    document.addEventListener('DOMContentLoaded', fn);
+    if (typeof document$ !== 'undefined') {
+        document$.subscribe(fn);
+    }
+}
+
+onPageReady(function () {
     const tagInput = document.getElementById('tagInput');
     const feedback = document.getElementById('feedback');
     if (!tagInput || !feedback) return;
@@ -20,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+onPageReady(function () {
     const tagTextarea = document.getElementById('tagTextarea');
     const tagResults = document.getElementById('tagResults');
     const filterButton = document.getElementById('filterButton');
@@ -93,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
+onPageReady(function () {
     const tagTextarea = document.getElementById('tagTextarea-modbus');
     const tagResults = document.getElementById('tagResults-modbus');
     const filterButton = document.getElementById('filterButton-modbus');
