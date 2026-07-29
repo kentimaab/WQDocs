@@ -13,7 +13,7 @@ onPageReady(function () {
     const feedback = document.getElementById('feedback');
     if (!tagInput || !feedback) return;
 
-    const tagPattern = /^[A-Za-z0-9_]+\.[A-Za-z0-9_]+\.[A-Za-z0-9_]+_[A-Za-z0-9_]+_[A-Za-z0-9]+$/;
+    const tagPattern = /^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9]+_[A-Za-z0-9]+$/;
 
     tagInput.addEventListener('input', function () {
         const input = this.value;
@@ -37,20 +37,29 @@ onPageReady(function () {
     if (!tagTextarea || !tagResults || !filterButton) return;
 
     // Updated regex pattern with exactly two underscores and alphanumerics after the last underscore
-    const tagPattern = /^[A-Za-z0-9_]+\.[A-Za-z0-9_]+\.[A-Za-z0-9_]+_[A-Za-z0-9_]+_[A-Za-z0-9]+$/;
+    const tagPattern = /^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9]+_[A-Za-z0-9]+$/;
 
     let showOnlyInvalid = false;
 
     function suggestCorrection(tag) {
-        const parts = tag.split('_');
-        if (parts.length !== 3) return '';
+        const dotParts = tag.split('.');
+        if (dotParts.length !== 3) return '';
 
-        // Try to correct common mistakes:
-        // 1. Ensure the last part contains only alphanumeric characters.
-        const lastPart = parts[2].replace(/[^A-Za-z0-9]/g, '');
+        const underscoreParts = dotParts[2].split('_');
+        if (underscoreParts.length !== 3) return '';
 
-        // 2. Reconstruct the tag with corrected last part
-        return `${parts[0]}_${parts[1]}_${lastPart}`;
+        const segments = [dotParts[0], dotParts[1], ...underscoreParts];
+
+        // Only Connection, Device, and Sys (indices 0-2) may not start with a digit.
+        const cleaned = segments.map((segment, index) => {
+            const stripped = segment.replace(/[^A-Za-z0-9_]/g, ''); // drop disallowed characters
+            return index < 3 ? stripped.replace(/^[0-9]+/, '') : stripped;
+        });
+
+        if (cleaned.some(segment => segment.length === 0)) return '';
+
+        const suggestion = `${cleaned[0]}.${cleaned[1]}.${cleaned[2]}_${cleaned[3]}_${cleaned[4]}`;
+        return suggestion === tag ? '' : suggestion;
     }
 
     function validateTags() {
@@ -110,7 +119,7 @@ onPageReady(function () {
     if (!tagTextarea || !tagResults || !filterButton) return;
 
     // Updated regex pattern with exactly two underscores and alphanumerics after the last underscore
-    const tagPattern = /^[A-Za-z0-9_]+_[A-Za-z0-9_]+_[A-Za-z0-9]+$/;
+    const tagPattern = /^[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9]+_[A-Za-z0-9]+$/;
 
     function validateTags() {
         const rows = tagTextarea.value.split('\n');
@@ -158,7 +167,7 @@ onPageReady(function () {
     const filterButton = document.getElementById('filterButton-MQTT');
     if (!tagTextarea || !tagResults || !filterButton) return;
 
-    const tagPattern = /^[A-Za-z0-9_]+\.[A-Za-z0-9_]+\.[A-Za-z0-9_]+_[A-Za-z0-9_]+_[A-Za-z0-9]+$/;
+    const tagPattern = /^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9]+_[A-Za-z0-9]+$/;
 
     let showOnlyInvalid = false;
 
@@ -207,7 +216,7 @@ onPageReady(function () {
     const filterButton = document.getElementById('filterButton-BACnet');
     if (!tagTextarea || !tagResults || !filterButton) return;
 
-    const tagPattern = /^[A-Za-z0-9_]+\.[A-Za-z0-9_]+\.[A-Za-z0-9_]+_[A-Za-z0-9_]+_[A-Za-z0-9]+$/;
+    const tagPattern = /^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9]+_[A-Za-z0-9]+$/;
 
     let showOnlyInvalid = false;
 
