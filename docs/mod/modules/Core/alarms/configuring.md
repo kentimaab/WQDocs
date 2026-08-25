@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M9
 status: draft
-last_reviewed: 2026-05-29
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -103,6 +103,29 @@ slot. To receive notifications for the entire day, set **From** to `00:00` and
 
 * **Severity level** — which alarm classes trigger this schedule. Leave empty to include all classes.
 * **Alarm groups** — which alarm groups are monitored. Use **Select all** to include all groups.
+* **Criteria** — which alarm state the notification is sent on. See [Notification criteria](#notification-criteria) below.
+
+The schedule list shows which alarm classes and which criteria each schedule monitors, and the status panel updates the number of schedules and their active state live rather than only when the view is opened.
+
+### Notification criteria { #notification-criteria }
+
+A schedule sends on one alarm state, chosen with the **Criteria** picker. The five values map onto the states the alarm logger itself records.
+
+| Criteria | Sends when |
+|---|---|
+| **all** | Any state change. |
+| **active** | The alarm becomes active and has not yet been acknowledged. |
+| **acknowledged** | The alarm is acknowledged while still active. |
+| **unacknowledged** | The alarm clears but is still awaiting acknowledgement. |
+| **inactive** | The alarm is both cleared and acknowledged, so fully resolved. |
+
+Only **acknowledged** and **inactive** carry a user name, so those are the only criteria whose notifications can report who acknowledged the alarm. Alarms with the acknowledgement rule **Auto** typically move straight from active to inactive with no user name, skipping the two middle states entirely.
+
+!!! info "Existing schedules keep their previous behaviour"
+    The `criteria` column is added to `mail_schedules` on first start and defaults to `active`, which is the state schedules sent on before criteria existed. No schedule changes behaviour on upgrade.
+
+!!! note "Criteria are stored in a canonical form"
+    The picker displays criteria translated into the active language, but the value written to the database is always the canonical English key. A schedule created in one language therefore reads correctly in another.
 
 **Step 3 — Who**
 

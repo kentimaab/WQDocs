@@ -4,7 +4,7 @@ description: Overview of the Time Channel popup in WideQuick.
 product: mod
 page_type: reference
 status: draft
-last_reviewed: 2026-05-29
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -38,6 +38,22 @@ objects, or restore a known configuration after changes.
     Save a baseline configuration before making adjustments. If the new schedule
     does not work as intended, use **Fetch** to restore a previously saved state.
 
+### Profile storage { #profile-storage }
+
+Profiles are handled by the `scTimeChannel` script and stored in the
+`TimeChannelProfile` table in the Config database.
+
+| Column | Purpose |
+|---|---|
+| `TagName` | The tag the profile was saved from. |
+| `ProfileName` | The name given to the profile. |
+| `Description` | The description given to the profile. |
+| `jsonObj` | The captured schedule values. |
+
+A profile captures every day type in one record: both time slots for each weekday, for
+Holiday Eve and Holiday, and for the three special days, together with the three special
+day dates.
+
 ## Channel status
 
 The top right panel displays the current status of the Time Channel — whether it is
@@ -62,6 +78,21 @@ dates. The following special day types are available:
 be defined by entering a date in `MM-DD` format
 
 Each special day supports the same two-period schedule as weekdays.
+
+### Holiday classification { #holiday-classification }
+
+The **Holiday** and **Holiday Eve** schedules only take effect if something tells the
+time channel which days are holidays. The Calendar module supplies this. The `scHoliday`
+script classifies each day from an imported public-holiday calendar and hands the result
+to the time channels that have subscribed, through the `Tidkanal` suffix category.
+
+WideQuick only reports which day type applies today. The PLC's own time channel firmware
+still owns the schedule evaluation itself.
+
+To enable it, import a public-holiday calendar from the calendar's **ImportCalendar**
+pop-out. Only a calendar marked as an authoritative holiday source takes part, which is
+what the public-holiday import creates. See
+[Calendar — Extending](../../modules/calendar/extending.md#holiday-aware-time-channels).
 
 ## Hand ctrl
 

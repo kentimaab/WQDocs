@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M17
 status: draft
-last_reviewed: 2026-05-19
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -185,6 +185,27 @@ of what day it is produced on.
 
 !!! tip "Backup"
     Before manipulating the template it is recommended to save a copy as a backup.
+
+## Delta Week { #delta-week }
+
+The **Delta Week** report shows the change over each week rather than the logged values 
+themselves, using the `DeltaWeek.xlsx` template. It reads from the `EnergyLoggDaily` 
+logger and allows up to 15 signals to be selected.
+
+### Changing the week span { #changing-the-week-span }
+
+The number of weeks the report covers is set with the `WeeksPrior` property on the 
+`Delta_Week` object. It defaults to `3`.
+
+## Delta Year { #delta-year }
+
+The **Delta Year** report is the yearly counterpart, using the `DeltaYear_H.xlsx` 
+template. It reads from the same `EnergyLoggDaily` logger and allows up to 15 signals.
+
+### Changing the year span { #changing-the-delta-year-span }
+
+The number of years the report covers is set with the `YearsPrior` property on the 
+`Delta_Year` object. It defaults to `3`.
 
 ## Report History { #report-history }
 The Report History is accessible from the **Reports - Schedule** workview. It 

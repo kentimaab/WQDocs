@@ -5,7 +5,7 @@ product: mod
 page_type: reference
 doc_id: DOC-M22
 status: draft
-last_reviewed: 2026-06-11
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -125,6 +125,26 @@ When a popup is opened directly via a DynTouch link (not routed through the tab 
 `scSmartPopup.bootstrapDirect()` solves this. It reconstructs the popup context from the clicked object and re-fires the Load events for all child components, ensuring they register and receive `activate()` after the view is fully ready.
 
 This bootstrap runs automatically. No manual handling is needed in popup Workviews.
+
+## Finding unbound suffixes { #finding-unbound-suffixes }
+
+A suffix that exists on an object but is not mapped to any popup category is never shown
+anywhere, and nothing reports it. The **Inte kopplade variabler** button in the debug
+view opens `UnboundDebug.kvie`, which lists exactly those suffixes for the object the
+popup was opened from.
+
+The view calls `getAllSuffixes()` on the current popup. Any entry the suffix
+configuration could not map is returned under a key of the form `unknown0`, `unknown1`
+and so on, and those are the entries listed. Each row shows the suffix itself and the
+description of the tag it resolves to, so an unmapped signal can be identified without
+looking it up in the Data Store.
+
+Use it after adding signals to an object, to confirm that every new suffix has been
+given a home in the configuration.
+
+!!! note "The list is per object"
+    The view reports the suffixes of the object whose popup is open, not every unmapped
+    suffix in the project. Check each object type that has gained new signals.
 
 ## Editing the configuration { #editing }
 

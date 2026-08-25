@@ -7,7 +7,7 @@ doc_id: DOC-D4
 size: M
 priority: p1
 status: draft
-last_reviewed: 2026-06-11
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -30,8 +30,9 @@ The Maintenance database stores everything related to the Maintenance and Calend
 
 | Table | Description |
 |---|---|
-| `CalendarEvents` | Custom calendar events — title, object, color, creator, description, and start/end timestamps in milliseconds. |
+| `CalendarEvents` | Custom calendar events — title, object, color, creator, description, and start/end timestamps in milliseconds. Imported events are tagged with the subscription they came from. |
 | `calendar_config` | Key-value configuration for the calendar, such as the reminder offset. |
+| `ics_subscriptions` | External calendars the project subscribes to. One row per source, holding its name, address, type (`url`, `file` or `nager`), cached ETag and Last-Modified validators, visibility in the calendar, and any colour override. See [Calendar — Extending](../../modules/calendar/extending.md#subscription-storage). |
 
 ## Remote Systems { #remote-systems }
 

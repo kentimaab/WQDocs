@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M14
 status: draft
-last_reviewed: 2026-05-19
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -134,6 +134,27 @@ To link the CSV to a line group such as `MainPipeLines`, set the **fileName** pr
 to the filename:
 
 ![fileName configuration](/docs/Images/Map_Indicators/fileNameCSV.png)
+
+#### Line geometry properties { #line-geometry-properties }
+
+Each line group contains individual line objects named `MainLine1`, `MediumLine1` and
+`SmallLine1`. These objects carry the geometry of the segment they draw:
+
+* **startLatitude** and **startLongitude** — the coordinate the segment starts at.
+* **endLatitude** and **endLongitude** — the coordinate the segment ends at.
+
+The remaining geometry properties (**xPos**, **yPos**, **xLength**, **yLength**,
+**xStartLink** and **yStartLink**) are calculated by the `scMap` script from the
+coordinates above and the current map frame. They do not need to be set by hand.
+
+`scMap` anchors these offsets to the corner of the visible map frame. A pipe spanning a
+large geographic area is therefore positioned correctly at high zoom, rather than from a
+fixed point that may fall outside the current view.
+
+!!! warning "Geometry properties moved off the info popup"
+    In earlier versions these properties sat on the `infoPopUp` object. They now live on
+    the line objects themselves. Any values previously entered on the info popup are not
+    carried across and must be set again on `MainLine1`, `MediumLine1` or `SmallLine1`.
 
 ### Filter { #filter }
 Filters allow users to focus on a specific set of lines or networks by toggling their

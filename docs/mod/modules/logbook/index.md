@@ -7,7 +7,7 @@ doc_id: DOC-M15
 size: S
 priority: p1
 status: draft
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -22,9 +22,9 @@ The logbook is available in three places: globally under **Documents & Logbook �
 ## Contents { #contents }
 
 ### [Get started](get-started.md) { #get-started }
-* [**The Logbook View**](get-started.md#the-logbook-view) — Layout, topic tree and entry list.
+* [**The Logbook View**](get-started.md#the-logbook-view) — Layout, topic tree, entry list and archiving.
 * [**Creating an Entry**](get-started.md#creating-an-entry) — Fields and how to save.
-* [**Filtering**](get-started.md#filtering) — Searching and filtering entries.
+* [**Filtering**](get-started.md#filtering) — Searching and filtering entries, including archived ones.
 
 ---
 
@@ -36,7 +36,8 @@ The logbook is available in three places: globally under **Documents & Logbook �
 ---
 
 ### [Extending](extending.md) { #extending }
-* [**Privileges**](extending.md#privileges) — Required privileges for adding, editing and deleting entries.
+* [**Privileges**](extending.md#privileges) — Required privileges for adding, editing and archiving entries.
+* [**Archiving**](extending.md#archiving) — The `archived` column, the archive functions and permanent deletion.
 
 ---
 

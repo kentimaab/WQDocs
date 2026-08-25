@@ -3,6 +3,8 @@ title: Reports
 description: Overview of the WideQuick MOD Reports module — generate, schedule, and customize reports based on alarm and energy data.
 product: mod
 page_type: overview
+status: draft
+last_reviewed: 2026-08-25
 tags:
  - MOD
 ---
@@ -19,6 +21,8 @@ covers everything from using the default templates to creating fully custom ones
 and configure report templates in **WideQuick® Designer**.
 * [**Using the Reporter**](get-started.md#using-the-reporter-in-widequick-runtime) — 
 Introduction to generating reports in **WideQuick® Runtime**.
+* [**Units and prefixes**](get-started.md#units-and-prefixes) — Choosing the unit a 
+report is presented in, and how per-signal scale factors are applied.
 * [**Scheduling a report**](get-started.md#scheduling-a-report-in-widequick-runtime) — 
 How to set up recurring scheduled reports.
 
@@ -33,6 +37,8 @@ and how to reconfigure it.
 reconfigure it.
 * [**Energy Report Week**](configuring.md#energy-report-week) — How it works and how 
 to reconfigure it.
+* [**Delta Week**](configuring.md#delta-week) — Reporting the change over each week.
+* [**Delta Year**](configuring.md#delta-year) — Reporting the change over each year.
 * [**Report History**](configuring.md#report-history) — Where to find it and how to 
 use it.
 

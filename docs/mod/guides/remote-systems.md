@@ -4,7 +4,7 @@ description: Connect WideQuick applications together for centralized monitoring 
 product: mod
 page_type: howto
 status: draft
-last_reviewed: 2026-05-28
+last_reviewed: 2026-08-25
 scripts: 
  - scRemoteAlarms
  - scRemoteSystems
@@ -22,6 +22,7 @@ tags:
     * `scAlarm`
     * `scPrototypes`
     * `scAlert`
+    * `scRemoteClients` — required for the connected client count and list
 
 Remote Systems lets a WideQuick application connect to one or more other WideQuick Runtime instances. Once connected, each remote system appears in the navigation menu and can be opened directly. Alarms from all connected systems are aggregated into the local alarm list, giving operators a single view across the full installation.
 
@@ -87,6 +88,30 @@ Each system in the Remote Systems menu can be opened in two ways:
 * **Click the globe icon** — opens the remote application in the web client, a browser-based interface that requires no separate installation.
 
 **WideQuick® Remote** is the preferred option for operator use. The web client is suited to situations where installing the Remote client is not practical — for example, access from a personal device or an external network.
+## Connected remote clients { #connected-remote-clients }
+
+Remote Systems covers the applications this one connects **out** to. Remote clients are the opposite direction: the **WideQuick® Remote** and web clients currently connected **in** to this application.
+
+The `scRemoteClients` script maintains a live count of those clients, available as the `Remote_Clients` variable. The count is owned by the server and synchronised down to every connected client, so a client displays the same figure the server sees. It is updated whenever a client connects or disconnects.
+
+!!! note "Disconnects are counted after a short delay"
+    A leaving client lingers in the runtime's client collection briefly, so the recount runs 250 ms after a disconnect. A count that briefly includes a client that has just left settles on its own.
+
+### The client list { #the-client-list }
+
+The `RemoteClients.kvie` pop-out shows the connected clients in detail, listing each client's name, IP address, port and product id.
+
+The list is never stored. A client requests it from the server, and the server replies only to the client that asked, so no client can read another client's address as ambient state. On the server itself the list is built directly.
+
+```javascript title="scRemoteClients — requestList()"
+scRemoteClients.requestList(function (list) {
+    // list is "name|ip|port|productId;name|ip|port|productId;..."
+});
+```
+
+!!! warning "Request the list from script scope"
+    The round trip must be started from a script library, not from a view's own `onLoad`. A view cannot dispatch RPC events that reach the server's `System.rpc.on*` handlers.
+
 ## Remote Alarms { #remote-alarms }
 
 When `scRemoteAlarms` is running, alarms from all connected remote systems appear in the local alarm list alongside local alarms. Each alarm entry shows which system it originates from. The alarm list can be filtered by system to focus on a specific remote installation. Acknowledging an alarm sends the acknowledgement directly to the originating system — no separate login is required.

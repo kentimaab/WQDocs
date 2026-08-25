@@ -4,7 +4,7 @@ description: Create and manage users and privileges in WideQuick.
 product: mod
 page_type: howto
 status: draft
-last_reviewed: 2026-06-08
+last_reviewed: 2026-08-25
 scripts:
   - scUsers
 tags: 
@@ -68,6 +68,45 @@ granted all privileges selected here
 clicking **Grant** or **Deny**
 
 ![Privilege](/docs/Images/User_and_privileges/Privilege.png)
+
+## Framework privileges { #framework-privileges }
+
+The framework ships with the privileges below, defined in `Privileges.kdat`.
+
+!!! warning "Every framework privilege defaults to denied"
+    All of them are defined with `Default="denied"`. A privilege added in a new release is therefore unavailable to every role until it is granted, including to roles that already hold the related privileges. After upgrading, review the assignments for any privilege the release introduced.
+
+| Privilege | Grants |
+|---|---|
+| `AlarmControl` | Acknowledge and block alarms |
+| `Schedules` | Add and edit schedules |
+| `TimeChannels` | Control time channels |
+| `EditUsers` | Edit users |
+| `Config` | Configuration actions, including clearing the maintenance log |
+| `editSMTP` | Edit the SMTP configuration |
+| `Debug` | Debugging. Not intended for live applications |
+| `Logbook_View` | View logbook entries |
+| `Logbook_Add` | Add logbook entries |
+| `Logbook_Edit` | Edit existing logbook entries |
+| `Logbook_Archive` | Archive and restore logbook entries in the global logbook view |
+| `Logbook_Delete` | Delete all archived notes from the settings view |
+| `Logbook_Context` | Add, remove and edit logbook contexts |
+| `Documents_View` | View and open documents |
+| `Documents_Upload` | Upload new documents |
+| `Documents_Edit` | Edit document name and metadata |
+| `Documents_Link` | Link and unlink documents to objects |
+| `Documents_Delete` | Delete documents |
+| `Documents_Sync` | Synchronise the database with the filesystem |
+| `Maintenance_Add` | Add new maintenance tasks |
+| `Maintenance_Edit` | Edit the status and description of maintenance tasks |
+| `Maintenance_EditExtended` | Edit assignee, priority and deadline |
+| `Maintenance_Templates` | Edit maintenance templates, including recurring task templates |
+| `ControlCurve_ChangeProfile` | Switch between control curve profiles |
+| `ControlCurve_EditProfiles` | Edit control curve profiles |
+| `ControlCurve_ManualControl` | Change control curve values directly |
+| `Settings_Project` | Change general project settings such as language, units, time, SMTP and application name |
+| `Settings_Navigation` | Change navigation settings such as fullscreen mode, direct navigation and login requirements |
+| `Settings_Process_Images` | Change process image display settings such as nameplates, font size, decimals and hand symbol |
 
 ## Virtual privileges { #virtual-privileges }
 

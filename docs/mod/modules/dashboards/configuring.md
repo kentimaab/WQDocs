@@ -4,7 +4,7 @@ description: Configure and customise the Dashboards module.
 product: mod
 page_type: howto
 status: draft
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -167,6 +167,7 @@ Displays signal value comparisons as a bar chart across configurable time period
 * `Typ` — Aggregation mode. Determines how each period's bar value is calculated. Defaults to `Add`.
 * `TimePeriod` — The time unit for each bar: `"Day"`, `"Week"`, `"Month"` or `"Year"`. Defaults to `"Month"`.
 * `TimeSpan` — Number of periods to display. Defaults to `12`.
+* `LeftOrder` — Direction of the date axis. Set to `1` to place older values to the right. Left empty, older values are placed to the left.
 
 | `Typ` | Description |
 |---|---|
@@ -174,6 +175,20 @@ Displays signal value comparisons as a bar chart across configurable time period
 | `Average` | Calculates the average of all logged values within each period. Use for continuous signals such as temperature. |
 | `Trend` | Shows the difference between the last value in the current period and the last value in the previous period. Use for signals where the change from one period to the next is what matters. |
 | `Result` | Shows the last logged value within each period. Use for signals where the end-of-period state is what matters. |
+
+---
+
+### Gauge { #gauge }
+
+Displays a single live value as a dial against a configured range, with an optional warning band. Two sizes are available: `Gauge_1x1` occupies a single grid cell and `Gauge_2x2` a two-by-two block.
+
+**Parameters**
+
+* `Signal` — The signal path to display.
+* `Name` — The label shown for the value.
+* `Header` — The widget heading.
+* `Min` and `Max` — The ends of the dial's range.
+* `WarningMin` and `WarningMax` — The bounds of the warning band drawn on the dial.
 
 ---
 

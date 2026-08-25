@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M13
 status: draft
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-25
 scripts:
   - scCalendar
   - scDayViewManager
@@ -27,6 +27,8 @@ tags:
     * `scDatabase`
     * `scThemes`
     * `scAlert`
+    * `scHoliday` — required for calendar subscriptions and holiday import
+    * `scSuffix` — required by `scHoliday`, and loaded before it
 
 The Calendar is available in the main menu under **Calendar**. It opens in month view and loads events and maintenance deadlines for the current period automatically.
 
@@ -43,13 +45,17 @@ Use the arrow buttons in the top bar to move forward or backward one period at a
 
 ### Month { #month }
 
-The month view shows a full calendar grid for the current month. Events appear as colored indicators on each day. If more events exist on a day than can be displayed, an overflow badge shows how many are hidden.
+The month view shows a full calendar grid for the current month. Events appear as colored indicators on each day.
+
+When a day holds more events than its cell can show, the remainder are not drawn in the cell at all. Instead a **Visa fler (N)** badge reports how many are not shown. Clicking the badge opens the Day view for that date, where every event of the day is visible.
 
 ![Month view with events](/docs/Images/Calendar/calendar-month-events.png){align=center}
 
 ### Week { #week }
 
 The week view shows the current 7-day period as a time grid. Events are rendered as blocks with their start and end times visible.
+
+Events that share an identical span would otherwise be drawn as stacked bars with their names on top of each other. A column holding more than one event is therefore collapsed into a single bar labelled **Visa händelser (X)**. Clicking it opens a picker listing every event the bar stands for.
 
 ![Week view](/docs/Images/Calendar/calendar-week.png){align=center}
 

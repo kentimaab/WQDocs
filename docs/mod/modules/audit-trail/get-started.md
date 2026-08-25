@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M19
 status: draft
-last_reviewed: 2026-06-08
+last_reviewed: 2026-08-25
 scripts:
   - scAuditTrail
 tags: 
@@ -62,6 +62,13 @@ Each row shows:
 * **Current Status** — the status after the change.
 
 Select a row and click **Open** to see the full before/after detail for that change, including assignee, priority, deadline and description.
+
+### Clearing the maintenance log { #clearing-the-maintenance-log }
+
+**Rensa underhållsloggen** removes every entry from the maintenance change log. A confirmation dialog is shown first, and the action requires the `Config` privilege.
+
+!!! warning "Clearing the log cannot be undone"
+    The action deletes the entire change history at once. The maintenance tasks themselves are untouched, but the record of who changed what, and when, is gone. Export or archive anything needed for traceability before clearing.
 
 ## Next Steps { #next-steps }
 

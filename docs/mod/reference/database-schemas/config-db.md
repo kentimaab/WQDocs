@@ -7,7 +7,7 @@ doc_id: DOC-D2
 size: M
 priority: p1
 status: draft
-last_reviewed: 2026-06-11
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -22,7 +22,7 @@ The Config database is the central configuration database. It stores persistent 
 | Table | Description |
 |---|---|
 | `AlarmObjects` | Maps alarm names to their device keys. Used by `scAlarmFinder` to resolve which device an alarm belongs to. |
-| `mail_schedules` | Notification schedules for alarm emails and SMS. Each row defines a time window, active days, severity filter, and alarm group filter. |
+| `mail_schedules` | Notification schedules for alarm emails and SMS. Each row defines a time window, active days, severity filter, alarm group filter, and the alarm state the schedule sends on. `criteria` holds a canonical key (`all`, `active`, `acknowledged`, `unacknowledged` or `inactive`) and defaults to `active`. `slot2_active` enables each weekday's second time window independently. Missing columns are added on start. |
 | `mailStats` | Log of every outgoing email and SMS attempt — timestamp, recipient, success flag, and any error message. |
 
 ## Navigation { #navigation }
@@ -44,16 +44,19 @@ The Config database is the central configuration database. It stores persistent 
 
 | Table | Description |
 |---|---|
-| `logbook` | Logbook entries — text, topic, author, and timestamp. |
+| `logbook` | Logbook entries — text, topic, author, and timestamp. `archived` marks an entry as archived, hiding it from the list without deleting it. The column is added on start if missing, and the retired `deleteMark` column is dropped. |
 | `logbook_contexts` | Topic and context definitions used to categorise logbook entries. |
 
 ## Reports { #reports }
 
 | Table | Description |
 |---|---|
-| `ReportQueue` | Pending report generation jobs waiting to be processed by `scReports`. |
-| `reportSchedules` | Scheduled automatic report configurations — frequency, time window, logger, recipients, and output format. |
-| `reportStats` | History of completed and failed report jobs, including failure counts and timestamps. |
+| `ReportQueue` | Pending report generation jobs waiting to be processed by `scReports`. Carries the report's display `unit` and `factorArray`, a comma-joined list of up to 15 per-signal scale multipliers. |
+| `reportSchedules` | Scheduled automatic report configurations — frequency, time window, logger, recipients, and output format. `trigger_time`, `trigger_day` and `trigger_month` set the exact send time. `unit` and `factorArray` store the same display unit and per-signal factors a manually created report uses. |
+| `reportStats` | History of completed and failed report jobs, including failure counts and timestamps. Also carries `unit` and `factorArray`. |
+
+!!! note "Report columns are added automatically"
+    `unit` and `factorArray` are added to all three report tables on first start, so an existing database migrates itself. A report created before the columns existed defaults to an empty unit and a factor of 1 per signal.
 
 ## Documents { #documents }
 

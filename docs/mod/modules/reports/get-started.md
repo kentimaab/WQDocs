@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M17
 status: draft
-last_reviewed: 2026-05-21
+last_reviewed: 2026-08-25
 scripts:
   - scReportScheduler
 tags: 
@@ -80,9 +80,9 @@ reports by email requires an SMTP server to be configured, which is explained [h
 </figure>
 
 To create a new report, click **Create Report**. A configuration menu will appear on 
-the right. By default, four report types are available: **Alarm Report**, 
-**Alarm Report One Alarm**, **Energy Report**, and **Energy Report Week**. Switch 
-between them by changing the **Report template** dropdown.
+the right. By default, six report types are available: **Alarm Report**, 
+**Alarm Report One Alarm**, **Energy Report**, **Energy Report Week**, **Delta Week** 
+and **Delta Year**. Switch between them by changing the **Report template** dropdown.
 
 <div class="figure-row" markdown>
 
@@ -123,15 +123,41 @@ Reports, as they require historical data from that point onwards. See
 Alarm Reports, as they include all signals automatically.
 * **Number of events** — The maximum number of events to include. For Energy 
 Reports, this defaults to the number of hourly events in the selected time period.
+* **Unit** and **Prefix** — The unit the report is presented in. See 
+[Units and prefixes](#units-and-prefixes) below.
 * **Report file format** — The output format of the report: either PDF or PDF and XLSM.
 * **Report status** — Displays the current status of the report, including 
 completion or any errors.
+
+!!! note "At least one signal must be selected"
+    A report cannot be created until at least one signal has been selected in the 
+    **LoggerList**. This does not apply to Alarm Reports, which include all signals 
+    automatically.
+
+## Units and prefixes { #units-and-prefixes }
+
+Every report carries a display unit, chosen with the **Unit** and **Prefix** pickers on 
+the report controller. **Unit** selects the base unit, and **Prefix** selects the SI 
+prefix applied to it, so `k` and `Wh` together give `kWh`.
+
+Signals selected into one report are not guaranteed to share the same native prefix. One 
+signal may be logged in `Wh` while another is already logged in `kWh`. Each selected 
+signal therefore carries its own scale factor, which corrects for that signal's own 
+prefix before the chosen display unit is applied. The conversion happens before the 
+values reach the template, so the template always receives values in a single unit.
+
+The unit list is built from the units of the signals available in the selected logger, 
+so only units the project actually logs are offered.
 
 The **Alarm Report** and **Alarm Report One Alarm** collect alarm data for the selected 
 time period. The **Energy Report** displays energy data over a three year period, with 
 an individual graph per year and a three year summary. The **Energy Report Week** 
 follows the same structure but displays data on a weekly basis, covering three weeks 
-by default with an individual graph per week and a three week summary. For detailed 
+by default with an individual graph per week and a three week summary.
+
+The **Delta Week** and **Delta Year** reports report the change over a period rather 
+than the logged values themselves. **Delta Week** covers three weeks by default and 
+**Delta Year** three years, both reading from the `EnergyLoggDaily` logger. For detailed 
 configuration of each report type, see [Reports — Configuring](configuring.md).
 
 Once generated, the report is added to the report list where it can be previewed.
@@ -168,7 +194,11 @@ appear on the right. Note that the second page changes depending on the selected
 
 </div>
 
-The second page mirrors the report configuration described in the previous section. 
+The second page mirrors the report configuration described in the previous section, 
+including the **Unit** and **Prefix** pickers. A scheduled report therefore stores the 
+same display unit and per-signal scale factors as a report created by hand, so a 
+scheduled run and a manual run of the same configuration produce the same values.
+
 Below are descriptions of the options on the first and third pages:
 
 * First page

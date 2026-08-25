@@ -5,7 +5,7 @@ product: mod
 page_type: concept
 doc_id: DOC-M9
 status: draft
-last_reviewed: 2026-05-29
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -29,6 +29,7 @@ The Alarms module provides real-time alarm monitoring across the WideQuick MOD i
 * [**Creating alarm groups**](configuring.md#creating-alarm-groups) — Setting up alarm groups in **WideQuick® Designer**.
 * [**Adding alarms**](configuring.md#adding-alarms) — Defining individual alarms and their trigger conditions.
 * [**Alarm notification schedules**](configuring.md#alarm-notification-schedules) — Configuring when and to whom notifications are sent.
+* [**Notification criteria**](configuring.md#notification-criteria) — Choosing which alarm state a schedule sends on.
 
 ---
 

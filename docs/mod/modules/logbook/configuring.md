@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M15
 status: draft
-last_reviewed: 2026-05-26
+last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
@@ -50,6 +50,8 @@ The full logbook under **Documents & Logbook → Logbook** shows all entries fro
 ### Object Popup { #object-popup }
 
 Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md) tab in its popup. Opening this tab shows only entries whose topic matches the object's tag path. New entries created from here are automatically assigned the correct topic.
+
+Entries can be added and edited from here. Archiving is offered in the global logbook only, since that is where archived entries can be shown again and restored. Archived entries are never listed in an object popup.
 
 ![Logbook tab in the object popup](/docs/Images/Logbook/object-popup-logbook.png){align=center}
 
