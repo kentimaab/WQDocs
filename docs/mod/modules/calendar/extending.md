@@ -66,10 +66,17 @@ Subscriptions are stored in the `ics_subscriptions` table in the maintenance dat
 | Type | Source | Sync behaviour |
 |---|---|---|
 | `url` | A live ICS feed fetched over HTTP or HTTPS. | Conditional request using the cached `ETag` and `Last-Modified`. An unchanged feed answers `304` and is not re-parsed. |
-| `file` | A local `.ics` file. | Re-read from disk on every sync. There are no HTTP semantics to cache, so the file is always re-parsed. |
-| `nager` | A country's public holidays. | Re-fetched on every sync. |
+| `file` | A local `.ics` file. | Re-read from disk and re-parsed whenever it is synced. There are no HTTP semantics to cache. |
+| `nager` | A country's public holidays. | Re-fetched whenever it is synced. |
+
+The `type` also decides what the `url` column holds, and which colour a subscription's events default to.
 
 Subscriptions are polled once an hour. The interval is held in `scHoliday.pollIntervalMs`.
+
+!!! warning "File subscriptions are never re-polled"
+    The hourly poll skips `file` subscriptions. A static local file has no live endpoint, so there is nothing for a recurring poll to usefully re-check.
+
+    Editing or replacing the `.ics` file on disk therefore does **not** update the calendar on its own. Import the file again from the **Import** dialog, which re-syncs that one subscription immediately.
 
 ### Fetching { #fetching }
 

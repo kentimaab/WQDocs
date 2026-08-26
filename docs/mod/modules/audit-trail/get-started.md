@@ -65,7 +65,7 @@ Select a row and click **Open** to see the full before/after detail for that cha
 
 ### Clearing the maintenance log { #clearing-the-maintenance-log }
 
-**Rensa underhållsloggen** removes every entry from the maintenance change log. A confirmation dialog is shown first, and the action requires the `Config` privilege.
+**Clear the maintenance log** removes every entry from the maintenance change log. A confirmation dialog is shown first, and the action requires the `Config` privilege.
 
 !!! warning "Clearing the log cannot be undone"
     The action deletes the entire change history at once. The maintenance tasks themselves are untouched, but the record of who changed what, and when, is gone. Export or archive anything needed for traceability before clearing.

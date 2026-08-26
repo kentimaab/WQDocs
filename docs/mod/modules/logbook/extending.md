@@ -38,7 +38,7 @@ Archiving has replaced per-entry deletion. There is no function that deletes a s
 !!! note "Archiving is available in the global logbook only"
     Archiving and restoring are offered in the full logbook view under **Documents & Logbook → Logbook**. The object popup and view-scoped logbooks offer adding and editing only.
 
-    This keeps the action where it can be undone. Showing archived entries and restoring them both rely on the **Visa arkiverade** filter, which exists only in the global view. Archiving from a scoped logbook would hide the entry with no way to bring it back from there.
+    This keeps the action where it can be undone. Showing archived entries and restoring them both rely on the **Show archived** filter, which exists only in the global view. Archiving from a scoped logbook would hide the entry with no way to bring it back from there.
 
 | State | `archived` | Behaviour |
 |---|---|---|

@@ -81,8 +81,9 @@ reports by email requires an SMTP server to be configured, which is explained [h
 
 To create a new report, click **Create Report**. A configuration menu will appear on 
 the right. By default, six report types are available: **Alarm Report**, 
-**Alarm Report One Alarm**, **Energy Report**, **Energy Report Week**, **Delta Week** 
-and **Delta Year**. Switch between them by changing the **Report template** dropdown.
+**Alarm Report One Alarm**, **Energy_Report**, **Energy_Report_Week**, 
+**Delta_Report_Week** and **Delta_Report_Year**. Switch between them by changing the 
+**Report template** dropdown.
 
 <div class="figure-row" markdown>
 
@@ -106,6 +107,16 @@ and **Delta Year**. Switch between them by changing the **Report template** drop
   <figcaption>Energy Report Week controller.</figcaption>
 </figure>
 
+<figure markdown="span">
+  ![Delta Week](/docs/Images/Reports/DeltaWeek.png)
+  <figcaption>Delta Week controller.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Delta Year](/docs/Images/Reports/DeltaYear.png)
+  <figcaption>Delta Year controller.</figcaption>
+</figure>
+
 </div>
 
 The four ReportControllers share a similar structure but differ in which options are 
@@ -123,7 +134,8 @@ Reports, as they require historical data from that point onwards. See
 Alarm Reports, as they include all signals automatically.
 * **Number of events** — The maximum number of events to include. For Energy 
 Reports, this defaults to the number of hourly events in the selected time period.
-* **Unit** and **Prefix** — The unit the report is presented in. See 
+* **Unit** and **Prefix** — The unit the report is presented in. Present on the Energy 
+and Delta controllers only. Alarm reports carry no unit. See 
 [Units and prefixes](#units-and-prefixes) below.
 * **Report file format** — The output format of the report: either PDF or PDF and XLSM.
 * **Report status** — Displays the current status of the report, including 
@@ -136,9 +148,12 @@ completion or any errors.
 
 ## Units and prefixes { #units-and-prefixes }
 
-Every report carries a display unit, chosen with the **Unit** and **Prefix** pickers on 
-the report controller. **Unit** selects the base unit, and **Prefix** selects the SI 
-prefix applied to it, so `k` and `Wh` together give `kWh`.
+The Energy and Delta reports carry a display unit, chosen with the **Unit** and 
+**Prefix** pickers on the report controller. **Unit** selects the base unit, **Prefix** 
+selects the SI prefix applied to it, and the two are combined when the report is 
+created, so `k` and `Wh` together give `kWh`.
+
+Alarm reports have no unit pickers, and unit handling is skipped for them entirely.
 
 Signals selected into one report are not guaranteed to share the same native prefix. One 
 signal may be logged in `Wh` while another is already logged in `kWh`. Each selected 
@@ -155,10 +170,10 @@ an individual graph per year and a three year summary. The **Energy Report Week*
 follows the same structure but displays data on a weekly basis, covering three weeks 
 by default with an individual graph per week and a three week summary.
 
-The **Delta Week** and **Delta Year** reports report the change over a period rather 
-than the logged values themselves. **Delta Week** covers three weeks by default and 
-**Delta Year** three years, both reading from the `EnergyLoggDaily` logger. For detailed 
-configuration of each report type, see [Reports — Configuring](configuring.md).
+The **Delta_Report_Week** and **Delta_Report_Year** reports show the change over a period 
+rather than the logged values themselves. Delta Week covers three weeks by default and 
+Delta Year three years. For detailed configuration of each report type, see 
+[Reports — Configuring](configuring.md).
 
 Once generated, the report is added to the report list where it can be previewed.
 

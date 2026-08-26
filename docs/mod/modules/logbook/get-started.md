@@ -64,7 +64,7 @@ Click the filter icon to open the **Filter logbook** panel. Available filters:
 * **User** — show entries from a specific user only
 * **Search** — search by text in the title, the message, or both
 * **Sorting** — newest first or oldest first
-* **Visa arkiverade** — include archived entries in the list. Archived entries are hidden until this is enabled.
+* **Show archived** — include archived entries in the list. Archived entries are hidden until this is enabled.
 
 Click **Apply** to apply the filters, **Clear filter** to reset, or **Cancel** to close without changes.
 

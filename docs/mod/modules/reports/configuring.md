@@ -188,9 +188,11 @@ of what day it is produced on.
 
 ## Delta Week { #delta-week }
 
-The **Delta Week** report shows the change over each week rather than the logged values 
-themselves, using the `DeltaWeek.xlsx` template. It reads from the `EnergyLoggDaily` 
-logger and allows up to 15 signals to be selected.
+Selected as **Delta_Report_Week** in the **Report template** dropdown, this report shows 
+the change over each week rather than the logged values themselves, using the 
+`DeltaWeek.xlsx` template. Up to 15 signals can be selected.
+
+![Delta week report controller](/docs/Images/Reports/DeltaWeek.png){align=center}
 
 ### Changing the week span { #changing-the-week-span }
 
@@ -199,8 +201,10 @@ The number of weeks the report covers is set with the `WeeksPrior` property on t
 
 ## Delta Year { #delta-year }
 
-The **Delta Year** report is the yearly counterpart, using the `DeltaYear_H.xlsx` 
-template. It reads from the same `EnergyLoggDaily` logger and allows up to 15 signals.
+Selected as **Delta_Report_Year**, this is the yearly counterpart, using the 
+`DeltaYear_H.xlsx` template. It allows up to 15 signals.
+
+![Delta year report controller](/docs/Images/Reports/DeltaYear.png){align=center}
 
 ### Changing the year span { #changing-the-delta-year-span }
 

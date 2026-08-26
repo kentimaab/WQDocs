@@ -129,7 +129,7 @@ This bootstrap runs automatically. No manual handling is needed in popup Workvie
 ## Finding unbound suffixes { #finding-unbound-suffixes }
 
 A suffix that exists on an object but is not mapped to any popup category is never shown
-anywhere, and nothing reports it. The **Inte kopplade variabler** button in the debug
+anywhere, and nothing reports it. The **Unbound variables** button in the debug
 view opens `UnboundDebug.kvie`, which lists exactly those suffixes for the object the
 popup was opened from.
 

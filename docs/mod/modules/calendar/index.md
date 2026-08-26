@@ -35,6 +35,8 @@ A subscription can be a live ICS feed, a local `.ics` file, or a country's publi
 * [**Maintenance Events**](configuring.md#maintenance-events) — How maintenance deadlines appear and what the colors mean.
 * [**Reminders**](configuring.md#reminders) — Configuring the reminder offset for maintenance deadlines.
 * [**Calendar Subscriptions**](configuring.md#calendar-subscriptions) — Importing, exporting, filtering and editing external calendars.
+* [**Importing a Calendar**](configuring.md#importing-a-calendar) — Adding a feed, a local file or a country's public holidays.
+* [**Exporting a Calendar**](configuring.md#exporting-a-calendar) — Writing events to a file or sending them by email.
 
 ---
 

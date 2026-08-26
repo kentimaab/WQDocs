@@ -180,7 +180,9 @@ Displays signal value comparisons as a bar chart across configurable time period
 
 ### Gauge { #gauge }
 
-Displays a single live value as a dial against a configured range, with an optional warning band. Two sizes are available: `Gauge_1x1` occupies a single grid cell and `Gauge_2x2` a two-by-two block.
+Displays a single live value as a dial against a configured range, with an optional warning band. The value is shown in the centre with its unit, the range ends are labelled at each side, and the signal path is shown below. Two sizes are available: `Gauge_1x1` occupies a single grid cell and `Gauge_2x2` a two-by-two block.
+
+![Gauge widget](/docs/Images/Dashboard/Gauge.png){align=center}
 
 **Parameters**
 
