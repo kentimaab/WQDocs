@@ -3,7 +3,7 @@ title: Rapporter — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-08-27
 tags:
  - MOD
 ---
@@ -12,12 +12,14 @@ tags:
 
 # Rapporter — Konfigurering
 
-Det här avsnittet beskriver hur du konfigurerar de fyra rapportmallarna i WideQuick Mod efter dina behov, samt hur du använder den inbyggda Rapporthistoriken för att återskapa eller skicka om misslyckade rapporter.
+Det här avsnittet beskriver hur du konfigurerar de sex rapportmallarna i WideQuick Mod efter dina behov, samt hur du använder den inbyggda Rapporthistoriken för att återskapa eller skicka om misslyckade rapporter.
 
-* **Alarm_Report**
-* **Alarm_Report_OneAlarm**
-* **Energy_Report**
-* **Energy_Report_Week**
+* **Larmrapport**
+* **Larmrapport ett larm**
+* **Energirapport**
+* **Energirapport vecka**
+* **Deltarapport år**
+* **Deltarapport vecka**
 
 ## Larmrapport { #alarm-report }
 Larmrapporten genererar en fullständig översikt över alla larm i hela systemet. 
@@ -53,12 +55,12 @@ uttrycksredigeraren.
 
 För att ändra vilken logger som visas när rapporten skapas, navigera till 
 **Arbetsvyer → Partials → ReportController → Alarm_Report** i **WideQuick® Designer**. 
-Välj objektet `LarmLogger_list`, gå till **Properties** och uppdatera egenskapen **Logger** 
+Välj objektet `LarmLogger_List`, gå till **Properties** och uppdatera egenskapen **Logger** 
 till önskad logger.
 
 <figure markdown="span">
   ![ObjectLogger](/docs/sv/Images/Reports/ObjectLogger.png)
-  <figcaption>Inställning av Logger-egenskapen på objektet LarmLogger_list.</figcaption>
+  <figcaption>Inställning av Logger-egenskapen på objektet LarmLogger_List.</figcaption>
 </figure>
 
 !!! warning "Namnkonvention"
@@ -180,6 +182,69 @@ vilket dag den produceras.
 
 !!! tip "Säkerhetskopia"
     Innan du bearbetar mallen rekommenderas det att spara en kopia som säkerhetskopia.
+
+## Deltarapport år { #delta-year }
+
+Vald som **Deltarapport år** i rullgardinsmenyn **Rapportmall** visar deltarapporterna
+förändringen mellan efterföljande avläsningar i stället för de loggade värdena i sig,
+vilket passar mätare som rapporterar en kontinuerligt ökande totalsumma. Deltarapport år
+presenterar ett månadsdelta per kolumn, en kolumn per månad, med en årssumma, vilket ger
+ett diagram per år. Som standard täcker den tre år och tillåter upp till 15 signaler.
+
+Det finns två mallar för den här rapporten. De skiljer sig endast i vilket omfång av
+loggningsintervall de hanterar. `DeltaYear.xlsx` hanterar intervall från månad till dag.
+`DeltaYear_H.xlsx` utökar omfånget ned till timme, för loggrar som registrerar oftare än
+en gång per dygn. Vilken av dem rapporten använder anges av dess `SourceFile` i
+`Reports.kdat`.
+
+!!! warning "Anpassa radgränsen till loggningsintervallet"
+    ReportControllerns `limit` begränsar hur många rader rapporten hämtar. Standardvärdet
+    är `1200`, vilket täcker tre år av dagliga avläsningar. En timvis logger ger omkring
+    26 000 avläsningar under samma period, så `limit` måste höjas i motsvarande grad,
+    annars läser rapporten tyst bara den äldsta delen av perioden.
+
+![Delta year report controller](/docs/sv/Images/Reports/DeltaYear.png){align=center}
+
+### Byta logger { #changing-logger-delta-year }
+Loggern byts på samma sätt som för Energirapporten. Se
+[Byta logger](#changing-logger).
+
+### Ändra årsintervall { #changing-the-delta-year-span }
+
+Antalet år som rapporten täcker anges med egenskapen **YearsPrior** på objektet
+`to_time_Singel` i ReportControllern för Deltarapport år. Standardvärdet är `3`.
+
+Båda de smalare konfigurationerna som finns för Energirapporten finns även här, och följer
+samma steg som [Ändra årsintervall](#changing-year-span): enbart innevarande år, eller ett
+fullständigt år från aktuellt datum. Den enda skillnaden är mallfilen, som är mallen för
+Deltarapport år i `\Your_Project\Reports\Templates` enligt bindningen till rapporten i
+`Reports.kdat`.
+
+## Deltarapport vecka { #delta-week }
+
+Deltarapport vecka följer samma struktur som Deltarapport år, men presenterar deltana på
+veckobasis i stället för årsbasis. Vald som **Deltarapport vecka** presenterar den ett
+dagsdelta per kolumn, en kolumn per veckodag, med en veckosumma. Som standard täcker den
+tre veckor och tillåter upp till 15 signaler.
+
+Det finns bara en mall för den här rapporten, `DeltaWeek.xlsx`, och den hanterar
+loggningsintervall från timme till dag.
+
+![Delta week report controller](/docs/sv/Images/Reports/DeltaWeek.png){align=center}
+
+### Byta logger { #changing-logger-delta-week }
+Loggern byts på samma sätt som för Energirapporten. Se
+[Byta logger](#changing-logger).
+
+### Ändra veckointervall { #changing-the-week-span }
+
+Antalet veckor som rapporten täcker anges med egenskapen **WeeksPrior** på objektet
+`to_time_Singel` i ReportControllern för Deltarapport vecka. Standardvärdet är `3`.
+
+Att begränsa rapporten till en enda vecka kräver även att mallen justeras, och följer samma
+steg som [Ändra veckointervall](#changing-week-span) för Energirapport vecka. Den enda
+skillnaden är mallfilen: ändra `DeltaWeek.xlsx` i `\Your_Project\Reports\Templates` i
+stället för `WeeklyEnergyReport.xlsx`.
 
 ## Rapporthistorik { #report-history }
 Rapporthistoriken är tillgänglig från vyn **Reports - Schedule**. Den 

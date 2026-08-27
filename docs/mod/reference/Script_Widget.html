@@ -15,12 +15,9 @@ svg text { font-family: var(--md-text-font, sans-serif); }
 </style>
 <div class="wrap">
 <div class="controls" id="sdg-controls">
+  <!-- Only "All layers" is static; the per-layer buttons are generated from the
+       dependency data further down, so every layer present gets a button. -->
   <button class="active" data-layer="all">All layers</button>
-  <button data-layer="0">Layer 0 — standalone</button>
-  <button data-layer="1">Layer 1</button>
-  <button data-layer="2">Layer 2</button>
-  <button data-layer="3">Layer 3</button>
-  <button data-layer="4">Layer 4</button>
 </div>
 <svg id="sdg-g" width="100%" viewBox="0 0 680 820" role="img">
   <title>Script dependency graph</title>
@@ -39,7 +36,7 @@ function initGraph() {
 const svg = document.getElementById('sdg-g');
 if (!svg || svg.dataset.initialized) return;
 svg.dataset.initialized = '1';
-const deps = {"scAlert":[],"scQuickSort":[],"scKeybindings":[],"scModem":[],"scOSK":[],"scDatabase":["scAlert"],"scObjectFinder":["scAlert"],"scUsers":["scAlert"],"scPrototypes":["scAlert"],"scPlatform":["scAlert"],"scThemes":["scAlert"],"scSuffix":["scAlert"],"scLogBook":["scAlert"],"scAuditTrail":["scAlert"],"scBackUpAndRestore":[],"scRemoteClients":["scAlert"],"scRemoteSystems":["scAlert"],"scTimeChannel":["scAlert"],"scToolTip":["scAlert"],"scTrend":["scAlert"],"scWM":["scAlert"],"scWeather":["scAlert"],"scMapObjects":["scAlert"],"scButtons":["scAlert"],"scInit":["scAlert"],"scMail":["scAlert"],"scReports":["scAlert"],"scMaintenance":["scAlert","scDatabase"],"scSubNav":["scAlert","scUsers","scSuffix"],"scHistory":["scAlert","scPrototypes","scQuickSort","scThemes"],"scNav":["scAlert","scThemes"],"scFilePicker":["scAlert","scThemes"],"scAlarm":["scAlert","scPrototypes"],"scMap":["scAlert","scThemes","scMaintenance"],"scSubNavPopup":["scAlert","scUsers","scSubNav"],"scLinking":["scAlert","scPrototypes","scSubNav","scObjectFinder"],"scSmartPopup":["scAlert","scPrototypes","scUsers","scSuffix"],"scStyrkurva":["scAlert","scSuffix"],"scStyrkurvaTid":["scAlert","scSuffix"],"scWorkviewAnimation":["scAlert","scSuffix"],"scRemoteAlarms":["scAlert","scAlarm"],"scReportScheduler":["scAlert","scReports"],"scAlarmSender":["scAlert","scMail"],"scCalendar":["scAlert","scThemes","scMaintenance"],"scDashboard":["scAlert","scHistory"],"scDoc":["scAlert","scThemes","scLinking"],"scAlarmFinder":["scAlert","scObjectFinder","scLinking","scMap"],"scDayViewManager":["scAlert","scThemes","scCalendar"],"scWeekViewManager":["scAlert","scThemes","scCalendar"]};
+const deps = {"scAlert":[],"b64":[],"scKeybindings":[],"scModem":[],"scOSK":[],"scQuickSort":[],"scAlarm":["scAlert"],"scAuditTrail":["scAlert"],"scBackUpAndRestore":["scAlert"],"scButtons":["scAlert"],"scDatabase":["scAlert"],"scInit":["scAlert"],"scLinking":["scAlert"],"scMail":["scAlert"],"scMap":["scAlert"],"scObjectFinder":["scAlert"],"scPlatform":["scAlert"],"scPrototypes":["scAlert"],"scRemoteClients":["scAlert"],"scRemoteSystems":["scAlert"],"scReports":["scAlert"],"scSuffix":["scAlert"],"scThemes":["scAlert"],"scTimeChannel":["scAlert"],"scToolTip":["scAlert"],"scTrend":["scAlert"],"scUsers":["scAlert"],"scWM":["scAlert"],"scWeather":["scAlert"],"scLogBook":["scPrototypes"],"scHistory":["scAlert","scPrototypes","scQuickSort"],"scStyrkurva":["scAlert","scQuickSort"],"scStyrkurvaTid":["scAlert","scQuickSort","scWM"],"scWorkviewAnimation":["scAlert","scSuffix"],"scSubNav":["scAlert","scPrototypes","scUsers"],"scReportScheduler":["scAlert","scReports"],"scDashboard":["scAlert","scHistory"],"scAlarmSender":["scAlert","scAlarm","scPrototypes"],"scFilePicker":["scAlert","scPrototypes","scThemes"],"scAlarmFinder":["scAlert","scLinking","scMap"],"scRemoteAlarms":["scAlert","scAlarm","scAlarmSender"],"scNav":["scAlert","scQuickSort","scSubNav","scUsers"],"scSubNavPopup":["scAlert","scSubNav","scThemes","scUsers"],"scSmartPopup":["scAlert","scPrototypes","scQuickSort","scSuffix","scUsers"],"scDoc":["scAlert","scLinking","scPrototypes","scThemes"],"scMaintenance":["scAlert","scDatabase","scLinking","scNav","scPlatform"],"scCalendar":["scAlert","scMaintenance","scThemes"],"scHoliday":["scAlert","scCalendar"],"scDayViewManager":["scAlert","scCalendar","scThemes"],"scWeekViewManager":["scAlert","scCalendar","scThemes"]};
 
 function getLayer(s, memo={}) {
   if (s in memo) return memo[s];
@@ -63,6 +60,8 @@ const layerColors = {
   2: { fill:'#FAEEDA', stroke:'#854F0B', text:'#412402' },
   3: { fill:'#FAECE7', stroke:'#993C1D', text:'#4A1B0C' },
   4: { fill:'#FBEAF0', stroke:'#993556', text:'#4B1528' },
+  5: { fill:'#E4F3F7', stroke:'#0E6A80', text:'#043240' },
+  6: { fill:'#E8EEFB', stroke:'#2A4FA8', text:'#122349' },
 };
 const darkColors = {
   0: { fill:'#3C3489', stroke:'#AFA9EC', text:'#EEEDFE' },
@@ -70,10 +69,15 @@ const darkColors = {
   2: { fill:'#633806', stroke:'#EF9F27', text:'#FAEEDA' },
   3: { fill:'#712B13', stroke:'#F0997B', text:'#FAECE7' },
   4: { fill:'#72243E', stroke:'#ED93B1', text:'#FBEAF0' },
+  5: { fill:'#0B4B5C', stroke:'#68C6DC', text:'#E4F3F7' },
+  6: { fill:'#263E7E', stroke:'#93B0F0', text:'#E8EEFB' },
 };
 const dark = matchMedia('(prefers-color-scheme: dark)').matches;
 const C = dark ? darkColors : layerColors;
 const edgeColor = dark ? '#555' : '#ccc';
+// Cycle the palette rather than dereference undefined. A map deeper than the
+// defined layers used to throw on C[l].fill and leave the whole graph empty.
+const colorFor = l => C[l] || C[l % Object.keys(C).length];
 
 const byLayer = {};
 Object.keys(deps).forEach(s=>{
@@ -87,6 +91,16 @@ const svgW = 680;
 const positions = {};
 
 const layerNums = Object.keys(byLayer).map(Number).sort((a,b)=>a-b);
+
+// Build one filter button per layer actually present. These were hardcoded 0-4,
+// so when the map grew deeper its deepest layers had no button to filter by.
+const controls = document.getElementById('sdg-controls');
+layerNums.forEach(l => {
+  const b = document.createElement('button');
+  b.dataset.layer = l;
+  b.textContent = l === 0 ? 'Layer 0 — standalone' : 'Layer ' + l;
+  controls.appendChild(b);
+});
 let y = 48;
 layerNums.forEach(l => {
   const nodes = byLayer[l];
@@ -118,7 +132,7 @@ layerNums.forEach(l => {
   const nodes = byLayer[l];
   const ys = nodes.map(s=>positions[s].y);
   const minY = Math.min(...ys);
-  const c = C[l];
+  const c = colorFor(l);
   const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
   lbl.setAttribute('x','16');
   lbl.setAttribute('y', String(minY + nodeH/2 + 4));
@@ -155,7 +169,7 @@ Object.keys(deps).forEach(s => {
   if (!positions[s]) return;
   const {x,y} = positions[s];
   const l = layers[s];
-  const c = C[l];
+  const c = colorFor(l);
   const g = document.createElementNS('http://www.w3.org/2000/svg','g');
   g.classList.add('node-g');
   g.dataset.name = s;

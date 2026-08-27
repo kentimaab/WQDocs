@@ -19,7 +19,6 @@ tags:
     related functionality covered in the Alarms guides:
     
     * `scAlarm`
-    * `scPrototypes`
     * `scAlert`
 
 The Alarms module provides real-time alarm monitoring across the WideQuick MOD installation. Alarms are defined in **WideQuick® Designer** and monitored at runtime through a set of dedicated views accessible from the main navigation.

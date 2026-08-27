@@ -19,6 +19,7 @@ tags:
     related functionality covered in the Backup and Restore guides:
     
     * `scBackUpAndRestore`
+    * `scAlert`
 
 The Backup and Restore feature saves the current values of selected Data Store variables as a named backup. It is available under **Settings → Backup**.
 

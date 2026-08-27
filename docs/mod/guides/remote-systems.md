@@ -19,10 +19,10 @@ tags:
     
     * `scRemoteAlarms`
     * `scRemoteSystems`
+    * `scAlarmSender`
     * `scAlarm`
     * `scPrototypes`
     * `scAlert`
-    * `scRemoteClients` — required for the connected client count and list
 
 Remote Systems lets a WideQuick application connect to one or more other WideQuick Runtime instances. Once connected, each remote system appears in the navigation menu and can be opened directly. Alarms from all connected systems are aggregated into the local alarm list, giving operators a single view across the full installation.
 

@@ -3,7 +3,7 @@ title: Rapporter — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-08-27
 tags:
  - MOD
 ---
@@ -220,7 +220,8 @@ För att bygga vyn finns en uppsättning färdiga objekt tillgängliga i objektb
 | Objekt | Använd när |
 |---|---|
 | `LoggerList` | Du behöver att användaren väljer signaler från en loggenhet |
-| `LarmLogger_list` | Du behöver att användaren väljer larm från en larmloggenhet |
+| `LarmLogger_List` | Du behöver att användaren väljer larm från en larmloggenhet |
+| `Unit` | Du behöver att användaren väljer enhet och prefix för rapporten |
 | `Report_CustomTitle` | Du vill att användaren ska ange en anpassad rapporttitel |
 | `Button_CreateReport` | Alltid — detta krävs för att generera rapporten |
 | `Report_output_type` | Du vill att användaren ska kunna välja mellan PDF- och Excel-utdata |
@@ -239,8 +240,8 @@ Loggenheten som ska visas och det maximala antalet valbara signaler konfigureras
 som egenskaper på objektet. Tilldela önskade värden när du placerar objektet i en 
 ReportController.
 
-### LarmLogger_list { #larmlogger_list }
-`LarmLogger_list`-objektet är en specialiserad version av `LoggerList`, byggd 
+### LarmLogger_List { #larmlogger_list }
+`LarmLogger_List`-objektet är en specialiserad version av `LoggerList`, byggd 
 för att visa larm loggade av en loggenhet. Till skillnad från `LoggerList` bygger den automatiskt 
 sitt träd baserat på larmgrupper och utelämnar redundant information. Om till exempel alla 
 larm i loggenheten följer mönstret `AS01.AS01_XXX_XX`, kommer TreeView att visa 
@@ -254,6 +255,32 @@ matcha loggenheten som rapporten frågar mot.
 maximum är 15, men detta kan ändras — se [här](#changing-the-maximum-of-signals-to-be-selected). 
 Den här egenskapen bör alltid anges till ett numeriskt värde, om inte TreeView är 
 avsiktligt låst.
+
+### Unit { #unit }
+`Unit`-objektet innehåller de två väljarna som bestämmer rapportens visningsenhet: en
+kombinationsruta **Enhet** för basenheten och en kombinationsruta **Prefix** för
+SI-prefixet. De två kombineras när rapporten skapas, så att `k` och `Wh` ger `kWh`.
+
+Listan i **Enhet** är inte en fast uppsättning. Den byggs vid körning utifrån enheterna hos
+signalerna på den logger som signallistan är kopplad till, reducerade till sin SI-bas, så
+att endast enheter som projektet faktiskt loggar erbjuds. En signal vars enhet inte känns
+igen utelämnas från listan. Se [Lägg till en basenhet](#adding-a-base-unit) för den
+igenkända uppsättningen och hur den utökas.
+
+Att placera objektet aktiverar även enhetsfiltrering för signallistan:
+
+* TreeView förblir låst till dess att en enhet har valts.
+* När en enhet väljs filtreras TreeView till signaler av den dimensionen.
+* Om enheten ändras rensas det aktuella urvalet, eftersom de signaler som valdes under den
+tidigare enheten inte längre finns i listan.
+
+Filtreringen är därför valfri per ReportController. En kontroller som byggs utan
+`Unit`-objektet lämnar TreeView ofiltrerad, tillåter signaler av olika dimensioner i samma
+rapport och skickar varje värde i sin egen ursprungliga enhet utan skalning.
+Larmrapporternas kontroller är byggda på det sättet.
+
+Objektet har inga egenskaper. Det hittar signallistan på egen hand, så samma objekt
+fungerar oavsett om vyn innehåller en loggerlista eller visar en andra i dess ställe.
 
 ### Report_CustomTitle { #report_customtitle }
 `Report_CustomTitle`-objektet består av en etikett och en textruta. Textrutan anger 
@@ -327,4 +354,83 @@ var signals = reportObj.variable_ref.split(',');
 for (var i = 0; i < signals.length && i < YOUR_MAX_VALUE; i++) Report_Reference.variable_ref[i] = signals[i];
 
 ```
+
+## Lägg till en basenhet { #adding-a-base-unit }
+Rapportsystemet känner igen sex fysikaliska storheter, var och en i valfritt SI-prefix:
+
+| Basenhet | Dimensionsexponent |
+|---|---|
+| `W` | 1 |
+| `Wh` | 1 |
+| `m³` | 3 |
+| `m³/h` | 1 |
+| `L` | 1 |
+| `L/s` | 1 |
+
+Prefixen som erbjuds är `T`, `G`, `M`, `k`, `h`, `da`, inget, `d`, `c`, `m`, `µ`, `n` och
+`p`, så de sex baserna täcker tillsammans 78 enhetsbeteckningar.
+
+Dimensionsexponenten är det som håller skalningen korrekt. Ett prefix på en linjär storhet
+skalar med prefixet självt, så `dW` är en tiondel av `W`. Ett prefix på `m³` tillämpas på
+metern innan den kuberas, så `dm³` är en tusendel av `m³` i stället för en tiondel. Varje
+bas som är en längd i kubik får exponenten `3`, alla övriga får `1`.
+
+Att lägga till en basenhet är en ändring på två ställen i `scReports`-skriptet, och de två
+måste hållas i samma takt.
+
+Lägg först till enheten i tabellen `baseUnitInfo` tillsammans med dess dimensionsexponent:
+
+``` javascript title="scReports — baseUnitInfo — before"
+
+this.baseUnitInfo = {
+	"W": { power: 1 }, "Wh": { power: 1 },
+	"m³": { power: 3 }, "m³/h": { power: 1 },
+	"L": { power: 1 }, "L/s": { power: 1 }
+};
+
+```
+
+``` javascript title="scReports — baseUnitInfo — after"
+
+this.baseUnitInfo = {
+	"W": { power: 1 }, "Wh": { power: 1 },
+	"m³": { power: 3 }, "m³/h": { power: 1 }, "m³/s": { power: 1 },
+	"L": { power: 1 }, "L/s": { power: 1 }
+};
+
+```
+
+Lägg därefter till samma sträng i `baseUnitOrder`. Den listan är ordnad med den längsta
+först, så att en sammansatt enhet matchas i sin helhet i stället för att läsas som ett
+prefix följt av en kortare bas. `m³/h` måste testas före `m³`, annars läses den som
+prefixet `m` plus basen `³/h`. Placera en ny enhet före varje kortare enhet som den inleds
+med:
+
+``` javascript title="scReports — baseUnitOrder — before"
+
+this.baseUnitOrder = ["m³/h", "L/s", "m³", "Wh", "W", "L"];
+
+```
+
+``` javascript title="scReports — baseUnitOrder — after"
+
+this.baseUnitOrder = ["m³/h", "m³/s", "L/s", "m³", "Wh", "W", "L"];
+
+```
+
+!!! note "Varför ordningen är en separat lista"
+    `baseUnitOrder` skulle kunna härledas från nycklarna i `baseUnitInfo` vid körning, men
+    den här motorn kastar "Function call requires Object type" när `Array.sort()` ges en
+    jämförelsefunktion. Ordningen hålls därför som en statisk lista i stället.
+
+!!! warning "Enheter där ett prefix inte har någon betydelse"
+    Prefixväljarna gäller varje bas i tabellen. En enhet som inte rimligen kan ta ett
+    prefix, till exempel `°C`, skulle fortfarande erbjudas med hela prefixlistan, och
+    `k°C` är inte en meningsfull avläsning. Lägg bara till enheter där SI-prefix har en
+    betydelse.
+
+En signal vars enhet inte finns i tabellen hoppas över utan loggpost när listan i **Enhet**
+byggs. En logger som bara innehåller okända enheter ger därför en tom **Enhet**-lista, och
+eftersom signalernas TreeView är låst till dess att en enhet har valts verkar kontrollern
+inte erbjuda några valbara signaler alls. Att lägga till enheten i tabellen löser det.
 <!-- --8<-- [end:body] -->

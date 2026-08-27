@@ -22,9 +22,6 @@ tags:
     related functionality covered in the Maps & Indicators guides:
     
     * `scMap`
-    * `scMaintenance`
-    * `scDatabase`
-    * `scThemes`
     * `scAlert`
     
     And the following Object Libraries:

@@ -20,7 +20,6 @@ tags:
     
     * `scHistory`
     * `scPrototypes`
-    * `scThemes`
     * `scAlert`
     * `scQuickSort`
 

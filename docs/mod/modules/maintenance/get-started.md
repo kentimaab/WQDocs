@@ -19,8 +19,15 @@ tags:
     related functionality covered in the Maintenance guides:
     
     * `scMaintenance`
+    * `scNav`
+    * `scSubNav`
     * `scDatabase`
+    * `scLinking`
+    * `scPlatform`
+    * `scPrototypes`
+    * `scUsers`
     * `scAlert`
+    * `scQuickSort`
 
 The Maintenance module is available through the main menu under **Maintenance**. From here there are three views for working with maintenance tasks.
 

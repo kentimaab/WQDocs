@@ -24,11 +24,16 @@ tags:
     * `scDayViewManager`
     * `scWeekViewManager`
     * `scMaintenance`
+    * `scNav`
+    * `scSubNav`
     * `scDatabase`
+    * `scLinking`
+    * `scPlatform`
+    * `scPrototypes`
     * `scThemes`
+    * `scUsers`
     * `scAlert`
-    * `scHoliday` — required for calendar subscriptions and holiday import
-    * `scSuffix` — required by `scHoliday`, and loaded before it
+    * `scQuickSort`
 
 The Calendar is available in the main menu under **Calendar**. It opens in month view and loads events and maintenance deadlines for the current period automatically.
 

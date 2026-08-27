@@ -37,8 +37,8 @@ and how to reconfigure it.
 reconfigure it.
 * [**Energy Report Week**](configuring.md#energy-report-week) — How it works and how 
 to reconfigure it.
-* [**Delta Week**](configuring.md#delta-week) — Reporting the change over each week.
 * [**Delta Year**](configuring.md#delta-year) — Reporting the change over each year.
+* [**Delta Week**](configuring.md#delta-week) — Reporting the change over each week.
 * [**Report History**](configuring.md#report-history) — Where to find it and how to 
 use it.
 
@@ -51,7 +51,8 @@ configure your own report template.
 How to create a ReportController view for your custom template.
 * [**Changing the maximum number of signals**](extending.md#changing-the-maximum-of-signals-to-be-selected) — 
 How to increase the signal limit for report generation.
-
+* [**Adding a base unit**](extending.md#adding-a-base-unit) - 
+How to add you own units to the unit system
 ---
 
 ### [Troubleshooting](troubleshooting.md) { #troubleshooting }

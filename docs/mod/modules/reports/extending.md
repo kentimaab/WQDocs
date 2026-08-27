@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M17
 status: draft
-last_reviewed: 2026-05-19
+last_reviewed: 2026-08-27
 tags: 
  - MOD
 ---
@@ -149,6 +149,8 @@ the user in the ReportController when generating the report.
     * `$(Report_Reference.to_time)` — The end time of the report.
     * `$(Report_Reference.limit)` — The maximum number of events.
     * `$(Report_Reference.variable_ref[#])` — The signal at index `#`.
+    * `$(Report_Reference.unit)` — The unit for the report.
+    * `$(Report_Reference.factorArray[#])` — The scaling factor for each signal at index `#`.
     * `$(System.dateTime)` — The current date and time.
     * `$(System.user)` — The current user.
 
@@ -221,7 +223,8 @@ To build the view, a set of premade objects is available in the object library u
 | Object | Use when |
 |---|---|
 | `LoggerList` | You need the user to select signals from a logger |
-| `LarmLogger_list` | You need the user to select alarms from an alarm logger |
+| `LarmLogger_List` | You need the user to select alarms from an alarm logger |
+| `Unit` | You need the user to select unit and prefix for report |
 | `Report_CustomTitle` | You want the user to set a custom report title |
 | `Button_CreateReport` | Always — this is required to generate the report |
 | `Report_output_type` | You want the user to choose between PDF and Excel output |
@@ -240,8 +243,8 @@ The logger to display and the maximum number of selectable signals are both conf
 as properties on the object. Assign the desired values when placing the object in a 
 ReportController.
 
-### LarmLogger_list { #larmlogger_list }
-The `LarmLogger_list` object is a specialized version of `LoggerList`, purpose-built 
+### LarmLogger_List { #larmlogger_list }
+The `LarmLogger_List` object is a specialized version of `LoggerList`, purpose-built 
 for displaying alarms logged by a logger. Unlike `LoggerList`, it automatically builds 
 its tree based on alarm groups and omits redundant information. For example, if all 
 alarms in the logger follow the pattern `AS01.AS01_XXX_XX`, the TreeView will display 
@@ -255,6 +258,32 @@ match the logger that the report queries.
 maximum is 15, but this can be changed — see [here](#changing-the-maximum-of-signals-to-be-selected). 
 This property should always be set to a numerical value, unless the TreeView is 
 intentionally locked.
+
+### Unit { #unit }
+The `Unit` object holds the two pickers that decide the report's display unit: a **Unit**
+combo box for the base unit and a **Prefix** combo box for the SI prefix. The two are
+combined when the report is created, so `k` and `Wh` give `kWh`.
+
+The **Unit** list is not a fixed set. It is built at runtime from the units of the signals
+on the logger the signal list is bound to, reduced to their SI base, so only units the
+project actually logs are offered. A signal whose unit is not recognised is left out of the
+list. See [Adding a base unit](#adding-a-base-unit) for the recognised set and how to
+extend it.
+
+Placing the object also turns on unit filtering for the signal list:
+
+* The signal TreeView stays disabled until a unit is chosen.
+* Choosing a unit filters the TreeView to signals of that dimension.
+* Changing the unit clears the current selection, since the signals selected under the
+previous unit are no longer in the list.
+
+Filtering is therefore opt-in per ReportController. A controller built without the `Unit`
+object leaves the TreeView unfiltered, allows signals of different dimensions in the same
+report, and sends every value in its own native unit with no scaling applied. The alarm
+report controllers are built this way.
+
+The object takes no properties. It locates the signal list on its own, so the same object
+works whether the view holds one logger list or shows a second one in its place.
 
 ### Report_CustomTitle { #report_customtitle }
 The `Report_CustomTitle` object consists of a label and a text box. The text box sets 
@@ -330,4 +359,81 @@ var signals = reportObj.variable_ref.split(',');
 for (var i = 0; i < signals.length && i < YOUR_MAX_VALUE; i++) Report_Reference.variable_ref[i] = signals[i];
 
 ```
+
+## Adding a base unit { #adding-a-base-unit }
+The report system recognises six physical quantities, each in any SI prefix:
+
+| Base unit | Dimension power |
+|---|---|
+| `W` | 1 |
+| `Wh` | 1 |
+| `m³` | 3 |
+| `m³/h` | 1 |
+| `L` | 1 |
+| `L/s` | 1 |
+
+The prefixes offered are `T`, `G`, `M`, `k`, `h`, `da`, none, `d`, `c`, `m`, `µ`, `n` and
+`p`, so the six bases cover 78 unit strings between them.
+
+The dimension power is what keeps the scaling correct. A prefix on a linear quantity scales
+by the prefix itself, so `dW` is a tenth of `W`. A prefix on `m³` applies to the metre
+before it is cubed, so `dm³` is a thousandth of `m³` rather than a tenth. Any base that is
+a length cubed takes power `3`, everything else takes `1`.
+
+Adding a base unit is a change in two places in the `scReports` script, and the two must be
+kept in step.
+
+First, add the unit to the `baseUnitInfo` table together with its dimension power:
+
+``` javascript title="scReports — baseUnitInfo — before"
+
+this.baseUnitInfo = {
+	"W": { power: 1 }, "Wh": { power: 1 },
+	"m³": { power: 3 }, "m³/h": { power: 1 },
+	"L": { power: 1 }, "L/s": { power: 1 }
+};
+
+```
+
+``` javascript title="scReports — baseUnitInfo — after"
+
+this.baseUnitInfo = {
+	"W": { power: 1 }, "Wh": { power: 1 },
+	"m³": { power: 3 }, "m³/h": { power: 1 }, "m³/s": { power: 1 },
+	"L": { power: 1 }, "L/s": { power: 1 }
+};
+
+```
+
+Then add the same string to `baseUnitOrder`. That list is ordered longest first so a
+compound unit is matched whole instead of being read as a prefix followed by a shorter base.
+`m³/h` has to be tested before `m³`, or it would be read as prefix `m` plus base `³/h`.
+Place a new unit ahead of any shorter unit it begins with:
+
+``` javascript title="scReports — baseUnitOrder — before"
+
+this.baseUnitOrder = ["m³/h", "L/s", "m³", "Wh", "W", "L"];
+
+```
+
+``` javascript title="scReports — baseUnitOrder — after"
+
+this.baseUnitOrder = ["m³/h", "m³/s", "L/s", "m³", "Wh", "W", "L"];
+
+```
+
+!!! note "Why the order is a separate list"
+    `baseUnitOrder` could be derived from the keys of `baseUnitInfo` at runtime, but this
+    engine throws "Function call requires Object type" when `Array.sort()` is given a
+    comparator function. The order is kept as a static list instead.
+
+!!! warning "Units where a prefix has no meaning"
+    The prefix pickers apply to every base in the table. A unit that cannot sensibly take a
+    prefix, such as `°C`, would still be offered with the full prefix list, and `k°C` is not
+    a meaningful reading. Only add units where SI prefixes carry a meaning.
+
+A signal whose unit is not in the table is skipped without a log entry when the **Unit**
+list is built. A logger holding only unrecognised units therefore produces an empty **Unit**
+list, and because the signal TreeView is gated on a unit being chosen, the controller
+appears to offer no selectable signals at all. Adding the unit to the table resolves it.
 <!-- --8<-- [end:body] -->
