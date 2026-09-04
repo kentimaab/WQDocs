@@ -145,6 +145,7 @@ nav = [
       { "Loggenheter" = "mod/guides/Loggers.md" },
       { "Inloggningskonfiguration" = "mod/guides/Login Config.md" },
       { "Fjärrsystem" = "mod/guides/remote-systems.md" },
+      { "Speed Dial" = "mod/guides/speeddial.md" },
       { "Workview-animationer" = "mod/guides/workview-animations.md" },
     ]},
     { "Referens" = [
@@ -293,6 +294,7 @@ nav = [
       { "Loggenheter" = "bms/guides/Loggers.md" },
       { "Inloggningskonfiguration" = "bms/guides/Login Config.md" },
       { "Fjärrsystem" = "bms/guides/remote-systems.md" },
+      { "Speed Dial" = "bms/guides/speeddial.md" },
       { "Arbetsvy-animationer" = "bms/guides/workview-animations.md" },
     ]},
     { "Referens" = [
@@ -444,6 +446,7 @@ nav = [
       { "Loggenheter" = "wwt/guides/Loggers.md" },
       { "Inloggningskonfiguration" = "wwt/guides/Login Config.md" },
       { "Fjärrsystem" = "wwt/guides/remote-systems.md" },
+      { "Speed Dial" = "wwt/guides/speeddial.md" },
       { "Arbetsvy-animationer" = "wwt/guides/workview-animations.md" },
     ]},
     { "Referens" = [

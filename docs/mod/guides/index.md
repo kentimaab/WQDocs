@@ -58,6 +58,12 @@ The guides cover how to use specific features of the WideQuick MOD — both for 
 
 ---
 
+### Speed Dial
+
+* [**Speed Dial**](speeddial.md) — Add a floating action menu to a workview, and the five standard options used across process views.
+
+---
+
 ### Workview Animations
 
 * [**Workview Animations**](workview-animations.md) — Configure and extend workview animations in WideQuick MOD.
