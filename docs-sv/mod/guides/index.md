@@ -58,6 +58,12 @@ Guiderna beskriver hur man använder specifika funktioner i WideQuick MOD — b�
 
 ---
 
+### Speed Dial
+
+* [**Speed Dial**](speeddial.md) — Lägg till en flytande åtgärdsmeny i en arbetsvy, och de fem standardalternativen som används i processvyerna.
+
+---
+
 ### Arbetsvy-animationer
 
 * [**Arbetsvy-animationer**](workview-animations.md) — Konfigurera och utöka arbetsvy-animationer i WideQuick MOD.
