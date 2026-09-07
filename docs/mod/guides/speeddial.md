@@ -112,7 +112,7 @@ Icons are drawn on the Speed Dial's own background, so a white icon variant is n
 
 ## The five standard options { #the-five-standard-options }
 
-Five options recur across process views in the project. Together they form the standard Speed Dial: two display toggles and three view-scoped popups. `Reningsverk.kvie` uses exactly this set on a `SpeedDialVerticalLeft`, and it is the set shown expanded above.
+Five options recur across process views in the project. Together they form the standard Speed Dial: two display toggles and three view-scoped popups. The system views in the demo project use exactly this set on a `SpeedDialVerticalLeft`, and it is the set shown expanded above.
 
 They are listed here in array order. On a `SpeedDialVerticalLeft` that puts the first entry closest to the button and the last one furthest from it, so the icons read right to left on screen.
 
@@ -130,7 +130,7 @@ They are listed here in array order. On a `SpeedDialVerticalLeft` that puts the 
 function () { dynTouchVisible = !dynTouchVisible }
 ```
 
-Flips the `dynTouchVisible` variable in Data Store. When it is `true` the clickable DynTouch fields over process objects are always visible; when `false` they appear only on mouse-over. The variable is persisted, so the choice survives a restart.
+Flips the `dynTouchVisible` variable in Data Store. When it is `true` the clickable DynTouch fields over process objects are always visible. The variable is persisted, so the choice survives a restart.
 
 This gives an operator a way to see which objects in a view are clickable without hovering over each one.
 
@@ -207,9 +207,9 @@ This is the one standard option that guards itself. The logbook depends on a dat
 
 ### The complete example { #the-complete-example }
 
-The five options as they appear in `Reningsverk.kvie`:
+The five options as they appear in a system view in the demo project:
 
-```javascript title="Reningsverk.kvie — SpeedDialVerticalLeft onLoad()"
+```javascript title="System view — SpeedDialVerticalLeft onLoad()"
 try {
 
 this.ImageArray = new Array("Images/Material_Icons/dynTouch-white.svg",

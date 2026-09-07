@@ -107,7 +107,7 @@ Ikoner ritas på Speed Dials egen bakgrund, så en vit ikonvariant är normalt r
 
 ## De fem standardalternativen { #the-five-standard-options }
 
-Fem alternativ återkommer i processvyerna i projektet. Tillsammans utgör de standarduppsättningen för Speed Dial: två visningsväxlare och tre vybegränsade popup-fönster. `Reningsverk.kvie` använder exakt denna uppsättning på en `SpeedDialVerticalLeft`, och det är den uppsättning som visas utfälld ovan.
+Fem alternativ återkommer i processvyerna i projektet. Tillsammans utgör de standarduppsättningen för Speed Dial: två visningsväxlare och tre vybegränsade popup-fönster. Systemvyerna i demoprojektet använder exakt denna uppsättning på en `SpeedDialVerticalLeft`, och det är den uppsättning som visas utfälld ovan.
 
 De listas här i arrayordning. På en `SpeedDialVerticalLeft` innebär det att den första posten hamnar närmast knappen och den sista längst bort, så ikonerna läses från höger till vänster på skärmen.
 
@@ -125,7 +125,7 @@ De listas här i arrayordning. På en `SpeedDialVerticalLeft` innebär det att d
 function () { dynTouchVisible = !dynTouchVisible }
 ```
 
-Växlar variabeln `dynTouchVisible` i Data Store. När den är `true` är de klickbara DynTouch-fälten över processobjekten alltid synliga; när den är `false` visas de endast vid mouse-over. Variabeln sparas, så valet består efter omstart.
+Växlar variabeln `dynTouchVisible` i Data Store. När den är `true` är de klickbara DynTouch-fälten över processobjekten alltid synliga. Variabeln sparas, så valet består efter omstart.
 
 Detta ger en operatör möjlighet att se vilka objekt i en vy som är klickbara utan att hovra över vart och ett.
 
@@ -202,9 +202,9 @@ Detta är det enda standardalternativet som skyddar sig självt. Loggboken är b
 
 ### Det kompletta exemplet { #the-complete-example }
 
-De fem alternativen som de ser ut i `Reningsverk.kvie`:
+De fem alternativen som de ser ut i en systemvy i demoprojektet:
 
-```javascript title="Reningsverk.kvie — SpeedDialVerticalLeft onLoad()"
+```javascript title="Systemvy — SpeedDialVerticalLeft onLoad()"
 try {
 
 this.ImageArray = new Array("Images/Material_Icons/dynTouch-white.svg",
