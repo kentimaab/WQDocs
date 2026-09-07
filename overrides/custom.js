@@ -259,8 +259,11 @@ onPageReady(function () {
 });
 
 
-const modifyBtn = document.getElementById('modifyBtn');
-if (modifyBtn) modifyBtn.addEventListener('click', function () {
+onPageReady(function () {
+    const modifyBtn = document.getElementById('modifyBtn');
+    if (!modifyBtn) return;
+
+    modifyBtn.addEventListener('click', function () {
     try {
         const wqFileInput = document.getElementById('themeFile');
         const themeFileInput = document.getElementById('wqFile');
@@ -375,18 +378,19 @@ if (modifyBtn) modifyBtn.addEventListener('click', function () {
     } catch (error) {
         alert(error);
     }
-});
+    });
 
-const wqFileEl = document.getElementById('wqFile');
-if (wqFileEl) wqFileEl.addEventListener('change', function () {
-    const fileInput = document.getElementById('wqFile');
-    const fileNameDisplay = document.getElementById('wqFileNameDisplay');
-    
-    if (fileInput.files.length > 0) {
-        fileNameDisplay.textContent = `Selected file: ${fileInput.files[0].name}`;
-    } else {
-        fileNameDisplay.textContent = ''; // Clear the text if no file is selected
-    }
+    const wqFileEl = document.getElementById('wqFile');
+    if (wqFileEl) wqFileEl.addEventListener('change', function () {
+        const fileInput = document.getElementById('wqFile');
+        const fileNameDisplay = document.getElementById('wqFileNameDisplay');
+
+        if (fileInput.files.length > 0) {
+            fileNameDisplay.textContent = `Selected file: ${fileInput.files[0].name}`;
+        } else {
+            fileNameDisplay.textContent = ''; // Clear the text if no file is selected
+        }
+    });
 });
 // Cross-area link badges + return banner
 document.addEventListener('DOMContentLoaded', function () {
@@ -486,14 +490,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })();
 
-const themeFileEl = document.getElementById('themeFile');
-if (themeFileEl) themeFileEl.addEventListener('change', function () {
-    const fileInput = document.getElementById('themeFile');
-    const fileNameDisplay = document.getElementById('themeFileNameDisplay');
-    
-    if (fileInput.files.length > 0) {
-        fileNameDisplay.textContent = `Selected file: ${fileInput.files[0].name}`;
-    } else {
-        fileNameDisplay.textContent = ''; // Clear the text if no file is selected
-    }
+onPageReady(function () {
+    const themeFileEl = document.getElementById('themeFile');
+    if (!themeFileEl) return;
+
+    themeFileEl.addEventListener('change', function () {
+        const fileInput = document.getElementById('themeFile');
+        const fileNameDisplay = document.getElementById('themeFileNameDisplay');
+
+        if (fileInput.files.length > 0) {
+            fileNameDisplay.textContent = `Selected file: ${fileInput.files[0].name}`;
+        } else {
+            fileNameDisplay.textContent = ''; // Clear the text if no file is selected
+        }
+    });
 });
