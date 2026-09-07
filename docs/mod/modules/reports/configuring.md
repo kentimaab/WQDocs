@@ -13,14 +13,16 @@ tags:
 
 # Reports - Configuring
 
-This section covers how to configure the four report templates in WideQuick Mod to fit 
+This section covers how to configure the six report templates in WideQuick Mod to fit 
 your needs, as well as how to use the built-in Report History to recreate or resend 
 failed reports.
 
-* **Alarm_Report**
-* **Alarm_Report_OneAlarm**
-* **Energy_Report**
-* **Energy_Report_Week**
+* **Alarm Report**
+* **Alarm Report One Alarm**
+* **Energy Report**
+* **Energy Report Week**
+* **Delta Report Year**
+* **Delta Report Week**
 
 ## Alarm Report { #alarm-report }
 The Alarm Report generates a complete overview of all alarms across the entire system. 
@@ -56,12 +58,12 @@ expression editor.
 
 To change which logger appears when creating the report, navigate to 
 **Workviews → Partials → ReportController → Alarm_Report** in **WideQuick® Designer**. 
-Select the `LarmLogger_list` object, go to **Properties**, and update the **Logger** 
+Select the `LarmLogger_List` object, go to **Properties**, and update the **Logger** 
 property to the desired logger.
 
 <figure markdown="span">
   ![ObjectLogger](/docs/Images/Reports/ObjectLogger.png)
-  <figcaption>Setting the Logger property on the LarmLogger_list object.</figcaption>
+  <figcaption>Setting the Logger property on the LarmLogger_List object.</figcaption>
 </figure>
 
 !!! warning "Naming convention"
@@ -186,30 +188,70 @@ of what day it is produced on.
 !!! tip "Backup"
     Before manipulating the template it is recommended to save a copy as a backup.
 
-## Delta Week { #delta-week }
-
-Selected as **Delta_Report_Week** in the **Report template** dropdown, this report shows 
-the change over each week rather than the logged values themselves, using the 
-`DeltaWeek.xlsx` template. Up to 15 signals can be selected.
-
-![Delta week report controller](/docs/Images/Reports/DeltaWeek.png){align=center}
-
-### Changing the week span { #changing-the-week-span }
-
-The number of weeks the report covers is set with the `WeeksPrior` property on the 
-`Delta_Week` object. It defaults to `3`.
-
 ## Delta Year { #delta-year }
 
-Selected as **Delta_Report_Year**, this is the yearly counterpart, using the 
-`DeltaYear_H.xlsx` template. It allows up to 15 signals.
+Selected as **Delta Report Year** in the **Report template** dropdown, the Delta reports 
+show the change between consecutive readings rather than the logged values themselves, 
+which suits meters reporting a continuously increasing total. The Delta Year presents a 
+monthly delta per column, one column per month, with a yearly total, giving one graph per 
+year. By default it covers three years and allows up to 15 signals.
+
+Two templates exist for this report, differing only in the range of logging intervals 
+they accept. `DeltaYear.xlsx` handles intervals from monthly to daily. `DeltaYear_H.xlsx` 
+extends the range down to hourly, for loggers that record more often than once a day. 
+Which one the report uses is set by its `SourceFile` in `Reports.kdat`.
+
+!!! warning "Match the row limit to the logging interval"
+    The ReportController's `limit` caps how many rows the report queries. It defaults to 
+    `1200`, which covers three years of daily readings. An hourly logger produces roughly 
+    26 000 readings over the same span, so `limit` has to be raised to match, or the 
+    report will silently read only the oldest part of the period.
 
 ![Delta year report controller](/docs/Images/Reports/DeltaYear.png){align=center}
 
+### Changing Logger { #changing-logger-delta-year }
+The logger is changed the same way as for the Energy Report. See 
+[Changing Logger](#changing-logger).
+
 ### Changing the year span { #changing-the-delta-year-span }
 
-The number of years the report covers is set with the `YearsPrior` property on the 
-`Delta_Year` object. It defaults to `3`.
+The number of years the report covers is set with the **YearsPrior** property on the 
+`to_time_Singel` object in the Delta Year ReportController. It defaults to `3`.
+
+Both of the narrower configurations available to the Energy Report are available here 
+too, following the same steps as [Changing year span](#changing-year-span): the current 
+year only, or one full year from the current date. The only difference is the template 
+file, which is the Delta Year template in `\Your_Project\Reports\Templates` as bound 
+to the report in `Reports.kdat`.
+
+
+## Delta Week { #delta-week }
+
+The Delta Week follows the same structure as the Delta Year, but presents the deltas on 
+a weekly basis instead of yearly. Selected as **Delta Report Week**, it presents a daily 
+delta per column, one column per weekday, with a weekly total. By default it covers three 
+weeks and allows up to 15 signals.
+
+Only one template exists for this report, `DeltaWeek.xlsx`, and it handles logging 
+intervals anywhere from hourly to daily.
+
+![Delta week report controller](/docs/Images/Reports/DeltaWeek.png){align=center}
+
+### Changing Logger { #changing-logger-delta-week }
+The logger is changed the same way as for the Energy Report. See 
+[Changing Logger](#changing-logger).
+
+### Changing the week span { #changing-the-week-span }
+
+The number of weeks the report covers is set with the **WeeksPrior** property on the 
+`to_time_Singel` object in the Delta Week ReportController. It defaults to `3`.
+
+Narrowing the report to a single week also requires the template itself to be adjusted, 
+following the same steps as [Changing week span](#changing-week-span) for the Energy 
+Report Week. The only difference is the template file: modify `DeltaWeek.xlsx` in 
+`\Your_Project\Reports\Templates` instead of `WeeklyEnergyReport.xlsx`.
+
+
 
 ## Report History { #report-history }
 The Report History is accessible from the **Reports - Schedule** workview. It 

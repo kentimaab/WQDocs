@@ -19,7 +19,6 @@ tags:
     * `scWM`
     * `scAlert`
 
-
 WideQuick MOD automatically scales the UI to fit any screen size or browser window. This means a project can run on different displays without requiring layout changes.
 
 The `scWM` script handles all scaling. It monitors the main window every 500 ms and calculates a scaling factor based on a reference resolution of 1920×1080. The current factor is always available as `scWM.scalingFactor`.

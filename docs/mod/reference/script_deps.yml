@@ -6,59 +6,71 @@
 # handel the full dependencies.
 # Exampel: scMyscript: [scAlert, scLinking, scNav]
 # Result in tree: scMyscript: [scAler, scLinking, scPrototypes, scSubNav, scUser ,scSuffix ,scObjectFinder,scThemes]
+#
+# Only DIRECT dependencies belong here. Note that a dependency is not always a
+# `scFoo.` call: several scripts publish bare globals (scQuickSort/Quicksort,
+# scPrototypes/arraySortInPlace, scCalendar/CalendarService, scDatabase/dbQueryObj,
+# scHistory/HistoryHandler, scSubNav/subNav), and calling one of those is just as
+# much a dependency. Grep the bare name, not only the namespace.
+#
+# Optional, guarded references are deliberately NOT listed: scCalendar reads
+# scHoliday only behind `typeof scHoliday !== "undefined"` and works without it,
+# while scHoliday hard-depends on scCalendar's CalendarService. Listing both
+# directions would create a cycle, and _get_layer() recurses without a visited
+# set, so a cycle crashes the build rather than degrading.
 
 # Layer 0, no dependencies
 scAlert: []
-scQuickSort: []
+b64: []
 scKeybindings: []
 scModem: []
 scOSK: []
+scQuickSort: []
 
 #Layer 1, one singel dependencie(And its in layer 0)
-scDatabase: [scAlert]
-scObjectFinder: [scAlert]
-scUsers: [scAlert]
-scPrototypes: [scAlert]
-scPlatform: [scAlert]
-scThemes: [scAlert]
-scSuffix: [scAlert]
-scLogBook: [scAlert]
+scAlarm: [scAlert]
 scAuditTrail: [scAlert]
-scBackUpAndRestore: []
+scBackUpAndRestore: [scAlert]
+scButtons: [scAlert]
+scDatabase: [scAlert]
+scInit: [scAlert]
+scLinking: [scAlert]
+scMail: [scAlert]
+scMap: [scAlert]
+scObjectFinder: [scAlert]
+scPlatform: [scAlert]
+scPrototypes: [scAlert]
 scRemoteClients: [scAlert]
 scRemoteSystems: [scAlert]
+scReports: [scAlert]
+scSuffix: [scAlert]
+scThemes: [scAlert]
 scTimeChannel: [scAlert]
 scToolTip: [scAlert]
 scTrend: [scAlert]
+scUsers: [scAlert]
 scWM: [scAlert]
 scWeather: [scAlert]
-scMapObjects: [scAlert]
-scButtons: [scAlert]
-scInit: [scAlert]
-scMail: [scAlert]
-scReports: [scAlert]
 
-# More than 1 dependencie. 
-scMaintenance: [scAlert, scDatabase]
-scSubNav: [scAlert, scUsers, scSuffix]
-scHistory: [scAlert, scPrototypes, scQuickSort, scThemes]
-scNav: [scAlert, scThemes]
-scFilePicker: [scAlert, scThemes]
-scAlarm: [scAlert, scPrototypes]
-scMap: [scAlert, scThemes, scMaintenance]
-scSubNavPopup: [scAlert, scUsers, scSubNav]
-scLinking: [scAlert, scPrototypes, scSubNav, scObjectFinder]
-scSmartPopup: [scAlert, scPrototypes, scUsers, scSuffix]
-scStyrkurva: [scAlert, scSuffix]
-scStyrkurvaTid: [scAlert, scSuffix]
+# More than 1 dependencie.
+scLogBook: [scPrototypes]
+scHistory: [scAlert, scPrototypes, scQuickSort]
+scStyrkurva: [scAlert, scQuickSort]
+scStyrkurvaTid: [scAlert, scQuickSort, scWM]
 scWorkviewAnimation: [scAlert, scSuffix]
-scRemoteAlarms: [scAlert, scAlarm]
+scSubNav: [scAlert, scPrototypes, scUsers]
 scReportScheduler: [scAlert, scReports]
-scAlarmSender: [scAlert, scMail]
-scCalendar: [scAlert, scThemes, scMaintenance]
 scDashboard: [scAlert, scHistory]
-
-scDoc: [scAlert, scThemes, scLinking]
-scAlarmFinder: [scAlert, scObjectFinder, scLinking, scMap]
-scDayViewManager: [scAlert, scThemes, scCalendar]
-scWeekViewManager: [scAlert, scThemes, scCalendar]
+scAlarmSender: [scAlert, scAlarm, scPrototypes]
+scFilePicker: [scAlert, scPrototypes, scThemes]
+scAlarmFinder: [scAlert, scLinking, scMap]
+scRemoteAlarms: [scAlert, scAlarm, scAlarmSender]
+scNav: [scAlert, scQuickSort, scSubNav, scUsers]
+scSubNavPopup: [scAlert, scSubNav, scThemes, scUsers]
+scSmartPopup: [scAlert, scPrototypes, scQuickSort, scSuffix, scUsers]
+scDoc: [scAlert, scLinking, scPrototypes, scThemes]
+scMaintenance: [scAlert, scDatabase, scLinking, scNav, scPlatform]
+scCalendar: [scAlert, scMaintenance, scThemes]
+scHoliday: [scAlert, scCalendar]
+scDayViewManager: [scAlert, scCalendar, scThemes]
+scWeekViewManager: [scAlert, scCalendar, scThemes]

@@ -25,7 +25,6 @@ tags:
     * `scAlarm`
     * `scHistory`
     * `scPrototypes`
-    * `scThemes`
     * `scAlert`
     * `scQuickSort`
     

@@ -24,12 +24,11 @@ tags:
     * `scSubNavPopup`
     * `scLinking`
     * `scSubNav`
-    * `scObjectFinder`
     * `scPrototypes`
-    * `scSuffix`
     * `scThemes`
     * `scUsers`
     * `scAlert`
+    * `scQuickSort`
 
 This section covers the basics of the Navigation module, including how to add 
 **Workviews** to the navigation menu and how the Fullscreen Menu works. The Navigation 

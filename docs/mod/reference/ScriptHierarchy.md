@@ -4,7 +4,7 @@ description: Dependency map for all scripts in WideQuick Modular Framework.
 product: mod
 page_type: reference
 status: draft
-last_reviewed: 2026-06-08
+last_reviewed: 2026-08-27
 tags: 
  - MOD
 ---
@@ -14,7 +14,9 @@ tags:
 
 This page lists all scripts in WideQuick Modular Framework and their dependencies.
 A script listed under **Requires** must be present and running for the script to
-function correctly.
+function correctly. Optional, guarded references are not listed: `scCalendar` reads
+`scHoliday` only when that script happens to be loaded and works without it, so only
+the hard direction, `scHoliday` requiring `scCalendar`, appears below.
 
 ## Dependency graph
 
@@ -35,62 +37,64 @@ on a specific level.
 
 The following scripts have no dependencies and can run standalone:
 
+* `b64`
 * `scAlert`
-* `scQuickSort`
 * `scKeybindings`
 * `scModem`
 * `scOSK`
+* `scQuickSort`
 
 ### Single dependency
 
 | Script | Requires |
 |---|---|
-| `scDatabase` | `scAlert` |
-| `scObjectFinder` | `scAlert` |
-| `scUsers` | `scAlert` |
-| `scPrototypes` | `scAlert` |
-| `scPlatform` | `scAlert` |
-| `scThemes` | `scAlert` |
-| `scSuffix` | `scAlert` |
-| `scLogBook` | `scAlert` |
+| `scAlarm` | `scAlert` |
 | `scAuditTrail` | `scAlert` |
+| `scBackUpAndRestore` | `scAlert` |
+| `scButtons` | `scAlert` |
+| `scDatabase` | `scAlert` |
+| `scInit` | `scAlert` |
+| `scLinking` | `scAlert` |
+| `scLogBook` | `scPrototypes` |
+| `scMail` | `scAlert` |
+| `scMap` | `scAlert` |
+| `scObjectFinder` | `scAlert` |
+| `scPlatform` | `scAlert` |
+| `scPrototypes` | `scAlert` |
 | `scRemoteClients` | `scAlert` |
 | `scRemoteSystems` | `scAlert` |
+| `scReports` | `scAlert` |
+| `scSuffix` | `scAlert` |
+| `scThemes` | `scAlert` |
 | `scTimeChannel` | `scAlert` |
 | `scToolTip` | `scAlert` |
 | `scTrend` | `scAlert` |
+| `scUsers` | `scAlert` |
 | `scWM` | `scAlert` |
 | `scWeather` | `scAlert` |
-| `scMapObjects` | `scAlert` |
-| `scButtons` | `scAlert` |
-| `scInit` | `scAlert` |
-| `scSimMB` | `scAlert` |
-| `scMail` | `scAlert` |
-| `scReports` | `scAlert` |
 
 ### Multiple dependencies
 
 | Script | Requires |
 |---|---|
-| `scMaintenance` | `scAlert`, `scDatabase` |
-| `scSubNav` | `scAlert`, `scUsers`, `scSuffix` |
-| `scHistory` | `scAlert`, `scPrototypes`, `scQuickSort`, `scThemes` |
-| `scNav` | `scAlert`, `scThemes` |
-| `scFilePicker` | `scAlert`, `scThemes` |
-| `scAlarm` | `scAlert`, `scPrototypes` |
-| `scMap` | `scAlert`, `scThemes`, `scMaintenance` |
-| `scSubNavPopup` | `scAlert`, `scUsers`, `scSubNav` |
-| `scLinking` | `scAlert`, `scPrototypes`, `scSubNav`, `scObjectFinder` |
-| `scSmartPopup` | `scAlert`, `scPrototypes`, `scUsers`, `scSuffix` |
-| `scStyrkurva` | `scAlert`, `scSuffix` |
-| `scStyrkurvaTid` | `scAlert`, `scSuffix` |
-| `scWorkviewAnimation` | `scAlert`, `scSuffix` |
-| `scRemoteAlarms` | `scAlert`, `scAlarm` |
-| `scReportScheduler` | `scAlert`, `scReports` |
-| `scAlarmSender` | `scAlert`, `scMail` |
-| `scCalendar` | `scAlert`, `scThemes`, `scMaintenance` |
+| `scAlarmFinder` | `scAlert`, `scLinking`, `scMap` |
+| `scAlarmSender` | `scAlert`, `scAlarm`, `scPrototypes` |
+| `scCalendar` | `scAlert`, `scMaintenance`, `scThemes` |
 | `scDashboard` | `scAlert`, `scHistory` |
-| `scDoc` | `scAlert`, `scThemes`, `scLinking` |
-| `scAlarmFinder` | `scAlert`, `scObjectFinder`, `scLinking`, `scMap` |
-| `scDayViewManager` | `scAlert`, `scThemes`, `scCalendar` |
-| `scWeekViewManager` | `scAlert`, `scThemes`, `scCalendar` |
+| `scDayViewManager` | `scAlert`, `scCalendar`, `scThemes` |
+| `scDoc` | `scAlert`, `scLinking`, `scPrototypes`, `scThemes` |
+| `scFilePicker` | `scAlert`, `scPrototypes`, `scThemes` |
+| `scHistory` | `scAlert`, `scPrototypes`, `scQuickSort` |
+| `scHoliday` | `scAlert`, `scCalendar` |
+| `scMaintenance` | `scAlert`, `scDatabase`, `scLinking`, `scNav`, `scPlatform` |
+| `scNav` | `scAlert`, `scQuickSort`, `scSubNav`, `scUsers` |
+| `scRemoteAlarms` | `scAlert`, `scAlarm`, `scAlarmSender` |
+| `scReportScheduler` | `scAlert`, `scReports` |
+| `scSmartPopup` | `scAlert`, `scPrototypes`, `scQuickSort`, `scSuffix`, `scUsers` |
+| `scStyrkurva` | `scAlert`, `scQuickSort` |
+| `scStyrkurvaTid` | `scAlert`, `scQuickSort`, `scWM` |
+| `scSubNav` | `scAlert`, `scPrototypes`, `scUsers` |
+| `scSubNavPopup` | `scAlert`, `scSubNav`, `scThemes`, `scUsers` |
+| `scWeekViewManager` | `scAlert`, `scCalendar`, `scThemes` |
+| `scWorkviewAnimation` | `scAlert`, `scSuffix` |
+<!-- --8<-- [end:body] -->

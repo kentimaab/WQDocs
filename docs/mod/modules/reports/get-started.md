@@ -81,8 +81,8 @@ reports by email requires an SMTP server to be configured, which is explained [h
 
 To create a new report, click **Create Report**. A configuration menu will appear on 
 the right. By default, six report types are available: **Alarm Report**, 
-**Alarm Report One Alarm**, **Energy_Report**, **Energy_Report_Week**, 
-**Delta_Report_Week** and **Delta_Report_Year**. Switch between them by changing the 
+**Alarm Report One Alarm**, **Energy Report**, **Energy Report Week**, 
+**Delta Report Week** and **Delta Report Year**. Switch between them by changing the 
 **Report template** dropdown.
 
 <div class="figure-row" markdown>
@@ -103,40 +103,35 @@ the right. By default, six report types are available: **Alarm Report**,
 </figure>
 
 <figure markdown="span">
-  ![Energy Report Week](/docs/Images/Reports/EnergyReportWeek.png)
-  <figcaption>Energy Report Week controller.</figcaption>
-</figure>
-
-<figure markdown="span">
-  ![Delta Week](/docs/Images/Reports/DeltaWeek.png)
-  <figcaption>Delta Week controller.</figcaption>
-</figure>
-
-<figure markdown="span">
-  ![Delta Year](/docs/Images/Reports/DeltaYear.png)
-  <figcaption>Delta Year controller.</figcaption>
+  ![Delta Report](/docs/Images/Reports/DeltaYear.png)
+  <figcaption>Delta Report controller.</figcaption>
 </figure>
 
 </div>
 
-The four ReportControllers share a similar structure but differ in which options are 
+The weekly controllers are not shown, as they share the design of their yearly counterparts.
+
+The six ReportControllers share a similar structure but differ in which options are 
 available and which loggers are shown in the TreeView. Below is a description of each 
 option:
 
-* **Report template** — The report template to use. Defaults to **Alarm_Report**. A guide 
+* **Report template** — The report template to use. Defaults to **Alarm Report**. A guide 
 to creating templates can be found [here](extending.md#creating-templates).
 * **Customize title** — Sets the title of the report, which appears on the front page.
 * **From** — The start time of the recording period. This field is locked for Energy 
-Reports, as they require historical data from that point onwards. See 
+Reports and Delta Reports, as they require historical data from that point onwards. See 
 [here](configuring.md#changing-year-span) for configuration.
 * **To** — The end time of the recording period.
-* **LoggerList** — Displays the signals available in the selected logger. Locked for 
-Alarm Reports, as they include all signals automatically.
-* **Number of events** — The maximum number of events to include. For Energy 
-Reports, this defaults to the number of hourly events in the selected time period.
 * **Unit** and **Prefix** — The unit the report is presented in. Present on the Energy 
 and Delta controllers only. Alarm reports carry no unit. See 
 [Units and prefixes](#units-and-prefixes) below.
+* **LoggerList** — Displays the signals available in the selected logger. Locked for 
+Alarm Reports, as they include all signals automatically. On the Energy and Delta 
+controllers it also stays locked until a unit is chosen, and then lists only the signals 
+measured in that unit. See [Units and prefixes](#units-and-prefixes).
+* **Number of events** — The maximum number of events to include. For Energy 
+Reports, this defaults to the number of hourly events in the selected time period. In 
+Delta Reports, this is handled in the onLoad script.
 * **Report file format** — The output format of the report: either PDF or PDF and XLSM.
 * **Report status** — Displays the current status of the report, including 
 completion or any errors.
@@ -145,6 +140,26 @@ completion or any errors.
     A report cannot be created until at least one signal has been selected in the 
     **LoggerList**. This does not apply to Alarm Reports, which include all signals 
     automatically.
+
+Once generated, the report is added to the report list where it can be previewed.
+
+## Report types { #report-types }
+
+The **Alarm Report** and **Alarm Report One Alarm** collect alarm data for the selected
+time period. The **Energy Report** displays energy data over a three year period, with
+an individual graph per year and a three year summary. The **Energy Report Week**
+follows the same structure but displays data on a weekly basis, covering three weeks
+by default with an individual graph per week and a three week summary.
+
+The **Delta Report Year** and **Delta Report Week** reports show the change between
+consecutive readings rather than the logged values themselves, which suits meters
+reporting a continuously increasing total. Delta Year presents a monthly delta per
+column, one column per month, and covers three years by default. Delta Week presents a
+daily delta per column, one column per weekday, and covers three weeks. Neither is tied
+to a single logging interval: Delta Year accepts intervals from monthly to daily, or down
+to hourly with the alternative template, and Delta Week from hourly to daily. For
+detailed configuration of each report type, see [Reports — Configuring](configuring.md).
+
 
 ## Units and prefixes { #units-and-prefixes }
 
@@ -157,25 +172,21 @@ Alarm reports have no unit pickers, and unit handling is skipped for them entire
 
 Signals selected into one report are not guaranteed to share the same native prefix. One 
 signal may be logged in `Wh` while another is already logged in `kWh`. Each selected 
-signal therefore carries its own scale factor, which corrects for that signal's own 
-prefix before the chosen display unit is applied. The conversion happens before the 
-values reach the template, so the template always receives values in a single unit.
+signal therefore gets its own scale factor, calculated from that signal's own prefix and 
+the chosen display unit.
+
+The values themselves are not converted beforehand. Each signal is queried in the unit it 
+was logged in, and the factors are passed to the template alongside the data, appearing on 
+the **Meta** sheet as `Factor1` to `Factor15` together with the chosen unit. The template 
+applies them, so the scaling happens in the template rather than in the script.
 
 The unit list is built from the units of the signals available in the selected logger, 
 so only units the project actually logs are offered.
 
-The **Alarm Report** and **Alarm Report One Alarm** collect alarm data for the selected 
-time period. The **Energy Report** displays energy data over a three year period, with 
-an individual graph per year and a three year summary. The **Energy Report Week** 
-follows the same structure but displays data on a weekly basis, covering three weeks 
-by default with an individual graph per week and a three week summary.
-
-The **Delta_Report_Week** and **Delta_Report_Year** reports show the change over a period 
-rather than the logged values themselves. Delta Week covers three weeks by default and 
-Delta Year three years. For detailed configuration of each report type, see 
-[Reports — Configuring](configuring.md).
-
-Once generated, the report is added to the report list where it can be previewed.
+The chosen unit also filters the signal list. The TreeView stays locked until a unit is 
+selected, and then lists only the signals measured in that unit. Changing the unit clears 
+the current selection, since the signals picked under the previous unit are no longer in 
+the list.
 
 ## Scheduling a report in **WideQuick® Runtime** { #scheduling-a-report-in-widequick-runtime }
 To schedule a report, navigate to 
@@ -222,7 +233,7 @@ Below are descriptions of the options on the first and third pages:
     * **Active schedule** — Toggles whether the scheduled report is active and will
     be sent.
     * **Report template** — The report template to use. Defaults to
-    **Alarm_Report**. See [here](extending.md#creating-templates) for guidance on
+    **Alarm Report**. See [here](extending.md#creating-templates) for guidance on
     creating templates.
     * **Frequency** — How often the report is generated. The available options and
     their additional settings are:

@@ -20,12 +20,8 @@ tags:
     
     * `scDoc`
     * `scLinking`
-    * `scSubNav`
-    * `scObjectFinder`
     * `scPrototypes`
-    * `scSuffix`
     * `scThemes`
-    * `scUsers`
     * `scAlert`
 
 The Logbook is available in the main menu under **Documents & Logbook → Logbook**.
