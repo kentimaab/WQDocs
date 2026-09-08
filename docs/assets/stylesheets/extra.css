@@ -1,5 +1,5 @@
 /* ── Kentima dark theme ───────────────────────────────────── */
-[data-md-color-scheme="kentima-dark"] {
+body[data-md-color-scheme="kentima-dark"] {
     color-scheme: dark;
 
     --md-primary-fg-color: #f9991b;
@@ -412,7 +412,7 @@
 }
 
 /* ── Kentima light theme ──────────────────────────────────── */
-[data-md-color-scheme="kentima"] {
+body[data-md-color-scheme="kentima"] {
     color-scheme: light;
     --md-primary-fg-color--dark: #f9991b;
     --md-accent-fg-color--transparent: #eee;
@@ -1636,7 +1636,8 @@ img {
 }
 
 .header {
-    flex: 1;
+    flex: 0 0 190px;
+    min-height: 0;
     width: 100%;
     border: 2px dashed rgb(232, 129, 20);
     border-radius: 10px;
@@ -1654,7 +1655,7 @@ img {
     justify-content: center;
     flex-direction: column;
 }
-.header svg {
+.md-typeset .header svg {
     height: 100px;
 }
 
