@@ -196,7 +196,7 @@ function () {
 }
 ```
 
-Öppnar loggboken filtrerad till den aktuella vyns ämne, och nya poster som skapas därifrån tilldelas det ämnet automatiskt. Ämnet hämtas från vyns egen sökväg via `scLogBook.normalizeTopic()`, så poster som skrivs från en Speed Dial grupperas under vyn de kom från. Se [Loggbok — Konfigurering](../modules/logbook/configuring.md#topics) för hur ämnen är strukturerade.
+Öppnar loggboken med den aktuella vyn markerad i ämnesträdet, och nya poster som skapas därifrån placeras automatiskt på den vyn. Ämnet hämtas från vyns egen sökväg via `scLogBook.normalizeTopic()`, så poster som skrivs från en Speed Dial grupperas under vyn de kom från. Se [Loggbok — Konfigurering](../modules/logbook/configuring.md#what-an-entry-is-filed-against) för vad en post kan kopplas till.
 
 Detta är det enda standardalternativet som skyddar sig självt. Loggboken är beroende av en databasanslutning och av att `scLogBook` är laddat, så ett fel skrivs till larmloggen via `scAlert.toFile()` i stället för att avbryta operatören. Se [Loggbok — Konfigurering](../modules/logbook/configuring.md#view-scoped) för hur vybegränsade loggböcker beter sig.
 

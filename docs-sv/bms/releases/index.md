@@ -3,7 +3,7 @@ title: Versioner — BMS
 product: bms
 page_type: release
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-09-15
 tags:
  - BMS
 ---
@@ -15,10 +15,150 @@ Versionsnoteringar för WideQuick BMS. Den senaste versionen visas först och ä
 en specifik version av WideQuick Modular Framework, länkad under respektive rubrik. För hela
 ramverkets ändringslogg, se [MOD-versioner](../../mod/releases/index.md).
 
+## WideQuick BMS 2026.1.2 { #bms-2026-1-2 }
+
+__Utgiven 2026-08-20__
+Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0)
+<details class="release" markdown="1" open>
+<summary>Versionsnoteringar</summary>
+
+### Nya funktioner
+
+| Funktion | Beskrivning |
+|---|---|
+| **Kalenderimport och export** | Händelser kan importeras till kalendern från en lokal `.ics`-fil och exporteras tillbaka till en. Varje import behålls som en egen prenumeration i den nya tabellen `ics_subscriptions`, så den kan byta namn, byta färg, döljas eller tas bort som en enhet utan att händelser skapade direkt i kalendern påverkas. En import läses en gång vid importtillfället. Lägger till vyerna **ImportCalendar**, **ExportCalendar**, **EditCalendars** och **CalendarFilter**. |
+| **Helgdagar och helgdagsaftnar** | En dag markeras som helgdag genom att en kalenderhändelse skapas på den med färgen **HOLIDAY**, och som helgdagsafton med **HOLIDAYEVE**. En sådan händelse justeras till hela dygn när den sparas. Den dagliga klassificeringen publiceras till två interna variabler i Datalagret, `isHoliday` och `isHolidayEve`, som kan kopplas till en utgång så att ett PLC eller DUC kör sina egna scheman utifrån dagtypen. Klassificeringen är en egenskap hos dagen snarare än ett värde som skrivs in i varje tidkanals egna register, så ett par variabler räcker för samtliga scheman. Matchningen är ett överlappningstest, så en flerdagshelg markerar varje dag den täcker. |
+| **Loggboksarkiv** | Loggboksposter kan arkiveras i stället för att raderas. Tabellen `logbook` får kolumnen `archived`, filtret får reglaget **Visa arkiverade**, och den nya behörigheten `Logbook_Archive` styr vem som får arkivera en post. Behörigheten är nekad som standard och måste därför tilldelas en roll innan någon kan arkivera. Inställningsvyn får en åtgärd som permanent raderar samtliga arkiverade anteckningar. |
+| **Rapportenheter och prefix** | Rapporter bär en visningsenhet. Rapportkontrollerna har fått väljare för **Enhet** och **Prefix**, och varje vald signal får sin egen skalfaktor, beräknad utifrån signalens eget prefix och den valda enheten. Värdena hämtas i den enhet de loggats i, och faktorerna följer med till mallen tillsammans med data och hamnar på dess **Meta**-blad som `Factor1` till `Factor15`, där mallen tillämpar skalningen. En signal loggad i `Wh` och en annan redan i `kWh` rapporteras därför i samma skala. Listan **Enhet** är inte en fast uppsättning. Den byggs från enheterna hos signalerna på rapportens logger, reducerade till sin SI-bas, så endast enheter som faktiskt finns i datat erbjuds. Att välja en enhet filtrerar signalträdet till signaler av den dimensionen, och trädet är inaktiverat tills en enhet valts. Filtreringen är valfri per kontroll: en rapportvy utan objektet `Unit` lämnar trädet ofiltrerat och skickar värden i sina egna enheter. Prefix på `m³` gäller metern, så `dm³` är en tusendel av `m³` snarare än en tiondel. `ReportQueue`, `reportStats` och `reportSchedules` får kolumnerna `unit` och `factorArray`, som läggs till automatiskt vid första start så att befintliga databaser migrerar sig själva. |
+| **Deltarapporter** | Två nya rapportkontroller, **Delta_Week** och **Delta_Year**, rapporterar förändringen över en period i stället för de loggade värdena i sig. De är avsedda för mätare som rapporterar en kontinuerligt ökande totalsumma. **Delta_Week** visar ett dygnsdelta per kolumn, en kolumn per veckodag, och accepterar loggningsintervall från timme till dygn. **Delta_Year** visar ett månadsdelta per kolumn, en kolumn per månad, med mallen `DeltaYear_H.xlsx` som accepterar intervall från månad ned till timme. Båda accepterar upp till 15 signaler. De levereras med nya Excel-mallar (`DeltaWeek.xlsx`, `DeltaYear_H.xlsx`) tillsammans med omarbetade `EnergyReport.xlsx` och `WeeklyEnergyReport.xlsx`. |
+| **Lista över fjärrklienter** | Ett nytt skript `scRemoteClients` räknar de fjärrklienter som är anslutna till applikationen. En fjärrklient kan begära detaljlistan över anslutna klienter, som servern returnerar över RPC enbart till den begärande klienten. Listan lagras aldrig. Lägger till pop-out-vyn `RemoteClients.kvie`. |
+| **Kriterier för larmutskick** | Utgående larmutskick kan filtreras på larmtillstånd. Tabellen `mail_schedules` får kolumnen `criteria` som accepterar `all`, `active`, `acknowledged`, `unacknowledged` och `inactive`. Kolumnen läggs till automatiskt vid första start och har `active` som standardvärde, så befintliga scheman fortsätter skicka på samma larmtillstånd som tidigare. Trädvyn för larmschema visar vilka larmklasser och vilka kriterier varje schema bevakar. |
+| **Linjer och rör på karta** | Linjer och rör kan ritas på en karta tillsammans med nålar. Linjegeometrin definieras på objekten `MainLine1`, `MediumLine1` och `SmallLine1`, och skriptet `scMap` har omarbetats för att placera dem utifrån geografiska koordinater. |
+| **Instrument på dashboard** | Två instrumentwidgetar, `Gauge_1x1` och `Gauge_2x2`, har lagts till i `Dashboard Widgets.klib`. De visar ett enskilt värde som en urtavla, i storlekarna en cell respektive två gånger två celler. |
+| **Vy för oanvända suffix** | Knappen **Inte kopplade variabler** i felsökningsvyn öppnar den nya `UnboundDebug.kvie`, som listar varje suffix som inte är kopplat till ett popup eller en vy. |
+| **Loggbokens ämnesträd** | Loggboken placerar en post på en arbetsvy, ett objekt, eller en egen ämnessökväg, och visar alla tre i ett gemensamt träd. Ett reglage växlar trädet mellan **arbetsvyordning**, som följer processvyernas mappstruktur, och **signalordning**, som följer taggsökvägen. De två är länkade genom objektindexet, så en anteckning på ett objekt visas även under varje vy där objektet är ritat, och en anteckning på en vy visas även under de objekt som är ritade i den. När två objekt i samma vy har samma namn utökas lövets namn med så mycket av taggen som behövs för att skilja dem åt. Tabellen `logbook` får `topic_kind` och `topic_ref`, härledda från `topic` och omhärledda vid varje start, och postlistan får kolumnen **Placerad på** som namnger vad varje post är kopplad till. De loggböcker som öppnas från ett objektpopup och från en processvy förväljer sitt ämne samtidigt som resten av trädet förblir nåbart. |
+
+---
+
+### Förbättringar
+
+| Område | Beskrivning |
+|---|---|
+| **Larmutskick — kvitterande användare** | Utskick rapporterar nu vilken användare som kvitterat ett larm. Larmtillstånd och den kvitterande användarens namn hämtas från `wqlogg_larmlogg_alarm_data` i stället för att härledas från det aktiva larmobjektet. |
+| **Larmdetaljer i beskrivning** | Varje larms detaljer kopieras till dess egenskap `description`, vilket gör texten åtkomlig utanför larmobjekt. |
+| **Status för larmschema** | **Larm - Schema** uppdaterar antalet scheman och deras aktiva tillstånd löpande i stället för enbart vid inläsning. |
+| **Underhållslogg** | Knappen **Rensa underhållsloggen** tömmer samtliga poster i underhållsloggen. Åtgärden ligger bakom en bekräftelsedialog och behörigheten `Config`. |
+| **Larmfrekvens** | **Larm - Frekvens** har fått knappen **Filtrera** som öppnar larmfiltrets pop-out, så frekvensvyn kan avgränsas på samma sätt som larmlistan. |
+| **Datumordning i stapeldiagram** | En ny egenskap ritar datumaxeln från höger till vänster i stället för från vänster till höger. |
+| **Färger vid kalenderimport** | Importerade kalendrar skapas med färgen **DEFAULT** och kan byta färg i **EditCalendars**. Färgerna **HOLIDAY** och **HOLIDAYEVE** är det som markerar en dag, så att ändra en kalender till eller från någon av dem visar först en varning. |
+| **Helgdagar på fjärrklienter** | Skriptet `scHoliday` är registrerat för fjärrklienter. |
+| **Temaanpassade filter** | Larmfiltret och underhållsfiltret följer det aktiva temat. |
+| **Rapportschemaläggaren följer rapportsystemet** | En schemalagd rapport lagrar samma visningsenhet och signalfaktorer som en manuellt skapad, valda i `ReportSchedule2.kvie`. |
+| **Signalkontroll för rapport** | Att skapa en rapport blockeras tills minst en signal är vald, samma kontroll som MOD och WWT redan hade. |
+| **Kalender — överskottsmarkering öppnar dagen** | Månadsvyns markering **Visa fler (N)** öppnar dagvyn för det datumet, där dagens samtliga händelser syns. Överskjutande händelser ritas aldrig i månadscellen i sig. |
+| **Kalender — händelsenamn i vecka och dag** | Händelser med identiskt tidsspann ritades som staplade fält med sina namn ovanpå varandra. En kolumn som innehåller mer än en händelse fälls nu ihop till ett enda fält med etiketten **Visa händelser (X)**, som öppnar en väljare med allt fältet står för. |
+| **Textlängd i larmöversikt** | Långa larmtexter hålls inom bredden på larmöversiktens widget i stället för att sträcka ut den. |
+| **Ikoner i inställningar** | Inställningsikoner levereras i grå och vit variant så att de följer det aktiva temat. |
+| **Speed dial** | Objektet `SpeedDialRight` ritades i fel proportioner. Dess elementbredder och förskjutningar har korrigerats. |
+| **Beskrivningar av objektegenskaper** | Egenskapsbeskrivningar visas som hjälptext i **WideQuick® Designer**. De beskrivningar som lämnats tomma på ventilobjekten har fyllts i, och exemplet `ObjectName` i `DynTouch` saknade sitt avslutande citattecken och stod som `"FS61` i stället för `"FS61"`. |
+| **`scPrototypes`** | Har fått hjälpfunktionen `toUpperCase()` för användning i projektskript. |
+| **Larmutskick — kompakt SMS** | Ett larmschema kan skicka ett kompakt meddelande i stället för den fullständiga listan per larm. Ett kompakt meddelande bär rubriken, händelsetypen och en kommaseparerad lista över de larm som matchar den, vilket håller ett utskick som omfattar många larm inom en rimlig längd. |
+| **Inmatningsrutan accepterar Enter** | Pop-out-rutan för inmatning behandlar **Enter** som en bekräftelse, så ett värde kan skrivas in och bekräftas utan att knappen behöver användas. |
+| **Tystare loggar** | Applikations- och felloggarna har städats upp. Schemamigreringar i `scCalendar`, `scHoliday`, `scMaintenance` och `scSuffix` kontrollerar nu om en kolumn finns innan den läggs till, i stället för att försöka ändringen och låta SQLite-drivrutinen rapportera felet till `Errors.log`. `scUsers.hasPriv()` nekar i stället för att kasta ett fel när den anropas utan behörighet. Flera hundra rader återkommande uppstartsbrus är borta. |
+
+---
+
+### Ändringar
+
+| Område | Förändring |
+|---|---|
+| **Borttagna vyer och skript** | Den oanvända `CreateEnergyReport.kvie` har raderats och `scMapObjects.js` har tagits bort ur projektet. En kopia finns kvar i resurspaketet om den skulle behövas. |
+| **Kalenderflöden** | Händelser kan nu importeras till kalendern från en lokal `.ics`-fil. |
+
+---
+
+### Buggar
+
+| # | Område | Beskrivning |
+|---|---|---|
+| 1 | Underhåll | En missad återkommande deadline föll bort när ingen användare var inloggad, eftersom insättningen krävde en aktuell användare och kastade ett fel i stället. Skaparen faller nu tillbaka på `System`. |
+| 2 | Larmutskick | Larmbeskrivningen kunde skickas som den bokstavliga texten `Undefined`. En kontroll undertrycker nu fältet när ingen beskrivning finns. |
+| 3 | Larmlista | `dslAlarms.onDataChanged()` kunde lägga till samma larm två gånger. Listan genomsöks nu före tillägg, så dubbletter avvisas. |
+| 4 | Kalender | Händelser täckte inte ett helt dygn. En heldagshändelse skrivs nu på index 0 och index 48, så att den spänner över dygnet. |
+| 5 | Dashboard | Övergångar till och från sommartid gjorde stapeldiagrammet felinriktat. Åtgärdat, tillsammans med rendering av rutnät och beskrivning. |
+| 6 | Karta | `StatusPin` tillämpade sin dynamiska status utan att kontrollera larmobjekten, så en nål kunde visa ett tillstånd som dess objekt inte hade. Den verifierar nu mot både objektlistan och larmobjekten. |
+| 7 | Karta | Linjer och rör ritades aldrig på en karta. Uppdateringsanropen i `scMap` var avstängda, och geometriegenskaperna låg på infopopupen i stället för på linjeobjekten. Anropen är nu aktiva, och egenskaperna ligger på objekten `MainLine1`, `MediumLine1` och `SmallLine1`. Värden som tidigare angetts på infopopupen behöver anges på nytt på linjeobjekten. |
+| 8 | Karta | Ett rör som sträckte sig över ett stort geografiskt område beräknade sina pixelförskjutningar från en fast `Line0` som kunde hamna utanför den synliga ramen, vilket placerade röret felaktigt. Förskjutningarna utgår nu från hörnet av den synliga ramen. |
+| 9 | Objektbibliotek | Egenskapen `CustomLabel` hade ingen effekt på namnskylten för vissa objekt. Åtgärdat i biblioteken för givare, ventiler, speed dial och kartindikatorer, inklusive deras äldre varianter. |
+| 10 | Objektbibliotek | Spjäll rapporterade NO och NC inverterat, både i det aktuella och i det äldre spjällbiblioteket. Åtgärdat. |
+| 11 | Navigering | Menyknappar bytte inte färg när temat växlades, och ett undernavigeringsobjekt som överlevde sin vy bröt registreringsloopen. En kontroll och ett avregistreringssteg har lagts till. |
+| 12 | Navigering | I den fullständiga menyn ångrade **Tillbaka** på en sidindelad undernavigeringssida endast det senaste steget framåt, eftersom sidindelningen styrdes av ett enda föregående indexvärde i stället för av en sidhistorik. Skriptet `scSubNavPopup` registrerar nu startindex för varje sida, så att **Tillbaka** stegar bakåt genom hela sekvensen. |
+| 13 | Skriptbibliotek | `scAlarmFinder` var registrerat två gånger i `ScriptLibraries.kdat`, och felmeddelanden i `scAuditTrail` och `scMaintenance` bar fortfarande det gamla prefixet `scMaintenanceLog`, vilket pekade ut fel skript när något gick fel. Den dubbla registreringen har tagits bort och prefixen korrigerats. |
+| 14 | Larmöversikt | Lagret **error** kunde inte täcka vyn eftersom andra objekt låg ovanför det. Objektordningen har korrigerats. |
+| 15 | Underhåll | `MaintenanceInfoPanel` var registrerad under ett namn som inte stämde med dess vyfil, och en inaktuell `folder`-post låg kvar i `SuffixConfig.db`. Båda korrigerade. |
+| 16 | Suffixinställningar | **Suffixalias - Popuper** nycklar sina kategorier på deras svenska namn medan trädet visar dem översatta, så på något annat språk kunde inställningsfälten inte matchas. Kontrollerna visades men tog tyst inte emot inmatning, och att välja en post fyllde inte längre i kombinationsrutorna och textfälten. Den visade etiketten översätts nu tillbaka till sin kanoniska nyckel före användning. Att lägga till en kategori avvisar dessutom ett namn som matchar en befintlig kategoris översatta etikett, vilket annars skulle skapa två poster som inte går att skilja åt. |
+| 17 | Suffixinställningar | Att skapa en kategori rapporterade ett fel och lämnade den nya kategorin omarkerad, eftersom trädet söktes igenom med det råa inskrivna namnet och ett villkor som den översatta modellen aldrig kan matcha. Uppslagningen använder nu den etikett noden faktiskt visas under, och hoppar över markeringen i stället för att kasta ett fel om noden inte kan hittas. |
+
+---
+
+### Översättningar
+
+| Område | Förändring |
+|---|---|
+| **Nya översättningssträngar i projektet** | Etiketter för loggboksarkiv och vykontrollpopupen, vyer för rapportschema, vyer för kalenderimport, export och redigering, underhållets infopanel och underhållsfilter, etiketter för larmkriterier, etiketter för dokument och filväljare, inloggningsvyn, samt strängar i rapport- och spjällbibliotek. |
+| **Borttaget** | Döda källsträngar rensades bort inför den nya översättningsomgången. |
+| **Verifierat** | Översatta strängar jämfördes mot den svenska basuppsättningen för att fånga poster som glidit från sin källa. |
+| **Larmkriterier** | Kriterier visas översatta men lagras som kanoniska nycklar. Skriptet `scAlarmSender` översätter tillbaka det valda värdet innan det skrivs till databasen. |
+| **Rapportsträngar** | Etiketter för enhet, prefix och deltarapporter lades till, och felstavningen "Excell" är nu "Excel" genomgående. |
+| **Strängar för ihopfällda kalenderhändelser** | **Visa fler (N)** och **Visa händelser (X)** lades till för ihopfällda händelser i månad, vecka och dag. |
+| **Uppdaterade språk** | Arabiska, bulgariska, kroatiska, tjeckiska, danska, engelska, finska, franska, tyska, ungerska, italienska, mandarin, norska, polska, portugisiska (PT och BR), rumänska, slovenska, spanska, svenska. |
+
+---
+
+### Biblioteks- och vyändringar
+
+| Fil | Förändring |
+|---|---|
+| `scHoliday.js` | Kalenderimport och export, delad ICS-tolk, klassificering av helgdag och helgdagsafton publicerad till `isHoliday` och `isHolidayEve` |
+| `scAlarmSender.js` | Kriteriefiltrering, rapportering av kvitterande användare, larmtillstånd hämtat från larmloggen, kontroll av beskrivning, återöversättning av kriterier |
+| `scLogBook.js` | Kolumnen `archived`, utfasning och rensning av `deleteMark`, permanent radering av arkiverade poster |
+| `scRemoteClients.js` | Nytt skript — antal anslutna klienter och klientlista levererad över RPC |
+| `scMap.js` | Hantering av linjer och rör, förskjutningar utgående från den synliga ramen |
+| `scMaintenance.js` | `System` som reserv vid obevakade återkommande insättningar |
+| `scDashboard.js` | Egenskap för datumordning i stapeldiagram, korrigering för sommartid, rättningar av rutnät och beskrivning |
+| `scSubNavPopup.js`, `scThemes.js` | Temaomfärgning av menyknappar, kontroll och avregistrering av inaktuella undernavigeringsobjekt |
+| `scAlarm.js` | Dubblettkontroll i `dslAlarms.onDataChanged()` |
+| `Privileges.kdat` | Ny behörighet `Logbook_Archive` |
+| `DataStore.kdat` | Larmdetaljer kopierade till `description` |
+| `ImportCalendar.kvie`, `ExportCalendar.kvie`, `EditCalendars.kvie`, `CalendarFilter.kvie` | Vyer för kalenderimport, export, redigering och filtrering |
+| `UnboundDebug.kvie` | Ny vy som listar suffix som inte är kopplade till ett popup eller en vy |
+| `RemoteClients.kvie` | Ny pop-out som listar anslutna fjärrklienter |
+| `Logbook.kvie`, `LogBookFilter.kvie`, `LogbookViewControllerPopup.kvie` | Arkivkolumn, reglaget **Visa arkiverade**, översatta etiketter |
+| `Larm - Schema.kvie`, `AlarmSchedule_1.kvie`, `AlarmSchedule_2.kvie` | Kriterieval, löpande schemaantal och aktivt tillstånd |
+| `Spårningslogg - Underhåll.kvie` | Knappen **Rensa underhållsloggen** |
+| `Map Indicators.klib` | Linje- och rörobjekt, verifiering av larmobjekt i `StatusPin`, rättningar av `CustomLabel` |
+| `Dashboard Widgets.klib` | Instrumentwidgetar, datumordning i stapeldiagram |
+| `COMPONENTS.klib`, `COMPONENTS_Legacy.klib`, `DAMPERS_Legacy.klib` | Korrigering av NO och NC för spjäll |
+| `Valves.klib`, `Speed Dial.klib`, `DynTouch.klib` | Ifyllda egenskapsbeskrivningar, proportioner för `SpeedDialRight`, korrigerat exempel för `ObjectName` |
+| `scReports.js`, `scReportScheduler.js` | Upplösning av enhet och SI-prefix, skalfaktorer per signal, kolumnerna `unit` och `factorArray` med sina schemamigreringar, loggerkontroll |
+| `Report.klib` | Väljare för enhet och prefix, stöd för deltarapporter |
+| `Delta_Week.kvie`, `Delta_Year.kvie` | Nya deltarapportkontroller, med kontroll av vald signal innan en rapport kan skapas |
+| `ReportSchedule2.kvie` | Val av enhet och prefix för schemalagda rapporter |
+| `Reports/Templates/*.xlsx` | Nya mallar `DeltaWeek` och `DeltaYear_H`, omarbetade energirapportmallar |
+| `Schedules.kdat` | Utlösaren för rapportschema korrigerad till `scReportScheduler` |
+| `scCalendar.js` | Månadsvyns överskottsmarkering öppnar dagvyn för det datumet |
+| `scWeekViewManager.js`, `scDayViewManager.js`, `Calendar.klib` | Ihopfällning av händelser i vecka och dag med **Visa händelser (X)** |
+| `Loggers.kdat` | Loggvärdena `*_Effekt` och `*_RPM` borttagna |
+| `Larm - Översikt.kvie` | Objektordning så att felagret täcker vyn |
+| `Translations.klib` | Tillagda strängar, borttagning av döda strängar, verifiering mot svensk basuppsättning |
+
+</details>
+
+
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
 
 __Utgiven 2026-07-08__ — Patch-version BMS 2026.1.1.1
-<details class="release" markdown="1" open>
+<details class="release" markdown="1">
 <summary>Versionsnoteringar</summary>
 
 ### Buggar

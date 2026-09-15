@@ -517,6 +517,15 @@ nav = [
     ]},
     { "Releases" = "wwt/releases/index.md" },
   ]},
+  { "Plug-in" = [
+    { "Overview" = "plug-in/index.md" },
+    { "Teltonika" = [
+      { "Overview" = "plug-in/teltonika/oversikt.md" },
+      { "Installation" = "plug-in/teltonika/installation.md" },
+      { "Usage" = "plug-in/teltonika/anvandning.md" },
+      { "Advanced" = "plug-in/teltonika/avancerat.md" },
+    ]},
+  ]},
   { "Tools" = [
     { "Tag Name Validator" = "Tools/tag-name-validator.md" },
     { "Theme Builder" = "Tools/theme-builder.md" },

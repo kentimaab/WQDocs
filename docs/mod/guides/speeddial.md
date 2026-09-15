@@ -201,7 +201,7 @@ function () {
 }
 ```
 
-Opens the logbook filtered to the current view's topic, and new entries created from it are assigned that topic automatically. The topic is taken from the view's own path through `scLogBook.normalizeTopic()`, so entries written from a Speed Dial group under the view they came from. See [Logbook — Configuring](../modules/logbook/configuring.md#topics) for how topics are structured.
+Opens the logbook with the current view selected in the topic tree, and new entries created from it are filed against that view automatically. The topic is taken from the view's own path through `scLogBook.normalizeTopic()`, so entries written from a Speed Dial group under the view they came from. See [Logbook — Configuring](../modules/logbook/configuring.md#what-an-entry-is-filed-against) for what an entry can be anchored to.
 
 This is the one standard option that guards itself. The logbook depends on a database connection and on `scLogBook` being loaded, so a failure is written to the alert log through `scAlert.toFile()` instead of interrupting the operator. See [Logbook — Configuring](../modules/logbook/configuring.md#view-scoped) for how view-scoped logbooks behave.
 

@@ -7,7 +7,7 @@ doc_id: DOC-M13
 size: M
 priority: p0
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-09-15
 tags: 
  - MOD
 ---
@@ -17,9 +17,12 @@ tags:
 
 The Calendar module provides a visual overview of events and upcoming maintenance deadlines. It supports three view modes (month, week and day) and can be navigated forward and backward through time.
 
-Events come from three sources: custom events created directly in the calendar, maintenance deadlines pulled automatically from the [Maintenance module](../maintenance/index.md), and external calendars added as subscriptions. A configurable reminder is shown a set number of days before each maintenance deadline.
+Events come from three sources: events created directly in the calendar, maintenance deadlines pulled automatically from the [Maintenance module](../maintenance/index.md), and events imported from a local `.ics` file. A configurable reminder is shown a set number of days before each maintenance deadline.
 
-A subscription can be a live ICS feed, a local `.ics` file, or a country's public holidays. Holiday subscriptions also feed a daily classification to time channels, so PLC-side schedules can react to which days are holidays.
+Days can be marked as holidays and holiday eves. The calendar publishes that classification to two internal variables, which can be handed on to a PLC or DUC so its own schedules react to the day type.
+
+!!! info "Live calendar feeds are not part of this release"
+    Subscribing to an ICS link and importing a country's public holidays both require the REST plugin, which is not included. Importing from a local `.ics` file is available, and holidays are marked in the calendar itself. See [Importing a Calendar](configuring.md#importing-a-calendar).
 
 ## Contents { #contents }
 
@@ -34,19 +37,18 @@ A subscription can be a live ICS feed, a local `.ics` file, or a country's publi
 * [**Events**](configuring.md#events) — Creating, editing and deleting events.
 * [**Maintenance Events**](configuring.md#maintenance-events) — How maintenance deadlines appear and what the colors mean.
 * [**Reminders**](configuring.md#reminders) — Configuring the reminder offset for maintenance deadlines.
-* [**Calendar Subscriptions**](configuring.md#calendar-subscriptions) — Importing, exporting, filtering and editing external calendars.
-* [**Importing a Calendar**](configuring.md#importing-a-calendar) — Adding a feed, a local file or a country's public holidays.
+* [**Holidays and Holiday Eves**](configuring.md#holidays-and-holiday-eves) — Marking a day and handing the classification to a PLC.
+* [**Importing a Calendar**](configuring.md#importing-a-calendar) — Adding events from a local `.ics` file.
+* [**Managing Imported Calendars**](configuring.md#managing-imported-calendars) — Renaming, recolouring, filtering and removing.
 * [**Exporting a Calendar**](configuring.md#exporting-a-calendar) — Writing events to a file or sending them by email.
 
 ---
 
 ### [Extending](extending.md) { #extending }
-* [**Reminder Offset**](extending.md#global-offset) — Changing the reminder offset in the database.
+* [**Reminder Configuration**](extending.md#reminder-configuration) — Changing the reminder offset and the per-template toggle.
+* [**Holiday Variables**](extending.md#holiday-variables) — `isHoliday`, `isHolidayEve` and how they are refreshed.
 * [**Subscription Storage**](extending.md#subscription-storage) — The `ics_subscriptions` table and what each column holds.
-* [**Fetching**](extending.md#fetching) — The REST plugin, conditional requests and the transport restrictions.
-* [**Public Holiday Import**](extending.md#public-holiday-import) — Where holiday data comes from and how the country list is built.
-* [**Holiday-aware Time Channels**](extending.md#holiday-aware-time-channels) — Handing the daily holiday classification to time channels.
-* [**Script Reference**](extending.md#script-reference) — The `scHoliday` functions behind the subscription views.
+* [**Script Reference**](extending.md#script-reference) — The `scHoliday` functions behind import, export and the holiday classification.
 
 ---
 

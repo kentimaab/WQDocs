@@ -410,7 +410,7 @@ onPageReady(function () {
 
 // Convert specific nav section headers into collapsible items, starting collapsed
 (function () {
-    const COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens'];
+    const COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens', 'Teltonika'];
 
     function collapseNavSections() {
         document.querySelectorAll('.md-nav__item--section').forEach(function (item) {

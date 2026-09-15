@@ -4,7 +4,7 @@ description: Release notes for WideQuick BMS.
 product: bms
 page_type: release
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-09-15
 tags: 
  - BMS
 ---
@@ -28,8 +28,8 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 
 | Feature | Description |
 |---|---|
-| **Calendar subscriptions and holiday import** | The `scHoliday` script gains ICS calendar subscriptions, stored in a new `ics_subscriptions` table. Feeds are fetched over HTTPS through a new **REST** CAPI plugin (`WideQuickRestPlugin`), using conditional requests based on ETag and Last-Modified. Three import paths share one parser: a live per-subscription poll (`url` type), a local `.ics` file re-read on each sync (`file` type), and a built-in public-holiday import (`nager` type) that reads a country's holidays from Nager.Date's JSON API. The country list is derived from the locales in `Languages.kdat`, and the current year plus the next two are fetched. Adds the **ImportCalendar**, **ExportCalendar**, **EditCalendars** and **CalendarFilter** views. |
-| **Holiday flags in the Data Store** | The daily holiday classification is published to two internal Data Store variables, `isHoliday` and `isHolidayEve`, written by the `scHoliday` script at startup and on every hourly sync. Schedule evaluation reads the flags directly, so the classification is a property of the day rather than a value written into each time channel's own registers. The `Tidkanal` suffix aliases `holidayFlag` and `dhcControl` and the `TimeChannelHolidaySubscriptions` table remain in place but are no longer read or written. |
+| **Calendar import and export** | Events can be imported into the calendar from a local `.ics` file and exported back out to one. Each import is kept as its own subscription in a new `ics_subscriptions` table, so it can be renamed, recoloured, hidden or removed as a unit without touching events created directly in the calendar. An import is read once at import time. Adds the **ImportCalendar**, **ExportCalendar**, **EditCalendars** and **CalendarFilter** views. |
+| **Holidays and holiday eves** | A day is marked as a holiday by creating a calendar event on it with the **HOLIDAY** colour, and as a holiday eve with **HOLIDAYEVE**. Such an event is snapped to whole days when saved. The daily classification is published to two internal Data Store variables, `isHoliday` and `isHolidayEve`, which can be connected to an output so a PLC or DUC runs its own schedules against the day type. The classification is a property of the day rather than a value written into each time channel's own registers, so one pair of variables serves every schedule. The match is an overlap test, so a multi-day holiday marks every day it covers. |
 | **Logbook archive** | Logbook entries can be archived instead of deleted. The `logbook` table gains an `archived` column, the filter gains a **Visa arkiverade** toggle, and a new `Logbook_Archive` privilege controls who may archive an entry. The privilege defaults to denied, so it must be granted to a role before anyone can archive. The settings view gains an action that permanently deletes every archived note. |
 | **Report units and prefixes** | Reports carry a display unit. The report controllers gained **Unit** and **Prefix** pickers, and every selected signal gets its own scale factor, calculated from that signal's own prefix and the chosen unit. The values are queried in the unit they were logged in, and the factors travel to the template alongside the data, landing on its **Meta** sheet as `Factor1` to `Factor15`, where the template applies the scaling. One signal logged in `Wh` and another already in `kWh` therefore report on the same scale. The **Unit** list is not a fixed set. It is built from the units of the signals on the report's logger, reduced to their SI base, so only units the data actually contains are offered. Selecting a unit filters the signal tree to signals of that dimension, and the tree stays disabled until a unit is chosen. Filtering is opt-in per controller: a report view without the `Unit` object leaves the tree unfiltered and sends values in their native units. Prefixes on `m³` apply to the metre, so `dm³` is a thousandth of `m³` rather than a tenth. `ReportQueue`, `reportStats` and `reportSchedules` gain `unit` and `factorArray` columns, added automatically on first start so existing databases migrate themselves. |
 | **Delta reports** | Two new report controllers, **Delta_Week** and **Delta_Year**, report the change over a period rather than the logged values themselves. They are intended for meters that report a continuously increasing total. **Delta_Week** presents a daily delta per column, one column per weekday, and accepts logging intervals from hourly to daily. **Delta_Year** presents a monthly delta per column, one column per month, using the `DeltaYear_H.xlsx` template that accepts intervals from monthly down to hourly. Both accept up to 15 signals. They ship with new Excel templates (`DeltaWeek.xlsx`, `DeltaYear_H.xlsx`) alongside reworked `EnergyReport.xlsx` and `WeeklyEnergyReport.xlsx`. |
@@ -38,6 +38,7 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 | **Map lines and pipes** | Lines and pipes can be drawn on a map alongside pins. Line geometry is defined on the `MainLine1`, `MediumLine1` and `SmallLine1` objects, and the `scMap` script was reworked to position them from geographic coordinates. |
 | **Dashboard gauges** | Two gauge widgets, `Gauge_1x1` and `Gauge_2x2`, were added to `Dashboard Widgets.klib`. They present a single value as a dial, in a one-cell and a two-by-two dashboard size. |
 | **Unused suffix view** | An **Inte kopplade variabler** button in the debug view opens the new `UnboundDebug.kvie`, listing every suffix that is not connected to a popup or a view. |
+| **Logbook topic tree** | The logbook files an entry against a workview, an object, or a topic path of its own, and presents all three in a single tree. A toggle switches that tree between **workview** order, which follows the folder structure of the process views, and **signal** order, which follows the tag path. The two are linked through the object index, so a note on an object also appears under every view that object is drawn in, and a note on a view also appears under the objects drawn in it. Where two objects in the same view share a name, the leaf label is extended with as much of the tag as is needed to tell them apart. The `logbook` table gains `topic_kind` and `topic_ref`, derived from `topic` and re-derived on every start, and the entry list gains a **Placerad på** column naming what each entry is anchored to. The logbooks opened from an object popup and from a process view preselect their subject while leaving the rest of the tree reachable. |
 
 ---
 
@@ -51,21 +52,21 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 | **Maintenance log** | A **Rensa underhållsloggen** button clears every entry in the maintenance log. The action sits behind a confirmation dialog and the `Config` privilege. |
 | **Alarm frequency** | **Larm - Frekvens** gained a **Filtrera** button that opens the alarm filter pop-out, so the frequency view can be narrowed the same way the alarm list is. |
 | **Bar chart date order** | A new property renders the date axis right-to-left instead of left-to-right. |
-| **Calendar import colours** | Imported calendars are created with the **DEFAULT** colour, while holiday imports keep **HOLIDAY**. Imported calendars can be recoloured in **EditCalendars**. Changing a calendar to or from Holiday shows a warning first, because that connects or disconnects the time channel. |
-| **Holiday import language** | Import holidays is now a combo box listing the languages available in WideQuick, each mapped to its country's public holidays, replacing the previous fixed selection. |
+| **Calendar import colours** | Imported calendars are created with the **DEFAULT** colour and can be recoloured in **EditCalendars**. The **HOLIDAY** and **HOLIDAYEVE** colours are what mark a day, so changing a calendar to or from either shows a warning first. |
 | **Holidays on remote clients** | The `scHoliday` script is registered for remote clients. |
 | **Theme-aware filters** | The alarm filter and the maintenance filter follow the active theme. |
-| **Popup variable naming** | Buttons and the title in the debug view were renamed to make clear that they refer to popup variables. |
 | **Report scheduler follows the report system** | A scheduled report stores the same display unit and per-signal factors as a manually created one, selected in `ReportSchedule2.kvie`. |
 | **Report signal check** | Creating a report is blocked until at least one signal is selected, the same check MOD and WWT already had. |
 | **Calendar — overflow badge opens the day** | The month view's **Visa fler (N)** badge opens the Day view for that date, where every event of the day is visible. Overflowing events are never drawn in the month cell itself. |
 | **Calendar — week and day event names** | Events sharing an identical span were drawn as stacked bars with their names on top of each other. A column holding more than one event now collapses to a single bar labelled **Visa händelser (X)**, which opens a picker listing everything it stands for. |
-| **Calendar subscription fetch hardened** | The REST plugin behind ICS subscriptions now speaks HTTP and HTTPS only, so a `file://` subscription URL can no longer read local files back into the script. Redirects are followed to HTTPS only and capped at five hops, a response body is rejected above 16 MB — both up front from `Content-Length` and while streaming — and a 10 second connect timeout keeps a single unreachable feed from stalling the whole sync. |
 | **Alarm overview text length** | Long alarm texts are held to the width of the alarm overview widget instead of stretching it. |
 | **Settings icons** | Settings icons ship in gray and white variants so they follow the active theme. |
 | **Speed dial** | The `SpeedDialRight` object was drawn out of proportion. Its element widths and offsets were corrected. |
 | **Object property descriptions** | Property descriptions appear as help text in **WideQuick® Designer**. The descriptions left empty on the valve objects were filled in, and the `ObjectName` example in `DynTouch` was missing its closing quotation mark, reading `"FS61` instead of `"FS61"`. |
 | **`scPrototypes`** | Gained a `toUpperCase()` helper for use in project scripts. |
+| **Alarm Sender — compact SMS** | An alarm schedule can send a compact message instead of the full per-alarm listing. A compact message carries the subject line, the event type and a comma-separated list of the alarms matching it, which keeps a notification covering many alarms within a sensible length. |
+| **Prompt accepts Enter** | The prompt pop-out treats **Enter** as a confirmation, so a value can be typed and committed without reaching for the button. |
+| **Quieter logs** | The application and error logs were cleaned up. Schema migrations in `scCalendar`, `scHoliday`, `scMaintenance` and `scSuffix` now check whether a column exists before adding it, rather than attempting the change and letting the SQLite driver report the failure into `Errors.log`. `scUsers.hasPriv()` denies instead of throwing when it is called without a privilege. Several hundred lines of recurring startup noise are gone. |
 
 ---
 
@@ -74,7 +75,7 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 | Area | Change |
 |---|---|
 | **Removed views and scripts** | The unused `CreateEnergyReport.kvie` was deleted and `scMapObjects.js` was removed from the project — a copy is kept in the resource pack should it be needed. |
-| **Demo data** | The demo databases were cleaned and vacuumed, and simulations for signals that no longer exist were removed. |
+| **Calendar feeds** | Events can now be imported into the calendar from a local `.ics` file. |
 
 ---
 
@@ -85,24 +86,20 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 | 1 | Maintenance | A missed recurring deadline was dropped when no user was logged in, because the insert required a current user and threw instead. The creator now falls back to `System`. |
 | 2 | Alarm Sender | The alarm description could be sent as the literal text `Undefined`. A guard now suppresses the field when no description is available. |
 | 3 | Alarm list | `dslAlarms.onDataChanged()` could push the same alarm twice. The list is now scanned before a push, so duplicates are rejected. |
-| 4 | Calendar | A race condition on the time channel meant the holiday flag was sometimes not set. Fixed. |
-| 5 | Calendar | Events did not cover a whole day. A full-day event is now written at index 0 and index 48, so it spans the day. |
-| 6 | Dashboard | Daylight saving transitions misaligned the bar chart. Fixed, together with grid and description rendering. |
-| 7 | Map | `StatusPin` applied its dynamic status without checking the alarm objects, so a pin could show a state its object did not have. It now verifies against both the object list and the alarm objects. |
-| 8 | Map | Lines and pipes were never drawn on a map. The `scMap` update calls were left disabled, and the geometry properties sat on the info popup instead of the line objects. The calls are now active, and the properties live on the `MainLine1`, `MediumLine1` and `SmallLine1` objects. Any values previously entered on the info popup need to be set again on the line objects. |
-| 9 | Map | A pipe spanning a large geographic area computed its pixel offsets from a fixed `Line0` that could fall outside the visible frame, placing the pipe incorrectly. Offsets are now anchored to the corner of the visible frame. |
-| 10 | Object library | The `CustomLabel` property had no effect on the nameplate of some objects. Fixed across the sensor, valve, speed dial and map indicator libraries, including their legacy variants. |
-| 11 | Object library | Dampers reported NO and NC inverted, in both the current and the legacy damper libraries. Fixed. |
-| 12 | Navigation | Menu buttons did not change colour when the theme was toggled, and a sub-navigation item that outlived its view broke the registration loop. A guard and an unregister step were added. |
-| 13 | Navigation | In the full menu, **Back** on a paginated sub-navigation page only undid the last forward step, because paging was driven by a single previous-index value rather than a page history. The `scSubNavPopup` script now records the start index of every page, so **Back** steps back through the whole sequence. |
-| 14 | Alarm schedule | The alarm class picker appended the selected class to `SeverityArray` without checking what was already stored, so the same alarm class could be added to a schedule more than once. The list is now scanned before the value is appended. |
-| 15 | Script libraries | `scAlarmFinder` was registered twice in `ScriptLibraries.kdat`, and error messages in `scAuditTrail` and `scMaintenance` still carried the old `scMaintenanceLog` prefix, pointing at the wrong script when something failed. The duplicate registration was removed and the prefixes corrected. |
-| 16 | Reports | Scheduled reports never fired. The five-minute schedule in `Schedules.kdat` called `scReportSchedules.control_trigger()`, but the script object is named `scReportScheduler`, so the call was silently skipped. Fixed. |
-| 17 | Reports | The unit pickers looked up a logger by name without checking it existed, so a view with no signal list — an alarm report, for instance — threw. Guarded. |
-| 18 | Loggers | `*_Effekt` and `*_RPM` were logged although the signals exist in the Data Store but not in `OpcUaDrivers.kdat`. The log values were removed. |
-| 19 | Alarm overview | The **error** layer could not cover the view because other objects sat above it. The object order was corrected. |
-| 20 | Maintenance | `MaintenanceInfoPanel` was registered under a name that did not match its view file, and a stale `folder` entry was left in `SuffixConfig.db`. Both corrected. |
-| 21 | Translations | The count phrase in **Visa fler (X)** was assembled from separate fragments — `"Visa" + X + "till"` — which does not translate correctly in most languages. It is now one atomic phrase with the count in parentheses. |
+| 4 | Calendar | Events did not cover a whole day. A full-day event is now written at index 0 and index 48, so it spans the day. |
+| 5 | Dashboard | Daylight saving transitions misaligned the bar chart. Fixed, together with grid and description rendering. |
+| 6 | Map | `StatusPin` applied its dynamic status without checking the alarm objects, so a pin could show a state its object did not have. It now verifies against both the object list and the alarm objects. |
+| 7 | Map | Lines and pipes were never drawn on a map. The `scMap` update calls were left disabled, and the geometry properties sat on the info popup instead of the line objects. The calls are now active, and the properties live on the `MainLine1`, `MediumLine1` and `SmallLine1` objects. Any values previously entered on the info popup need to be set again on the line objects. |
+| 8 | Map | A pipe spanning a large geographic area computed its pixel offsets from a fixed `Line0` that could fall outside the visible frame, placing the pipe incorrectly. Offsets are now anchored to the corner of the visible frame. |
+| 9 | Object library | The `CustomLabel` property had no effect on the nameplate of some objects. Fixed across the sensor, valve, speed dial and map indicator libraries, including their legacy variants. |
+| 10 | Object library | Dampers reported NO and NC inverted, in both the current and the legacy damper libraries. Fixed. |
+| 11 | Navigation | Menu buttons did not change colour when the theme was toggled, and a sub-navigation item that outlived its view broke the registration loop. A guard and an unregister step were added. |
+| 12 | Navigation | In the full menu, **Back** on a paginated sub-navigation page only undid the last forward step, because paging was driven by a single previous-index value rather than a page history. The `scSubNavPopup` script now records the start index of every page, so **Back** steps back through the whole sequence. |
+| 13 | Script libraries | `scAlarmFinder` was registered twice in `ScriptLibraries.kdat`, and error messages in `scAuditTrail` and `scMaintenance` still carried the old `scMaintenanceLog` prefix, pointing at the wrong script when something failed. The duplicate registration was removed and the prefixes corrected. |
+| 14 | Alarm overview | The **error** layer could not cover the view because other objects sat above it. The object order was corrected. |
+| 15 | Maintenance | `MaintenanceInfoPanel` was registered under a name that did not match its view file, and a stale `folder` entry was left in `SuffixConfig.db`. Both corrected. |
+| 16 | Suffix settings | **Suffixalias - Popuper** keys its categories by their Swedish names while the tree shows them translated, so in any other language the settings fields resolved to nothing. The controls displayed but silently refused input, and selecting an item no longer filled in the combo boxes and text fields. The displayed label is now resolved back to its canonical key before use. Adding a category also rejects a name matching an existing category's translated label, which would otherwise create two entries that cannot be told apart. |
+| 17 | Suffix settings | Creating a category reported an error and left the new category unselected, because the tree was searched using the raw typed name and a criterion the translated model can never match. The lookup now uses the label the node actually renders under, and skips the selection rather than throwing if the node cannot be found. |
 
 ---
 
@@ -124,7 +121,7 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 
 | File | Change |
 |---|---|
-| `scHoliday.js` | ICS subscriptions, HTTPS fetch through the REST plugin, shared parser for URL, file and Swedish-holiday imports, time channel holiday classification |
+| `scHoliday.js` | Calendar import and export, shared ICS parser, holiday and holiday eve classification published to `isHoliday` and `isHolidayEve` |
 | `scAlarmSender.js` | Criteria filtering, acknowledging user reporting, alarm state resolved from the alarm log, description guard, criteria untranslation |
 | `scLogBook.js` | `archived` column, `deleteMark` retirement and cleanup, permanent delete of archived entries |
 | `scRemoteClients.js` | New script — connected client count and RPC-served client list |
@@ -135,8 +132,7 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 | `scAlarm.js` | Duplicate push guard in `dslAlarms.onDataChanged()` |
 | `Privileges.kdat` | New `Logbook_Archive` privilege |
 | `DataStore.kdat` | Alarm details copied into `description` |
-| `ScriptPlugins.kdat` | REST CAPI plugin registered |
-| `ImportCalendar.kvie`, `ExportCalendar.kvie`, `EditCalendars.kvie`, `CalendarFilter.kvie` | Calendar subscription and holiday import views |
+| `ImportCalendar.kvie`, `ExportCalendar.kvie`, `EditCalendars.kvie`, `CalendarFilter.kvie` | Calendar import, export, edit and filter views |
 | `UnboundDebug.kvie` | New view listing suffixes not connected to a popup or view |
 | `RemoteClients.kvie` | New pop-out listing connected remote clients |
 | `Logbook.kvie`, `LogBookFilter.kvie`, `LogbookViewControllerPopup.kvie` | Archive column, **Visa arkiverade** toggle, translated labels |
@@ -154,7 +150,6 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 | `Schedules.kdat` | Report schedule trigger corrected to `scReportScheduler` |
 | `scCalendar.js` | Month view overflow badge opens the Day view for that date |
 | `scWeekViewManager.js`, `scDayViewManager.js`, `Calendar.klib` | Week and day event collapse with **Visa händelser (X)** |
-| `rest_plugin_crossplatform.c` | Protocol allowlist, HTTPS-only redirects, response size cap, connect timeout |
 | `Loggers.kdat` | `*_Effekt` and `*_RPM` log values removed |
 | `Larm - Översikt.kvie` | Object order so the error layer covers the view |
 | `Translations.klib` | String additions, dead string removal, Swedish baseline verification |

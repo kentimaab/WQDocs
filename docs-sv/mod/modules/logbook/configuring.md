@@ -3,7 +3,7 @@ title: Loggbok — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-09-15
 tags:
  - MOD
 ---
@@ -11,23 +11,75 @@ tags:
 
 # Loggbok — Konfigurering
 
-## Ämnen { #topics }
+## Vad en post placeras på { #what-an-entry-is-filed-against }
 
-Ett ämne är en sträng som identifierar var i systemet en post hör hemma. Ämnen är hierarkiska: nivåerna separeras med `/`. En post med ämnet `Building/Floor2/AHU01` visas när man väljer `Building`, `Building/Floor2` eller `Building/Floor2/AHU01` i ämnesträdet.
+Varje post kopplas till en av tre saker. Kopplingen avgör var posten hamnar i ämnesträdet, och den bestäms av var posten skapades i stället för av en inskriven sökväg.
 
-Ämnen behöver inte registreras i förväg. De skapas automatiskt första gången en post sparas under den ämnessträngen.
+| Koppling | Skapas från | Exempel |
+|---|---|---|
+| En arbetsvy | Loggboksknappen i **SpeedDial** i en processvy, eller en vynod i trädet | `System/Värme/VS11` |
+| Ett objekt | Fliken **Loggbok** i ett objektpopup, eller en objektnod i trädet | `MB.AS01.VS11_SV21` |
+| Ett eget ämne | En sökväg som inte matchar något av ovanstående | `Optimering/2026-03/Nattdrift` |
 
-**Konvention:** Följ samma struktur som taggsystemet: `Connection/Device/System/Object`. Det gör det enkelt att hitta poster som hör till en specifik utrustning.
+Den tredje varianten täcker anteckningar som inte hör till en enskild utrustning. En driftsättningstråd, en säsongsdiskussion om optimering eller en projektlogg placeras under en egen sökväg och visas i trädet precis som den är skriven, i båda trädlägena.
+
+En post som är kopplad till en vy eller ett objekt kan ändå ha en egen sökväg under sig. En anteckning placerad på `MB.AS02.LB02_GT44` med underämnet `Trend` är kopplad till givaren och grupperas under en **Trend**-nod under den, så att flera anteckningar om samma objekt kan hållas isär.
+
+!!! info "Ämnen registreras inte i förväg"
+    Ett ämne finns för att en post använder det. Det finns ingen ämneslista att underhålla, och när den sista posten under en nod försvinner försvinner noden.
+
+## Hur de två träden byggs { #how-the-two-trees-are-built }
+
+Samma poster ordnas på två sätt, och reglaget ovanför trädet växlar mellan dem. Inget av lägena filtrerar bort något.
+
+### Arbetsvyläge { #workview-mode }
+
+Trädet följer processvyernas mappstruktur och läses därför som navigeringsmenyn.
 
 ```text
-MB/AS01/VS10/GT11
-MB/AS01/VS10/PT01
-MB/AS02
+System
+  Värme
+    VS11
+      SV21
+  Luftbehandling
+    LB01
 ```
 
-När loggboken öppnas från ett objektpopup sätts ämnet automatiskt utifrån objektets taggsökväg. När den öppnas från en vyknapp kan ämnet sättas från vyns namn eller skickas in explicit. Se [Utöka](extending.md) för hur man gör detta i ett skript.
+En anteckning placerad på en vy ligger på vyns nod. En anteckning placerad på ett objekt ligger under varje vy där objektet är ritat, som ett löv med objektets namn.
 
-![Ämnesträd som visar en nästlad hierarki](/docs/sv/Images/Logbook/topic-tree.png){align=center}
+### Signalläge { #signal-mode }
+
+Trädet följer taggsökvägen och läses därför som Datalagret.
+
+```text
+MB
+  AS01
+    VS11
+      SV21
+  AS02
+    LB01
+```
+
+En anteckning placerad på ett objekt ligger på sin tagg. En anteckning placerad på en vy ligger under de taggar som är ritade i vyn, eftersom en vy i den här ordningen bara är meningsfull genom den utrustning den visar.
+
+### Därför syns en anteckning på mer än ett ställe { #why-a-note-appears-in-more-than-one-place }
+
+De två ordningarna är länkade genom objektindexet, som registrerar vilka objekt som är ritade i vilka vyer. Länken följs åt båda hållen:
+
+* En anteckning på ett objekt visas under **varje** vy där objektet är ritat. En pump som visas både i en översikt och i en detaljvy har med sina anteckningar i båda.
+* En anteckning på en vy visas under de objekt som är ritade i vyn.
+* En anteckning på en utrustning, i stället för på en enskild tagg, visas överallt där något som tillhör utrustningen är ritat.
+
+Detta är avsiktligt. En anteckning om en pump är relevant i varje vy där en operatör kan möta pumpen, och en anteckning om en vy är relevant för den utrustning vyn täcker.
+
+!!! warning "En anteckning på ett skåp eller en enhet når långt"
+    Samma regel gäller på varje nivå i taggsökvägen. En anteckning placerad på en enhet som `MB.AS01` hör till varje vy som visar något från den enheten, vilket kan vara större delen av anläggningen. En anteckning om ett fysiskt skåp hamnar rätt om den placeras på den **vy** som representerar skåpet. Placeras den på enhetens tagg sprids den över varje vy som matas av skåpet.
+
+### Objekt med samma namn { #objects-that-share-a-name }
+
+Två objekt som är ritade i samma vy kan ha samma namn, till exempel ett `GT11` som tillhör `VS10` och ett annat som tillhör `VS11`. I arbetsvyläge skulle båda annars göra anspråk på samma löv.
+
+När det inträffar utökas lövets namn med så mycket av taggen som behövs för att skilja dem åt, vilket ger `VS10_GT11` och `VS11_GT11`. Objekt vars namn redan är unika i sin vy behåller sitt enkla namn.
 
 ## Kontexter { #contexts }
 
@@ -43,19 +95,23 @@ Vid filtrering i loggboken visas, när en kontext väljs, enbart poster tilldela
 
 ### Globalt { #global }
 
-Den fullständiga loggboken under **Dokument & Loggbok → Loggbok** visar alla poster från alla ämnen. Ämnesträdet till vänster kan användas för att begränsa visningen till ett specifikt område i systemet. Detta är den primära vyn för operatörer som behöver granska eller lägga till anteckningar för hela projektet.
+Den fullständiga loggboken under **Dokument & Loggbok → Loggbok** visar alla poster. Ämnesträdet till vänster begränsar visningen till ett specifikt område i systemet, i den ordning som är vald. Detta är den primära vyn för operatörer som behöver granska eller lägga till anteckningar för hela projektet.
 
 ### Objektpopup { #object-popup }
 
-Varje objekt i projektet har en flik [**Loggbok**](../../reference/Popup/Logbook.md) i sitt popup-fönster. Öppnas den fliken visas enbart poster vars ämne matchar objektets taggsökväg. Nya poster som skapas härifrån tilldelas automatiskt rätt ämne.
+Varje objekt i projektet har en flik [**Loggbok**](../../reference/Popup/Logbook.md) i sitt popup-fönster. När fliken öppnas markeras objektet i trädet och dess poster listas. Nya poster som skapas härifrån placeras automatiskt på objektet.
+
+Resten av trädet är fortfarande nåbart, så en anteckning på ett angränsande objekt eller på den omgivande vyn kan läsas utan att popup-fönstret lämnas. Poster kan läggas till och redigeras härifrån. Arkivering erbjuds endast i den globala loggboken, eftersom det är där arkiverade poster kan visas igen och återställas. Arkiverade poster listas aldrig i ett objektpopup.
 
 ![Loggboksfliken i objektets popup-fönster](/docs/sv/Images/Logbook/object-popup-logbook.png){align=center}
 
 ### Vybegränsad { #view-scoped }
 
-Menyn **SpeedDial** i processvyer innehåller en knapp som öppnar en loggbok begränsad till den aktuella vyn. Endast poster som matchar vyns ämne visas, och nya poster som skapas härifrån tilldelas automatiskt rätt ämne. Se [Utöka](extending.md) för installationsdetaljer.
+Menyn **SpeedDial** i processvyer innehåller en knapp som öppnar loggboken med den aktuella vyn markerad i trädet. Vyns poster listas direkt, tillsammans med posterna för de objekt som är ritade i den. Nya poster som skapas härifrån placeras på vyn.
+
+Precis som i objektpopupen är resten av trädet nåbart från en vybegränsad loggbok, så en anteckning som är placerad någon annanstans kan läsas utan att gå tillbaka till huvudvyn.
 
 ## Nästa steg { #next-steps }
 
-* [Utöka](extending.md) — lägga till en loggbok i en anpassad vy eller knapp
+* [Utöka](extending.md) — behörigheter, lagring av ämnet och arkivering
 <!-- --8<-- [end:body] -->

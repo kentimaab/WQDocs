@@ -3,7 +3,7 @@ title: Kalender — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-09-15
 tags:
  - MOD
 ---
@@ -75,11 +75,17 @@ Fyll i fälten:
 
 * **Titel** — en kort etikett som visas på händelsen.
 * **Start** och **Slut** — datum och tid för händelsen. Kan justeras efter att popup-rutan öppnats.
-* **Färg** — anger visningsfärgen för händelsen i kalendern.
+* **Färg** — anger visningsfärgen för händelsen i kalendern. **HOLIDAY** och **HOLIDAYEVE** markerar dessutom dagen, se nedan.
 * **Kategori** — grupperar händelsen under en namngiven kategori.
 * **Beskrivning** — valfria ytterligare detaljer.
 
 Klicka på **Spara** för att lägga till händelsen i kalendern.
+
+### Markera en helgdag { #marking-a-holiday }
+
+Att välja färgen **HOLIDAY** eller **HOLIDAYEVE** gör mer än att ändra händelsens utseende. Det markerar de dagar händelsen täcker som helgdag eller helgdagsafton, vilket kalendern publicerar till en intern variabel som ett PLC eller DUC kan läsa. En händelse som skapas med någon av färgerna justeras automatiskt till hela dygn, eftersom en dag antingen är en helgdag eller inte.
+
+Se [Helgdagar och helgdagsaftnar](configuring.md#holidays-and-holiday-eves).
 
 ## Nästa steg { #next-steps }
 

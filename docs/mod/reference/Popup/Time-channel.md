@@ -4,7 +4,7 @@ description: Overview of the Time Channel popup in WideQuick.
 product: mod
 page_type: reference
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-09-15
 tags: 
  - MOD
 ---
@@ -82,17 +82,19 @@ Each special day supports the same two-period schedule as weekdays.
 ### Holiday classification { #holiday-classification }
 
 The **Holiday** and **Holiday Eve** schedules only take effect if something tells the
-time channel which days are holidays. The Calendar module supplies this. The `scHoliday`
-script classifies each day from an imported public-holiday calendar and hands the result
-to the time channels that have subscribed, through the `Tidkanal` suffix category.
+PLC which days are holidays. The Calendar module supplies this. A day is marked by
+creating a calendar event on it with the **HOLIDAY** or **HOLIDAYEVE** colour, and the
+`scHoliday` script publishes the resulting daily classification to two internal
+variables, `isHoliday` and `isHolidayEve`.
 
 WideQuick only reports which day type applies today. The PLC's own time channel firmware
 still owns the schedule evaluation itself.
 
-To enable it, import a public-holiday calendar from the calendar's **ImportCalendar**
-pop-out. Only a calendar marked as an authoritative holiday source takes part, which is
-what the public-holiday import creates. See
-[Calendar — Extending](../../modules/calendar/extending.md#holiday-aware-time-channels).
+To enable it, connect `isHoliday` and `isHolidayEve` to the PLC the same way as any
+other value, and mark the days in the calendar. The classification is a property of the
+day, so one pair of variables serves every time channel rather than each one carrying
+its own copy. See
+[Calendar — Configuring](../../modules/calendar/configuring.md#holidays-and-holiday-eves).
 
 ## Hand ctrl
 

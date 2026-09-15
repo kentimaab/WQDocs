@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M13
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-09-15
 scripts:
   - scCalendar
   - scDayViewManager
@@ -92,11 +92,17 @@ Fill in the fields:
 
 * **Title** — a short label shown on the event.
 * **Start** and **End** — the date and time of the event. Can be adjusted after opening the popup.
-* **Color** — sets the display color of the event in the calendar.
+* **Color** — sets the display color of the event in the calendar. **HOLIDAY** and **HOLIDAYEVE** also mark the day, see below.
 * **Category** — groups the event under a named category.
 * **Description** — optional additional details.
 
 Click **Save** to add the event to the calendar.
+
+### Marking a holiday { #marking-a-holiday }
+
+Choosing the colour **HOLIDAY** or **HOLIDAYEVE** does more than change how the event looks. It marks the days the event covers as a holiday or a holiday eve, which the calendar publishes to an internal variable that a PLC or DUC can read. An event created with either colour is snapped to whole days automatically, since a day is either a holiday or it is not.
+
+See [Holidays and Holiday Eves](configuring.md#holidays-and-holiday-eves).
 
 ## Next Steps { #next-steps }
 

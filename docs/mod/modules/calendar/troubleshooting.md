@@ -5,7 +5,7 @@ product: mod
 page_type: troubleshooting
 doc_id: DOC-M13
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-09-15
 tags: 
  - MOD
 ---
@@ -21,15 +21,17 @@ tags:
 | Maintenance events do not appear | Check that the `scMaintenance` script is running. The calendar reads maintenance deadlines by calling `scMaintenance` functions at load time. If `scMaintenance` is not available, maintenance events are skipped. |
 | Events from a previous period still show after navigating | The calendar clears and re-renders all events when navigating to a new period. If stale events appear, reload the view. If the issue persists, check whether multiple `CalendarManager` instances have been created for the same view, as this can cause duplicate rendering. |
 | The calendar is blank after opening | The `CalendarManager` initializes on view load. If the view loads before the maintenance database connection is ready, the event loading step may fail silently. Check the `scAlert` log for errors from `CalendarService` or `CalendarManager`. |
-| An imported calendar shows no events | Check that the subscription is enabled in **CalendarFilter**. A subscription that is not visible is still synced but is not drawn. Then confirm the source itself still returns events, and check the `scAlert` log for `scHoliday` errors. |
-| A subscription cannot be added | Adding is rejected when the name or the address already belongs to another subscription. The comparison ignores surrounding whitespace and a trailing slash, so a feed added twice with and without a trailing slash counts as a duplicate. |
-| A feed URL is rejected | The REST plugin accepts HTTP and HTTPS only. A `file://` address is rejected by design. Import a local file with the **Local file** option, which creates a `file` subscription instead. |
-| A feed stops updating after moving host | Redirects are followed only to HTTPS and only up to five hops. A feed that redirects to plain HTTP, or through a longer chain, is not followed. Update the subscription to the final address in **EditCalendars**. |
-| An edited local `.ics` file does not show its changes | Only `url` and `nager` subscriptions are re-fetched by the hourly poll. A `file` subscription is read at import and never re-checked. Import the file again to pick up the new content. |
-| A large feed never imports | A response body above 16 MB is rejected, both from `Content-Length` and while streaming. Narrow the feed's date range at the source, or export it to a file and import that instead. |
-| Holidays are missing for next year | The holiday import fetches the current year and the next two. A year that the source has not published yet is skipped without failing the sync. Re-sync once the source publishes it. |
-| Holidays import for the wrong country | The country list is derived from the locales in `Languages.kdat`. Confirm the language entry's `LocaleUnix` value ends in the intended country code. |
-| The time channel holiday flag is not set | Only a subscription marked as an authoritative holiday source feeds the classification. Confirm the calendar carries the **HOLIDAY** colour, and see [Holiday-aware Time Channels](extending.md#holiday-aware-time-channels). |
+| There is no option to subscribe to an ICS link | Live feeds require the REST plugin, which is not part of this build. Import a local `.ics` file instead, and mark holidays in the calendar itself. |
+| There is no option to import public holidays | Public holiday import required the same plugin. Mark holidays by creating events with the **HOLIDAY** colour. See [Holidays and Holiday Eves](configuring.md#holidays-and-holiday-eves). |
+| An imported calendar shows no events | Check that the import is enabled in **Calendar filter**. An import that is not visible is still stored but is not drawn. Then check the `scAlert` log for `scHoliday` errors. |
+| An edited local `.ics` file does not show its changes | A file is read at import and is not re-checked afterwards. Import the file again to pick up the new content. |
+| An import cannot be added | Adding is rejected when the name or the path already belongs to another import. The comparison ignores surrounding whitespace and a trailing slash. |
+| A subscription is skipped during sync with a note in the log | The database holds a `url` or `nager` row from a build that included the REST plugin. Those types cannot be fetched in this build. Remove the subscription in **Edit calendars** if its events are no longer wanted. |
+| `isHoliday` is not set on a day marked as a holiday | Confirm the event carries the **HOLIDAY** colour rather than another colour, since the colour is what marks the day. Then check that the day falls inside the event's span. |
+| `isHoliday` changes an hour or so into the day | Expected. Both holiday variables are refreshed by the hourly poll, which counts from application start rather than from midnight. See [Holiday Variables](extending.md#holiday-variables). |
+| A holiday eve does not set `isHoliday` | The two are separate by design, because a holiday eve is usually a shortened working day rather than a closed one. Read `isHolidayEve` for it, or read both where the same behaviour is wanted. |
+| A multi-day holiday only marks its first day | The classification uses an overlap test, so every covered day is marked. If only the first day is marked, check that the event's end date is set as intended. A holiday event is snapped to whole days when saved. |
+| A holiday does not reach the PLC | The variables carry the classification but do not send it. Connect `isHoliday` and `isHolidayEve` to outputs the same way as any other value. |
 
 ## Known Bugs { #known-bugs }
 
