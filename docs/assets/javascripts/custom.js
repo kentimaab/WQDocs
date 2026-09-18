@@ -13,7 +13,8 @@ onPageReady(function () {
     const feedback = document.getElementById('feedback');
     if (!tagInput || !feedback) return;
 
-    const tagPattern = /^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9]+_[A-Za-z0-9]+$/;
+    // System, then '_' + ObjectName (>=1 char, may contain '_') + '_' + Suffix (may be empty, may contain '_')
+    const tagPattern = /^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9_]+_[A-Za-z0-9_]*$/;
 
     tagInput.addEventListener('input', function () {
         const input = this.value;
@@ -36,8 +37,8 @@ onPageReady(function () {
     const filterButton = document.getElementById('filterButton');
     if (!tagTextarea || !tagResults || !filterButton) return;
 
-    // Updated regex pattern with exactly two underscores and alphanumerics after the last underscore
-    const tagPattern = /^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9]+_[A-Za-z0-9]+$/;
+    // System, then '_' + ObjectName (>=1 char, may contain '_') + '_' + Suffix (may be empty, may contain '_')
+    const tagPattern = /^[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z_][A-Za-z0-9_]*\.[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9_]+_[A-Za-z0-9_]*$/;
 
     let showOnlyInvalid = false;
 
@@ -118,8 +119,8 @@ onPageReady(function () {
     const filterButton = document.getElementById('filterButton-modbus');
     if (!tagTextarea || !tagResults || !filterButton) return;
 
-    // Updated regex pattern with exactly two underscores and alphanumerics after the last underscore
-    const tagPattern = /^[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9]+_[A-Za-z0-9]+$/;
+    // System, then '_' + ObjectName (>=1 char, may contain '_') + '_' + Suffix (may be empty, may contain '_')
+    const tagPattern = /^[A-Za-z][A-Za-z0-9]*_[A-Za-z0-9_]+_[A-Za-z0-9_]*$/;
 
     function validateTags() {
         const rows = tagTextarea.value.split('\n');
