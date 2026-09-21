@@ -20,11 +20,11 @@ All widgets share a `Header` parameter, a string, that sets the title displayed 
 Parameters that accept multiple signals or groups accept either a single string or an array of strings.
 
 ```javascript title="Single signal"
-"MB.AS01.VS10_VMM1_E"
+"MB.AS01.MySystem_Meter1_E"
 ```
 
 ```javascript title="Multiple signals"
-["MB.AS01.VS10_VMM1_E", "MB.AS01.VS10_VMM1_P"]
+["MB.AS01.MySystem_Meter1_E", "MB.AS01.MySystem_Meter1_P"]
 ```
 
 Some widgets include an expand button in the top-right corner. Clicking it opens a fullscreen version of the widget for a more detailed view.

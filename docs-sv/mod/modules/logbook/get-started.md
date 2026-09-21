@@ -47,8 +47,8 @@ Välj en post och klicka på **Redigera anteckning** för att öppna den för re
 
 Reglaget **Navigera efter arbetsvyer** ovanför trädet växlar mellan de två sätten att ordna samma poster.
 
-* **På, arbetsvyläge** — trädet följer processvyernas mappstruktur, till exempel **System → Värme → VS11**. Detta läge används när anteckningar söks utifrån en anläggningsdel så som den är ritad i vyerna.
-* **Av, signalläge** — trädet följer taggsökvägen, till exempel **MB → AS01 → VS11**. Detta läge används när anteckningar söks utifrån en specifik tagg, oavsett i vilka vyer den förekommer.
+* **På, arbetsvyläge** — trädet följer processvyernas mappstruktur, till exempel **System → MySystem → Station1**. Detta läge används när anteckningar söks utifrån en anläggningsdel så som den är ritad i vyerna.
+* **Av, signalläge** — trädet följer taggsökvägen, till exempel **MB → AS01 → Station1**. Detta läge används när anteckningar söks utifrån en specifik tagg, oavsett i vilka vyer den förekommer.
 
 Inget döljs av valet. De två lägena är två sätt att ordna samma mängd, så en anteckning som går att nå i det ena går att nå i det andra, oftast under en annan nod. En post som är placerad på ett eget ämne behåller sin egen sökväg i båda lägena.
 

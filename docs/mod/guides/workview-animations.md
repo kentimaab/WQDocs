@@ -295,10 +295,10 @@ correct tag. In the **Properties** tab, enter the following:
 
 * **Connection** — the connection name, for example `MB`
 * **Device** — the device name, for example `AS01`
-* **Sys** — the system name, for example `VS10`
+* **Sys** — the system name, for example `Station1`
 * **ObjectName** — the object name, for example `PV01`
 
-These four properties combine to form the tag name `MB.AS01_VS10_PV01`, which the `AnimationHandler()` function in the `scWorkviewAnimation` script uses
+These four properties combine to form the tag name `MB.AS01_Station1_PV01`, which the `AnimationHandler()` function in the `scWorkviewAnimation` script uses
 to find all signals matching the configured suffixes.
 
 Once the properties are filled in, select the circle, triangle, and `DynTouch`

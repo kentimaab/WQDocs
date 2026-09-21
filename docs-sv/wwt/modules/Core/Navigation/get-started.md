@@ -22,7 +22,7 @@ tags:
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
-![Depth](/docs/sv/Images/Navigation/Navigation_single.png)
+![Depth](/docs/sv/Images/Navigation/Navigation_single-wwt.png)
 
 ![Depth Navigation](/docs/sv/Images/Navigation/Navigation_depth_menu-wwt.png)
 

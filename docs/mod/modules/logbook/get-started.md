@@ -50,8 +50,8 @@ Select an entry and click **Edit note** to open it for editing, or **Archive not
 
 The toggle labelled **Navigate by workviews** above the tree switches between the two ways of arranging the same entries.
 
-* **On, workview mode** — the tree follows the folder structure of the process views, for example **System → Heating → VS11**. This is the arrangement to use when looking for notes about a part of the plant as it is drawn in the views.
-* **Off, signal mode** — the tree follows the tag path, for example **MB → AS01 → VS11**. This is the arrangement to use when looking for notes about a specific tag, regardless of which views it appears in.
+* **On, workview mode** — the tree follows the folder structure of the process views, for example **System → MySystem → Station1**. This is the arrangement to use when looking for notes about a part of the plant as it is drawn in the views.
+* **Off, signal mode** — the tree follows the tag path, for example **MB → AS01 → Station1**. This is the arrangement to use when looking for notes about a specific tag, regardless of which views it appears in.
 
 No entry is hidden by the choice. The two modes are two arrangements of the same set, so a note reachable in one is reachable in the other, usually under a different node. An entry filed on a topic of the operator's own choosing keeps its own path in both modes.
 

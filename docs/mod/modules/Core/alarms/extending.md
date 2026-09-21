@@ -62,7 +62,7 @@ The default email format looks like this:
 | Subject: My Subject
 ---------------------------------------------------------------------------
 | ------------------------------------------------------------------------
-| | Name: AS01.VS10_PV01_IO
+| | Name: AS01.Station1_PV01_IO
 | |
 | | Timestamp: 2026-05-29 12:00:00
 | |
@@ -102,7 +102,7 @@ Plain text can also be added freely anywhere in the message. For example, to add
 footer, add the following line before the closing separator:
 
 ```javascript title="writeMail() function in scAlarmSender script"
-msg += "| Sent from WideQuick BMS\n"
+msg += "| Sent from WideQuick\n"
 ```
 
 ---
@@ -150,7 +150,7 @@ The default SMS format looks like this:
 ```
 Schedule: My Schedule
 Subject: My Subject
-Name: AS01.VS10_PV01_IO
+Name: AS01.Station1_PV01_IO
 Timestamp: 2026-05-29 12:00:00
 Alarm class: 1
 Description: My alarm description

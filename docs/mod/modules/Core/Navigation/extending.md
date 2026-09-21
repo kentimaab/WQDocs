@@ -35,7 +35,7 @@ scLinking.goTo("YOUR_OBJECT.NAME");
 ```
 
 In the example below, the `goTo()` function is applied to a button's **onClick** action
-with the target object `MB.AS01.LB02_GT43`:
+with the target object `MB.AS01.Station2_GT43`:
 <!-- --8<-- [end:body-1] -->
 
 ![goTo](/docs/Images/Navigation/goTO.gif)

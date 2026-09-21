@@ -293,10 +293,10 @@ rätt tagg. Under fliken **Egenskaper**, ange följande:
 
 * **Connection** — anslutningsnamnet, till exempel `MB`
 * **Device** — enhetsnamnet, till exempel `AS01`
-* **Sys** — systemnamnet, till exempel `VS10`
+* **Sys** — systemnamnet, till exempel `Station1`
 * **ObjectName** — objektnamnet, till exempel `PV01`
 
-Dessa fyra egenskaper kombineras till taggnamnet `MB.AS01_VS10_PV01`, som `AnimationHandler()`-funktionen i `scWorkviewAnimation`-skriptet använder
+Dessa fyra egenskaper kombineras till taggnamnet `MB.AS01_Station1_PV01`, som `AnimationHandler()`-funktionen i `scWorkviewAnimation`-skriptet använder
 för att hitta alla signaler som matchar de konfigurerade suffixen.
 
 När egenskaperna är ifyllda, markera cirkeln, triangeln och `DynTouch`-objektet

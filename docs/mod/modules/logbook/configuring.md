@@ -19,13 +19,13 @@ Every entry is anchored to one of three things. The anchor is what decides where
 
 | Anchor | Created from | Example |
 |---|---|---|
-| A workview | The **SpeedDial** logbook button on a process view, or a view node in the tree | `System/Heating/VS11` |
-| An object | The **Logbook** tab of an object popup, or an object node in the tree | `MB.AS01.VS11_SV21` |
+| A workview | The **SpeedDial** logbook button on a process view, or a view node in the tree | `System/MySystem/Station1/Pump1` |
+| An object | The **Logbook** tab of an object popup, or an object node in the tree | `Connection.Device.System_ObjectName` |
 | A topic of its own | Typing a path that matches neither | `Optimisation/2026-03/Night operation` |
 
 The third kind covers notes that belong to no single piece of equipment. A commissioning thread, a seasonal optimisation discussion or a project log is filed under a path of the operator's own choosing and appears in the tree exactly as written, in both tree modes.
 
-An entry anchored to a view or an object can still carry a path of its own below it. A note filed on `MB.AS02.LB02_GT44` with the sub-path `Trend` is anchored to the sensor and grouped under a **Trend** node beneath it, so several notes about the same object can be kept apart.
+An entry anchored to a view or an object can still carry a path of its own below it. A note filed on `Connection.Device.System_ObjectName` with the sub-path `Trend` is anchored to the sensor and grouped under a **Trend** node beneath it, so several notes about the same object can be kept apart.
 
 !!! info "Topics are not registered in advance"
     A topic exists because an entry uses it. There is no list of topics to maintain, and removing the last entry under a node removes the node.
@@ -40,11 +40,9 @@ The tree follows the folder structure of the process views, so it reads like the
 
 ```text
 System
-  Heating
-    VS11
-      SV21
-  Air handling
-    LB01
+  MySystem
+    Station1
+      Pump1
 ```
 
 A note filed on a view sits on that view's node. A note filed on an object sits under every view the object is drawn in, as a leaf named after the object.
@@ -54,12 +52,10 @@ A note filed on a view sits on that view's node. A note filed on an object sits 
 The tree follows the tag path, so it reads like the Data Store.
 
 ```text
-MB
-  AS01
-    VS11
-      SV21
-  AS02
-    LB01
+Connection
+  Device
+    System
+      ObjectName
 ```
 
 A note filed on an object sits on its tag. A note filed on a view sits under the tags drawn in that view, because a view is only meaningful in this arrangement through the equipment it shows.
@@ -75,13 +71,13 @@ The two arrangements are linked through the object index, which records which ob
 This is deliberate. A note about a pump is relevant in every view an operator might meet that pump in, and a note about a view is relevant to the equipment it covers.
 
 !!! warning "A note on a cabinet or a device reaches a long way"
-    The same rule applies at every level of the tag path. A note filed on a device such as `MB.AS01` belongs to every view that shows anything from that device, which can be most of the plant. Filing a note about a physical cabinet on the **view** that represents it keeps it where it belongs. Filing it on the device tag spreads it across every view fed by that cabinet.
+    The same rule applies at every level of the tag path. A note filed on a device such as `Connection.Device` belongs to every view that shows anything from that device, which can be most of the plant. Filing a note about a physical cabinet on the **view** that represents it keeps it where it belongs. Filing it on the device tag spreads it across every view fed by that cabinet.
 
 ### Objects that share a name { #objects-that-share-a-name }
 
-Two objects drawn in the same view can carry the same name, for example a `GT11` belonging to `VS10` and another belonging to `VS11`. In workview mode both would otherwise claim the same leaf.
+Two objects drawn in the same view can carry the same name, for example a `Pump1` belonging to `System1` and another belonging to `System2`. In workview mode both would otherwise claim the same leaf.
 
-When that happens, the leaf label is extended with as much of the tag as is needed to tell them apart, giving `VS10_GT11` and `VS11_GT11`. Objects whose names are already unique in their view keep their plain name.
+When that happens, the leaf label is extended with as much of the tag as is needed to tell them apart, giving `System1_Pump1` and `System2_Pump1`. Objects whose names are already unique in their view keep their plain name.
 
 ## Contexts { #contexts }
 

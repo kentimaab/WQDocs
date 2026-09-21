@@ -43,7 +43,7 @@ En posts placering hålls i tre kolumner i tabellen `logbook`. `topic_kind` och 
 !!! warning "Endast `topic` ska redigeras direkt"
     `topic_kind` och `topic_ref` är härledda värden. `reconcileTopicRefs()` härleder båda från `topic` vid varje start, så en ändring som skrivs till enbart den ena skrivs över vid nästa omstart. För att flytta en post ändras dess `topic`.
 
-Härledningen tar den längsta del av sökvägen som motsvarar en känd vy eller tagg, och behåller resten som postens egen undersökväg. `MB/AS02/LB02/GT44/Trend` kopplas därför till givaren `MB.AS02.LB02_GT44` och behåller `Trend` som en nod under den.
+Härledningen tar den längsta del av sökvägen som motsvarar en känd vy eller tagg, och behåller resten som postens egen undersökväg. `MB/AS02/Station2/GT44/Trend` kopplas därför till givaren `MB.AS02.Station2_GT44` och behåller `Trend` som en nod under den.
 
 ### Självläkning vid start { #self-healing-on-start }
 

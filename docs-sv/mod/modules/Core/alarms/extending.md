@@ -60,7 +60,7 @@ Standardformatet för e-post ser ut så här:
 | Subject: My Subject
 ---------------------------------------------------------------------------
 | ------------------------------------------------------------------------
-| | Name: AS01.VS10_PV01_IO
+| | Name: AS01.Station1_PV01_IO
 | |
 | | Timestamp: 2026-05-29 12:00:00
 | |
@@ -100,7 +100,7 @@ Ren text kan också läggas till fritt var som helst i meddelandet. För att til
 en sidfot, lägg till följande rad före den avslutande avgränsaren:
 
 ```javascript title="writeMail() function in scAlarmSender script"
-msg += "| Sent from WideQuick BMS\n"
+msg += "| Sent from WideQuick\n"
 ```
 
 ---
@@ -148,7 +148,7 @@ Standardformatet för SMS ser ut så här:
 ```
 Schedule: My Schedule
 Subject: My Subject
-Name: AS01.VS10_PV01_IO
+Name: AS01.Station1_PV01_IO
 Timestamp: 2026-05-29 12:00:00
 Alarm class: 1
 Description: My alarm description

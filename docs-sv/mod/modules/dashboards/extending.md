@@ -61,7 +61,7 @@ if (_sys_user_name == "Admin"){
     app.MultiViewer.setView("Main_Menu/Dashboards & Kartor/Dashboard/Dashboard Larm.kvie");
 }
 if (System.currentUser().hasPrivilege("Config")){
-    app.MultiViewer.setView("Main_Menu/Dashboards & Kartor/Dashboard/Dashboard Ventilation.kvie");
+    app.MultiViewer.setView("Main_Menu/Dashboards & Kartor/Dashboard/Dashboard.kvie");
 }
 ```
 

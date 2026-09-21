@@ -17,13 +17,13 @@ Varje post kopplas till en av tre saker. Kopplingen avgör var posten hamnar i �
 
 | Koppling | Skapas från | Exempel |
 |---|---|---|
-| En arbetsvy | Loggboksknappen i **SpeedDial** i en processvy, eller en vynod i trädet | `System/Värme/VS11` |
-| Ett objekt | Fliken **Loggbok** i ett objektpopup, eller en objektnod i trädet | `MB.AS01.VS11_SV21` |
+| En arbetsvy | Loggboksknappen i **SpeedDial** i en processvy, eller en vynod i trädet | `System/MySystem/Station1/Pump1` |
+| Ett objekt | Fliken **Loggbok** i ett objektpopup, eller en objektnod i trädet | `Connection.Device.System_ObjectName` |
 | Ett eget ämne | En sökväg som inte matchar något av ovanstående | `Optimering/2026-03/Nattdrift` |
 
 Den tredje varianten täcker anteckningar som inte hör till en enskild utrustning. En driftsättningstråd, en säsongsdiskussion om optimering eller en projektlogg placeras under en egen sökväg och visas i trädet precis som den är skriven, i båda trädlägena.
 
-En post som är kopplad till en vy eller ett objekt kan ändå ha en egen sökväg under sig. En anteckning placerad på `MB.AS02.LB02_GT44` med underämnet `Trend` är kopplad till givaren och grupperas under en **Trend**-nod under den, så att flera anteckningar om samma objekt kan hållas isär.
+En post som är kopplad till en vy eller ett objekt kan ändå ha en egen sökväg under sig. En anteckning placerad på `Connection.Device.System_ObjectName` med underämnet `Trend` är kopplad till givaren och grupperas under en **Trend**-nod under den, så att flera anteckningar om samma objekt kan hållas isär.
 
 !!! info "Ämnen registreras inte i förväg"
     Ett ämne finns för att en post använder det. Det finns ingen ämneslista att underhålla, och när den sista posten under en nod försvinner försvinner noden.
@@ -38,11 +38,9 @@ Trädet följer processvyernas mappstruktur och läses därför som navigeringsm
 
 ```text
 System
-  Värme
-    VS11
-      SV21
-  Luftbehandling
-    LB01
+  MySystem
+    Station1
+      Pump1
 ```
 
 En anteckning placerad på en vy ligger på vyns nod. En anteckning placerad på ett objekt ligger under varje vy där objektet är ritat, som ett löv med objektets namn.
@@ -52,12 +50,10 @@ En anteckning placerad på en vy ligger på vyns nod. En anteckning placerad på
 Trädet följer taggsökvägen och läses därför som Datalagret.
 
 ```text
-MB
-  AS01
-    VS11
-      SV21
-  AS02
-    LB01
+Connection
+  Device
+    System
+      ObjectName
 ```
 
 En anteckning placerad på ett objekt ligger på sin tagg. En anteckning placerad på en vy ligger under de taggar som är ritade i vyn, eftersom en vy i den här ordningen bara är meningsfull genom den utrustning den visar.
@@ -73,13 +69,13 @@ De två ordningarna är länkade genom objektindexet, som registrerar vilka obje
 Detta är avsiktligt. En anteckning om en pump är relevant i varje vy där en operatör kan möta pumpen, och en anteckning om en vy är relevant för den utrustning vyn täcker.
 
 !!! warning "En anteckning på ett skåp eller en enhet når långt"
-    Samma regel gäller på varje nivå i taggsökvägen. En anteckning placerad på en enhet som `MB.AS01` hör till varje vy som visar något från den enheten, vilket kan vara större delen av anläggningen. En anteckning om ett fysiskt skåp hamnar rätt om den placeras på den **vy** som representerar skåpet. Placeras den på enhetens tagg sprids den över varje vy som matas av skåpet.
+    Samma regel gäller på varje nivå i taggsökvägen. En anteckning placerad på en enhet som `Connection.Device` hör till varje vy som visar något från den enheten, vilket kan vara större delen av anläggningen. En anteckning om ett fysiskt skåp hamnar rätt om den placeras på den **vy** som representerar skåpet. Placeras den på enhetens tagg sprids den över varje vy som matas av skåpet.
 
 ### Objekt med samma namn { #objects-that-share-a-name }
 
-Två objekt som är ritade i samma vy kan ha samma namn, till exempel ett `GT11` som tillhör `VS10` och ett annat som tillhör `VS11`. I arbetsvyläge skulle båda annars göra anspråk på samma löv.
+Två objekt som är ritade i samma vy kan ha samma namn, till exempel en `Pump1` som tillhör `System1` och en annan som tillhör `System2`. I arbetsvyläge skulle båda annars göra anspråk på samma löv.
 
-När det inträffar utökas lövets namn med så mycket av taggen som behövs för att skilja dem åt, vilket ger `VS10_GT11` och `VS11_GT11`. Objekt vars namn redan är unika i sin vy behåller sitt enkla namn.
+När det inträffar utökas lövets namn med så mycket av taggen som behövs för att skilja dem åt, vilket ger `System1_Pump1` och `System2_Pump1`. Objekt vars namn redan är unika i sin vy behåller sitt enkla namn.
 
 ## Kontexter { #contexts }
 

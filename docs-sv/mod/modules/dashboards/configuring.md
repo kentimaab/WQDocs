@@ -19,11 +19,11 @@ Alla widgetar delar en `Header`-parameter, en sträng, som anger den rubrik som 
 Parametrar som accepterar flera signaler eller grupper tar antingen en enskild sträng eller en array av strängar.
 
 ```javascript title="Single signal"
-"MB.AS01.VS10_VMM1_E"
+"MB.AS01.MySystem_Meter1_E"
 ```
 
 ```javascript title="Multiple signals"
-["MB.AS01.VS10_VMM1_E", "MB.AS01.VS10_VMM1_P"]
+["MB.AS01.MySystem_Meter1_E", "MB.AS01.MySystem_Meter1_P"]
 ```
 
 Vissa widgetar har en expanderingsknapp i det övre högra hörnet. Genom att klicka på den öppnas en fullskärmsversion av widgeten för en mer detaljerad vy.

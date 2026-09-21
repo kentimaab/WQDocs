@@ -44,7 +44,7 @@ An entry's placement is held in three columns on the `logbook` table. `topic_kin
 !!! warning "Only `topic` should be edited directly"
     `topic_kind` and `topic_ref` are derived values. `reconcileTopicRefs()` re-derives both from `topic` at every start, so a change written to either one alone is overwritten on the next restart. To move an entry, change its `topic`.
 
-The derivation takes the longest part of the path that resolves to a known view or tag, and keeps whatever follows as the entry's own sub-path. `MB/AS02/LB02/GT44/Trend` therefore anchors to the sensor `MB.AS02.LB02_GT44` and keeps `Trend` as a node beneath it.
+The derivation takes the longest part of the path that resolves to a known view or tag, and keeps whatever follows as the entry's own sub-path. `MB/AS02/Station2/GT44/Trend` therefore anchors to the sensor `MB.AS02.Station2_GT44` and keeps `Trend` as a node beneath it.
 
 ### Self-healing on start { #self-healing-on-start }
 
