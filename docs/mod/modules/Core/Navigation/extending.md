@@ -9,7 +9,7 @@ last_reviewed: 2026-05-21
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Navigation - Extending
 
@@ -36,9 +36,11 @@ scLinking.goTo("YOUR_OBJECT.NAME");
 
 In the example below, the `goTo()` function is applied to a button's **onClick** action
 with the target object `MB.AS01.LB02_GT43`:
+<!-- --8<-- [end:body-1] -->
 
 ![goTo](/docs/Images/Navigation/goTO.gif)
 
+<!-- --8<-- [start:body-2] -->
 ### GoTo in Alarm Groups { #goto-in-alarm-groups }
 GoTo can also be integrated into **Alarm Group** and the **AlarmList**, allowing users to
 immediately navigate to the object that triggered an alarm and take action.
@@ -60,9 +62,11 @@ display text and select a colour.
 **Use Custom Alarm Columns**.
 5. Select the **Measure** category — pressing this column for a specific alarm will
 trigger GoTo and navigate to the **Workview** where that alarm originated.
+<!-- --8<-- [end:body-2] -->
 
 ![Alarm_Goto](/docs/Images/Navigation/Alarm_goTo.png)
 
+<!-- --8<-- [start:body-3] -->
 !!! note 
     In order to use the Goto function on Alarms, the script `scAlarmFinder` is needed
 
@@ -121,3 +125,4 @@ capitalisation is not an issue as long as the identifier words in the
 icon folder and `s` holds the theme suffix, which together form the full path to
 the correct SVG file. If no identifier matches, the final `else` block assigns a
 default icon.
+<!-- --8<-- [end:body-3] -->

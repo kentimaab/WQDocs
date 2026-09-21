@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Arbetsvy-animationer
 
 ???+ info "Krav"
@@ -55,9 +55,11 @@ egna animerade objekt beskrivs i
 
 Animationskategorierna och deras suffixalias konfigureras i **WideQuick®
 Runtime** genom att navigera till **Inställningar → Suffix → Suffix - Larm**.
+<!-- --8<-- [end:body-1] -->
 
 ![Lista med Arbetsvy-animationer](/docs/sv/Images/Workview_Animations/Workview_animations_list.png)
 
+<!-- --8<-- [start:body-2] -->
 Inställningarna är organiserade i två nivåer:
 
 * **Grupper** — definierar animationskategorin och dess färg. Fem grupper finns
@@ -203,9 +205,11 @@ Kategori 3 kräver manuell konfiguration eftersom suffixet `_SERVICE` inte ingå
 standard. Expandera **3 - Service** och kontrollera om `_SERVICE` visas under
 **suffix**. Om det inte finns där, klicka på **Lägg till nytt suffixalias i vald kategori**,
 ange `_SERVICE` som suffix och ge det en beskrivning som passar dina behov.
+<!-- --8<-- [end:body-2] -->
 
 ![Servicesuffix](/docs/sv/Images/Workview_Animations/Service_suffix.png)
 
+<!-- --8<-- [start:body-3] -->
 ### Steg 2 - Skapa de visuella elementen { #step-2-create-the-visual-elements }
 
 I **WideQuick® Designer**, skapa följande objekt:
@@ -321,4 +325,4 @@ aktivsuffix är aktiv.
     för att öppna felsökningspopupen. Härifrån kan Datalager-variablerna växlas mellan
     `true` och `false` för att verifiera att animationerna fungerar som förväntat.
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Underhåll — Kom igång
 ???+ info "Krav"
@@ -30,37 +30,47 @@ Listvyn visar alla underhållsuppgifter för samtliga objekt i projektet. Det ä
 * Välj en uppgift och klicka på **Öppna** för att visa och uppdatera dess detaljer — deadline, beskrivning, status och tilldelad person.
 * Välj en uppgift och klicka på **Ta bort underhåll** för att ta bort den permanent.
 * Klicka på **Skapa** för att skapa en ny uppgift.
+<!-- --8<-- [end:body-1] -->
 
 ![Underhåll - Listvy](/docs/sv/Images/Maintenance/maintenance-list.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Underhåll - Mallar { #maint-templates }
 
 Mallvyn används för att skapa och hantera underhållsmallar. En mall definierar en återanvändbar uppgiftstyp med förinställd typ, prioritet, intervall och beskrivning. När en ny uppgift skapas kan en mall väljas för att fylla i uppgiftsfälten i förväg.
+<!-- --8<-- [end:body-2] -->
 
 ![Underhåll - Mallvy](/docs/sv/Images/Maintenance/maintenance-templates-view.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ### Underhåll - Återkommande { #maintenance-recurring }
 
 Vyn för återkommande underhåll hanterar automatiserade underhållskonfigurationer. Varje konfiguration definierar ett schema för ett eller flera objekt. Systemet genererar och spårar uppgifter automatiskt baserat på det konfigurerade intervallet.
+<!-- --8<-- [end:body-3] -->
 
 ![Underhåll - Återkommande vy](/docs/sv/Images/Maintenance/maintenance-recurring.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 ## Objektpopup { #object-popup }
 
 Varje objekt i projektet har en underhållsflik tillgänglig via dess popup. Öppna popupen genom att klicka på ett objekt och välja fliken [**Underhåll**](../../reference/Popup/Maintenance.md). Här visas alla underhållsuppgifter kopplade till det specifika objektet. Använd **Nytt underhåll**, **Redigera underhåll** eller **Ta bort underhåll** för att hantera uppgifter utan att lämna processvyn.
 
 Kolumnen **Återkommande** visar om varje uppgift har genererats av en återkommande underhållskonfiguration. Värdet **Ja** innebär att uppgiften ingår i ett automatiserat schema — när den slutförs skapas nästa instans automatiskt. Värdet **Nej** innebär att uppgiften skapades manuellt som en engångsåtgärd.
+<!-- --8<-- [end:body-4] -->
 
 ![Underhållsfliken i objektpopupen](/docs/sv/Images/Maintenance/object-popup-maintenance.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 ## Skapa en uppgift { #creating-a-task }
 
 Nya underhållsuppgifter kan skapas både från vyn **Underhåll - Lista** och från objektpopupen.
 
 Från **Underhåll - Lista**, klicka på **Skapa**. Från objektpopupen, klicka på **Nytt underhåll**.
+<!-- --8<-- [end:body-5] -->
 
 ![Formulär för nytt underhåll](/docs/sv/Images/Maintenance/create-multiple.png){align=center}
 
+<!-- --8<-- [start:body-6] -->
 Fyll i följande fält:
 
 * **Objekt** — välj det objekt uppgiften tillhör i rullgardinsmenyn. Förifyllt när formuläret öppnas från en objektpopup.
@@ -90,4 +100,4 @@ Klicka på **Spara** för att spara. Uppgiften skapas med statusen **Planerad**.
 
 * [Konfigurera](configuring.md) — mallar, återkommande scheman och statusreferens
 * [Utöka](extending.md) — kalenderintegration och felsökning
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-6] -->

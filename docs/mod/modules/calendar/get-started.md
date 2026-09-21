@@ -13,7 +13,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Calendar - Get Started
 ???+ info "Requirements"
@@ -53,23 +53,29 @@ Use the arrow buttons in the top bar to move forward or backward one period at a
 The month view shows a full calendar grid for the current month. Events appear as colored indicators on each day.
 
 When a day holds more events than its cell can show, the remainder are not drawn in the cell at all. Instead a **Show more (N)** badge reports how many are not shown. Clicking the badge opens the Day view for that date, where every event of the day is visible.
+<!-- --8<-- [end:body-1] -->
 
 ![Month view with events](/docs/Images/Calendar/calendar-month-events.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Week { #week }
 
 The week view shows the current 7-day period as a time grid. Events are rendered as blocks with their start and end times visible.
 
 Events that share an identical span would otherwise be drawn as stacked bars with their names on top of each other. A column holding more than one event is therefore collapsed into a single bar labelled **Show events (X)**. Clicking it opens a picker listing every event the bar stands for.
+<!-- --8<-- [end:body-2] -->
 
 ![Week view](/docs/Images/Calendar/calendar-week.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ### Day { #day }
 
 The day view shows a single day as a time grid. It works the same as the week view but focused on one day at a time.
+<!-- --8<-- [end:body-3] -->
 
 ![Day view](/docs/Images/Calendar/calendar-day.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 
 ## Sidebar { #sidebar }
 
@@ -78,9 +84,11 @@ The sidebar shows two things: a mini calendar for the current month and a list o
 The mini calendar highlights the currently selected day.
 
 The upcoming events list shows the next events and maintenance deadlines sorted by date, merging both event sources into a single list.
+<!-- --8<-- [end:body-4] -->
 
 ![Sidebar with upcoming events](/docs/Images/Calendar/calendar-sidebar.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 ## Creating an Event { #creating-an-event }
 
 New events can be created in two ways:
@@ -108,4 +116,4 @@ See [Holidays and Holiday Eves](configuring.md#holidays-and-holiday-eves).
 
 * [Configuring](configuring.md) — editing events, maintenance colors and reminder settings
 * [Extending](extending.md) — troubleshooting
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-5] -->

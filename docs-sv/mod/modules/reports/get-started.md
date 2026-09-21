@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Rapporter — Kom igång
 ???+ info "Krav"
@@ -73,7 +73,9 @@ rapporter via e-post kräver att en SMTP-server är konfigurerad, vilket förkla
 [här](../Core/alarms/extending.md#configuring-smtp-in-widequick-designer).
 
 <figure markdown="span">
+<!-- --8<-- [end:body-1] -->
   ![Report](/docs/sv/Images/Reports/Report.png)
+<!-- --8<-- [start:body-2] -->
   <figcaption>Listarbetsvyn för rapporter i WideQuick Runtime.</figcaption>
 </figure>
 
@@ -86,22 +88,30 @@ rullgardinsmenyn **Rapportmall**.
 <div class="figure-row" markdown>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-2] -->
   ![Alarm Report](/docs/sv/Images/Reports/AlarmReport.png)
+<!-- --8<-- [start:body-3] -->
   <figcaption>Larmrapport-kontroller.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-3] -->
   ![Alarm Report One Alarm](/docs/sv/Images/Reports/AlarmReportOne.png)
+<!-- --8<-- [start:body-4] -->
   <figcaption>Larmrapport ett larm-kontroller.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-4] -->
   ![Energy Report](/docs/sv/Images/Reports/EnergyReport.png)
+<!-- --8<-- [start:body-5] -->
   <figcaption>Energirapport-kontroller.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-5] -->
   ![Delta Report](/docs/sv/Images/Reports/DeltaYear.png)
+<!-- --8<-- [start:body-6] -->
   <figcaption>Deltarapport-kontroller.</figcaption>
 </figure>
 
@@ -191,7 +201,9 @@ För att schemalägga en rapport, navigera till
 **Historik → Rapporter → Rapporter - Schema**.
 
 <figure markdown="span">
+<!-- --8<-- [end:body-6] -->
   ![Report schedule](/docs/sv/Images/Reports/Report_schedule.png)
+<!-- --8<-- [start:body-7] -->
   <figcaption>Arbetsvyn Rapportschema i WideQuick Runtime.</figcaption>
 </figure>
 
@@ -202,17 +214,23 @@ till höger. Observera att den andra sidan ändras beroende på den valda
 <div class="figure-row" markdown>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-7] -->
   ![Schedule page 1](/docs/sv/Images/Reports/Report_meny.png)
+<!-- --8<-- [start:body-8] -->
   <figcaption>Sida 1 — schemanamn, mall och frekvens.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-8] -->
   ![Schedule page 2](/docs/sv/Images/Reports/Report_meny2.png)
+<!-- --8<-- [start:body-9] -->
   <figcaption>Sida 2 — rapportspecifik konfiguration.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-9] -->
   ![Schedule page 3](/docs/sv/Images/Reports/Report_meny3.png)
+<!-- --8<-- [start:body-10] -->
   <figcaption>Sida 3 — mottagare och utdataformat.</figcaption>
 </figure>
 
@@ -267,4 +285,4 @@ Nedan finns beskrivningar av alternativen på den första och tredje sidan:
 
 * [Konfigurera](configuring.md) — inbyggda rapportmallar och rapporthistorik
 * [Utöka](extending.md) — skapa anpassade mallar och rapportkontroller
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-10] -->

@@ -7,7 +7,7 @@ last_reviewed: 2026-09-15
 tags:
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Kalender — Kom igång
 ???+ info "Krav"
@@ -38,21 +38,27 @@ Använd pilknapparna i det övre fältet för att flytta framåt eller bakåt en
 ### Månad { #month }
 
 Månadsvy visar ett fullständigt kalendernät för den aktuella månaden. Händelser visas som färgade indikatorer på varje dag. Om fler händelser finns på en dag än vad som kan visas, visar ett överflödesmärke hur många som är dolda.
+<!-- --8<-- [end:body-1] -->
 
 ![Månadsvy med händelser](/docs/sv/Images/Calendar/calendar-month-events.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Vecka { #week }
 
 Veckovy visar den aktuella 7-dagarsperioden som ett tidsnät. Händelser renderas som block med sina start- och sluttider synliga.
+<!-- --8<-- [end:body-2] -->
 
 ![Veckovy](/docs/sv/Images/Calendar/calendar-week.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ### Dag { #day }
 
 Dagsvy visar en enskild dag som ett tidsnät. Den fungerar på samma sätt som veckovyn men fokuserad på en dag åt gången.
+<!-- --8<-- [end:body-3] -->
 
 ![Dagsvy](/docs/sv/Images/Calendar/calendar-day.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 
 ## Sidopanel { #sidebar }
 
@@ -61,9 +67,11 @@ Sidopanelen visar två saker: en minikalender för den aktuella månaden och en 
 Minikalendern markerar den aktuellt valda dagen.
 
 Listan med kommande händelser visar nästa händelser och underhållsdeadlines sorterade efter datum, och slår ihop båda händelsekällorna till en enda lista.
+<!-- --8<-- [end:body-4] -->
 
 ![Sidopanel med kommande händelser](/docs/sv/Images/Calendar/calendar-sidebar.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 ## Skapa en händelse { #creating-an-event }
 
 Nya händelser kan skapas på två sätt:
@@ -91,4 +99,4 @@ Se [Helgdagar och helgdagsaftnar](configuring.md#holidays-and-holiday-eves).
 
 * [Konfigurera](configuring.md) — redigera händelser, underhållsfärger och påminnelseinställningar
 * [Utöka](extending.md) — felsökning
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-5] -->

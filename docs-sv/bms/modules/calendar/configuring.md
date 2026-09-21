@@ -8,4 +8,20 @@ tags:
  - BMS
 ---
 
---8<-- "mod/modules/calendar/configuring.md:body"
+--8<-- "mod/modules/calendar/configuring.md:body-1"
+
+![Dialogen Importera kalender](/docs/sv/Images/Calendar/import-calendar.png){align=center}
+
+--8<-- "mod/modules/calendar/configuring.md:body-2"
+
+![Dialogen Ändra kalendrar](/docs/sv/Images/Calendar/edit-calendars.png){align=center}
+
+--8<-- "mod/modules/calendar/configuring.md:body-3"
+
+![Dialogen Kalenderfilter](/docs/sv/Images/Calendar/calendar-filter.png){align=center}
+
+--8<-- "mod/modules/calendar/configuring.md:body-4"
+
+![Dialogen Exportera kalender](/docs/sv/Images/Calendar/export-calendar.png){align=center}
+
+--8<-- "mod/modules/calendar/configuring.md:body-5"

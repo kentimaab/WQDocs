@@ -107,11 +107,13 @@ sida visas en navigeringspil i det övre vänstra hörnet för att navigera till
 Tillsammans gör dessa två mekanismer att helskärmsmenyn kan skalas till system av
 valfri storlek — oavsett hur många vyer eller kataloger ett projekt innehåller kommer
 menyn alltid att vara navigerbar.
+<!-- --8<-- [end:body-4] -->
 
 ![FullScreen_Menu](/docs/sv/Images/Navigation/Nav_2Stor.png)
 
+<!-- --8<-- [start:body-5] -->
 ## Nästa steg { #next-steps }
 
 * [Konfigurering](configuring.md) — behörighetskrav på vyer och visningsinställningar för begränsade vyer
 * [Utöka](extending.md) — GoTo-funktion och anpassade navigationsikoner
-<!-- --8<-- [end:body-4] -->
+<!-- --8<-- [end:body-5] -->

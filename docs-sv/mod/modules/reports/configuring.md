@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Rapporter — Konfigurering
 
@@ -202,9 +202,11 @@ en gång per dygn. Vilken av dem rapporten använder anges av dess `SourceFile` 
     är `1200`, vilket täcker tre år av dagliga avläsningar. En timvis logger ger omkring
     26 000 avläsningar under samma period, så `limit` måste höjas i motsvarande grad,
     annars läser rapporten tyst bara den äldsta delen av perioden.
+<!-- --8<-- [end:body-1] -->
 
 ![Delta year report controller](/docs/sv/Images/Reports/DeltaYear.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Byta logger { #changing-logger-delta-year }
 Loggern byts på samma sätt som för Energirapporten. Se
 [Byta logger](#changing-logger).
@@ -229,9 +231,11 @@ tre veckor och tillåter upp till 15 signaler.
 
 Det finns bara en mall för den här rapporten, `DeltaWeek.xlsx`, och den hanterar
 loggningsintervall från timme till dag.
+<!-- --8<-- [end:body-2] -->
 
 ![Delta week report controller](/docs/sv/Images/Reports/DeltaWeek.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ### Byta logger { #changing-logger-delta-week }
 Loggern byts på samma sätt som för Energirapporten. Se
 [Byta logger](#changing-logger).
@@ -259,4 +263,4 @@ skickade e-postmeddelanden och misslyckade e-postmeddelanden kan omkonfigureras 
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — skapa anpassade mallar och rapportkontroller
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

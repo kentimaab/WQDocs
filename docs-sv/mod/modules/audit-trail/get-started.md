@@ -46,9 +46,11 @@ Klicka på **Filter** för att tillämpa. Klicka på **Rensa spårningslogg** f�
 ## Underhållsändringslogg { #maintenance-change-log }
 
 Navigera till **Historik → Loggar → Spårningslogg → Spårningslogg - Underhåll**.
+<!-- --8<-- [end:body-2] -->
 
 ![Audit Trail - Maintenance view](/docs/sv/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 Den här vyn visar en fullständig historik över ändringar av underhållsuppgifter. Varje statusändring, uppdatering av deadline, prioritetsändring, tilldelningsändring och beskrivningsredigering registreras automatiskt. Ingen konfiguration krävs.
 
 Varje rad visar:
@@ -65,4 +67,4 @@ Markera en rad och klicka på **Öppna** för att se det fullständiga detaljern
 ## Nästa steg { #next-steps }
 
 * [Konfigurering](configuring.md) — välja vilka variabler som ska spåras
-<!-- --8<-- [end:body-2] -->
+<!-- --8<-- [end:body-3] -->

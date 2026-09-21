@@ -10,7 +10,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Themes - Get Started
 ???+ info "Requirements"
@@ -23,9 +23,11 @@ tags:
 ## Light and dark mode { #light-and-dark-mode }
 
 WideQuick MOD ships with both a light and a dark theme. The two variants share the same color structure but invert the surface hierarchy. Backgrounds that are light in one become dark in the other, and text colors adjust accordingly.
+<!-- --8<-- [end:body-1] -->
 
 ![Light and dark theme comparison](/docs/Images/Themes/theme-light-dark.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ## Switching themes { #switching-themes }
 
 ### In WideQuick® Designer { #in-widequick-designer }
@@ -46,4 +48,4 @@ This includes alarm state colors. Objects with active alarms display colors such
 
 * [Configuring](configuring.md) — changing individual colors and assigning color roles to objects
 * [Extending](extending.md) — creating a custom theme that follows a graphical profile
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

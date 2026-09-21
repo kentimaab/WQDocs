@@ -9,7 +9,7 @@ last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Reports - Configuring
 
@@ -206,9 +206,11 @@ Which one the report uses is set by its `SourceFile` in `Reports.kdat`.
     `1200`, which covers three years of daily readings. An hourly logger produces roughly 
     26 000 readings over the same span, so `limit` has to be raised to match, or the 
     report will silently read only the oldest part of the period.
+<!-- --8<-- [end:body-1] -->
 
 ![Delta year report controller](/docs/Images/Reports/DeltaYear.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Changing Logger { #changing-logger-delta-year }
 The logger is changed the same way as for the Energy Report. See 
 [Changing Logger](#changing-logger).
@@ -234,9 +236,11 @@ weeks and allows up to 15 signals.
 
 Only one template exists for this report, `DeltaWeek.xlsx`, and it handles logging 
 intervals anywhere from hourly to daily.
+<!-- --8<-- [end:body-2] -->
 
 ![Delta week report controller](/docs/Images/Reports/DeltaWeek.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ### Changing Logger { #changing-logger-delta-week }
 The logger is changed the same way as for the Energy Report. See 
 [Changing Logger](#changing-logger).
@@ -265,4 +269,4 @@ emails, and failed emails can be reconfigured to be recreated or resent.
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — creating custom templates and report controllers
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

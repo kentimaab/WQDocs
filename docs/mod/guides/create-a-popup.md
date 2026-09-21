@@ -9,7 +9,7 @@ last_reviewed: 2026-05-19
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Create Popup
 WideQuick Modular Framework is delivered with several pre-configured popups, such as
 history, trend and maintenance. It is also possible to create fully custom popups
@@ -70,24 +70,32 @@ to the popup. This is done in a few steps:
 
 * Start the project.
 * Navigate to **Settings → Suffix → Suffix Alias - Popups**.
+<!-- --8<-- [end:body-1] -->
 
 ![Navigation to settings](/docs/Images/Create_Popup/Navigation.gif){width="400"}
 
+<!-- --8<-- [start:body-2] -->
 * Create a new suffix category by pressing **Add new category** and give the
 new category a name. Since we are creating a popup for pump control, name it
 **Pump Control**.
+<!-- --8<-- [end:body-2] -->
 
 ![Adding category](/docs/Images/Create_Popup/Adding%20category.gif)
 
+<!-- --8<-- [start:body-3] -->
 * Select the new category in the list and click **Add new suffix alias in selected category**. In this example we start with the tag with suffix `_IO`, which displays
 whether the pump is on or not. Name this suffix **Active**.
+<!-- --8<-- [end:body-3] -->
 
 ![Adding suffix](/docs/Images/Create_Popup/Adding%20suffix.gif)
 
+<!-- --8<-- [start:body-4] -->
 * Fill in the relevant information for this suffix alias:
+<!-- --8<-- [end:body-4] -->
 
 ![Configuring suffix](/docs/Images/Create_Popup/suffix_config.png)
 
+<!-- --8<-- [start:body-5] -->
 * **Suffix** — The suffix entered on the tag, in this case `_IO`.
 * **Writable** — Leave disabled since this is a read-only tag in the PLC.
 * **Write privilege** — Leave empty since this suffix is not writable.
@@ -252,12 +260,16 @@ visual separation from the underlying view.
 <div class="figure-row" markdown>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-5] -->
   ![view.link](/docs/Images/Create_Popup/view.link.png)
+<!-- --8<-- [start:body-6] -->
   <figcaption>Using view.link.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-6] -->
   ![app.popOut](/docs/Images/Create_Popup/app.popOut.png)
+<!-- --8<-- [start:body-7] -->
   <figcaption>Using app.popOut.</figcaption>
 </figure>
 
@@ -293,4 +305,4 @@ name of the popup that should open on click:
     regularly interact with the same popup.
 
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-7] -->

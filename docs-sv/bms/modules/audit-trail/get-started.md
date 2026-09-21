@@ -13,3 +13,7 @@ tags:
 ![Audit trail view](/docs/sv/Images/Audit_Trail/audit-trail-log.png){align=center}
 
 --8<-- "mod/modules/audit-trail/get-started.md:body-2"
+
+![Audit Trail - Maintenance view](/docs/sv/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
+
+--8<-- "mod/modules/audit-trail/get-started.md:body-3"

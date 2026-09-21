@@ -9,7 +9,7 @@ last_reviewed: 2026-05-19
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Workview Animations
 
 ???+ info "Requirements"
@@ -57,9 +57,11 @@ custom animated objects is covered in
 
 The animation categories and their suffix aliases are configured in **WideQuick®
 Runtime** by navigating to **Settings → Suffix → Suffix - Alarms**.
+<!-- --8<-- [end:body-1] -->
 
 ![Workview animations list](/docs/Images/Workview_Animations/Workview_animations_list.png)
 
+<!-- --8<-- [start:body-2] -->
 The settings are organised in two levels:
 
 * **Groups** — define the animation category and its color. Five groups are
@@ -205,9 +207,11 @@ Category 3 requires manual setup since the `_SERVICE` suffix is not included by
 default. Expand **3 - Service** and check whether `_SERVICE` appears under
 **suffixes**. If it is not there, click **Add new suffix alias in selected category**,
 enter `_SERVICE` as the suffix and give it a description that fits your needs.
+<!-- --8<-- [end:body-2] -->
 
 ![Service suffix](/docs/Images/Workview_Animations/Service_suffix.png)
 
+<!-- --8<-- [start:body-3] -->
 ### Step 2 - Create the visual elements { #step-2-create-the-visual-elements }
 
 In **WideQuick® Designer**, create the following objects:
@@ -323,4 +327,4 @@ active suffix is active.
     to open the debug popup. From here the Data Store variables can be toggled between
     `true` and `false` to verify the animations work as expected.
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

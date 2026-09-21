@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Underhåll — Konfigurering
 
@@ -27,15 +27,19 @@ Klicka på **Filter** för att öppna filterpanelen:
 * **Ansvarig** — filtrera efter tilldelad arbetstagare.
 * **System** — filtrera för att endast visa uppgifter som tillhör ett specifikt system.
 * **Tidsinställningar - deadline** — visa alla uppgifter oavsett deadline (**Alla**), eller begränsa till uppgifter med en deadline inom ett valt datumintervall (**Tidsintervall**).
+<!-- --8<-- [end:body-1] -->
 
 ![Underhållslista med filterpanel öppen](/docs/sv/Images/Maintenance/maintenance-list-filter.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ## Mallar { #templates }
 
 Mallar gör det möjligt att spara och återanvända ofta förekommande underhållstyper. En mall lagrar underhållstyp, prioritet, standarddeadline-intervall och beskrivning så att samma information inte behöver anges varje gång.
+<!-- --8<-- [end:body-2] -->
 
 ![Vyn Underhåll - Mallar](/docs/sv/Images/Maintenance/maintenance-templates-view.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 Den vänstra panelen listar alla mallar. Att välja en visar dess fält till höger:
 
 * **Mallnamn för underhåll** — det namn som visas i rullgardinsmenyn **Underhållstyp** när en uppgift skapas.
@@ -63,9 +67,11 @@ Varje konfiguration definierar:
 * Upprepningsintervall — hur ofta uppgiften återkommer
 * Upprepningsregel — hur nästa deadline beräknas
 * Om missade uppgifter automatiskt ska generera en uppföljning
+<!-- --8<-- [end:body-3] -->
 
 ![Konfiguration av återkommande underhåll](/docs/sv/Images/Maintenance/maintenance-recurring.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 Vyn har tre paneler. Den vänstra panelen listar alla konfigurationer. Den mellersta panelen visar inställningarna för den valda konfigurationen. Den högra panelen är ett objektträd där de objekt som konfigurationen gäller väljs. För utrustning som saknar tagg i systemet, använd fritext-fältet **Anpassat objekt** längst ned i objektpanelen för att ange ett namn manuellt.
 
 **Skapa en konfiguration:**
@@ -141,4 +147,4 @@ Uppgifter kan tilldelas en av fyra prioritetsnivåer:
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — kalenderintegration och felsökning
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-4] -->

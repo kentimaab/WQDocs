@@ -9,7 +9,7 @@ last_reviewed: 2026-09-15
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Calendar - Configuring
 
@@ -87,14 +87,13 @@ The variables are written at startup and refreshed on each sync. Marking a day i
 Each imported file becomes a subscription. Every event it contributed is tagged with it, so an import can be recoloured or removed as a unit without affecting events created directly in the calendar or events from another file.
 
 An import is rejected if its name or its path matches one that already exists. The comparison ignores surrounding whitespace and a trailing slash.
+<!-- --8<-- [end:body-1] -->
 
 ![Import calendar dialog](/docs/Images/Calendar/import-calendar.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 !!! warning "An imported file is read once"
     A file is read at import and is not re-checked afterwards. Editing or replacing the `.ics` file on disk does not update the calendar. Import the file again to pick up the new content.
-
-!!! info "Live feeds and public holiday import are not in this release"
-    Subscribing to an ICS link, and importing a country's public holidays, both depend on the REST plugin, which is not part of this build. Holidays are marked in the calendar itself instead, as described above.
 
     A database carried over from a build that had the plugin can still hold subscriptions of those types. They are skipped during a sync and a note is written to the log. Their events remain in the calendar until the subscription is removed.
 
@@ -103,17 +102,21 @@ An import is rejected if its name or its path matches one that already exists. T
 **Edit** opens **Edit calendars**, which lists every import with its name and type. Select one to **Rename** it, **Remove** it, or pick a colour from the combo box and click **Change colour**. Removing an import deletes its events from the calendar. Events created directly in the calendar are not affected.
 
 Imports are created with the **DEFAULT** colour.
+<!-- --8<-- [end:body-2] -->
 
 ![Edit calendars dialog](/docs/Images/Calendar/edit-calendars.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 **Sync** re-reads every import immediately. Since a file import is read at import time, this matters mainly for tidying up an existing database rather than for picking up new content.
 
 ### Choosing Which Calendars Are Shown { #choosing-which-calendars-are-shown }
 
 **Filter** opens **Calendar filter**, which controls which imports are drawn in the calendar. The setting applies to all clients rather than to one user. Events created directly in the calendar are always shown and are not affected by the filter.
+<!-- --8<-- [end:body-3] -->
 
 ![Calendar filter dialog](/docs/Images/Calendar/calendar-filter.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 Tick the calendars to show and click **Apply**.
 
 ## Exporting a Calendar { #exporting-a-calendar }
@@ -121,10 +124,12 @@ Tick the calendars to show and click **Apply**.
 **Export** opens **Export calendar**. Tick which calendars to include, then either **Generate** to write an `.ics` file, or **Send by e-mail** to send the export as an attachment.
 
 **Own/internal events** is listed alongside the imports, so the events created directly in the calendar can be included or left out independently. Holiday and holiday eve events are part of that group, so a marked year can be exported and carried to another installation.
+<!-- --8<-- [end:body-4] -->
 
 ![Export calendar dialog](/docs/Images/Calendar/export-calendar.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — reminder configuration, the holiday variables and the subscription table
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-5] -->

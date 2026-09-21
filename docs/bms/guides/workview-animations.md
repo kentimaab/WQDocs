@@ -5,4 +5,12 @@ tags:
  - BMS
 ---
 
---8<-- "mod/guides/workview-animations.md:body"
+--8<-- "mod/guides/workview-animations.md:body-1"
+
+![Workview animations list](/docs/Images/Workview_Animations/Workview_animations_list.png)
+
+--8<-- "mod/guides/workview-animations.md:body-2"
+
+![Service suffix](/docs/Images/Workview_Animations/Service_suffix.png)
+
+--8<-- "mod/guides/workview-animations.md:body-3"

@@ -11,7 +11,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Reports - Get started
 ???+ info "Requirements"
@@ -75,7 +75,9 @@ From this page, reports can be created, removed, or sent as email attachments. S
 reports by email requires an SMTP server to be configured, which is explained [here](../Core/alarms/extending.md#configuring-smtp-in-widequick-designer).
 
 <figure markdown="span">
+<!-- --8<-- [end:body-1] -->
   ![Report](/docs/Images/Reports/Report.png)
+<!-- --8<-- [start:body-2] -->
   <figcaption>The Reports list workview in WideQuick Runtime.</figcaption>
 </figure>
 
@@ -88,22 +90,30 @@ the right. By default, six report types are available: **Alarm Report**,
 <div class="figure-row" markdown>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-2] -->
   ![Alarm Report](/docs/Images/Reports/AlarmReport.png)
+<!-- --8<-- [start:body-3] -->
   <figcaption>Alarm Report controller.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-3] -->
   ![Alarm Report One Alarm](/docs/Images/Reports/AlarmReportOne.png)
+<!-- --8<-- [start:body-4] -->
   <figcaption>Alarm Report One Alarm controller.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-4] -->
   ![Energy Report](/docs/Images/Reports/EnergyReport.png)
+<!-- --8<-- [start:body-5] -->
   <figcaption>Energy Report controller.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-5] -->
   ![Delta Report](/docs/Images/Reports/DeltaYear.png)
+<!-- --8<-- [start:body-6] -->
   <figcaption>Delta Report controller.</figcaption>
 </figure>
 
@@ -193,7 +203,9 @@ To schedule a report, navigate to
 **History → Reports → Reports - Schedule**.
 
 <figure markdown="span">
+<!-- --8<-- [end:body-6] -->
   ![Report schedule](/docs/Images/Reports/Report_schedule.png)
+<!-- --8<-- [start:body-7] -->
   <figcaption>The Report Schedule workview in WideQuick Runtime.</figcaption>
 </figure>
 
@@ -204,17 +216,23 @@ appear on the right. Note that the second page changes depending on the selected
 <div class="figure-row" markdown>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-7] -->
   ![Schedule page 1](/docs/Images/Reports/Report_meny.png)
+<!-- --8<-- [start:body-8] -->
   <figcaption>Page 1 — schedule name, template, and frequency.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-8] -->
   ![Schedule page 2](/docs/Images/Reports/Report_meny2.png)
+<!-- --8<-- [start:body-9] -->
   <figcaption>Page 2 — report-specific configuration.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-9] -->
   ![Schedule page 3](/docs/Images/Reports/Report_meny3.png)
+<!-- --8<-- [start:body-10] -->
   <figcaption>Page 3 — recipients and output format.</figcaption>
 </figure>
 
@@ -269,4 +287,4 @@ Below are descriptions of the options on the first and third pages:
 
 * [Configuring](configuring.md) — built-in report templates and report history
 * [Extending](extending.md) — creating custom templates and report controllers
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-10] -->

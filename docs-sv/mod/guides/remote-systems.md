@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Fjärrsystem
 ???+ info "Krav"
     Följande skript krävs för att använda Fjärrsystem och all
@@ -69,9 +69,11 @@ Om du klickar på **Add** öppnas samma fält som i **WideQuick® Designer**.
 ## Navigation { #navigation }
 
 Konfigurerade fjärrsystem visas i avsnittet **Remote Systems** längst ned i huvudnavigeringen. Klicka på **Remote Systems** för att öppna listan.
+<!-- --8<-- [end:body-1] -->
 
 ![Menyn Remote Systems med anslutna och frånkopplade system](/docs/sv/Images/Remote_System/remote-menu.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 Varje post visar systemnamn, beskrivning och en ikon för anslutningsstatus. Statusikonen uppdateras i realtid — grön betyder ansluten, röd betyder inte ansluten. Om **Auto connect on startup** är aktiverat återansluter applikationen automatiskt vid frånkoppling enligt inställningarna för **Max reconnect attempts** och **Reconnect delay**.
 
 Att öppna ett fjärrsystem startar det i ett separat klientfönster. Den lokala applikationen förblir fullt tillgänglig medan fjärrsystemet är öppet.
@@ -101,4 +103,4 @@ Larmaggregering fungerar med vilken WideQuick-applikation som helst — inte bar
 
 Det är dessa variabler som `scAlarm` underhåller i MOD. En icke-MOD-applikation som håller dessa uppdaterade kommer automatiskt att kännas igen av `scRemoteAlarms` när fjärrsystemanslutningen är upprättad.
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

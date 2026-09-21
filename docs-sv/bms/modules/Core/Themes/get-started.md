@@ -8,4 +8,8 @@ tags:
  - BMS
 ---
 
---8<-- "mod/modules/Core/Themes/get-started.md:body"
+--8<-- "mod/modules/Core/Themes/get-started.md:body-1"
+
+![Jämförelse av ljust och mörkt tema](/docs/sv/Images/Themes/theme-light-dark.png){align=center}
+
+--8<-- "mod/modules/Core/Themes/get-started.md:body-2"

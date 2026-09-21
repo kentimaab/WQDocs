@@ -8,4 +8,12 @@ tags:
  - WWT
 ---
 
---8<-- "mod/modules/Core/Navigation/extending.md:body"
+--8<-- "mod/modules/Core/Navigation/extending.md:body-1"
+
+![goTo](/docs/sv/Images/Navigation/goTO-wwt.gif)
+
+--8<-- "mod/modules/Core/Navigation/extending.md:body-2"
+
+![Alarm_Goto](/docs/sv/Images/Navigation/Alarm_goTo-wwt.png)
+
+--8<-- "mod/modules/Core/Navigation/extending.md:body-3"

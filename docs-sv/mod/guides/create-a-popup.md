@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Skapa popup
 WideQuick Modular Framework levereras med flera förkonfigurerade popups, till exempel
 historik, trend och underhåll. Det är också möjligt att skapa helt anpassade popups
@@ -69,24 +69,32 @@ till popupen. Detta görs i några steg:
 
 * Starta projektet.
 * Navigera till **Inställningar → Suffix → Suffix Alias - Popups**.
+<!-- --8<-- [end:body-1] -->
 
 ![Navigering till inställningar](/docs/sv/Images/Create_Popup/Navigation.gif){width="400"}
 
+<!-- --8<-- [start:body-2] -->
 * Skapa en ny suffixkategori genom att trycka på **Lägg till ny kategori** och ge
 den nya kategorin ett namn. Eftersom vi skapar en popup för pumpstyring, namnge den
 **Pump Control**.
+<!-- --8<-- [end:body-2] -->
 
 ![Lägga till kategori](/docs/sv/Images/Create_Popup/Adding%20category.gif)
 
+<!-- --8<-- [start:body-3] -->
 * Markera den nya kategorin i listan och klicka på **Lägg till nytt suffixalias i vald kategori**. I det här exemplet börjar vi med taggen med suffixet `_IO`, som visar
 om pumpen är på eller inte. Namnge detta suffix **Active**.
+<!-- --8<-- [end:body-3] -->
 
 ![Lägga till suffix](/docs/sv/Images/Create_Popup/Adding%20suffix.gif)
 
+<!-- --8<-- [start:body-4] -->
 * Fyll i relevant information för detta suffixalias:
+<!-- --8<-- [end:body-4] -->
 
 ![Konfigurera suffix](/docs/sv/Images/Create_Popup/suffix_config.png)
 
+<!-- --8<-- [start:body-5] -->
 * **Suffix** — Suffixet som angetts på taggen, i det här fallet `_IO`.
 * **Writable** — Lämna inaktiverat eftersom detta är en skrivskyddad tagg i PLC:n.
 * **Write privilege** — Lämna tomt eftersom detta suffix inte är skrivbart.
@@ -251,12 +259,16 @@ visuell separation från den underliggande vyn.
 <div class="figure-row" markdown>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-5] -->
   ![view.link](/docs/sv/Images/Create_Popup/view.link.png)
+<!-- --8<-- [start:body-6] -->
   <figcaption>Använder view.link.</figcaption>
 </figure>
 
 <figure markdown="span">
+<!-- --8<-- [end:body-6] -->
   ![app.popOut](/docs/sv/Images/Create_Popup/app.popOut.png)
+<!-- --8<-- [start:body-7] -->
   <figcaption>Använder app.popOut.</figcaption>
 </figure>
 
@@ -292,4 +304,4 @@ namnet på den popup som ska öppnas vid klick:
     regelbundet interagerar med samma popup.
 
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-7] -->

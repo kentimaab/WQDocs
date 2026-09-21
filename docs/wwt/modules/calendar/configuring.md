@@ -5,4 +5,20 @@ tags:
  - WWT
 ---
 
---8<-- "mod/modules/calendar/configuring.md:body"
+--8<-- "mod/modules/calendar/configuring.md:body-1"
+
+![Import calendar dialog](/docs/Images/Calendar/import-calendar-wwt.png){align=center}
+
+--8<-- "mod/modules/calendar/configuring.md:body-2"
+
+![Edit calendars dialog](/docs/Images/Calendar/edit-calendars-wwt.png){align=center}
+
+--8<-- "mod/modules/calendar/configuring.md:body-3"
+
+![Calendar filter dialog](/docs/Images/Calendar/calendar-filter-wwt.png){align=center}
+
+--8<-- "mod/modules/calendar/configuring.md:body-4"
+
+![Export calendar dialog](/docs/Images/Calendar/export-calendar-wwt.png){align=center}
+
+--8<-- "mod/modules/calendar/configuring.md:body-5"

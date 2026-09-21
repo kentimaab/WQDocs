@@ -34,3 +34,7 @@ tags:
 ![FullScreen_Toggle](/docs/Images/Navigation/ToggleFullNav-wwt.png)
 
 --8<-- "mod/modules/Core/Navigation/get-started.md:body-4"
+
+![FullScreen_Menu](/docs/Images/Navigation/Nav_2Stor-wwt.png)
+
+--8<-- "mod/modules/Core/Navigation/get-started.md:body-5"

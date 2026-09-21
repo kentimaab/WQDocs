@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Teman — Kom igång
 ???+ info "Krav"
@@ -21,9 +21,11 @@ tags:
 ## Ljust och mörkt läge { #light-and-dark-mode }
 
 WideQuick MOD levereras med både ett ljust och ett mörkt tema. De två varianterna delar samma färgstruktur men inverterar ytans hierarki. Bakgrunder som är ljusa i den ena varianten blir mörka i den andra, och textfärger justeras därefter.
+<!-- --8<-- [end:body-1] -->
 
 ![Jämförelse av ljust och mörkt tema](/docs/sv/Images/Themes/theme-light-dark.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ## Byta tema { #switching-themes }
 
 ### I WideQuick® Designer { #in-widequick-designer }
@@ -44,4 +46,4 @@ Detta gäller även larmstatussfärger. Objekt med aktiva larm visar färger så
 
 * [Konfigurera](configuring.md) — ändra enskilda färger och tilldela färgroller till objekt
 * [Utöka](extending.md) — skapa ett anpassat tema som följer en grafisk profil
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

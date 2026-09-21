@@ -33,3 +33,7 @@ tags:
 ![FullScreen_Toggle](/docs/sv/Images/Navigation/ToggleFullNav.png)
 
 --8<-- "mod/modules/Core/Navigation/get-started.md:body-4"
+
+![FullScreen_Menu](/docs/sv/Images/Navigation/Nav_2Stor.png)
+
+--8<-- "mod/modules/Core/Navigation/get-started.md:body-5"

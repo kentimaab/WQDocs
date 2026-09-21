@@ -49,9 +49,11 @@ Click **Filter** to apply. Click **Clear audit trail** to permanently delete all
 ## Maintenance Change Log { #maintenance-change-log }
 
 Navigate to **History → Logs → Audit trail → Audit Trail - Maintenance**.
+<!-- --8<-- [end:body-2] -->
 
 ![Audit Trail - Maintenance view](/docs/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 This view shows a full history of changes to maintenance tasks. Every status change, deadline update, priority change, assignee change and description edit is recorded automatically. No configuration is needed.
 
 Each row shows:
@@ -75,4 +77,4 @@ Select a row and click **Open** to see the full before/after detail for that cha
 ## Next Steps { #next-steps }
 
 * [Configuring](configuring.md) — choosing which variables to track
-<!-- --8<-- [end:body-2] -->
+<!-- --8<-- [end:body-3] -->

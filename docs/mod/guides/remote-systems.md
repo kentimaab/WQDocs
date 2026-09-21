@@ -11,7 +11,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Remote Systems
 ???+ info "Requirements"
     The following scripts are required to use Remote Systems and all
@@ -73,9 +73,11 @@ Clicking **Add** opens the same fields as in **WideQuick® Designer**.
 ## Navigation { #navigation }
 
 Configured remote systems appear in the **Remote Systems** section at the bottom of the main navigation. Click **Remote Systems** to open the list.
+<!-- --8<-- [end:body-1] -->
 
 ![Remote Systems menu showing connected and disconnected systems](/docs/Images/Remote_System/remote-menu.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 Each entry shows the system name, description, and a connection status icon. The status icon updates in real time — green means connected, red means not connected. If **Auto connect on startup** is enabled, the application reconnects automatically on disconnect according to the **Max reconnect attempts** and **Reconnect delay** settings.
 
 Opening a remote system launches it in a separate client window. The local application remains fully accessible while the remote system is open.
@@ -128,4 +130,4 @@ Alarm aggregation works with any WideQuick application — not just MOD — as l
 
 These are the variables that `scAlarm` maintains in MOD. A non-MOD application that keeps these up to date will be picked up by `scRemoteAlarms` automatically once the remote system connection is established.
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

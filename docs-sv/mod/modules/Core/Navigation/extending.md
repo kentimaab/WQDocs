@@ -7,7 +7,7 @@ last_reviewed: 2026-06-16
 tags:
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Navigation — Utöka
 
@@ -33,9 +33,11 @@ scLinking.goTo("YOUR_OBJECT.NAME");
 
 I exemplet nedan tillämpas `goTo()`-funktionen på en knapps **onClick**-åtgärd
 med målobjektet `MB.AS01.LB02_GT43`:
+<!-- --8<-- [end:body-1] -->
 
 ![goTo](/docs/sv/Images/Navigation/goTO.gif)
 
+<!-- --8<-- [start:body-2] -->
 ### GoTo i Larmgrupper { #goto-in-alarm-groups }
 GoTo kan även integreras i **Larmgrupp** och **LarmLista**, vilket gör det möjligt för användare att
 omedelbart navigera till det objekt som utlöste ett larm och vidta åtgärder.
@@ -57,9 +59,11 @@ visningstext och välj en färg.
 **Använd anpassade larmkolumner**.
 5. Välj kategorin **Åtgärd** — om du trycker på den här kolumnen för ett specifikt larm
 aktiveras GoTo och navigerar till den **Arbetsvy** där larmet uppstod.
+<!-- --8<-- [end:body-2] -->
 
 ![Alarm_Goto](/docs/sv/Images/Navigation/Alarm_goTo.png)
 
+<!-- --8<-- [start:body-3] -->
 !!! note 
     För att kunna använda GoTo-funktionen på larm krävs skriptet `scAlarmFinder`
 
@@ -117,4 +121,4 @@ funktionen `selectImage()` är gemener. Variabeln `base` innehåller sökvägen 
 ikonmappen och `s` innehåller temats suffix, som tillsammans bildar den fullständiga sökvägen till
 rätt SVG-fil. Om ingen identifierare matchar tilldelar det sista `else`-blocket en
 standardikon.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

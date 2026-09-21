@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Kalender — Konfigurering
 
@@ -86,9 +86,11 @@ Variablerna skrivs vid uppstart och uppdateras vid varje synkronisering. Att mar
 Varje importerad fil blir en prenumeration. Alla händelser den bidragit med märks med den, så en import kan byta färg eller tas bort som en enhet utan att påverka händelser som skapats direkt i kalendern eller händelser från en annan fil.
 
 En import avvisas om dess namn eller sökväg matchar en som redan finns. Jämförelsen bortser från omgivande blanksteg och ett avslutande snedstreck.
+<!-- --8<-- [end:body-1] -->
 
 ![Dialogen Importera kalender](/docs/sv/Images/Calendar/import-calendar.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 !!! warning "En importerad fil läses en gång"
     En fil läses vid importtillfället och kontrolleras inte därefter. Att redigera eller byta ut `.ics`-filen på disk uppdaterar inte kalendern. Importera filen igen för att hämta in det nya innehållet.
 
@@ -102,17 +104,21 @@ En import avvisas om dess namn eller sökväg matchar en som redan finns. Jämf�
 **Ändra** öppnar **Ändra kalendrar**, som listar varje import med namn och typ. Välj en för att byta namn med **Byt namn**, ta bort den med **Ta bort**, eller välj en färg i kombinationsrutan och klicka på **Byt färg**. Att ta bort en import raderar dess händelser ur kalendern. Händelser som skapats direkt i kalendern påverkas inte.
 
 Importer skapas med färgen **DEFAULT**.
+<!-- --8<-- [end:body-2] -->
 
 ![Dialogen Ändra kalendrar](/docs/sv/Images/Calendar/edit-calendars.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 **Sync** läser om varje import omedelbart. Eftersom en filimport läses vid importtillfället har detta främst betydelse för att städa upp en befintlig databas, inte för att hämta in nytt innehåll.
 
 ### Välja vilka kalendrar som visas { #choosing-which-calendars-are-shown }
 
 **Filter** öppnar **Kalenderfilter**, som styr vilka importer som ritas i kalendern. Inställningen gäller för alla klienter snarare än för en enskild användare. Händelser som skapats direkt i kalendern visas alltid och påverkas inte av filtret.
+<!-- --8<-- [end:body-3] -->
 
 ![Dialogen Kalenderfilter](/docs/sv/Images/Calendar/calendar-filter.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 Kryssa i de kalendrar som ska visas och klicka på **Tillämpa**.
 
 ## Exportera en kalender { #exporting-a-calendar }
@@ -120,10 +126,12 @@ Kryssa i de kalendrar som ska visas och klicka på **Tillämpa**.
 **Exportera** öppnar **Exportera kalender**. Kryssa i vilka kalendrar som ska ingå, och välj sedan antingen **Generera** för att skriva en `.ics`-fil, eller **Skicka med e-post** för att skicka exporten som en bilaga.
 
 **Egna/interna händelser** listas bredvid importerna, så att händelser som skapats direkt i kalendern kan tas med eller utelämnas separat. Helgdags- och helgdagsaftonshändelser ingår i den gruppen, så ett markerat år kan exporteras och flyttas till en annan installation.
+<!-- --8<-- [end:body-4] -->
 
 ![Dialogen Exportera kalender](/docs/sv/Images/Calendar/export-calendar.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — påminnelsekonfiguration, helgdagsvariablerna och prenumerationstabellen
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-5] -->

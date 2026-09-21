@@ -8,4 +8,8 @@ tags:
  - BMS
 ---
 
---8<-- "mod/guides/remote-systems.md:body"
+--8<-- "mod/guides/remote-systems.md:body-1"
+
+![Menyn Remote Systems med anslutna och frånkopplade system](/docs/sv/Images/Remote_System/remote-menu.png){align=center}
+
+--8<-- "mod/guides/remote-systems.md:body-2"

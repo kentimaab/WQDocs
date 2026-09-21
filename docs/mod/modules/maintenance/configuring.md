@@ -9,7 +9,7 @@ last_reviewed: 2026-05-26
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Maintenance - Configuring
 
@@ -28,15 +28,19 @@ Click **Filter** to open the filter panel:
 * **Responsible** — filter by assigned worker.
 * **System** — filter to show only tasks belonging to a specific system.
 * **Time settings - deadline** — show all tasks regardless of deadline (**All**), or limit to tasks with a deadline within a selected date range (**Time span**).
+<!-- --8<-- [end:body-1] -->
 
 ![Maintenance list with filter panel open](/docs/Images/Maintenance/maintenance-list-filter.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ## Templates { #templates }
 
 Templates allow frequently used maintenance types to be saved and reused. A template stores the maintenance type, priority, default deadline interval and description so that the same information does not need to be entered each time.
+<!-- --8<-- [end:body-2] -->
 
 ![Maint. templates view](/docs/Images/Maintenance/maintenance-templates-view.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 The left panel lists all templates. Selecting one shows its fields on the right:
 
 * **Maintenance template name** — the name shown in the **Type of Maintenance** dropdown when creating a task.
@@ -64,9 +68,11 @@ Each configuration defines:
 * The repeat interval — how often the task recurs
 * The repeat rule — how the next deadline is calculated
 * Whether missed tasks should automatically generate a follow-up
+<!-- --8<-- [end:body-3] -->
 
 ![Recurring maintenance configuration](/docs/Images/Maintenance/maintenance-recurring.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 The view has three panels. The left panel lists all configurations. The middle panel shows the settings for the selected configuration. The right panel is an object tree where the objects this configuration applies to are selected. For equipment that has no tag in the system, use the **Custom object** free-text field at the bottom of the object panel to enter a name manually.
 
 **Creating a configuration:**
@@ -142,4 +148,4 @@ Tasks can be assigned one of four priority levels:
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — calendar integration and troubleshooting
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-4] -->

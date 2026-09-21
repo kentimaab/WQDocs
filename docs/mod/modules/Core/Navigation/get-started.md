@@ -111,11 +111,13 @@ page, a navigation arrow appears in the top left corner to navigate to the next 
 Together these two mechanisms allow the Fullscreen Menu to scale to systems of any 
 size — no matter how many views or directories a project contains, the menu will always 
 remain navigable.
+<!-- --8<-- [end:body-4] -->
 
 ![FullScreen_Menu](/docs/Images/Navigation/Nav_2Stor.png)
 
+<!-- --8<-- [start:body-5] -->
 ## Next Steps { #next-steps }
 
 * [Configuring](configuring.md) — privilege requirements on views and display settings for restricted views
 * [Extending](extending.md) — GoTo function and custom navigation icons
-<!-- --8<-- [end:body-4] -->
+<!-- --8<-- [end:body-5] -->
