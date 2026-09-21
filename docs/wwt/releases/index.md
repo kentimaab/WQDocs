@@ -79,6 +79,7 @@ The WWT concept rebased on the second major release of the WideQuick Modular Fra
 | Area | Description |
 | --- | --- |
 | **Suffix aliases in other languages** | The suffix settings view keys its categories by their Swedish names while the tree shows them translated. Running in any other language, the settings fields therefore resolved to nothing: the controls displayed but silently refused input, and selecting an item no longer filled in the combo boxes and text fields. The displayed label is now resolved back to its canonical key before use. Adding a category also rejects a name that collides with an existing category's translated label, which would otherwise produce two entries that cannot be told apart. |
+| **Recurring maintenance could not be created** | A recurring maintenance configuration could not be created from **Underhåll - Återkommande**. Three of the controls, the interval count, the priority and the assignee, are not live-bound to the configuration object, so the values entered were discarded when the configuration was saved. They are now copied across before saving. `getTemplateFromName()` also returned a template's `deadline_value` in milliseconds while `applyOffset()` expects a count of interval units, which placed the first deadline far outside any usable range. The value is converted to a unit count on read and `deadline_type` is normalised at the same point. Saving a configuration with an empty name, type, description or interval no longer writes a malformed row. |
 
 ### Breaking changes & migration
 
