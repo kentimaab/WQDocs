@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Loggbok — Kom igång
 ???+ info "Krav"
@@ -38,9 +38,11 @@ Välj en post och klicka på **Redigera anteckning** för att öppna den för re
 
 !!! note "Poster arkiveras, de raderas inte"
     Det finns ingen radering av enskilda poster. Den enda åtgärd som permanent tar bort loggboksinnehåll är **ta bort alla arkiverade anteckningar** i inställningsvyn, som rensar samtliga arkiverade poster på en gång. Se [Arkivering](extending.md#archiving).
+<!-- --8<-- [end:body-1] -->
 
 ![Loggboksvy med ämnesträd och postlista](/docs/sv/Images/Logbook/logbook-overview.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ## Byta hur trädet ordnas { #switching-how-the-tree-is-keyed }
 
 Reglaget **Navigera efter arbetsvyer** ovanför trädet växlar mellan de två sätten att ordna samma poster.
@@ -67,9 +69,11 @@ Klicka på **Lägg till anteckning** för att öppna popup-fönstret **Skapa ny 
 Klicka på **Spara** för att spara och fortsätta, eller **Spara & Stäng** för att spara och stänga popup-fönstret. Posten visas omedelbart högst upp i postlistan, och under den nod den hör till i båda trädlägena.
 
 En post som skapas från en nod i trädet placeras på det noden står för. Skapas den från en vynod hamnar den på vyn, och skapas den från en objektnod hamnar den på objektet.
+<!-- --8<-- [end:body-2] -->
 
 ![Popup för att skapa post med namngivna fält](/docs/sv/Images/Logbook/create-entry-popup.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ## Filtrering { #filtering }
 
 Klicka på filterikonen för att öppna panelen **Filtrera loggbok**. Tillgängliga filter:
@@ -81,11 +85,13 @@ Klicka på filterikonen för att öppna panelen **Filtrera loggbok**. Tillgängl
 * **Visa arkiverade** — inkludera arkiverade poster i listan. Arkiverade poster är dolda tills detta aktiveras.
 
 Klicka på **Tillämpa** för att använda filtren, **Rensa filter** för att återställa, eller **Avbryt** för att stänga utan att spara ändringar.
+<!-- --8<-- [end:body-3] -->
 
 ![Filterpanel](/docs/sv/Images/Logbook/logbook-filter.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 ## Nästa steg { #next-steps }
 
 * [Konfigurering](configuring.md) — vad poster placeras på, hur träden byggs, kontexter och åtkomstmönster
 * [Utöka](extending.md) — behörigheter, lagring av ämnet och arkivering
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-4] -->

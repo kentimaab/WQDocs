@@ -16,4 +16,12 @@ Innan du börjar, se till att du har mallprojektet öppet i
 **WideQuick 13.4.1** eller senare. Om inte, se [Ladda ner WideQuick WWT](download.md)
 
 
---8<-- "mod/get-started/Your First Tag.md:body"
+--8<-- "mod/get-started/Your First Tag.md:body-1"
+
+![Suffix Alarm configuration](/docs/sv/Images/First_tag/SuffixAlarm-wwt.gif)
+
+--8<-- "mod/get-started/Your First Tag.md:body-2"
+
+![Suffix Popup configuration](/docs/sv/Images/First_tag/SuffixPopup-wwt.gif)
+
+--8<-- "mod/get-started/Your First Tag.md:body-3"

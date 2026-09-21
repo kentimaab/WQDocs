@@ -9,7 +9,7 @@ last_reviewed: 2026-05-21
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Navigation - Configuring
 This section covers how to configure the Navigation module to fit your needs. This
@@ -33,9 +33,11 @@ a specific view or **Workview** folder, then assign the desired **Privilege** fr
 list. The **Workview** will then only be accessible to users with the correct privilege.
 Privileges can be applied to both individual **Workviews** and entire **Workview**
 folders.
+<!-- --8<-- [end:body-1] -->
 
 ![SettingPriv](/docs/Images/Navigation/SettingPriv.png)
 
+<!-- --8<-- [start:body-2] -->
 !!! note "Encrypted projects"
     If your project is encrypted, **WideQuick** will not be able to suggest privileges.
     Instead, you must type in the name of the **Privilege** manually.
@@ -47,9 +49,11 @@ folders.
 There are several settings controlling how restricted folders are displayed for users
 without the required privilege. These settings can be found under **Settings** in
 **WideQuick® Runtime**.
+<!-- --8<-- [end:body-2] -->
 
 ![DisplayPriv](/docs/Images/Navigation/Display%20priv.png)
 
+<!-- --8<-- [start:body-3] -->
 There are two toggle options: **Show locked menus** and **Show locked submenus**. These
 toggles offer three meaningful combinations. Note that if **Show locked menus** is
 disabled, its submenus will not be shown regardless of the **Show locked submenus**
@@ -66,4 +70,4 @@ setting.
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — GoTo function and custom navigation icons
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

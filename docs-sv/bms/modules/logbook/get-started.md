@@ -8,4 +8,16 @@ tags:
  - BMS
 ---
 
---8<-- "mod/modules/logbook/get-started.md:body"
+--8<-- "mod/modules/logbook/get-started.md:body-1"
+
+![Loggboksvy med ämnesträd och postlista](/docs/sv/Images/Logbook/logbook-overview.png){align=center}
+
+--8<-- "mod/modules/logbook/get-started.md:body-2"
+
+![Popup för att skapa post med namngivna fält](/docs/sv/Images/Logbook/create-entry-popup.png){align=center}
+
+--8<-- "mod/modules/logbook/get-started.md:body-3"
+
+![Filterpanel](/docs/sv/Images/Logbook/logbook-filter.png){align=center}
+
+--8<-- "mod/modules/logbook/get-started.md:body-4"

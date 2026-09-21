@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Inloggningskonfigurationer
 
 Den här guiden beskriver hur du konfigurerar inloggningsskärmen i WideQuick Modular Framework och dess vertikaler. Det inkluderar att konfigurera inloggningskravet, ändra hur användare identifierar sig, anpassa bakgrundsbilden och ange den initiala vyn efter inloggning.
@@ -22,9 +22,11 @@ Som standard krävs inloggning innan användare får tillgång till systemet.
 
 Detta kan inaktiveras genom att stänga av **Kräv inloggning**.
 Gör så här: navigera till **Inställningar** i huvudmenyn och öppna vyn **Inställningar**.
+<!-- --8<-- [end:body-1] -->
 
 ![Require login setting](/docs/sv/Images/Login/require-login.png)
 
+<!-- --8<-- [start:body-2] -->
 När inloggning är inaktiverat hoppas inloggningsskärmen över helt och systemet navigerar
 direkt till den konfigurerade startvyn.
 
@@ -43,9 +45,11 @@ Som standard måste användare ange sitt fullständiga användarnamn vid inloggn
 till en kombinationsruta genom att stänga av **Kräv användarnamn**.
 
 Navigera till **Inställningar** i huvudmenyn och öppna vyn **Inställningar**.
+<!-- --8<-- [end:body-2] -->
 
 ![Require username setting](/docs/sv/Images/Login/require-username.png)
 
+<!-- --8<-- [start:body-3] -->
 När detta är inaktiverat visar inloggningsskärmen en kombinationsruta med alla tillgängliga användare i
 systemet. Användaren väljer sitt namn i listan och anger sedan sitt lösenord som vanligt.
 
@@ -109,4 +113,4 @@ bör vara en **Arbetsvy** som finns i antingen mappen **Main_Menu** eller
     konfigurera olika landningsvyer per användare genom att lägga till flera vyer på
     fliken **Multiviewer** och använda ett laddningsskript för att välja rätt vy baserat på
     den inloggade användaren.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

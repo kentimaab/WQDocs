@@ -8,4 +8,8 @@ tags:
  - BMS
 ---
 
---8<-- "mod/reference/Popup/Process.md:body"
+--8<-- "mod/reference/Popup/Process.md:body-1"
+
+![Process popup](/docs/sv/Images/Popups/Process.png)
+
+--8<-- "mod/reference/Popup/Process.md:body-2"

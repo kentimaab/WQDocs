@@ -145,10 +145,8 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 | `Delta_Week.kvie`, `Delta_Year.kvie` | Nya deltarapportkontroller, med kontroll av vald signal innan en rapport kan skapas |
 | `ReportSchedule2.kvie` | Val av enhet och prefix för schemalagda rapporter |
 | `Reports/Templates/*.xlsx` | Nya mallar `DeltaWeek` och `DeltaYear_H`, omarbetade energirapportmallar |
-| `Schedules.kdat` | Utlösaren för rapportschema korrigerad till `scReportScheduler` |
 | `scCalendar.js` | Månadsvyns överskottsmarkering öppnar dagvyn för det datumet |
 | `scWeekViewManager.js`, `scDayViewManager.js`, `Calendar.klib` | Ihopfällning av händelser i vecka och dag med **Visa händelser (X)** |
-| `Loggers.kdat` | Loggvärdena `*_Effekt` och `*_RPM` borttagna |
 | `Larm - Översikt.kvie` | Objektordning så att felagret täcker vyn |
 | `Translations.klib` | Tillagda strängar, borttagning av döda strängar, verifiering mot svensk basuppsättning |
 

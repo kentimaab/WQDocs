@@ -14,7 +14,7 @@ object_libraries:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Dashboards - Get started
 ???+ info "Requirements"
@@ -34,10 +34,13 @@ tags:
 
 WideQuick MOD comes with three example dashboards that can be used as a starting point or modified to fit a project.
 New Dashboards can be created either from the template or from scratch depending on what the user wants.
+<!-- --8<-- [end:body-1] -->
+
 <figure markdown="span">
     ![Dashboard](/docs/Images/Dashboard/Dashboard.png)  <figcaption>The Energy Dashboard in WideQuick Runtime</figcaption>
 </figure>
 
+<!-- --8<-- [start:body-2] -->
 ## Setting Up a New Dashboard { #setting-up-a-new-dashboard }
 
 Duplicate the dashboard template in **WideQuick® Designer** by right clicking the template in the project tree and move it to the correct folder in the project structure.
@@ -48,9 +51,11 @@ Duplicate the dashboard template in **WideQuick® Designer** by right clicking t
 Dashboards are built using pre-built widgets from the `Dashboard Widgets` library.
 Each widget is designed for a specific type of data and can be placed and
 configured directly without any custom development. Most widgets also exist in different sizes. 
+<!-- --8<-- [end:body-2] -->
 
 ![Widget](/docs/Images/Dashboard/Widget.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ## Grid Layout - Positioning Widgets in the Editor { #grid-layout-positioning-widgets-in-the-editor }
 
 The dashboards in **WideQuick® Designer** uses a 4×4 grid to help with widget placement. Each grid
@@ -69,4 +74,4 @@ Add a widget by dragging it from the `Dashboard Widgets` library onto the dashbo
 
 * [Configuring](configuring.md) — widget reference and parameter details
 * [Extending](extending.md) — custom widgets, design patterns and troubleshooting
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

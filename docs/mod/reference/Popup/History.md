@@ -8,7 +8,7 @@ last_reviewed: 2026-05-29
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # History
 
@@ -16,9 +16,11 @@ The History popup displays a trend graph for the selected object, showing the
 historical values of its logged signals. It is always visible in the Tab menu
 regardless of which suffixes the object has. For more information on how the
 history system works, see [History](../../modules/history/index.md).
+<!-- --8<-- [end:body-1] -->
 
 ![History popup](/docs/Images/Popups/History.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Signals
 
 The **Signals** panel on the right lists all signals belonging to the object that
@@ -59,3 +61,4 @@ Controls the time span displayed in the graph:
 
 * **30 s**, **5 min**, **1 h**, **6 h**
 * **1 day**, **7 days**, **14 days**, **30 days**
+<!-- --8<-- [end:body-2] -->

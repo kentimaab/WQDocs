@@ -8,4 +8,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/reference/Popup/History.md:body"
+--8<-- "mod/reference/Popup/History.md:body-1"
+
+![History popup](/docs/sv/Images/Popups/History-wwt.png)
+
+--8<-- "mod/reference/Popup/History.md:body-2"

@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Navigation — Kom igång
 ???+ info "Krav"
@@ -48,6 +48,7 @@ har modifierats.
 För att skapa en ny vy i menyn, placera en ny **Arbetsvy** inuti en mapp under
 **System**-mappen, som visas i exemplet nedan. Att klicka på denna nod i menyn öppnar
 vyn direkt.
+<!-- --8<-- [end:body-1] -->
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
@@ -57,9 +58,11 @@ vyn direkt.
 
 </div>
 
+<!-- --8<-- [start:body-2] -->
 Om flera **Arbetsvyer** läggs till i samma mapp ändras ikonen i menyn — att klicka på
 den öppnar en undermeny istället, som visas nedan. Ytterligare mappar kan nästlas inuti
 för att bygga ännu djupare navigationsstrukturer.
+<!-- --8<-- [end:body-2] -->
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
@@ -69,6 +72,7 @@ för att bygga ännu djupare navigationsstrukturer.
 
 </div>
 
+<!-- --8<-- [start:body-3] -->
 ## Helskärmsmeny { #fullscreen-menu }
 Helskärmsmenyn ger användarna en omedelbar överblick över katalogstrukturen och
 möjliggör snabb navigering till nästlade vyer. Den kan aktiveras eller inaktiveras i **WideQuick® Runtime** via
@@ -76,9 +80,11 @@ möjliggör snabb navigering till nästlade vyer. Den kan aktiveras eller inakti
 
 Menyn byggs automatiskt utifrån katalogstrukturen i **WideQuick® Designer**, vilket
 innebär att designbeslut som tas där återspeglas direkt i körläget.
+<!-- --8<-- [end:body-3] -->
 
 ![FullScreen_Toggle](/docs/sv/Images/Navigation/ToggleFullNav.png)
 
+<!-- --8<-- [start:body-4] -->
 Helskärmsmenyn är utformad för att visa så många **Arbetsvyer** som möjligt och samtidigt
 förbli organiserad. Layouten följer dessa regler:
 
@@ -108,4 +114,4 @@ menyn alltid att vara navigerbar.
 
 * [Konfigurering](configuring.md) — behörighetskrav på vyer och visningsinställningar för begränsade vyer
 * [Utöka](extending.md) — GoTo-funktion och anpassade navigationsikoner
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-4] -->

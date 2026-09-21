@@ -7,7 +7,7 @@ last_reviewed: 2026-06-16
 tags:
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Dashboards — Kom igång
 ???+ info "Krav"
@@ -28,10 +28,13 @@ tags:
 
 WideQuick MOD levereras med tre exempeldashboards som kan användas som startpunkt eller anpassas för att passa ett projekt.
 Nya dashboards kan skapas antingen från mallen eller från grunden beroende på vad användaren vill.
+<!-- --8<-- [end:body-1] -->
+
 <figure markdown="span">
     ![Dashboard](/docs/sv/Images/Dashboard/Dashboard.png)  <figcaption>Energidashboarden i WideQuick Runtime</figcaption>
 </figure>
 
+<!-- --8<-- [start:body-2] -->
 ## Konfigurera en ny dashboard { #setting-up-a-new-dashboard }
 
 Duplicera dashboardmallen i **WideQuick® Designer** genom att högerklicka på mallen i projektträdet och flytta den till rätt mapp i projektstrukturen.
@@ -42,9 +45,11 @@ Duplicera dashboardmallen i **WideQuick® Designer** genom att högerklicka på 
 Dashboards byggs med färdiga widgets från biblioteket `Dashboard Widgets`.
 Varje widget är utformad för en specifik typ av data och kan placeras och
 konfigureras direkt utan någon egen utveckling. De flesta widgets finns även i olika storlekar.
+<!-- --8<-- [end:body-2] -->
 
 ![Widget](/docs/sv/Images/Dashboard/Widget.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ## Rutnätslayout — placera widgets i redigeraren { #grid-layout-positioning-widgets-in-the-editor }
 
 dashboarderna i **WideQuick® Designer** använder ett 4×4-rutnät som hjälp vid widgetplacering. Varje rutnätsposition markeras med en ellips som fungerar som placeringsguide. Dessa ellipser
@@ -62,4 +67,4 @@ Lägg till en widget genom att dra den från biblioteket `Dashboard Widgets` til
 
 * [Konfigurera](configuring.md) — widgetreferens och parameterdetaljer
 * [Utöka](extending.md) — egna widgets, designmönster och felsökning
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

@@ -8,7 +8,7 @@ last_reviewed: 2026-05-29
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Maintenance
 
@@ -16,9 +16,11 @@ The Maintenance popup displays all maintenance tasks scheduled for the selected
 object. It is always visible in the Tab menu regardless of which suffixes the
 object has. For more information on how the maintenance system works, see
 [Maintenance](../../modules/maintenance/index.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Maintenance popup](/docs/Images/Popups/Maintenance.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Maintenance information
 
 The **Maint. information** list displays all maintenance tasks associated with the
@@ -38,3 +40,4 @@ The following actions are available at the bottom of the popup:
 * **New maint.** — creates a new maintenance task for this object
 * **Edit maintenance** — edits the selected maintenance task
 * **Delete maintenance** — deletes the selected maintenance task
+<!-- --8<-- [end:body-2] -->

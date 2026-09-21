@@ -10,7 +10,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Automatic Scaling
 ???+ info "Requirements"
     The following scripts are required to use Automatic Scaling and all
@@ -35,9 +35,11 @@ Popups do not scale automatically. To scale a popup proportionally to the main v
 ```javascript title="Popup Workview — onLoad"
 scWM.scaleAndPlacePopup(this);
 ```
+<!-- --8<-- [end:body-1] -->
 
 ![Scaled popup centered in the main content area](/docs/Images/Automatic_Scaling/scaling-popup-centered.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 By default the popup is centered within the main content area, excluding the navigation menu. An optional alignment argument positions it along a screen edge instead:
 
 | Alignment | Description |
@@ -86,4 +88,4 @@ var scaledSize = baseSize * factor;
 ```
 
 This is used internally by the map scripts to recalculate element positions when the window resizes.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

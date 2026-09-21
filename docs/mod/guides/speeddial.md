@@ -11,20 +11,24 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Speed Dial
 
 The Speed Dial is a floating action button placed in a workview. It sits collapsed as a single button and expands into a set of icon options when clicked, so a view can offer several actions without giving up permanent screen space to a toolbar.
 
 At rest it shows a single **+** button.
+<!-- --8<-- [end:body-1] -->
 
 ![Speed Dial collapsed](/docs/Images/SpeedDial/speeddial-collapsed.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 Clicking it expands the options and rotates the button to a **×**, which collapses it again.
+<!-- --8<-- [end:body-2] -->
 
 ![Speed Dial expanded, showing the five standard options](/docs/Images/SpeedDial/speeddial-expanded.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 Each option is an icon paired with a function. Because the function is written in the view itself, the same component can drive very different actions from one view to the next: toggling a display setting, opening a popup scoped to the current view, or running any other project script.
 
 The objects live in `Speed Dial.klib`. A Speed Dial holds a maximum of seven options.
@@ -265,4 +269,4 @@ Keep the two arrays aligned. An entry added to one and not the other is the most
 
 !!! tip "Scripts run in the object's context"
     Inside these functions `this` is the option object, so the current view is reached through `this.view`. A function that needs the Speed Dial itself can use `this.parent`.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

@@ -6,4 +6,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/reference/Popup/Process.md:body"
+--8<-- "mod/reference/Popup/Process.md:body-1"
+
+![Process popup](/docs/Images/Popups/Process-wwt.png)
+
+--8<-- "mod/reference/Popup/Process.md:body-2"

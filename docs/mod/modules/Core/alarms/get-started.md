@@ -11,7 +11,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Alarms - Get Started
 ???+ info "Requirements"
@@ -31,33 +31,43 @@ The alarm views are accessible from the **Alarms** section in the main navigatio
 The **Alarm - List** is the primary view for monitoring active alarms. Each row shows the alarm class, alarm text, activation time, alarm name, and which system the alarm originates from. If a **Measure** is configured on the alarm, a link appears in the last column — for example a **Go to alarm** link that navigates directly to the object in the process view.
 
 If `scRemoteAlarms` is running and remote systems are connected, alarms from those systems also appear in the list alongside local alarms.
+<!-- --8<-- [end:body-1] -->
 
 ![Alarm - List view](/docs/Images/Alarms/alarm-list.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Alarm - Overview { #alarm-overview }
 
 The **Alarm - Overview** gives a broader picture of alarm activity. A bar chart shows the number of alarms per day over the last seven days, broken down by alarm class. A pie chart shows the distribution of alarm classes among currently active alarms, with a top-five list of the most frequent alarms. A stats panel on the right shows the current active alarm counts and historical totals for the last 30 days, year to date, and last year.
+<!-- --8<-- [end:body-2] -->
 
 ![Alarm - Overview](/docs/Images/Alarms/alarm-overview.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 The pie chart can be configured by clicking the **gear icon**. Select which alarm groups to include, set the number of days to display, choose whether to group by alarm class or group, and switch the unit between percent and count.
+<!-- --8<-- [end:body-3] -->
 
 ![Alarm - Overview graph settings](/docs/Images/Alarms/alarm-overview-settings.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 ### Alarm - Log { #alarm-log }
 
 The **Alarm - Log** is a historical record of all alarm events, showing alarm class, alarm text, time, alarm name, details, and remote system. Active alarms are highlighted in red.
+<!-- --8<-- [end:body-4] -->
 
 ![Alarm - Log](/docs/Images/Alarms/alarm-log.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 Alarm history can also be exported as a report. See [Reports](../../reports/configuring.md#alarm-report).
 
 ### Alarms - Frequency { #alarms-frequency }
 
 **Alarms - Frequency** lists all alarms ranked by how often they have triggered over a selected time period. Each row shows the total active time and the frequency count alongside the alarm name, text, and class. This helps identify persistent or frequently recurring alarms that may need attention.
+<!-- --8<-- [end:body-5] -->
 
 ![Alarms - Frequency](/docs/Images/Alarms/alarm-frequency.png){align=center}
 
+<!-- --8<-- [start:body-6] -->
 ## Acknowledging alarms { #acknowledging-alarms }
 
 Alarms are acknowledged from the **Alarm - List**. Select an alarm and click **Acknowledge**, or use the acknowledge action directly on the row.
@@ -86,4 +96,4 @@ Objects with active alarms can be configured to display visual feedback — for 
 
 * [Configuring](configuring.md) — creating alarm groups, defining alarms, and setting up notification schedules
 * [Extending](extending.md) — configuring email and SMS for alarm notifications
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-6] -->

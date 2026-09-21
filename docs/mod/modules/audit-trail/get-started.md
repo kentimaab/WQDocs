@@ -11,7 +11,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Audit Trail - Get Started
 ???+ info "Requirements"
@@ -26,9 +26,11 @@ The Audit Trail records changes to selected DataStore variables and maintenance 
 ## Viewing the Log { #viewing-the-log }
 
 Navigate to **History → Logs → Audit trail → Audit trail**.
+<!-- --8<-- [end:body-1] -->
 
 ![Audit trail view](/docs/Images/Audit_Trail/audit-trail-log.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 The log shows all recorded changes with the following columns:
 
 * **Time** — when the change occurred.
@@ -73,4 +75,4 @@ Select a row and click **Open** to see the full before/after detail for that cha
 ## Next Steps { #next-steps }
 
 * [Configuring](configuring.md) — choosing which variables to track
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

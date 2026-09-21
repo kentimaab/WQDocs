@@ -8,20 +8,24 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Säkerhetskopiering och återställning — Konfigurering
 
 ## Återställa en säkerhetskopia { #restoring-a-backup }
 
 Navigera till **Inställningar → Säkerhetskopiering → Återställ**.
+<!-- --8<-- [end:body-1] -->
 
 ![Återställ variabler från säkerhetskopia](/docs/sv/Images/Backup_And_Restore/backup-restore.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 Vyn har tre paneler. Den vänstra panelen listar alla sparade säkerhetskopior med deras skapandedatum. Om du väljer en säkerhetskopia visas dess metadata under panelerna, och den mellersta panelen fylls med de variabler som finns lagrade i den säkerhetskopian.
+<!-- --8<-- [end:body-2] -->
 
 ![Metadata för säkerhetskopia visas under panelerna](/docs/sv/Images/Backup_And_Restore/backup-metadata.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 * **Skapad den** — datum och tid då säkerhetskopian skapades.
 * **Skapad av** — den användare som skapade säkerhetskopian.
 * **Beskrivning** — den beskrivning som angavs vid skapandet.
@@ -38,4 +42,4 @@ Den mellersta panelen stöder samma filter som vyn för att skapa säkerhetskopi
 1. Navigera till **Inställningar → Säkerhetskopiering → Återställ**.
 2. Välj den säkerhetskopia som ska tas bort i den vänstra panelen.
 3. Klicka på **Ta bort säkerhetskopia** och bekräfta. Säkerhetskopian och alla dess lagrade värden tas bort permanent.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

@@ -15,4 +15,12 @@ Den här guiden visar hur du kopplar upp en enskild tagg från start till mål �
 Innan du börjar, se till att du har mallprojektet öppet i **WideQuick 14** eller senare. Om inte, se [Ladda ned WideQuick BMS](download.md)
 
 
---8<-- "mod/get-started/Your First Tag.md:body"
+--8<-- "mod/get-started/Your First Tag.md:body-1"
+
+![Suffix Alarm configuration](/docs/sv/Images/First_tag/SuffixAlarm.gif)
+
+--8<-- "mod/get-started/Your First Tag.md:body-2"
+
+![Suffix Popup configuration](/docs/sv/Images/First_tag/SuffixPopup.gif)
+
+--8<-- "mod/get-started/Your First Tag.md:body-3"

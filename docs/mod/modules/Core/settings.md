@@ -8,15 +8,17 @@ last_reviewed: 2026-05-19
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Settings
 
 The **Settings** view in **WideQuick® Runtime** provides access to all system
 configuration options. Navigate to **Settings** in the main menu and open the
 **Settings** view.
+<!-- --8<-- [end:body-1] -->
 
 ![Settings](/docs/Images/Settings/Settings.png)
 
+<!-- --8<-- [start:body-2] -->
 ---
 
 ## General settings
@@ -142,4 +144,4 @@ Useful for diagnosing issues in production environments.
 **Change GSM settings** to open the configuration dialog. See
 [Alarms — Extending](alarms/extending.md#sms-notifications) for more
 information.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

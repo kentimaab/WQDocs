@@ -19,7 +19,7 @@ project is correctly set up and ready for implementation.
 Before getting started, make sure you have the template project open in
 **WideQuick 14** or later. If not, see [Download WideQuick MOD](download.md)
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 ## Step 1 - Set up a connection
 
@@ -102,9 +102,11 @@ in the tree view and assign `_IO` to the **Suffix** field.
 
 For more information on how the animation system works see
 [Workview Animations](../guides/workview-animations.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Suffix Alarm configuration](/docs/Images/First_tag/SuffixAlarm.gif)
 
+<!-- --8<-- [start:body-2] -->
 ### Configuring the Process popup
 
 The next step is to connect the suffix to the **Process** popup, so that clicking
@@ -116,9 +118,11 @@ This view shows all configured standard popups. To create a custom popup see
 suffix alias in selected category**. When prompted, name the new suffix alias **On**
 for consistency. Then select the **On** alias and assign `_IO` to the **Suffix**
 field.
+<!-- --8<-- [end:body-2] -->
 
 ![Suffix Popup configuration](/docs/Images/First_tag/SuffixPopup.gif)
 
+<!-- --8<-- [start:body-3] -->
 ### Verifying
 
 Navigate to the view containing the motor object and left-click it to open the
@@ -133,4 +137,4 @@ becomes active, confirming that the tag is correctly wired end-to-end.
     matches the properties entered on the `DynTouch` object exactly, including
     capitalisation.
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

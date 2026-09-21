@@ -11,7 +11,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # History - Get started
 ???+ info "Requirements"
@@ -28,9 +28,11 @@ The History module displays logged signal data as interactive line charts. There
 ## The History View { #the-history-view }
 
 The project-wide **History** view is available from the main menu. It shows signals from across the entire project.
+<!-- --8<-- [end:body-1] -->
 
 ![History view with a signal plotted](/docs/Images/History/history-view.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 The view has a chart at the top and three panels at the bottom:
 
 * **Signals** — a tree of all logged signals in the project, grouped by system. Signals are selected here and applied to the chart.
@@ -51,9 +53,11 @@ The second column of the tree shows the line type for each selected signal. Clic
 ## Settings { #settings }
 
 The **Settings** panel controls how the chart looks and how often it updates.
+<!-- --8<-- [end:body-2] -->
 
 ![Settings panel showing toggles and interval controls](/docs/Images/History/history-panels.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 | Setting | Description |
 |---|---|
 | Show legend | Toggles the signal legend in the chart area. |
@@ -75,15 +79,19 @@ The **Settings** panel controls how the chart looks and how often it updates.
 ## View-Specific History { #view-specific-history }
 
 The **SpeedDial** menu on process views includes a button that opens a view-specific history popup. It works exactly like the project-wide view but shows only signals from objects that belong to that view.
+<!-- --8<-- [end:body-3] -->
 
 ![View-specific history popup](/docs/Images/History/history-view-specific.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 Signal selection, time controls, settings and saved signal groups work the same way. Saved signal groups in this popup are stored per view and are separate from project-wide saved groups. You can also import saved groups from other views using **Import groups from views** — see [Importing Groups from Other Views](configuring.md#importing-groups-from-other-views).
 
 Since the view-specific History only shows signals belonging to the current view, you can bring in signals from other views using **Import signals**.
+<!-- --8<-- [end:body-4] -->
 
 ![Import signals dialog with Available on the left and Selected on the right](/docs/Images/History/history-import-signals.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 **To import signals from other views:**
 
 1. Click **Import signals**. A dialog opens showing all signals from all other views, organised by system and object.
@@ -98,9 +106,11 @@ To remove a signal from your selection before importing, select it in the **Sele
 ## Object Popup (History Tab) { #object-popup-history-tab }
 
 Every object in the project has a [**History**](../../reference/Popup/History.md) tab in its popup. Opening the tab shows the logged signals for that object in a chart.
+<!-- --8<-- [end:body-5] -->
 
 ![History tab in an object popup](/docs/Images/History/history-object-popup.png){align=center}
 
+<!-- --8<-- [start:body-6] -->
 Signals that belong to the object but have no logger configured are listed on the right side under **Tags that are not logged**.
 
 The signal list supports keyboard navigation using the **▲** and **▼** buttons. Click **Pick** to select the highlighted signal.
@@ -113,4 +123,4 @@ Click **Apply** to plot the selected signals. Click **Close** to close the popup
 
 * [Configuring](configuring.md) — signal selection, track signal, saved groups and chart settings in detail
 * [Extending](extending.md) — opening the view-specific popup from a script and troubleshooting
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-6] -->

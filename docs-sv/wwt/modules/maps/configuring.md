@@ -8,4 +8,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/modules/maps/configuring.md:body"
+--8<-- "mod/modules/maps/configuring.md:body-1"
+
+![Pin and Cluster](/docs/sv/Images/Map_Indicators/ClusterStatusMap-wwt.gif)
+
+--8<-- "mod/modules/maps/configuring.md:body-2"

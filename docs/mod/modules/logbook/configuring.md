@@ -9,7 +9,7 @@ last_reviewed: 2026-09-15
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Logbook - Configuring
 
@@ -90,9 +90,11 @@ Contexts are named groupings that can be used to categorise entries across topic
 Contexts are managed from the **Change logbook context** popup, opened by clicking **...** next to the Context field when creating or editing an entry. From there, contexts can be added, renamed and deleted. Deleting a context does not delete the entries assigned to it. Those entries remain in the logbook with no context assigned.
 
 When filtering the logbook, selecting a context shows only entries assigned to that context, regardless of topic.
+<!-- --8<-- [end:body-1] -->
 
 ![Context management view](/docs/Images/Logbook/context-management.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ## Access Patterns { #access-patterns }
 
 ### Global { #global }
@@ -104,9 +106,11 @@ The full logbook under **Documents & Logbook → Logbook** shows all entries. Th
 Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md) tab in its popup. Opening this tab selects that object in the tree and lists its entries. New entries created from here are filed against the object automatically.
 
 The rest of the tree stays reachable, so a note on a neighbouring object or on the surrounding view can be read without leaving the popup. Entries can be added and edited from here. Archiving is offered in the global logbook only, since that is where archived entries can be shown again and restored. Archived entries are never listed in an object popup.
+<!-- --8<-- [end:body-2] -->
 
 ![Logbook tab in the object popup](/docs/Images/Logbook/object-popup-logbook.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ### View-Scoped { #view-scoped }
 
 The **SpeedDial** menu on process views includes a button that opens the logbook with the current view selected in the tree. Its entries are listed straight away, together with those of the objects drawn in the view. New entries created from here are filed against the view.
@@ -116,4 +120,4 @@ As in the object popup, the rest of the tree stays reachable from a view-scoped 
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — privileges, topic storage and archiving
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

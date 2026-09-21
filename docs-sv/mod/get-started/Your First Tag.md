@@ -15,7 +15,7 @@ Den här guiden visar hur du kopplar en enskild tagg från start till slut — f
 
 Innan du börjar, se till att du har mallprojektet öppet i **WideQuick 13.4.1** eller senare. Om inte, se [Ladda ner WideQuick MOD](download.md)
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 ## Steg 1 - Konfigurera en anslutning
 
@@ -81,17 +81,21 @@ Starta projektet och navigera till **Inställningar → Suffix → Suffix - Larm
 Suffixaliaset **On** är nu en del av gruppen **4 - Aktiv**. Välj sedan **On** i trädvyn och tilldela `_IO` till fältet **Suffix**.
 
 För mer information om hur animationssystemet fungerar, se [Arbetsvy-animationer](../guides/workview-animations.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Suffix Alarm configuration](/docs/sv/Images/First_tag/SuffixAlarm.gif)
 
+<!-- --8<-- [start:body-2] -->
 ### Konfigurera Processpopupen
 
 Nästa steg är att koppla suffixet till **Process**-popupen, så att ett klick på objektet öppnar popupen och gör det möjligt att styra signalen. Navigera till **Inställningar → Suffix → Suffix - Popups**.
 
 Den här vyn visar alla konfigurerade standardpopups. För att skapa en anpassad popup, se [Skapa ett popup](../guides/create-a-popup.md). Välj **Process** och klicka på **Lägg till nytt suffixalias i vald kategori**. Ge det nya suffixaliaset namnet **On** för konsekvensens skull. Välj sedan aliaset **On** och tilldela `_IO` till fältet **Suffix**.
+<!-- --8<-- [end:body-2] -->
 
 ![Suffix Popup configuration](/docs/sv/Images/First_tag/SuffixPopup.gif)
 
+<!-- --8<-- [start:body-3] -->
 ### Verifiera
 
 Navigera till vyn som innehåller motorobjektet och vänsterklicka på det för att öppna popup-fliken. Välj **Process** — reglaget för signalen `_IO` finns tillgängligt här. Växla den till `true` och kontrollera att det gröna ljuset på motorobjektet aktiveras, vilket bekräftar att taggen är korrekt kopplad från start till slut.
@@ -101,4 +105,4 @@ Navigera till vyn som innehåller motorobjektet och vänsterklicka på det för 
 !!! tip
     Om det gröna ljuset inte visas, kontrollera att taggnamnet i **Taggeditorn** exakt matchar egenskaperna som angetts på objektet `DynTouch`, inklusive versalisering.
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

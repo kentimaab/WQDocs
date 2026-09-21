@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Historik — Konfigurering
 
@@ -28,9 +28,11 @@ Panelen **Följ signal** håller diagrammet centrerat på en specifik signal nä
 ## Sparade signalgrupper { #saved-signal-groups }
 
 Signalgrupper kan sparas och läsas in igen för att slippa välja om samma signaler varje gång. Sparade grupper hanteras från avsnittet **Sparade grupper** i panelen **Följ signal**.
+<!-- --8<-- [end:body-1] -->
 
 ![Panelen Sparade grupper med fältet för gruppnamn, rullgardinsmeny och importknapp](/docs/sv/Images/History/history-saved-signals.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 **Så här sparar du en signalgrupp:**
 
 1. Välj signalerna och klicka på **Använd** så att de visas i diagrammet.
@@ -50,9 +52,11 @@ Signalgrupper kan sparas och läsas in igen för att slippa välja om samma sign
 ### Importera grupper från andra vyer { #importing-groups-from-other-views }
 
 Både den projektövergripande Historiken och den vyspecifika Historiken låter dig importera sparade grupper som skapats i andra vyer. Det gör att du kan återanvända en grupp som sparats i en vy utan att behöva skapa den på nytt.
+<!-- --8<-- [end:body-2] -->
 
 ![Dialogruta för sparade grupper med Alla sparade till vänster och Valda till höger](/docs/sv/Images/History/history-import-groups.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 **Så här importerar du grupper från andra vyer:**
 
 1. Klicka på **Importera grupper från vyer** i avsnittet **Sparade grupper**. En dialogruta öppnas.
@@ -69,4 +73,4 @@ Om du vill ta bort en grupp från ditt urval innan import, väljer du den i den 
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — öppna den vyspecifika popup-rutan från ett skript och felsökning
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

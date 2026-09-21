@@ -8,7 +8,7 @@ last_reviewed: 2026-05-29
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Object Info
 
@@ -16,9 +16,11 @@ The Object Info popup provides a raw list of all signals connected to the select
 object, pulled directly from the Data Store. It is always visible in the Tab menu
 regardless of which suffixes the object has. It is primarily useful for
 troubleshooting and verifying that the correct signals are connected to the object.
+<!-- --8<-- [end:body-1] -->
 
 ![Object Info popup](/docs/Images/Popups/ObjectInfo.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Object information
 
 The table displays all signals belonging to the object with the following columns:
@@ -30,3 +32,4 @@ alias settings
 * **Unit** — the unit of the signal as configured in the suffix alias settings
 * **Variable Type** — the data type of the signal, for example `number` or `boolean`
 * **Tag Description** — the description entered on the tag in the **Tag Editor**
+<!-- --8<-- [end:body-2] -->

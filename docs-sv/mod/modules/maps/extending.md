@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Kartor och indikatorer — Utöka
 
@@ -59,9 +59,11 @@ if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 
 **Alarm**-objektet är nu fullt kopplat till **Kartvyn** och visar
 aktiva larm baserat på vad som för tillfället är synligt på kartan.
+<!-- --8<-- [end:body-1] -->
 
 ![ConnectedAlarm](/docs/sv/Images/Map_Indicators/AlarmConnected.gif)
 
+<!-- --8<-- [start:body-2] -->
 ## Skapa anpassade kartindikatorer { #creating-custom-map-indicators }
 
 Följande avsnitt förklarar de viktigaste koncepten bakom de inbyggda indikatorerna och
@@ -225,3 +227,4 @@ följa samma statushierarki som används av de inbyggda indikatorerna:
     hanteras helt av skriptet `scMap` — kopiering säkerställer att ditt objekt
     identifieras korrekt av `initClusters()` och tillåter samtidigt full
     visuell anpassning.
+<!-- --8<-- [end:body-2] -->

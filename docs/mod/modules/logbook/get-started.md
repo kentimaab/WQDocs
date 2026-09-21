@@ -11,7 +11,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Logbook - Get Started
 ???+ info "Requirements"
@@ -41,9 +41,11 @@ Select an entry and click **Edit note** to open it for editing, or **Archive not
 
 !!! note "Entries are archived, not deleted"
     There is no per-entry delete. The only action that removes logbook content permanently is **delete all archived notes** in the settings view, which clears every archived entry at once. See [Archiving](extending.md#archiving).
+<!-- --8<-- [end:body-1] -->
 
 ![Logbook view with topic tree and entry list](/docs/Images/Logbook/logbook-overview.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ## Switching How the Tree Is Keyed { #switching-how-the-tree-is-keyed }
 
 The toggle labelled **Navigate by workviews** above the tree switches between the two ways of arranging the same entries.
@@ -70,9 +72,11 @@ Click **Add note** to open the **Create new logbook entry** popup. Fill in the f
 Click **Save** to save and continue, or **Save & Close** to save and close the popup. The entry appears immediately at the top of the entry list, and under the node it belongs to in both tree modes.
 
 An entry created from a node in the tree is filed against whatever that node stands for. Creating one from a view node files it on the view, and creating one from an object node files it on the object.
+<!-- --8<-- [end:body-2] -->
 
 ![Create entry popup with fields labeled](/docs/Images/Logbook/create-entry-popup.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ## Filtering { #filtering }
 
 Click the filter icon to open the **Filter logbook** panel. Available filters:
@@ -84,11 +88,13 @@ Click the filter icon to open the **Filter logbook** panel. Available filters:
 * **Show archived** — include archived entries in the list. Archived entries are hidden until this is enabled.
 
 Click **Apply** to apply the filters, **Clear filter** to reset, or **Cancel** to close without changes.
+<!-- --8<-- [end:body-3] -->
 
 ![Filter panel](/docs/Images/Logbook/logbook-filter.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 ## Next Steps { #next-steps }
 
 * [Configuring](configuring.md) — what entries are filed against, how the trees are built, contexts and access patterns
 * [Extending](extending.md) — privileges, topic storage and archiving
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-4] -->

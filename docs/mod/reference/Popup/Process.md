@@ -8,7 +8,7 @@ last_reviewed: 2026-05-29
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Process
 
@@ -18,9 +18,11 @@ one or more of the configured suffix aliases for the Process popup.
 
 For a guide on how to create and configure a custom Process popup, see
 [Create Popup](../../guides/create-a-popup.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Process popup](/docs/Images/Popups/Process.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Values
 
 The **Values** section lists all process signals connected to the object. Each row
@@ -54,3 +56,4 @@ The following suffix aliases are configured for the Process popup by default:
     The default suffix aliases can be modified and extended in
     **Settings → Suffix → Suffix - Popups**. See [Create Popup](../../guides/create-a-popup.md)
     for more information.
+<!-- --8<-- [end:body-2] -->

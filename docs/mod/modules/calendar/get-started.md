@@ -100,7 +100,7 @@ Click **Save** to add the event to the calendar.
 
 ### Marking a holiday { #marking-a-holiday }
 
-Choosing the colour **HOLIDAY** or **HOLIDAYEVE** does more than change how the event looks. It marks the days the event covers as a holiday or a holiday eve, which the calendar publishes to an internal variable that a PLC or DUC can read. An event created with either colour is snapped to whole days automatically, since a day is either a holiday or it is not.
+Choosing the colour **HOLIDAY** or **HOLIDAYEVE** does more than change how the event looks. It marks the days the event covers as a holiday or a holiday eve, which the calendar publishes to an internal variable that a control system can read. An event created with either colour is snapped to whole days automatically, since a day is either a holiday or it is not.
 
 See [Holidays and Holiday Eves](configuring.md#holidays-and-holiday-eves).
 

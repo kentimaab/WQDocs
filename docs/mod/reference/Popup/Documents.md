@@ -8,7 +8,7 @@ last_reviewed: 2026-05-29
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Documents
 
@@ -17,9 +17,11 @@ can be previewed directly in the popup and new documents can be linked from the
 computer. It is always visible in the Tab menu regardless of which suffixes the
 object has. For more information on how the document system works, see
 [Documents](../../modules/documents/index.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Documents popup](/docs/Images/Popups/Documents.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Linked documents
 
 The left panel lists all documents linked to the selected object, grouped under
@@ -36,3 +38,4 @@ The following actions are available at the bottom of the popup:
 the object. The document itself is not deleted from the system.
 * **Edit document links** — opens a dialog to add or manage document links for
 the object, allowing documents from the computer to be linked
+<!-- --8<-- [end:body-2] -->

@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Larm — Konfigurering
 
@@ -70,17 +70,21 @@ Vyn **Alarm - Schedule** styr när och till vem larmnotifieringar skickas via e-
 
 !!! note "Krav"
     Notifieringsscheman kräver att `scAlarmSender` körs samt en konfigurerad e-post- eller SMS-kanal. Se [Utöka](extending.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Vyn Alarm - Schedule](/docs/sv/Images/Alarms/alarm-schedule-view.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Skapa ett schema { #creating-a-schedule }
 
 Klicka på **New schedule** för att öppna skapandeassistenten. Den går igenom tre sidor.
 
 **Steg 1 — När**
+<!-- --8<-- [end:body-2] -->
 
 ![Nytt schema steg 1](/docs/sv/Images/Alarms/alarm-schedule-step-1.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 * **Name** — namn för schemat.
 * **System** — vilket system det här schemat gäller för: det lokala systemet eller ett anslutet fjärrsystem.
 * **Active schedule** — växla för att aktivera eller inaktivera schemat utan att ta bort det.
@@ -90,16 +94,20 @@ Klicka på **New schedule** för att öppna skapandeassistenten. Den går igenom
 !!! note
     Att sätta **To** till `23:59` täcker hela dagen inklusive den sista minuten.
 **Steg 2 — Vad**
+<!-- --8<-- [end:body-3] -->
 
 ![Nytt schema steg 2](/docs/sv/Images/Alarms/alarm-schedule-step-2.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 * **Severity level** — vilka larmklasser som utlöser det här schemat. Lämna tomt för att inkludera alla klasser.
 * **Alarm groups** — vilka larmgrupper som övervakas. Använd **Select all** för att inkludera alla grupper.
 
 **Steg 3 — Vem**
+<!-- --8<-- [end:body-4] -->
 
 ![Nytt schema steg 3](/docs/sv/Images/Alarms/alarm-schedule-step-3.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 * **Subject line** — ämnesrad som används för utgående e-postnotifieringar.
 * **Recipient** — lägg till enskilda e-postadresser eller telefonnummer direkt.
 * **Alias** — välj från konfigurerade alias för att lägga till en grupp mottagare på en gång.
@@ -114,4 +122,4 @@ Klicka på **Delete schedule** för att ta bort det valda schemat.
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — konfigurera e-post och SMS för larmnotifieringar
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-5] -->

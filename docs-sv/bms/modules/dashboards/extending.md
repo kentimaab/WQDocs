@@ -8,4 +8,8 @@ tags:
  - BMS
 ---
 
---8<-- "mod/modules/dashboards/extending.md:body"
+--8<-- "mod/modules/dashboards/extending.md:body-1"
+
+![arbetsvy privileges](/docs/sv/Images/Dashboard/WVPriv.png){align=center}
+
+--8<-- "mod/modules/dashboards/extending.md:body-2"

@@ -11,7 +11,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Documents - Get Started
 ???+ info "Requirements"
@@ -31,9 +31,11 @@ The Documents module is available under **Documents & Logbook -> Documents** in 
 ## Files view { #files-view }
 
 The view is split into two panels. The left panel shows a file tree with two categories: **Local files** and **Online files**. Local files are stored on the server; online files are links to external URLs. The right panel shows the preview for the selected file. On **WideQuick® Web**, a third category appears for files that cannot be opened in the browser.
+<!-- --8<-- [end:body-1] -->
 
 ![Documents Files view](/docs/Images/Documents/documents-list.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 The following actions are available at the bottom of the view:
 
 * **Preview** — opens the selected file in the preview panel.
@@ -49,9 +51,11 @@ The following actions are available at the bottom of the view:
 3. Click the drop zone or drag files into it to add them to the queue.
 4. Optionally click a file name in the queue to rename it before uploading.
 5. Click **Upload files**.
+<!-- --8<-- [end:body-2] -->
 
 ![Upload file tab](/docs/Images/Documents/documents-upload.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 The files are copied to the server and added to the document list under **Local files**.
 
 ## Adding an online resource { #adding-an-online-resource }
@@ -63,9 +67,11 @@ The files are copied to the server and added to the document list under **Local 
 5. Select the file type using the icon selector.
 6. Click **Add**.
 7. Click **Upload files**.
+<!-- --8<-- [end:body-3] -->
 
 ![Online resource tab](/docs/Images/Documents/documents-upload-online.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 The resource is added to the document list under **Online files**. The URL is stored — no file is downloaded to the server.
 
 ## Previewing a document { #previewing-a-document }
@@ -78,4 +84,4 @@ Most file types can be previewed inline — images, PDFs and web pages render di
 
 * [Configuring](configuring.md) — linking documents to objects and keeping files in sync
 * [Extending](extending.md) — privilege reference
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-4] -->

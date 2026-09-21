@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Kartor och indikatorer — Konfigurering
 
@@ -71,9 +71,11 @@ scMap.mapView = this;
 scMap.initClusters(this);
 if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 ```
+<!-- --8<-- [end:body-1] -->
 
 ![Pin and Cluster](/docs/sv/Images/Map_Indicators/ClusterStatusMap.gif)
 
+<!-- --8<-- [start:body-2] -->
 ### Linjer { #lines }
 Linjer är användbara för att visualisera stigar eller rör i en applikation. Eftersom rör sträcker sig över
 flera koordinater kräver de mer konfiguration än andra indikatorer. Linjer finns
@@ -142,4 +144,4 @@ som vilket annat objekt som helst.
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — skapa anpassade kartindikatorer
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

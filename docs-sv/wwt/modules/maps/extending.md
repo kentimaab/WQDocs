@@ -8,4 +8,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/modules/maps/extending.md:body"
+--8<-- "mod/modules/maps/extending.md:body-1"
+
+![ConnectedAlarm](/docs/sv/Images/Map_Indicators/AlarmConnected-wwt.gif)
+
+--8<-- "mod/modules/maps/extending.md:body-2"

@@ -17,4 +17,12 @@ Before getting started, make sure you have the template project open in
 **WideQuick 13.4.1** or later. If not, see [Download WideQuick BMS](download.md)
 
 
---8<-- "mod/get-started/Your First Tag.md:body"
+--8<-- "mod/get-started/Your First Tag.md:body-1"
+
+![Suffix Alarm configuration](/docs/Images/First_tag/SuffixAlarm.gif)
+
+--8<-- "mod/get-started/Your First Tag.md:body-2"
+
+![Suffix Popup configuration](/docs/Images/First_tag/SuffixPopup.gif)
+
+--8<-- "mod/get-started/Your First Tag.md:body-3"

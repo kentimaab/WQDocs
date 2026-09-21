@@ -8,16 +8,18 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Dokument — Utöka
 
 ## Behörigheter { #privileges }
 
 Åtkomst till dokumentåtgärder styrs av behörigheter. Knappar som kräver en behörighet som den aktuella användaren saknar är synliga men inaktiverade. Den behörighet som krävs visas under respektive inaktiverad knapp.
+<!-- --8<-- [end:body-1] -->
 
 ![Dokumentvyn med behörighetsmeddelanden visade på begränsade knappar](/docs/sv/Images/Documents/documents-privileges.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 | Behörighet | Styr |
 |---|---|
 | `Documents_Upload` | **Lägg till dokument** — ladda upp lokala filer och lägg till onlineresurser |
@@ -25,4 +27,4 @@ tags:
 | `Documents_Delete` | **Ta bort dokument** — ta bort ett dokument permanent |
 | `Documents_Sync` | **Synkronisera med lokala filer på servern** — synkronisera dokumentlistan med serverns filsystem |
 | `Documents_Link` | Länka och avlänka dokument inifrån objektets popup |
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

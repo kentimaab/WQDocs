@@ -9,7 +9,7 @@ last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Maps & Indicators - Configuring
 
@@ -72,9 +72,11 @@ scMap.mapView = this;
 scMap.initClusters(this);
 if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 ```
+<!-- --8<-- [end:body-1] -->
 
 ![Pin and Cluster](/docs/Images/Map_Indicators/ClusterStatusMap.gif)
 
+<!-- --8<-- [start:body-2] -->
 ### Lines { #lines }
 Lines are useful for visualising paths or pipes in an application. Since pipes span
 multiple coordinates, they require more configuration than other indicators. Lines come
@@ -165,4 +167,4 @@ as any other object.
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — creating custom map indicators
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

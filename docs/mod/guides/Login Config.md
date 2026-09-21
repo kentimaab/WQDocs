@@ -9,7 +9,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Login configurations
 
 This guide covers how to configure the login screen in WideQuick Modular Framework and its verticals. This includes configuring the login requirement, changing how users identify themselves, customizing
@@ -24,9 +24,11 @@ By default, users are required to log in before accessing the system.
 
 This can be disabled by toggling **Require login** off. 
 To do this: navigate to **Settings** in the main menu and open the **Settings** view.
+<!-- --8<-- [end:body-1] -->
 
 ![Require login setting](/docs/Images/Login/require-login.png)
 
+<!-- --8<-- [start:body-2] -->
 When disabled, the login screen is bypassed entirely and the system navigates
 directly to the configured start **Workview**. 
 
@@ -45,9 +47,11 @@ By default, users must type their full username when logging in. This can be con
 to a combobox by toggling the **Require username** off. 
 
 Navigate to **Settings** in the main menu and open the **Settings** view.
+<!-- --8<-- [end:body-2] -->
 
 ![Require username setting](/docs/Images/Login/require-username.png)
 
+<!-- --8<-- [start:body-3] -->
 When disabled, the login screen displays a combobox showing all available users in
 the system. The user selects their name from the list and still enters their password
 as normal.
@@ -113,4 +117,4 @@ start **Workview** should be a **Workview** located in either the **Main_Menu** 
     configure different landing views per user by adding multiple views to the
     **Multiviewer** tab and using a load script to select the correct view based on
     the logged-in user.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

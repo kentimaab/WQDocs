@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Spårningslogg — Kom igång
 ???+ info "Krav"
@@ -23,9 +23,11 @@ Spårningsloggen registrerar ändringar av valda Datalager-variabler och underh�
 ## Visa loggen { #viewing-the-log }
 
 Navigera till **Historik → Loggar → Spårningslogg → Spårningslogg**.
+<!-- --8<-- [end:body-1] -->
 
 ![Audit trail view](/docs/sv/Images/Audit_Trail/audit-trail-log.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 Loggen visar alla registrerade ändringar med följande kolumner:
 
 * **Tid** — när ändringen gjordes.
@@ -63,4 +65,4 @@ Markera en rad och klicka på **Öppna** för att se det fullständiga detaljern
 ## Nästa steg { #next-steps }
 
 * [Konfigurering](configuring.md) — välja vilka variabler som ska spåras
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

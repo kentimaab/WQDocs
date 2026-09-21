@@ -8,4 +8,8 @@ tags:
  - BMS
 ---
 
---8<-- "mod/reference/Popup/Logbook.md:body"
+--8<-- "mod/reference/Popup/Logbook.md:body-1"
+
+![Logbook popup](/docs/sv/Images/Popups/Logbook.png)
+
+--8<-- "mod/reference/Popup/Logbook.md:body-2"

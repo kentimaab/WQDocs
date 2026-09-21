@@ -5,4 +5,12 @@ tags:
  - BMS
 ---
 
---8<-- "mod/modules/logbook/configuring.md:body"
+--8<-- "mod/modules/logbook/configuring.md:body-1"
+
+![Context management view](/docs/Images/Logbook/context-management.png){align=center}
+
+--8<-- "mod/modules/logbook/configuring.md:body-2"
+
+![Logbook tab in the object popup](/docs/Images/Logbook/object-popup-logbook.png){align=center}
+
+--8<-- "mod/modules/logbook/configuring.md:body-3"

@@ -7,7 +7,7 @@ last_reviewed: 2026-09-15
 tags:
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Loggbok — Konfigurering
 
@@ -88,9 +88,11 @@ Kontexter är namngivna grupperingar som kan användas för att kategorisera pos
 Kontexter hanteras från popup-fönstret **Ändra loggbokskontext**, som öppnas genom att klicka på **...** bredvid fältet Kontext när en post skapas eller redigeras. Därifrån kan kontexter läggas till, byta namn och tas bort. Om en kontext tas bort raderas inte de poster som tillhör den. Dessa poster finns kvar i loggboken utan tilldelad kontext.
 
 Vid filtrering i loggboken visas, när en kontext väljs, enbart poster tilldelade den kontexten oavsett ämne.
+<!-- --8<-- [end:body-1] -->
 
 ![Vy för kontexthantering](/docs/sv/Images/Logbook/context-management.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ## Åtkomstmönster { #access-patterns }
 
 ### Globalt { #global }
@@ -102,9 +104,11 @@ Den fullständiga loggboken under **Dokument & Loggbok → Loggbok** visar alla 
 Varje objekt i projektet har en flik [**Loggbok**](../../reference/Popup/Logbook.md) i sitt popup-fönster. När fliken öppnas markeras objektet i trädet och dess poster listas. Nya poster som skapas härifrån placeras automatiskt på objektet.
 
 Resten av trädet är fortfarande nåbart, så en anteckning på ett angränsande objekt eller på den omgivande vyn kan läsas utan att popup-fönstret lämnas. Poster kan läggas till och redigeras härifrån. Arkivering erbjuds endast i den globala loggboken, eftersom det är där arkiverade poster kan visas igen och återställas. Arkiverade poster listas aldrig i ett objektpopup.
+<!-- --8<-- [end:body-2] -->
 
 ![Loggboksfliken i objektets popup-fönster](/docs/sv/Images/Logbook/object-popup-logbook.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ### Vybegränsad { #view-scoped }
 
 Menyn **SpeedDial** i processvyer innehåller en knapp som öppnar loggboken med den aktuella vyn markerad i trädet. Vyns poster listas direkt, tillsammans med posterna för de objekt som är ritade i den. Nya poster som skapas härifrån placeras på vyn.
@@ -114,4 +118,4 @@ Precis som i objektpopupen är resten av trädet nåbart från en vybegränsad l
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — behörigheter, lagring av ämnet och arkivering
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

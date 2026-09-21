@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Dokument
 
@@ -16,9 +16,11 @@ Popup-fönstret Dokument visar alla dokument som är länkade till det valda obj
 kan förhandsgranskas direkt i popup-fönstret och nya dokument kan länkas från
 datorn. Det är alltid synligt i flikmenyn oavsett vilka suffix objektet har. För mer information om hur dokumentsystemet fungerar, se
 [Dokument](../../modules/documents/index.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Documents popup](/docs/sv/Images/Popups/Documents.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Länkade dokument
 
 Den vänstra panelen listar alla dokument som är länkade till det valda objektet, grupperade under
@@ -34,3 +36,4 @@ Följande åtgärder är tillgängliga längst ned i popup-fönstret:
 objektet. Dokumentet tas inte bort från systemet.
 * **Redigera dokumentlänkar** — öppnar en dialog för att lägga till eller hantera dokumentlänkar för
 objektet, vilket gör det möjligt att länka dokument från datorn
+<!-- --8<-- [end:body-2] -->

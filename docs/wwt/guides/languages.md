@@ -5,4 +5,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/guides/languages.md:body"
+--8<-- "mod/guides/languages.md:body-1"
+
+![The Set lang button](/docs/Images/Languages/set-lang-wwt.png){align=center}
+
+--8<-- "mod/guides/languages.md:body-2"

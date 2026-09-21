@@ -11,7 +11,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Backup and Restore - Get Started
 ???+ info "Requirements"
@@ -32,15 +32,19 @@ A backup captures the values of the selected variables at the moment **Create ba
 ## Creating a Backup { #creating-a-backup }
 
 Navigate to **Settings → Backup → Create**.
+<!-- --8<-- [end:body-1] -->
 
 ![Variable backup view](/docs/Images/Backup_And_Restore/backup-create.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 The view has two panels. The left panel lists all available Data Store variables with their current values. The right panel shows the variables that will be included in the backup.
 
 Type in the filter field at the top of the left panel to narrow the variable tree. Click **X** to clear the filter.
+<!-- --8<-- [end:body-2] -->
 
 ![Filtering the variable tree](/docs/Images/Backup_And_Restore/backup-filter.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 1. Browse or filter the left panel to find the variables to include.
 2. Double-click a variable, or select it and click **>**, to move it to the right panel.
 3. Enter a name in the **Backup name** field. The name must be unique.
@@ -54,4 +58,4 @@ To clear the right panel without creating a backup, click **Clear added variable
 ## Next Steps { #next-steps }
 
 * [Configuring](configuring.md) — restoring and deleting backups
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

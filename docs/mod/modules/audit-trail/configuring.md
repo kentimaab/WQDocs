@@ -9,16 +9,18 @@ last_reviewed: 2026-06-08
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Audit Trail - Configuring
 
 ## Configuring Variables to Track { #configuring-variables-to-track }
 
 Navigate to **History → Logs → Audit trail → Audit Trail - Settings**.
+<!-- --8<-- [end:body-1] -->
 
 ![Audit Trail - Settings view](/docs/Images/Audit_Trail/audit-trail-settings.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 The view has two panels. The left panel shows all available Data Store variables. The right panel shows the variables currently being tracked.
 
 To start tracking a variable, select it in the left panel and click the **>** button. To stop tracking a variable, select it in the right panel and click the **<** button. Variables can also be added/removed by double-clicking.
@@ -27,4 +29,4 @@ Variables can be added at any level of the Data Store tree. Selecting a parent n
 
 !!! warning
     Avoid tracking variables that change continuously, such as measured values and sensor readings. This will generate a very large number of log entries and make the log difficult to use. The Audit Trail is intended for variables that change infrequently and deliberately, such as setpoints, control signals, and configuration values.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

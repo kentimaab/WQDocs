@@ -9,7 +9,7 @@ last_reviewed: 2026-05-26
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Dashboards - Extending
 
@@ -48,9 +48,11 @@ To understand how a widget handles signals, properties or layout, double-click i
 ### Setting View Privileges { #setting-view-privileges }
 
 View privileges restrict which users can access a given dashboard. Set them at runtime by navigating to **Main Menu → Settings → Workview Privileges**. Select the workview from the tree on the left, then set the required privilege level in the **Privilege** dropdown on the right.
+<!-- --8<-- [end:body-1] -->
 
 ![Workview privileges](/docs/Images/Dashboard/WVPriv.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Setting Default View per Role { #setting-default-view-per-role }
 
 To set a different default dashboard per role, add the logic to the `onLoad` script of the `Workspace.kvie` workview in **WideQuick® Designer**. Use `_sys_user_name` to match a specific user or `System.currentUser().hasPrivilege()` to match a privilege level.
@@ -67,4 +69,4 @@ if (System.currentUser().hasPrivilege("Config")){
 
 ---
 
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

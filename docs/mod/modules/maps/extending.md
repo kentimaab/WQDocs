@@ -9,7 +9,7 @@ last_reviewed: 2026-05-19
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Maps & Indicators - Extending
 
@@ -62,9 +62,11 @@ if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 
 The **Alarm** object is now fully linked to the **Map View** and will display
 active alarms based on what is currently visible on the map.
+<!-- --8<-- [end:body-1] -->
 
 ![ConnectedAlarm](/docs/Images/Map_Indicators/AlarmConnected.gif)
 
+<!-- --8<-- [start:body-2] -->
 ## Creating custom map indicators { #creating-custom-map-indicators }
 
 The following sections explain the key concepts behind the built-in indicators and
@@ -231,3 +233,4 @@ follow the same status hierarchy used by the built-in indicators:
     clustering logic is handled entirely by the `scMap` script — copying ensures
     your object is correctly identified by `initClusters()` while allowing full
     visual customisation.
+<!-- --8<-- [end:body-2] -->

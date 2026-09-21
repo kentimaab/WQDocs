@@ -8,16 +8,18 @@ last_reviewed: 2026-05-29
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Tab
 
 The Tab popup is the default popup that opens when a `DynTouch` object is clicked.
 It acts as a navigation hub for all other popups available for that object, and
 provides an immediate overview of the object's current status.
+<!-- --8<-- [end:body-1] -->
 
 ![Tab popup](/docs/Images/Popups/Tab.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Menu
 
 The **Menu** section at the top displays a button for each popup available for the
@@ -68,3 +70,4 @@ Below the alarm statistics, a summary of the object's maintenance status is show
 * **Number of missed maintenance tasks**
 
 These values are also derived automatically from the object's tag name.
+<!-- --8<-- [end:body-2] -->

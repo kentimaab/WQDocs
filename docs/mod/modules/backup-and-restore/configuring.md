@@ -9,20 +9,24 @@ last_reviewed: 2026-06-08
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Backup and Restore - Configuring
 
 ## Restoring a Backup { #restoring-a-backup }
 
 Navigate to **Settings → Backup → Restore**.
+<!-- --8<-- [end:body-1] -->
 
 ![Restore variables from backup view](/docs/Images/Backup_And_Restore/backup-restore.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 The view has three panels. The left panel lists all saved backups with their creation date. Selecting a backup shows its metadata below the panels and populates the middle panel with the variables stored in that backup.
+<!-- --8<-- [end:body-2] -->
 
 ![Backup metadata shown below the panels](/docs/Images/Backup_And_Restore/backup-metadata.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 * **Created on** — the date and time the backup was created.
 * **Created By** — the user who created the backup.
 * **Description** — the description entered at the time of creation.
@@ -39,4 +43,4 @@ The middle panel supports the same filter as the create view. Type in the filter
 1. Navigate to **Settings → Backup → Restore**.
 2. Select the backup to delete from the left panel.
 3. Click **Delete backup** and confirm. The backup and all its stored values are permanently removed.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

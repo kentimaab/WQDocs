@@ -9,7 +9,7 @@ last_reviewed: 2026-05-27
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # History - Configuring
 
@@ -29,9 +29,11 @@ The **Track signal** panel keeps the chart centred on a specific signal as its v
 ## Saved Signal Groups { #saved-signal-groups }
 
 Signal groups can be saved and reloaded to avoid re-selecting the same signals each time. Saved groups are managed from the **Saved groups** section in the **Track signal** panel.
+<!-- --8<-- [end:body-1] -->
 
 ![Saved groups panel showing the group name field, dropdown, and import button](/docs/Images/History/history-saved-signals.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 **To save a signal group:**
 
 1. Select the signals and click **Apply** so they are visible in the chart.
@@ -51,9 +53,11 @@ Signal groups can be saved and reloaded to avoid re-selecting the same signals e
 ### Importing Groups from Other Views { #importing-groups-from-other-views }
 
 Both the project-wide History and the view-specific History let you import saved groups that were created in other views. This lets you reuse a group saved in one view without having to recreate it.
+<!-- --8<-- [end:body-2] -->
 
 ![Saved groups dialog with All saved on the left and Selected on the right](/docs/Images/History/history-import-groups.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 **To import groups from other views:**
 
 1. Click **Import groups from views** in the **Saved groups** section. A dialog opens.
@@ -70,4 +74,4 @@ To remove a group from your selection before importing, select it in the right p
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — opening the view-specific popup from a script and troubleshooting
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

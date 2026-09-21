@@ -7,7 +7,7 @@ last_reviewed: 2026-06-16
 tags:
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Dashboards — Utöka
 
@@ -46,9 +46,11 @@ För att förstå hur en widget hanterar signaler, egenskaper eller layout dubbe
 ### Ange visningsbehörigheter { #setting-view-privileges }
 
 Visningsbehörigheter begränsar vilka användare som har åtkomst till en given dashboard. Ange dem vid körning genom att navigera till **Huvudmeny → Inställningar → Arbetsvy Privileges**. Välj Arbetsvyn från trädet till vänster och ange sedan den nödvändiga behörighetsnivån i listrutan **Privilege** till höger.
+<!-- --8<-- [end:body-1] -->
 
 ![arbetsvy privileges](/docs/sv/Images/Dashboard/WVPriv.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Ange standardvy per roll { #setting-default-view-per-role }
 
 För att ange en annan standarddashboard per roll lägger du till logiken i `onLoad`-skriptet för Arbetsvyn `Workspace.kvie` i **WideQuick® Designer**. Använd `_sys_user_name` för att matcha en specifik användare eller `System.currentUser().hasPrivilege()` för att matcha en behörighetsnivå.
@@ -64,4 +66,4 @@ if (System.currentUser().hasPrivilege("Config")){
 ```
 
 ---
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

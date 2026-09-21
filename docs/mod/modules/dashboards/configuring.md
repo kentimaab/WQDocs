@@ -8,7 +8,7 @@ last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Dashboards - Configuring
 
@@ -36,9 +36,11 @@ Widgets that display a signal legend automatically handle overflow. When there a
 ### Alarm Status { #alarm-status }
 
 Displays alarm counts — total, acknowledged and unacknowledged.
+<!-- --8<-- [end:body-1] -->
 
 ![Alarm Status](/docs/Images/Dashboard/AlarmStatus.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 **Parameters**
 
 * `Grupp` — Filter alarms by group name. Leave empty to show all alarms.
@@ -48,9 +50,11 @@ Displays alarm counts — total, acknowledged and unacknowledged.
 ### Alarm Row { #alarm-row }
 
 A compact single-row alarm indicator. Intended to sit at the top or bottom of a dashboard as a thin status band.
+<!-- --8<-- [end:body-2] -->
 
 ![Alarm Row](/docs/Images/Dashboard/AlarmRow.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 **Parameters**
 
 * `Grupper` — Filter alarms by group name. Leave empty to show all alarms.
@@ -60,9 +64,11 @@ A compact single-row alarm indicator. Intended to sit at the top or bottom of a 
 ### Alarm List { #alarm-list }
 
 Displays currently active alarms in a scrollable list.
+<!-- --8<-- [end:body-3] -->
 
 ![Alarm List](/docs/Images/Dashboard/AlarmList.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 **Parameters**
 
 * `Grupper` — Filter alarms by group name. Leave empty to show all alarms.
@@ -72,9 +78,11 @@ Displays currently active alarms in a scrollable list.
 ### Alarm Log { #alarm-log }
 
 Displays historical alarms in a scrollable list.
+<!-- --8<-- [end:body-4] -->
 
 ![Alarm Log](/docs/Images/Dashboard/AlarmLog.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 **Parameters**
 
 * `Grupper` — Filter alarms by group name. Leave empty to show all alarms.
@@ -84,9 +92,11 @@ Displays historical alarms in a scrollable list.
 ### Alarm Frequency { #alarm-frequency }
 
 Displays how often alarms have been triggered.
+<!-- --8<-- [end:body-5] -->
 
 ![Alarm Frequency](/docs/Images/Dashboard/AlarmFrequency.png){align=center}
 
+<!-- --8<-- [start:body-6] -->
 **Parameters**
 
 * `Grupper` — Filter alarms by group name. Leave empty to show all alarms.
@@ -96,17 +106,21 @@ Displays how often alarms have been triggered.
 ### Alarm Graph { #alarm-graph }
 
 A larger alarm trend and distribution graph. Suited for dashboards where alarm analysis is a primary focus.
+<!-- --8<-- [end:body-6] -->
 
 ![Alarm Graph](/docs/Images/Dashboard/AlarmGraph.png){align=center}
 
+<!-- --8<-- [start:body-7] -->
 ---
 
 ### History { #history }
 
 Displays historical signal values as a trend graph. The legend shows current values with units and decimal precision.
+<!-- --8<-- [end:body-7] -->
 
 ![History](/docs/Images/Dashboard/History.png){align=center}
 
+<!-- --8<-- [start:body-8] -->
 The **From** and **To** fields at the top of the dashboard set the time range. How that range is applied depends on which button is used:
 
 * **Apply** — applies the From/To range to all History widget instances on the dashboard.
@@ -122,21 +136,27 @@ The **From** and **To** fields at the top of the dashboard set the time range. H
 ### Key Value { #key-value }
 
 Displays a single live value with its configured unit and decimal precision. Accepts any value in Data Store — internal variables, driver signals and System variables.
+<!-- --8<-- [end:body-8] -->
 
 ![Key Value](/docs/Images/Dashboard/KeyValue.png){align=center}
 
+<!-- --8<-- [start:body-9] -->
 **Parameters**
+<!-- --8<-- [end:body-9] -->
 
 * `KeyValue` — Direct variable reference (not a string). Enter the variable path without quotes: `MB.AS01.LB01_P`, not `"MB.AS01.LB01_P"`.
 
+<!-- --8<-- [start:body-10] -->
 ---
 
 ### Signal Value Display { #signal-value-display }
 
 Displays current live values for one or more signals. Automatically resolves units and decimal precision from Data Store.
+<!-- --8<-- [end:body-10] -->
 
 ![Signal Value Display](/docs/Images/Dashboard/SignalValueDisplay.png){align=center}
 
+<!-- --8<-- [start:body-11] -->
 **Parameters**
 
 * `Signaler` — Signal path or array of signal paths to display.
@@ -146,9 +166,11 @@ Displays current live values for one or more signals. Automatically resolves uni
 ### Pie Chart { #pie-chart }
 
 Displays real-time signal distribution as a pie chart. Includes an expand button that opens a fullscreen view.
+<!-- --8<-- [end:body-11] -->
 
 ![Pie Chart](/docs/Images/Dashboard/PieChart.png){align=center}
 
+<!-- --8<-- [start:body-12] -->
 **Parameters**
 
 * `Signaler` — Array of signal paths to display.
@@ -158,9 +180,11 @@ Displays real-time signal distribution as a pie chart. Includes an expand button
 ### Bar Chart { #bar-chart }
 
 Displays signal value comparisons as a bar chart across configurable time periods. Suited for energy comparisons over time. Includes an expand button that opens a fullscreen view.
+<!-- --8<-- [end:body-12] -->
 
 ![Bar Chart](/docs/Images/Dashboard/Widget.png){align=center}
 
+<!-- --8<-- [start:body-13] -->
 **Parameters**
 
 * `Signaler` — Array of signal paths to display.
@@ -181,9 +205,11 @@ Displays signal value comparisons as a bar chart across configurable time period
 ### Gauge { #gauge }
 
 Displays a single live value as a dial against a configured range, with an optional warning band. The value is shown in the centre with its unit, the range ends are labelled at each side, and the signal path is shown below. Two sizes are available: `Gauge_1x1` occupies a single grid cell and `Gauge_2x2` a two-by-two block.
+<!-- --8<-- [end:body-13] -->
 
 ![Gauge widget](/docs/Images/Dashboard/Gauge.png){align=center}
 
+<!-- --8<-- [start:body-14] -->
 **Parameters**
 
 * `Signal` — The signal path to display.
@@ -197,10 +223,12 @@ Displays a single live value as a dial against a configured range, with an optio
 ### Maintenance { #maintenance }
 
 Displays maintenance task status — active, planned and missed tasks. Connects directly to the maintenance module. No signal input required.
+<!-- --8<-- [end:body-14] -->
 
 ![Maintenance](/docs/Images/Dashboard/Maintenance.png){align=center}
 
+<!-- --8<-- [start:body-15] -->
 ## Next Steps { #next-steps }
 
 * [Extending](extending.md) — custom widgets, design patterns and troubleshooting
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-15] -->

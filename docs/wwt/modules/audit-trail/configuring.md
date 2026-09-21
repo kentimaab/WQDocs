@@ -5,4 +5,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/modules/audit-trail/configuring.md:body"
+--8<-- "mod/modules/audit-trail/configuring.md:body-1"
+
+![Audit Trail - Settings view](/docs/Images/Audit_Trail/audit-trail-settings-wwt.png){align=center}
+
+--8<-- "mod/modules/audit-trail/configuring.md:body-2"

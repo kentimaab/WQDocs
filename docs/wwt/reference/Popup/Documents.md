@@ -6,4 +6,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/reference/Popup/Documents.md:body"
+--8<-- "mod/reference/Popup/Documents.md:body-1"
+
+![Documents popup](/docs/Images/Popups/Documents-wwt.png)
+
+--8<-- "mod/reference/Popup/Documents.md:body-2"

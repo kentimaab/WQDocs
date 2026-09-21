@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Larm — Kom igång
 ???+ info "Krav"
@@ -29,33 +29,43 @@ Larmvyerna nås från avsnittet **Larm** i huvudnavigeringen.
 **Larm - Lista** är den primära vyn för att övervaka aktiva larm. Varje rad visar larmklass, larmtext, aktiveringstid, larmnamn och vilket system larmet härstammar från. Om ett **Mätvärde** är konfigurerat på larmet visas en länk i den sista kolumnen — till exempel en **Gå till larm**-länk som navigerar direkt till objektet i processvyn.
 
 Om `scRemoteAlarms` körs och fjärrsystem är anslutna visas även larm från dessa system i listan tillsammans med lokala larm.
+<!-- --8<-- [end:body-1] -->
 
 ![Alarm - List view](/docs/sv/Images/Alarms/alarm-list.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 ### Larm - Översikt { #alarm-overview }
 
 **Larm - Översikt** ger en bredare bild av larmaktiviteten. Ett stapeldiagram visar antalet larm per dag under de senaste sju dagarna, uppdelat efter larmklass. Ett cirkeldiagram visar fördelningen av larmklasser bland aktuellt aktiva larm, med en topp-fem-lista över de vanligaste larmen. En statistikpanel till höger visar aktuellt antal aktiva larm samt historiska totaler för de senaste 30 dagarna, hittills i år och föregående år.
+<!-- --8<-- [end:body-2] -->
 
 ![Alarm - Overview](/docs/sv/Images/Alarms/alarm-overview.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 Cirkeldiagrammet kan konfigureras genom att klicka på **kugghjulsikonen**. Välj vilka larmgrupper som ska inkluderas, ange antalet dagar som ska visas, välj om grupperingen ska ske efter larmklass eller grupp, och växla enheten mellan procent och antal.
+<!-- --8<-- [end:body-3] -->
 
 ![Alarm - Overview graph settings](/docs/sv/Images/Alarms/alarm-overview-settings.png){align=center}
 
+<!-- --8<-- [start:body-4] -->
 ### Larm - Logg { #alarm-log }
 
 **Larm - Logg** är ett historiskt register över alla larmhändelser och visar larmklass, larmtext, tid, larmnamn, detaljer och fjärrsystem. Aktiva larm markeras i rött.
+<!-- --8<-- [end:body-4] -->
 
 ![Alarm - Log](/docs/sv/Images/Alarms/alarm-log.png){align=center}
 
+<!-- --8<-- [start:body-5] -->
 Larmhistorik kan också exporteras som en rapport. Se [Rapporter](../../reports/configuring.md#alarm-report).
 
 ### Larm - Frekvens { #alarms-frequency }
 
 **Larm - Frekvens** listar alla larm rangordnade efter hur ofta de har utlösts under en vald tidsperiod. Varje rad visar den totala aktiva tiden och frekvensantalet tillsammans med larmnamn, larmtext och larmklass. Detta hjälper till att identifiera beständiga eller ofta återkommande larm som kan behöva åtgärdas.
+<!-- --8<-- [end:body-5] -->
 
 ![Alarms - Frequency](/docs/sv/Images/Alarms/alarm-frequency.png){align=center}
 
+<!-- --8<-- [start:body-6] -->
 ## Kvittera larm { #acknowledging-alarms }
 
 Larm kvitteras från **Larm - Lista**. Välj ett larm och klicka på **Kvittera**, eller använd kvitteringsåtgärden direkt på raden.
@@ -84,4 +94,4 @@ Objekt med aktiva larm kan konfigureras att visa visuell återkoppling — till 
 
 * [Konfigurering](configuring.md) — skapa larmgrupper, definiera larm och konfigurera notifieringsscheman
 * [Utöka](extending.md) — konfigurera e-post och SMS för larmnotifieringar
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-6] -->

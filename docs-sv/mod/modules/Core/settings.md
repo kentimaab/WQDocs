@@ -8,15 +8,17 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Inställningar
 
 Vyn **Inställningar** i **WideQuick® Runtime** ger tillgång till alla
 systemkonfigurationsalternativ. Navigera till **Inställningar** i huvudmenyn och
 öppna vyn **Inställningar**.
+<!-- --8<-- [end:body-1] -->
 
 ![Settings](/docs/sv/Images/Settings/Settings.png)
 
+<!-- --8<-- [start:body-2] -->
 ---
 
 ## Allmänna inställningar
@@ -142,4 +144,4 @@ Användbart för att diagnostisera problem i produktionsmiljöer.
 på **Ändra GSM-inställningar** för att öppna konfigurationsdialogen. Se
 [Larm — Utöka](alarms/extending.md#sms-notifications) för mer
 information.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

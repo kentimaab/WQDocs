@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Underhåll
 
@@ -16,9 +16,11 @@ Underhållspopupen visar alla underhållsuppgifter som är schemalagda för det 
 objektet. Den är alltid synlig i flikmenyn oavsett vilka suffix objektet har. För
 mer information om hur underhållssystemet fungerar, se
 [Underhåll](../../modules/maintenance/index.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Maintenance popup](/docs/sv/Images/Popups/Maintenance.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Underhållsinformation
 
 Listan **Underhållsinformation** visar alla underhållsuppgifter som är kopplade till
@@ -38,3 +40,4 @@ Följande åtgärder är tillgängliga längst ned i popupen:
 * **Ny underhållsuppgift** — skapar en ny underhållsuppgift för detta objekt
 * **Redigera underhåll** — redigerar den valda underhållsuppgiften
 * **Ta bort underhåll** — tar bort den valda underhållsuppgiften
+<!-- --8<-- [end:body-2] -->

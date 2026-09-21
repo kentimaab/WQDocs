@@ -7,7 +7,7 @@ last_reviewed: 2026-06-16
 tags:
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Process
 
@@ -17,9 +17,11 @@ matchar ett eller flera av de konfigurerade suffixaliasen för Process-popupen.
 
 För en guide om hur du skapar och konfigurerar en anpassad Process-popup, se
 [Skapa popup](../../guides/create-a-popup.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Process popup](/docs/sv/Images/Popups/Process.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Värden
 
 Avsnittet **Värden** listar alla processsignaler kopplade till objektet. Varje rad
@@ -53,3 +55,4 @@ Följande suffixalias är konfigurerade för Process-popupen som standard:
     Standardsuffixaliasen kan ändras och utökas i
     **Inställningar → Suffix → Suffix - Popups**. Se [Skapa popup](../../guides/create-a-popup.md)
     för mer information.
+<!-- --8<-- [end:body-2] -->

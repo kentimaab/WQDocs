@@ -8,19 +8,23 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Speed Dial
 
 Speed Dial är en flytande åtgärdsknapp som placeras i en arbetsvy. Den ligger hopfälld som en enda knapp och fälls ut till en uppsättning ikonalternativ när den klickas, så att en vy kan erbjuda flera åtgärder utan att permanent ta upp skärmyta med ett verktygsfält.
 
 I viloläge visas en enda **+**-knapp.
+<!-- --8<-- [end:body-1] -->
 
 ![Speed Dial hopfälld](/docs/sv/Images/SpeedDial/speeddial-collapsed.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 Ett klick fäller ut alternativen och roterar knappen till ett **×**, som fäller ihop den igen.
+<!-- --8<-- [end:body-2] -->
 
 ![Speed Dial utfälld, med de fem standardalternativen](/docs/sv/Images/SpeedDial/speeddial-expanded.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 Varje alternativ är en ikon kopplad till en funktion. Eftersom funktionen skrivs i själva vyn kan samma komponent driva helt olika åtgärder från en vy till nästa: växla en visningsinställning, öppna en popup begränsad till den aktuella vyn eller köra vilket annat projektskript som helst.
 
 Objekten finns i `Speed Dial.klib`. En Speed Dial rymmer högst sju alternativ.
@@ -260,4 +264,4 @@ Håll de två arrayerna i linje med varandra. En post som läggs till i den ena 
 
 !!! tip "Skripten körs i objektets kontext"
     Inuti dessa funktioner är `this` alternativobjektet, så den aktuella vyn nås via `this.view`. En funktion som behöver själva Speed Dial kan använda `this.parent`.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

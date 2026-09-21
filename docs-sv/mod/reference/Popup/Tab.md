@@ -7,16 +7,18 @@ last_reviewed: 2026-06-16
 tags:
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Flik
 
 Flik-popupen är den standardpopup som öppnas när ett `DynTouch`-objekt klickas.
 Den fungerar som ett navigeringsnav för alla andra tillgängliga popupar för det objektet och
 ger en omedelbar överblick över objektets aktuella status.
+<!-- --8<-- [end:body-1] -->
 
 ![Tab popup](/docs/sv/Images/Popups/Tab.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Meny
 
 Sektionen **Meny** längst upp visar en knapp för varje popup som är tillgänglig för
@@ -66,4 +68,4 @@ Under larmstatistiken visas en sammanfattning av objektets underhållsstatus:
 * **Antal missade underhållsuppgifter**
 
 Dessa värden härleds också automatiskt från objektets taggnamn.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

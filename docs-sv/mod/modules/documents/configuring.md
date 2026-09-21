@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Dokument — Konfigurering
 
@@ -17,9 +17,11 @@ tags:
 Dokument kan kopplas till specifika objekt i projektet. När ett dokument är kopplat till ett objekt blir det tillgängligt på fliken [**Dokument**](../../reference/Popup/Documents.md) i objektets popup.
 
 Navigera till **Dokument → Objektreferenser** för att hantera kopplingar.
+<!-- --8<-- [end:body-1] -->
 
 ![Vy för objektreferenser](/docs/sv/Images/Documents/documents-objects-references.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 Så här kopplar du dokument till ett objekt:
 
 1. Hitta objektet i listan.
@@ -32,9 +34,11 @@ Ett dokument kan kopplas till flera objekt. Samma objekt kan ha flera dokument k
 ## Objektpopup { #object-popup }
 
 Varje objekt i projektet har en flik [**Dokument**](../../reference/Popup/Documents.md) tillgänglig via sin popup. Öppna popupen genom att klicka på ett objekt och välja fliken **Dokument**. Här visas alla dokument som är kopplade till det specifika objektet. Välj ett dokument och klicka på **Öppna** för att öppna en förhandsgranskning direkt i popupen.
+<!-- --8<-- [end:body-2] -->
 
 ![Dokumentfliken i objektpopupen](/docs/sv/Images/Documents/documents-object-popup.png){align=center}
 
+<!-- --8<-- [start:body-3] -->
 ## Synkronisering med filsystemet { #syncing-with-the-filesystem }
 
 Lokala filer lagras i mappen `HTML/documents/` på servern. Dokumentlistan återspeglar vad som är registrerat i databasen, inte vad som faktiskt finns på disk. Om filer läggs till eller tas bort från mappen direkt — till exempel genom att kopiera filer via en nätverksresurs — visas de inte i listan förrän en synkronisering utförs.
@@ -50,4 +54,4 @@ Synkroniseringen körs automatiskt när `scDoc` startar.
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — behörighetsreferens
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

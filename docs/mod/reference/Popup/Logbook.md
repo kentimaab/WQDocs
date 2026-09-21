@@ -8,7 +8,7 @@ last_reviewed: 2026-08-25
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Logbook
 
@@ -22,9 +22,11 @@ information on how the logbook system works, see [Logbook](../../modules/logbook
     **Documents & Logbook → Logbook**, which is also the only place archived entries can
     be listed. This popup always shows active entries only. See
     [Logbook — Extending](../../modules/logbook/extending.md#archiving).
+<!-- --8<-- [end:body-1] -->
 
 ![Logbook popup](/docs/Images/Popups/Logbook.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Entries { #entries }
 
 The entries list displays all logbook notes associated with the object with the
@@ -54,3 +56,4 @@ The following actions are available at the bottom of the popup:
 
 An action the current user lacks the privilege for is disabled and covered by a red
 overlay naming the privilege required.
+<!-- --8<-- [end:body-2] -->

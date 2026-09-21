@@ -13,7 +13,7 @@ scripts:
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Navigation - Get started
 ???+ info "Requirements"
@@ -51,6 +51,7 @@ groups to **Main_Menu**, which could complicate upgrades if it has been modified
 To create a new view in the menu, place a new **Workview** inside a folder under the 
 **System** folder, as shown in the example below. Clicking this node in the menu will 
 open the view directly.
+<!-- --8<-- [end:body-1] -->
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
@@ -60,9 +61,11 @@ open the view directly.
 
 </div>
 
+<!-- --8<-- [start:body-2] -->
 If multiple **Workviews** are added to the same folder, the icon in the menu will 
 change — clicking it will open a submenu instead, as shown below. Additional folders 
 can be nested inside to build even deeper navigation structures.
+<!-- --8<-- [end:body-2] -->
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
 
@@ -72,6 +75,7 @@ can be nested inside to build even deeper navigation structures.
 
 </div>
 
+<!-- --8<-- [start:body-3] -->
 ## Fullscreen Menu { #fullscreen-menu }
 The Fullscreen Menu gives users an immediate overview of the directory structure and 
 allows quick navigation to nested views. It can be toggled in **WideQuick® Runtime**  by navigating to 
@@ -79,9 +83,11 @@ allows quick navigation to nested views. It can be toggled in **WideQuick® Runt
 
 The menu is built automatically from the directory structure in **WideQuick® Designer**, 
 meaning design decisions made there are reflected directly in runtime.
+<!-- --8<-- [end:body-3] -->
 
 ![FullScreen_Toggle](/docs/Images/Navigation/ToggleFullNav.png)
 
+<!-- --8<-- [start:body-4] -->
 The Fullscreen Menu is designed to display as many **Workviews** as possible while 
 remaining organized. The layout follows these rules:
 
@@ -112,4 +118,4 @@ remain navigable.
 
 * [Configuring](configuring.md) — privilege requirements on views and display settings for restricted views
 * [Extending](extending.md) — GoTo function and custom navigation icons
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-4] -->

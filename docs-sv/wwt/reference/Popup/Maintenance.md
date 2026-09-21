@@ -8,4 +8,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/reference/Popup/Maintenance.md:body"
+--8<-- "mod/reference/Popup/Maintenance.md:body-1"
+
+![Maintenance popup](/docs/sv/Images/Popups/Maintenance-wwt.png)
+
+--8<-- "mod/reference/Popup/Maintenance.md:body-2"

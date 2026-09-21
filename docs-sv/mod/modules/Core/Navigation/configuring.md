@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Navigation — Konfigurering
 Det här avsnittet beskriver hur du konfigurerar modulen Navigation för att passa dina behov. Det
@@ -31,9 +31,11 @@ Här visas två menygrupper: **Main_Menu** och **System**. Expandera dessa för 
 en specifik vy eller en **Arbetsvy**-mapp och tilldela sedan önskad **Behörighet** från
 listan. **Arbetsvyn** är sedan bara tillgänglig för användare med rätt behörighet.
 Behörigheter kan tillämpas på både enskilda **Arbetsvy** och hela **Arbetsvy**-mappar.
+<!-- --8<-- [end:body-1] -->
 
 ![SettingPriv](/docs/sv/Images/Navigation/SettingPriv.png)
 
+<!-- --8<-- [start:body-2] -->
 !!! note "Krypterade projekt"
     Om ditt projekt är krypterat kan **WideQuick** inte föreslå behörigheter.
     Istället måste du skriva in namnet på **Behörigheten** manuellt.
@@ -45,9 +47,11 @@ Behörigheter kan tillämpas på både enskilda **Arbetsvy** och hela **Arbetsvy
 Det finns flera inställningar som styr hur begränsade mappar visas för användare
 utan den nödvändiga behörigheten. Dessa inställningar finns under **Inställningar** i
 **WideQuick® Runtime**.
+<!-- --8<-- [end:body-2] -->
 
 ![DisplayPriv](/docs/sv/Images/Navigation/Display%20priv.png)
 
+<!-- --8<-- [start:body-3] -->
 Det finns två växlingsalternativ: **Visa låsta menyer** och **Visa låsta undermenyer**. Dessa
 växlar erbjuder tre meningsfulla kombinationer. Observera att om **Visa låsta menyer** är
 inaktiverat visas inte dess undermenyer oavsett inställningen för **Visa låsta undermenyer**.
@@ -63,4 +67,4 @@ inaktiverat visas inte dess undermenyer oavsett inställningen för **Visa låst
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — GoTo-funktion och anpassade navigationsikoner
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-3] -->

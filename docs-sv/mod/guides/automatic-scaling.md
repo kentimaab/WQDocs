@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 # Automatisk skalning
 ???+ info "Krav"
     Följande skript krävs för att använda Automatisk skalning och all
@@ -34,9 +34,11 @@ Popup-fönster skalas inte automatiskt. För att skala ett popup-fönster propor
 ```javascript title="Popup arbetsvy — onLoad"
 scWM.scaleAndPlacePopup(this);
 ```
+<!-- --8<-- [end:body-1] -->
 
 ![Scaled popup centered in the main content area](/docs/sv/Images/Automatic_Scaling/scaling-popup-centered.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 Som standard centreras popup-fönstret inom huvudinnehållsområdet, exklusive navigeringsmenyn. Ett valfritt justeringsargument placerar det längs en skärmkant istället:
 
 | Justering | Beskrivning |
@@ -85,4 +87,4 @@ var scaledSize = baseSize * factor;
 ```
 
 Detta används internt av kartskripten för att beräkna om elementpositioner när fönstret ändrar storlek.
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

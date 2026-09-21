@@ -8,7 +8,7 @@ last_reviewed: 2026-05-29
 tags: 
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Trend
 
@@ -17,9 +17,11 @@ graph. Unlike the [History](./History.md) popup which is limited by how frequent
 signals are logged, the Trend popup reads directly from the Data Store and updates
 continuously. It is always visible in the Tab menu regardless of which suffixes the
 object has.
+<!-- --8<-- [end:body-1] -->
 
 ![Trend popup](/docs/Images/Popups/Trend.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Graph
 
 The graph displays the live values of the selected signals over time. A legend on
@@ -40,3 +42,4 @@ The **Settings** panel provides Y-axis configuration options:
 visible data. When disabled, the **Min** and **Max** values can be set manually.
 * **Min** — the minimum value shown on the Y-axis when automatic scaling is disabled.
 * **Max** — the maximum value shown on the Y-axis when automatic scaling is disabled.
+<!-- --8<-- [end:body-2] -->

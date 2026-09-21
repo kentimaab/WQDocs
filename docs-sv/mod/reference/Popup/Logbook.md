@@ -8,7 +8,7 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Loggbok
 
@@ -16,9 +16,11 @@ Loggbokspopupen visar alla loggboksposter som är kopplade till det valda objekt
 Användare kan skapa, redigera och ta bort anteckningar direkt från denna popup. Den är alltid
 synlig i flikmenyn oavsett vilka suffix objektet har. För mer
 information om hur loggbokssystemet fungerar, se [Loggbok](../../modules/logbook/index.md).
+<!-- --8<-- [end:body-1] -->
 
 ![Logbook popup](/docs/sv/Images/Popups/Logbook.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Poster
 
 Postlistan visar alla loggboksanteckningar som är kopplade till objektet med följande
@@ -45,3 +47,4 @@ Följande åtgärder är tillgängliga längst ned i popupen:
 * **Lägg till anteckning** — skapar en ny loggbokspost för detta objekt
 * **Redigera anteckning** — redigerar den valda posten
 * **Ta bort anteckning** — tar bort den valda posten
+<!-- --8<-- [end:body-2] -->

@@ -8,4 +8,8 @@ tags:
  - BMS
 ---
 
---8<-- "mod/guides/languages.md:body"
+--8<-- "mod/guides/languages.md:body-1"
+
+![Set language setting](/docs/sv/Images/Languages/set-lang.png)
+
+--8<-- "mod/guides/languages.md:body-2"

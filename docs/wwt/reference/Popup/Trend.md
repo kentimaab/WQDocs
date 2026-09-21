@@ -6,4 +6,8 @@ tags:
  - WWT
 ---
 
---8<-- "mod/reference/Popup/Trend.md:body"
+--8<-- "mod/reference/Popup/Trend.md:body-1"
+
+![Trend popup](/docs/Images/Popups/Trend-wwt.png)
+
+--8<-- "mod/reference/Popup/Trend.md:body-2"

@@ -7,7 +7,7 @@ last_reviewed: 2026-06-16
 tags:
  - MOD
 ---
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Språk
 
@@ -88,9 +88,11 @@ För att lägga till ett nytt språk, högerklicka på **Languages** i projekttr
 ## Byta språk under körning { #runtime-switching }
 
 Användare byter språk genom att trycka på knappen **Set lang** i **WideQuick® Runtime**, som finns under **Settings → Settings**. Det öppnar ett popup-fönster med en lista över alla tillgängliga språk.
+<!-- --8<-- [end:body-1] -->
 
 ![The Set lang button](/docs/sv/Images/Languages/set-lang.png){align=center}
 
+<!-- --8<-- [start:body-2] -->
 !!! note
     Efter att ha bytt språk måste användaren logga in igen.
 
@@ -99,4 +101,4 @@ Användare byter språk genom att trycka på knappen **Set lang** i **WideQuick�
 Startspråket konfigureras i **WideQuick® Designer**. Högerklicka på projektnamnet i projektträdet och välj **Properties**. I dialogrutan **Project Properties**, ställ in listrutan **Start language** på önskat språk.
 
 ![Project Properties dialog with the Start language field](/docs/sv/Images/Languages/project-properties.png){align=center}
-<!-- --8<-- [end:body] -->
+<!-- --8<-- [end:body-2] -->

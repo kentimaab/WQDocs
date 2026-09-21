@@ -8,14 +8,16 @@ tags:
  - MOD
 ---
 
-<!-- --8<-- [start:body] -->
+<!-- --8<-- [start:body-1] -->
 
 # Historik
 
 Historik-popupen visar ett trenddiagram för det valda objektet och presenterar historiska värden för dess loggade signaler. Den är alltid synlig i flikmenyn oavsett vilka suffix objektet har. Mer information om hur historiksystemet fungerar finns under [Historik](../../modules/history/index.md).
+<!-- --8<-- [end:body-1] -->
 
 ![History popup](/docs/sv/Images/Popups/History.png)
 
+<!-- --8<-- [start:body-2] -->
 ## Signaler
 
 Panelen **Signaler** till höger listar alla signaler som tillhör objektet och som för närvarande loggas. Signaler kan slås på och av i grafen med pilknapparna, och knappen **Välj** möjliggör manuellt urval. Klicka på **Använd** för att uppdatera grafen.
@@ -49,3 +51,4 @@ Styr det tidsintervall som visas i grafen:
 
 * **30 s**, **5 min**, **1 h**, **6 h**
 * **1 dag**, **7 dagar**, **14 dagar**, **30 dagar**
+<!-- --8<-- [end:body-2] -->
