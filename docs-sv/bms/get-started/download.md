@@ -27,7 +27,7 @@ Om du behöver en WideQuick-licens, vänligen kontakta Kentimas [säljavdelning]
 WideQuick BMS 2026.1.0 finns i två versioner att ladda ned på Kentimas webbplats:
 
 !!! note "Krav"
-    **WideQuick version 14.0** eller senare måste vara installerat innan du laddar ned och öppnar projektfilerna. Se [Installera WideQuick](/wq/get-started/Installing-WideQuick) för mer information.
+    **WideQuick version 14.0.3** eller senare måste vara installerat innan du laddar ned och öppnar projektfilerna. Se [Installera WideQuick](/wq/get-started/Installing-WideQuick) för mer information.
 
 [**Ladda ned WideQuick BMS 2026.1.0**](https://www.kentima.com/en-GB/Download/HMI-SCADA%20CONCEPTS/Fastighetsautomation/Download%20application){target="_blank"}
 

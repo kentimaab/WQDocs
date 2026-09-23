@@ -25,7 +25,7 @@ Om du behöver en WideQuick-licens, vänligen kontakta Kentimas [säljavdelning]
 WideQuick Water and Wastewater Treatment 2024.1.0 finns tillgänglig i två versioner för nedladdning på Kentimas webbplats:
 
 !!! note "Krav"
-    **WideQuick version 13.4.1** eller senare måste vara installerat innan projektfilerna laddas ned och öppnas. Se [Installera WideQuick](../../wq/get-started/index.md) för mer information.
+    **WideQuick version 14.0.3** eller senare måste vara installerat innan projektfilerna laddas ned och öppnas. Se [Installera WideQuick](../../wq/get-started/index.md) för mer information.
 
 [**Ladda ned WideQuick Water and Wastewater Treatment 2024.1.0**](https://www.kentima.com/sv-SE/Download/HMI-SCADA%20CONCEPTS/WWT/Hamta%20applikation){target="_blank"}
 
