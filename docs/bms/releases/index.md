@@ -306,12 +306,11 @@ This is the first release of WideQuick BMS in the Modular Framework family — t
 
 | Feature | Description |
 | --- | --- |
-| **Multi-language support** | Views, scripts, the object library, dynamics and Data Store are now fully translatable, with a built-in language selector and flag icons for switching language at runtime. |
+| **Multi-language support** | Views, scripts, the object library, dynamics and Data Store are now fully translatable, with a built-in language selector and a language icon for switching language at runtime. |
 | **Tooltip system** | A new tooltip mechanism (`scToolTip`) adds contextual help boxes throughout the system, including history and map objects. |
 | **Rewritten Workview animation** | The animation system has been rebuilt from the ground up to be more versatile and easier to configure, with a matching settings view and helpers for reading user-defined theme colours. |
 | **ObjectFinder & goTo** | Every object is automatically indexed with its view path and name, and the new `goTo` function lets you jump straight to any object from anywhere in the project. |
 | **Configurable runtime behaviour** | Value-display refresh rate is now adjustable at runtime, and the chosen theme (light/dark) is remembered and restored on the next startup. |
-| **Automatic data retention** | Loggers and history now prune data older than a set age (e.g. two years) automatically, keeping databases from growing unbounded over time. |
 | **Web & remote client support** | Major expansion of client support: report creation, alarm-schedule editing and the log viewer all work on WideQuick Web and remote clients, and suffixes, view privileges and maintenance state are synchronised between all clients. |
 | **Legacy view import** | Views built in WideQuick BMS 8.0 or earlier can be lifted directly into the framework, where their symbols instantly repaint to the new, redesigned objects while keeping the same connections. |
 

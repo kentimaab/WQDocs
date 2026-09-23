@@ -302,12 +302,11 @@ Detta är den första versionen av WideQuick BMS i Modular Framework-familjen �
 
 | Funktion | Beskrivning |
 | --- | --- |
-| **Flerspråksstöd** | Vyer, skript, objektbiblioteket, dynamik och datalager är nu fullt översättningsbara, med en inbyggd språkväljare och flaggikoner för att byta språk vid körning. |
+| **Flerspråksstöd** | Vyer, skript, objektbiblioteket, dynamik och datalager är nu fullt översättningsbara, med en inbyggd språkväljare och en språkikon för att byta språk vid körning. |
 | **Verktygstipsystem** | En ny verktygstipsmekanism (`scToolTip`) lägger till kontextuella hjälprutor i hela systemet, inklusive historik- och kartobjekt. |
 | **Omskrivet arbetsvy-animationssystem** | Animationssystemet har byggts om från grunden för att vara mer mångsidigt och enklare att konfigurera, med en tillhörande inställningsvy och hjälpfunktioner för att läsa användardefinierade temafärger. |
 | **ObjectFinder & goTo** | Varje objekt indexeras automatiskt med sin vysökväg och sitt namn, och den nya funktionen `goTo` låter dig hoppa direkt till vilket objekt som helst från var som helst i projektet. |
 | **Konfigurerbart körningsbeteende** | Uppdateringsfrekvensen för värdevisning kan nu justeras vid körning, och valt tema (ljust/mörkt) sparas och återställs vid nästa uppstart. |
-| **Automatisk datalagring** | Loggrar och historik rensar nu automatiskt data som är äldre än en angiven ålder (t.ex. två år), vilket hindrar databaser från att växa obegränsat över tid. |
 | **Webb- och fjärrklientstöd** | Stor utökning av klientstödet: rapportskapande, redigering av larmscheman och loggvisaren fungerar alla på WideQuick Web och fjärrklienter, och suffix, vybehörigheter samt underhållsstatus synkroniseras mellan alla klienter. |
 | **Import av äldre vyer** | Vyer byggda i WideQuick BMS 8.0 eller tidigare kan lyftas direkt in i ramverket, där symbolerna omedelbart målas om till de nya, omdesignade objekten men behåller sina kopplingar. |
 

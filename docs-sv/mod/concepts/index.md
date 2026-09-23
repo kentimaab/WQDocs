@@ -143,6 +143,6 @@ Varje modul i ramverket är oberoende. Det finns inga dolda beroenden mellan exe
 
 För en systemintegratör innebär detta att den levererade applikationen kan avgränsas exakt till vad slutkunden behöver. En mindre installation kan köras med Larm, Historik och en dashboard. En större lägger till Underhållsschemaläggning, Rapporter och Kartor. Inget av projekten kräver tillfälliga lösningar eller stub-implementationer för de funktioner som lämnades bort.
 
-Det praktiska arbetsflödet är att börja från mallapplikationen, inkludera de relevanta modulerna och ta bort resten. Det som återstår är en ren, ändamålsenlig applikation utan döda vyer eller oanvänd konfiguration.
+Det praktiska arbetsflödet är att börja från den [nedskalade versionen](../get-started/downscale.md) och bara lägga till de moduler som är relevanta, och låta projektet växa medvetet i takt med att kraven bekräftas. Resultatet är en ren, ändamålsenlig applikation utan döda vyer eller oanvänd konfiguration.
 
 <!-- --8<-- [end:body] -->

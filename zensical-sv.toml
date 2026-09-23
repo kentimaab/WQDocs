@@ -38,6 +38,7 @@ nav = [
     { "Kom igång" = [
       { "Översikt" = "mod/get-started/index.md" },
       { "Koncept" = "mod/concepts/index.md" },
+      { "Nedskalad version" = "mod/get-started/downscale.md" },
       { "Ladda ned" = "mod/get-started/download.md" },
       { "Din första tagg" = "mod/get-started/Your First Tag.md" },
     ]},
@@ -582,3 +583,5 @@ custom_checkbox = true
 [project.markdown_extensions.pymdownx.snippets]
 base_path = ["docs-sv"]
 check_paths = true
+
+[project.plugins.glightbox]
