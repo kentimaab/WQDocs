@@ -77,6 +77,6 @@ Användarnamnet och lösenordet som skapas här används senare för att konfigu
 
 Det här avsnittet beskriver hur pluginet importeras till WideQuick som en resurs, så att WideQuick kan kommunicera med routern.
 
-1. Ladda ner resursen från [Kentima.com](#TODO-add-download-link).
+1. Ladda ner resursen med länken från Kentima.
 2. Importera resursen och välj **Replace all**. Är du osäker på hur man importerar resurser, se [Resurser och Resurspaket](../../bms/reference/Resources-and-Resource-package.md).
 3. Pluginet är nu installerat. Se [Användning](anvandning.md) för hur du konfigurerar det i WideQuick.
