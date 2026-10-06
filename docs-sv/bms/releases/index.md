@@ -17,8 +17,49 @@ ramverkets ändringslogg, se [MOD-versioner](../../mod/releases/index.md).
 
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
 
-__Utgiven 2026-07-08__ — Patch-version BMS 2026.1.1.1
+__Utgiven 2026-10-06__ — Patch-version BMS 2026.1.1.2
 <details class="release" markdown="1" open>
+<summary>Versionsnoteringar</summary>
+
+### Buggar
+
+| # | Område | Beskrivning |
+|---|---|---|
+| 1 | Fjärrsystem | När ett fjärrsystem med WideQuick BMS, eller en annan Modular Framework-applikation, anslöts slutade lokal funktionalitet att fungera: popuper, trender, historik, loggboken, kalendern och larmräknarna slutade fungera eller visade fjärrsystemets data. Skriptfunktionerna var deklarerade globalt, så fjärrsystemets kopior av samma skript ersatte de lokala. Alla skriptfunktioner och klasser är nu medlemmar i sitt eget skriptbibliotek och anropas via biblioteksnamnet. |
+| 2 | Fjärrlarm | Att koppla från ett fjärrsystem kunde ge fel, och räkningen av fjärrlarm misslyckades när fjärrsystemets data togs bort innan frånkopplingen hanterades. Fjärrsystem kontrolleras nu korrekt innan de registreras eller tas bort, och registreringen görs om medan fjärrsystemets data fortfarande laddas. |
+| 3 | Fjärrlarm | Larmräknarna i navigeringen och på dashboards visade fel antal fjärrlarm efter anslutning, och ett anslutet fjärrsystems egna skript kunde skriva över de lokala räknarna. Fjärrlarm räknas nu direkt från fjärrsystemets larmgrupper och publiceras till två nya variabler, `remoteNoAckAlarms` och `remoteAckAlarms`. |
+| 4 | Popuper | En popup som öppnades på nytt från cachen efter att ett fjärrsystem anslutits kunde få klienten att krascha. Popuper återanvänder nu bara instanser som den lokala applikationen har skapat. |
+| 5 | Trend | Trendpopupen kunde inte laddas för objekt med ett suffix som saknar matchande tagg. |
+
+---
+
+### Biblioteks- och vyändringar
+
+| Fil | Förändring |
+|---|---|
+| `Scripts/*.js` (29 filer) | Skriptfunktioner och klasser deklarerade som medlemmar i sitt skriptbibliotek, till exempel `scSmartPopup.smartPopup` och `scAlarmFinder.goToAlarm`, i stället för globalt |
+| Vyer och bibliotek (32 vyer, 4 bibliotek) | Anrop uppdaterade till de biblioteksprefixade namnen |
+| `scRemoteAlarms.js` | Kontroller vid registrering och borttagning av fjärrsystem, nytt försök medan systemets data laddas, fjärrlarm räknas från larmgrupperna |
+| `scAlarm.js` | Larmräknarna skrivs bara av den lokala applikationen, inte av ett anslutet fjärrsystems kopia av skriptet |
+| `scSmartPopup.js` | Popuper återanvänder bara instanser som den lokala applikationen har skapat |
+| `Trend.kvie` | Skydd för objekt vars suffix saknar matchande tagg |
+| `Nav.kvie`, `Dashboard Widgets.klib` | Larmräknarna inkluderar `remoteNoAckAlarms` / `remoteAckAlarms` |
+| `DataStore.kdat` | Nya variabler `remoteNoAckAlarms` och `remoteAckAlarms`; larmgruppernas `Measure`-skript anropar `scAlarmFinder.goToAlarm` |
+
+---
+
+### Att tänka på vid uppgradering
+
+| Ämne | Notering |
+|---|---|
+| **Egna skript och vyer** | Egen kod som anropar ramverkets skriptfunktioner med deras gamla globala namn måste använda det biblioteksprefixade namnet i stället, till exempel `scSmartPopup.smartPopup`, `scAlarmFinder.goToAlarm(...)`, `scWorkviewAnimation.AnimationHandler`, `scQuickSort.Quicksort` och `b64.btoa` / `b64.atob`. |
+| **Fjärrsystem: automatisk anslutning** | För att larmräknarna ska inkludera ett fjärrsystems larm i alla vyer behöver **Auto connect** vara aktiverat för fjärrsystemet. Annars är anslutningen bara öppen medan en vy använder den, till exempel larmlistan. |
+
+</details>
+
+
+__Utgiven 2026-07-08__ — Patch-version BMS 2026.1.1.1
+<details class="release" markdown="1">
 <summary>Versionsnoteringar</summary>
 
 ### Buggar

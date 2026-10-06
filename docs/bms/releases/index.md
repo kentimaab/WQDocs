@@ -19,8 +19,49 @@ framework changelog see the [MOD releases](../../mod/releases/index.md).
 
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
 
-__Released 2026-07-08__ — Patch version BMS 2026.1.1.1
+__Released 2026-10-06__ — Patch version BMS 2026.1.1.2
 <details class="release" markdown="1" open>
+<summary>Release notes</summary>
+
+### Bugs
+
+| # | Area | Description |
+|---|---|---|
+| 1 | Remote systems | Connecting to a remote system running WideQuick BMS, or another Modular Framework application, broke local functionality: popups, trends, history, the logbook, the calendar and the alarm counters stopped working or showed the remote system's data. Script functions were declared globally, so the remote system's copies of the same scripts replaced the local ones. All script functions and classes are now members of their own script library and are called through the library name. |
+| 2 | Remote alarms | Disconnecting a remote system could raise errors, and the remote alarm count failed when a remote system's data was removed before the disconnect was handled. Remote systems are now checked properly before they are registered or removed, and registration is retried while a remote system's data is still loading. |
+| 3 | Remote alarms | The alarm counters in the navigation and on dashboards showed a wrong number of remote alarms after connecting, and a connected remote system's own scripts could overwrite the local counters. Remote alarms are now counted directly from the remote alarm groups and published to two new variables, `remoteNoAckAlarms` and `remoteAckAlarms`. |
+| 4 | Popups | A popup reopened from cache after a remote system had connected could crash the client. Popups now only reuse instances built by the local application. |
+| 5 | Trend | The trend popup failed to load for objects with a suffix that has no matching tag. |
+
+---
+
+### Library and view changes
+
+| File | Change |
+|---|---|
+| `Scripts/*.js` (29 files) | Script functions and classes declared as members of their script library, for example `scSmartPopup.smartPopup` and `scAlarmFinder.goToAlarm`, instead of as globals |
+| Views and libraries (32 views, 4 libraries) | Calls updated to the library-qualified names |
+| `scRemoteAlarms.js` | Existence checks when registering and removing remote systems, retry while a system's data is loading, remote alarms counted from the alarm groups |
+| `scAlarm.js` | Alarm counters are only written by the local application, not by a connected remote system's copy of the script |
+| `scSmartPopup.js` | Popups only reuse instances built by the local application |
+| `Trend.kvie` | Guard for objects whose suffix has no matching tag |
+| `Nav.kvie`, `Dashboard Widgets.klib` | Alarm counters include `remoteNoAckAlarms` / `remoteAckAlarms` |
+| `DataStore.kdat` | New variables `remoteNoAckAlarms` and `remoteAckAlarms`; alarm group `Measure` scripts call `scAlarmFinder.goToAlarm` |
+
+---
+
+### Upgrade notes
+
+| Topic | Note |
+|---|---|
+| **Custom scripts and views** | Your own code that calls the framework's script functions by their old global names must use the library-qualified name instead, for example `scSmartPopup.smartPopup`, `scAlarmFinder.goToAlarm(...)`, `scWorkviewAnimation.AnimationHandler`, `scQuickSort.Quicksort` and `b64.btoa` / `b64.atob`. |
+| **Remote systems: auto connect** | For the alarm counters to include a remote system's alarms in every view, enable **Auto connect** for that remote system. Without it, the connection is only open while a view uses it, such as the alarm list. |
+
+</details>
+
+
+__Released 2026-07-08__ — Patch version BMS 2026.1.1.1
+<details class="release" markdown="1">
 <summary>Release notes</summary>
 
 ### Bugs
