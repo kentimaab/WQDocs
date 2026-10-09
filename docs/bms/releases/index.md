@@ -4,7 +4,7 @@ description: Release notes for WideQuick BMS.
 product: bms
 page_type: release
 status: draft
-last_reviewed: 2026-06-03
+last_reviewed: 2026-10-08
 tags: 
  - BMS
 ---
@@ -19,7 +19,7 @@ framework changelog see the [MOD releases](../../mod/releases/index.md).
 
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
 
-__Released 2026-10-06__ — Patch version BMS 2026.1.1.2
+__Released 2026-10-08__ — Patch version BMS 2026.1.1.2
 <details class="release" markdown="1" open>
 <summary>Release notes</summary>
 
@@ -32,6 +32,25 @@ __Released 2026-10-06__ — Patch version BMS 2026.1.1.2
 | 3 | Remote alarms | The alarm counters in the navigation and on dashboards showed a wrong number of remote alarms after connecting, and a connected remote system's own scripts could overwrite the local counters. Remote alarms are now counted directly from the remote alarm groups and published to two new variables, `remoteNoAckAlarms` and `remoteAckAlarms`. |
 | 4 | Popups | A popup reopened from cache after a remote system had connected could crash the client. Popups now only reuse instances built by the local application. |
 | 5 | Trend | The trend popup failed to load for objects with a suffix that has no matching tag. |
+| 6 | Maintenance, Calendar | On the web client and on remote clients, maintenance tasks and the maintenance events in the calendar showed dates around 1970. These clients receive whole-number database values as 32-bit numbers, which cuts off timestamps stored in milliseconds. Timestamps are now read as decimal numbers, which arrive intact. |
+| 7 | Databases | Web and remote clients ran the database table creation and migrations at startup, which wrote errors to the web client's log. Table creation and migrations for maintenance, the calendar, the report scheduler and the alarm sender now only run on the server. |
+| 8 | Alarms | **Go to alarm** in the alarm list did nothing on the web client, because an alarm group's `Measure` script cannot reach script libraries there. Views with an alarm list now provide a `view.goToCurrentAlarm()` function, and the alarm groups' `Measure` scripts call it. This covers **Larm - Lista**, the alarm popup, the map and the dashboard alarm list widgets. |
+| 9 | Remote alarms | **Go to alarm** on an alarm from a connected remote system did nothing, since the object is not part of the local project. It now opens the remote system in **WideQuick® Remote**, the same way as the remote systems menu. After login, the remote system navigates to the alarm's view and highlights the object. |
+| 10 | Dashboard | On the web client, the dashboard's from and to date fields showed 1970-01-01, and the history widgets used that range. The fields are no longer bound to the `scDashboard` script; the range is read from the fields when it is applied. |
+| 11 | Maintenance | On the web client, the priority list in **Underhåll - Mallar** and the template and priority lists in **Underhåll - Återkommande** were empty. The lists are now filled when the view loads. |
+| 12 | Suffix alias | On the web client, the view field in **Suffixalias - Popuper** showed the wrong view, and the list of available views stayed empty because the web client cannot read the server's folders. On the web client the field is now read-only and shows the view linked to the selected category, with a notice that editing is not available there. Desktop and remote clients are unchanged. |
+| 13 | Audit trail | With web or remote clients connected, a change could be logged more than once, or with the wrong user or system. Every connected application reacted to the change, and none of them could tell where it was made. Each change is now logged once, by the application where the user made it. Changes without a user, such as from scripts or drivers, are logged by the server. Adding or removing audited variables now reaches all connected applications, and **Spårningslogg** has a new **System** column. |
+| 14 | Popups | On the web client in a resized browser, the **Styrkurva** and **Styrkurva tid** popups drew their content at half size, and the document viewer in the **Documents** popup overflowed the popup. Both now scale with the popup on the web client. Sizing on desktop and remote clients is unchanged. |
+| 15 | Styrkurva tid, time channels | The **Styrkurva tid** popup and saved time channel profiles could not run on web and remote clients, because the `scStyrkurvaTid` and `scTimeChannel` scripts were not loaded there. Both scripts now run on remote clients. |
+
+---
+
+### Known issues
+
+| Area | Issue |
+|---|---|
+| **Web client: tree views in popups** | In popup windows opened from an object, such as **Documents**, **History**, **Trend** and **Object Info**, the tree view header shows large, dark text on the web client, and the rows do not follow the popup zoom. The theme's header text colour and font are not applied in these windows. This is an issue in **WideQuick® Web Client** and is expected to be fixed in a later WideQuick version. Tree views in the main view are not affected. |
+| **Audit trail: web client on the server computer** | The audit trail decides where a change was made from each application's recent user activity. A web client running in a browser on the same computer as the server shares that activity, so a change made there can be logged twice. Web clients on other computers are not affected. |
 
 ---
 
@@ -46,7 +65,21 @@ __Released 2026-10-06__ — Patch version BMS 2026.1.1.2
 | `scSmartPopup.js` | Popups only reuse instances built by the local application |
 | `Trend.kvie` | Guard for objects whose suffix has no matching tag |
 | `Nav.kvie`, `Dashboard Widgets.klib` | Alarm counters include `remoteNoAckAlarms` / `remoteAckAlarms` |
-| `DataStore.kdat` | New variables `remoteNoAckAlarms` and `remoteAckAlarms`; alarm group `Measure` scripts call `scAlarmFinder.goToAlarm` |
+| `scMaintenance.js`, `MaintenanceInfoPanel.kvie` | Timestamps read as decimal numbers through the column lists `logCols()`, `templateCols` and `eventCols` instead of `SELECT *`; status migration only on the server |
+| `scCalendar.js`, `scReportScheduler.js`, `scAlarmSender.js` | Table creation and migrations only on the server |
+| `Larm - Lista.kvie`, `VySpecifikAlarm.kvie`, `Karta.kvie`, `Dashboard Widgets.klib` | Define `view.goToCurrentAlarm()` for the alarm groups' `Measure` scripts |
+| `scAlarmFinder.js`, `scRemoteSystems.js`, `WORKSPACE.kvie`, `Remote/startup_remote/Workviews/StartUp.kvie` | **Go to alarm** on a remote system's alarm opens **WideQuick® Remote** and navigates to the alarm there |
+| `scDashboard.js` | New `readRange()` function that reads the dashboard's from and to fields |
+| `Dashboard_Template.kvie`, `Dashboard Widgets.klib`, the Demo dashboards | From and to fields no longer bound to `scDashboard`; the range is read with `readRange()` |
+| `Underhåll - Mallar.kvie`, `Underhåll - Återkommande.kvie` | Priority and template lists filled from the view's Load script |
+| `Suffixalias - Popuper.kvie` | On the web client, the view field is read-only and shows the category's linked view, with a notice |
+| `scAuditTrail.js` | Each change logged by the application where it was made; list changes synchronised to all connected applications |
+| `Spårningslogg.kvie` | New column **System** |
+| `scWM.js` | New `scWM.isWeb` property and an `afterScale` hook for popups |
+| `Styrkurva.kvie`, `StyrkurvaTid.kvie`, `scStyrkurvaTid.js` | Separate sizing for the web client |
+| `Documents.kvie` | Document viewer scaled with the popup on the web client |
+| `ScriptLibraries.kdat` | `scStyrkurvaTid` and `scTimeChannel` run on remote clients |
+| `DataStore.kdat` | New variables `remoteNoAckAlarms`, `remoteAckAlarms`, `AuditTrailVersion` and `AuditTrailClaims`; in the Demo project, the alarm groups' `Measure` scripts call `view.goToCurrentAlarm()` |
 
 ---
 
@@ -56,6 +89,8 @@ __Released 2026-10-06__ — Patch version BMS 2026.1.1.2
 |---|---|
 | **Custom scripts and views** | Your own code that calls the framework's script functions by their old global names must use the library-qualified name instead, for example `scSmartPopup.smartPopup`, `scAlarmFinder.goToAlarm(...)`, `scWorkviewAnimation.AnimationHandler`, `scQuickSort.Quicksort` and `b64.btoa` / `b64.atob`. |
 | **Remote systems: auto connect** | For the alarm counters to include a remote system's alarms in every view, enable **Auto connect** for that remote system. Without it, the connection is only open while a view uses it, such as the alarm list. |
+| **Alarm groups: Go to alarm** | Alarm groups added to the project must use the `Measure` script `if (view.goToCurrentAlarm) { view.goToCurrentAlarm(); }`. The earlier form, which calls `scAlarmFinder.goToAlarm` with `app.alarmView`, does not work on the web client. A custom view with an alarm list must also define `view.goToCurrentAlarm()`; see the [migration guide](MigrationGuide.md#bms-migration-2026-1-1-2). |
+| **Remote systems: Go to alarm** | Navigating to a remote system's alarm requires the remote system to run WideQuick BMS 2026.1.1.2 as well. Otherwise **WideQuick® Remote** opens at the remote system's start view. The user logs in to the remote system in the **WideQuick® Remote** window. |
 
 </details>
 

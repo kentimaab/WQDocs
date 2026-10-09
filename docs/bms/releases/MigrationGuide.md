@@ -4,7 +4,7 @@ description: Step-by-step migration guides for upgrading between WideQuick BMS v
 product: bms
 page_type: release
 status: draft
-last_reviewed: 2026-10-06
+last_reviewed: 2026-10-08
 tags:
  - BMS
 ---
@@ -59,6 +59,34 @@ panel.
 **WideQuick® Designer** and enable **Auto connect** for each remote system whose
 alarms should be included in the alarm counters. Without it, the connection to a
 remote system is only open while a view uses it, such as the alarm list.
+
+6. If alarm groups have been added to the project, open each one in
+**WideQuick® Designer** and replace its `Measure` script with:
+
+    ```javascript title="Alarm group — Measure"
+    if (view.goToCurrentAlarm) { view.goToCurrentAlarm(); }
+    ```
+
+    The earlier script, which calls `scAlarmFinder.goToAlarm` with `app.alarmView`,
+    does not work on the web client. The alarm groups delivered with the Demo project
+    are updated by the resource package.
+
+7. If the project has views of its own with an alarm list, add the following to
+each view's Load script so that **Gå till larm** works from that view. Replace
+`Alarm1` with the name of the view's `Alarm` object:
+
+    ```javascript title="View — Load"
+    var gotoList = this.view.Alarm1;
+    var gotoViewName = this.view.name;
+    this.view.goToCurrentAlarm = function () {
+        scAlarmFinder.goToAlarm(gotoList.nameForCurrentAlarm, gotoViewName);
+    };
+    ```
+
+!!! note
+    **Gå till larm** on an alarm from a remote system opens that system in
+    **WideQuick® Remote** and navigates to the alarm there. This requires the remote
+    system to run WideQuick BMS 2026.1.1.2 as well.
 
 !!! note
     **Replace** overwrites the project's versions of the files in the package. If

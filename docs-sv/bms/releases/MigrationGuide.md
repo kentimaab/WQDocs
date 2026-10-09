@@ -4,7 +4,7 @@ description: Steg-för-steg-guider för uppgradering mellan WideQuick BMS-versio
 product: bms
 page_type: release
 status: draft
-last_reviewed: 2026-10-06
+last_reviewed: 2026-10-08
 tags:
  - BMS
 ---
@@ -61,6 +61,34 @@ resurspanelen.
 **WideQuick® Designer** och aktivera **Auto connect** för varje fjärrsystem vars
 larm ska ingå i larmräknarna. Utan det är anslutningen till ett fjärrsystem bara
 öppen medan en vy använder den, till exempel larmlistan.
+
+6. Om larmgrupper har lagts till i projektet, öppna var och en i
+**WideQuick® Designer** och ersätt dess `Measure`-skript med:
+
+    ```javascript title="Larmgrupp — Measure"
+    if (view.goToCurrentAlarm) { view.goToCurrentAlarm(); }
+    ```
+
+    Det tidigare skriptet, som anropar `scAlarmFinder.goToAlarm` med `app.alarmView`,
+    fungerar inte på webbklienten. Larmgrupperna som levereras med Demo-projektet
+    uppdateras av resurspaketet.
+
+7. Om projektet har egna vyer med en larmlista, lägg till följande i varje vys
+Load-skript så att **Gå till larm** fungerar från vyn. Ersätt `Alarm1` med namnet
+på vyns `Alarm`-objekt:
+
+    ```javascript title="Vy — Load"
+    var gotoList = this.view.Alarm1;
+    var gotoViewName = this.view.name;
+    this.view.goToCurrentAlarm = function () {
+        scAlarmFinder.goToAlarm(gotoList.nameForCurrentAlarm, gotoViewName);
+    };
+    ```
+
+!!! note
+    **Gå till larm** på ett larm från ett fjärrsystem öppnar systemet i
+    **WideQuick® Remote** och navigerar till larmet där. Det kräver att fjärrsystemet
+    också kör WideQuick BMS 2026.1.1.2.
 
 !!! note
     **Ersätt** skriver över projektets versioner av filerna i paketet. Om du har
