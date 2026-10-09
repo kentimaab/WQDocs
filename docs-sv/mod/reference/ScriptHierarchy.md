@@ -90,7 +90,7 @@ Följande skript har inga beroenden och kan köras fristående:
 | `scCalendar` | `scAlert`, `scThemes`, `scMaintenance` |
 | `scDashboard` | `scAlert`, `scHistory` |
 | `scDoc` | `scAlert`, `scThemes`, `scLinking` |
-| `scAlarmFinder` | `scAlert`, `scObjectFinder`, `scLinking`, `scMap` |
+| `scAlarmFinder` | `scAlert`, `scObjectFinder`, `scLinking`, `scMap`, `scRemoteSystems` |
 | `scDayViewManager` | `scAlert`, `scThemes`, `scCalendar` |
 | `scWeekViewManager` | `scAlert`, `scThemes`, `scCalendar` |
 <!-- --8<-- [end:body] -->

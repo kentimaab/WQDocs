@@ -47,9 +47,9 @@ Följ dessa steg för att aktivera GoTo för larm:
 2. Klicka på cirkeln bredvid **Skript** för att aktivera skriptåtgärden och ange
 följande:
 
-```javascript title="goToAlarm() function in Alarm Group Measures"
-goToAlarm(app.alarmView.Alarm1.nameForCurrentAlarm, app.alarmView.name)
-```
+    ```javascript title="Larmgrupp — Åtgärd"
+    if (view.goToCurrentAlarm) { view.goToCurrentAlarm(); }
+    ```
 
 3. Lägg till ett **Åtgärd**-tillstånd genom att klicka på **Lägg till** på samma sida. Ange önskad
 visningstext och välj en färg.
@@ -62,6 +62,29 @@ aktiveras GoTo och navigerar till den **Arbetsvy** där larmet uppstod.
 
 !!! note 
     För att kunna använda GoTo-funktionen på larm krävs skriptet `scAlarmFinder`
+
+!!! info
+    På webbklienten når ett **Åtgärd**-skript bara objekten `alarm` och `view`, inte
+    skriptbiblioteken. **Åtgärden** anropar därför en funktion som vyn med larmlistan
+    tillhandahåller. Se [GoTo i egna larmvyer](#goto-in-custom-alarm-views).
+
+För ett larm från ett anslutet fjärrsystem öppnar GoTo systemet i **WideQuick® Remote**
+och navigerar till larmet där. Det kräver `scRemoteSystems`, och fjärrsystemet måste också
+ha stöd för det. Användaren loggar in på fjärrsystemet i fönstret **WideQuick® Remote**.
+
+### GoTo i egna larmvyer { #goto-in-custom-alarm-views }
+Vyerna som levereras med ramverket har redan `view.goToCurrentAlarm()`: **Larm - Lista**,
+larmpopupen, kartan och larmlistwidgetarna på dashboarden. En egen vy med ett
+**Larm**-objekt behöver följande i vyns Load-skript. Ersätt `Alarm1` med namnet på vyns
+**Larm**-objekt.
+
+```javascript title="Vy — Load"
+var gotoList = this.view.Alarm1;
+var gotoViewName = this.view.name;
+this.view.goToCurrentAlarm = function () {
+    scAlarmFinder.goToAlarm(gotoList.nameForCurrentAlarm, gotoViewName);
+};
+```
 
 
 ## Anpassade navigationsikoner { #custom-navigation-icons }

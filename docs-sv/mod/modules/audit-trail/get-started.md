@@ -31,7 +31,16 @@ Loggen visar alla registrerade ändringar med följande kolumner:
 * **Tid** — när ändringen gjordes.
 * **Händelse** — det gamla värdet och det nya värdet, visas som `old → new`.
 * **Kontext** — den fullständiga variabelsökvägen i Datalager.
-* **Användare** — den inloggade användaren när ändringen gjordes.
+* **Användare** — den inloggade användaren på klienten där ändringen gjordes.
+* **System** — var ändringen gjordes: den lokala applikationen, eller adressen till en webb- eller fjärrklient.
+
+Varje ändring loggas en gång, av den applikation där användaren gjorde den. Ändringar utan användare, till exempel från skript, drivrutiner eller scheman, loggas av den lokala applikationen.
+
+!!! note
+    Spårningsloggen avgör var en ändring gjordes utifrån varje klients senaste
+    användaraktivitet. En webbklient i en webbläsare på samma dator som applikationen delar
+    den aktiviteten, så en ändring som görs där kan loggas två gånger. Webbklienter på andra
+    datorer påverkas inte.
 
 Använd panelen **Filter** till vänster för att begränsa loggen:
 

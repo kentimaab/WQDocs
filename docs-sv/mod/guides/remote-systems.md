@@ -91,6 +91,10 @@ När `scRemoteAlarms` körs visas larm från alla anslutna fjärrsystem i den lo
 
 Om ett fjärrsystem kopplas från tas dess larm automatiskt bort från listan och återkommer när anslutningen är återupprättad.
 
+**Gå till larm** på ett larm från ett fjärrsystem öppnar systemet i **WideQuick® Remote**, som navigerar till larmet och markerar objektet. Användaren loggar in på fjärrsystemet i det fönstret. Fjärrsystemet måste också ha stöd för detta; annars öppnas **WideQuick® Remote** på systemets startvy.
+
+För att larmräknarna i navigeringen och på dashboards ska inkludera ett fjärrsystems larm i alla vyer behöver **Auto connect on startup** vara aktiverat för systemet. Utan det är anslutningen till ett fjärrsystem bara öppen medan en vy använder den, till exempel larmlistan.
+
 ### Integrera en icke-MOD-applikation { #integrating-a-non-mod-application }
 
 Larmaggregering fungerar med vilken WideQuick-applikation som helst — inte bara MOD — så länge fjärrapplikationen exponerar följande variabler i sin Datalager:

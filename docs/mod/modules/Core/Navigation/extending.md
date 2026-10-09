@@ -49,10 +49,9 @@ To enable GoTo for alarms, follow these steps:
 **Measures**.
 2. Click the circle next to **Script** to enable the script action and enter the
 following:
-
-```javascript title="goToAlarm() function in Alarm Group Measures"
-goToAlarm(app.alarmView.Alarm1.nameForCurrentAlarm, app.alarmView.name)
-```
+    ```javascript title="Alarm Group — Measure"
+    if (view.goToCurrentAlarm) { view.goToCurrentAlarm(); }
+    ```
 
 3. Add a **Measure** state by clicking **Add** on the same page. Enter the desired
 display text and select a colour.
@@ -65,6 +64,30 @@ trigger GoTo and navigate to the **Workview** where that alarm originated.
 
 !!! note 
     In order to use the Goto function on Alarms, the script `scAlarmFinder` is needed
+
+!!! info
+    On the web client, a **Measure** script can only reach the `alarm` and `view`
+    objects, not the script libraries. The **Measure** therefore calls a function that
+    the view showing the alarm list provides. See
+    [GoTo in custom alarm views](#goto-in-custom-alarm-views).
+
+For an alarm from a connected remote system, GoTo opens that system in
+**WideQuick® Remote** and navigates to the alarm there. This requires `scRemoteSystems`,
+and the remote system must also support it. The user logs in to the remote system in the
+**WideQuick® Remote** window.
+
+### GoTo in custom alarm views { #goto-in-custom-alarm-views }
+The views delivered with the framework already provide `view.goToCurrentAlarm()`:
+**Alarm - List**, the alarm popup, the map and the alarm list widgets on the dashboard.
+A custom view with an **Alarm** object needs the following in the view's Load script. Replace `Alarm1` with the name of the view's **Alarm** object.
+
+```javascript title="View — Load"
+var gotoList = this.view.Alarm1;
+var gotoViewName = this.view.name;
+this.view.goToCurrentAlarm = function () {
+    scAlarmFinder.goToAlarm(gotoList.nameForCurrentAlarm, gotoViewName);
+};
+```
 
 
 ## Custom navigation icons { #custom-navigation-icons }

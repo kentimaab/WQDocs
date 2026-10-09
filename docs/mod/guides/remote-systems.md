@@ -93,6 +93,10 @@ When `scRemoteAlarms` is running, alarms from all connected remote systems appea
 
 If a remote system disconnects, its alarms are removed from the list automatically and reappear once the connection is restored.
 
+**Go to alarm** on an alarm from a remote system opens that system in **WideQuick® Remote**, which navigates to the alarm and highlights the object. The user logs in to the remote system in that window. The remote system must also support this; otherwise **WideQuick® Remote** opens at its start view.
+
+For the alarm counters in the navigation and on dashboards to include a remote system's alarms in every view, enable **Auto connect on startup** for that system. Without it, the connection to a remote system is only open while a view uses it, such as the alarm list.
+
 ### Integrating a non-MOD application { #integrating-a-non-mod-application }
 
 Alarm aggregation works with any WideQuick application — not just MOD — as long as the remote application exposes the following variables in its Data Store:

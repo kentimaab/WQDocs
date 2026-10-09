@@ -28,7 +28,7 @@ Larmvyerna nås från avsnittet **Larm** i huvudnavigeringen.
 
 **Larm - Lista** är den primära vyn för att övervaka aktiva larm. Varje rad visar larmklass, larmtext, aktiveringstid, larmnamn och vilket system larmet härstammar från. Om ett **Mätvärde** är konfigurerat på larmet visas en länk i den sista kolumnen — till exempel en **Gå till larm**-länk som navigerar direkt till objektet i processvyn.
 
-Om `scRemoteAlarms` körs och fjärrsystem är anslutna visas även larm från dessa system i listan tillsammans med lokala larm.
+Om `scRemoteAlarms` körs och fjärrsystem är anslutna visas även larm från dessa system i listan tillsammans med lokala larm. För ett larm från ett fjärrsystem öppnar **Gå till larm** systemet i **WideQuick® Remote**, som navigerar till larmet efter inloggning. Se [GoTo i Larmgrupper](../Navigation/extending.md#goto-in-alarm-groups).
 
 ![Alarm - List view](/docs/sv/Images/Alarms/alarm-list.png){align=center}
 

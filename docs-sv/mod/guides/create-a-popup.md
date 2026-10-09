@@ -195,6 +195,11 @@ som visas nedan:
 
 ![Popup-konfiguration](/docs/sv/Images/Create_Popup/view_config.png)
 
+!!! note
+    **View** kan bara ändras i **WideQuick® Runtime** eller **WideQuick® Remote**.
+    Webbklienten kan inte lista applikationens arbetsvyer, så där visar fältet bara den vy
+    som är kopplad till den valda kategorin.
+
 Allt som återstår är att starta projektet och klicka på `pump06` för att se popupen **Pump Control**. Se [Skapa objekt](create-an-object.md) för att skapa ett objekt i en
 **Arbetsvy**.
 

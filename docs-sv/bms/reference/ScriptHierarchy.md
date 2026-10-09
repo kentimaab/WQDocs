@@ -89,6 +89,6 @@ Följande skript har inga beroenden och kan köra fristående:
 | `scCalendar` | `scAlert`, `scThemes`, `scMaintenance` |
 | `scDashboard` | `scAlert`, `scHistory` |
 | `scDoc` | `scAlert`, `scThemes`, `scLinking` |
-| `scAlarmFinder` | `scAlert`, `scObjectFinder`, `scLinking`, `scMap` |
+| `scAlarmFinder` | `scAlert`, `scObjectFinder`, `scLinking`, `scMap`, `scRemoteSystems` |
 | `scDayViewManager` | `scAlert`, `scThemes`, `scCalendar` |
 | `scWeekViewManager` | `scAlert`, `scThemes`, `scCalendar` |

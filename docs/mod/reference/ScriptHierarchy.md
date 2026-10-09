@@ -91,6 +91,6 @@ The following scripts have no dependencies and can run standalone:
 | `scCalendar` | `scAlert`, `scThemes`, `scMaintenance` |
 | `scDashboard` | `scAlert`, `scHistory` |
 | `scDoc` | `scAlert`, `scThemes`, `scLinking` |
-| `scAlarmFinder` | `scAlert`, `scObjectFinder`, `scLinking`, `scMap` |
+| `scAlarmFinder` | `scAlert`, `scObjectFinder`, `scLinking`, `scMap`, `scRemoteSystems` |
 | `scDayViewManager` | `scAlert`, `scThemes`, `scCalendar` |
 | `scWeekViewManager` | `scAlert`, `scThemes`, `scCalendar` |

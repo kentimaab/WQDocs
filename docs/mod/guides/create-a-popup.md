@@ -196,6 +196,11 @@ as shown below:
 
 ![Popup config](/docs/Images/Create_Popup/view_config.png)
 
+!!! note
+    The **View** can only be changed in **WideQuick® Runtime** or **WideQuick® Remote**.
+    The web client cannot list the application's workviews, so there the field only shows
+    the view linked to the selected category.
+
 All that remains is to start the project and click on `pump06` to see the **Pump Control** popup. See [Create Object](create-an-object.md) to create an object in a
 **Workview**.
 

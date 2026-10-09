@@ -40,12 +40,21 @@ for (var index = 0; index < local.length; index++) {
 app.alarmView = this.view;
 scMap.alarmList = this.view.Alarm1;
 scMap.updateAlarmList(scMap.mapView, scMap.alarmList);
+
+// "Gå till larm" i larmlistan (larmgruppernas Åtgärd anropar den här)
+var gotoList = this.view.Alarm1;
+var gotoViewName = this.view.name;
+this.view.goToCurrentAlarm = function () {
+    scAlarmFinder.goToAlarm(gotoList.nameForCurrentAlarm, gotoViewName);
+};
 ```
 
 !!! note
     Ersätt `Alarm1` med namnet på det **Alarm**-objekt som är placerat i vyn.
     `alarmNames` är en intern Datalager-variabel som innehåller en kommaseparerad
     sträng med alla larmgruppsnamn i systemet. Den behöver inte konfigureras manuellt.
+    De sista raderna gör att larmlistans GoTo fungerar, även på webbklienten. Se
+    [GoTo i egna larmvyer](../Core/Navigation/extending.md#goto-in-custom-alarm-views).
 
 Nästa steg: onLoad-skriptet för **Kartvyn** hanterar redan uppdateringar av larmlistan
 om `scMap.alarmList` är satt. Se till att onLoad-skriptet för **Kartvyn** är konfigurerat

@@ -34,7 +34,16 @@ The log shows all recorded changes with the following columns:
 * **Time** — when the change occurred.
 * **Event** — the old value and new value, shown as `old → new`.
 * **Context** — the full variable path in the Data Store.
-* **User** — the user logged in when the change was made.
+* **User** — the user logged in on the client where the change was made.
+* **System** — where the change was made: the local application, or the address of a web or remote client.
+
+Each change is logged once, by the application where the user made it. Changes without a user, for example from scripts, drivers or schedules, are logged by the local application.
+
+!!! note
+    The audit trail decides where a change was made from each client's recent user
+    activity. A web client running in a browser on the same computer as the application
+    shares that activity, so a change made there can be logged twice. Web clients on other
+    computers are not affected.
 
 Use the **Filter** panel on the left to narrow down the log:
 

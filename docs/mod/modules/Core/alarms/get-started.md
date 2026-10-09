@@ -31,7 +31,7 @@ The alarm views are accessible from the **Alarms** section in the main navigatio
 
 The **Alarm - List** is the primary view for monitoring active alarms. Each row shows the alarm class, alarm text, activation time, alarm name, and which system the alarm originates from. If a **Measure** is configured on the alarm, a link appears in the last column — for example a **Go to alarm** link that navigates directly to the object in the process view.
 
-If `scRemoteAlarms` is running and remote systems are connected, alarms from those systems also appear in the list alongside local alarms.
+If `scRemoteAlarms` is running and remote systems are connected, alarms from those systems also appear in the list alongside local alarms. For an alarm from a remote system, **Go to alarm** opens that system in **WideQuick® Remote**, which navigates to the alarm after login. See [GoTo in Alarm Groups](../Navigation/extending.md#goto-in-alarm-groups).
 
 ![Alarm - List view](/docs/Images/Alarms/alarm-list.png){align=center}
 
