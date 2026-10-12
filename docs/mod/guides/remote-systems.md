@@ -4,7 +4,7 @@ description: Connect WideQuick applications together for centralized monitoring 
 product: mod
 page_type: howto
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-12
 scripts: 
  - scRemoteAlarms
  - scRemoteSystems
@@ -133,5 +133,11 @@ Alarm aggregation works with any WideQuick application — not just MOD — as l
 * `alarmNames` — a comma-separated list of alarm group names. Each name in the list must also exist as an `AlarmGroup` object in the Data Store.
 
 These are the variables that `scAlarm` maintains in MOD. A non-MOD application that keeps these up to date will be picked up by `scRemoteAlarms` automatically once the remote system connection is established.
+
+## Remote Logbook { #remote-logbook }
+
+The global logbook under **Documents & Logbook → Logbook** shows the logbook of every connected remote system as its own top node in the topic tree, named after the remote system. Notes can be read, written, edited and archived there. They are stored in the remote system's own logbook, so its operators see them too. Changes appear without reopening the view, provided **Auto connect on startup** is enabled for the remote system.
+
+See [Logbooks of Remote Systems](../modules/logbook/configuring.md#logbooks-of-remote-systems) for how it works and what it requires.
 
 <!-- --8<-- [end:body-2] -->

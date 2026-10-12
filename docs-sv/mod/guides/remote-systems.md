@@ -3,7 +3,7 @@ title: Fjärrsystem
 product: mod
 page_type: guide
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -106,5 +106,11 @@ Larmaggregering fungerar med vilken WideQuick-applikation som helst — inte bar
 * `alarmNames` — en kommaseparerad lista med larmgruppsnamn. Varje namn i listan måste också finnas som ett `AlarmGroup`-objekt i Datalager.
 
 Det är dessa variabler som `scAlarm` underhåller i MOD. En icke-MOD-applikation som håller dessa uppdaterade kommer automatiskt att kännas igen av `scRemoteAlarms` när fjärrsystemanslutningen är upprättad.
+
+## Fjärrloggbok { #remote-logbook }
+
+Den globala loggboken under **Dokument & Loggbok → Loggbok** visar loggboken för varje anslutet fjärrsystem som en egen toppnod i ämnesträdet, namngiven efter fjärrsystemet. Där kan anteckningar läsas, skrivas, redigeras och arkiveras. De lagras i fjärrsystemets egen loggbok, så fjärrsystemets operatörer ser dem också. Ändringar visas utan att vyn behöver öppnas igen, förutsatt att **Auto connect on startup** är aktiverat för fjärrsystemet.
+
+Se [Fjärrsystemens loggböcker](../modules/logbook/configuring.md#logbooks-of-remote-systems) för hur det fungerar och vilka krav som gäller.
 
 <!-- --8<-- [end:body-2] -->
