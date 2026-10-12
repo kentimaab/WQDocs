@@ -76,7 +76,7 @@ Följande skript har inga beroenden och kan köras fristående:
 
 | Skript | Kräver |
 |---|---|
-| `scAlarmFinder` | `scAlert`, `scLinking`, `scMap` |
+| `scAlarmFinder` | `scAlert`, `scLinking`, `scMap`, `scRemoteSystems` |
 | `scAlarmSender` | `scAlert`, `scAlarm`, `scPrototypes` |
 | `scCalendar` | `scAlert`, `scMaintenance`, `scThemes` |
 | `scDashboard` | `scAlert`, `scHistory` |

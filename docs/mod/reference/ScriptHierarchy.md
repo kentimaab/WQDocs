@@ -77,7 +77,7 @@ The following scripts have no dependencies and can run standalone:
 
 | Script | Requires |
 |---|---|
-| `scAlarmFinder` | `scAlert`, `scLinking`, `scMap` |
+| `scAlarmFinder` | `scAlert`, `scLinking`, `scMap`, `scRemoteSystems` |
 | `scAlarmSender` | `scAlert`, `scAlarm`, `scPrototypes` |
 | `scCalendar` | `scAlert`, `scMaintenance`, `scThemes` |
 | `scDashboard` | `scAlert`, `scHistory` |

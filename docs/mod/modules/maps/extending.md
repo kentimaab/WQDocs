@@ -42,13 +42,21 @@ for (var index = 0; index < local.length; index++) {
 app.alarmView = this.view;
 scMap.alarmList = this.view.Alarm1;
 scMap.updateAlarmList(scMap.mapView, scMap.alarmList);
+
+// "Go to alarm" in the alarm list (the alarm groups' Measure calls this)
+var gotoList = this.view.Alarm1;
+var gotoViewName = this.view.name;
+this.view.goToCurrentAlarm = function () {
+    scAlarmFinder.goToAlarm(gotoList.nameForCurrentAlarm, gotoViewName);
+};
 ```
 
 !!! note
     Replace `Alarm1` with the name of the **Alarm** object placed in the view.
     `alarmNames` is an internal Data Store variable containing a comma-separated
     string of all alarm group names in the system. It does not need to be configured
-    manually.
+    manually. The last lines make the alarm list's GoTo work, also on the web client.
+    See [GoTo in custom alarm views](../Core/Navigation/extending.md#goto-in-custom-alarm-views).
 
 Next, the **Map View** onLoad script already handles alarm list updates if an
 `scMap.alarmList` is set. Make sure the **Map View** onLoad script is configured

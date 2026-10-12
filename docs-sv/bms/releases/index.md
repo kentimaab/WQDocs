@@ -3,7 +3,7 @@ title: Versioner — BMS
 product: bms
 page_type: release
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-08
 tags:
  - BMS
 ---
@@ -155,6 +155,82 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 
 
 ## WideQuick BMS 2026.1.1 { #bms-2026-1-1 }
+
+__Utgiven 2026-10-06__ — Patch-version BMS 2026.1.1.2
+<details class="release" markdown="1">
+<summary>Versionsnoteringar</summary>
+
+### Buggar
+
+| # | Område | Beskrivning |
+|---|---|---|
+| 1 | Fjärrsystem | När ett fjärrsystem med WideQuick BMS, eller en annan Modular Framework-applikation, anslöts slutade lokal funktionalitet att fungera: popuper, trender, historik, loggboken, kalendern och larmräknarna slutade fungera eller visade fjärrsystemets data. Skriptfunktionerna var deklarerade globalt, så fjärrsystemets kopior av samma skript ersatte de lokala. Alla skriptfunktioner och klasser är nu medlemmar i sitt eget skriptbibliotek och anropas via biblioteksnamnet. |
+| 2 | Fjärrlarm | Att koppla från ett fjärrsystem kunde ge fel, och räkningen av fjärrlarm misslyckades när fjärrsystemets data togs bort innan frånkopplingen hanterades. Fjärrsystem kontrolleras nu korrekt innan de registreras eller tas bort, och registreringen görs om medan fjärrsystemets data fortfarande laddas. |
+| 3 | Fjärrlarm | Larmräknarna i navigeringen och på dashboards visade fel antal fjärrlarm efter anslutning, och ett anslutet fjärrsystems egna skript kunde skriva över de lokala räknarna. Fjärrlarm räknas nu direkt från fjärrsystemets larmgrupper och publiceras till två nya variabler, `remoteNoAckAlarms` och `remoteAckAlarms`. |
+| 4 | Popuper | En popup som öppnades på nytt från cachen efter att ett fjärrsystem anslutits kunde få klienten att krascha. Popuper återanvänder nu bara instanser som den lokala applikationen har skapat. |
+| 5 | Trend | Trendpopupen kunde inte laddas för objekt med ett suffix som saknar matchande tagg. |
+| 6 | Underhåll, Kalender | På webbklienten och på fjärrklienter visade underhållsuppgifter och underhållshändelserna i kalendern datum runt 1970. Dessa klienter tar emot heltal från databasen som 32-bitarstal, vilket kapar tidsstämplar som lagras i millisekunder. Tidsstämplarna läses nu som decimaltal, som kommer fram oförändrade. |
+| 7 | Databaser | Webb- och fjärrklienter skapade och migrerade databastabeller vid uppstart, vilket gav fel i webbklientens logg. Tabellskapande och migreringar för underhåll, kalendern, rapportschemaläggaren och larmutskicket körs nu bara på servern. |
+| 8 | Larm | **Gå till larm** i larmlistan gjorde ingenting på webbklienten, eftersom en larmgrupps `Measure`-skript inte når skriptbiblioteken där. Vyer med en larmlista har nu en funktion `view.goToCurrentAlarm()`, och larmgruppernas `Measure`-skript anropar den. Det gäller **Larm - Lista**, larmpopupen, kartan och dashboardens larmlistwidgetar. |
+| 9 | Fjärrlarm | **Gå till larm** på ett larm från ett anslutet fjärrsystem gjorde ingenting, eftersom objektet inte finns i det lokala projektet. Nu öppnas fjärrsystemet i **WideQuick® Remote**, på samma sätt som från fjärrsystemsmenyn. Efter inloggning navigerar fjärrsystemet till larmets vy och markerar objektet. |
+| 10 | Dashboard | På webbklienten visade dashboardens fält för från- och till-datum 1970-01-01, och historikwidgetarna använde det intervallet. Fälten är inte längre bundna till skriptet `scDashboard`; intervallet läses från fälten när det tillämpas. |
+| 11 | Underhåll | På webbklienten var prioritetslistan i **Underhåll - Mallar** och mall- och prioritetslistorna i **Underhåll - Återkommande** tomma. Listorna fylls nu när vyn laddas. |
+| 12 | Suffixalias | På webbklienten visade vyfältet i **Suffixalias - Popuper** fel vy, och listan över tillgängliga vyer förblev tom eftersom webbklienten inte kan läsa serverns mappar. På webbklienten är fältet nu skrivskyddat och visar den vy som är kopplad till den valda kategorin, med en notering om att ändringar inte är tillgängliga där. Skrivbords- och fjärrklienter är oförändrade. |
+| 13 | Spårningslogg | Med webb- eller fjärrklienter anslutna kunde en ändring loggas mer än en gång, eller med fel användare eller system. Alla anslutna applikationer reagerade på ändringen, och ingen av dem kunde avgöra var den gjordes. Varje ändring loggas nu en gång, av den applikation där användaren gjorde den. Ändringar utan användare, till exempel från skript eller drivrutiner, loggas av servern. När variabler läggs till i eller tas bort ur spårningsloggen når det nu alla anslutna applikationer, och **Spårningslogg** har en ny kolumn **System**. |
+| 14 | Popuper | På webbklienten i ett förminskat webbläsarfönster ritade popuperna **Styrkurva** och **Styrkurva tid** sitt innehåll i halv storlek, och dokumentvisaren i popupen **Documents** blev större än popupen. Båda skalas nu med popupen på webbklienten. Storleken på skrivbords- och fjärrklienter är oförändrad. |
+| 15 | Styrkurva tid, tidkanaler | Popupen **Styrkurva tid** och sparade tidkanalsprofiler kunde inte köras på webb- och fjärrklienter, eftersom skripten `scStyrkurvaTid` och `scTimeChannel` inte laddades där. Båda skripten körs nu på fjärrklienter. |
+
+---
+
+### Kända problem
+
+| Område | Problem |
+|---|---|
+| **Webbklient: trädvyer i popuper** | I popupfönster som öppnas från ett objekt, till exempel **Documents**, **History**, **Trend** och **Object Info**, visar trädvyns rubrikrad stor, mörk text på webbklienten, och raderna följer inte popupens zoom. Temats textfärg och typsnitt för rubrikraden tillämpas inte i dessa fönster. Det är ett problem i **WideQuick® Web Client** som väntas bli åtgärdat i en senare version av WideQuick. Trädvyer i huvudvyn påverkas inte. |
+| **Spårningslogg: webbklient på serverdatorn** | Spårningsloggen avgör var en ändring gjordes utifrån varje applikations senaste användaraktivitet. En webbklient i en webbläsare på samma dator som servern delar den aktiviteten, så en ändring som görs där kan loggas två gånger. Webbklienter på andra datorer påverkas inte. |
+
+---
+
+### Biblioteks- och vyändringar
+
+| Fil | Förändring |
+|---|---|
+| `Scripts/*.js` (29 filer) | Skriptfunktioner och klasser deklarerade som medlemmar i sitt skriptbibliotek, till exempel `scSmartPopup.smartPopup` och `scAlarmFinder.goToAlarm`, i stället för globalt |
+| Vyer och bibliotek (32 vyer, 4 bibliotek) | Anrop uppdaterade till de biblioteksprefixade namnen |
+| `scRemoteAlarms.js` | Kontroller vid registrering och borttagning av fjärrsystem, nytt försök medan systemets data laddas, fjärrlarm räknas från larmgrupperna |
+| `scAlarm.js` | Larmräknarna skrivs bara av den lokala applikationen, inte av ett anslutet fjärrsystems kopia av skriptet |
+| `scSmartPopup.js` | Popuper återanvänder bara instanser som den lokala applikationen har skapat |
+| `Trend.kvie` | Skydd för objekt vars suffix saknar matchande tagg |
+| `Nav.kvie`, `Dashboard Widgets.klib` | Larmräknarna inkluderar `remoteNoAckAlarms` / `remoteAckAlarms` |
+| `scMaintenance.js`, `MaintenanceInfoPanel.kvie` | Tidsstämplar läses som decimaltal via kolumnlistorna `logCols()`, `templateCols` och `eventCols` i stället för `SELECT *`; statusmigreringen körs bara på servern |
+| `scCalendar.js`, `scReportScheduler.js`, `scAlarmSender.js` | Tabellskapande och migreringar körs bara på servern |
+| `Larm - Lista.kvie`, `VySpecifikAlarm.kvie`, `Karta.kvie`, `Dashboard Widgets.klib` | Definierar `view.goToCurrentAlarm()` för larmgruppernas `Measure`-skript |
+| `scAlarmFinder.js`, `scRemoteSystems.js`, `WORKSPACE.kvie`, `Remote/startup_remote/Workviews/StartUp.kvie` | **Gå till larm** på ett fjärrsystems larm öppnar **WideQuick® Remote** och navigerar till larmet där |
+| `scDashboard.js` | Ny funktion `readRange()` som läser dashboardens från- och till-fält |
+| `Dashboard_Template.kvie`, `Dashboard Widgets.klib`, Demo-projektets dashboards | Från- och till-fälten är inte längre bundna till `scDashboard`; intervallet läses med `readRange()` |
+| `Underhåll - Mallar.kvie`, `Underhåll - Återkommande.kvie` | Prioritets- och malllistor fylls från vyns Load-skript |
+| `Suffixalias - Popuper.kvie` | På webbklienten är vyfältet skrivskyddat och visar kategorins kopplade vy, med en notering |
+| `scAuditTrail.js` | Varje ändring loggas av den applikation där den gjordes; ändringar i listan synkroniseras till alla anslutna applikationer |
+| `Spårningslogg.kvie` | Ny kolumn **System** |
+| `scWM.js` | Ny egenskap `scWM.isWeb` och en `afterScale`-krok för popuper |
+| `Styrkurva.kvie`, `StyrkurvaTid.kvie`, `scStyrkurvaTid.js` | Separat storlekshantering för webbklienten |
+| `Documents.kvie` | Dokumentvisaren skalas med popupen på webbklienten |
+| `ScriptLibraries.kdat` | `scStyrkurvaTid` och `scTimeChannel` körs på fjärrklienter |
+| `DataStore.kdat` | Nya variabler `remoteNoAckAlarms`, `remoteAckAlarms`, `AuditTrailVersion` och `AuditTrailClaims`; i Demo-projektet anropar larmgruppernas `Measure`-skript `view.goToCurrentAlarm()` |
+
+---
+
+### Att tänka på vid uppgradering
+
+| Ämne | Notering |
+|---|---|
+| **Egna skript och vyer** | Egen kod som anropar ramverkets skriptfunktioner med deras gamla globala namn måste använda det biblioteksprefixade namnet i stället, till exempel `scSmartPopup.smartPopup`, `scAlarmFinder.goToAlarm(...)`, `scWorkviewAnimation.AnimationHandler`, `scQuickSort.Quicksort` och `b64.btoa` / `b64.atob`. |
+| **Fjärrsystem: automatisk anslutning** | För att larmräknarna ska inkludera ett fjärrsystems larm i alla vyer behöver **Auto connect** vara aktiverat för fjärrsystemet. Annars är anslutningen bara öppen medan en vy använder den, till exempel larmlistan. |
+| **Larmgrupper: Gå till larm** | Larmgrupper som har lagts till i projektet måste använda `Measure`-skriptet `if (view.goToCurrentAlarm) { view.goToCurrentAlarm(); }`. Den tidigare formen, som anropar `scAlarmFinder.goToAlarm` med `app.alarmView`, fungerar inte på webbklienten. En egen vy med en larmlista måste också definiera `view.goToCurrentAlarm()`; se [migreringsguiden](MigrationGuide.md#bms-migration-2026-1-1-2). |
+| **Fjärrsystem: Gå till larm** | För att navigera till ett fjärrsystems larm måste fjärrsystemet också köra WideQuick BMS 2026.1.1.2. Annars öppnas **WideQuick® Remote** på fjärrsystemets startvy. Användaren loggar in på fjärrsystemet i fönstret **WideQuick® Remote**. |
+
+</details>
+
 
 __Utgiven 2026-07-08__ — Patch-version BMS 2026.1.1.1
 <details class="release" markdown="1">
