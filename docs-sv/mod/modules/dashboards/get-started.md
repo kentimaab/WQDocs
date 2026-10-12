@@ -3,7 +3,7 @@ title: Dashboards — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -40,7 +40,7 @@ Nya dashboards kan skapas antingen från mallen eller från grunden beroende på
 Duplicera dashboardmallen i **WideQuick® Designer** genom att högerklicka på mallen i projektträdet och flytta den till rätt mapp i projektstrukturen.
 
 ![Setting up a dashboard](/docs/sv/Images/Dashboard/SetupDashboard.gif){align=center}
-## Widgets — färdiga komponenter för dashboarden { #widgets-pre-built-components-for-the-dashboard }
+## Widgets { #widgets-pre-built-components-for-the-dashboard }
 
 Dashboards byggs med färdiga widgets från biblioteket `Dashboard Widgets`.
 Varje widget är utformad för en specifik typ av data och kan placeras och
@@ -50,7 +50,7 @@ konfigureras direkt utan någon egen utveckling. De flesta widgets finns även i
 ![Widget](/docs/sv/Images/Dashboard/Widget.png){align=center}
 
 <!-- --8<-- [start:body-3] -->
-## Rutnätslayout — placera widgets i redigeraren { #grid-layout-positioning-widgets-in-the-editor }
+## Rutnätslayout { #grid-layout-positioning-widgets-in-the-editor }
 
 dashboarderna i **WideQuick® Designer** använder ett 4×4-rutnät som hjälp vid widgetplacering. Varje rutnätsposition markeras med en ellips som fungerar som placeringsguide. Dessa ellipser
 visas inte vid körning.

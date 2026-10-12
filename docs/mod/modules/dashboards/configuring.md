@@ -4,7 +4,7 @@ description: Configure and customise the Dashboards module.
 product: mod
 page_type: howto
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -12,7 +12,7 @@ tags:
 
 # Dashboards - Configuring
 
-## Parameters - Common Settings Shared by All Widgets { #parameters-common-settings-shared-by-all-widgets }
+## Parameters { #parameters-common-settings-shared-by-all-widgets }
 
 All widgets share a `Header` parameter, a string, that sets the title displayed on the widget. If left empty the widgets has a standard header.
 
@@ -31,11 +31,11 @@ Some widgets include an expand button in the top-right corner. Clicking it opens
 
 Widgets that display a signal legend automatically handle overflow. When there are more signals than fit in the legend, a button shows how many are hidden. Clicking it opens the fullscreen view with all signals listed.
 
-## Widgets - All Available Widgets and Their Parameters { #widgets-all-available-widgets-and-their-parameters }
+## Widgets { #widgets-all-available-widgets-and-their-parameters }
 
 ### Alarm Status { #alarm-status }
 
-Displays alarm counts — total, acknowledged and unacknowledged.
+Displays alarm counts: total, acknowledged and unacknowledged.
 <!-- --8<-- [end:body-1] -->
 
 ![Alarm Status](/docs/Images/Dashboard/AlarmStatus.png){align=center}
@@ -135,7 +135,7 @@ The **From** and **To** fields at the top of the dashboard set the time range. H
 
 ### Key Value { #key-value }
 
-Displays a single live value with its configured unit and decimal precision. Accepts any value in Data Store — internal variables, driver signals and System variables.
+Displays a single live value with its configured unit and decimal precision. Accepts any value in Data Store: internal variables, driver signals and System variables.
 <!-- --8<-- [end:body-8] -->
 
 ![Key Value](/docs/Images/Dashboard/KeyValue.png){align=center}
@@ -222,7 +222,7 @@ Displays a single live value as a dial against a configured range, with an optio
 
 ### Maintenance { #maintenance }
 
-Displays maintenance task status — active, planned and missed tasks. Connects directly to the maintenance module. No signal input required.
+Displays maintenance task status: active, planned and missed tasks. Connects directly to the maintenance module. No signal input required.
 <!-- --8<-- [end:body-14] -->
 
 ![Maintenance](/docs/Images/Dashboard/Maintenance.png){align=center}

@@ -3,7 +3,7 @@ title: Kartor och indikatorer — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -26,11 +26,10 @@ tags:
     * `Map Indicators`
     * `WEATHER`
 
-Det här avsnittet beskriver hur du konfigurerar ett **Kartvy**-objekt i WideQuick och hur du lägger till
-grundläggande indikatorer. För konfigurering av mer avancerade indikatorer, såsom Pin Status, Cluster
-Pins och Lines, se [Kartor och indikatorer — Konfigurera](configuring.md). För att koppla
+Det här avsnittet beskriver hur ett **Kartvy**-objekt konfigureras i WideQuick och hur grundläggande indikatorer läggs till. För konfigurering av mer avancerade indikatorer, såsom Pin Status, Cluster
+Pins och Lines, se [Konfigurera](configuring.md). För att koppla
 ett **Alarm**-objekt till en **Kartvy** och skapa anpassade indikatorer, se
-[Kartor och indikatorer — Utöka](extending.md).
+[Utöka](extending.md).
 
 ![Map Indicators](/docs/sv/Images/Map_Indicators/Map_Indicators.png)
 
@@ -41,7 +40,7 @@ Objects Toolbar i **WideQuick® Designer**:
 
 ![Map View object](/docs/sv/Images/Map_Indicators/map_view_object.png)
 
-Placera det i den vy där du vill visa din karta.
+Placera det i den vy som ska visa kartan.
 
 När det är placerat behöver **Kartvy**-objektet länkas till skriptet `scMap`. Gör detta
 genom att lägga till följande onLoad-skript på **Kartvy**-objektet:
@@ -92,9 +91,7 @@ vilket bestämmer var de visas på kartan.
 Följande avsnitt beskriver varje grundläggande indikator och eventuell konfigurering som krävs.
 
 ### Zoomknapp { #zoom-button }
-Att lägga till en zoomknapp är enkelt — den har inga egenskaper att konfigurera. Lägg till den
-på samma sätt som vilket annat objekt som helst i en **Kartvy**. Om du är osäker på hur du gör detta,
-se WideQuick-hjälpen genom att trycka på F1 i **WideQuick® Designer**.
+En zoomknapp har inga egenskaper att konfigurera. Lägg till den på samma sätt som vilket annat objekt som helst i en **Kartvy**. WideQuick-hjälpen, som öppnas med F1 i **WideQuick® Designer**, beskriver hur.
 
 Zoomknappen placerar sig automatiskt i nedre högra hörnet av
 **Kartvy** och kräver ingen longitud- eller latitudinmatning.

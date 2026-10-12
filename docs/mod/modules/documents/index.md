@@ -1,11 +1,11 @@
 ---
 title: Documents
-description: Overview of the Documents module — manage files and link them to objects.
+description: Overview of the Documents module, which manages files and links them to objects.
 product: mod
 page_type: concept
 doc_id: DOC-M15
 status: draft
-last_reviewed: 2026-05-27
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---

@@ -1,11 +1,11 @@
 ---
 title: Documents - Configuring
-description: Configure the Documents module — link documents to objects and sync with the filesystem.
+description: Configure the Documents module link documents to objects and sync with the filesystem.
 product: mod
 page_type: howto
 doc_id: DOC-M16
 status: draft
-last_reviewed: 2026-05-27
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -42,7 +42,7 @@ Every object in the project has a [**Documents**](../../reference/Popup/Document
 <!-- --8<-- [start:body-3] -->
 ## Syncing with the filesystem { #syncing-with-the-filesystem }
 
-Local files are stored in the `HTML/documents/` folder on the server. The document list reflects what is registered in the database, not what is physically on disk. If files are added to or removed from the folder directly — for example by copying files over a network share — they will not appear in the list until a sync is performed.
+Local files are stored in the `HTML/documents/` folder on the server. The document list reflects what is registered in the database, not what is physically on disk. If files are added to or removed from the folder directly, for example by copying them over a network share, the list does not show the change until a sync is performed.
 
 Click **Sync with local files on server** to scan the folder and update the database:
 

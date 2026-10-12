@@ -3,7 +3,7 @@ title: Underhåll
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -21,7 +21,7 @@ Det finns två sätt att komma åt underhållsuppgifter. Vyn **Underhåll - List
 ### [Kom igång](get-started.md) { #get-started }
 * [**Vyer**](get-started.md#views) — En översikt av de tre underhållsvyerna.
 * [**Objektpopup**](get-started.md#object-popup) — Åtkomst till underhåll från ett objekt.
-* [**Skapa en uppgift**](get-started.md#creating-a-task) — Hur du skapar en ny underhållsuppgift, inklusive att skapa flera samtidigt.
+* [**Skapa en uppgift**](get-started.md#creating-a-task) — Hur en ny underhållsuppgift skapas, inklusive flera samtidigt.
 
 ---
 
@@ -41,5 +41,5 @@ Det finns två sätt att komma åt underhållsuppgifter. Vyn **Underhåll - List
 ---
 
 ### [Felsökning](troubleshooting.md) { #troubleshooting }
-* [**Vanliga problem**](troubleshooting.md) — Vanliga problem och hur du löser dem.
+* [**Vanliga problem**](troubleshooting.md) — Vanliga problem och hur de löses.
 <!-- --8<-- [end:body] -->

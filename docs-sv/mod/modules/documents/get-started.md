@@ -3,7 +3,7 @@ title: Dokument — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -25,7 +25,7 @@ tags:
     * `scUsers`
     * `scAlert`
 
-Dokumentmodulen finns under **Dokument & Loggbok -> Dokument** i huvudmenyn. Vyn **Dokument - Lista** är den primära ingångspunkten — den visar alla dokument som finns i systemet och låter dig lägga till, förhandsgranska och hantera dem.
+Dokumentmodulen finns under **Dokument & Loggbok → Dokument** i huvudmenyn. Vyn **Dokument - Lista** är den primära ingångspunkten. Den visar alla dokument i systemet, och där kan de läggas till, förhandsgranskas och hanteras.
 
 
 
@@ -73,13 +73,13 @@ Filerna kopieras till servern och läggs till i dokumentlistan under **Lokala fi
 ![Online resource tab](/docs/sv/Images/Documents/documents-upload-online.png){align=center}
 
 <!-- --8<-- [start:body-4] -->
-Resursen läggs till i dokumentlistan under **Onlinefiler**. URL:en lagras — ingen fil laddas ned till servern.
+Resursen läggs till i dokumentlistan under **Onlinefiler**. Endast URL:en lagras. Ingen fil laddas ned till servern.
 
 ## Förhandsgranska ett dokument { #previewing-a-document }
 
 Välj en fil i den vänstra panelen och klicka på **Förhandsgranska** för att läsa in den i förhandsgranskningspanelen.
 
-De flesta filtyper kan förhandsgranskas direkt — bilder, PDF:er och webbsidor visas inline. På **WideQuick® Web** kan inte Office-filer (Word, Excel, PowerPoint) förhandsgranskas i webbläsaren och grupperas separat i filträdet.
+De flesta filtyper kan förhandsgranskas direkt. Bilder, PDF:er och webbsidor visas inline. På **WideQuick® Web** kan inte Office-filer (Word, Excel, PowerPoint) förhandsgranskas i webbläsaren och grupperas separat i filträdet.
 
 ## Nästa steg { #next-steps }
 

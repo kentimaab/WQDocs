@@ -3,7 +3,7 @@ title: Historik — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -82,28 +82,28 @@ Menyn **SpeedDial** på processvyer innehåller en knapp som öppnar ett vyspeci
 ![Vyspecifikt historikpopup](/docs/sv/Images/History/history-view-specific.png){align=center}
 
 <!-- --8<-- [start:body-4] -->
-Signalval, tidskontroller, inställningar och sparade signalgrupper fungerar på samma sätt. Sparade signalgrupper i detta popup lagras per vy och är separata från projektövergripande sparade grupper. Du kan också importera sparade grupper från andra vyer via **Importera grupper från vyer** — se [Importera grupper från andra vyer](configuring.md#importing-groups-from-other-views).
+Signalval, tidskontroller, inställningar och sparade signalgrupper fungerar på samma sätt. Sparade signalgrupper i detta popup lagras per vy och är separata från projektövergripande sparade grupper. Sparade grupper från andra vyer kan också importeras via **Importera grupper från vyer**. Se [Importera grupper från andra vyer](configuring.md#importing-groups-from-other-views).
 
-Eftersom den vyspecifika historiken bara visar signaler som tillhör den aktuella vyn kan du hämta in signaler från andra vyer med hjälp av **Importera signaler**.
+Eftersom den vyspecifika historiken bara visar signaler som tillhör den aktuella vyn kan signaler från andra vyer hämtas in med **Importera signaler**.
 <!-- --8<-- [end:body-4] -->
 
 ![Dialogrutan Importera signaler med Tillgängliga till vänster och Valda till höger](/docs/sv/Images/History/history-import-signals.png){align=center}
 
 <!-- --8<-- [start:body-5] -->
-**Så här importerar du signaler från andra vyer:**
+**Importera signaler från andra vyer:**
 
 1. Klicka på **Importera signaler**. En dialogruta öppnas som visar alla signaler från alla andra vyer, ordnade efter system och objekt.
-2. Expandera trädet i panelen **Tillgängliga** för att hitta den signal du vill ha.
+2. Expandera trädet i panelen **Tillgängliga** för att hitta signalen som ska läggas till.
 3. Markera en signal och klicka på **→** för att flytta den till panelen **Valda**.
-4. Upprepa för varje signal du vill lägga till.
+4. Upprepa för varje signal som ska läggas till.
 5. Klicka på **Importera och stäng**. Signalerna läggs till i signallistan och kan markeras och appliceras på diagrammet.
 
-Om du vill ta bort en signal från ditt urval innan import markerar du den i panelen **Valda** och klickar på **←**. Klicka på **Rensa tillagda** för att tömma den högra panelen helt.
+För att ta bort en signal från urvalet innan import, markera den i panelen **Valda** och klicka på **←**. Klicka på **Rensa tillagda** för att tömma den högra panelen helt.
 
 
 ## Objektpopup (fliken Historik) { #object-popup-history-tab }
 
-Varje objekt i projektet har en flik [**Historik**](../../reference/Popup/History.md) i sitt popup. Om du öppnar fliken visas de loggade signalerna för det objektet i ett diagram.
+Varje objekt i projektet har en flik [**Historik**](../../reference/Popup/History.md) i sitt popup. När fliken öppnas visas de loggade signalerna för det objektet i ett diagram.
 <!-- --8<-- [end:body-5] -->
 
 ![Fliken Historik i ett objektpopup](/docs/sv/Images/History/history-object-popup.png){align=center}

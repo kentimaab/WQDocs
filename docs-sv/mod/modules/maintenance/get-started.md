@@ -3,7 +3,7 @@ title: Underhåll — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -27,7 +27,7 @@ Underhållsmodulen nås via huvudmenyn under **Underhåll**. Härifrån finns tr
 
 Listvyn visar alla underhållsuppgifter för samtliga objekt i projektet. Det är den primära vyn för det dagliga underhållsarbetet.
 
-* Välj en uppgift och klicka på **Öppna** för att visa och uppdatera dess detaljer — deadline, beskrivning, status och tilldelad person.
+* Välj en uppgift och klicka på **Öppna** för att visa och uppdatera dess deadline, beskrivning, status och tilldelade person.
 * Välj en uppgift och klicka på **Ta bort underhåll** för att ta bort den permanent.
 * Klicka på **Skapa** för att skapa en ny uppgift.
 <!-- --8<-- [end:body-1] -->
@@ -55,7 +55,7 @@ Vyn för återkommande underhåll hanterar automatiserade underhållskonfigurati
 
 Varje objekt i projektet har en underhållsflik tillgänglig via dess popup. Öppna popupen genom att klicka på ett objekt och välja fliken [**Underhåll**](../../reference/Popup/Maintenance.md). Här visas alla underhållsuppgifter kopplade till det specifika objektet. Använd **Nytt underhåll**, **Redigera underhåll** eller **Ta bort underhåll** för att hantera uppgifter utan att lämna processvyn.
 
-Kolumnen **Återkommande** visar om varje uppgift har genererats av en återkommande underhållskonfiguration. Värdet **Ja** innebär att uppgiften ingår i ett automatiserat schema — när den slutförs skapas nästa instans automatiskt. Värdet **Nej** innebär att uppgiften skapades manuellt som en engångsåtgärd.
+Kolumnen **Återkommande** visar om varje uppgift har genererats av en återkommande underhållskonfiguration. Värdet **Ja** innebär att uppgiften ingår i ett automatiserat schema, och när den slutförs skapas nästa instans automatiskt. Värdet **Nej** innebär att uppgiften skapades manuellt som en engångsåtgärd.
 <!-- --8<-- [end:body-4] -->
 
 ![Underhållsfliken i objektpopupen](/docs/sv/Images/Maintenance/object-popup-maintenance.png){align=center}

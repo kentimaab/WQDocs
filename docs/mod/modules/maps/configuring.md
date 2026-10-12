@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M14
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -15,21 +15,19 @@ tags:
 
 This section covers how to configure the more advanced Map Indicators, including Pin
 Status, Cluster Pins, Lines, and Filters. For setting up a **Map View** object and
-adding basic indicators, see [Maps & Indicators — Get started](get-started.md).
+adding basic indicators, see [Get started](get-started.md).
 
 ## Configuring indicators { #configuring-indicators }
 
 The following indicators are available in the **Map Indicators** object library and
 are added the same way as described in
-[Maps & Indicators — Get started](get-started.md). Each indicator has properties that
-must be configured to function correctly — these are described in the sections below.
+[Get started](get-started.md). Each indicator has properties that must be configured for it to work. The sections below describe them.
 
 ### Pin Status { #pin-status }
 Pin Status objects are the key to connecting a **Map View** to **Workviews**. They are
 implemented the same way as a regular pin, but with more logic behind them. When
 successfully linked to a **Workview**, they allow the user to navigate directly to that
-**Workview** on click. The background colour of the pin also displays the live status
-of the **Workview** — whether it is active, has a warning, or has an alarm. The pin can
+**Workview** on click. The background colour of the pin also displays the live status of the **Workview**: active, warning or alarm. The pin can
 additionally display the number of active alarms and warnings. Together, these features
 make `PinStatus` objects the foundation for system control through a map.
 
@@ -55,8 +53,7 @@ The following properties must be configured:
 
 * **areaName** — The name shown in the tooltip, helping the user with navigation.
 * **zoomTarget** — Controls the zoom level when the pin is pressed. In combination
-with the map's zoom ranges, this results in seamless navigation — showing the child
-pins when pressed and hiding the cluster pin.
+with the map's zoom ranges, this gives seamless navigation: pressing the pin shows its child pins and hides the cluster pin.
 * **roi** — The core of the cluster pin. Determines the range within which the cluster
 collects other pins as its children. If a pin falls within the **roi** of two cluster
 pins, the closest one will claim it as its child.
@@ -108,11 +105,9 @@ Example configuration:
 ![Lines configuration](/docs/Images/Map_Indicators/MapLines.png)
 
 #### CSV file with coordinates
-To link a line network to a CSV file, create the file in the `mapPaths` folder in your
-project directory. If this folder does not exist, create it.
+To link a line network to a CSV file, create the file in the project's `mapPaths` folder. If the folder does not exist, create it.
 
-The CSV uses two columns separated by a comma — latitude and longitude — defining the
-path from start to end. The following example covers a network over Malmö, Sweden:
+The CSV has two comma-separated columns, latitude and longitude, that define the path from start to end. The following example covers a network over Malmö, Sweden:
 
 ```csv title="example.csv"
 lat,long
@@ -161,8 +156,7 @@ fixed point that may fall outside the current view.
 ### Filter { #filter }
 Filters allow users to focus on a specific set of lines or networks by toggling their
 visibility. Any line network is automatically registered with the filter, so no
-additional configuration is needed. Add a `Filter` object to your view the same way
-as any other object.
+additional configuration is needed. Add a `Filter` object to the view the same way as any other object.
 
 ## Next Steps { #next-steps }
 

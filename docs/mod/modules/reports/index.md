@@ -4,14 +4,13 @@ description: Overview of the WideQuick MOD Reports module — generate, schedule
 product: mod
 page_type: overview
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
 <!-- --8<-- [start:body] -->
 # Reports
-WideQuick Modular Framework includes a built-in report module that allows you to 
-generate, schedule, and customize reports based on alarm and energy data. This section 
+WideQuick Modular Framework includes a built-in report module for generating, scheduling and customizing reports based on alarm and energy data. This section 
 covers everything from using the default templates to creating fully custom ones.
 
 ## Contents { #contents }
@@ -45,14 +44,12 @@ use it.
 ---
 
 ### [Extending](extending.md) { #extending }
-* [**Creating templates**](extending.md#creating-templates) — How to design and 
-configure your own report template.
+* [**Creating templates**](extending.md#creating-templates) — How to design and configure a custom report template.
 * [**Creating a ReportController**](extending.md#creating-the-reportcontroller-view) — 
-How to create a ReportController view for your custom template.
+How to create a ReportController view for a custom template.
 * [**Changing the maximum number of signals**](extending.md#changing-the-maximum-of-signals-to-be-selected) — 
 How to increase the signal limit for report generation.
-* [**Adding a base unit**](extending.md#adding-a-base-unit) - 
-How to add you own units to the unit system
+* [**Adding a base unit**](extending.md#adding-a-base-unit) — How to add custom units to the unit system.
 ---
 
 ### [Troubleshooting](troubleshooting.md) { #troubleshooting }

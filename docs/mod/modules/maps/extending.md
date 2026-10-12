@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M14
 status: draft
-last_reviewed: 2026-05-19
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -18,8 +18,7 @@ functionality. This includes connecting an **Alarm** object to a **Map View** fo
 live alarm filtering, and creating custom map indicators with zoom navigation,
 linking, and status awareness.
 
-Before getting started, make sure you are familiar with the basics of the Maps &
-Indicators module. If not, see [Maps & Indicators — Get started](get-started.md).
+This section assumes familiarity with the basics of the Maps & Indicators module. If needed, see [Get started](get-started.md).
 
 
 ## Connecting Alarm to Map View { #connecting-alarm-to-map-view }
@@ -79,9 +78,7 @@ active alarms based on what is currently visible on the map.
 
 The following sections explain the key concepts behind the built-in indicators and
 how to apply them when building custom ones. Rather than documenting a specific
-object, the focus is on the underlying patterns — zoom navigation, linking, status
-awareness, and clustering — so that the integrator can apply them freely to any
-custom indicator.
+object, the focus is on the underlying patterns (zoom navigation, linking, status awareness and clustering), so that the integrator can apply them to any custom indicator.
 
 !!! tip
     For complex indicators such as status pins and cluster pins, it is strongly
@@ -92,11 +89,10 @@ custom indicator.
 ### Zoom levels and navigation { #zoom-levels-and-navigation }
 
 **Map View** objects support zoom ranges, which control at which zoom level each
-object is visible. This is a powerful tool for reducing clutter — objects at a
-higher level can guide the user to more detailed views at lower zoom levels by
+object is visible. This is a powerful tool for reducing clutter. Objects at a higher level can guide the user to more detailed views at lower zoom levels by
 setting a target zoom level on click.
 
-To implement this, add a **zoomTarget** property to your custom indicator and use
+To implement this, add a **zoomTarget** property to the custom indicator and use
 the following onClick script:
 
 ```javascript title="Custom indicator — onClick"
@@ -114,8 +110,7 @@ defaults to `15`.
 * Centers the map on the longitude of the indicator.
 
 By combining zoom ranges with a **zoomTarget** property, indicators at higher zoom
-levels can act as navigation aids — clicking them zooms in and reveals the more
-detailed indicators beneath.
+levels can act as navigation aids: clicking one zooms in and reveals the more detailed indicators beneath.
 
 !!! tip
     A good practice is to set the **zoomTarget** of a higher level indicator to the
@@ -150,8 +145,7 @@ app._subNavTarget = { root: root, dir: dir };
 ```
 
 !!! note
-    Directory linking requires the Fullscreen Menu to be available. See
-    [Navigation — Get started](../Core/Navigation/get-started.md) for more information.
+    Directory linking requires the Fullscreen Menu to be available. See the [Navigation](../Core/Navigation/get-started.md) module for more information.
 
 #### Linking to a specific object
 To link an indicator directly to a specific object, add a **targetObject** property
@@ -163,13 +157,12 @@ scLinking.goTo(this.targetObject);
 ```
 
 This will navigate to the **Workview** containing the target object and highlight it.
-For more information about GoTo, see [Navigation — Extending](../Core/Navigation/extending.md#goto).
+For more information, see [GoTo](../Core/Navigation/extending.md#goto) in the Navigation module.
 
 !!! tip
     Use **linkedView** with a `.kvie` path to navigate to a specific **Workview**,
     use **linkedView** with a directory path to open the Fullscreen Menu at that
-    location, and use **targetObject** when you want to bring the user directly to
-    a specific object such as a sensor or control element.
+    location, and use **targetObject** to bring the user directly to a specific object such as a sensor or control element.
 
 ### Pin Status { #pin-status }
 
@@ -196,8 +189,7 @@ status category. This does not need to be modified when creating a custom indica
 
 !!! tip "Recommendation"
     Rather than building a custom status indicator from scratch, it is strongly
-    recommended to copy the existing `PinStatus` object and modify it to fit your
-    needs. The script is tightly coupled to the `scSuffix` script and the database
+    recommended to copy the existing `PinStatus` object and modify it as needed. The script is tightly coupled to the `scSuffix` script and the database
     structure, making it complex to replicate correctly. Copying ensures all the
     existing logic is preserved while allowing full visual customisation.
 
@@ -207,8 +199,8 @@ The clustering system in **Map View** is driven entirely by the `scMap` script's
 `initClusters()` function. It identifies objects by scanning for two specific
 properties:
 
-* An object with a `roi` property — treated as a **cluster**
-* An object with a `status` property — treated as a **pin** and potential child
+* An object with a `roi` property is treated as a **cluster**.
+* An object with a `status` property is treated as a **pin** and a potential child.
 
 This means any custom indicator can participate in the clustering system simply by
 having the right property present. There is no requirement for a specific object name
@@ -216,14 +208,12 @@ or type.
 
 !!! note
     `initClusters()` must be called in the **Map View** onLoad script for clustering
-    to work. See [Maps & Indicators — Get started](get-started.md#setting-up-a-map-view-object).
+    to work. See [Get started](get-started.md#setting-up-a-map-view-object).
 
 #### Making a custom indicator cluster-aware
 
 For a custom indicator to be picked up as a child by the clustering system, it needs
-a `status` property. For the built-in `PinStatus` object this is managed automatically
-by its script — `status` is updated by a `DataStoreListener` whenever the linked
-**Workview** changes state.
+a `status` property. For the built-in `PinStatus` object this is managed automatically by its script, which updates `status` through a `DataStoreListener` whenever the linked **Workview** changes state.
 
 For a custom indicator, `status` must be maintained by a script. The value should
 follow the same status hierarchy used by the built-in indicators:
@@ -237,8 +227,7 @@ follow the same status hierarchy used by the built-in indicators:
 
 !!! tip "Recommendation"
     Rather than building a custom cluster from scratch, it is strongly recommended
-    to copy the existing cluster object and modify it to fit your needs. The
-    clustering logic is handled entirely by the `scMap` script — copying ensures
-    your object is correctly identified by `initClusters()` while allowing full
+    to copy the existing cluster object and modify it as needed. The
+    clustering logic is handled entirely by the `scMap` script, and copying ensures the new object is correctly identified by `initClusters()` while allowing full
     visual customisation.
 <!-- --8<-- [end:body-2] -->

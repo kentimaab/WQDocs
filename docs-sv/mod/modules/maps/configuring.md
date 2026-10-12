@@ -3,7 +3,7 @@ title: Kartor och indikatorer — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -12,30 +12,29 @@ tags:
 
 # Kartor och indikatorer — Konfigurering
 
-Det här avsnittet beskriver hur du konfigurerar de mer avancerade kartindikatorerna, inklusive Pin
+Det här avsnittet beskriver hur de mer avancerade kartindikatorerna konfigureras, inklusive Pin
 Status, klusterpinnar, linjer och filter. För att komma igång med att sätta upp ett **Kartvy**-objekt och
-lägga till grundläggande indikatorer, se [Kartor och indikatorer — Kom igång](get-started.md).
+lägga till grundläggande indikatorer, se [Kom igång](get-started.md).
 
 ## Konfigurera indikatorer { #configuring-indicators }
 
 Följande indikatorer finns tillgängliga i objektbiblioteket **Map Indicators** och
 läggs till på samma sätt som beskrivs i
-[Kartor och indikatorer — Kom igång](get-started.md). Varje indikator har egenskaper som
-måste konfigureras för att fungera korrekt — dessa beskrivs i avsnitten nedan.
+[Kom igång](get-started.md). Varje indikator har egenskaper som
+måste konfigureras för att den ska fungera. Avsnitten nedan beskriver dem.
 
 ### Pin Status { #pin-status }
 Pin Status-objekt är nyckeln till att koppla en **Kartvy** till **Arbetsvyer**. De
 implementeras på samma sätt som en vanlig pinne, men med mer logik bakom sig. När
 de är korrekt länkade till en **Arbetsvy** kan användaren navigera direkt till den
-**Arbetsvy** med ett klick. Pinnens bakgrundsfärg visar också den aktiva statusen
-för **Arbetsvy** — om den är aktiv, har en varning eller har ett larm. Pinnen kan
+**Arbetsvy** med ett klick. Pinnens bakgrundsfärg visar också den aktuella statusen för **Arbetsvyn**: aktiv, varning eller larm. Pinnen kan
 dessutom visa antalet aktiva larm och varningar. Tillsammans gör dessa funktioner
 `PinStatus`-objekt till grunden för systemkontroll via en karta.
 
 ![Pin Status](/docs/sv/Images/Map_Indicators/PinStatus.png)
 
 !!! note
-    Om du vill visa en annan ikon på `PinStatus`-objektet, ändra dess SVG eller gör en
+    För att visa en annan ikon på `PinStatus`-objektet, ändra dess SVG eller gör en
     kopia av objektet och ändra SVG på kopian.
 
 För att integrera ett **Alarm**-objekt med en karta och statuspinnar, se
@@ -54,8 +53,7 @@ Följande egenskaper måste konfigureras:
 
 * **areaName** — Namnet som visas i verktygstipset och hjälper användaren med navigationen.
 * **zoomTarget** — Styr zoomnivån när pinnen trycks in. I kombination
-med kartans zoomintervall ger detta en sömlös navigering — de underordnade
-pinnarna visas när man trycker och klusterpinnen döljs.
+med kartans zoomintervall ger detta en sömlös navigering: ett tryck på pinnen visar dess underordnade pinnar och döljer klusterpinnen.
 * **roi** — Kärnan i klusterpinnen. Bestämmer det område inom vilket klustret
 samlar andra pinnar som sina underordnade. Om en pin befinner sig inom **roi** för två kluster-
 pins, kommer den närmaste att ta den som sin underordnade.
@@ -106,11 +104,9 @@ Exempelkonfiguration:
 ![Lines configuration](/docs/sv/Images/Map_Indicators/MapLines.png)
 
 #### CSV-fil med koordinater
-För att länka ett linjesnätverk till en CSV-fil, skapa filen i mappen `mapPaths` i ditt
-projektbibliotek. Om den här mappen inte finns, skapa den.
+För att länka ett linjesnätverk till en CSV-fil, skapa filen i projektets mapp `mapPaths`. Om mappen inte finns, skapa den.
 
-CSV-filen använder två kolumner separerade av ett kommatecken — latitud och longitud — som definierar
-sträckan från start till slut. Följande exempel täcker ett nätverk över Malmö, Sverige:
+CSV-filen har två kommaseparerade kolumner, latitud och longitud, som definierar sträckan från start till slut. Följande exempel täcker ett nätverk över Malmö, Sverige:
 
 ```csv title="example.csv"
 lat,long
@@ -138,7 +134,7 @@ till filnamnet:
 ### Filter { #filter }
 Filter låter användare fokusera på en specifik uppsättning linjer eller nätverk genom att växla deras
 synlighet. Alla linjennätverk registreras automatiskt med filtret, så ingen
-ytterligare konfiguration krävs. Lägg till ett `Filter`-objekt i din vy på samma sätt
+ytterligare konfiguration krävs. Lägg till ett `Filter`-objekt i vyn på samma sätt
 som vilket annat objekt som helst.
 
 ## Nästa steg { #next-steps }

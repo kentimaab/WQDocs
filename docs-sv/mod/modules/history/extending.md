@@ -3,7 +3,7 @@ title: Historik — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -28,7 +28,7 @@ Sparade signalgrupper i den vyspecifika popupen lagras per vy i tabellen `Histor
 
 ## Signaler som inte loggas { #signals-not-logged }
 
-Knappen **Visa variabler som inte loggas** i den projektövergripande vyn öppnar ett separat fönster med ett träd över alla signaler som finns i systemet men saknar en aktiv logger. Fönstret är skrivskyddat — det används endast för att identifiera saknade loggers.
+Knappen **Visa variabler som inte loggas** i den projektövergripande vyn öppnar ett separat fönster med ett träd över alla signaler som finns i systemet men saknar en aktiv logger. Fönstret är skrivskyddat och används endast för att identifiera saknade loggers.
 
 I objektpopupens flik [**Historik**](../../reference/Popup/History.md) visas ologgade signaler alltid på höger sida under **Taggar som inte loggas**, utan att behöva öppna något extra fönster.
 

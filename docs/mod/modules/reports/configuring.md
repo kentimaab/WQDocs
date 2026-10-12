@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M17
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -13,8 +13,7 @@ tags:
 
 # Reports - Configuring
 
-This section covers how to configure the six report templates in WideQuick Mod to fit 
-your needs, as well as how to use the built-in Report History to recreate or resend 
+This section covers how to configure the six report templates in WideQuick MOD, and how to use the built-in Report History to recreate or resend 
 failed reports.
 
 * **Alarm Report**
@@ -27,17 +26,14 @@ failed reports.
 ## Alarm Report { #alarm-report }
 The Alarm Report generates a complete overview of all alarms across the entire system. 
 It includes a pie chart showing alarm distribution by alarm class (A–F by default) and 
-a full list of all alarms triggered during the selected time period. The alarm classes 
-can be customized to fit your needs.
+a full list of all alarms triggered during the selected time period. The alarm classes can be customized as needed.
 
 By default, the Alarm Report fetches data from the database connected to the 
-**Larmlogg** logger. If you want to store data in a different database, simply change 
-where the Larmlogger stores its data — this will not affect the report itself.
+**Larmlogg** logger. To store data in a different database, change where the Larmlogger stores its data. This does not affect the report itself.
 
-However, if you want to set up a separate logger for alarms, the report must be updated 
-accordingly. Follow these steps:
+However, if a separate logger is set up for alarms, the report must be updated accordingly. Follow these steps:
 
-* Set up the new logger with the type Alarm and select your desired database. See 
+* Set up the new logger with the type Alarm and select the desired database. See 
 [Loggers](../../guides/Loggers.md) for more information.
 * Update the macro call in the report template (see image).
 * Update the view called **Alarm_Report** to reference the new logger.
@@ -47,7 +43,7 @@ accordingly. Follow these steps:
     through the selected logger.
 
 To change the logger used in the macro, locate the macro command and change 
-`FROM Larmlogg` to `FROM <YourLogger>`. You can edit the text directly, or right-click 
+`FROM Larmlogg` to `FROM <YourLogger>`. Edit the text directly, or right-click 
 the cell containing the macro command and select **Edit Expression** to open the 
 expression editor.
 
@@ -71,7 +67,7 @@ property to the desired logger.
     otherwise the report will not be generated.
 
 ## Alarm Report One Alarm { #alarm-report-one-alarm }
-This template is used when you need a report for a single specific alarm. It works 
+This template is used for a report on a single specific alarm. It works 
 similarly to the Alarm Report, with two key differences:
 
 * The pie chart is not included.

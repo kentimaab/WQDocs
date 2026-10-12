@@ -3,7 +3,7 @@ title: Dashboards — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -12,7 +12,7 @@ tags:
 
 # Dashboards — Konfigurering
 
-## Parametrar — Gemensamma inställningar för alla widgetar { #parameters-common-settings-shared-by-all-widgets }
+## Parametrar { #parameters-common-settings-shared-by-all-widgets }
 
 Alla widgetar delar en `Header`-parameter, en sträng, som anger den rubrik som visas på widgeten. Om den lämnas tom har widgeten en standardrubrik.
 
@@ -30,11 +30,11 @@ Vissa widgetar har en expanderingsknapp i det övre högra hörnet. Genom att kl
 
 Widgetar som visar en signallegende hanterar automatiskt överfyllnad. När det finns fler signaler än vad som får plats i legenden visas en knapp som anger hur många som är dolda. Genom att klicka på den öppnas fullskärmsvyn med alla signaler listade.
 
-## Widgetar — Alla tillgängliga widgetar och deras parametrar { #widgets-all-available-widgets-and-their-parameters }
+## Widgetar { #widgets-all-available-widgets-and-their-parameters }
 
 ### Larmstatus { #alarm-status }
 
-Visar larmantal — totalt, kvitterade och okvitterade.
+Visar larmantal: totalt, kvitterade och okvitterade.
 <!-- --8<-- [end:body-1] -->
 
 ![Alarm Status](/docs/sv/Images/Dashboard/AlarmStatus.png){align=center}
@@ -134,7 +134,7 @@ Fälten **Från** och **Till** längst upp på dashboarden anger tidsintervallet
 
 ### Nyckelvärde { #key-value }
 
-Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accepterar vilket värde som helst i Datalager — interna variabler, drivsignaler och systemvariabler.
+Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accepterar vilket värde som helst i Datalager: interna variabler, drivsignaler och systemvariabler.
 <!-- --8<-- [end:body-8] -->
 
 ![Key Value](/docs/sv/Images/Dashboard/KeyValue.png){align=center}
@@ -202,7 +202,7 @@ Visar jämförelser av signalvärden som ett stapeldiagram över konfigurerbara 
 
 ### Underhåll { #maintenance }
 
-Visar underhållsuppgiftsstatus — aktiva, planerade och missade uppgifter. Ansluter direkt till underhållsmodulen. Ingen signalinmatning krävs.
+Visar underhållsuppgiftsstatus: aktiva, planerade och missade uppgifter. Ansluter direkt till underhållsmodulen. Ingen signalinmatning krävs.
 <!-- --8<-- [end:body-13] -->
 
 ![Maintenance](/docs/sv/Images/Dashboard/Maintenance.png){align=center}

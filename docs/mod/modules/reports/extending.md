@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M17
 status: draft
-last_reviewed: 2026-08-27
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -13,41 +13,38 @@ tags:
 
 # Reports - Extending
 WideQuick comes with a set of default report templates, but it is also 
-possible to create fully custom templates tailored to your specific needs. This section 
+possible to create fully custom templates tailored to specific needs. This section 
 covers the complete process of creating a custom report template and its corresponding 
 ReportController view, from designing the Excel layout to wiring it up with live data 
 from the database.
 
-Before getting started, make sure you are familiar with the basics of the report system. 
-If not, see [Reports — Getting Started](get-started.md) & [Reports — Configuring](configuring.md).
+This section assumes familiarity with the basics of the report system. If needed, see [Get started](get-started.md) and [Configuring](configuring.md).
 
 ## Creating templates { #creating-templates }
-The process of creating your own report templates consists of three steps:
+Creating a custom report template takes three steps:
 
-1. Design your template in Excel
+1. Design the template in Excel
 2. Configure the data sheet, macros and loggers
 3. Wiring it up
 
-### Designing your template { #designing-your-template }
-The first step is to design your report template in Excel. This includes deciding the 
-layout, what graphs to include, and how data should be presented. WideQuick places no 
-restrictions on the design — the template can be tailored freely to fit your needs.
+### Designing the template { #designing-your-template }
+The first step is to design the report template in Excel. This includes deciding the 
+layout, what graphs to include, and how data should be presented. WideQuick places no restrictions on the design, so the template can be tailored freely.
 
 A report template typically consists of three sheets:
 
-* Presentation sheet — The visible part of the report. Contains graphs, tables, and 
+* **Presentation sheet:** the visible part of the report. Contains graphs, tables, and 
 any other visual elements the report should display.
-* Data sheet — A hidden sheet containing the raw data pulled from the database. This 
+* **Data sheet:** a hidden sheet containing the raw data pulled from the database. This 
 sheet feeds the presentation sheet with data. The data sheet is easier to configure in 
 **WideQuick® Designer**, where hidden sheets are visible, rather than directly in Excel.
-* Meta sheet — A hidden sheet containing general information about the report, such as 
+* **Meta sheet:** a hidden sheet containing general information about the report, such as 
 the report title, current date and time, selected logger, and selected signals. This 
 sheet is useful for displaying report metadata on the presentation sheet.
 
 !!! tip "Getting started"
     A good starting point is to sketch out what the final report should look like before 
-    opening Excel. Knowing what data you need and how it should be presented will make 
-    configuring the data sheet and macros much easier.
+    opening Excel. Knowing what data is needed and how it should be presented makes configuring the data sheet and macros much easier.
 
 To add a new sheet to the template, open the template in **WideQuick® Designer** and 
 navigate to the bottom of the sheet tabs. Click **Create New Sheet**, see image below. 
@@ -87,8 +84,7 @@ Below is a description of each field:
 * **Values** — Defines which data columns to include. Depends on the type of data 
 being queried:
     * Signal data: `name`, `datetime`, `value` is typically sufficient.
-    * Alarm data: `name`, `state`, `severity`, `timestamp`, `text`, `group` — include 
-    only the fields needed for the report.
+    * Alarm data: `name`, `state`, `severity`, `timestamp`, `text`, `group`. Include only the fields needed for the report.
 
 * **Logger** — The logger the report queries data from. This must be set statically 
 and cannot be changed dynamically.
@@ -100,8 +96,7 @@ ReportController when generating the report.
 * **Datetime format** — The format used for datetime values. Defaults to 
 `yyyy-MM-dd hh:mm:ss` but can be adjusted to fit the needs of the report.
 
-The placement of the macro command is important — data is populated starting from the 
-cell the macro is placed in, expanding downward. The columns are determined by the 
+The placement of the macro command is important. Data is populated starting from the cell the macro is placed in and expands downward. The columns are determined by the 
 **Values** field. For example, a signal macro with `VALUES(name, datetime, value)` will 
 populate three columns starting from the macro cell:
 
@@ -160,29 +155,27 @@ the user in the ReportController when generating the report.
 
 ### Wiring it up { #wiring-it-up }
 With the presentation sheet designed and the data sheet populated with macro commands, 
-the final step is to connect the two — linking the raw data to the graphs, tables, and 
+the final step is to connect the two by linking the raw data to the graphs, tables, and 
 other visual elements in the presentation sheet.
 
 A few tips for wiring up the template effectively:
 
-* Use the data sheet for calculations — Since the data sheet is hidden in the final 
+* **Use the data sheet for calculations:** since the data sheet is hidden in the final 
 report, it is a good place to perform intermediate calculations before passing the 
 results to the presentation sheet. To edit it in Excel, temporarily unhide it.
-* Keep calculations away from the macro data — Since macro data expands downward row 
+* **Keep calculations away from the macro data:** since macro data expands downward row 
 by row, place any additional calculations in columns further to the right to avoid 
 conflicts.
-* Reference the data sheet from the presentation sheet — Graphs, bars, and other 
+* **Reference the data sheet from the presentation sheet:** graphs, bars, and other 
 visual elements in the presentation sheet should reference cells in the data sheet 
 rather than containing logic themselves. This keeps the presentation sheet clean and 
 easier to maintain.
-* Use fixed ranges that cover the maximum possible rows — Since the amount of data 
-varies depending on the **Limit** and timespan, define ranges that cover the maximum 
-number of rows your report could produce. Use `IFERROR` to handle empty cells 
+* **Use fixed ranges that cover the maximum possible rows:** since the amount of data 
+varies depending on the **Limit** and timespan, define ranges that cover the maximum number of rows the report could produce. Use `IFERROR` to handle empty cells 
 gracefully.
 
 !!! note
-    This guide does not cover Excel formula design in depth — the possibilities are 
-    largely up to the integrator. The tips above are specific to working with WideQuick 
+    This guide does not cover Excel formula design in depth, since the possibilities are largely up to the integrator. The tips above are specific to working with WideQuick 
     macro data.
 
 ## Creating the ReportController view { #creating-the-reportcontroller-view }
@@ -197,21 +190,18 @@ folder and rename it to match the report template name.
 
 When a ReportController view is loaded, its template script initializes a `view.data`
 object with default values such as report type, time span, logger, and signal references.
-Each object placed in the view — such as `to_time`, `Report_CustomTitle`, and 
-`LoggerList` — reads from and writes to this shared `view.data` object as the user 
+Each object placed in the view, such as `to_time`, `Report_CustomTitle` and `LoggerList`, reads from and writes to this shared `view.data` object as the user 
 interacts with them.
 
 When `Button_CreateReport` object is clicked, it collects the complete `view.data` 
 object and adds it to a report queue via `scReports.addReportToQueue()` function. 
-Reports in the queue are processed one at a time — `scReports` script populates a 
+Reports in the queue are processed one at a time. The `scReports` script populates a 
 global **Report_Reference** object with the queued data, which the macro commands in 
 the data sheet read from when querying the database.
 
 The correct template is identified and triggered using the `report_type` field in
 `view.data`, which is derived directly from the ReportController view name. This is why
-it is critical that the ReportController view name exactly matches the report template
-name — if they differ, `scReports` script will not be able to locate and trigger the 
-correct template.
+it is critical that the ReportController view name exactly matches the report template name. If they differ, the `scReports` script cannot locate and trigger the correct template.
 
 !!! warning "Naming convention"
     The ReportController view name must exactly match the report template name. If they
@@ -222,16 +212,16 @@ To build the view, a set of premade objects is available in the object library u
 
 | Object | Use when |
 |---|---|
-| `LoggerList` | You need the user to select signals from a logger |
-| `LarmLogger_List` | You need the user to select alarms from an alarm logger |
-| `Unit` | You need the user to select unit and prefix for report |
-| `Report_CustomTitle` | You want the user to set a custom report title |
-| `Button_CreateReport` | Always — this is required to generate the report |
-| `Report_output_type` | You want the user to choose between PDF and Excel output |
-| `to_time` | You need the user to set an end time |
-| `from_time` | You need the user to set a start time |
+| `LoggerList` | The user selects signals from a logger |
+| `LarmLogger_List` | The user selects alarms from an alarm logger |
+| `Unit` | The user selects a unit and prefix for the report |
+| `Report_CustomTitle` | The user sets a custom report title |
+| `Button_CreateReport` | Always. It is required to generate the report |
+| `Report_output_type` | The user chooses between PDF and Excel output |
+| `to_time` | The user sets an end time |
+| `from_time` | The user sets a start time |
 | `to_time_Singel` | The report uses a fixed time span (e.g. last 3 years) |
-| `Numbe_of_event` | You need to limit the number of collected events |
+| `Numbe_of_event` | The number of collected events should be limited |
 
 ### LoggerList { #loggerlist }
 The `LoggerList` object is a TreeView configured to display the signals logged by a 
@@ -254,8 +244,7 @@ This object has two properties that must be configured:
 
 * **Logger** — Determines which logger the TreeView is built from. This should always 
 match the logger that the report queries.
-* **Signals** — Controls how many signals can be selected for the report. The default 
-maximum is 15, but this can be changed — see [here](#changing-the-maximum-of-signals-to-be-selected). 
+* **Signals** — Controls how many signals can be selected for the report. The default maximum is 15, and it can be changed. See [Changing the maximum of signals to be selected](#changing-the-maximum-of-signals-to-be-selected). 
 This property should always be set to a numerical value, unless the TreeView is 
 intentionally locked.
 
@@ -317,8 +306,7 @@ The following properties can be configured:
 * **Years prior** — Sets the time span in years.
 * **Weeks prior** — Sets the time span in weeks.
 
-Note that these two properties are mutually exclusive — weeks and years cannot be 
-combined.
+These two properties are mutually exclusive: weeks and years cannot be combined.
 
 ### Numbe_of_event { #numbe_of_event }
 The `Numbe_of_event` object consists of a label and a SpinBox. The SpinBox value 
@@ -342,7 +330,7 @@ Change the **Max. size** to the desired value. Click **Apply** then **Ok**. The
 **Report_Reference** array has now been updated.
 
 Next, update the `scReports` script to handle the new size. Locate the 
-`createReport()` function and change the value `15` to your new **Max. size** value:
+`createReport()` function and change the value `15` to the new **Max. size** value:
 
 ``` javascript title="scReports — createReport() — before"
 

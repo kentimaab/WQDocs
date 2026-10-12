@@ -3,7 +3,7 @@ title: Rapporter — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-08-27
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -12,7 +12,7 @@ tags:
 
 # Rapporter — Konfigurering
 
-Det här avsnittet beskriver hur du konfigurerar de sex rapportmallarna i WideQuick Mod efter dina behov, samt hur du använder den inbyggda Rapporthistoriken för att återskapa eller skicka om misslyckade rapporter.
+Det här avsnittet beskriver hur de sex rapportmallarna i WideQuick MOD konfigureras, samt hur den inbyggda Rapporthistoriken används för att återskapa eller skicka om misslyckade rapporter.
 
 * **Larmrapport**
 * **Larmrapport ett larm**
@@ -24,15 +24,12 @@ Det här avsnittet beskriver hur du konfigurerar de sex rapportmallarna i WideQu
 ## Larmrapport { #alarm-report }
 Larmrapporten genererar en fullständig översikt över alla larm i hela systemet. 
 Den innehåller ett cirkeldiagram som visar larmfördelning per larmklass (A–F som standard) och 
-en fullständig lista över alla larm som utlöstes under den valda tidsperioden. Larmklasserna 
-kan anpassas efter dina behov.
+en fullständig lista över alla larm som utlöstes under den valda tidsperioden. Larmklasserna kan anpassas efter behov.
 
 Som standard hämtar Larmrapporten data från databasen ansluten till 
-**Larmlogg**-loggern. Om du vill lagra data i en annan databas är det bara att ändra 
-var Larmloggern lagrar sina data — detta påverkar inte rapporten i sig.
+**Larmlogg**-loggern. För att lagra data i en annan databas, ändra var Larmloggern lagrar sina data. Det påverkar inte rapporten i sig.
 
-Om du däremot vill konfigurera en separat logger för larm måste rapporten uppdateras 
-i enlighet med detta. Följ dessa steg:
+Om en separat logger konfigureras för larm måste rapporten däremot uppdateras i enlighet med detta. Följ dessa steg:
 
 * Konfigurera den nya loggern med typen Alarm och välj önskad databas. Se 
 [Loggers](../../guides/Loggers.md) för mer information.
@@ -67,8 +64,8 @@ till önskad logger.
     Namnet på ReportController måste stämma överens exakt med namnet på rapportmallen, 
     annars genereras inte rapporten.
 
-## Larmrapport — ett larm { #alarm-report-one-alarm }
-Den här mallen används när du behöver en rapport för ett enda specifikt larm. Den fungerar 
+## Larmrapport ett larm { #alarm-report-one-alarm }
+Den här mallen används för en rapport om ett enda specifikt larm. Den fungerar 
 på liknande sätt som Larmrapporten, men med två viktiga skillnader:
 
 * Cirkeldiagrammet ingår inte.
@@ -78,8 +75,7 @@ Processen för att byta logger och databas är densamma som beskrivs för Larmra
 
 ## Energirapport { #energy-report }
 Energirapportmallarna är mer komplexa än Larmrapporterna eftersom de bearbetar 
-data för presentationsändamål. Det här avsnittet förklarar hur du justerar rapporten för att täcka 
-olika tidsperioder och hur du byter logger.
+data för presentationsändamål. Det här avsnittet förklarar hur rapporten justeras för att täcka olika tidsperioder och hur loggern byts.
 
 Som standard täcker Energirapporten en treårsperiod. Den innehåller ett individuellt 
 diagram för varje år samt en treårssammanfattning. Observera att mallen stöder maximalt 
@@ -104,7 +100,7 @@ Processen för att ändra årsintervallet för Energirapporten kräver ytterliga
 av mallen samt ändringar i ReportController. Här täcker vi följande konfigurationer:
 
 !!! tip "Säkerhetskopia"
-    Innan du bearbetar mallen rekommenderas det att spara en kopia som säkerhetskopia.
+    Innan mallen bearbetas rekommenderas det att spara en kopia som säkerhetskopia.
 
 * Enbart innevarande år
 * Ett år från aktuellt datum
@@ -181,7 +177,7 @@ De två tillgängliga konfigurationerna är:
 vilket dag den produceras.
 
 !!! tip "Säkerhetskopia"
-    Innan du bearbetar mallen rekommenderas det att spara en kopia som säkerhetskopia.
+    Innan mallen bearbetas rekommenderas det att spara en kopia som säkerhetskopia.
 
 ## Deltarapport år { #delta-year }
 

@@ -1,11 +1,11 @@
 ---
 title: Documents - Extending
-description: Extend the Documents module — privilege reference.
+description: Privileges that control the Documents module.
 product: mod
 page_type: extending
 doc_id: DOC-M16
 status: draft
-last_reviewed: 2026-05-27
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -23,9 +23,9 @@ Access to document actions is controlled by privileges. Buttons that require a p
 <!-- --8<-- [start:body-2] -->
 | Privilege | Controls |
 |---|---|
-| `Documents_Upload` | **Add document** — upload local files and add online resources |
-| `Documents_Edit` | **Edit selected document** — rename documents |
-| `Documents_Delete` | **Delete document** — permanently remove a document |
-| `Documents_Sync` | **Sync with local files on server** — sync the document list with the server filesystem |
+| `Documents_Upload` | **Add document**: upload local files and add online resources |
+| `Documents_Edit` | **Edit selected document**: rename documents |
+| `Documents_Delete` | **Delete document**: permanently remove a document |
+| `Documents_Sync` | **Sync with local files on server**: sync the document list with the server filesystem |
 | `Documents_Link` | Linking and unlinking documents from within the object popup |
 <!-- --8<-- [end:body-2] -->

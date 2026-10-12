@@ -3,7 +3,7 @@ title: Underhåll — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -64,8 +64,8 @@ Varje konfiguration definierar:
 
 * Vilka objekt underhållet gäller (ett eller flera)
 * Underhållstyp och beskrivning
-* Upprepningsintervall — hur ofta uppgiften återkommer
-* Upprepningsregel — hur nästa deadline beräknas
+* Hur ofta uppgiften återkommer (upprepningsintervall)
+* Hur nästa deadline beräknas (upprepningsregel)
 * Om missade uppgifter automatiskt ska generera en uppföljning
 <!-- --8<-- [end:body-3] -->
 
@@ -81,7 +81,7 @@ Vyn har tre paneler. Den vänstra panelen listar alla konfigurationer. Den melle
 3. Ange ett namn i fältet **Namn på återkommande underhåll**.
 4. Under **Underhållsinformation**, ange **Underhållstyp**, **Ansvarig** och **Prioritet**. Lägg eventuellt till en beskrivning.
 5. Under **Schema**, välj en **Upprepningsregel**: **Planerat datum** för att hålla en fast rytm, eller **Utförandedatum** för att starta intervallet från när uppgiften slutfördes.
-6. Ange **Upprepningsintervall** — antal och enhet (Dag/Vecka/Månad/År).
+6. Ange **Upprepningsintervall** som ett antal och en enhet (Dag/Vecka/Månad/År).
 7. Ange **Startdatum** för den första uppgiften.
 8. I **Objekt**-panelen till höger, markera alla objekt som konfigurationen ska gälla för.
 9. Aktivera eventuellt **Skapa nästa underhåll automatiskt vid missad deadline**.
@@ -131,7 +131,7 @@ När en återkommande uppgift markeras som slutförd skapar systemet automatiskt
 !!! note
     **Missad** och **Klar - Försenad** sätts av systemet och kan inte väljas manuellt. Vid redigering av en uppgift är endast **Planerad**, **Klar** och **Stoppad** tillgängliga som användarvalbara statusar.
 
-Uppgifter som visas i Kalender-modulen är färgkodade efter status. Se [Kalender — Konfigurering](../calendar/configuring.md#maintenance-events) för färgreferensen.
+Uppgifter som visas i Kalender-modulen är färgkodade efter status. Färgreferensen finns under [Underhållshändelser](../calendar/configuring.md#maintenance-events) i Kalender-modulen.
 
 ## Prioritet { #priority }
 

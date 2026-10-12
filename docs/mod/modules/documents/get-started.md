@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M16
 status: draft
-last_reviewed: 2026-05-27
+last_reviewed: 2026-10-12
 scripts:
   - scDoc
 tags: 
@@ -24,7 +24,7 @@ tags:
     * `scThemes`
     * `scAlert`
 
-The Documents module is available under **Documents & Logbook -> Documents** in the main menu. The **Documents - List** view is the main entry point — it lists all documents available in the system and lets you add, preview and manage them.
+The Documents module is available under **Documents & Logbook → Documents** in the main menu. The **Documents - List** view is the main entry point. It lists all documents in the system, where they can be added, previewed and managed.
 
 
 
@@ -72,13 +72,13 @@ The files are copied to the server and added to the document list under **Local 
 ![Online resource tab](/docs/Images/Documents/documents-upload-online.png){align=center}
 
 <!-- --8<-- [start:body-4] -->
-The resource is added to the document list under **Online files**. The URL is stored — no file is downloaded to the server.
+The resource is added to the document list under **Online files**. Only the URL is stored. No file is downloaded to the server.
 
 ## Previewing a document { #previewing-a-document }
 
 Select a file in the left panel and click **Preview** to load it in the preview panel.
 
-Most file types can be previewed inline — images, PDFs and web pages render directly. On **WideQuick® Web**, Office files (Word, Excel, PowerPoint) are not previewable in the browser and are grouped separately in the file tree.
+Most file types can be previewed inline. Images, PDFs and web pages render directly. On **WideQuick® Web**, Office files (Word, Excel, PowerPoint) are not previewable in the browser and are grouped separately in the file tree.
 
 ## Next Steps { #next-steps }
 

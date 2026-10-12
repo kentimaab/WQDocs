@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M17
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-12
 scripts:
   - scReportScheduler
 tags: 
@@ -168,7 +168,7 @@ column, one column per month, and covers three years by default. Delta Week pres
 daily delta per column, one column per weekday, and covers three weeks. Neither is tied
 to a single logging interval: Delta Year accepts intervals from monthly to daily, or down
 to hourly with the alternative template, and Delta Week from hourly to daily. For
-detailed configuration of each report type, see [Reports — Configuring](configuring.md).
+detailed configuration of each report type, see [Configuring](configuring.md).
 
 
 ## Units and prefixes { #units-and-prefixes }
@@ -219,21 +219,21 @@ appear on the right. Note that the second page changes depending on the selected
 <!-- --8<-- [end:body-7] -->
   ![Schedule page 1](/docs/Images/Reports/Report_meny.png)
 <!-- --8<-- [start:body-8] -->
-  <figcaption>Page 1 — schedule name, template, and frequency.</figcaption>
+  <figcaption>Page 1: schedule name, template and frequency.</figcaption>
 </figure>
 
 <figure markdown="span">
 <!-- --8<-- [end:body-8] -->
   ![Schedule page 2](/docs/Images/Reports/Report_meny2.png)
 <!-- --8<-- [start:body-9] -->
-  <figcaption>Page 2 — report-specific configuration.</figcaption>
+  <figcaption>Page 2: report-specific configuration.</figcaption>
 </figure>
 
 <figure markdown="span">
 <!-- --8<-- [end:body-9] -->
   ![Schedule page 3](/docs/Images/Reports/Report_meny3.png)
 <!-- --8<-- [start:body-10] -->
-  <figcaption>Page 3 — recipients and output format.</figcaption>
+  <figcaption>Page 3: recipients and output format.</figcaption>
 </figure>
 
 </div>
@@ -269,8 +269,7 @@ Below are descriptions of the options on the first and third pages:
 
     * **Description of schedule** — A description of the schedule.
     !!! note
-        Schedules are checked every 5 minutes. The configured time is therefore
-        approximate — reports may be sent up to 5 minutes after the set time.
+        Schedules are checked every 5 minutes. The configured time is therefore approximate, and reports may be sent up to 5 minutes after the set time.
 
 * Third page
 

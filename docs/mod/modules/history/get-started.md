@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M18
 status: draft
-last_reviewed: 2026-05-27
+last_reviewed: 2026-10-12
 scripts:
   - scHistory
 tags: 
@@ -84,9 +84,9 @@ The **SpeedDial** menu on process views includes a button that opens a view-spec
 ![View-specific history popup](/docs/Images/History/history-view-specific.png){align=center}
 
 <!-- --8<-- [start:body-4] -->
-Signal selection, time controls, settings and saved signal groups work the same way. Saved signal groups in this popup are stored per view and are separate from project-wide saved groups. You can also import saved groups from other views using **Import groups from views** — see [Importing Groups from Other Views](configuring.md#importing-groups-from-other-views).
+Signal selection, time controls, settings and saved signal groups work the same way. Saved signal groups in this popup are stored per view and are separate from project-wide saved groups. Saved groups from other views can also be imported with **Import groups from views**. See [Importing Groups from Other Views](configuring.md#importing-groups-from-other-views).
 
-Since the view-specific History only shows signals belonging to the current view, you can bring in signals from other views using **Import signals**.
+Since the view-specific History only shows signals belonging to the current view, signals from other views can be brought in with **Import signals**.
 <!-- --8<-- [end:body-4] -->
 
 ![Import signals dialog with Available on the left and Selected on the right](/docs/Images/History/history-import-signals.png){align=center}
@@ -95,12 +95,12 @@ Since the view-specific History only shows signals belonging to the current view
 **To import signals from other views:**
 
 1. Click **Import signals**. A dialog opens showing all signals from all other views, organised by system and object.
-2. Expand the tree in the **Available** panel to find the signal you want.
+2. Expand the tree in the **Available** panel to find the signal to add.
 3. Select a signal and click **→** to move it to the **Selected** panel.
-4. Repeat for each signal you want to add.
+4. Repeat for each signal to add.
 5. Click **Import and close**. The signals are added to the signal list and can be selected and applied to the chart.
 
-To remove a signal from your selection before importing, select it in the **Selected** panel and click **←**. Click **Clear added** to empty the right panel entirely.
+To remove a signal from the selection before importing, select it in the **Selected** panel and click **←**. Click **Clear added** to empty the right panel entirely.
 
 
 ## Object Popup (History Tab) { #object-popup-history-tab }

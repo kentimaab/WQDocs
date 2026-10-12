@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M6
 status: draft
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -65,8 +65,8 @@ Each configuration defines:
 
 * Which objects the maintenance applies to (one or more)
 * The maintenance type and description
-* The repeat interval — how often the task recurs
-* The repeat rule — how the next deadline is calculated
+* How often the task recurs (the repeat interval)
+* How the next deadline is calculated (the repeat rule)
 * Whether missed tasks should automatically generate a follow-up
 <!-- --8<-- [end:body-3] -->
 
@@ -82,7 +82,7 @@ The view has three panels. The left panel lists all configurations. The middle p
 3. Enter a name in the **Recurring maintenance name** field.
 4. Under **Maint. information**, set the **Maintenance type**, **Responsible** and **Priority**. Optionally add a description.
 5. Under **Schedule**, choose a **Repeat rule**: **Planned date** to keep a fixed rhythm, or **Execution date** to start the interval from when the task was completed.
-6. Set the **Repeat interval** — the number and unit (Day/Week/Month/Year).
+6. Set the **Repeat interval** as a number and a unit (Day/Week/Month/Year).
 7. Set the **Start date** for the first task.
 8. In the **Object** panel on the right, check all objects this configuration should apply to.
 9. Optionally enable **Auto-create next maintenance on missed deadline**.
@@ -132,7 +132,7 @@ When a recurring task is marked as complete, the system automatically creates th
 !!! note
     **Missed** and **Done - Delayed** are set by the system and cannot be selected manually. When editing a task, only **Planned**, **Done** and **Stopped** are available as user-selectable statuses.
 
-Tasks that appear in the Calendar module are color-coded by status. See [Calendar — Configuring](../calendar/configuring.md#maintenance-events) for the color reference.
+Tasks that appear in the Calendar module are color-coded by status. The color reference is under [Maintenance Events](../calendar/configuring.md#maintenance-events) in the Calendar module.
 
 ## Priority { #priority }
 

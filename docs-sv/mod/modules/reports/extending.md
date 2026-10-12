@@ -3,7 +3,7 @@ title: Rapporter — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-08-27
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -12,41 +12,37 @@ tags:
 
 # Rapporter — Utöka
 WideQuick levereras med en uppsättning standardrapportmallar, men det är också möjligt att 
-skapa helt anpassade mallar som är skräddarsydda för dina specifika behov. Det här avsnittet 
+skapa helt anpassade mallar som är skräddarsydda för specifika behov. Det här avsnittet 
 täcker hela processen för att skapa en anpassad rapportmall och tillhörande 
 ReportController-vy, från att designa Excel-layouten till att koppla den till livedata 
 från databasen.
 
-Innan du börjar, se till att du är bekant med grunderna i rapportsystemet. 
-Om inte, se [Rapporter — Kom igång](get-started.md) & [Rapporter — Konfigurering](configuring.md).
+Det här avsnittet förutsätter kännedom om grunderna i rapportsystemet. Se vid behov [Kom igång](get-started.md) och [Konfigurering](configuring.md).
 
 ## Skapa mallar { #creating-templates }
 Processen för att skapa egna rapportmallar består av tre steg:
 
-1. Designa din mall i Excel
+1. Designa mallen i Excel
 2. Konfigurera datablad, makron och loggenheter
 3. Koppla ihop allt
 
-### Designa din mall { #designing-your-template }
-Det första steget är att designa din rapportmall i Excel. Detta inkluderar att besluta om 
-layout, vilka diagram som ska inkluderas och hur data ska presenteras. WideQuick sätter inga 
-begränsningar på designen — mallen kan anpassas fritt för att passa dina behov.
+### Designa mallen { #designing-your-template }
+Det första steget är att designa rapportmallen i Excel. Detta inkluderar att besluta om 
+layout, vilka diagram som ska inkluderas och hur data ska presenteras. WideQuick sätter inga begränsningar på designen, så mallen kan anpassas fritt.
 
 En rapportmall består vanligtvis av tre blad:
 
-* Presentationsblad — Den synliga delen av rapporten. Innehåller diagram, tabeller och 
+* **Presentationsblad:** den synliga delen av rapporten. Innehåller diagram, tabeller och 
 alla andra visuella element som rapporten ska visa.
-* Datablad — Ett dolt blad som innehåller rådata hämtad från databasen. Det här 
+* **Datablad:** ett dolt blad som innehåller rådata hämtad från databasen. Det här 
 bladet matar presentationsbladet med data. Databladet är enklare att konfigurera i 
 **WideQuick® Designer**, där dolda blad är synliga, jämfört med direkt i Excel.
-* Metablad — Ett dolt blad som innehåller allmän information om rapporten, som 
+* **Metablad:** ett dolt blad som innehåller allmän information om rapporten, som 
 rapporttitel, aktuellt datum och tid, vald loggenhet och valda signaler. Det här 
 bladet är användbart för att visa rapportmetadata på presentationsbladet.
 
 !!! tip "Kom igång"
-    En bra startpunkt är att skissa upp hur den slutliga rapporten ska se ut innan du 
-    öppnar Excel. Att veta vilken data du behöver och hur den ska presenteras kommer att 
-    göra det mycket enklare att konfigurera databladet och makrona.
+    En bra startpunkt är att skissa upp hur den slutliga rapporten ska se ut innan Excel öppnas. Att veta vilken data som behövs och hur den ska presenteras gör det mycket enklare att konfigurera databladet och makrona.
 
 För att lägga till ett nytt blad i mallen, öppna mallen i **WideQuick® Designer** och 
 navigera till botten av bladflikarna. Klicka på **Create New Sheet**, se bilden nedan. 
@@ -86,8 +82,7 @@ Nedan beskrivs varje fält:
 * **Values** — Definierar vilka datakolumner som ska inkluderas. Beror på typen av data 
 som frågas:
     * Signaldata: `name`, `datetime`, `value` är vanligtvis tillräckligt.
-    * Larmdata: `name`, `state`, `severity`, `timestamp`, `text`, `group` — inkludera 
-    bara de fält som behövs för rapporten.
+    * Larmdata: `name`, `state`, `severity`, `timestamp`, `text`, `group`. Inkludera bara de fält som behövs för rapporten.
 
 * **Logger** — Loggenheten som rapporten hämtar data från. Denna måste anges statiskt 
 och kan inte ändras dynamiskt.
@@ -99,8 +94,7 @@ ReportController vid generering av rapporten.
 * **Datetime format** — Det format som används för datum- och tidsvärden. Standardvärdet är 
 `yyyy-MM-dd hh:mm:ss` men kan justeras för att passa rapportens behov.
 
-Placeringen av makrokommandot är viktig — data fylls i med start från cellen där makrot 
-placeras och expanderar nedåt. Kolumnerna bestäms av fältet **Values**. Till exempel 
+Placeringen av makrokommandot är viktig. Data fylls i med start från cellen där makrot placeras och expanderar nedåt. Kolumnerna bestäms av fältet **Values**. Till exempel 
 kommer ett signalmakro med `VALUES(name, datetime, value)` att fylla tre kolumner med 
 start från makrocellen:
 
@@ -156,30 +150,28 @@ användaren i ReportController vid generering av rapporten.
     för sin rapport.
 
 ### Koppla ihop allt { #wiring-it-up }
-Med presentationsbladet designat och databladet ifyllt med makrokommandon är 
-det sista steget att koppla samman de två — länka rådata till diagram, tabeller och 
+Med presentationsbladet designat och databladet ifyllt med makrokommandon är det sista steget att koppla samman de två genom att länka rådata till diagram, tabeller och 
 andra visuella element i presentationsbladet.
 
 Några tips för att koppla ihop mallen effektivt:
 
-* Använd databladet för beräkningar — Eftersom databladet är dolt i den slutliga 
+* **Använd databladet för beräkningar:** eftersom databladet är dolt i den slutliga 
 rapporten är det ett bra ställe att utföra mellanliggande beräkningar innan resultaten 
 skickas till presentationsbladet. För att redigera det i Excel, gör det tillfälligt synligt.
-* Håll beräkningar borta från makrodata — Eftersom makrodata expanderar nedåt rad 
+* **Håll beräkningar borta från makrodata:** eftersom makrodata expanderar nedåt rad 
 för rad, placera eventuella ytterligare beräkningar i kolumner längre till höger för att 
 undvika konflikter.
-* Referera till databladet från presentationsbladet — Diagram, staplar och andra 
+* **Referera till databladet från presentationsbladet:** diagram, staplar och andra 
 visuella element i presentationsbladet bör referera till celler i databladet 
 snarare än att innehålla logik i sig själva. Detta håller presentationsbladet rent och 
 enklare att underhålla.
-* Använd fasta intervall som täcker det maximala möjliga antalet rader — Eftersom mängden data 
+* **Använd fasta intervall som täcker det maximala möjliga antalet rader:** eftersom mängden data 
 varierar beroende på **Limit** och tidsintervallet, definiera intervall som täcker det maximala 
 antalet rader rapporten kan producera. Använd `IFERROR` för att hantera tomma celler 
 på ett smidigt sätt.
 
 !!! note
-    Den här guiden täcker inte Excel-formeldesign i detalj — möjligheterna är 
-    i stor utsträckning upp till integratören. Tipsen ovan är specifika för att arbeta med 
+    Den här guiden täcker inte Excel-formeldesign i detalj, eftersom möjligheterna i stor utsträckning är upp till integratören. Tipsen ovan är specifika för att arbeta med 
     WideQuick-makrodata.
 
 ## Skapa ReportController-vyn { #creating-the-reportcontroller-view }
@@ -194,21 +186,18 @@ och döp om det för att matcha rapportmallens namn.
 
 När en ReportController-vy laddas, initierar dess mallskript ett `view.data`-objekt 
 med standardvärden såsom rapporttyp, tidsintervall, loggenhet och signalreferenser.
-Varje objekt placerat i vyn — som `to_time`, `Report_CustomTitle` och 
-`LoggerList` — läser från och skriver till detta delade `view.data`-objekt när användaren 
+Varje objekt placerat i vyn, som `to_time`, `Report_CustomTitle` och `LoggerList`, läser från och skriver till detta delade `view.data`-objekt när användaren 
 interagerar med dem.
 
 När `Button_CreateReport`-objektet klickas, samlar det in det fullständiga `view.data`-objektet 
 och lägger till det i en rapportkö via funktionen `scReports.addReportToQueue()`. 
-Rapporter i kön behandlas en i taget — `scReports`-skriptet fyller ett 
+Rapporter i kön behandlas en i taget. `scReports`-skriptet fyller ett 
 globalt **Report_Reference**-objekt med köad data, som makrokommandona i 
 databladet läser från vid förfrågan mot databasen.
 
 Den korrekta mallen identifieras och aktiveras med hjälp av fältet `report_type` i 
 `view.data`, som härleds direkt från ReportController-vyns namn. Det är därför 
-det är kritiskt att ReportController-vyns namn exakt matchar rapportmallens 
-namn — om de skiljer sig åt kommer `scReports`-skriptet inte att kunna hitta och aktivera 
-rätt mall.
+det är kritiskt att ReportController-vyns namn exakt matchar rapportmallens namn. Om de skiljer sig åt kan `scReports`-skriptet inte hitta och aktivera rätt mall.
 
 !!! warning "Namnkonvention"
     ReportController-vyns namn måste exakt matcha rapportmallens namn. Om de 
@@ -219,16 +208,16 @@ För att bygga vyn finns en uppsättning färdiga objekt tillgängliga i objektb
 
 | Objekt | Använd när |
 |---|---|
-| `LoggerList` | Du behöver att användaren väljer signaler från en loggenhet |
-| `LarmLogger_List` | Du behöver att användaren väljer larm från en larmloggenhet |
-| `Unit` | Du behöver att användaren väljer enhet och prefix för rapporten |
-| `Report_CustomTitle` | Du vill att användaren ska ange en anpassad rapporttitel |
-| `Button_CreateReport` | Alltid — detta krävs för att generera rapporten |
-| `Report_output_type` | Du vill att användaren ska kunna välja mellan PDF- och Excel-utdata |
-| `to_time` | Du behöver att användaren anger en sluttid |
-| `from_time` | Du behöver att användaren anger en starttid |
+| `LoggerList` | Användaren väljer signaler från en loggenhet |
+| `LarmLogger_List` | Användaren väljer larm från en larmloggenhet |
+| `Unit` | Användaren väljer enhet och prefix för rapporten |
+| `Report_CustomTitle` | Användaren anger en anpassad rapporttitel |
+| `Button_CreateReport` | Alltid. Det krävs för att generera rapporten |
+| `Report_output_type` | Användaren väljer mellan PDF- och Excel-utdata |
+| `to_time` | Användaren anger en sluttid |
+| `from_time` | Användaren anger en starttid |
 | `to_time_Singel` | Rapporten använder ett fast tidsintervall (t.ex. de senaste 3 åren) |
-| `Numbe_of_event` | Du behöver begränsa antalet insamlade händelser |
+| `Numbe_of_event` | Antalet insamlade händelser ska begränsas |
 
 ### LoggerList { #loggerlist }
 `LoggerList`-objektet är en TreeView konfigurerad för att visa signalerna som loggas av en 
@@ -237,8 +226,7 @@ TreeView. Objektet inkluderar även två textrutor som visar den aktuellt valda 
 och antalet valda signaler av det maximalt tillåtna.
 
 Loggenheten som ska visas och det maximala antalet valbara signaler konfigureras båda 
-som egenskaper på objektet. Tilldela önskade värden när du placerar objektet i en 
-ReportController.
+som egenskaper på objektet. Tilldela önskade värden när objektet placeras i en ReportController.
 
 ### LarmLogger_List { #larmlogger_list }
 `LarmLogger_List`-objektet är en specialiserad version av `LoggerList`, byggd 
@@ -251,8 +239,7 @@ Det här objektet har två egenskaper som måste konfigureras:
 
 * **Logger** — Bestämmer vilken loggenhet som TreeView byggs från. Detta bör alltid 
 matcha loggenheten som rapporten frågar mot.
-* **Signals** — Styr hur många signaler som kan väljas för rapporten. Standardvärdet för 
-maximum är 15, men detta kan ändras — se [här](#changing-the-maximum-of-signals-to-be-selected). 
+* **Signals** — Styr hur många signaler som kan väljas för rapporten. Standardvärdet för maximum är 15, och det kan ändras. Se [Ändra maximalt antal signaler som kan väljas](#changing-the-maximum-of-signals-to-be-selected). 
 Den här egenskapen bör alltid anges till ett numeriskt värde, om inte TreeView är 
 avsiktligt låst.
 
@@ -312,8 +299,7 @@ Följande egenskaper kan konfigureras:
 * **Years prior** — Anger tidsintervallet i år.
 * **Weeks prior** — Anger tidsintervallet i veckor.
 
-Observera att dessa två egenskaper utesluter varandra — veckor och år kan inte 
-kombineras.
+Dessa två egenskaper utesluter varandra: veckor och år kan inte kombineras.
 
 ### Numbe_of_event { #numbe_of_event }
 `Numbe_of_event`-objektet består av en etikett och en SpinBox. SpinBox-värdet 
@@ -337,7 +323,7 @@ rapportgenerering. Detta kan enkelt ändras om fler signaler krävs. Navigera f�
 **Report_Reference**-arrayen har nu uppdaterats.
 
 Uppdatera sedan `scReports`-skriptet för att hantera den nya storleken. Leta upp 
-funktionen `createReport()` och ändra värdet `15` till ditt nya **Max. size**-värde:
+funktionen `createReport()` och ändra värdet `15` till det nya **Max. size**-värdet:
 
 ``` javascript title="scReports — createReport() — before"
 

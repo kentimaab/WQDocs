@@ -3,7 +3,7 @@ title: Underhåll — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -18,7 +18,7 @@ Underhållsuppgifter med kommande deadlines visas automatiskt som händelser i k
 
 Kalendern läser uppgifter från underhållsdatabasen och visar dem utifrån deras deadline-datum. Uppgifter med status **Done**, **Done - Delayed** eller **Removed** exkluderas.
 
-En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppgifts deadline. Standardförskjutningen för påminnelser är 3 dagar. Förskjutningen och påminnelseväxeln per mall kan båda konfigureras via ett skript — se [Kalender — Utöka](../calendar/extending.md#reminder-configuration).
+En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppgifts deadline. Standardförskjutningen för påminnelser är 3 dagar. Förskjutningen och påminnelseväxeln per mall kan båda konfigureras via ett skript. Se [Påminnelsekonfiguration](../calendar/extending.md#reminder-configuration) i Kalender-modulen.
 <!-- --8<-- [end:body-1] -->
 
 ![Underhållsuppgifter synliga som händelser i kalendervyn](/docs/sv/Images/Maintenance/maintenance-in-calendar.png){align=center}
@@ -26,6 +26,6 @@ En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppg
 <!-- --8<-- [start:body-2] -->
 ## Ändringshistorik { #change-history }
 
-Varje ändring av en underhållsuppgift — status, deadline, ansvarig, prioritet och beskrivning — registreras automatiskt och kan visas under **Historia → Loggar → Spårningslogg → Spårningslogg - Underhåll**. Ingen konfiguration krävs. Se [Spårningslogg](/mod/modules/audit-trail/get-started/#maintenance-change-log) för mer information.
+Varje ändring av en underhållsuppgifts status, deadline, ansvarig, prioritet eller beskrivning registreras automatiskt och kan visas under **Historik → Loggar → Spårningslogg → Spårningslogg - Underhåll**. Ingen konfiguration krävs. Se [Spårningslogg](/mod/modules/audit-trail/get-started/#maintenance-change-log) för mer information.
 
 <!-- --8<-- [end:body-2] -->

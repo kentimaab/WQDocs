@@ -3,7 +3,7 @@ title: Dashboards — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -11,7 +11,7 @@ tags:
 
 # Dashboards — Utöka
 
-## Anpassade widgetar — Bygga nya widgetar från befintliga mallar { #custom-widgets-building-new-widgets-from-existing-templates }
+## Anpassade widgetar { #custom-widgets-building-new-widgets-from-existing-templates }
 
 För att basera en ny widget på en befintlig drar du den från biblioteket `Dashboard Widgets` till en arbetsvy i **WideQuick® Designer**. Högerklicka på den placerade widgeten och välj **Disconnect from template**. Widgeten kan nu redigeras fritt. Justera layouten, lägg till eller ta bort objekt, och ändra skriptlogiken.
 
@@ -23,7 +23,7 @@ Det är även möjligt att redigera befintliga widgetar genom att dubbelklicka p
 
 ### Rutnätsdimensioner { #grid-dimensions }
 
-Använd dessa dimensioner för att säkerställa att nya widgetar anpassas till dashboardens rutnät. Kombinera bredd och höjd för önskat spann — en 2×1-widget använder bredd 2 och höjd 1.
+Använd dessa dimensioner för att säkerställa att nya widgetar anpassas till dashboardens rutnät. Kombinera bredd och höjd för önskat spann. En 2×1-widget använder till exempel bredd 2 och höjd 1.
 
 | Enheter | Bredd   | Höjd    |
 |---------|---------|---------|
@@ -37,11 +37,11 @@ Använd dessa dimensioner för att säkerställa att nya widgetar anpassas till 
 För att förstå hur en widget hanterar signaler, egenskaper eller layout dubbelklickar du på den i bibliotekslistan. Detta öppnar en redigerbar version av widgeten där skriptet och dynamiken för varje del kan granskas och användas som referens.
 
 !!! tip
-    Högerklicka på en placerad widget i en Arbetsvy och välj **Show template** för att öppna biblioteket och markera källobjektet — praktiskt för att hitta vilken mall en widget på dashboarden kommer från.
+    Högerklicka på en placerad widget i en Arbetsvy och välj **Show template** för att öppna biblioteket och markera källobjektet, vilket gör det lätt att hitta mallen en widget på dashboarden kommer från.
 
 ---
 
-## Rollbaserade dashboards — Styra åtkomst och standardvyer { #role-based-dashboards-controlling-access-and-default-views }
+## Rollbaserade dashboards { #role-based-dashboards-controlling-access-and-default-views }
 
 ### Ange visningsbehörigheter { #setting-view-privileges }
 

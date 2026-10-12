@@ -5,7 +5,7 @@ product: mod
 page_type: extending
 doc_id: DOC-M14
 status: draft
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -13,7 +13,7 @@ tags:
 
 # Dashboards - Extending
 
-## Custom Widgets - Building New Widgets from Existing Templates { #custom-widgets-building-new-widgets-from-existing-templates }
+## Custom Widgets { #custom-widgets-building-new-widgets-from-existing-templates }
 
 To base a new widget on an existing one, drag it from the `Dashboard Widgets` library onto a workview in **WideQuick® Designer**. Right-click the placed widget and select **Disconnect from template**. The widget can now be edited freely. Adjust the layout, add or remove objects, and modify the script logic.
 
@@ -25,7 +25,7 @@ It is also possible to edit already existing widgets by double clicking one in t
 
 ### Grid Dimensions { #grid-dimensions }
 
-Use these dimensions to ensure new widgets align with the dashboard grid. Combine the width and height for the desired span — a 2×1 widget uses width 2 and height 1.
+Use these dimensions to ensure new widgets align with the dashboard grid. Combine the width and height for the desired span. A 2×1 widget, for example, uses width 2 and height 1.
 
 | Units | Width   | Height  |
 |-------|---------|---------|
@@ -39,11 +39,11 @@ Use these dimensions to ensure new widgets align with the dashboard grid. Combin
 To understand how a widget handles signals, properties or layout, double-click it in the library list. This opens an editable version of the widget where the script and dynamics for each part can be inspected and used as a reference.
 
 !!! tip
-    Right-clicking a placed widget in a workview and selecting **Show template** opens the library and highlights the source object — useful for finding which template a widget on the dashboard came from.
+    Right-clicking a placed widget in a workview and selecting **Show template** opens the library and highlights the source object, which makes it easy to find the template a widget on the dashboard came from.
 
 ---
 
-## Role-Based Dashboards - Controlling Access and Default Views { #role-based-dashboards-controlling-access-and-default-views }
+## Role-Based Dashboards { #role-based-dashboards-controlling-access-and-default-views }
 
 ### Setting View Privileges { #setting-view-privileges }
 

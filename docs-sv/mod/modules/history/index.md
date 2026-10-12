@@ -3,7 +3,7 @@ title: Historik
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -20,7 +20,7 @@ Alla tre vyer är byggda på samma diagramkomponent och delar samma kontroller f
 
 ### [Kom igång](get-started.md) { #get-started }
 * [**Historikvy**](get-started.md#the-history-view) — Layout för diagrammet och kontrollpanelerna.
-* [**Välja signaler**](get-started.md#selecting-signals) — Hur du väljer signaler från trädet och applicerar dem på diagrammet.
+* [**Välja signaler**](get-started.md#selecting-signals) — Hur signaler väljs i trädet och appliceras på diagrammet.
 * [**Inställningar**](get-started.md#settings) — Tidsintervall, uppdateringsintervall och visningsalternativ.
 * [**Vyspecifik historik**](get-started.md#view-specific-history) — Historik begränsad till en enskild arbetsvy.
 * [**Objektpopup**](get-started.md#object-popup-history-tab) — Visa historik för ett enskilt objekt.
@@ -40,5 +40,5 @@ Alla tre vyer är byggda på samma diagramkomponent och delar samma kontroller f
 ---
 
 ### [Felsökning](troubleshooting.md) { #troubleshooting }
-* [**Vanliga problem**](troubleshooting.md) — Vanliga problem och hur du åtgärdar dem.
+* [**Vanliga problem**](troubleshooting.md) — Vanliga problem och hur de åtgärdas.
 <!-- --8<-- [end:body] -->

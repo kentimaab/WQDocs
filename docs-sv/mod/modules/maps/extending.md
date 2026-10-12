@@ -3,7 +3,7 @@ title: Kartor och indikatorer — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -12,13 +12,11 @@ tags:
 
 # Kartor och indikatorer — Utöka
 
-Det här avsnittet beskriver hur du utökar modulen Kartor och indikatorer med anpassad
-funktionalitet. Det inkluderar att koppla ett **Alarm**-objekt till en **Kartvy** för
+Det här avsnittet beskriver hur modulen Kartor och indikatorer utökas med anpassad funktionalitet. Det inkluderar att koppla ett **Alarm**-objekt till en **Kartvy** för
 livefiltrering av larm, samt att skapa anpassade kartindikatorer med zoomnavigering,
 länkning och statushantering.
 
-Innan du börjar, se till att du är bekant med grunderna i modulen Kartor och indikatorer.
-Om inte, se [Kartor och indikatorer — Kom igång](get-started.md).
+Det här avsnittet förutsätter kännedom om grunderna i modulen Kartor och indikatorer. Se vid behov [Kom igång](get-started.md).
 
 
 ## Koppla Alarm till Kartvy { #connecting-alarm-to-map-view }
@@ -75,10 +73,8 @@ aktiva larm baserat på vad som för tillfället är synligt på kartan.
 <!-- --8<-- [start:body-2] -->
 ## Skapa anpassade kartindikatorer { #creating-custom-map-indicators }
 
-Följande avsnitt förklarar de viktigaste koncepten bakom de inbyggda indikatorerna och
-hur de tillämpas när du skapar egna. Snarare än att dokumentera ett specifikt
-objekt ligger fokus på de underliggande mönstren — zoomnavigering, länkning, statushantering
-och klustring — så att integratören fritt kan tillämpa dem på valfri
+Följande avsnitt förklarar de viktigaste koncepten bakom de inbyggda indikatorerna och hur de tillämpas när egna skapas. Snarare än att dokumentera ett specifikt
+objekt ligger fokus på de underliggande mönstren (zoomnavigering, länkning, statushantering och klustring), så att integratören kan tillämpa dem på valfri
 anpassad indikator.
 
 !!! tip
@@ -90,11 +86,10 @@ anpassad indikator.
 ### Zoomnivåer och navigering { #zoom-levels-and-navigation }
 
 **Kartvy**-objekt stöder zoomintervall, som styr vid vilken zoomnivå varje
-objekt är synligt. Det är ett kraftfullt verktyg för att minska röran — objekt på en
-högre nivå kan guida användaren till mer detaljerade vyer på lägre zoomnivåer genom
+objekt är synligt. Det är ett kraftfullt verktyg för att minska röran. Objekt på en högre nivå kan guida användaren till mer detaljerade vyer på lägre zoomnivåer genom
 att ange en målzoomnivå vid klick.
 
-För att implementera detta, lägg till en **zoomTarget**-egenskap på din anpassade indikator och
+För att implementera detta, lägg till en **zoomTarget**-egenskap på den anpassade indikatorn och
 använd följande onClick-skript:
 
 ```javascript title="Custom indicator — onClick"
@@ -112,8 +107,7 @@ standardvärdet `15`.
 * Centrerar kartan på indikatorns longitud.
 
 Genom att kombinera zoomintervall med en **zoomTarget**-egenskap kan indikatorer på högre
-zoomnivåer fungera som navigeringshjälpmedel — ett klick zoomar in och avslöjar de mer
-detaljerade indikatorerna nedanför.
+zoomnivåer fungera som navigeringshjälpmedel: ett klick zoomar in och visar de mer detaljerade indikatorerna nedanför.
 
 !!! tip
     En bra praxis är att ange **zoomTarget** för en indikator på högre nivå till den
@@ -148,8 +142,7 @@ app._subNavTarget = { root: root, dir: dir };
 ```
 
 !!! note
-    Kataloglänkning kräver att helskärmsmenyn är tillgänglig. Se
-    [Navigation — Kom igång](../Core/Navigation/get-started.md) för mer information.
+    Kataloglänkning kräver att helskärmsmenyn är tillgänglig. Se modulen [Navigation](../Core/Navigation/get-started.md) för mer information.
 
 #### Länka till ett specifikt objekt
 För att länka en indikator direkt till ett specifikt objekt, lägg till en **targetObject**-egenskap
@@ -160,12 +153,12 @@ scLinking.goTo(this.targetObject);
 ```
 
 Det navigerar till den **Arbetsvy** som innehåller målobjektet och markerar det.
-För mer information om GoTo, se [Navigation — Utöka](../Core/Navigation/extending.md#goto).
+För mer information, se [GoTo](../Core/Navigation/extending.md#goto) i modulen Navigation.
 
 !!! tip
     Använd **linkedView** med en `.kvie`-sökväg för att navigera till en specifik **Arbetsvy**,
     använd **linkedView** med en katalogsökväg för att öppna helskärmsmenyn på den
-    platsen, och använd **targetObject** när du vill ta användaren direkt till
+    platsen, och använd **targetObject** för att ta användaren direkt till
     ett specifikt objekt som en sensor eller ett styrelement.
 
 ### Pinnstatus { #pin-status }
@@ -188,12 +181,11 @@ uppdateras automatiskt för att återspegla den högsta aktiva statusen:
 
 Statusmappningen konfigureras i skriptet `scSuffix` via
 objektet `suffixObj.Views`, som definierar vilka objektsuffix som motsvarar vilken
-statuskategori. Det behöver inte ändras när du skapar en anpassad indikator.
+statuskategori. Det behöver inte ändras när en anpassad indikator skapas.
 
 !!! tip "Rekommendation"
     Snarare än att bygga en anpassad statusindikator från grunden rekommenderas det starkt
-    att kopiera det befintliga `PinStatus`-objektet och modifiera det efter dina
-    behov. Skriptet är tätt kopplat till skriptet `scSuffix` och databasstrukturen,
+    att kopiera det befintliga `PinStatus`-objektet och anpassa kopian efter behov. Skriptet är tätt kopplat till skriptet `scSuffix` och databasstrukturen,
     vilket gör det komplext att replikera korrekt. Kopiering säkerställer att all
     befintlig logik bevaras och tillåter samtidigt full visuell anpassning.
 
@@ -202,8 +194,8 @@ statuskategori. Det behöver inte ändras när du skapar en anpassad indikator.
 Klustringssystemet i **Kartvy** drivs helt av funktionen `initClusters()` i skriptet `scMap`.
 Den identifierar objekt genom att söka efter två specifika egenskaper:
 
-* Ett objekt med en `roi`-egenskap — behandlas som ett **kluster**
-* Ett objekt med en `status`-egenskap — behandlas som en **pin** och potentiellt underordnat element
+* Ett objekt med en `roi`-egenskap behandlas som ett **kluster**.
+* Ett objekt med en `status`-egenskap behandlas som en **pin** och ett potentiellt underordnat element.
 
 Det innebär att valfri anpassad indikator kan delta i klustringssystemet enbart
 genom att ha rätt egenskap. Det finns inget krav på ett specifikt objektnamn
@@ -211,14 +203,12 @@ eller en specifik typ.
 
 !!! note
     `initClusters()` måste anropas i onLoad-skriptet för **Kartvyn** för att klustring
-    ska fungera. Se [Kartor och indikatorer — Kom igång](get-started.md#setting-up-a-map-view-object).
+    ska fungera. Se [Kom igång](get-started.md#setting-up-a-map-view-object).
 
 #### Göra en anpassad indikator klustermedveten
 
 För att en anpassad indikator ska plockas upp som ett underordnat element av klustringssystemet
-behöver den en `status`-egenskap. För det inbyggda `PinStatus`-objektet hanteras detta automatiskt
-av dess skript — `status` uppdateras av en `DatalagerListener` när den länkade
-**Arbetsvy** ändrar tillstånd.
+behöver den en `status`-egenskap. För det inbyggda `PinStatus`-objektet hanteras detta automatiskt av dess skript, som uppdaterar `status` via en `DataStoreListener` när den länkade **Arbetsvyn** ändrar tillstånd.
 
 För en anpassad indikator måste `status` underhållas av ett skript. Värdet ska
 följa samma statushierarki som används av de inbyggda indikatorerna:
@@ -232,8 +222,7 @@ följa samma statushierarki som används av de inbyggda indikatorerna:
 
 !!! tip "Rekommendation"
     Snarare än att bygga ett anpassat kluster från grunden rekommenderas det starkt
-    att kopiera det befintliga klusterobjektet och modifiera det efter dina behov. Klustringslogiken
-    hanteras helt av skriptet `scMap` — kopiering säkerställer att ditt objekt
-    identifieras korrekt av `initClusters()` och tillåter samtidigt full
+    att kopiera det befintliga klusterobjektet och anpassa kopian efter behov. Klustringslogiken
+    hanteras helt av skriptet `scMap`, och kopiering säkerställer att det nya objektet identifieras korrekt av `initClusters()` och tillåter samtidigt full
     visuell anpassning.
 <!-- --8<-- [end:body-2] -->

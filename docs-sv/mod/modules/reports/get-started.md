@@ -3,7 +3,7 @@ title: Rapporter — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-08-27
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -167,7 +167,7 @@ presenterar ett dagsdelta per kolumn, en kolumn per veckodag, och täcker tre ve
 Ingen av dem är bunden till ett enda loggningsintervall: Deltarapport år hanterar
 intervall från månad till dag, eller ned till timme med den alternativa mallen, och
 Deltarapport vecka från timme till dag. För detaljerad konfiguration av varje
-rapporttyp, se [Rapporter — Konfigurera](configuring.md).
+rapporttyp, se [Konfigurera](configuring.md).
 
 ## Enheter och prefix { #units-and-prefixes }
 
@@ -217,21 +217,21 @@ till höger. Observera att den andra sidan ändras beroende på den valda
 <!-- --8<-- [end:body-7] -->
   ![Schedule page 1](/docs/sv/Images/Reports/Report_meny.png)
 <!-- --8<-- [start:body-8] -->
-  <figcaption>Sida 1 — schemanamn, mall och frekvens.</figcaption>
+  <figcaption>Sida 1: schemanamn, mall och frekvens.</figcaption>
 </figure>
 
 <figure markdown="span">
 <!-- --8<-- [end:body-8] -->
   ![Schedule page 2](/docs/sv/Images/Reports/Report_meny2.png)
 <!-- --8<-- [start:body-9] -->
-  <figcaption>Sida 2 — rapportspecifik konfiguration.</figcaption>
+  <figcaption>Sida 2: rapportspecifik konfiguration.</figcaption>
 </figure>
 
 <figure markdown="span">
 <!-- --8<-- [end:body-9] -->
   ![Schedule page 3](/docs/sv/Images/Reports/Report_meny3.png)
 <!-- --8<-- [start:body-10] -->
-  <figcaption>Sida 3 — mottagare och utdataformat.</figcaption>
+  <figcaption>Sida 3: mottagare och utdataformat.</figcaption>
 </figure>
 
 </div>
@@ -267,8 +267,7 @@ Nedan finns beskrivningar av alternativen på den första och tredje sidan:
 
     * **Schemabeskrivning** — En beskrivning av schemat.
     !!! note
-        Schema kontrolleras var 5:e minut. Den konfigurerade tiden är därför
-        ungefärlig — rapporter kan skickas upp till 5 minuter efter inställd tid.
+        Schema kontrolleras var 5:e minut. Den konfigurerade tiden är därför ungefärlig, och rapporter kan skickas upp till 5 minuter efter inställd tid.
 
 * Tredje sidan
 

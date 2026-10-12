@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M14
 status: draft
-last_reviewed: 2026-05-19
+last_reviewed: 2026-10-12
 scripts:
   - scMap
 object_libraries:
@@ -31,9 +31,9 @@ tags:
 
 This section covers how to set up a **Map View** object in WideQuick and how to add
 basic indicators. For configuring more advanced indicators such as Pin Status, Cluster
-Pins, and Lines, see [Maps & Indicators — Configuring](configuring.md). For connecting
+Pins, and Lines, see [Configuring](configuring.md). For connecting
 an **Alarm** object to a **Map View** and creating custom indicators, see
-[Maps & Indicators — Extending](extending.md).
+[Extending](extending.md).
 
 ![Map Indicators](/docs/Images/Map_Indicators/Map_Indicators.png)
 
@@ -44,7 +44,7 @@ Objects Toolbar in **WideQuick® Designer**:
 
 ![Map View object](/docs/Images/Map_Indicators/map_view_object.png)
 
-Place it in the view where you want to display your map.
+Place it in the view that should show the map.
 
 Once placed, the **Map View** object needs to be linked to the `scMap` script. Do this
 by adding the following onLoad script to the **Map View** object:
@@ -82,7 +82,7 @@ if (web && (app.subNavMenu.visible || app._subNavRemoteVisible)) {
 return true;
 ```
 
-You are now ready to add Map Indicators.
+The map is now ready for Map Indicators.
 
 ## Adding basic indicators { #adding-basic-indicators }
 Map Indicators are found in the **Map Indicators** object library in **WideQuick®
@@ -95,16 +95,14 @@ which determines where they appear on the map.
 The following sections describe each basic indicator and any configuration required.
 
 ### Zoom button { #zoom-button }
-Adding a Zoom button is straightforward — it has no properties to configure. Add it
-as you would any other object in a **Map View**. If you are unsure how to do this,
-consult the WideQuick help by pressing F1 in **WideQuick® Designer**.
+A Zoom button has no properties to configure. Add it like any other object in a **Map View**. The WideQuick help, opened with F1 in **WideQuick® Designer**, describes how.
 
 The Zoom button automatically repositions itself to the bottom right corner of the
 **Map View** and does not require a longitude or latitude input.
 
 ### Pins { #pins }
 Pins are ideal for marking locations of interest, such as a plant or facility being
-monitored or controlled. Add a pin as you would any other object in a **Map View**,
+monitored or controlled. Add a pin like any other object in a **Map View**,
 and assign it the longitude and latitude of the location.
 
 To make the pin clickable and link it to a related **Workview**, edit the

@@ -3,7 +3,7 @@ title: Dokument — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -22,7 +22,7 @@ Navigera till **Dokument → Objektreferenser** för att hantera kopplingar.
 ![Vy för objektreferenser](/docs/sv/Images/Documents/documents-objects-references.png){align=center}
 
 <!-- --8<-- [start:body-2] -->
-Så här kopplar du dokument till ett objekt:
+Så här kopplas dokument till ett objekt:
 
 1. Hitta objektet i listan.
 2. Klicka på **Redigera dokumentkopplingar**.
@@ -41,7 +41,7 @@ Varje objekt i projektet har en flik [**Dokument**](../../reference/Popup/Docume
 <!-- --8<-- [start:body-3] -->
 ## Synkronisering med filsystemet { #syncing-with-the-filesystem }
 
-Lokala filer lagras i mappen `HTML/documents/` på servern. Dokumentlistan återspeglar vad som är registrerat i databasen, inte vad som faktiskt finns på disk. Om filer läggs till eller tas bort från mappen direkt — till exempel genom att kopiera filer via en nätverksresurs — visas de inte i listan förrän en synkronisering utförs.
+Lokala filer lagras i mappen `HTML/documents/` på servern. Dokumentlistan återspeglar vad som är registrerat i databasen, inte vad som faktiskt finns på disk. Om filer läggs till eller tas bort direkt i mappen, till exempel genom att kopieras via en nätverksresurs, syns ändringen inte i listan förrän en synkronisering utförs.
 
 Klicka på **Synkronisera med lokala filer på servern** för att skanna mappen och uppdatera databasen:
 

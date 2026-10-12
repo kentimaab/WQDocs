@@ -5,7 +5,7 @@ product: mod
 page_type: extending
 doc_id: DOC-M18
 status: draft
-last_reviewed: 2026-05-27
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -29,7 +29,7 @@ Saved signal groups in the view-specific popup are stored per view in the `Histo
 
 ## Signals Not Logged { #signals-not-logged }
 
-The **Show variables not being logged** button in the project-wide view opens a separate window with a tree of all signals that exist in the system but have no active logger. The window is read-only — it is only for identifying missing loggers.
+The **Show variables not being logged** button in the project-wide view opens a separate window with a tree of all signals that exist in the system but have no active logger. The window is read-only and only serves to identify missing loggers.
 
 In the object popup [**History**](../../reference/Popup/History.md) tab, unlogged signals are always visible on the right side under **Tags that are not logged**, without needing to open any extra window.
 

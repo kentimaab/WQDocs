@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M18
 status: draft
-last_reviewed: 2026-05-27
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -52,7 +52,7 @@ Signal groups can be saved and reloaded to avoid re-selecting the same signals e
 
 ### Importing Groups from Other Views { #importing-groups-from-other-views }
 
-Both the project-wide History and the view-specific History let you import saved groups that were created in other views. This lets you reuse a group saved in one view without having to recreate it.
+Both the project-wide History and the view-specific History can import saved groups created in other views, so a group saved in one view can be reused without recreating it.
 <!-- --8<-- [end:body-2] -->
 
 ![Saved groups dialog with All saved on the left and Selected on the right](/docs/Images/History/history-import-groups.png){align=center}
@@ -61,12 +61,12 @@ Both the project-wide History and the view-specific History let you import saved
 **To import groups from other views:**
 
 1. Click **Import groups from views** in the **Saved groups** section. A dialog opens.
-2. The left panel (**All saved**) lists every saved group in the project — both project-wide groups and groups saved in other views, organised by their source.
+2. The left panel (**All saved**) lists every saved group in the project, both project-wide groups and groups saved in other views, organised by their source.
 3. Select a group and click **→** to move it to the right panel (**Selected**).
-4. Repeat for each group you want to import.
+4. Repeat for each group to import.
 5. Click **Import and close**. The groups are added to the current saved group list.
 
-To remove a group from your selection before importing, select it in the right panel and click **←**. Click **Clear added** to empty the right panel entirely.
+To remove a group from the selection before importing, select it in the right panel and click **←**. Click **Clear added** to empty the right panel entirely.
 
 !!! note
     Importing a group copies it into the current context. Changes to the original group after importing are not reflected.

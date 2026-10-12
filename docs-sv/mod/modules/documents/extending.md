@@ -3,7 +3,7 @@ title: Dokument — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -22,9 +22,9 @@ tags:
 <!-- --8<-- [start:body-2] -->
 | Behörighet | Styr |
 |---|---|
-| `Documents_Upload` | **Lägg till dokument** — ladda upp lokala filer och lägg till onlineresurser |
-| `Documents_Edit` | **Redigera valt dokument** — byt namn på dokument |
-| `Documents_Delete` | **Ta bort dokument** — ta bort ett dokument permanent |
-| `Documents_Sync` | **Synkronisera med lokala filer på servern** — synkronisera dokumentlistan med serverns filsystem |
+| `Documents_Upload` | **Lägg till dokument**: ladda upp lokala filer och lägg till onlineresurser |
+| `Documents_Edit` | **Redigera valt dokument**: byt namn på dokument |
+| `Documents_Delete` | **Ta bort dokument**: ta bort ett dokument permanent |
+| `Documents_Sync` | **Synkronisera med lokala filer på servern**: synkronisera dokumentlistan med serverns filsystem |
 | `Documents_Link` | Länka och avlänka dokument inifrån objektets popup |
 <!-- --8<-- [end:body-2] -->

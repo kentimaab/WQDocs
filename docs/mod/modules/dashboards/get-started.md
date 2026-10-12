@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M14
 status: draft
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-12
 scripts:
   - scDashboard
   - scAlarm
@@ -46,7 +46,7 @@ New Dashboards can be created either from the template or from scratch depending
 Duplicate the dashboard template in **WideQuick® Designer** by right clicking the template in the project tree and move it to the correct folder in the project structure.
 
 ![Setting up a dashboard](/docs/Images/Dashboard/SetupDashboard.gif){align=center}
-## Widgets - Pre-built Components for the Dashboard { #widgets-pre-built-components-for-the-dashboard }
+## Widgets { #widgets-pre-built-components-for-the-dashboard }
 
 Dashboards are built using pre-built widgets from the `Dashboard Widgets` library.
 Each widget is designed for a specific type of data and can be placed and
@@ -56,7 +56,7 @@ configured directly without any custom development. Most widgets also exist in d
 ![Widget](/docs/Images/Dashboard/Widget.png){align=center}
 
 <!-- --8<-- [start:body-3] -->
-## Grid Layout - Positioning Widgets in the Editor { #grid-layout-positioning-widgets-in-the-editor }
+## Grid Layout { #grid-layout-positioning-widgets-in-the-editor }
 
 The dashboards in **WideQuick® Designer** uses a 4×4 grid to help with widget placement. Each grid
 position is marked by an ellipse that acts as a placement guide. These ellipses
