@@ -25,7 +25,7 @@ Skriptet `scWM` hanterar all skalning. Det övervakar huvudfönstret var 500 ms 
 
 ## Skalning av huvudvy { #main-view-scaling }
 
-Huvudvyn skalas automatiskt — ingen konfiguration krävs. `scWM` applicerar kontinuerligt rätt zoomnivå när fönstret ändrar storlek. Detta fungerar även på **WideQuick® Remote**-klienter och **WideQuick® Web**-klienter. Webbklienter skalar relativt till webbläsarfönstret snarare än skärmupplösningen.
+Huvudvyn skalas automatiskt, ingen konfiguration krävs. `scWM` applicerar kontinuerligt rätt zoomnivå när fönstret ändrar storlek. Detta fungerar även på **WideQuick® Remote**-klienter och **WideQuick® Web**-klienter. Webbklienter skalar relativt till webbläsarfönstret snarare än skärmupplösningen.
 
 ## Skalning av popup-fönster { #popup-scaling }
 

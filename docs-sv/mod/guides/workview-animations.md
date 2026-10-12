@@ -20,7 +20,7 @@ tags:
     * `scPrototypes`
 
 WideQuick Modular Framework innehåller ett inbyggt animationssystem som visar
-statusindikatorer på objekt för att indikera deras aktuella tillstånd — från larm och varningar
+statusindikatorer på objekt för att indikera deras aktuella tillstånd allt från larm och varningar
 till aktiv och manuell styrning. Systemet styrs av taggsuffix, vilket innebär att
 färgen ett objekt visar bestäms av vilka signaler som är aktiva på det objektet.
 
@@ -34,8 +34,8 @@ När ett `DynTouch`-objekt placeras på ett objekt i **WideQuick® Designer** an
 `AnimationHandler()`-funktionen i `scWorkviewAnimation`-skriptet automatiskt.
 Detta skapar en hanterare som bevakar alla Datalager-signaler som matchar
 objektets taggnamn kombinerat med de konfigurerade suffixen. Hanteraren exponerar ett
-booleskt värde för varje kategori — till exempel `animation.alarm` eller `animation.warning`,
-där `animation` är referensen till hanteraren — som är `true` när någon signal
+booleskt värde för varje kategori till exempel, `animation.alarm` eller `animation.warning`,
+där `animation` är referensen till hanteraren som är `true` när någon signal
 i den kategorin är aktiv.
 
 Det här animationstillståndet delas automatiskt med alla underobjekt i gruppen,
@@ -43,7 +43,7 @@ så att varje visuellt element kan reagera självständigt på sin tilldelade ka
 
 Alla vanliga komponenter i standardobjektbiblioteken levereras med färdigbyggda animerade
 objekt som fungerar direkt, och täcker kategorierna larm, varning, aktiv och ManAuto.
-Serviceanimation ingår inte i standardobjekten som standard — exemplet i
+Serviceanimation ingår inte i standardobjekten som standard exemplet i
 [Bygga ett eget animerat motorobjekt](#example-building-a-custom-animated-motor-object)
 visar hur man lägger till det i ett eget objekt.
 
@@ -70,7 +70,7 @@ namn, till exempel `Fellarm`, och är kopplat till ett faktiskt taggsuffix, till
 `_LF`. När en signal som slutar med det suffixet blir aktiv animeras objektet i
 gruppens färg.
 
-Grupper prioriteras efter nummer — lägre nummer har högre prioritet. Om ett objekt
+Grupper prioriteras efter nummer, lägre nummer har högre prioritet. Om ett objekt
 har både ett aktivt larm och en varning ges larmet prioritet eftersom det är grupp 1.
 
 Att välja en grupp visar två inställningspaneler till höger:
@@ -186,7 +186,7 @@ Ersätt `alarm` med det relevanta kategorinamnet. De tillgängliga kategorinamne
 ## Exempel - Bygga ett eget animerat motorobjekt { #example-building-a-custom-animated-motor-object }
 
 Det här exemplet visar hur man bygger ett enkelt eget motorobjekt som reagerar på
-fyra animationskategorier — larm, varning, service och aktiv. Det visar också
+fyra animationskategorier: larm, varning, service och aktiv. Det visar också
 hur man lägger till serviceanimation, som inte ingår i standardobjektbiblioteken
 som standard.
 
@@ -194,7 +194,7 @@ som standard.
 
 Innan du bygger objektet, kontrollera att alla fyra animationskategorier som används i det här
 exemplet är konfigurerade i **Inställningar → Suffix → Suffix - Larm**. Kategorierna 1, 2
-och 4 bör redan vara konfigurerade som standard — expandera varje och bekräfta att suffixalias kopplade till de relevanta suffixen finns
+och 4 bör redan vara konfigurerade som standard. Expandera varje och bekräfta att suffixalias kopplade till de relevanta suffixen finns
 under **suffix**:
 
 * **1 - Larm** — bör innehålla suffixalias kopplade till larmsuffix som `_LD` eller `_LG`

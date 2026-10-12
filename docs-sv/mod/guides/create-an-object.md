@@ -3,7 +3,7 @@ title: Skapa objekt
 product: mod
 page_type: guide
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -29,7 +29,7 @@ Att skapa ett processobjekt i en **Arbetsvy** består av tre steg:
 När objektet är byggt kan det sparas i biblioteket och återanvändas i projektet.
 
 !!! tip
-    Objekt med prefixet `dyn` — till exempel `dynMotorFanR_000` — innehåller redan
+    Objekt med prefixet `dyn`, till exempel `dynMotorFanR_000`, innehåller redan
     ett förkonfigurerat `DynTouch`-objekt och animationer. För dessa objekt behöver
     bara egenskaperna **Connection**, **Device**, **Sys** och **ObjectName** på
     `DynTouch`-objektet fyllas i för att koppla dem till sina taggar. Ingen manuell
@@ -38,29 +38,23 @@ När objektet är byggt kan det sparas i biblioteket och återanvändas i projek
 ### Ikon
 
 Det första steget är att välja en komponent som representerar objektet visuellt i
-**WideQuick® Designer**. Vilken komponent som helst från objektbiblioteken kan
-användas — valet beror på vad objektet representerar i processvyn.
+**WideQuick® Designer**. Vilken komponent som helst från objektbiblioteken kan användas, beroende på vad objektet representerar i processvyn.
 
 I det här exemplet används **Centrifugal Pumps 01** från biblioteket **PID Pumps**
 under **PI&D**. Dra komponenten till **Arbetsvy**. Det är möjligt att kombinera
-flera komponenter för att representera mer komplexa objekt — till exempel en pump
-med en ventil. Gruppera dem inte ännu.
+flera komponenter för att representera mer komplexa objekt, till exempel en pump med en ventil. Gruppera dem inte ännu.
 
-Alla komponenter som är utformade för att representera fysiska objekt — som pumpar,
-fläktar och ventiler — är kompatibla med systemet för
-[Arbetsvy Animation](./workview-animations.md), vilket innebär att de kan byta färg
-för att spegla objektets aktuella tillstånd — aktivt, larm, varning eller under service.
+Alla komponenter som är utformade för att representera fysiska objekt, som pumpar, fläktar och ventiler, är kompatibla med systemet för [Arbetsvyanimationer](./workview-animations.md). De kan byta färg för att spegla objektets aktuella tillstånd: aktivt, larm, varning eller under service.
 
 ### Stödobjekt
 
 Stödobjekt läggs till bredvid komponenten för att visa ytterligare information om
-objektet. I det här exemplet läggs ett `ValueDisplay`-objekt till — det finns i
-biblioteket **Digital Value Display** under **Workspace Components**.
+objektet. I det här exemplet läggs ett `ValueDisplay`-objekt från biblioteket **Digital Value Display** under **Workspace Components** till.
 
 När `ValueDisplay` konfigureras, ange `analogOutputValue` i egenskapen **SuffixAlias**.
 Detta kopplar visningen till den signal som är mappad till det aliaset. Mer
 information om suffixalias och hur de fungerar finns i
-[Taggstruktur — Suffix Alias](../reference/tag-structure.md#suffix-alias).
+[Suffix Alias](../reference/tag-structure.md#suffix-alias) i referensen Taggstruktur.
 
 Dra de relevanta stödobjekten från biblioteket till **Arbetsvy** och placera dem i
 förhållande till komponenten. Gruppera ingenting ännu.
@@ -73,11 +67,10 @@ klickbara området och binder samman alla visuella element.
 
 Dra `DynTouch`-objektet från biblioteket till **Arbetsvy** och ändra storleken så
 att det täcker komponenten och alla stödobjekt helt. Ingenting får hamna utanför
-`DynTouch`-objektets gräns — ett element utanför gränsen ingår inte i gruppen och
+`DynTouch`-objektets gräns. Ett element utanför gränsen ingår inte i gruppen och
 kan orsaka problem med klickning och val.
 
-När `DynTouch`-objektet är på plats, markera alla element — komponenten,
-stödobjekten och `DynTouch`-objektet — och gruppera dem med **Ctrl+G**.
+När `DynTouch`-objektet är på plats, markera alla element (komponenten, stödobjekten och `DynTouch`-objektet) och gruppera dem med **Ctrl+G**.
 
 ### Koppla objektet till taggar
 
@@ -91,14 +84,13 @@ Mer information om hur taggar är strukturerade och hur suffixsystemet fungerar 
 ![Creating object](/docs/sv/Images/Create_Object/Create-object.gif)
 
 !!! tip
-    För att lära dig hur du bygger ett helt anpassat objekt från grunden och applicerar
-    animationer, se exemplet [Arbetsvy Animations](./workview-animations.md#example-building-a-custom-animated-motor-object).
+    Exemplet [Arbetsvyanimationer](./workview-animations.md#example-building-a-custom-animated-motor-object) visar hur ett helt anpassat objekt byggs från grunden och får animationer.
 
 ## Skapa objekt från skript
 
 **WideQuick® Runtime** gör det möjligt att skapa objekt dynamiskt under körning med
 hjälp av funktionen `createObject()`. Detta är användbart när antalet objekt inte är
-känt vid designtillfället, eller när det varierar — till exempel för att rendera en
+känt vid designtillfället, eller när det varierar, till exempel för att rendera en
 post per datasignal istället för att placera ett fast antal tomma objekt i vyn. Till
 skillnad från det visuella tillvägagångssättet kräver den här metoden
 skriptkunskaper och lämpar sig bättre för avancerade användningsfall.
@@ -134,7 +126,7 @@ Alla standardargument är obligatoriska. Anpassade egenskaper i konfigurationsob
 
 | Argument | Beskrivning |
 |---|---|
-| `type` | Objekttyp — antingen en `ObjectType*`-konstant eller en sträng som matchar ett bibliotekskomponentnamn |
+| `type` | Objekttyp: antingen en `ObjectType*`-konstant eller en sträng som matchar ett bibliotekskomponentnamn |
 | `name` | Unikt namn för det skapade objektet inom vyn |
 | `x` | Horisontell position i pixlar |
 | `y` | Vertikal position i pixlar |
@@ -161,7 +153,7 @@ sökväg som en sträng: `"/Library/ObjectName"`.
 
 Efter skapandet kan egenskaper på det returnerade objektet ställas in direkt:
 
-* `obj.brush.color1` — fyllnadsfärg som ett heltalsvärd för färg
+* `obj.brush.color1` — fyllnadsfärg som ett heltalsvärde för färg
 * `obj.pen.width` — kantbredd i pixlar
 * `obj.font.color` — textfärg
 * `obj.value` — visningsvärde för textobjekt

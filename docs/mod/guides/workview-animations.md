@@ -21,7 +21,7 @@ tags:
     * `scPrototypes` 
 
 WideQuick Modular Framework includes a built-in animation system that displays
-status colors on objects to indicate their current state — from alarms and warnings
+status colors on objects to indicate their current state spanning from alarms and warnings
 to active and manual override. The system is driven by tag suffixes, meaning the
 color an object displays is determined by which signals are active on that object.
 
@@ -35,8 +35,8 @@ When a `DynTouch` object is placed on an object in **WideQuick® Designer**, it
 automatically calls the `AnimationHandler()` function in the `scWorkviewAnimation`
 script. This creates a handler that watches all Data Store signals matching the
 object's tag name combined with the configured suffixes. The handler exposes a
-boolean for each category — for example `animation.alarm` or `animation.warning`,
-where `animation` is the reference to the handler — which is `true` when any signal
+boolean for each category for example, `animation.alarm` or `animation.warning`,
+where `animation` is the reference to the handler which is `true` when any signal
 in that category is active.
 
 This animation state is automatically shared with all child objects in the group,
@@ -44,7 +44,7 @@ so each visual element can respond independently to its assigned category.
 
 All common components in the standard object libraries come with pre-built animated
 objects that work out of the box, covering the alarm, warning, active, and ManAuto
-categories. Service animation is not included in the standard objects by default —
+categories. Service animation is not included in the standard objects by default
 the example in
 [Building a custom animated motor object](#example-building-a-custom-animated-motor-object)
 demonstrates how to add it to a custom object.
@@ -72,7 +72,7 @@ name, such as `Fault Alarm`, and is connected to an actual tag suffix, such as
 `_LF`. When a signal ending in that suffix becomes active, the object animates in
 the color of the group the alias belongs to.
 
-Groups are prioritized by their number — lower numbers take priority. If an object
+Groups are prioritized by their number, lower numbers take priority. If an object
 has both an active alarm and a warning, the alarm takes priority since it is group 1.
 
 Selecting a group displays two settings panels on the right:
@@ -188,7 +188,7 @@ Replace `alarm` with the relevant category name. The available category names ar
 ## Example - Building a custom animated motor object { #example-building-a-custom-animated-motor-object }
 
 This example walks through building a simple custom motor object that responds to
-four animation categories — alarm, warning, service, and active. It also demonstrates
+four animation categories: alarm, warning, service, and active. It also demonstrates
 how to add service animation, which is not included in the standard object libraries
 by default.
 
@@ -196,7 +196,7 @@ by default.
 
 Before building the object, verify that all four animation categories used in this
 example are configured in **Settings → Suffix → Suffix - Alarms**. Categories 1, 2
-and 4 should already be configured by default — expand each and confirm that suffix aliases connected to the relevant suffixes are 
+and 4 should already be configured by default. Expand each and confirm that suffix aliases connected to the relevant suffixes are 
 present under **suffixes**:
 
 * **1 - Alarms** — should contain suffix aliases connected to alarm suffixes such as `_LD` or `_LG`

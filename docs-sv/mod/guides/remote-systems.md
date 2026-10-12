@@ -74,7 +74,7 @@ Konfigurerade fjärrsystem visas i avsnittet **Remote Systems** längst ned i hu
 ![Menyn Remote Systems med anslutna och frånkopplade system](/docs/sv/Images/Remote_System/remote-menu.png){align=center}
 
 <!-- --8<-- [start:body-2] -->
-Varje post visar systemnamn, beskrivning och en ikon för anslutningsstatus. Statusikonen uppdateras i realtid — grön betyder ansluten, röd betyder inte ansluten. Om **Auto connect on startup** är aktiverat återansluter applikationen automatiskt vid frånkoppling enligt inställningarna för **Max reconnect attempts** och **Reconnect delay**.
+Varje post visar systemnamn, beskrivning och en ikon för anslutningsstatus. Statusikonen uppdateras i realtid, grön betyder ansluten, röd betyder inte ansluten. Om **Auto connect on startup** är aktiverat återansluter applikationen automatiskt vid frånkoppling enligt inställningarna för **Max reconnect attempts** och **Reconnect delay**.
 
 Att öppna ett fjärrsystem startar det i ett separat klientfönster. Den lokala applikationen förblir fullt tillgänglig medan fjärrsystemet är öppet.
 
@@ -85,11 +85,11 @@ Varje system i menyn för Fjärrsystem kan öppnas på två sätt:
 * **Klicka på systemnamnet** — öppnar fjärrapplikationen i **WideQuick® Remote**, en nativ klient med full vyåtkomst och interaktiva kontroller.
 * **Klicka på globikonen** — öppnar fjärrapplikationen i webbklienten, ett webbläsarbaserat gränssnitt som inte kräver någon separat installation.
 
-**WideQuick® Remote** är det rekommenderade alternativet för operatörsanvändning. Webbklienten lämpar sig för situationer där det inte är praktiskt att installera Remote-klienten — till exempel vid åtkomst från en privat enhet eller ett externt nätverk.
+**WideQuick® Remote** är det rekommenderade alternativet för operatörsanvändning. Webbklienten lämpar sig för situationer där det inte är praktiskt att installera Remote-klienten till exempel, vid åtkomst från en privat enhet eller ett externt nätverk.
 
 ## Fjärrlarm { #remote-alarms }
 
-När `scRemoteAlarms` körs visas larm från alla anslutna fjärrsystem i den lokala larmlistan tillsammans med lokala larm. Varje larmpost visar vilket system larmet härstammar från. Larmlistan kan filtreras per system för att fokusera på en specifik fjärrinstallation. Att kvittera ett larm skickar kvitteringen direkt till det ursprungliga systemet — ingen separat inloggning krävs.
+När `scRemoteAlarms` körs visas larm från alla anslutna fjärrsystem i den lokala larmlistan tillsammans med lokala larm. Varje larmpost visar vilket system larmet härstammar från. Larmlistan kan filtreras per system för att fokusera på en specifik fjärrinstallation. Att kvittera ett larm skickar kvitteringen direkt till det ursprungliga systemet, ingen separat inloggning krävs.
 
 Om ett fjärrsystem kopplas från tas dess larm automatiskt bort från listan och återkommer när anslutningen är återupprättad.
 
@@ -99,7 +99,7 @@ För att larmräknarna i navigeringen och på dashboards ska inkludera ett fjär
 
 ### Integrera en icke-MOD-applikation { #integrating-a-non-mod-application }
 
-Larmaggregering fungerar med vilken WideQuick-applikation som helst — inte bara MOD — så länge fjärrapplikationen exponerar följande variabler i sin Datalager:
+Larmaggregering fungerar med vilken WideQuick-applikation som helst inte bara MOD så länge fjärrapplikationen exponerar följande variabler i sin Datalager:
 
 * `activeAckAlarms` — aktuellt antal aktiva kvitterade larm.
 * `activeNoAckAlarms` — aktuellt antal aktiva okvitterade larm.

@@ -26,7 +26,7 @@ The `scWM` script handles all scaling. It monitors the main window every 500 ms 
 
 ## Main View Scaling { #main-view-scaling }
 
-The main view scales automatically — no configuration is needed. `scWM` continuously applies the correct zoom level as the window resizes. This also works on **WideQuick® Remote** clients and **WideQuick® Web** clients. Web clients scale relative to the browser window rather than the screen resolution.
+The main view scales automatically, no configuration is needed. `scWM` continuously applies the correct zoom level as the window resizes. This also works on **WideQuick® Remote** clients and **WideQuick® Web** clients. Web clients scale relative to the browser window rather than the screen resolution.
 
 ## Popup Scaling { #popup-scaling }
 

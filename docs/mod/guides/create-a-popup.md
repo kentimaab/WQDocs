@@ -14,7 +14,7 @@ tags:
 WideQuick Modular Framework is delivered with several pre-configured popups, such as
 history, trend and maintenance. It is also possible to create fully custom popups
 tailored to specific objects and workflows. This guide explains how to create a custom
-popup from scratch — from importing tags and configuring suffixes to building the view
+popup from scratch. From importing tags and configuring suffixes to building the view
 and connecting it to an object.
 
 Before getting started, make sure you are familiar with the tag structure used in
@@ -147,7 +147,7 @@ the same regardless of which template is chosen.
 The final step is to build the popup view for controlling the pump and displaying
 information.
 
-There are two ways to approach this — start from a new **Workview** or copy an
+There are two ways to approach this, either start from a new **Workview** or copy an
 existing template view. The easiest approach is to start with the template view,
 which contains all the necessary scripts and configuration. Copy the **Workview**
 **Template_Popup_Small** found under **Workviews → Templates** and name the new
@@ -243,7 +243,7 @@ and rescale to remove the blank space:
 ![pump control scaled](/docs/Images/Create_Popup/Pump%20control_scaled.png)
 
 Because of this feature, popups should always be built to show the maximum number
-of tags — the **worst case** scenario — and will then automatically rescale
+of tags "the **worst case** scenario" and will then automatically rescale
 according to the actual number of tags available for the object.
 
 ## Opening a popup { #opening-a-popup }
@@ -292,7 +292,7 @@ visual separation from the underlying view.
 
 By default, clicking a `DynTouch` object opens the tab navigation first, allowing
 the user to select which popup to view. In cases where users frequently navigate
-to a specific popup — such as **Manover** — it is possible to bypass the tab
+to a specific popup such as **Manover**, it is possible to bypass the tab
 navigation and open that popup directly.
 
 This is done by using the `_DynTouch_DirectLink` or `_DynTouchRounded_DirectLink`

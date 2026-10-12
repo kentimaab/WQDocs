@@ -13,7 +13,7 @@ tags:
 WideQuick Modular Framework levereras med flera förkonfigurerade popups, till exempel
 historik, trend och underhåll. Det är också möjligt att skapa helt anpassade popups
 anpassade till specifika objekt och arbetsflöden. Den här guiden förklarar hur man skapar
-en anpassad popup från grunden — från att importera taggar och konfigurera suffix till
+en anpassad popup från grunden. Från att importera taggar och konfigurera suffix till
 att bygga vyn och koppla den till ett objekt.
 
 Innan du börjar, se till att du är bekant med taggstrukturen som används i
@@ -146,7 +146,7 @@ densamma oavsett vilken mall som väljs.
 Det sista steget är att bygga popup-vyn för att styra pumpen och visa
 information.
 
-Det finns två sätt att angripa detta — börja från en ny **Arbetsvy** eller kopiera en
+Det finns två sätt att angripa detta, antingen börja från en ny **Arbetsvy** eller kopiera en
 befintlig mallvy. Det enklaste sättet är att börja med mallvyn,
 som innehåller alla nödvändiga skript och konfigurationer. Kopiera **Arbetsvyn:**
 **Template_Popup_Small** som finns under **Arbetsvyer → Templates** och namnge den nya
@@ -242,7 +242,7 @@ och skalas om för att ta bort det tomma utrymmet:
 ![pump control skalad](/docs/sv/Images/Create_Popup/Pump%20control_scaled.png)
 
 På grund av denna funktion bör popups alltid byggas för att visa det maximala antalet
-taggar — **värsta tänkbara** scenariot — och skalas sedan automatiskt om
+taggar "**värsta tänkbara** scenariot" och skalas sedan automatiskt om
 beroende på det faktiska antalet tillgängliga taggar för objektet.
 
 ## Öppna en popup { #opening-a-popup }
@@ -291,7 +291,7 @@ visuell separation från den underliggande vyn.
 
 Som standard öppnar ett klick på ett `DynTouch`-objekt fliknavigeringen först, vilket låter
 användaren välja vilken popup som ska visas. I fall där användare ofta navigerar
-till en specifik popup — till exempel **Maneuver** — är det möjligt att kringgå fliknavigeringen
+till en specifik popup till exempel **Maneuver**, är det möjligt att kringgå fliknavigeringen
 och öppna den popupen direkt.
 
 Detta görs genom att använda objekten `_DynTouch_DirectLink` eller `_DynTouchRounded_DirectLink`

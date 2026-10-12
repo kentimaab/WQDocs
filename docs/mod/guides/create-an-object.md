@@ -4,7 +4,7 @@ description: How to create and connect a process object in a WideQuick workview,
 product: mod
 page_type: howto
 status: draft
-last_reviewed: 2026-05-26
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -29,7 +29,7 @@ Creating a process object in a **Workview** consists of three steps:
 Once built, the object can be saved to the library and reused across the project.
 
 !!! tip
-    Objects prefixed with `dyn` — for example `dynMotorFanR_000` — already include
+    Objects prefixed with `dyn`, for example `dynMotorFanR_000`, already include
     a pre-configured `DynTouch` object and animations. For these objects, only the
     **Connection**, **Device**, **Sys**, and **ObjectName** properties on the
     `DynTouch` object need to be filled in to connect them to their tags. No manual
@@ -38,29 +38,23 @@ Once built, the object can be saved to the library and reused across the project
 ### Icon
 
 The first step is to select a component to represent the object visually in
-**WideQuick® Designer**. Any component from the object libraries can be used —
-the choice depends on what the object represents in the process view.
+**WideQuick® Designer**. Any component from the object libraries can be used, depending on what the object represents in the process view.
 
 In this example, a **Centrifugal Pumps 01** from the **PID Pumps** library under
 **PI&D** will be used. Drag the component into the **Workview**. It is possible
-to combine several components to represent more complex objects — for example, a pump
-with a valve. Do not group them yet.
+to combine several components to represent more complex objects, for example a pump with a valve. Do not group them yet.
 
-All components designed to represent physical objects — such as pumps, fans, and
-valves — are compatible with the [Workview Animation](./workview-animations.md)
-system, which means they can change color to reflect the object's current state —
-active, alarm, warning, or under service.
+All components designed to represent physical objects, such as pumps, fans and valves, are compatible with the [Workview Animation](./workview-animations.md) system. They can change color to reflect the object's current state: active, alarm, warning or under service.
 
 ### Support objects
 
 Support objects are added alongside the component to display additional
-information about the object. In this example, a `ValueDisplay` object — found in
-the **Digital Value Display** library under **Workspace Components** — will be added.
+information about the object. In this example, a `ValueDisplay` object from the **Digital Value Display** library under **Workspace Components** will be added.
 
 When configuring the `ValueDisplay`, enter `analogOutputValue` in the **SuffixAlias**
 property. This connects the display to the signal mapped to that alias. For more
 information on suffix aliases and how they work, see
-[Tag Structure — Suffix Alias](../reference/tag-structure.md#suffix-alias).
+[Suffix Alias](../reference/tag-structure.md#suffix-alias) in the Tag Structure reference.
 
 Drag the relevant support objects from the library into the **Workview** and
 position them relative to the component. Do not group anything yet.
@@ -73,11 +67,9 @@ and ties all visual elements together.
 
 Drag the `DynTouch` object from the library into the **Workview** and resize it so
 that it covers the component and all support objects completely. Nothing should
-be left outside the `DynTouch` object boundary — any element outside it will not be
-part of the group and may cause issues with clicking and selection.
+be left outside the `DynTouch` object boundary. Any element outside it will not be part of the group and may cause issues with clicking and selection.
 
-Once the `DynTouch` object is in place, select all elements — the component,
-support objects, and the `DynTouch` object — and group them together with **Ctrl+G**.
+Once the `DynTouch` object is in place, select all elements (the component, the support objects and the `DynTouch` object) and group them together with **Ctrl+G**.
 
 ### Connect the object to tags
 
@@ -99,7 +91,7 @@ For more information on how tags are structured and how the suffix system works,
 
 **WideQuick® Runtime** allows objects to be created dynamically during runtime using
 the `createObject()` function. This is useful when the number of objects is not known
-at design time, or when it varies — for example, rendering one entry per data signal
+at design time, or when it varies, for example when rendering one entry per data signal
 instead of placing a fixed number of empty objects in the view. Unlike the visual
 approach, this method requires scripting knowledge and is better suited for advanced
 use cases.
@@ -134,7 +126,7 @@ are optional.
 
 | Argument | Description |
 |---|---|
-| `type` | Object type — either an `ObjectType*` constant or a string matching a library component name |
+| `type` | Object type: either an `ObjectType*` constant or a string matching a library component name |
 | `name` | Unique name for the created object within the view |
 | `x` | Horizontal position in pixels |
 | `y` | Vertical position in pixels |

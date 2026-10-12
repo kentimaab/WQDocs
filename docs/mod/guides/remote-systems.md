@@ -78,7 +78,7 @@ Configured remote systems appear in the **Remote Systems** section at the bottom
 ![Remote Systems menu showing connected and disconnected systems](/docs/Images/Remote_System/remote-menu.png){align=center}
 
 <!-- --8<-- [start:body-2] -->
-Each entry shows the system name, description, and a connection status icon. The status icon updates in real time — green means connected, red means not connected. If **Auto connect on startup** is enabled, the application reconnects automatically on disconnect according to the **Max reconnect attempts** and **Reconnect delay** settings.
+Each entry shows the system name, description, and a connection status icon. The status icon updates in real time, green means connected, red means not connected. If **Auto connect on startup** is enabled, the application reconnects automatically on disconnect according to the **Max reconnect attempts** and **Reconnect delay** settings.
 
 Opening a remote system launches it in a separate client window. The local application remains fully accessible while the remote system is open.
 
@@ -89,7 +89,7 @@ Each system in the Remote Systems menu can be opened in two ways:
 * **Click the system name** — opens the remote application in **WideQuick® Remote**, a native client with full view access and interactive controls.
 * **Click the globe icon** — opens the remote application in the web client, a browser-based interface that requires no separate installation.
 
-**WideQuick® Remote** is the preferred option for operator use. The web client is suited to situations where installing the Remote client is not practical — for example, access from a personal device or an external network.
+**WideQuick® Remote** is the preferred option for operator use. The web client is suited to situations where installing the Remote client is not practical for example, access from a personal device or an external network.
 ## Connected remote clients { #connected-remote-clients }
 
 Remote Systems covers the applications this one connects **out** to. Remote clients are the opposite direction: the **WideQuick® Remote** and web clients currently connected **in** to this application.
@@ -116,7 +116,7 @@ scRemoteClients.requestList(function (list) {
 
 ## Remote Alarms { #remote-alarms }
 
-When `scRemoteAlarms` is running, alarms from all connected remote systems appear in the local alarm list alongside local alarms. Each alarm entry shows which system it originates from. The alarm list can be filtered by system to focus on a specific remote installation. Acknowledging an alarm sends the acknowledgement directly to the originating system — no separate login is required.
+When `scRemoteAlarms` is running, alarms from all connected remote systems appear in the local alarm list alongside local alarms. Each alarm entry shows which system it originates from. The alarm list can be filtered by system to focus on a specific remote installation. Acknowledging an alarm sends the acknowledgement directly to the originating system, no separate login is required.
 
 If a remote system disconnects, its alarms are removed from the list automatically and reappear once the connection is restored.
 
@@ -126,7 +126,7 @@ For the alarm counters in the navigation and on dashboards to include a remote s
 
 ### Integrating a non-MOD application { #integrating-a-non-mod-application }
 
-Alarm aggregation works with any WideQuick application — not just MOD — as long as the remote application exposes the following variables in its Data Store:
+Alarm aggregation works with any WideQuick application not just MOD as long as the remote application exposes the following variables in its Data Store:
 
 * `activeAckAlarms` — current count of active acknowledged alarms.
 * `activeNoAckAlarms` — current count of active unacknowledged alarms.
