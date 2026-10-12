@@ -23,7 +23,7 @@ Varje loggenhet skapar två tabeller:
 | `wq_<hash>_data0` | De loggade signalvärdena — en rad per mätvärde, med en tidsstämpel och det registrerade värdet för varje signal i loggenheten. |
 | `wq_<hash>_meta` | Metadata för loggenheten — mappar kolumnnamn i datatabellen till deras signalnamn och enheter. |
 
-Hashen genereras från loggenhetens namn och förblir stabil så länge loggenhetens namn inte ändras. Om en loggenhet byter namn genereras en ny hash och ett nytt tabellpar — de gamla tabellerna tas inte bort automatiskt.
+Hashen genereras från loggenhetens namn och förblir stabil så länge loggenhetens namn inte ändras. Om en loggenhet byter namn genereras en ny hash och ett nytt tabellpar, de gamla tabellerna tas inte bort automatiskt.
 
 ## Frågor { #querying }
 

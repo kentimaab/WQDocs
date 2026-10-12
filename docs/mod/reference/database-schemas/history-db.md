@@ -26,7 +26,7 @@ Each logger creates two tables:
 | `wq_<hash>_data0` | The logged signal values — one row per sample, with a timestamp and the recorded value for each signal in the logger. |
 | `wq_<hash>_meta` | Metadata for the logger — maps column names in the data table to their signal names and units. |
 
-The hash is generated from the logger name and stays stable as long as the logger name does not change. Renaming a logger produces a new hash and a new pair of tables — the old tables are not removed automatically.
+The hash is generated from the logger name and stays stable as long as the logger name does not change. Renaming a logger produces a new hash and a new pair of tables, the old tables are not removed automatically.
 
 ## Querying { #querying }
 

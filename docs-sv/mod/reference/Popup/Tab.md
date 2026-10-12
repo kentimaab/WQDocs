@@ -29,7 +29,7 @@ objektet. Följande popupar visas alltid oavsett vilka suffix objektet har:
 * **Objektinfo**
 * **Trend**
 
-Ytterligare popupar — såsom **Process** eller **Styrning** — visas bara när objektet
+Ytterligare popupar såsom **Process** eller **Styrning** visas bara när objektet
 har signaler som matchar de suffix som är konfigurerade för den popupen. Se
 [Suffix - Popupar](../../../mod/guides/create-a-popup.md#configure-popup) för mer information
 om hur popupar kopplas till suffix.

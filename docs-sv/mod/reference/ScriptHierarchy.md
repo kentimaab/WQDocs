@@ -19,7 +19,7 @@ den hårda riktningen, att `scHoliday` kräver `scCalendar`, visas nedan.
 
 ## Beroendegraf
 
-Grafen nedan visar alla skript grupperade efter beroendeskikt — från fristående
+Grafen nedan visar alla skript grupperade efter beroendeskikt. Från fristående
 skript högst upp till de mest komplexa kedjorna längst ned. Klicka på en nod för att
 markera dess direkta beroenden och beroende skript. Använd skiktknapparna för att
 fokusera på en specifik nivå.

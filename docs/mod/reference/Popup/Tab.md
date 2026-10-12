@@ -31,7 +31,7 @@ object has:
 * **Object Info**
 * **Trend**
 
-Additional popups — such as **Process** or **Control** — appear only when the object
+Additional popups such as **Process** or **Control** appear only when the object
 has signals matching the suffixes configured for that popup. See
 [Suffix - Popups](../../../mod/guides/create-a-popup.md#configure-popup) for more information
 on how popups are connected to suffixes.

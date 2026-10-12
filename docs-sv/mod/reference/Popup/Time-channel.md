@@ -24,8 +24,8 @@ med suffixet `_TK`.
 Knapparna **Spara** och **Hämta** gör det möjligt att lagra och återanvända
 tidskanalskonfigurationer i projektet.
 
-**Spara** lagrar det aktuella schemat — inklusive alla tidsluckor för veckodagar
-och specialdagar — i databasen under objektets taggnamn. Det innebär att varje
+**Spara** lagrar det aktuella schemat inklusive alla tidsluckor för veckodagar
+och specialdagar i databasen under objektets taggnamn. Det innebär att varje
 objekt lagrar sin egen konfiguration oberoende av andra, vilket gör det möjligt
 att ha separata scheman för olika objekt.
 
@@ -41,8 +41,8 @@ mellan objekt eller återställa en känd konfiguration efter ändringar.
 
 ## Kanalstatus
 
-Panelen uppe till höger visar Tidkanalens aktuella status — om den är
-aktiv eller inaktiv — tillsammans med en klocka som visar aktuell tid.
+Panelen uppe till höger visar Tidkanalens aktuella status, om den är
+aktiv eller inaktiv.
 
 ## Veckodagar
 

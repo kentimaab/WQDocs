@@ -14,7 +14,7 @@ tags:
 
 The Control Curve popup is a control curve editor that maps input values on the
 X-axis to output values on the Y-axis using a set of draggable nodes connected by
-lines. It is used to configure non-linear control relationships — for example mapping
+lines. It is used to configure non-linear control relationships for example, mapping
 an outdoor temperature to a heating valve position. It only appears in the Tab menu
 when the object has signals matching the configured suffix aliases.
 

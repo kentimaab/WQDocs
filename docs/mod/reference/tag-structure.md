@@ -123,8 +123,8 @@ which are used to automatically connect signals to the correct display elements 
 objects. This eliminates the need to manually assign signals to individual objects
 and makes it easy to adapt to different tag naming conventions system-wide.
 
-This pattern applies to all dynamic objects across the standard object libraries —
-their value displays are named to match the suffix alias list, enabling automatic
+This pattern applies to all dynamic objects across the standard object libraries.
+Their value displays are named to match the suffix alias list, enabling automatic
 signal assignment when an object is connected to a tag.
 
 For example, the `analogDamper` object in the **Dampers** object library has a
@@ -132,8 +132,8 @@ display element called `analogOutputValue`. If the suffix `_R` is mapped to the 
 `analogOutputValue`, WideQuick will automatically assign any signal ending in `_R` to
 that display element when the object is connected to a tag.
 
-This also means that if a project uses a different suffix convention — for example
-`_R2` instead of `_R` — the integrator simply updates the alias once and the change
+This also means that if a project uses a different suffix convention for example,
+`_R2` instead of `_R`. The integrator simply updates the alias once and the change
 is applied to all objects in the system.
 
 ### Configuring suffix aliases { #configuring-suffix-aliases }

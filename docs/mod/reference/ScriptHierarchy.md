@@ -20,7 +20,7 @@ the hard direction, `scHoliday` requiring `scCalendar`, appears below.
 
 ## Dependency graph
 
-The graph below shows all scripts grouped by dependency layer — from standalone
+The graph below shows all scripts grouped by dependency layer. From standalone
 scripts at the top to the most complex chains at the bottom. Click a node to
 highlight its direct dependencies and dependents. Use the layer buttons to focus
 on a specific level.

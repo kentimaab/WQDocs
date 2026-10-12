@@ -15,7 +15,7 @@ tags:
 Styrkurva tid-popup är ett tidsbaserat styrkurveverktyg som mappar tid på dygnet
 på X-axeln mot utgångsvärden på Y-axeln med hjälp av ett antal dragbara noder
 förbundna med linjer. Den används för att konfigurera utgångsvärden som varierar
-under dagen — till exempel för att variera ett trycksbörvärde eller övervaka
+under dagen till exempel, för att variera ett trycksbörvärde eller övervaka
 förväntade processvärden under ett dygn. Den visas bara i Tab-menyn när objektet
 har signaler som matchar de konfigurerade suffixaliasen.
 

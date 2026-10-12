@@ -24,8 +24,8 @@ matching the `_TK` suffix.
 The **Save** and **Fetch** buttons allow Time Channel configurations to be stored
 and reused across the project.
 
-**Save** stores the current schedule — including all weekday and special day time
-slots — to the database under the object's tag name. This means each object stores
+**Save** stores the current schedule including all weekday and special day time
+slots to the database under the object's tag name. This means each object stores
 its own configuration independently, making it possible to maintain separate
 schedules for different objects.
 
@@ -56,8 +56,8 @@ day dates.
 
 ## Channel status
 
-The top right panel displays the current status of the Time Channel — whether it is
-active or inactive — alongside a clock showing the current time.
+The top right panel displays the current status of the Time Channel, whether it is
+active or inactive.
 
 ## Weekdays
 

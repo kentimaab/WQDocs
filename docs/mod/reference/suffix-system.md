@@ -30,7 +30,7 @@ Configuration lives in the SuffixConfig database as a JSON structure called `Suf
 
 ## Popups { #popups }
 
-Each entry in `Popups` represents one popup group — a tab or panel that appears when an object is clicked.
+Each entry in `Popups` represents one popup group, a tab or panel that appears when an object is clicked.
 
 ```json
 "Kontroll": {
@@ -110,7 +110,7 @@ For example: `MB` + `.AS01.` + `SYS` + `_` + `PUMP1` → `MB.AS01.SYS_PUMP1`
 1. If `Always visible` is `true`, the tab is included unconditionally.
 2. Otherwise, it checks each suffix in the group. If `DataStore[tagName + suffix.suffix]` exists, the tab is included.
 
-Only tabs that pass this check are rendered. This means the popup automatically adapts to the signals that actually exist for the clicked object — no manual configuration per object is needed.
+Only tabs that pass this check are rendered. This means the popup automatically adapts to the signals that actually exist for the clicked object, no manual configuration per object is needed.
 
 ## Component binding { #component-binding }
 

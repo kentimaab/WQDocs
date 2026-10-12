@@ -29,7 +29,7 @@ Konfigurationen lagras i SuffixConfig-databasen som en JSON-struktur kallad `Suf
 
 ## Popups { #popups }
 
-Varje post i `Popups` representerar en popup-grupp — en flik eller panel som visas när ett objekt klickas.
+Varje post i `Popups` representerar en popup-grupp, en flik eller panel som visas när ett objekt klickas.
 
 ```json
 "Kontroll": {
@@ -109,7 +109,7 @@ Till exempel: `MB` + `.AS01.` + `SYS` + `_` + `PUMP1` → `MB.AS01.SYS_PUMP1`
 1. Om `Always visible` är `true` inkluderas fliken villkorslöst.
 2. Annars kontrolleras varje suffix i gruppen. Om `Datalager[tagName + suffix.suffix]` finns inkluderas fliken.
 
-Endast flikar som klarar denna kontroll renderas. Det innebär att popup-fönstret automatiskt anpassar sig till de signaler som faktiskt finns för det klickade objektet — ingen manuell konfiguration per objekt behövs.
+Endast flikar som klarar denna kontroll renderas. Det innebär att popup-fönstret automatiskt anpassar sig till de signaler som faktiskt finns för det klickade objektet, ingen manuell konfiguration per objekt behövs.
 
 ## Komponentbindning { #component-binding }
 

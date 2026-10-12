@@ -15,7 +15,7 @@ tags:
 Styrkurvans popup är en editor för styrkurvor som mappar indatavärden på
 X-axeln till utdatavärden på Y-axeln med hjälp av ett antal draggbara noder
 förbundna med linjer. Den används för att konfigurera icke-linjära
-styrrelationer — till exempel för att mappa en utetemperatur till en
+styrrelationer till exempel, för att mappa en utetemperatur till en
 värmeventilinställning. Den visas endast i flikmenyn när objektet har
 signaler som matchar de konfigurerade suffixaliaserna.
 

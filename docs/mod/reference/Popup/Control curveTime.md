@@ -15,7 +15,7 @@ last_reviewed: 2026-06-26
 The Control Curve Time popup is a time-based control curve editor that maps time of
 day on the X-axis to output values on the Y-axis using a set of draggable nodes
 connected by lines. It is used to configure output values that vary throughout the
-day — for example varying a pressure setpoint or monitoring expected process values
+day for example, varying a pressure setpoint or monitoring expected process values
 across a 24-hour period. It only appears in the Tab menu when the object has signals
 matching the configured suffix aliases.
 

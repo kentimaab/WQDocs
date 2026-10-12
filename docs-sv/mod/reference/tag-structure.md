@@ -123,8 +123,7 @@ som används för att automatiskt ansluta signaler till rätt visningselement p�
 objekt. Detta eliminerar behovet av att manuellt tilldela signaler till enskilda objekt
 och gör det enkelt att anpassa sig till olika taggnamnskonventioner i hela systemet.
 
-Detta mönster gäller för alla dynamiska objekt i standardobjektbiblioteken —
-deras värdesvisningselement är namngivna för att matcha suffixaliaslistan, vilket möjliggör
+Detta mönster gäller för alla dynamiska objekt i standardobjektbiblioteken. Deras värdesvisningselement är namngivna för att matcha suffixaliaslistan, vilket möjliggör
 automatisk signaltilldelning när ett objekt ansluts till en tagg.
 
 Till exempel har objektet `analogDamper` i objektbiblioteket **Dampers** ett
@@ -132,8 +131,8 @@ visningselement som heter `analogOutputValue`. Om suffixet `_R` mappas till alia
 `analogOutputValue` kommer WideQuick automatiskt att tilldela alla signaler som slutar på `_R` till
 det visningselementet när objektet ansluts till en tagg.
 
-Det innebär också att om ett projekt använder en annan suffixkonvention — till exempel
-`_R2` i stället för `_R` — behöver integratören bara uppdatera aliaset en gång och ändringen
+Det innebär också att om ett projekt använder en annan suffixkonvention till exempel,
+`_R2` i stället för `_R`. Integratören behöver bara uppdatera aliaset en gång och ändringen
 tillämpas på alla objekt i systemet.
 
 ### Konfigurera suffixalias { #configuring-suffix-aliases }
