@@ -1,11 +1,11 @@
 ---
 title: Logbook - Configuring
-description: Configure what entries are filed against, how the topic trees are built, contexts and access patterns.
+description: Configure what entries are filed against, how the topic trees are built, contexts, access patterns and the logbooks of remote systems.
 product: mod
 page_type: howto
 doc_id: DOC-M15
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -97,6 +97,8 @@ When filtering the logbook, selecting a context shows only entries assigned to t
 
 The full logbook under **Documents & Logbook → Logbook** shows all entries. The topic tree on the left narrows down to a specific area of the system, in whichever arrangement is selected. This is the primary view for operators who need to review or add notes across the whole project.
 
+It is also the only logbook that shows connected remote systems, each under its own top node. See [Logbooks of Remote Systems](#logbooks-of-remote-systems).
+
 ### Object Popup { #object-popup }
 
 Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md) tab in its popup. Opening this tab selects that object in the tree and lists its entries. New entries created from here are filed against the object automatically.
@@ -112,6 +114,36 @@ The rest of the tree stays reachable, so a note on a neighbouring object or on t
 The **SpeedDial** menu on process views includes a button that opens the logbook with the current view selected in the tree. Its entries are listed straight away, together with those of the objects drawn in the view. New entries created from here are filed against the view.
 
 As in the object popup, the rest of the tree stays reachable from a view-scoped logbook, so a note filed elsewhere can be read without going back to the main view.
+
+## Logbooks of Remote Systems { #logbooks-of-remote-systems }
+
+The global logbook shows the logbook of every connected remote system next to this system's own. Each remote system appears as a top node in the topic tree, named after the remote system as it is configured under **Remote Systems**. See [Remote Systems](../../guides/remote-systems.md#configuring-a-remote-system).
+
+Under that node is the remote system's own tree, arranged in the same mode as the local one and built from the remote system's own views and objects. Selecting the node itself lists every entry in that system.
+
+The entries are not copied. They stay in the remote system's database and are read from there every time, so the node always shows the remote system's current logbook. In the **Placed on** column, an entry from a remote system starts with the system's name, for example `Plant2: System/MySystem/Station1`.
+
+### Writing to a remote system's logbook { #writing-to-a-remote-systems-logbook }
+
+A note created under a remote system's node is written to that system's logbook. It is filed against the view, object or topic it was created on, exactly as if it had been written on the remote system, and the remote system's operators see it in their logbook straight away. Editing, archiving and restoring an entry act on the system the entry belongs to.
+
+* **Context** — once a node under a remote system is selected, the context list and the **Change logbook context** popup work on that system's contexts.
+* **User** — the entry records the user logged in where the note was written. It does not record which system that was.
+* **Privileges** — the logbook privileges of that user, on the system where the logbook is open, decide what can be done. The remote system's own privilege settings are not consulted.
+
+### Live updates { #live-updates }
+
+Every logbook view refreshes its tree and its entry list by itself when an entry changes. Each write increments the `LogBookSync` Data Store point of the system it was written to, and every logbook view listens to the point of its own system and of each remote system in its tree. An entry added on the remote system, on a web or remote client, or from another system therefore appears without reopening the view.
+
+### Requirements and limits { #remote-requirements-and-limits }
+
+* The remote system is added under **Remote Systems** with **Auto connect on startup** enabled. Without it, the connection is only open while something else uses it, and the logbook does not keep it open, so the node and its live updates come and go.
+* The remote system runs this version of the framework or later. A system without the logbook tables gets no node. A system without the `LogBookSync` point is shown, but does not update live.
+* A remote system that is not connected has no node. It appears the next time the tree is rebuilt after the connection is up, for example when the logbook is reopened.
+* The context filter above the tree lists this system's contexts. Filtering a remote system's entries works for context names both systems use.
+* A note written from here on a remote view that has never been opened on the remote system, and holds no notes yet, is first filed as a topic of its own. The remote system files it against the view at its next start. A note on an object also needs the object's view to have been opened there.
+* A top-level topic of this system with the same name as a remote system is hidden behind that system's node. Give such a topic another name.
+* The object popup and view-scoped logbooks show this system's logbook only.
 
 ## Next Steps { #next-steps }
 

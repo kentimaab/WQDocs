@@ -3,7 +3,7 @@ title: Loggbok — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -95,6 +95,8 @@ Vid filtrering i loggboken visas, när en kontext väljs, enbart poster tilldela
 
 Den fullständiga loggboken under **Dokument & Loggbok → Loggbok** visar alla poster. Ämnesträdet till vänster begränsar visningen till ett specifikt område i systemet, i den ordning som är vald. Detta är den primära vyn för operatörer som behöver granska eller lägga till anteckningar för hela projektet.
 
+Det är också den enda loggboken som visar anslutna fjärrsystem, vart och ett under en egen toppnod. Se [Fjärrsystemens loggböcker](#logbooks-of-remote-systems).
+
 ### Objektpopup { #object-popup }
 
 Varje objekt i projektet har en flik [**Loggbok**](../../reference/Popup/Logbook.md) i sitt popup-fönster. När fliken öppnas markeras objektet i trädet och dess poster listas. Nya poster som skapas härifrån placeras automatiskt på objektet.
@@ -110,6 +112,36 @@ Resten av trädet är fortfarande nåbart, så en anteckning på ett angränsand
 Menyn **SpeedDial** i processvyer innehåller en knapp som öppnar loggboken med den aktuella vyn markerad i trädet. Vyns poster listas direkt, tillsammans med posterna för de objekt som är ritade i den. Nya poster som skapas härifrån placeras på vyn.
 
 Precis som i objektpopupen är resten av trädet nåbart från en vybegränsad loggbok, så en anteckning som är placerad någon annanstans kan läsas utan att gå tillbaka till huvudvyn.
+
+## Fjärrsystemens loggböcker { #logbooks-of-remote-systems }
+
+Den globala loggboken visar loggboken för varje anslutet fjärrsystem bredvid systemets egen. Varje fjärrsystem visas som en toppnod i ämnesträdet, namngiven efter fjärrsystemet så som det är konfigurerat under **Remote Systems**. Se [Fjärrsystem](../../guides/remote-systems.md#configuring-a-remote-system).
+
+Under noden finns fjärrsystemets eget träd, ordnat i samma läge som det lokala och byggt från fjärrsystemets egna vyer och objekt. Väljs själva noden listas alla poster i det systemet.
+
+Posterna kopieras inte. De ligger kvar i fjärrsystemets databas och läses därifrån varje gång, så noden visar alltid fjärrsystemets aktuella loggbok. I kolumnen **Placerad på** börjar en post från ett fjärrsystem med systemets namn, till exempel `Anläggning2: System/MySystem/Station1`.
+
+### Skriva i ett fjärrsystems loggbok { #writing-to-a-remote-systems-logbook }
+
+En anteckning som skapas under ett fjärrsystems nod skrivs till det systemets loggbok. Den placeras på den vy, det objekt eller det ämne den skapades på, precis som om den hade skrivits i fjärrsystemet, och fjärrsystemets operatörer ser den direkt i sin loggbok. Redigering, arkivering och återställning av en post sker i det system posten tillhör.
+
+* **Kontext** — när en nod under ett fjärrsystem har valts arbetar kontextlistan och popup-fönstret **Ändra loggbokskontext** med det systemets kontexter.
+* **Användare** — posten registrerar den användare som är inloggad där anteckningen skrevs. Den registrerar inte vilket system det var.
+* **Behörigheter** — den användarens loggboksbehörigheter, i det system där loggboken är öppen, avgör vad som kan göras. Fjärrsystemets egna behörighetsinställningar används inte.
+
+### Uppdatering i realtid { #live-updates }
+
+Varje loggboksvy uppdaterar sitt träd och sin postlista av sig själv när en post ändras. Varje skrivning räknar upp punkten `LogBookSync` i Datalagret i det system den skrevs till, och varje loggboksvy lyssnar på punkten i sitt eget system och i varje fjärrsystem i sitt träd. En post som läggs till i fjärrsystemet, i en webb- eller fjärrklient eller från ett annat system visas därför utan att vyn behöver öppnas igen.
+
+### Krav och begränsningar { #remote-requirements-and-limits }
+
+* Fjärrsystemet är tillagt under **Remote Systems** med **Auto connect on startup** aktiverat. Utan det är anslutningen bara öppen medan något annat använder den, och loggboken håller den inte öppen, så noden och dess uppdateringar kommer och går.
+* Fjärrsystemet kör den här versionen av ramverket eller senare. Ett system utan loggbokens tabeller får ingen nod. Ett system utan punkten `LogBookSync` visas, men uppdateras inte i realtid.
+* Ett fjärrsystem som inte är anslutet har ingen nod. Den visas nästa gång trädet byggs om efter att anslutningen är uppe, till exempel när loggboken öppnas igen.
+* Kontextfiltret ovanför trädet listar det här systemets kontexter. Filtrering av ett fjärrsystems poster fungerar för kontextnamn som finns i båda systemen.
+* En anteckning som skrivs härifrån på en vy i fjärrsystemet som aldrig har öppnats där, och som ännu saknar anteckningar, placeras först som ett eget ämne. Fjärrsystemet placerar den på vyn vid sin nästa start. En anteckning på ett objekt kräver dessutom att objektets vy har öppnats där.
+* Ett ämne på översta nivån i det här systemet med samma namn som ett fjärrsystem döljs bakom systemets nod. Ge ett sådant ämne ett annat namn.
+* Objektpopupen och de vybegränsade loggböckerna visar bara det här systemets loggbok.
 
 ## Nästa steg { #next-steps }
 

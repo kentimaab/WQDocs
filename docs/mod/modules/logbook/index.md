@@ -7,7 +7,7 @@ doc_id: DOC-M15
 size: S
 priority: p1
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -20,6 +20,8 @@ The Logbook module provides a way to record free-text notes tied to specific par
 Entries are reached through a single topic tree that can be keyed two ways. **Workview** mode arranges notes by the folder structure of the process views, and **signal** mode arranges them by tag path. A note is reachable in both, because a note on an object also belongs to every view that object is drawn in, and a note on a view also belongs to the objects drawn in it.
 
 The logbook is available in three places: globally under **Documents & Logbook → Logbook**, in the [**Logbook**](../../reference/Popup/Logbook.md) tab of any object popup, and through the **SpeedDial** menu on process views.
+
+The global logbook also shows the logbooks of connected remote systems, each under its own top node, and every logbook view refreshes by itself when an entry changes.
 
 ## Contents { #contents }
 
@@ -36,6 +38,7 @@ The logbook is available in three places: globally under **Documents & Logbook �
 * [**How the Two Trees Are Built**](configuring.md#how-the-two-trees-are-built) — Workview mode, signal mode and how a note appears in both.
 * [**Contexts**](configuring.md#contexts) — Managing named context groups.
 * [**Access Patterns**](configuring.md#access-patterns) — Global, object popup and view-scoped usage.
+* [**Logbooks of Remote Systems**](configuring.md#logbooks-of-remote-systems) — Remote systems as top nodes, writing to them and live updates.
 
 ---
 
@@ -43,7 +46,7 @@ The logbook is available in three places: globally under **Documents & Logbook �
 * [**Privileges**](extending.md#privileges) — Required privileges for adding, editing and archiving entries.
 * [**Topic Storage**](extending.md#topic-storage) — The `topic`, `topic_kind` and `topic_ref` columns.
 * [**Archiving**](extending.md#archiving) — The `archived` column, the archive functions and permanent deletion.
-* [**Script Reference**](extending.md#script-reference) — The `scLogBook` functions behind the tree and the scoped views.
+* [**Script Reference**](extending.md#script-reference) — The `scLogBook` functions behind the tree, the scoped views and the remote systems.
 
 ---
 

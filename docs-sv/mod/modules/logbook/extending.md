@@ -3,7 +3,7 @@ title: Loggbok — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -26,6 +26,8 @@ Dessa behörigheter styr åtkomsten till loggboksoperationer:
 | `Logbook_View` | Krävs för att se poster |
 
 Användare utan `Logbook_Add` ser knappområdet **Lägg till** inaktiverat och nedtonat, med ett rött överlager som visar ett meddelande om vilken behörighet som krävs. Egenskapen `Enabled` på knappen är bunden till `scUsers.hasPriv("Logbook_Add")`. Samma mönster gäller för övriga loggboksbehörigheter.
+
+Kontrollen görs alltid i det system där loggboken är öppen. Skrivning i ett fjärrsystems loggbok styrs därför av den lokala användarens behörigheter, inte av fjärrsystemets. Se [Skriva i ett fjärrsystems loggbok](configuring.md#writing-to-a-remote-systems-logbook).
 
 !!! warning "Alla loggboksbehörigheter är nekade som standard"
     Samtliga loggboksbehörigheter är definierade med `Default="denied"` i `Privileges.kdat`. Efter en uppgradering måste `Logbook_Archive` tilldelas en roll innan någon kan arkivera en post. Se [Användare och behörigheter](../Core/users-privileges.md).
@@ -86,7 +88,7 @@ En tidigare kolumn `deleteMark` implementerade en separat livscykel för mjukrad
 
 ## Skriptreferens { #script-reference }
 
-Skriptet `scLogBook` löser placeringar och bygger trädet. En vy håller en hanterarinstans, skapad med `new logBookHandler(topic, view)`, som äger postlistan och trädet för den vyn.
+Skriptet `scLogBook` löser placeringar och bygger trädet. En vy håller en hanterarinstans, skapad med `new scLogBook.logBookHandler(topic, view)`, som äger postlistan och trädet för den vyn.
 
 ### Trädets ordning { #tree-keying }
 
@@ -124,5 +126,27 @@ Pop-outen löser sökvägen tillbaka till sin koppling med `resolveTopic()`, reg
 
 !!! note "Överlämningen rensas när den konsumeras"
     Huvudvyn för loggboken rensar `app.logbookSelectedTopic` när den läser värdet. Ett kvarlämnat värde skulle annars tillämpas nästa gång loggboken öppnas från menyn, och filtrera listan till ett ämne operatören inte bett om.
+
+### System { #systems }
+
+Trädet och varje fråga arbetar mot ett system i taget: det här systemet, eller ett fjärrsystem som visas under en egen toppnod. Se [Fjärrsystemens loggböcker](configuring.md#logbooks-of-remote-systems).
+
+| Medlem | Syfte |
+|---|---|
+| `scLogBook.system` | Det system modulens funktioner arbetar mot. `""` är det här systemet, annars namnet på ett fjärrsystem. |
+| `scLogBook.db()` | Anslutningen `Config` för det systemet. Ett fjärrsystems anslutning nås via dess fjärrsystemanslutning. |
+| `scLogBook.useSystem(name)` | Gör ett system till det aktiva. Upplösningens cacheminnen beskriver ett systems vyer och objekt, så den byter också in det systemets cacheminnen. |
+| `scLogBook.remoteSystemNames()` | De anslutna fjärrsystem vars loggbok går att läsa. Ett system som är frånkopplat eller saknar anslutningen `Config` utelämnas. |
+| `scLogBook.splitSystemPath(path)` | Delar en sökväg i trädet i dess system och sökvägen inom systemets loggbok. `Anläggning2/MB/AS01` ger `{system: "Anläggning2", topic: "MB/AS01"}`. |
+| `scLogBook.bumpVersion(name)` | Räknar upp ett systems punkt `LogBookSync` efter en skrivning. Hoppas över för ett system som saknar punkten. |
+| `handler.setTopic(path)` | Väljer en sökväg i trädet och gör dess system till det aktiva, så att dialoger som öppnas därefter arbetar mot rätt loggbok. |
+| `handler.system` | Systemet för den valda sökvägen. |
+| `handler.bookSystem` | Det system postlistan lästes in från. Redigering och arkivering sker i det systemet, oavsett vad som klickats på sedan dess. |
+| `handler.watchVersions()` | Lyssnar på `LogBookSync` i det här systemet och i varje fjärrsystem i trädet, och läser in trädet och listan på nytt vid ändring. Anropas av `setTreeView()`. |
+
+En hanterare sätter det aktiva systemet före varje databasåtkomst, och en ny hanterare börjar i det här systemet. Ett fjärrsystems vyindex kan inte byggas genom att söka igenom dess vymappar, så det läses från systemets objektindex och från de vyer dess anteckningar är placerade på.
+
+!!! note "Välj noder i trädet med `setTopic()`"
+    En egen loggboksvy bör välja en nod med `handler.setTopic(path)` i stället för att tilldela `handler.topic`. Tilldelning av egenskapen läser fortfarande in rätt poster, men systemet följer inte med valet förrän vid nästa inläsning, så en skapa- eller kontextdialog som öppnas däremellan skulle arbeta mot det föregående systemet.
 
 <!-- --8<-- [end:body] -->

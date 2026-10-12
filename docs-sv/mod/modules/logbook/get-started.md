@@ -3,7 +3,7 @@ title: Loggbok — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -29,6 +29,10 @@ Loggboken finns i huvudmenyn under **Dokument & Loggbok → Loggbok**.
 Loggboksvyn har två paneler. Den vänstra panelen visar ämnesträdet, en hierarkisk lista över alla ämnen som har minst en post. Välj en nod och klicka på **Visa inlägg** för att läsa in alla poster under det ämnet i postlistan till höger. Väljs **Alla ämnen** längst upp i trädet visas samtliga poster.
 
 En vald nod omfattar allt som är placerat under den. Väljs en vynod listas anteckningarna på vyn tillsammans med anteckningarna på de objekt som är ritade i den, vilket gör att en hel anläggningsdel kan granskas i ett steg.
+
+När fjärrsystem är anslutna visas vart och ett som en toppnod i trädet, namngiven efter fjärrsystemet. Under den finns systemets egen loggbok, ordnad på samma sätt som det lokala trädet, och där kan anteckningar läsas och skrivas. Se [Fjärrsystemens loggböcker](configuring.md#logbooks-of-remote-systems).
+
+Trädet och postlistan uppdateras av sig själva när en post läggs till, redigeras eller arkiveras var som helst: här, i en webb- eller fjärrklient eller i ett anslutet system.
 
 Postlistan visar följande kolumner: **Rubrik**, **Placerad på**, **Meddelande**, **Kontext**, **Användare**, **Skapad**, **Senast ändrad** och **Arkiverad**.
 
@@ -92,6 +96,6 @@ Klicka på **Tillämpa** för att använda filtren, **Rensa filter** för att å
 <!-- --8<-- [start:body-4] -->
 ## Nästa steg { #next-steps }
 
-* [Konfigurering](configuring.md) — vad poster placeras på, hur träden byggs, kontexter och åtkomstmönster
+* [Konfigurering](configuring.md) — vad poster placeras på, hur träden byggs, kontexter, åtkomstmönster och fjärrsystemens loggböcker
 * [Utöka](extending.md) — behörigheter, lagring av ämnet och arkivering
 <!-- --8<-- [end:body-4] -->

@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M15
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 scripts:
   - scLogBook
 tags: 
@@ -32,6 +32,10 @@ The Logbook is available in the main menu under **Documents & Logbook → Logboo
 The logbook view has two panels. The left panel shows the topic tree, a hierarchical list of every topic that has at least one entry. Selecting a node and clicking **Show entries** loads all entries under that topic into the entry list on the right. Selecting **All topics** at the top of the tree shows all entries.
 
 Selecting a node includes everything filed below it. Selecting a view node lists the notes on that view together with the notes on the objects drawn in it, so a whole plant section can be reviewed in one step.
+
+When remote systems are connected, each one appears as a top node in the tree, named after the remote system. Under it is that system's own logbook, arranged the same way as the local tree, and notes can be read and written there. See [Logbooks of Remote Systems](configuring.md#logbooks-of-remote-systems).
+
+The tree and the entry list refresh by themselves when an entry is added, edited or archived anywhere: here, on a web or remote client, or on a connected system.
 
 The entry list shows the following columns: **Title**, **Placed on**, **Message**, **Context**, **User**, **Created**, **Last modified** and **Archived**.
 
@@ -95,6 +99,6 @@ Click **Apply** to apply the filters, **Clear filter** to reset, or **Cancel** t
 <!-- --8<-- [start:body-4] -->
 ## Next Steps { #next-steps }
 
-* [Configuring](configuring.md) — what entries are filed against, how the trees are built, contexts and access patterns
+* [Configuring](configuring.md) — what entries are filed against, how the trees are built, contexts, access patterns and the logbooks of remote systems
 * [Extending](extending.md) — privileges, topic storage and archiving
 <!-- --8<-- [end:body-4] -->

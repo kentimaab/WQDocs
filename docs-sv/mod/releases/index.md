@@ -3,7 +3,7 @@ title: Versioner — Modular Framework
 product: mod
 page_type: release
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -33,6 +33,7 @@ Den andra huvudversionen av WideQuick Modular Framework bygger vidare på grunde
 | **Konfigurerbart körningsbeteende**  | Uppdateringsfrekvensen för värdevisning är nu justerbar under körning, och valt tema (ljust/mörkt) sparas och återställs vid nästa start.                                                                                                                                                                                                      |
 | **Import av äldre vyer**            | Vyer som byggts i WideQuick BMS 8.0 eller tidigare kan lyftas direkt in i Modular Framework, där deras symboler omedelbart målas om till de nya, omdesignade objekten och behåller samma kopplingar. |
 | **Rapportenheter och prefix**       | En rapport bär en visningsenhet som väljs i två steg. Listan **Enhet** byggs från enheterna hos signalerna på rapportens logger, reducerade till sin SI-bas, så att endast dimensioner som faktiskt finns i datat erbjuds, och att välja en filtrerar signalträdet till signaler av den dimensionen. En separat lista **Prefix** anger sedan vilken skala värdena ska visas i. Varje vald signal får sin egen faktor, beräknad utifrån signalens eget prefix mot det valda målet, så att en signal loggad i `Wh` och en annan redan i `kWh` rapporteras i samma skala. Värdena hämtas i den enhet de loggats i, och faktorerna följer med till mallen tillsammans med data. Prefix på `m³` gäller metern, så `dm³` är en tusendel av `m³` snarare än en tiondel. `ReportQueue`, `reportStats` och `reportSchedules` får kolumnerna `unit` och `factorArray`, som läggs till vid första start så att befintliga databaser migrerar sig själva. |
+| **Loggböcker över flera system**    | Den globala loggboken visar även loggboken för varje anslutet fjärrsystem, var och en som en egen toppnod i ämnesträdet, namngiven efter fjärrsystemet och ordnad på samma sätt som det lokala trädet. Där kan anteckningar läsas, läggas till, redigeras och arkiveras. De lagras i fjärrsystemets egen loggbok, så fjärrsystemets operatörer hittar dem också. Varje loggboksvy uppdateras nu också av sig själv när en post ändras, oavsett om den skrevs lokalt, i en webb- eller fjärrklient eller från ett annat system. Den nya punkten `LogBookSync` i Datalagret signalerar ändringen. Se [Fjärrsystemens loggböcker](../modules/logbook/configuring.md#logbooks-of-remote-systems). |
 
 ### Nya och uppdaterade moduler
 

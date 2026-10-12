@@ -1,11 +1,11 @@
 ---
 title: Logbook - Extending
-description: Privileges, topic storage and archiving in the Logbook module.
+description: Privileges, topic storage, archiving and remote systems in the Logbook module.
 product: mod
 page_type: extending
 doc_id: DOC-M15
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -27,6 +27,8 @@ These privileges control access to logbook operations:
 | `Logbook_View` | Required to view entries |
 
 Users without `Logbook_Add` will see the **Add** button area disabled and grayed out, with a red box overlay displaying a message indicating the required privilege. The `Enabled` property on the button is bound to `scUsers.hasPriv("Logbook_Add")`. The same pattern applies to the other logbook privileges.
+
+The check always runs on the system where the logbook is open. Writing to a remote system's logbook is therefore governed by the local user's privileges, not by the remote system's. See [Writing to a remote system's logbook](configuring.md#writing-to-a-remote-systems-logbook).
 
 !!! warning "Every logbook privilege defaults to denied"
     All logbook privileges are defined with `Default="denied"` in `Privileges.kdat`. After an upgrade, `Logbook_Archive` must be granted to a role before anyone can archive an entry. See [Users and Privileges](../Core/users-privileges.md).
@@ -87,7 +89,7 @@ An earlier `deleteMark` column implemented a separate soft-delete lifecycle. It 
 
 ## Script Reference { #script-reference }
 
-The `scLogBook` script resolves placements and builds the tree. A view holds a handler instance, created with `new logBookHandler(topic, view)`, which owns the entry list and the tree for that view.
+The `scLogBook` script resolves placements and builds the tree. A view holds a handler instance, created with `new scLogBook.logBookHandler(topic, view)`, which owns the entry list and the tree for that view.
 
 ### Tree keying { #tree-keying }
 
@@ -125,5 +127,27 @@ The pop-out resolves that path back to its anchor with `resolveTopic()`, records
 
 !!! note "The hand-off is cleared when it is consumed"
     The main logbook view clears `app.logbookSelectedTopic` when it reads it. A value left behind would otherwise still be applied the next time the logbook is opened from the menu, filtering the list to a topic the operator did not ask for.
+
+### Systems { #systems }
+
+The tree and every query work against one system at a time: this one, or a remote system shown under its own top node. See [Logbooks of Remote Systems](configuring.md#logbooks-of-remote-systems).
+
+| Member | Purpose |
+|---|---|
+| `scLogBook.system` | The system the module functions work against. `""` is this system, otherwise the name of a remote system. |
+| `scLogBook.db()` | The `Config` connection of that system. A remote system's connection is reached through its remote system connection. |
+| `scLogBook.useSystem(name)` | Makes a system the active one. The resolver caches describe one system's views and objects, so it also swaps in that system's caches. |
+| `scLogBook.remoteSystemNames()` | The connected remote systems whose logbook can be read. A system that is offline or has no `Config` connection is left out. |
+| `scLogBook.splitSystemPath(path)` | Splits a tree path into its system and the path within that system's logbook. `Plant2/MB/AS01` gives `{system: "Plant2", topic: "MB/AS01"}`. |
+| `scLogBook.bumpVersion(name)` | Increments a system's `LogBookSync` point after a write. Skipped for a system that lacks the point. |
+| `handler.setTopic(path)` | Selects a tree path and makes its system the active one, so dialogs opened next work against the right logbook. |
+| `handler.system` | The system of the selected path. |
+| `handler.bookSystem` | The system the entry list was loaded from. Editing and archiving act on this system, whatever has been clicked since. |
+| `handler.watchVersions()` | Listens to `LogBookSync` on this system and on every remote system in the tree, and reloads the tree and the list on change. Called by `setTreeView()`. |
+
+A handler sets the active system before every database access, and a new handler starts on this system. A remote system's view index cannot be built by scanning its view folders, so it is read from that system's object index and from the views its notes are filed on.
+
+!!! note "Select tree nodes with `setTopic()`"
+    A custom logbook view should select a node with `handler.setTopic(path)` rather than assigning `handler.topic`. Assigning the property still loads the right entries, but the system does not follow the selection until the next load, so a create or context dialog opened in between would work against the previous system.
 
 <!-- --8<-- [end:body] -->

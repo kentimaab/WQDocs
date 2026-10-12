@@ -3,7 +3,7 @@ title: Loggbok — Felsökning
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -30,6 +30,11 @@ tags:
 | Ett ämne har försvunnit ur ämnesträdet | Trädet byggs från poster som inte är arkiverade. Ett ämne vars poster alla är arkiverade listas inte förrän arkiverade poster inkluderas. |
 | En användare saknas i filtrets användarlista | Användarlistan byggs endast från poster som inte är arkiverade, så en användare vars poster alla är arkiverade visas inte. |
 | Arkiverade poster kom tillbaka efter en uppgradering | Poster som tidigare mjukraderats genom den utgångna kolumnen `deleteMark` tas bort vid start, de arkiveras inte. Det som finns kvar var arkiverat snarare än mjukraderat. |
+| Ett anslutet fjärrsystem har ingen nod i trädet | Noden visas bara medan fjärrsystemet är anslutet och dess loggbok går att läsa. Aktivera **Auto connect on startup** för fjärrsystemet, kontrollera att det kör en version av ramverket med loggboken och öppna sedan loggboken igen. Se [Krav och begränsningar](configuring.md#remote-requirements-and-limits). |
+| Anteckningar som skrivs i ett fjärrsystem visas först när loggboken öppnas igen | Fjärrsystemet saknar punkten `LogBookSync`, som äldre versioner av ramverket inte har, eller så hålls dess anslutning inte öppen. Aktivera **Auto connect on startup**, eller uppgradera fjärrsystemet. |
+| Ett ämne på översta nivån försvann när ett fjärrsystem lades till | Ämnet har samma namn som fjärrsystemet, och systemets nod visas i dess ställe. Byt namn på ämnet eller på fjärrsystemet. |
+| En anteckning skriven för ett fjärrsystem ligger på den inskrivna sökvägen i stället för på vyn | Vyn är ännu inte känd i fjärrsystemets objektindex. Fjärrsystemet placerar anteckningen på vyn vid sin nästa start, och på ett objekt när objektets vy har öppnats där. |
+| Kontextfiltret erbjuder inte ett fjärrsystems kontexter | Filtret listar det här systemets kontexter. Filtrering av ett fjärrsystems poster fungerar för kontextnamn som finns i båda systemen. |
 
 ## Kända fel { #known-bugs }
 

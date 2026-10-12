@@ -5,7 +5,7 @@ product: mod
 page_type: troubleshooting
 doc_id: DOC-M15
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -31,6 +31,11 @@ tags:
 | A topic has vanished from the topic tree | The tree is built from non-archived entries. A topic whose entries are all archived is not listed until archived entries are included. |
 | A user is missing from the filter's user list | The user list is built from non-archived entries only, so a user whose entries are all archived does not appear. |
 | Archived entries came back after an upgrade | Entries previously soft-deleted through the retired `deleteMark` column are removed on start, not archived. Anything still present was archived rather than soft-deleted. |
+| A connected remote system has no node in the tree | The node is shown only while the remote system is connected and its logbook can be read. Enable **Auto connect on startup** for the remote system, check that it runs a framework version with the logbook, then reopen the logbook. See [Requirements and limits](configuring.md#remote-requirements-and-limits). |
+| Notes written on a remote system appear only after reopening the logbook | The remote system lacks the `LogBookSync` point, which older framework versions do not have, or its connection is not kept open. Enable **Auto connect on startup**, or upgrade the remote system. |
+| A top-level topic disappeared after a remote system was added | The topic has the same name as the remote system, and the system's node is shown in its place. Rename the topic or the remote system. |
+| A note written for a remote system sits at its typed path instead of on the view | The view is not yet known to the remote system's object index. The remote system files the note against the view at its next start, and against an object once that object's view has been opened there. |
+| The context filter does not offer a remote system's contexts | The filter lists this system's contexts. Filtering a remote system's entries works for context names both systems use. |
 
 ## Known Bugs { #known-bugs }
 

@@ -4,7 +4,7 @@ description: Release notes for the WideQuick Modular Framework.
 product: mod
 page_type: release
 status: draft
-last_reviewed: 2026-09-15
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -34,6 +34,7 @@ The second major release of the WideQuick Modular Framework builds on the 2024.1
 | **Configurable runtime behaviour** | Value-display refresh rate is now adjustable at runtime, and the chosen theme (light/dark) is remembered and restored on the next startup.                                                                                                                                                                                                |
 | **Legacy view import**             | Views built in WideQuick BMS 8.0 or earlier can be lifted directly into the Modular Framework, where their symbols instantly repaint to the new, redesigned objects while keeping the same connections. |
 | **Report units and prefixes**      | A report carries a display unit, chosen in two steps. The **Unit** list is built from the units of the signals on the report's logger, reduced to their SI base, so only dimensions the data actually contains are offered, and choosing one filters the signal tree to signals of that dimension. A separate **Prefix** list then sets the scale to present at. Every selected signal gets its own factor, computed from that signal's own prefix against the chosen target, so one signal logged in `Wh` and another already in `kWh` report on the same scale. Values are queried in the unit they were logged in, and the factors travel to the template alongside the data. Prefixes on `m³` apply to the metre, so `dm³` is a thousandth of `m³` rather than a tenth. `ReportQueue`, `reportStats` and `reportSchedules` gain `unit` and `factorArray` columns, added on first start so existing databases migrate themselves. |
+| **Logbooks across systems**      | The global logbook also shows the logbook of every connected remote system, each as its own top node in the topic tree, named after the remote system and arranged the same way as the local tree. Notes can be read, added, edited and archived there. They are stored in the remote system's own logbook, so its operators find them too. Every logbook view now also refreshes by itself when an entry changes, whether it was written locally, on a web or remote client, or from another system. The new `LogBookSync` Data Store point signals the change. See [Logbooks of Remote Systems](../modules/logbook/configuring.md#logbooks-of-remote-systems). |
 
 ### New & updated modules
 
