@@ -72,7 +72,7 @@ klicka på **Bevilja** eller **Neka**
 Ett virtuellt privilegium gör det möjligt för ett enskilt privilegium att automatiskt
 tilldela ett eller flera ytterligare privilegier. När en användare tilldelas ett
 privilegium som innehåller virtuella privilegier får de även tillgång till alla
-privilegier som ingår i det — utan att behöva tilldela dem individuellt.
+privilegier som ingår i det, utan att behöva tilldela dem individuellt.
 
 **Exempel:** Om privilegiet `EditUsers` har `EditName` och `EditPassword` som
 virtuella privilegier kommer alla användare som tilldelats `EditUsers` automatiskt

@@ -3,7 +3,7 @@ title: Teman — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -33,7 +33,7 @@ För att se vilken färgroll ett specifikt objekt använder, kontrollera dess `o
 
 ## Anpassade färger { #custom-colors }
 
-Fliken **Custom colors** innehåller projektspecifika färger tillsammans med standardrollerna — till exempel `Symbol_Alarm`, `Symbol_Warning` och `Alarm_Severity_0` till `Alarm_Severity_5`. Dessa följer samma namnkonvention som standardroller och används på samma sätt i skript:
+Fliken **Custom colors** innehåller projektspecifika färger tillsammans med standardrollerna, till exempel `Symbol_Alarm`, `Symbol_Warning` och `Alarm_Severity_0` till `Alarm_Severity_5`. Dessa följer samma namnkonvention som standardroller och används på samma sätt i skript:
 
 ```javascript title="Using a custom color"
 System.themes.color("Symbol_Alarm")
@@ -43,7 +43,7 @@ För att lägga till en ny anpassad färg, klicka på **+** längst ned på flik
 
 ## Modulspecifika färgpaletter { #module-specific-color-palettes }
 
-Utöver de M3-roller som utgör huvudtemat innehåller WideQuick MOD ett antal separata färgpaletter som används av specifika moduler. Dessa paletter visas under temavarianten i **WideQuick® Designer** och kan redigeras på samma sätt som övriga temafärger, men de påverkas inte av ljust/mörkt-växlingen — de gäller oavsett vilket tema som är aktivt.
+Utöver de M3-roller som utgör huvudtemat innehåller WideQuick MOD ett antal separata färgpaletter som används av specifika moduler. Dessa paletter visas under temavarianten i **WideQuick® Designer** och kan redigeras på samma sätt som övriga temafärger, men de påverkas inte av ljust/mörkt-växlingen. De gäller oavsett vilket tema som är aktivt.
 
 | Palett | Modul | Vad den styr |
 |---|---|---|
@@ -55,7 +55,7 @@ Utöver de M3-roller som utgör huvudtemat innehåller WideQuick MOD ett antal s
 | ValueDisplay\_dark | Värdevisning | BV-, MV- och mätarspårsfärger i mörkt tema |
 | ValueDisplay\_light | Värdevisning | BV-, MV- och mätarspårsfärger i ljust tema |
 
-`ValueDisplay_dark` och `ValueDisplay_light` är undantaget — de växlas automatiskt av komponenten baserat på om det aktiva temats namn innehåller `_Dark`. Övriga paletter är statiska oavsett aktivt tema.
+`ValueDisplay_dark` och `ValueDisplay_light` är undantaget: komponenten väljer automatiskt rätt variant beroende på om det aktiva temats namn innehåller `_Dark`. Övriga paletter är statiska oavsett aktivt tema.
 
 För att redigera en palett, öppna grenen **Themes** i projektträdet, välj önskad palett och dubbelklicka på en färgkod.
 

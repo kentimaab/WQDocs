@@ -99,7 +99,7 @@ vyer. Implementeringsprocessen består av två steg:
 2. Koppla SVG:n till en **Arbetsvy**-identifierare
 
 ### Importera och konfigurera SVG:n { #importing-and-configuring-the-svg }
-Importera först din SVG-ikon. Det rekommenderas att ha två versioner — en för mörkt läge
+Importera först din SVG-ikon. Det rekommenderas att ha två versioner, en för mörkt läge
 och en för ljust läge. Detta säkerställer att ikonen förblir synlig oavsett användarens
 temainställning. Namnge och placera filerna enligt följande:
 

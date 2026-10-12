@@ -62,7 +62,7 @@ inaktiverat visas inte dess undermenyer oavsett inställningen för **Visa låst
 
 * **Vänster** — Båda aktiverade.
 * **Mitten** — Visa låsta menyer aktiverat, Visa låsta undermenyer inaktiverat.
-* **Höger** — Visa låsta menyer inaktiverat — undermenyer visas inte oavsett inställning.
+* **Höger** — Visa låsta menyer inaktiverat, undermenyer visas inte oavsett inställning.
 
 ## Nästa steg { #next-steps }
 

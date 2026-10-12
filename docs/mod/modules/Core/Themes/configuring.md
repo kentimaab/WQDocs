@@ -4,7 +4,7 @@ description: Change individual theme colors and assign color roles to objects.
 product: mod
 page_type: howto
 status: draft
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -33,7 +33,7 @@ To see which color role a specific object uses, check its `onLoad` script or dyn
 
 ## Custom colors { #custom-colors }
 
-The **Custom colors** tab contains project-specific colors alongside the standard roles — for example `Symbol_Alarm`, `Symbol_Warning`, and `Alarm_Severity_0` through `Alarm_Severity_5`. These follow the same naming convention as standard roles and are used the same way in scripts:
+The **Custom colors** tab contains project-specific colors alongside the standard roles, for example `Symbol_Alarm`, `Symbol_Warning` and `Alarm_Severity_0` through `Alarm_Severity_5`. These follow the same naming convention as standard roles and are used the same way in scripts:
 
 ```javascript title="Using a custom color"
 System.themes.color("Symbol_Alarm")
@@ -43,7 +43,7 @@ System.themes.color("Symbol_Alarm")
 
 ## Module-specific color palettes { #module-specific-color-palettes }
 
-In addition to the M3 roles that make up the main theme, WideQuick MOD includes a number of separate color palettes used by specific modules. These palettes appear under the theme variant in **WideQuick® Designer** and can be edited the same way as other theme colors, but they are not affected by the light/dark toggle — they apply regardless of which theme is active.
+In addition to the M3 roles that make up the main theme, WideQuick MOD includes a number of separate color palettes used by specific modules. These palettes appear under the theme variant in **WideQuick® Designer** and can be edited the same way as other theme colors, but the light/dark toggle does not affect them. They apply regardless of which theme is active.
 
 | Palette | Module | What it controls |
 |---|---|---|
@@ -55,7 +55,7 @@ In addition to the M3 roles that make up the main theme, WideQuick MOD includes 
 | ValueDisplay\_dark | Value Display | BV, MV, and meter track colors in dark themes |
 | ValueDisplay\_light | Value Display | BV, MV, and meter track colors in light themes |
 
-`ValueDisplay_dark` and `ValueDisplay_light` are the exception — the component automatically selects the correct variant based on whether the active theme name contains `_Dark`. The other palettes are static regardless of the active theme.
+`ValueDisplay_dark` and `ValueDisplay_light` are the exception: the component automatically selects the correct variant based on whether the active theme name contains `_Dark`. The other palettes are static regardless of the active theme.
 
 To edit a palette, open the **Themes** branch in the project tree, select the desired palette, and double-click a color code.
 

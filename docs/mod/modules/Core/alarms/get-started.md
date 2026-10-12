@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M9
 status: draft
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-12
 scripts:
   - scAlarm
 tags: 
@@ -28,7 +28,7 @@ The alarm views are accessible from the **Alarms** section in the main navigatio
 
 ### Alarm - List { #alarm-list }
 
-The **Alarm - List** is the primary view for monitoring active alarms. Each row shows the alarm class, alarm text, activation time, alarm name, and which system the alarm originates from. If a **Measure** is configured on the alarm, a link appears in the last column — for example a **Go to alarm** link that navigates directly to the object in the process view.
+The **Alarm - List** is the primary view for monitoring active alarms. Each row shows the alarm class, alarm text, activation time, alarm name, and which system the alarm originates from. If a **Measure** is configured on the alarm, a link appears in the last column, for example a **Go to alarm** link that navigates directly to the object in the process view.
 
 If `scRemoteAlarms` is running and remote systems are connected, alarms from those systems also appear in the list alongside local alarms. For an alarm from a remote system, **Go to alarm** opens that system in **WideQuick® Remote**, which navigates to the alarm after login. See [GoTo in Alarm Groups](../Navigation/extending.md#goto-in-alarm-groups).
 <!-- --8<-- [end:body-1] -->
@@ -78,7 +78,7 @@ Each alarm has an acknowledgement rule that controls when it can be acknowledged
 * **Strict** — can only be acknowledged after the alarm has gone inactive.
 * **Auto** — acknowledged automatically when the alarm goes inactive. Can also be acknowledged manually while still active.
 
-For alarms from remote systems, the acknowledgement is sent to the originating system — no separate login to that system is required.
+For alarms from remote systems, the acknowledgement is sent to the originating system. No separate login to that system is required.
 
 ## Process view alarm list { #process-view-alarm-list }
 
@@ -86,11 +86,11 @@ A dedicated alarm list can be opened from a specific process view, showing only 
 
 ## Dashboard widgets { #dashboard-widgets }
 
-Alarm data can also be surfaced on a dashboard using alarm widgets — Alarm Status, Alarm Row, Alarm List, Alarm Log, Alarm Frequency, and Alarm Graph. This is useful for building custom overview screens that combine alarm information with live values, history, or maintenance status. See [Dashboards — Configuring](../../dashboards/configuring.md#widgets-all-available-widgets-and-their-parameters).
+Alarm data can also be surfaced on a dashboard using the alarm widgets: Alarm Status, Alarm Row, Alarm List, Alarm Log, Alarm Frequency, and Alarm Graph. This is useful for building custom overview screens that combine alarm information with live values, history, or maintenance status. See [Dashboards — Configuring](../../dashboards/configuring.md#widgets-all-available-widgets-and-their-parameters).
 
 ## Object animations { #object-animations }
 
-Objects with active alarms can be configured to display visual feedback — for example blinking red when an alarm is triggered. This is handled by the animation system and covered in [Workview Animations](/mod/guides/workview-animations/).
+Objects with active alarms can be configured to give visual feedback, for example blinking red when an alarm is triggered. This is handled by the animation system and covered in [Workview Animations](/mod/guides/workview-animations/).
 
 ## Next Steps { #next-steps }
 

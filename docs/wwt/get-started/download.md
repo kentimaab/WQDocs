@@ -4,7 +4,7 @@ description: Download WideQuick Water and Wastewater Treatment
 product: wwt
 page_type: getstarted
 status: draft
-last_reviewed: 2026-06-08
+last_reviewed: 2026-10-12
 tags: 
  - WWT
 ---
@@ -15,11 +15,7 @@ WideQuick Water and Wastewater Treatment is available free of charge to Kentima
 partners. If you are not yet a partner, visit
 [kentima.com](https://www.kentima.com){target="_blank"} to learn more and get in touch.
 
-The download includes everything needed to get started:
-- a complete template project with all scripts
-- object libraries
-- system logic pre-configured
-- a fully implemented demo project for reference.
+The download includes everything needed to get started: a complete template project with all scripts, object libraries and system logic pre-configured, and a fully implemented demo project for reference.
 
 The project can be opened and explored freely in WideQuick Designer, but commissioning a live system requires a **WideQuick Advanced** license or higher.
 
@@ -42,8 +38,8 @@ for download on the Kentima website:
 
 The template project is a fresh, ready-to-implement project containing the full
 functionality of WideQuick Water and Wastewater Treatment 2024.1.0. All scripts,
-object libraries, and system logic are pre-configured and in place — the integrator
-simply starts building their system views. There are no implemented systems or
+object libraries, and system logic are pre-configured and in place, so the integrator
+starts directly on the system views. There are no implemented systems or
 external connections such as **OPC UA** or **Modbus**. It is the recommended
 starting point for integrators who want to build a new project from scratch.
 
@@ -59,7 +55,7 @@ understanding how the system works and for drawing inspiration for implementatio
 
 ### Start the application
 
-Once downloaded, extract the zip file to your desired folder. The extracted folder
+Once downloaded, extract the zip file to the desired folder. The extracted folder
 contains:
 
 * A project folder — containing all project files

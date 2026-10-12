@@ -3,7 +3,7 @@ title: Larm — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -24,7 +24,7 @@ För att skicka larmnotifieringar via e-post måste en SMTP-server konfigureras.
 
 ### Konfigurera SMTP vid körning { #configuring-smtp-at-runtime }
 
-Klicka på **Konfigurera** i SMTP-sektionen i statuspanelen **Larm — Schema**, eller anropa `System.mailManager.edit()` från ett skript eller en knappåtgärd.
+Klicka på **Konfigurera** i SMTP-sektionen i statuspanelen **Larm - Schema**, eller anropa `System.mailManager.edit()` från ett skript eller en knappåtgärd.
 
 ![Edit mail settings](/docs/sv/Images/Alarms/alarm-smtp-settings.png){align=center}
 
@@ -32,7 +32,7 @@ Klicka på **Konfigurera** i SMTP-sektionen i statuspanelen **Larm — Schema**,
 |---|---|
 | **Avsändare** | Avsändarens e-postadress |
 | **Avsändarnamn** | Visningsnamn för avsändaren |
-| **Server** | SMTP-serveradress eller IP — till exempel `smtp.gmail.com` |
+| **Server** | SMTP-serveradress eller IP, till exempel `smtp.gmail.com` |
 | **Port** | Serverport |
 | **Domän** | Serverdomän |
 | **Användare** | Kontots användarnamn |
@@ -108,8 +108,14 @@ msg += "| Sent from WideQuick\n"
 ## SMS-notifieringar { #sms-notifications }
 
 SMS-notifieringar skickas via ett modem anslutet till WideQuick-värden via en seriell
-COM-port. Det kan vara ett traditionellt GSM-modem eller en 4G-router — vilken enhet som
-helst som accepterar AT-kommandon via en seriekoppling är kompatibel.
+COM-port. Det kan vara ett traditionellt GSM-modem eller en 4G-router. Alla enheter som
+accepterar AT-kommandon via en seriekoppling är kompatibla.
+
+Alternativt kan SMS skickas via en Teltonika-router med Teltonika-pluginet. Pluginet
+kommunicerar med routerns REST API över nätverket i stället för via en seriell anslutning,
+och skickar SMS för samma larmnotifieringsscheman. Det fungerar endast i Windows och
+kräver licensen **WideQuick Advanced** med optionen .NET-plugin, eller en Premium-licens.
+Se [Skicka SMS med Teltonika](../../../../plug-in/teltonika/oversikt.md).
 
 ### Konfigurera modemet { #configuring-the-modem }
 
@@ -140,8 +146,8 @@ lyser indikatorn grönt.
 
 SMS-notifieringen följer samma mönster som e-posten och kan anpassas genom att
 redigera funktionen `writeSMS()` i skriptet `scAlarmSender`. Samma fyra larmfält är
-tillgängliga — `alarm.name`, `alarm.timestamp`, `alarm.severity` och
-`alarm.text` — och etiketter kan ändras eller ren text läggas till på samma sätt.
+tillgängliga: `alarm.name`, `alarm.timestamp`, `alarm.severity` och
+`alarm.text`. Etiketter kan ändras eller ren text läggas till på samma sätt.
 
 Standardformatet för SMS ser ut så här:
 
@@ -176,6 +182,6 @@ msg += "Signal: " + alarm.name + "\n"
 ## Fjärrlarmsammanställning { #remote-alarm-aggregation }
 
 Larm från anslutna fjärrsystem kan sammanställas i den lokala larmlistan. Se
-[Fjärrsystem — Fjärrlarm](/mod/guides/remote-systems/#remote-alarms) för
+[Fjärrlarm](/mod/guides/remote-systems/#remote-alarms) i guiden Fjärrsystem för
 installationsanvisningar.
 <!-- --8<-- [end:body] -->

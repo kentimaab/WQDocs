@@ -5,7 +5,7 @@ product: mod
 page_type: getstarted
 doc_id: DOC-M14
 status: draft
-last_reviewed: 2026-05-21
+last_reviewed: 2026-10-12
 scripts:
   - scNav
   - scSubNavPopup
@@ -36,8 +36,8 @@ module automatically builds the menu structure based on the folder structure in
 **WideQuick® Designer**, making it easy to manage and extend as the project grows.
 
 For access control and display settings for restricted views, see 
-[Navigation — Configuring](configuring). For advanced functionality such as GoTo 
-shortcuts and custom icons, see [Navigation — Extending](extending).
+[Configuring](configuring.md). For advanced functionality such as GoTo 
+shortcuts and custom icons, see [Extending](extending.md).
 
 ## Adding Workviews to the navigation { #adding-workviews-to-the-navigation }
 The automatic navigation consists of two parts: the **Main_Menu** folder and the 
@@ -62,8 +62,7 @@ open the view directly.
 </div>
 
 <!-- --8<-- [start:body-2] -->
-If multiple **Workviews** are added to the same folder, the icon in the menu will 
-change — clicking it will open a submenu instead, as shown below. Additional folders 
+If multiple **Workviews** are added to the same folder, the icon in the menu changes, and clicking it opens a submenu instead, as shown below. Additional folders 
 can be nested inside to build even deeper navigation structures.
 <!-- --8<-- [end:body-2] -->
 
@@ -91,26 +90,24 @@ meaning design decisions made there are reflected directly in runtime.
 The Fullscreen Menu is designed to display as many **Workviews** as possible while 
 remaining organized. The layout follows these rules:
 
-* **Workviews** only — If a directory contains only **Workviews** with no 
+* **Workviews only:** if a directory contains only **Workviews** with no 
 subdirectories, the **Workviews** are arranged in rows.
-* Directories only — If a directory contains only subdirectories, the top-level 
+* **Directories only:** if a directory contains only subdirectories, the top-level 
 directories are arranged in columns, with their children displayed in the same column.
-* Mixed content — All top-level **Workviews** are placed in the first column, followed 
+* **Mixed content:** all top-level **Workviews** are placed in the first column, followed 
 by directories arranged column-wise.
 
 The Fullscreen Menu can display up to 90 directories and **Workviews** at once. If this 
 limit is exceeded, the menu adapts automatically in two ways:
 
-* **Column overflow** — If a single column exceeds the maximum number of rows, a 
+* **Column overflow:** if a single column exceeds the maximum number of rows, a 
 **More...** button appears at the bottom of that column. Clicking it re-roots the 
 navigation to the folder at the top of that column, allowing the user to browse its 
 contents.
-* **Page overflow** — If there are too many top-level directories to fit on a single 
+* **Page overflow:** if there are too many top-level directories to fit on a single 
 page, a navigation arrow appears in the top left corner to navigate to the next page.
 
-Together these two mechanisms allow the Fullscreen Menu to scale to systems of any 
-size — no matter how many views or directories a project contains, the menu will always 
-remain navigable.
+Together these two mechanisms allow the Fullscreen Menu to scale to systems of any size. However many views or directories a project contains, the menu stays navigable.
 <!-- --8<-- [end:body-4] -->
 
 ![FullScreen_Menu](/docs/Images/Navigation/Nav_2Stor.png)

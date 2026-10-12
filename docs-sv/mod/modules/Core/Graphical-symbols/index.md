@@ -12,7 +12,7 @@ tags:
 
 # Grafiska symboler
 
-WideQuick innehåller två typer av symbolbibliotek för att bygga processvyer —
+WideQuick innehåller två typer av symbolbibliotek för att bygga processvyer,
 grundläggande symboler och förkopplade symboler. Tillsammans täcker de de vanligaste
 komponenterna som förekommer i byggnadsautomation och processkontrolltillämpningar.
 

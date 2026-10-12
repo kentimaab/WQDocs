@@ -3,7 +3,7 @@ title: Teman — Utöka
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -14,13 +14,13 @@ tags:
 
 ## Skapa ett anpassat tema { #creating-a-custom-theme }
 
-Ett komplett tema kan genereras från en enda varumärkesfärg. Mata in den färgen i temabyggaren så härleds alla stödfärger, ljusa och mörka varianter, ytskikt för elevation samt kontrastnivåer automatiskt — resultatet är ett tema som passar kundens eller organisationens grafiska profil och fungerar väl i alla tillstånd.
+Ett komplett tema kan genereras från en enda varumärkesfärg. Mata in den färgen i temabyggaren så härleds alla stödfärger, ljusa och mörka varianter, ytskikt för elevation samt kontrastnivåer automatiskt. Resultatet är ett tema som passar kundens eller organisationens grafiska profil och fungerar väl i alla tillstånd.
 
-### Steg 1 — Generera temat { #step-1-generate-the-theme }
+### Steg 1 - Generera temat { #step-1-generate-the-theme }
 
 Öppna [Temabyggaren](../../../../Tools/theme-builder.md). Den inbäddade **Material Theme Builder** låter dig ange en källfärg (eller ladda upp en logotyp för att extrahera en) och förhandsgranska det resulterande temat i ljust och mörkt läge. Exportera det färdiga temat som en `Colors.xml`-fil.
 
-### Steg 2 — Importera till WideQuick { #step-2-import-into-widequick }
+### Steg 2 - Importera till WideQuick { #step-2-import-into-widequick }
 
 På samma sida för [Temabyggaren](../../../../Tools/theme-builder.md), scrolla ned till **Parse Theme into WideQuick format**:
 

@@ -3,7 +3,7 @@ title: Navigation — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -32,8 +32,8 @@ bygger automatiskt menystrukturen utifrån mappstrukturen i
 **WideQuick® Designer**, vilket gör det enkelt att hantera och utöka i takt med att projektet växer.
 
 För åtkomstkontroll och visningsinställningar för begränsade vyer, se
-[Navigation — Konfigurering](configuring). För avancerad funktionalitet som GoTo-genvägar
-och anpassade ikoner, se [Navigation — Utöka](extending).
+[Konfigurering](configuring.md). För avancerad funktionalitet som GoTo-genvägar
+och anpassade ikoner, se [Utöka](extending.md).
 
 ## Lägga till Arbetsvyer i navigationen { #adding-arbetsvyer-to-the-navigation }
 Den automatiska navigationen består av två delar: mappen **Main_Menu** och mappen
@@ -59,8 +59,7 @@ vyn direkt.
 </div>
 
 <!-- --8<-- [start:body-2] -->
-Om flera **Arbetsvyer** läggs till i samma mapp ändras ikonen i menyn — att klicka på
-den öppnar en undermeny istället, som visas nedan. Ytterligare mappar kan nästlas inuti
+Om flera **Arbetsvyer** läggs till i samma mapp ändras ikonen i menyn, och ett klick på den öppnar i stället en undermeny, som visas nedan. Ytterligare mappar kan nästlas inuti
 för att bygga ännu djupare navigationsstrukturer.
 <!-- --8<-- [end:body-2] -->
 
@@ -88,25 +87,22 @@ innebär att designbeslut som tas där återspeglas direkt i körläget.
 Helskärmsmenyn är utformad för att visa så många **Arbetsvyer** som möjligt och samtidigt
 förbli organiserad. Layouten följer dessa regler:
 
-* Enbart **Arbetsvyer** — Om en katalog enbart innehåller **Arbetsvyer** utan
+* **Enbart arbetsvyer:** om en katalog enbart innehåller **Arbetsvyer** utan
 underkataloger arrangeras **Arbetsvyer** i rader.
-* Enbart kataloger — Om en katalog enbart innehåller underkataloger arrangeras
+* **Enbart kataloger:** om en katalog enbart innehåller underkataloger arrangeras
 toppnivåkatalogerna i kolumner, med sina underordnade visade i samma kolumn.
-* Blandat innehåll — Alla **Arbetsvyer** på toppnivå placeras i den första kolumnen,
+* **Blandat innehåll:** alla **Arbetsvyer** på toppnivå placeras i den första kolumnen,
 följt av kataloger arrangerade kolumnvis.
 
 Helskärmsmenyn kan visa upp till 90 kataloger och **Arbetsvyer** samtidigt. Om denna
 gräns överskrids anpassar menyn sig automatiskt på två sätt:
 
-* **Kolumnspill** — Om en enskild kolumn överskrider det maximala antalet rader visas
-en **Mer...**-knapp längst ned i den kolumnen. Att klicka på den roterar navigationen
-till mappen längst upp i den kolumnen, vilket låter användaren bläddra igenom dess innehåll.
-* **Sidspill** — Om det finns för många toppnivåkataloger för att få plats på en enda
+* **Kolumnspill:** om en enskild kolumn överskrider det maximala antalet rader visas
+en **Mer...**-knapp längst ned i den kolumnen. Ett klick på den gör mappen högst upp i kolumnen till navigationens nya utgångspunkt, så att användaren kan bläddra i dess innehåll.
+* **Sidspill:** om det finns för många toppnivåkataloger för att få plats på en enda
 sida visas en navigeringspil i det övre vänstra hörnet för att navigera till nästa sida.
 
-Tillsammans gör dessa två mekanismer att helskärmsmenyn kan skalas till system av
-valfri storlek — oavsett hur många vyer eller kataloger ett projekt innehåller kommer
-menyn alltid att vara navigerbar.
+Tillsammans gör dessa två mekanismer att helskärmsmenyn kan skalas till system av valfri storlek. Oavsett hur många vyer eller kataloger ett projekt innehåller förblir menyn navigerbar.
 <!-- --8<-- [end:body-4] -->
 
 ![FullScreen_Menu](/docs/sv/Images/Navigation/Nav_2Stor.png)

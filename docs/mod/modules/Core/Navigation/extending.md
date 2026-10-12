@@ -102,7 +102,7 @@ views. The implementation process consists of two steps:
 2. Connecting the SVG to a **Workview** identifier
 
 ### Importing and configuring the SVG { #importing-and-configuring-the-svg }
-First, import your SVG icon. It is recommended to have two versions — one for dark mode
+First, import your SVG icon. It is recommended to have two versions, one for dark mode
 and one for light mode. This ensures the icon remains visible regardless of the user's
 theme preference. Name and place the files as follows:
 

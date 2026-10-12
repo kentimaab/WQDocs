@@ -3,7 +3,7 @@ title: Larm — Konfigurering
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -14,11 +14,11 @@ tags:
 
 ## Skapa larmgrupper { #creating-alarm-groups }
 
-Larm organiseras i grupper i **WideQuick® Designer**. Varje grupp definierar gemensamma standardvärden — färger, ikoner och åtgärder — som dess larm ärver om de inte åsidosätts individuellt.
+Larm organiseras i grupper i **WideQuick® Designer**. Varje grupp definierar gemensamma standardvärden för färger, ikoner och åtgärder, som dess larm ärver om de inte åsidosätts individuellt.
 
 1. I projektträdet högerklickar du på **Alarms** under **Data Store** och väljer **Add Group...**.
 2. Ange ett **Name** för gruppen.
-3. Ange **Monitor variable** — en boolesk variabel som är `true` så länge något larm i gruppen är aktivt.
+3. Ange **Monitor variable**, en boolesk variabel som är `true` så länge något larm i gruppen är aktivt.
 4. Konfigurera valfritt standardfärger under **Colors** för varje larmstatus, standard **Icons** samt ett standard **Measure** för gruppen.
 5. Klicka på **OK**.
 
@@ -33,22 +33,22 @@ När en grupp finns, öppna den (dubbelklicka eller högerklicka → **Open**) o
 | Fält | Beskrivning |
 |---|---|
 | **Name** | Unikt namn för larmet inom gruppen |
-| **Alarm class** | Etikett som används för att rangordna eller kategorisera larm — till exempel `1`, `A` eller `High` |
-| **Ack rule** | När larmet kan kvitteras — se nedan |
+| **Alarm class** | Etikett som används för att rangordna eller kategorisera larm, till exempel `1`, `A` eller `High` |
+| **Ack rule** | När larmet kan kvitteras. Se [Kvitteringsregler](#acknowledgement-rules). |
 | **Text** | Kort etikett som visas i larmlistan, t.ex. *Motor överhettning* |
 | **Details** | Längre beskrivning som visas när larmet expanderas i loggen |
 | **Activation** | Utlösningsvillkor och valfri fördröjning innan larmet aktiveras |
 | **Block type** | Om larmet kan undertryckas: **None**, **Manually** (av operatör) eller **Automatic** (av en variabel) |
-| **Block variable** | Variabel som används när **Block type** är **Automatic** — larmet undertrycks medan denna variabel är sant |
+| **Block variable** | Variabel som används när **Block type** är **Automatic**. Larmet undertrycks medan variabeln är sann. |
 | **Colors** | Färgåsidosättningar per larm. Om det lämnas tomt används gruppens standardvärden |
 | **Activation monitor** | Boolesk variabel som sätts till `true` medan larmet är aktivt |
 | **Acknowledge monitor** | Boolesk variabel som sätts till `true` medan larmet är kvitterat |
-| **Measure** | Åtgärd tillgänglig i larmlistan — används för att lägga till en GoTo-länk. Se [GoTo i larmgrupper](../Navigation/extending.md#goto-in-alarm-groups) |
+| **Measure** | Åtgärd tillgänglig i larmlistan, som används för att lägga till en GoTo-länk. Se [GoTo i larmgrupper](../Navigation/extending.md#goto-in-alarm-groups) |
 | **Description** | Intern notering om larmet. Visas inte vid körning |
 
 ### Aktivering { #activation }
 
-Dubbelklicka på fältet **Activation** för att konfigurera utlösaren. Ange variabeln som larmet övervakar och lägg valfritt till en fördröjning — larmet aktiveras bara om villkoret har varit sant under hela fördröjningsperioden.
+Dubbelklicka på fältet **Activation** för att konfigurera utlösaren. Ange variabeln som larmet övervakar och lägg valfritt till en fördröjning. Larmet aktiveras då bara om villkoret har varit sant under hela fördröjningsperioden.
 
 ![Aktiveringsinställningar](/docs/sv/Images/Create_Alarm/Activation.png){align=center}
 
@@ -101,6 +101,9 @@ Klicka på **New schedule** för att öppna skapandeassistenten. Den går igenom
 <!-- --8<-- [start:body-4] -->
 * **Severity level** — vilka larmklasser som utlöser det här schemat. Lämna tomt för att inkludera alla klasser.
 * **Alarm groups** — vilka larmgrupper som övervakas. Använd **Select all** för att inkludera alla grupper.
+* **Criteria** — vilket larmtillstånd notifieringen skickas vid. Se [Notifieringskriterier](#notification-criteria) nedan.
+
+Schemalistan visar vilka larmklasser och vilka kriterier varje schema bevakar, och statuspanelen uppdaterar antalet scheman och deras aktiva läge direkt i stället för bara när vyn öppnas.
 
 **Steg 3 — Vem**
 <!-- --8<-- [end:body-4] -->
@@ -112,6 +115,26 @@ Klicka på **New schedule** för att öppna skapandeassistenten. Den går igenom
 * **Recipient** — lägg till enskilda e-postadresser eller telefonnummer direkt.
 * **Alias** — välj från konfigurerade alias för att lägga till en grupp mottagare på en gång.
 * **Collect alarm dispatches** — fördröjning i sekunder innan sändning. Larm som utlöses inom detta fönster samlas in och skickas tillsammans i en enda notifiering.
+
+### Notifieringskriterier { #notification-criteria }
+
+Ett schema skickar vid ett larmtillstånd, som väljs med väljaren **Criteria**. De fem värdena motsvarar de tillstånd som larmloggern själv registrerar.
+
+| Kriterium | Skickar när |
+|---|---|
+| **all** | Varje tillståndsändring. |
+| **active** | Larmet blir aktivt och har ännu inte kvitterats. |
+| **acknowledged** | Larmet kvitteras medan det fortfarande är aktivt. |
+| **unacknowledged** | Larmet har återgått men väntar fortfarande på kvittering. |
+| **inactive** | Larmet har både återgått och kvitterats, och är därmed helt avslutat. |
+
+Endast **acknowledged** och **inactive** har ett användarnamn, så det är bara notifieringar för de kriterierna som kan ange vem som kvitterade larmet. Larm med kvitteringsregeln **Auto** går vanligtvis direkt från aktivt till inaktivt utan användarnamn och hoppar helt över de två mellersta tillstånden.
+
+!!! info "Befintliga scheman behåller sitt tidigare beteende"
+    Kolumnen `criteria` läggs till i `mail_schedules` vid första start och har standardvärdet `active`, vilket är det tillstånd scheman skickade vid innan kriterier fanns. Inget schema ändrar beteende vid uppgradering.
+
+!!! note "Kriterier lagras i en kanonisk form"
+    Väljaren visar kriterierna översatta till det aktiva språket, men värdet som skrivs till databasen är alltid den kanoniska engelska nyckeln. Ett schema som skapats på ett språk läses därför korrekt på ett annat.
 
 ### Redigera och ta bort scheman { #editing-and-deleting-schedules }
 

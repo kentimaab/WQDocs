@@ -3,7 +3,7 @@ title: Ladda ned WideQuick BMS
 product: bms
 page_type: getstarted
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - BMS
 ---
@@ -12,11 +12,7 @@ tags:
 
 WideQuick BMS är kostnadsfritt för Kentimas partners. Om du ännu inte är partner, besök [kentima.com](https://www.kentima.com){target="_blank"} för att läsa mer och komma i kontakt.
 
-Nedladdningen innehåller allt som behövs för att komma igång:
-- ett komplett mallprojekt med alla skript
-- objektbibliotek
-- systemlogik förkonfigurerad
-- ett fullt implementerat demoprojekt för referens.
+Nedladdningen innehåller allt som behövs för att komma igång: ett komplett mallprojekt med alla skript, objektbibliotek och förkonfigurerad systemlogik, samt ett fullt implementerat demoprojekt för referens.
 
 Projektet kan öppnas och utforskas fritt i WideQuick Designer, men driftsättning av ett levande system kräver licensen **WideQuick Advanced** eller högre.
 
@@ -34,8 +30,8 @@ WideQuick BMS 2026.1.0 finns i två versioner att ladda ned på Kentimas webbpla
 ### Mallprojekt
 Mallprojektet är ett nytt, implementeringsklart projekt som innehåller den fulla
 funktionaliteten i WideQuick BMS 2026.1.0. Alla skript, objektbibliotek och systemlogik
-är förkonfigurerade och på plats — integratören börjar helt enkelt bygga sina
-systemvyer. Det finns inga implementerade system eller externa anslutningar som
+är förkonfigurerade och på plats, så integratören börjar direkt med
+systemvyerna. Det finns inga implementerade system eller externa anslutningar som
 **OPC UA** eller **Modbus**. Det är den rekommenderade utgångspunkten för integratörer som
 vill bygga ett nytt projekt från grunden.
 

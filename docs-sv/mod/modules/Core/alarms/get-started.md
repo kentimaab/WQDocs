@@ -3,7 +3,7 @@ title: Larm — Kom igång
 product: mod
 page_type: module
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-12
 tags:
  - MOD
 ---
@@ -26,7 +26,7 @@ Larmvyerna nås från avsnittet **Larm** i huvudnavigeringen.
 
 ### Larm - Lista { #alarm-list }
 
-**Larm - Lista** är den primära vyn för att övervaka aktiva larm. Varje rad visar larmklass, larmtext, aktiveringstid, larmnamn och vilket system larmet härstammar från. Om ett **Mätvärde** är konfigurerat på larmet visas en länk i den sista kolumnen — till exempel en **Gå till larm**-länk som navigerar direkt till objektet i processvyn.
+**Larm - Lista** är den primära vyn för att övervaka aktiva larm. Varje rad visar larmklass, larmtext, aktiveringstid, larmnamn och vilket system larmet härstammar från. Om en **Åtgärd** är konfigurerad på larmet visas en länk i den sista kolumnen, till exempel en **Gå till larm**-länk som navigerar direkt till objektet i processvyn.
 
 Om `scRemoteAlarms` körs och fjärrsystem är anslutna visas även larm från dessa system i listan tillsammans med lokala larm. För ett larm från ett fjärrsystem öppnar **Gå till larm** systemet i **WideQuick® Remote**, som navigerar till larmet efter inloggning. Se [GoTo i Larmgrupper](../Navigation/extending.md#goto-in-alarm-groups).
 <!-- --8<-- [end:body-1] -->
@@ -76,7 +76,7 @@ Varje larm har en kvitteringsregel som styr när det kan kvitteras:
 * **Strikt** — kan bara kvitteras efter att larmet har blivit inaktivt.
 * **Auto** — kvitteras automatiskt när larmet blir inaktivt. Kan också kvitteras manuellt medan det fortfarande är aktivt.
 
-För larm från fjärrsystem skickas kvitteringen till det ursprungliga systemet — ingen separat inloggning på det systemet krävs.
+För larm från fjärrsystem skickas kvitteringen till det ursprungliga systemet. Ingen separat inloggning på det systemet krävs.
 
 ## Processvyns larmlista { #process-view-alarm-list }
 
@@ -84,11 +84,11 @@ En dedikerad larmlista kan öppnas från en specifik processvy och visar bara de
 
 ## Dashboardwidgetar { #dashboard-widgets }
 
-Larmdata kan också visas på en dashboard med larmwidgetar — Larmstatus, Larmrad, Larmlista, Larmlogg, Larmfrekvens och Larmgraf. Detta är användbart för att bygga anpassade översiktsskärmar som kombinerar larminformation med live-värden, historik eller underhållsstatus. Se [Dashboards — Konfigurering](../../dashboards/configuring.md#widgets-all-available-widgets-and-their-parameters).
+Larmdata kan också visas på en dashboard med larmwidgetarna: Larmstatus, Larmrad, Larmlista, Larmlogg, Larmfrekvens och Larmgraf. Detta är användbart för att bygga anpassade översiktsskärmar som kombinerar larminformation med live-värden, historik eller underhållsstatus. Se [Dashboards — Konfigurering](../../dashboards/configuring.md#widgets-all-available-widgets-and-their-parameters).
 
 ## Objektanimationer { #object-animations }
 
-Objekt med aktiva larm kan konfigureras att visa visuell återkoppling — till exempel blinkande rött när ett larm utlöses. Detta hanteras av animationssystemet och beskrivs i [arbetsvy Animations](/mod/guides/arbetsvy-animations/).
+Objekt med aktiva larm kan konfigureras att ge visuell återkoppling, till exempel blinkande rött när ett larm utlöses. Detta hanteras av animationssystemet och beskrivs i [Arbetsvyanimationer](/mod/guides/workview-animations/).
 
 ## Nästa steg { #next-steps }
 

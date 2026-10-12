@@ -5,7 +5,7 @@ product: mod
 page_type: howto
 doc_id: DOC-M9
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -15,11 +15,11 @@ tags:
 
 ## Creating alarm groups { #creating-alarm-groups }
 
-Alarms are organised into groups in **WideQuick® Designer**. Each group defines shared defaults — colors, icons, and measures — that its alarms inherit unless overridden individually.
+Alarms are organised into groups in **WideQuick® Designer**. Each group defines shared defaults for colors, icons and measures, which its alarms inherit unless overridden individually.
 
 1. In the project tree, right-click **Alarms** under **Data Store** and select **Add Group...**.
 2. Enter a **Name** for the group.
-3. Set the **Monitor variable** — a boolean variable that will be `true` whenever any alarm in the group is active.
+3. Set the **Monitor variable**, a boolean variable that is `true` whenever any alarm in the group is active.
 4. Optionally configure default **Colors** for each alarm state, default **Icons**, and a default **Measure** for the group.
 5. Click **OK**.
 
@@ -34,22 +34,22 @@ Once a group exists, open it (double-click or right-click → **Open**) and clic
 | Field | Description |
 |---|---|
 | **Name** | Unique name for the alarm within the group |
-| **Alarm class** | Label used to rank or categorise alarms — for example `1`, `A`, or `High` |
-| **Ack rule** | When the alarm can be acknowledged — see below |
+| **Alarm class** | Label used to rank or categorise alarms, for example `1`, `A` or `High` |
+| **Ack rule** | When the alarm can be acknowledged. See [Acknowledgement rules](#acknowledgement-rules). |
 | **Text** | Short label shown in the alarm list, e.g. *Motor overheating* |
 | **Details** | Longer description shown when the alarm is expanded in the log |
 | **Activation** | Trigger condition and optional delay before the alarm fires |
 | **Block type** | Whether the alarm can be suppressed: **None**, **Manually** (by operator), or **Automatic** (by a variable) |
-| **Block variable** | Variable used when **Block type** is **Automatic** — alarm is suppressed while this variable is true |
+| **Block variable** | Variable used when **Block type** is **Automatic**. The alarm is suppressed while this variable is true. |
 | **Colors** | Per-alarm color overrides. If left blank, the group defaults are used |
 | **Activation monitor** | Boolean variable set to `true` while the alarm is active |
 | **Acknowledge monitor** | Boolean variable set to `true` while the alarm is acknowledged |
-| **Measure** | Action available in the alarm list — used to add a GoTo link. See [GoTo in Alarm Groups](../Navigation/extending.md#goto-in-alarm-groups) |
+| **Measure** | Action available in the alarm list, used to add a GoTo link. See [GoTo in Alarm Groups](../Navigation/extending.md#goto-in-alarm-groups) |
 | **Description** | Internal note about the alarm. Not shown at runtime |
 
 ### Activation { #activation }
 
-Double-click the **Activation** field to configure the trigger. Set the variable the alarm monitors and optionally add a delay — the alarm will only fire if the condition has been true for the full delay period.
+Double-click the **Activation** field to configure the trigger. Set the variable the alarm monitors and optionally add a delay. The alarm then fires only if the condition has been true for the full delay period.
 
 ![Activation settings](/docs/Images/Create_Alarm/Activation.png){align=center}
 
@@ -113,6 +113,17 @@ slot. To receive notifications for the entire day, set **From** to `00:00` and
 
 The schedule list shows which alarm classes and which criteria each schedule monitors, and the status panel updates the number of schedules and their active state live rather than only when the view is opened.
 
+**Step 3 — Who**
+<!-- --8<-- [end:body-4] -->
+
+![New schedule step 3](/docs/Images/Alarms/alarm-schedule-step-3.png){align=center}
+
+<!-- --8<-- [start:body-5] -->
+* **Subject line** — subject used for outgoing email notifications.
+* **Recipient** — add individual email addresses or phone numbers directly.
+* **Alias** — select from configured aliases to add a group of recipients at once.
+* **Collect alarm dispatches** — delay in seconds before sending. Alarms that trigger within this window are collected and sent together in a single notification.
+
 ### Notification criteria { #notification-criteria }
 
 A schedule sends on one alarm state, chosen with the **Criteria** picker. The five values map onto the states the alarm logger itself records.
@@ -132,17 +143,6 @@ Only **acknowledged** and **inactive** carry a user name, so those are the only 
 
 !!! note "Criteria are stored in a canonical form"
     The picker displays criteria translated into the active language, but the value written to the database is always the canonical English key. A schedule created in one language therefore reads correctly in another.
-
-**Step 3 — Who**
-<!-- --8<-- [end:body-4] -->
-
-![New schedule step 3](/docs/Images/Alarms/alarm-schedule-step-3.png){align=center}
-
-<!-- --8<-- [start:body-5] -->
-* **Subject line** — subject used for outgoing email notifications.
-* **Recipient** — add individual email addresses or phone numbers directly.
-* **Alias** — select from configured aliases to add a group of recipients at once.
-* **Collect alarm dispatches** — delay in seconds before sending. Alarms that trigger within this window are collected and sent together in a single notification.
 
 ### Editing and deleting schedules { #editing-and-deleting-schedules }
 

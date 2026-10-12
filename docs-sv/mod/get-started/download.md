@@ -1,23 +1,19 @@
 ---
-title: Ladda ner WideQuick Mod
-description: Ladda ner WideQuick Mod
+title: Ladda ner WideQuick MOD
+description: Ladda ner WideQuick MOD
 product: mod
 page_type: getstarted
 status: draft
-last_reviewed: 2026-06-08
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
 
-# Ladda ner WideQuick Mod
+# Ladda ner WideQuick MOD
 
-WideQuick Mod är tillgängligt kostnadsfritt för Kentimas partners. Om du inte redan är partner, besök [kentima.com](https://www.kentima.com){target="_blank"} för att läsa mer och komma i kontakt.
+WideQuick MOD är tillgängligt kostnadsfritt för Kentimas partners. Om du inte redan är partner, besök [kentima.com](https://www.kentima.com){target="_blank"} för att läsa mer och komma i kontakt.
 
-Nedladdningen innehåller allt som behövs för att komma igång:
-- ett komplett mallprojekt med alla skript
-- objektbibliotek
-- systemlogik förkonfigurerad
-- ett fullt implementerat demoprojekt som referens.
+Nedladdningen innehåller allt som behövs för att komma igång: ett komplett mallprojekt med alla skript, objektbibliotek och förkonfigurerad systemlogik, samt ett fullt implementerat demoprojekt som referens.
 
 Projektet kan öppnas och utforskas fritt i WideQuick Designer, men att driftsätta ett live-system kräver en **WideQuick Advanced**-licens eller högre.
 
@@ -25,21 +21,21 @@ Om du behöver en WideQuick-licens, vänligen kontakta Kentimas [säljavdelning]
 
 ## Mallapplikation vs. demoapplikation
 
-WideQuick Mod 2024.1.0 finns i två versioner för nedladdning på Kentimas webbplats:
+WideQuick MOD 2027.1.0 finns i två versioner för nedladdning på Kentimas webbplats:
 
 !!! note "Krav"
     **WideQuick version 14.0.3** eller senare måste vara installerat innan du laddar ner och
     öppnar projektfilerna. Se [Installera WideQuick](../../wq/get-started/index.md)
     för mer information.
 
-[**Ladda ner WideQuick Mod 2024.1.0**](https://www.kentima.com/sv-SE/Download/HMI-SCADA%20CONCEPTS/MOD/Hamta%20applikation){target="_blank"}
+[**Ladda ner WideQuick MOD 2027.1.0**](https://www.kentima.com/sv-SE/Download/HMI-SCADA%20CONCEPTS/MOD/Hamta%20applikation){target="_blank"}
 
 ### Mallprojekt
 
 Mallprojektet är ett nytt, implementationsklart projekt som innehåller den fullständiga
-funktionaliteten i WideQuick Mod 2024.1.0. Alla skript, objektbibliotek och systemlogik
-är förkonfigurerade och på plats — integratören börjar helt enkelt bygga sina
-systemvyer. Det finns inga implementerade system eller externa anslutningar såsom
+funktionaliteten i WideQuick MOD 2027.1.0. Alla skript, objektbibliotek och systemlogik
+är förkonfigurerade och på plats, så integratören börjar direkt med
+systemvyerna. Det finns inga implementerade system eller externa anslutningar såsom
 **OPC UA** eller **Modbus**. Det är den rekommenderade startpunkten för integratörer som
 vill bygga ett nytt projekt från grunden.
 
@@ -48,7 +44,7 @@ vill bygga ett nytt projekt från grunden.
 ### Demoprojekt
 
 Demoprojektet är ett fullt implementerat exempel som visar all funktionalitet i
-WideQuick Mod 2024.1.0 i användning. Det är användbart både för att förstå hur systemet
+WideQuick MOD 2027.1.0 i användning. Det är användbart både för att förstå hur systemet
 fungerar och för att hämta inspiration till implementationen.
 
 

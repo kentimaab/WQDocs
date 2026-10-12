@@ -27,7 +27,7 @@ med WideQuick Modular Framework. De använder dock det äldre animationssystemet
 enda lager och ger inte samma nivå av visuell återkoppling som de nya symbolerna.
 
 Vid import av en vy från ett äldre BMS-projekt uppgraderas alla äldre symboler automatiskt
-till de nya symbolversionerna. Det innebär att migreringen sker sömlöst — ingen manuell
+till de nya symbolversionerna. Det innebär att migreringen sker sömlöst, ingen manuell
 ersättning behövs.
 
 !!! tip "Rekommendation"

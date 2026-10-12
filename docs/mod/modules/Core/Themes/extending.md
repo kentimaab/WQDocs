@@ -4,7 +4,7 @@ description: Create a custom theme that follows a graphical profile using Materi
 product: mod
 page_type: extending
 status: draft
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -14,7 +14,7 @@ tags:
 
 ## Creating a custom theme { #creating-a-custom-theme }
 
-A complete theme can be generated from a single brand color. Feed that color into the theme builder and all supporting colors, light and dark variants, elevation surfaces, and contrast levels are derived automatically — the result is a theme that fits the customer's or organization's graphical profile and works well across all states.
+A complete theme can be generated from a single brand color. Feed that color into the theme builder and all supporting colors, light and dark variants, elevation surfaces, and contrast levels are derived automatically. The result is a theme that fits the customer's or organization's graphical profile and works well across all states.
 
 ### Step 1 - Generate the theme { #step-1-generate-the-theme }
 

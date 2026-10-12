@@ -5,7 +5,7 @@ product: mod
 page_type: extending
 doc_id: DOC-M9
 status: draft
-last_reviewed: 2026-05-29
+last_reviewed: 2026-10-12
 tags: 
  - MOD
 ---
@@ -34,7 +34,7 @@ Click **Configure** in the SMTP section of the **Alarm - Schedule** status panel
 |---|---|
 | **Sender** | Sender email address |
 | **Sender Name** | Display name for the sender |
-| **Server** | SMTP server address or IP — for example `smtp.gmail.com` |
+| **Server** | SMTP server address or IP, for example `smtp.gmail.com` |
 | **Port** | Server port |
 | **Domain** | Server domain |
 | **User** | Account username |
@@ -110,8 +110,14 @@ msg += "| Sent from WideQuick\n"
 ## SMS notifications { #sms-notifications }
 
 SMS notifications are sent via a modem connected to the WideQuick host over a serial
-COM port. This can be a traditional GSM modem or a 4G router — any device that accepts
+COM port. This can be a traditional GSM modem or a 4G router. Any device that accepts
 AT commands over a serial connection is compatible.
+
+Alternatively, SMS can be sent through a Teltonika router with the Teltonika plug-in. The
+plug-in talks to the router's REST API over the network instead of a serial connection,
+and sends SMS for the same alarm notification schedules. It runs on Windows only and
+requires a **WideQuick Advanced** license with the .NET plug-in option, or a Premium
+license. See [Send SMS with Teltonika](../../../../plug-in/teltonika/oversikt.md).
 
 ### Configuring the modem { #configuring-the-modem }
 
@@ -142,8 +148,8 @@ indicator turns green.
 
 The SMS notification follows the same pattern as the email and can be customized by
 editing the `writeSMS()` function in the `scAlarmSender` script. The same four alarm
-fields are available — `alarm.name`, `alarm.timestamp`, `alarm.severity`, and
-`alarm.text` — and labels can be changed or plain text added in the same way.
+fields are available: `alarm.name`, `alarm.timestamp`, `alarm.severity` and
+`alarm.text`. Labels can be changed or plain text added in the same way.
 
 The default SMS format looks like this:
 
@@ -178,6 +184,6 @@ msg += "Signal: " + alarm.name + "\n"
 ## Remote alarm aggregation { #remote-alarm-aggregation }
 
 Alarms from connected remote systems can be aggregated into the local alarm list. See
-[Remote Systems — Remote Alarms](/mod/guides/remote-systems/#remote-alarms) for
-setup instructions.
+[Remote Alarms](/mod/guides/remote-systems/#remote-alarms) in the Remote Systems guide
+for setup instructions.
 <!-- --8<-- [end:body] -->

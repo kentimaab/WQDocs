@@ -65,7 +65,7 @@ setting.
 
 * **Left** — Both enabled.
 * **Middle** — Show locked menus enabled, Show locked submenus disabled.
-* **Right** — Show locked menus disabled — submenus not shown regardless.
+* **Right** — Show locked menus disabled, submenus not shown regardless.
 
 ## Next Steps { #next-steps }
 

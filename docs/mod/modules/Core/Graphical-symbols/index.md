@@ -12,7 +12,7 @@ tags:
 
 # Graphical Symbols
 
-WideQuick includes two types of symbol libraries for building process views —
+WideQuick includes two types of symbol libraries for building process views,
 basic symbols and wired up symbols. Together they cover the most common components
 found in building automation and process control applications.
 

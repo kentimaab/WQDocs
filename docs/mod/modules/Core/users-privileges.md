@@ -112,7 +112,7 @@ The framework ships with the privileges below, defined in `Privileges.kdat`.
 
 A virtual privilege allows a single privilege to automatically grant one or more
 additional privileges. When a user is assigned a privilege that contains virtual
-privileges, they are also granted all the privileges listed under it — without
+privileges, they are also granted all the privileges listed under it, without
 needing to assign each one individually.
 
 **Example:** If the privilege `EditUsers` has `EditName` and `EditPassword` as
