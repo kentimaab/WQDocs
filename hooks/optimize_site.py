@@ -3,8 +3,9 @@ Post-build optimizer for the Static Web Apps deploy (250 MB limit on the Free pl
 
 Runs on the built site, after both `zensical build` steps:
 
-1. Swedish media that is byte-identical to the English copy (site/sv/X == site/X)
-   is dropped, and the Swedish pages are pointed at the English file.
+1. Media in the second-language build that is byte-identical to the main
+   language's copy (site/<secondary>/X == site/X) is dropped, and the
+   second-language pages are pointed at the main file.
 2. Animated GIFs above --gif-min-mb are converted to MP4 (ffmpeg). The lightbox
    link + <img> around them is replaced by an autoplaying, looping, muted <video>.
    A conversion is only kept if the MP4 is clearly smaller than the GIF.
@@ -18,7 +19,9 @@ Usage:
     python hooks/optimize_site.py site --dry-run     # report only, change nothing
                                                      # (still converts into a temp dir
                                                      #  to measure, if ffmpeg exists)
-Options: --base /docs/  --gif-min-mb 1  --max-mb 250
+Options: --base /docs/  --secondary sv  --gif-min-mb 1  --max-mb 250
+(--secondary is the second language's folder inside the site: sv for WQDocs,
+en for ETDocs)
 Exit code 1 if the optimized site is still above --max-mb (not in --dry-run).
 """
 
@@ -109,6 +112,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('site')
     ap.add_argument('--base', default='/docs/')
+    ap.add_argument('--secondary', default='sv', help="second language's folder in the site")
     ap.add_argument('--gif-min-mb', type=float, default=1.0)
     ap.add_argument('--max-mb', type=float, default=250)
     ap.add_argument('--dry-run', action='store_true')
@@ -120,11 +124,13 @@ def main():
     before = sum(files.values())
     full = lambda rel: os.path.join(site, rel)
 
-    # 1. Swedish media identical to the English copy
+    # 1. Second-language media identical to the main language's copy
+    lang = args.secondary.strip('/') + '/'
     dup = {
-        f: f[3:] for f in files
-        if f.startswith('sv/') and f.lower().endswith(MEDIA) and f[3:] in files
-        and files[f] == files[f[3:]] and filecmp.cmp(full(f), full(f[3:]), shallow=False)
+        f: f[len(lang):] for f in files
+        if f.startswith(lang) and f.lower().endswith(MEDIA) and f[len(lang):] in files
+        and files[f] == files[f[len(lang):]]
+        and filecmp.cmp(full(f), full(f[len(lang):]), shallow=False)
     }
 
     # 2. GIF -> MP4
@@ -222,7 +228,7 @@ def main():
     def still_used(f):
         if f in referenced:
             return True
-        # a Swedish duplicate shares its file name with the English original, so only
+        # a second-language duplicate shares its file name with the English original, so only
         # its full path counts; for anything else the bare file name is enough
         needle = f if f in dup else posixpath.basename(f)
         return needle in text_blob or quote(needle) in text_blob
@@ -250,7 +256,7 @@ def main():
     after = before - sum(files[f] for f in removable) + sum(mp4_size.values())
     orphans = sorted(
         (f for f in files if f.lower().endswith(MEDIA) and f not in removable
-         and not f.startswith('assets/') and not f.startswith('sv/assets/')
+         and not f.startswith('assets/') and not f.startswith(lang + 'assets/')
          and not still_used(f)),
         key=lambda f: -files[f],
     )
@@ -263,7 +269,7 @@ def main():
         '| | |',
         '|---|---|',
         f'| Before | {before / MB:.0f} MB, {len(files)} files |',
-        f'| Swedish duplicates removed | {len([f for f in removable if f in dup])} files, '
+        f'| Duplicates in {lang} removed | {len([f for f in removable if f in dup])} files, '
         f'{sum(files[f] for f in removable if f in dup) / MB:.0f} MB |',
         f'| GIFs converted to MP4 | {len(converted)} '
         f'({sum(files[g] for g in converted) / MB:.0f} MB → {sum(mp4_size.values()) / MB:.0f} MB), '
