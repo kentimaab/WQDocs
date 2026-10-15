@@ -527,6 +527,7 @@ features = [
     "navigation.instant",
     "navigation.instant.prefetch",
     "navigation.path",
+    "navigation.prune",
     "navigation.sections",
     "navigation.tabs",
     "navigation.top",
