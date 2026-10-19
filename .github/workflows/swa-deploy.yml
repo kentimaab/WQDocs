@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       # Only a manual run with the dry-run box unticked deploys
       DEPLOY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == false }}
