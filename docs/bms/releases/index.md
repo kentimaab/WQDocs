@@ -20,7 +20,6 @@ framework changelog see the [MOD releases](../../mod/releases/index.md).
 ## WideQuick BMS 2026.1.2 { #bms-2026-1-2 }
 
 __Released 2026-08-20__
-Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0)
 <details class="release" markdown="1" open>
 <summary>Release notes</summary>
 
@@ -258,7 +257,6 @@ __Released 2026-07-08__ — Patch version BMS 2026.1.1.1
 
 
 __Released 2026-07-02__
-Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0)
 <details class="release" markdown="1">
 <summary>Release notes</summary>
 
@@ -372,7 +370,6 @@ Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#
 
 ## WideQuick BMS 2026.1.0 { #bms-2026-1-0 }
 __Released 2026-05-21__
-Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0)
 <details class="release" markdown="1">
 <summary>Release notes</summary>
 

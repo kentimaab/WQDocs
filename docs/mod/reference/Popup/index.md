@@ -55,6 +55,10 @@ aliases:
 object.
 * [**Maneuver**](Maneuver.md) — provides control actions such as switching between
 operating modes or setting manual values.
+* [**Alarm Limits**](AlarmLimit.md) — displays and sets the alarm limits and alarm delays of the
+object.
+* [**Control**](Reglering.md) — displays and sets control-loop parameters such as setpoint and
+PID values.
 * [**Time Channel**](Time-channel.md) — allows time-based schedules to be configured
 for the object.
 * [**Control Curve**](Control%20curve.md) — a control curve editor for configuring

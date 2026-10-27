@@ -4,7 +4,7 @@ description: Release notes for the WideQuick Modular Framework.
 product: mod
 page_type: release
 status: draft
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-27
 tags: 
  - MOD
 ---
@@ -15,7 +15,7 @@ Release notes for the WideQuick Modular Framework. The newest release is listed
 first. Each concept built on the framework (BMS, WWT) pins a specific MOD release
 and links back to its entry here.
 
-## WideQuick MOD 2026.1.0 { #mod-2026-1-0 }
+## WideQuick MOD 2027.1.0 { #mod-2027-1-0 }
 
 <details class="release" markdown="1" open>
 <summary>Released 2026-05-20</summary>
@@ -35,6 +35,7 @@ The second major release of the WideQuick Modular Framework builds on the 2024.1
 | **Legacy view import**             | Views built in WideQuick BMS 8.0 or earlier can be lifted directly into the Modular Framework, where their symbols instantly repaint to the new, redesigned objects while keeping the same connections. |
 | **Report units and prefixes**      | A report carries a display unit, chosen in two steps. The **Unit** list is built from the units of the signals on the report's logger, reduced to their SI base, so only dimensions the data actually contains are offered, and choosing one filters the signal tree to signals of that dimension. A separate **Prefix** list then sets the scale to present at. Every selected signal gets its own factor, computed from that signal's own prefix against the chosen target, so one signal logged in `Wh` and another already in `kWh` report on the same scale. Values are queried in the unit they were logged in, and the factors travel to the template alongside the data. Prefixes on `m³` apply to the metre, so `dm³` is a thousandth of `m³` rather than a tenth. `ReportQueue`, `reportStats` and `reportSchedules` gain `unit` and `factorArray` columns, added on first start so existing databases migrate themselves. |
 | **Logbooks across systems**      | The global logbook also shows the logbook of every connected remote system, each as its own top node in the topic tree, named after the remote system and arranged the same way as the local tree. Notes can be read, added, edited and archived there. They are stored in the remote system's own logbook, so its operators find them too. Every logbook view now also refreshes by itself when an entry changes, whether it was written locally, on a web or remote client, or from another system. The new `LogBookSync` Data Store point signals the change. See [Logbooks of Remote Systems](../modules/logbook/configuring.md#logbooks-of-remote-systems). |
+| **New popups** | Two new popups join the object popups. **Alarm Limits** (Swedish: Larmgränser) gathers an object's alarm limits and delays in one place: high and low limits, position limit, run-time limit and the delays for faults and for not reaching open, closed or auto. **Control** (Swedish: Reglering) shows and sets control-loop parameters: setpoint, calculated setpoint, limits and shift, the P-factor, I-time, D-time, sample time and deadband (with a second parameter set), and the dead zone. Both are built from the object's suffix signals like the other popups, and Alarm Limits has its own privilege. |
 
 ### New & updated modules
 
@@ -71,6 +72,7 @@ The second major release of the WideQuick Modular Framework builds on the 2024.1
 | **Alarm Sender**         | Outbound SMS gained a compact mode. Instead of the full per-alarm listing, a compact message carries the subject line, the event type and a comma-separated list of the alarms matching it, which keeps a notification covering many alarms within a sensible message length. The mode is set per alarm schedule. |
 | **Prompt dialog**        | The prompt pop-out accepts **Enter** as a confirmation, so a value can be typed and committed without reaching for the button. |
 | **Log output**           | The application and error logs were cleaned up. Schema migrations in the calendar, holiday, maintenance and suffix scripts now check whether a column exists before adding it, rather than attempting the change and letting the driver report the failure, and a privilege check no longer throws when it is called without a privilege. Several hundred lines of recurring startup noise are gone, which leaves the logs usable for finding real faults. |
+| **Popup placement** | Popups now open next to the object that was pressed, and are moved only as far as needed to stay inside the screen. They are scaled for the screen they are on, and changing tab in a popup keeps it at the same place on the same screen. |
 
 ### Fixes
 

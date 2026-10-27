@@ -3,7 +3,7 @@ title: Versioner — Modular Framework
 product: mod
 page_type: release
 status: draft
-last_reviewed: 2026-10-12
+last_reviewed: 2026-10-27
 tags:
  - MOD
 ---
@@ -14,7 +14,7 @@ Versionshistorik för WideQuick Modular Framework. Den senaste versionen visas
 först. Varje koncept som bygger på ramverket (BMS, WWT) är kopplat till en
 specifik MOD-version och länkar tillbaka till sin post här.
 
-## WideQuick MOD 2026.1.0 { #mod-2026-1-0 }
+## WideQuick MOD 2027.1.0 { #mod-2027-1-0 }
 
 <details class="release" markdown="1" open>
 <summary>Utgiven 2026-05-20</summary>
@@ -34,6 +34,7 @@ Den andra huvudversionen av WideQuick Modular Framework bygger vidare på grunde
 | **Import av äldre vyer**            | Vyer som byggts i WideQuick BMS 8.0 eller tidigare kan lyftas direkt in i Modular Framework, där deras symboler omedelbart målas om till de nya, omdesignade objekten och behåller samma kopplingar. |
 | **Rapportenheter och prefix**       | En rapport bär en visningsenhet som väljs i två steg. Listan **Enhet** byggs från enheterna hos signalerna på rapportens logger, reducerade till sin SI-bas, så att endast dimensioner som faktiskt finns i datat erbjuds, och att välja en filtrerar signalträdet till signaler av den dimensionen. En separat lista **Prefix** anger sedan vilken skala värdena ska visas i. Varje vald signal får sin egen faktor, beräknad utifrån signalens eget prefix mot det valda målet, så att en signal loggad i `Wh` och en annan redan i `kWh` rapporteras i samma skala. Värdena hämtas i den enhet de loggats i, och faktorerna följer med till mallen tillsammans med data. Prefix på `m³` gäller metern, så `dm³` är en tusendel av `m³` snarare än en tiondel. `ReportQueue`, `reportStats` och `reportSchedules` får kolumnerna `unit` och `factorArray`, som läggs till vid första start så att befintliga databaser migrerar sig själva. |
 | **Loggböcker över flera system**    | Den globala loggboken visar även loggboken för varje anslutet fjärrsystem, var och en som en egen toppnod i ämnesträdet, namngiven efter fjärrsystemet och ordnad på samma sätt som det lokala trädet. Där kan anteckningar läsas, läggas till, redigeras och arkiveras. De lagras i fjärrsystemets egen loggbok, så fjärrsystemets operatörer hittar dem också. Varje loggboksvy uppdateras nu också av sig själv när en post ändras, oavsett om den skrevs lokalt, i en webb- eller fjärrklient eller från ett annat system. Den nya punkten `LogBookSync` i Datalagret signalerar ändringen. Se [Fjärrsystemens loggböcker](../modules/logbook/configuring.md#logbooks-of-remote-systems). |
+| **Nya popuper** | Två nya popuper har lagts till bland objektpopuperna. **AlarmLimit** (fliken "Larmgränser") samlar ett objekts larmgränser och fördröjningar på ett ställe: övre och undre gräns, lägesgräns, gångtidsgräns samt fördröjningar för fel och för att inte nå öppet, stängt eller auto. **Reglering** visar och ställer in regulatorparametrar: börvärde, beräknat börvärde, gränser och förskjutning, P-faktor, I-tid, D-tid, samplingstid och dödband (med en andra parameteruppsättning) samt dödzon. Båda byggs från objektets suffixsignaler som övriga popuper, och AlarmLimit har en egen behörighet. |
 
 ### Nya och uppdaterade moduler
 
@@ -70,6 +71,7 @@ Den andra huvudversionen av WideQuick Modular Framework bygger vidare på grunde
 | **Larmutskick**      | Utgående SMS har fått ett kompakt läge. I stället för den fullständiga listan per larm bär ett kompakt meddelande rubriken, händelsetypen och en kommaseparerad lista över de larm som matchar den, vilket håller ett utskick som omfattar många larm inom en rimlig meddelandelängd. Läget ställs in per larmschema. |
 | **Dialogrutan Fråga** | Pop-out-rutan för inmatning accepterar **Enter** som bekräftelse, så ett värde kan skrivas in och bekräftas utan att knappen behöver användas. |
 | **Loggutskrifter**   | Applikations- och felloggarna har städats upp. Schemamigreringar i kalender-, helgdags-, underhålls- och suffixskripten kontrollerar nu om en kolumn finns innan den läggs till, i stället för att försöka ändringen och låta drivrutinen rapportera felet, och en behörighetskontroll kastar inte längre ett fel när den anropas utan behörighet. Flera hundra rader återkommande uppstartsbrus är borta, vilket gör loggarna användbara för att hitta verkliga fel. |
+| **Popupplacering** | Popuper öppnas nu intill det objekt som trycktes och flyttas bara så långt som behövs för att ligga helt inom skärmen. De skalas för skärmen de ligger på, och när man byter flik i en popup ligger den kvar på samma plats på samma skärm. |
 
 ### Rättningar
 
