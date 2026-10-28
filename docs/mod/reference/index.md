@@ -46,7 +46,7 @@ Technical reference material for WideQuick MOD. These pages describe how the sys
 * [**Process**](Popup/Process.md) — Process values and status signals (suffix-dependent).
 * [**Maneuver**](Popup/Maneuver.md) — Operating mode switching and manual setpoint control (suffix-dependent).
 * [**Alarm Limits**](Popup/AlarmLimit.md) — Alarm limits and alarm delays (suffix-dependent).
-* [**Control**](Popup/Reglering.md) — Control-loop parameters such as setpoint and PID values (suffix-dependent).
+* [**Regulate**](Popup/Reglering.md) — Control-loop parameters such as setpoint and PID values (suffix-dependent).
 * [**Time Channel**](Popup/Time-channel.md) — Time-based schedule configuration (suffix-dependent).
 * [**Control Curve**](Popup/Control%20curve.md) — Non-linear control curve editor (suffix-dependent).
 * [**Control Curve Time**](Popup/Control%20curveTime.md) — Time based control curve (suffix-dependent). 

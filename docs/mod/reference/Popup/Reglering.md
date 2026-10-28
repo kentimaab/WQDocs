@@ -1,27 +1,23 @@
 ---
-title: Control
-description: Overview of the Control popup in WideQuick.
+title: Regulate
+description: Overview of the Regulate popup in WideQuick.
 product: mod
 page_type: reference
 status: draft
-last_reviewed: 2026-10-27
+last_reviewed: 2026-10-28
 tags: 
  - MOD
 ---
 <!-- --8<-- [start:body] -->
 
-# Control
+# Regulate
 
-The Control popup shows and sets the control-loop parameters of the selected
+The Regulate popup shows and sets the control-loop parameters of the selected
 object, such as the setpoint and the PID values. It only appears in the Tab menu when
 the object has signals matching one or more of the configured suffix aliases for the
-Control popup. In the Swedish user interface the tab is named **Reglering**.
+Regulate popup. In the Swedish user interface the tab is named **Reglering**.
 
-!!! note
-    Do not confuse this popup with the [Maneuver](Maneuver.md) popup, which also shows
-    **Control** as its heading in the English user interface.
-
-![Control popup](/docs/Images/Popups/Reglering.png)
+![Regulate popup](/docs/Images/Popups/Reglering.png)
 
 ## Setpoint
 
@@ -50,7 +46,7 @@ sequence 2. Only the rows for signals that the object has are shown.
 
 ## Default suffix aliases
 
-The following suffix aliases are configured for the Control popup by default:
+The following suffix aliases are configured for the Regulate popup by default:
 
 | Suffix alias | Suffix | Writable | Description |
 |---|---|---|---|
