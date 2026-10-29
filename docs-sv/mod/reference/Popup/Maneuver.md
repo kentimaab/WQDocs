@@ -65,20 +65,31 @@ Följande suffixaliaser är konfigurerade för BMS-varianten som standard:
 ## Industri-variant { #industry-variant }
 
 <!-- --8<-- [start:industry] -->
+![Manöver-popupen, Industri-varianten](/docs/sv/Images/Popups/ManeuverIndustry.png)
+
 Industri-varianten (`ManoverIndustry.kvie`) är byggd för processutrustning såsom
 pumpar och motorer. Förutom att växla läge låter den operatören ge ett manuellt
 kommando och ett manuellt börvärde, visar varför ett objekt inte kan gå och kan
 blockera ett objekt. Raderna som visas är:
 
-* **Läge** — växlar objektet mellan Auto och Manuell.
-* **Manuellt kommando** och **manuellt börvärde** — värden som operatören anger när
-objektet är i manuellt läge.
-* **Förregling** — en text som förklarar varför objektet inte kan gå just nu.
-Raden är tom när ingen förregling finns.
+* **Status** — ett kort överst som visar objektets aktuella tillstånd.
+* **Driftläge** — växlar objektet mellan Auto och Manuell.
+* **Manuell styrning** — knappar för Av och På för att styra objektet för hand. De
+kan bara användas i Manuellt läge; tills dess anger raden att Manuell måste väljas.
+* **Manuellt börvärde** — det börvärde operatören anger för hand. Det är gråat
+medan objektet är i Auto eller blockerat.
+* **Förregling** — en text som förklarar varför objektet inte kan gå just nu. Den
+visas i orange under **Manuell styrning**, som "Interlock:" följt av orsaken, och
+saknas när ingen förregling finns.
 * **Blockering** — blockerar objektet så att det inte går, varken i Auto eller
-Manuell. En orsak måste anges för att blockera ett objekt, och när blockeringen
-hävs går objektet tillbaka till det läge det hade.
+Manuell. Raden visar om objektet är blockerat. För att blockera anger man en orsak
+och trycker på **Blockera**; en orsak måste anges. Medan objektet är blockerat visar
+raden **Blockerad**, orsaken, användaren som satte blockeringen och tiden, och
+knappen byter till att häva blockeringen. När den hävs går objektet tillbaka till det
+läge det hade.
 * **Statusvärden** — skrivskyddade värden såsom varvtal och effekt.
+
+![Blockeringsraden för ett blockerat objekt](/docs/sv/Images/Popups/ManeuverIndustryBlocked.png)
 
 En styrning är aktiverad endast när användaren har den behörighet som krävs, objektet
 inte är blockerat och, där en låssignal är konfigurerad, objektet är i Manuell.

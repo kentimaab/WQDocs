@@ -65,23 +65,34 @@ The following suffix aliases are configured for the BMS variant by default:
 ## Industry variant { #industry-variant }
 
 <!-- --8<-- [start:industry] -->
+![Maneuver popup, Industry variant](/docs/Images/Popups/ManeuverIndustry.png)
+
 The Industry variant (`ManoverIndustry.kvie`) is built for process equipment such as
 pumps and motors. In addition to switching mode, it lets the operator give a manual
 command and a manual setpoint, shows why an object cannot run, and can block an
 object. The rows it shows are:
 
-* **Mode** — switches the object between Auto and Manuell.
-* **Manual command** and **manual setpoint** — values the operator sets when the
-object is in manual mode.
-* **Interlock** — a text explaining why the object cannot run at the moment. The
-row is empty when there is no interlock.
+* **Status** — a card at the top showing the current state of the object.
+* **Operating mode** — switches the object between Auto and Manual.
+* **Manual control** — Off and On buttons for commanding the object by hand. They
+can only be used in Manual mode; until then the row reads "Select Manual to
+control".
+* **Manual setpoint** — the setpoint the operator sets by hand. It is greyed out
+while the object is in Auto or blocked.
+* **Interlock** — a text explaining why the object cannot run at the moment. It is
+shown in orange under **Manual control**, as "Interlock:" followed by the reason, and
+is absent when there is no interlock.
 * **Blocking** — blocks the object so that it does not run, in either Auto or
-Manuell. A reason must be entered to block an object, and lifting the block
-returns the object to the mode it had.
+Manual. The row shows whether the object is blocked. To block it, enter a cause
+and press **Block**; a cause must be entered. While the object is blocked the row
+shows **Blocked**, the cause, the user who set the block and the time, and the button
+changes to **Unblock**. Unblocking returns the object to the mode it had.
 * **Status values** — read-only values such as speed and power.
 
+![Blocking row of a blocked object](/docs/Images/Popups/ManeuverIndustryBlocked.png)
+
 A control is enabled only when the user has the required privilege, the object is not
-blocked and, where a locking signal is configured, the object is in Manuell.
+blocked and, where a locking signal is configured, the object is in Manual.
 
 The reason, the user and the time of each block are stored in the `object_blocks`
 table in the [Config database](../database-schemas/config-db.md#blocking).
@@ -92,7 +103,7 @@ The following suffix aliases are configured for the Industry variant by default:
 
 | Suffix alias | Suffix | Writable | Description |
 |---|---|---|---|
-| `mode` | `_MODE` | Yes | Operating mode (Auto / Manuell) |
+| `mode` | `_MODE` | Yes | Operating mode (Auto / Manual) |
 | `manualCommand` | `_MANCMD` | Yes | Manual control |
 | `manualSetpoint` | `_MANSP` | Yes | Manual setpoint |
 | `block` | `_BLOCK` | Yes | Blocking |
