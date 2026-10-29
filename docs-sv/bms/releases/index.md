@@ -18,7 +18,6 @@ ramverkets ändringslogg, se [MOD-versioner](../../mod/releases/index.md).
 ## WideQuick BMS 2026.1.2 { #bms-2026-1-2 }
 
 __Utgiven 2026-08-20__
-Modular Framework Version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0)
 <details class="release" markdown="1" open>
 <summary>Versionsnoteringar</summary>
 
@@ -368,7 +367,6 @@ Modular Framework Version: <!-- MOD VERSION LINK -->
 
 ## WideQuick BMS 2026.1.0 { #bms-2026-1-0 }
 __Utgiven 2026-05-21__
-Modular Framework-version: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0) 
 <details class="release" markdown="1" close>
 <summary>Versionsnoteringar</summary>
 

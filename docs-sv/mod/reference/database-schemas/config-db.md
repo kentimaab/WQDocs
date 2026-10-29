@@ -3,7 +3,7 @@ title: Config.db
 product: mod
 page_type: reference
 status: draft
-last_reviewed: 2026-06-16
+last_reviewed: 2026-10-28
 tags:
  - MOD
 ---
@@ -64,6 +64,12 @@ Config-databasen är den centrala konfigurationsdatabasen. Den lagrar beständig
 | Tabell | Beskrivning |
 |---|---|
 | `ObjectList` | Mappar processobjekt till de Arbetsvyer de visas i och deras Datalager-namn. Används av `scObjectFinder` och `scLinking` för att lösa upp objektplatser vid körning. |
+
+## Blockering { #blocking }
+
+| Tabell | Beskrivning |
+|---|---|
+| `object_blocks` | Blockerade objekt, en rad per objekt. Lagrar orsaken, användaren som satte blockeringen och tiden, enligt inmatningen i Manöver-popupen (varianten Industri). Skapas automatiskt vid start på en lokal installation om den saknas. |
 
 ## Styrkurvor { #control-curves }
 

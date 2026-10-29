@@ -21,12 +21,10 @@ rubrik. För det fullständiga ramverkets ändringslogg, se
 
 Släppt 2026-05-20
 
-**Version av Modular Framework**: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0)
-
 <details class="release" markdown="1" open>
 <summary>Versionsinformation</summary>
 
-WWT-konceptet baserat på den andra större versionen av WideQuick Modular Framework. Funktionsuppsättningen är identisk med [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0); WWT skiljer sig endast genom sin egen tematisering och en uppsättning WWT-specifika vyer. De största tillskotten är fullt språkstöd, en loggbok i systemet, en underhållskalender, dokumenthantering och ett betydligt bredare stöd för webb- och fjärrklienter.
+WWT-konceptet baserat på den andra större versionen av WideQuick Modular Framework. WWT skiljer sig endast genom sin egen tematisering och en uppsättning WWT-specifika vyer. De största tillskotten är fullt språkstöd, en loggbok i systemet, en underhållskalender, dokumenthantering och ett betydligt bredare stöd för webb- och fjärrklienter.
 
 ### Nya funktioner
 

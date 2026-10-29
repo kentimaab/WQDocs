@@ -54,6 +54,9 @@ suffix-aliasena:
 * [**Process**](Process.md) — visar processvärden och statussignaler för objektet.
 * [**Manöver**](Maneuver.md) — ger styrningsåtgärder såsom att växla mellan
 driftlägen eller ange manuella värden.
+* [**Larmgränser**](AlarmLimit.md) — visar och ställer in objektets larmgränser och larmfördröjningar.
+* [**Reglering**](Reglering.md) — visar och ställer in regleringsparametrar såsom börvärde och
+PID-värden.
 * [**Tidskanal**](Time-channel.md) — möjliggör att tidsbaserade scheman
 konfigureras för objektet.
 * [**Styrkurva**](Control%20curve.md) — en styrningskurveredigerare för att

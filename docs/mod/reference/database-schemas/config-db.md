@@ -7,7 +7,7 @@ doc_id: DOC-D2
 size: M
 priority: p1
 status: draft
-last_reviewed: 2026-08-25
+last_reviewed: 2026-10-28
 tags: 
  - MOD
 ---
@@ -71,6 +71,12 @@ The Config database is the central configuration database. It stores persistent 
 | Table | Description |
 |---|---|
 | `ObjectList` | Maps process objects to the Workviews they appear in and their Data Store names. Used by `scObjectFinder` and `scLinking` to resolve object locations at runtime. |
+
+## Blocking { #blocking }
+
+| Table | Description |
+|---|---|
+| `object_blocks` | Blocked objects, one row per object. Stores the reason, the user who set the block and the time, as entered in the Maneuver popup (Industry variant). Created automatically at start on a local installation if it does not exist. |
 
 ## Control Curves { #control-curves }
 

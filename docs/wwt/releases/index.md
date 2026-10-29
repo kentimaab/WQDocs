@@ -22,12 +22,10 @@ heading. For the full framework changelog see the
 
 Released 2026-05-20
 
-**Modular Framework Version**: [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0)
-
 <details class="release" markdown="1" open>
 <summary>Release notes</summary>
 
-The WWT concept rebased on the second major release of the WideQuick Modular Framework. Its feature set is identical to [WideQuick MOD 2026.1.0](../../mod/releases/index.md#mod-2026-1-0); WWT differs only in its dedicated theming and a set of WWT-specific views. The headline additions are full multi-language support, an in-system logbook, a maintenance calendar, document handling, and far broader support for web and remote clients.
+The WWT concept rebased on the second major release of the WideQuick Modular Framework. WWT differs only in its dedicated theming and a set of WWT-specific views. The headline additions are full multi-language support, an in-system logbook, a maintenance calendar, document handling, and far broader support for web and remote clients.
 
 ### New features
 
