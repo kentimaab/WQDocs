@@ -17,6 +17,9 @@ tags:
     
     * `scAuditTrail`
     * `scAlert`
+    * `scUsers`
+    * `scToolTip`
+    * `scMaintenance` (för underhållsändringsloggen)
 
 Spårningsloggen registrerar ändringar av valda Datalager-variabler och underhållsuppgifter. Den finns under **Historik → Loggar → Spårningslogg**.
 
@@ -31,7 +34,7 @@ Navigera till **Historik → Loggar → Spårningslogg → Spårningslogg**.
 Loggen visar alla registrerade ändringar med följande kolumner:
 
 * **Tid** — när ändringen gjordes.
-* **Händelse** — det gamla värdet och det nya värdet, visas som `old → new`.
+* **Händelse** — det gamla värdet och det nya värdet, visas som `old -> new`.
 * **Kontext** — den fullständiga variabelsökvägen i Datalager.
 * **Användare** — den inloggade användaren på klienten där ändringen gjordes.
 * **System** — var ändringen gjordes: den lokala applikationen, eller adressen till en webb- eller fjärrklient.
@@ -51,7 +54,7 @@ Använd panelen **Filter** till vänster för att begränsa loggen:
 * **Användare** — filtrera på en specifik användare.
 * **Antal rader** — begränsa hur många poster som visas.
 
-Klicka på **Filter** för att tillämpa. Klicka på **Rensa spårningslogg** för att permanent ta bort alla loggposter.
+Klicka på **Filter** för att tillämpa. Klicka på **Rensa spårningsloggen** för att permanent ta bort alla loggposter. Knappen visas bara för användare med privilegiet `Config`.
 ## Underhållsändringslogg { #maintenance-change-log }
 
 Navigera till **Historik → Loggar → Spårningslogg → Spårningslogg - Underhåll**.

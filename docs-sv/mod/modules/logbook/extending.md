@@ -23,9 +23,11 @@ Dessa behörigheter styr åtkomsten till loggboksoperationer:
 | `Logbook_Archive` | Krävs för att arkivera och återställa poster |
 | `Logbook_Delete` | Krävs för **ta bort alla arkiverade anteckningar** i inställningsvyn |
 | `Logbook_Context` | Krävs för att lägga till, ta bort eller redigera kontexter |
-| `Logbook_View` | Krävs för att se poster |
+| `Logbook_View` | Visar loggboken i huvudmenyn och fliken **Loggbok** i objektpopuper |
 
-Användare utan `Logbook_Add` ser knappområdet **Lägg till** inaktiverat och nedtonat, med ett rött överlager som visar ett meddelande om vilken behörighet som krävs. Egenskapen `Enabled` på knappen är bunden till `scUsers.hasPriv("Logbook_Add")`. Samma mönster gäller för övriga loggboksbehörigheter.
+Användare utan `Logbook_Add` ser knappområdet **Lägg till** inaktiverat och nedtonat, med ett rött överlager som visar ett meddelande om vilken behörighet som krävs. Egenskapen `Enabled` på knappen är bunden till `scUsers.hasPriv("Logbook_Add")`. `Logbook_Edit` och `Logbook_Archive` styr **Redigera anteckning** och **Arkivera anteckning** på samma sätt. `Logbook_Context` döljer knappen **...** bredvid fältet Kontext, och `Logbook_Delete` inaktiverar **Radera alla** i inställningsvyn. Ingen av dessa två har något överlager.
+
+`Logbook_View` verkar genom två inställningar som levereras satta till den. Den är arbetsvybehörigheten för loggboksvyn under **Inställningar → Arbetsvyer → Arbetsvyer - Privilegie**, som låser eller döljer vyns menyval, och **Synlighets privilegie** för kategorin **Loggbok** under **Inställningar → Suffix → Suffixalias - Popuper**, som döljer fliken **Loggbok** i objektpopuper.
 
 Kontrollen görs alltid i det system där loggboken är öppen. Skrivning i ett fjärrsystems loggbok styrs därför av den lokala användarens behörigheter, inte av fjärrsystemets. Se [Skriva i ett fjärrsystems loggbok](configuring.md#writing-to-a-remote-systems-logbook).
 

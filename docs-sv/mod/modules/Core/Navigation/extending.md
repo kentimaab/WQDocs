@@ -136,8 +136,10 @@ else if (type === 'solarcell' || type === 'solar' || type === 'solarpanel' || ty
 }
 ```
 
-Alla **Arbetsvyer** vars namn innehåller `solarcell`, `solar`, `solarpanel` eller
-`solar park` tilldelas motsvarande ikon. Skriptet `scSubNav`
+Alla **Arbetsvyer** vars namn är exakt `solarcell`, `solar`, `solarpanel` eller
+`solar park` tilldelas motsvarande ikon. Jämförelsen görs med `===`, så för att matcha
+namn som bara börjar med eller innehåller en identifierare används `indexOf()` i stället,
+som den befintliga kontrollen `type.indexOf('karta ') === 0` gör. Skriptet `scSubNav`
 konverterar automatiskt **Arbetsvy**-namn till gemener innan jämförelsen görs, så
 skiftläge spelar ingen roll så länge identifierarorden i
 funktionen `selectImage()` är gemener. Variabeln `base` innehåller sökvägen till

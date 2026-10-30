@@ -142,8 +142,9 @@ användaren i ReportController vid generering av rapporten.
     * `$(Report_Reference.to_time)` — Rapportens sluttid.
     * `$(Report_Reference.limit)` — Det maximala antalet händelser.
     * `$(Report_Reference.variable_ref[#])` — Signalen vid index `#`.
-    * `$(System.dateTime)` — Aktuellt datum och tid.
-    * `$(System.user)` — Den aktuella användaren.
+    * `$(_sys_clock_year)`, `$(_sys_clock_month)`, `$(_sys_clock_day)`, 
+    `$(_sys_clock_hour)` och så vidare — Aktuellt datum och tid, en del per cell.
+    * `$(_sys_user_name)` — Den aktuella användaren.
 
     Metabladet är det enda sättet att föra in rapporttiteln angiven av användaren till 
     presentationsbladet. Integratören är fri att inkludera de fält som är relevanta 
@@ -230,16 +231,14 @@ som egenskaper på objektet. Tilldela önskade värden när objektet placeras i 
 
 ### LarmLogger_List { #larmlogger_list }
 `LarmLogger_List`-objektet är en specialiserad version av `LoggerList`, byggd 
-för att visa larm loggade av en loggenhet. Till skillnad från `LoggerList` bygger den automatiskt 
-sitt träd baserat på larmgrupper och utelämnar redundant information. Om till exempel alla 
-larm i loggenheten följer mönstret `AS01.AS01_XXX_XX`, kommer TreeView att visa 
-dem enkelt som `XXX_XX`.
+för att visa larm loggade av en loggenhet. Den bygger sitt träd utifrån larmens sökvägar 
+på samma sätt som `LoggerList`.
 
 Det här objektet har två egenskaper som måste konfigureras:
 
 * **Logger** — Bestämmer vilken loggenhet som TreeView byggs från. Detta bör alltid 
 matcha loggenheten som rapporten frågar mot.
-* **Signals** — Styr hur många signaler som kan väljas för rapporten. Standardvärdet för maximum är 15, och det kan ändras. Se [Ändra maximalt antal signaler som kan väljas](#changing-the-maximum-of-signals-to-be-selected). 
+* **Signals** — Styr hur många signaler som kan väljas för rapporten. Egenskapen har inget standardvärde. `Alarm_Report` lämnar den tom, eftersom listan där är låst, och `Alarm_Report_OneAlarm` sätter den till `1`. Se [Ändra maximalt antal signaler som kan väljas](#changing-the-maximum-of-signals-to-be-selected). 
 Den här egenskapen bör alltid anges till ett numeriskt värde, om inte TreeView är 
 avsiktligt låst.
 
@@ -320,16 +319,24 @@ rapportgenerering. Detta kan enkelt ändras om fler signaler krävs. Navigera f�
 </figure>
 
 Ändra **Max. size** till önskat värde. Klicka på **Apply** och sedan **Ok**. 
-**Report_Reference**-arrayen har nu uppdaterats.
+**Report_Reference**-arrayen har nu uppdaterats. Upprepa samma steg för 
+**Data Types → Arrays → factorArray**, som innehåller skalfaktorerna per signal.
 
 Uppdatera sedan `scReports`-skriptet för att hantera den nya storleken. Leta upp 
-funktionen `createReport()` och ändra värdet `15` till det nya **Max. size**-värdet:
+funktionen `createReport()` och ändra värdet `15` till det nya **Max. size**-värdet, 
+både i signalslingorna och i faktorslingorna:
 
 ``` javascript title="scReports — createReport() — before"
 
 for (var i = 0; i < 15; i++) Report_Reference.variable_ref[i] = "";
 var signals = reportObj.variable_ref.split(',');
 for (var i = 0; i < signals.length && i < 15; i++) Report_Reference.variable_ref[i] = signals[i];
+
+for (var fi = 0; fi < 15; fi++) Report_Reference.factorArray[fi] = 1;
+if (typeof reportObj.factorArray != "undefined" && reportObj.factorArray != "") {
+	var factors = String(reportObj.factorArray).split(',');
+	for (var fi2 = 0; fi2 < factors.length && fi2 < 15; fi2++) Report_Reference.factorArray[fi2] = factors[fi2] * 1;
+}
 
 ```
 
@@ -339,7 +346,23 @@ for (var i = 0; i < YOUR_MAX_VALUE; i++) Report_Reference.variable_ref[i] = "";
 var signals = reportObj.variable_ref.split(',');
 for (var i = 0; i < signals.length && i < YOUR_MAX_VALUE; i++) Report_Reference.variable_ref[i] = signals[i];
 
+for (var fi = 0; fi < YOUR_MAX_VALUE; fi++) Report_Reference.factorArray[fi] = 1;
+if (typeof reportObj.factorArray != "undefined" && reportObj.factorArray != "") {
+	var factors = String(reportObj.factorArray).split(',');
+	for (var fi2 = 0; fi2 < factors.length && fi2 < YOUR_MAX_VALUE; fi2++) Report_Reference.factorArray[fi2] = factors[fi2] * 1;
+}
+
 ```
+
+Ange därefter det nya värdet i egenskapen **Signals** på varje loggerlista som ska 
+tillåta det: objektet `LoggerList` i varje ReportController för energi- och 
+deltarapporterna, samt objekten `LoggerList` och `LoggerList2` på schemamenyns andra 
+sida (`ReportSchedule2`).
+
+Utöka till sist mallarna. De medföljande mallarna har plats för 15 signaler: ett 
+makroanrop per signal på databladet, signalnamnen i `B21:B35` på bladet **Meta** och 
+skalfaktorerna i `B39:B53`. En mall visar de tillkommande signalerna först när den har 
+makroanrop, signalplatser och faktorer för dem.
 
 ## Lägg till en basenhet { #adding-a-base-unit }
 Rapportsystemet känner igen sex fysikaliska storheter, var och en i valfritt SI-prefix:

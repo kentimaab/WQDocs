@@ -81,7 +81,7 @@ The framework ships with the privileges below, defined in `Privileges.kdat`.
 | `AlarmControl` | Acknowledge and block alarms |
 | `Schedules` | Add and edit schedules |
 | `TimeChannels` | Control time channels |
-| `EditUsers` | Edit users |
+| `EditUsers` | Edit users, and the **Require login** and **Require username** settings |
 | `Config` | Configuration actions, including clearing the maintenance log |
 | `editSMTP` | Edit the SMTP configuration |
 | `Debug` | Debugging. Not intended for live applications |
@@ -100,13 +100,18 @@ The framework ships with the privileges below, defined in `Privileges.kdat`.
 | `Maintenance_Add` | Add new maintenance tasks |
 | `Maintenance_Edit` | Edit the status and description of maintenance tasks |
 | `Maintenance_EditExtended` | Edit assignee, priority and deadline |
-| `Maintenance_Templates` | Edit maintenance templates, including recurring task templates |
+| `Maintenance_Templates` | Add and remove recurring maintenance in **Maintenance - Recurring**. Maintenance templates use `Maintenance_Add` and `Maintenance_Edit` |
 | `ControlCurve_ChangeProfile` | Switch between control curve profiles |
 | `ControlCurve_EditProfiles` | Edit control curve profiles |
 | `ControlCurve_ManualControl` | Change control curve values directly |
 | `Settings_Project` | Change general project settings such as language, units, time, SMTP and application name |
-| `Settings_Navigation` | Change navigation settings such as fullscreen mode, direct navigation and login requirements |
+| `Settings_Navigation` | Change navigation settings such as fullscreen menu, direct navigation and showing locked menus |
 | `Settings_Process_Images` | Change process image display settings such as nameplates, font size, decimals and hand symbol |
+| `Setpoints` | Change setpoints and control parameters on signals tagged `PRIV=Setpoints` |
+| `AlarmLimits` | Change alarm limits and alarm delays on signals tagged `PRIV=AlarmLimits` |
+| `ManualCommand` | Put objects in manual mode and give manual commands on signals tagged `PRIV=ManualCommand` |
+| `SystemConfig` | Change sensor calibration and scaling on signals tagged `PRIV=SystemConfig` |
+| `TagInfo` | Reserved for viewing tag information. Defined, but not yet used by any view or signal |
 
 ## Virtual privileges { #virtual-privileges }
 

@@ -28,7 +28,7 @@ Alla tre vyer är byggda på samma diagramkomponent och delar samma kontroller f
 ---
 
 ### [Konfigurera](configuring.md) { #configuring }
-* [**Spåra en signal**](configuring.md#tracking-a-signal) — Hålla diagrammet centrerat på ett rörligt signalvärde.
+* [**Spåra en signal**](configuring.md#tracking-a-signal) — Framhäva en signal i diagrammet.
 * [**Sparade signalgrupper**](configuring.md#saved-signal-groups) — Spara och läsa in namngivna uppsättningar av signaler.
 
 ---

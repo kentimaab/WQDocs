@@ -37,6 +37,8 @@ However, if a separate logger is set up for alarms, the report must be updated a
 [Loggers](../../guides/Loggers.md) for more information.
 * Update the macro call in the report template (see image).
 * Update the view called **Alarm_Report** to reference the new logger.
+* Update the **Logger** property of the `LarmLogger_List` object on the second page of 
+the schedule menu, **Workviews → Pop_Outs → AlarmReports → ReportSchedule2**.
 
 !!! note "Macro"
     The Alarm Report template uses the `alarms` macro, which collects all alarms logged 
@@ -98,6 +100,9 @@ Alarm Report:
 * Set up the new logger.
 * Update the macro calls within the report template.
 * Update the ReportController view.
+* Update the **Logger** property of the matching list on the second page of the schedule 
+menu, **Workviews → Pop_Outs → AlarmReports → ReportSchedule2**: `LoggerList` for the 
+Energy reports, `LoggerList2` for the Delta reports.
 
 ### Changing year span { #changing-year-span }
 The process of changing the year span of the Energy Report requires further manipulation 
@@ -165,6 +170,8 @@ Alarm Report:
 * Set up the new logger.
 * Update the macro calls within the report template.
 * Update the ReportController view.
+* Update the **Logger** property of the `LoggerList` object on the second page of the 
+schedule menu, **Workviews → Pop_Outs → AlarmReports → ReportSchedule2**.
 
 ### Changing week span { #changing-week-span }
 The process of changing the week span follows the same steps as 
@@ -188,20 +195,23 @@ of what day it is produced on.
 
 Selected as **Delta Report Year** in the **Report template** dropdown, the Delta reports 
 show the change between consecutive readings rather than the logged values themselves, 
-which suits meters reporting a continuously increasing total. The Delta Year presents a 
-monthly delta per column, one column per month, with a yearly total, giving one graph per 
-year. By default it covers three years and allows up to 15 signals.
+which suits meters reporting a continuously increasing total. The Delta Year presents the 
+monthly deltas with one row per month and one column per signal, plus a total row and a 
+total column, giving one graph per year. By default it covers three years and allows up 
+to 15 signals.
 
 Two templates exist for this report, differing only in the range of logging intervals 
 they accept. `DeltaYear.xlsx` handles intervals from monthly to daily. `DeltaYear_H.xlsx` 
 extends the range down to hourly, for loggers that record more often than once a day. 
-Which one the report uses is set by its `SourceFile` in `Reports.kdat`.
+Which one the report uses is set by its `SourceFile` in `Reports.kdat`, which points to 
+`DeltaYear_H.xlsx` by default.
 
 !!! warning "Match the row limit to the logging interval"
-    The ReportController's `limit` caps how many rows the report queries. It defaults to 
-    `1200`, which covers three years of daily readings. An hourly logger produces roughly 
-    26 000 readings over the same span, so `limit` has to be raised to match, or the 
-    report will silently read only the oldest part of the period.
+    The ReportController's `limit` caps how many rows the report queries. The Delta Year 
+    ReportController defaults it to `26300`, which covers roughly three years of hourly 
+    readings. The schedule menu (`ReportSchedule2`) sets `1200` instead, which only covers 
+    three years of daily readings, so a scheduled report on an hourly logger will silently 
+    read only the oldest part of the period unless `limit` is raised to match.
 <!-- --8<-- [end:body-1] -->
 
 ![Delta year report controller](/docs/Images/Reports/DeltaYear.png){align=center}
@@ -226,9 +236,9 @@ to the report in `Reports.kdat`.
 ## Delta Week { #delta-week }
 
 The Delta Week follows the same structure as the Delta Year, but presents the deltas on 
-a weekly basis instead of yearly. Selected as **Delta Report Week**, it presents a daily 
-delta per column, one column per weekday, with a weekly total. By default it covers three 
-weeks and allows up to 15 signals.
+a weekly basis instead of yearly. Selected as **Delta Report Week**, it presents the daily 
+deltas with one row per weekday and one column per signal, plus a total row and a total 
+column. By default it covers three weeks and allows up to 15 signals.
 
 Only one template exists for this report, `DeltaWeek.xlsx`, and it handles logging 
 intervals anywhere from hourly to daily.

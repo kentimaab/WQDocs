@@ -111,16 +111,16 @@ for more information.
 ## Navigation
 
 **Show locked menus** — toggles whether menu items that require a privilege are
-visible to unauthenticated users. See
+visible to users who lack that privilege. See
 [Navigation — Configuring](Navigation/configuring.md#setting-privilege-requirements-on-views)
 for more information.
 
 **Show locked submenus** — toggles whether submenu items that require a privilege
-are visible to unauthenticated users. See
+are visible to users who lack that privilege. See
 [Navigation — Configuring](Navigation/configuring.md#setting-privilege-requirements-on-views)
 for more information.
 
-**Fullscreen** — toggles whether the navigation runs in fullscreen mode.
+**Fullscreen menu** — toggles whether the navigation runs in fullscreen mode.
 
 **Direct navigation (map)** — when enabled, clicking a pin object on a map
 navigates directly to its linked **Workview**. When disabled, an information panel

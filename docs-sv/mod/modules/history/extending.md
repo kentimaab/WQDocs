@@ -14,10 +14,10 @@ tags:
 
 ## Öppna vyspecifik historik { #opening-view-specific-history }
 
-Den vyspecifika historikpopupen öppnas från en arbetsvy med hjälp av ett skript. Vyn skickar med sitt eget länknamn så att popupen vet vilka objekt som ska inkluderas:
+Den vyspecifika historikpopupen öppnas från en arbetsvy med hjälp av ett skript. Vyn skickar med sitt eget namn som `linkName` så att popupen vet vilka objekt som ska inkluderas:
 
 ```javascript
-app.popOut.newData = { linkName: view.linkName };
+app.popOut.newData = { linkName: this.view.name };
 app.popOutVisible = true;
 app.popOut.setView("Pop_Outs/VySpecifikHistorik.kvie");
 ```

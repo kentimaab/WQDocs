@@ -16,17 +16,19 @@ tags:
     relaterad funktionalitet som täcks av Loggboksguiderna:
     
     * `scLogBook`
-    * `scDoc`
-    * `scLinking`
     * `scPrototypes`
     * `scThemes`
     * `scAlert`
+    * `scUsers`
+    * `scObjectFinder`
+    * `scSmartPopup`
+    * `scWM`
 
 Loggboken finns i huvudmenyn under **Dokument & Loggbok → Loggbok**.
 
 ## Loggboksvyn { #the-logbook-view }
 
-Loggboksvyn har två paneler. Den vänstra panelen visar ämnesträdet, en hierarkisk lista över alla ämnen som har minst en post. Välj en nod och klicka på **Visa inlägg** för att läsa in alla poster under det ämnet i postlistan till höger. Väljs **Alla ämnen** längst upp i trädet visas samtliga poster.
+Loggboksvyn har två paneler. Den vänstra panelen visar ämnesträdet, en hierarkisk lista över alla ämnen som har minst en post. Välj en nod och klicka på **Visa inlägg** för att läsa in alla poster under det ämnet i postlistan till höger. Väljs **Alla ämnen** längst upp i trädet visas samtliga poster i det här systemet, men inte de anslutna fjärrsystemens.
 
 En vald nod omfattar allt som är placerat under den. Väljs en vynod listas anteckningarna på vyn tillsammans med anteckningarna på de objekt som är ritade i den, vilket gör att en hel anläggningsdel kan granskas i ett steg.
 
@@ -49,7 +51,7 @@ Välj en post och klicka på **Redigera anteckning** för att öppna den för re
 <!-- --8<-- [start:body-2] -->
 ## Byta hur trädet ordnas { #switching-how-the-tree-is-keyed }
 
-Reglaget **Navigera efter arbetsvyer** ovanför trädet växlar mellan de två sätten att ordna samma poster.
+Reglaget **Navigera efter arbetsvyer** under trädet växlar mellan de två sätten att ordna samma poster. I objektpopupen och den vybegränsade loggboken heter samma reglage **Navigera efter System vy**.
 
 * **På, arbetsvyläge** — trädet följer processvyernas mappstruktur, till exempel **System → MySystem → Station1**. Detta läge används när anteckningar söks utifrån en anläggningsdel så som den är ritad i vyerna.
 * **Av, signalläge** — trädet följer taggsökvägen, till exempel **MB → AS01 → Station1**. Detta läge används när anteckningar söks utifrån en specifik tagg, oavsett i vilka vyer den förekommer.
@@ -82,7 +84,7 @@ En post som skapas från en nod i trädet placeras på det noden står för. Ska
 
 Klicka på filterikonen för att öppna panelen **Filtrera loggbok**. Tillgängliga filter:
 
-* **Tidsperiod** — filtrera efter skapandedatum (Skapad från / Skapad till)
+* **Tidsperiod** — filtrera efter skapandedatum (Skapad från / Skapad till). Perioden är som standard de senaste 14 dagarna och tillämpas tillsammans med övriga filter, så flytta **Skapad från** bakåt för att få med äldre poster.
 * **Användare** — visa poster från en specifik användare
 * **Sök** — sök efter text i rubriken, meddelandet eller båda
 * **Sortering** — nyaste först eller äldsta först

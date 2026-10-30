@@ -16,7 +16,7 @@ tags:
 
 Dokument kan kopplas till specifika objekt i projektet. När ett dokument är kopplat till ett objekt blir det tillgängligt på fliken [**Dokument**](../../reference/Popup/Documents.md) i objektets popup.
 
-Navigera till **Dokument → Objektreferenser** för att hantera kopplingar.
+Navigera till **Dokument & Loggbok → Dokument → Dokument - Objektreferenser** för att hantera kopplingar.
 <!-- --8<-- [end:body-1] -->
 
 ![Vy för objektreferenser](/docs/sv/Images/Documents/documents-objects-references.png){align=center}
@@ -33,7 +33,7 @@ Ett dokument kan kopplas till flera objekt. Samma objekt kan ha flera dokument k
 
 ## Objektpopup { #object-popup }
 
-Varje objekt i projektet har en flik [**Dokument**](../../reference/Popup/Documents.md) tillgänglig via sin popup. Öppna popupen genom att klicka på ett objekt och välja fliken **Dokument**. Här visas alla dokument som är kopplade till det specifika objektet. Välj ett dokument och klicka på **Öppna** för att öppna en förhandsgranskning direkt i popupen.
+Varje objekt i projektet har en flik [**Dokument**](../../reference/Popup/Documents.md) tillgänglig via sin popup. Öppna popupen genom att klicka på ett objekt och välja fliken **Dokument**. Här visas alla dokument som är kopplade till det specifika objektet. Välj ett dokument och klicka på **Förhandsgranska** för att öppna en förhandsgranskning direkt i popupen.
 <!-- --8<-- [end:body-2] -->
 
 ![Dokumentfliken i objektpopupen](/docs/sv/Images/Documents/documents-object-popup.png){align=center}

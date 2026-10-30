@@ -100,7 +100,8 @@ gräns överskrids anpassar menyn sig automatiskt på två sätt:
 * **Kolumnspill:** om en enskild kolumn överskrider det maximala antalet rader visas
 en **Mer...**-knapp längst ned i den kolumnen. Ett klick på den gör mappen högst upp i kolumnen till navigationens nya utgångspunkt, så att användaren kan bläddra i dess innehåll.
 * **Sidspill:** om det finns för många toppnivåkataloger för att få plats på en enda
-sida visas en navigeringspil i det övre vänstra hörnet för att navigera till nästa sida.
+sida visas en navigeringspil i det övre högra hörnet för att navigera till nästa sida,
+bredvid en sidräknare. En tillbakapil går tillbaka till föregående sida.
 
 Tillsammans gör dessa två mekanismer att helskärmsmenyn kan skalas till system av valfri storlek. Oavsett hur många vyer eller kataloger ett projekt innehåller förblir menyn navigerbar.
 <!-- --8<-- [end:body-4] -->

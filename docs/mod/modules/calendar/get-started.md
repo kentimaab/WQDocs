@@ -10,6 +10,8 @@ scripts:
   - scCalendar
   - scDayViewManager
   - scWeekViewManager
+  - scHoliday
+  - scFilePicker
 tags: 
  - MOD
 ---
@@ -23,6 +25,8 @@ tags:
     * `scCalendar`
     * `scDayViewManager`
     * `scWeekViewManager`
+    * `scHoliday`
+    * `scFilePicker`
     * `scMaintenance`
     * `scNav`
     * `scSubNav`
@@ -94,14 +98,13 @@ The upcoming events list shows the next events and maintenance deadlines sorted 
 New events can be created in two ways:
 
 * Click **+** in the top bar to open the **Add/Edit Calendar Event** popup directly.
-* In **Week** or **Day** view, click once on the time grid to set the start time, then click again to set the end time. The popup opens with Start and End pre-filled.
+* In **Week** or **Day** view, click once on the time grid to set the start time, then click again to set the end time. The popup opens with Start and End pre-filled. This does not work on the web client. Use **+** there.
 
 Fill in the fields:
 
 * **Title** — a short label shown on the event.
 * **Start** and **End** — the date and time of the event. Can be adjusted after opening the popup.
-* **Color** — sets the display color of the event in the calendar. **HOLIDAY** and **HOLIDAYEVE** also mark the day, see below.
-* **Category** — groups the event under a named category.
+* **Category** (color) — sets the display color of the event in the calendar. **HOLIDAY** and **HOLIDAYEVE** also mark the day, see below.
 * **Description** — optional additional details.
 
 Click **Save** to add the event to the calendar.
@@ -115,5 +118,5 @@ See [Holidays and Holiday Eves](configuring.md#holidays-and-holiday-eves).
 ## Next Steps { #next-steps }
 
 * [Configuring](configuring.md) — editing events, maintenance colors and reminder settings
-* [Extending](extending.md) — troubleshooting
+* [Extending](extending.md) — reminder configuration, holiday variables, subscription storage and script reference
 <!-- --8<-- [end:body-5] -->

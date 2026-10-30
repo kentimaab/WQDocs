@@ -20,7 +20,7 @@ geometriska former som representerar fysiska komponenter såsom motorer, pumpar,
 och givare. De är byggstenarna för att skapa anpassade processobjekt.
 
 **Färdigkopplade symboler** finns i objektbiblioteken **DAMPERS**, **MOTORS**,
-**SENSORS**, **VALVES** och **OTHERS**. Dessa är helt förkonfigurerade objekt som
+**SENSORS**, **VALVES** och **OTHER**. Dessa är helt förkonfigurerade objekt som
 kombinerar en grundläggande symbol med ett `DynTouch`-objekt, värdevisningar och
 statusindikatorer. I de flesta fall är färdigkopplade symboler den rekommenderade
 startpunkten eftersom de bara kräver en taggkoppling för att fungera direkt.
@@ -67,7 +67,7 @@ anpassade objekt.
 Använd grundläggande symboler när de förkonfigurerade färdigkopplade symbolerna
 inte passar dina behov och du vill bygga ett helt anpassat objekt. I de flesta fall
 är de färdigkopplade symbolerna i biblioteken **DAMPERS**, **MOTORS**, **SENSORS**,
-**VALVES** och **OTHERS** den rekommenderade startpunkten.
+**VALVES** och **OTHER** den rekommenderade startpunkten.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
 
@@ -319,13 +319,13 @@ till exempel `75 %`, kopplad till suffixaliaset `analogOutputValue`
 * **Statusindikatorer** — cirklar som visar aktiva tillstånd
 * **Namnetikett** — visar objektnamnet
 
-## OTHERS {#others}
+## OTHER {#others}
 
-Objektbiblioteket **OTHERS** innehåller förkonfigurerade objekt för komponenter
+Objektbiblioteket **OTHER** innehåller förkonfigurerade objekt för komponenter
 som inte passar in i de övriga fyra kategorierna. Varje objekt levereras med ett
 `DynTouch`-objekt och relevanta visningar. Det kopplas till taggar via egenskaperna **Connection**, **Device**, **Sys** och **ObjectName** på `DynTouch`-objektet.
 
-![OTHERS library](/docs/sv/Images/Symbol_Libraries/other_library.png)
+![OTHER library](/docs/sv/Images/Symbol_Libraries/other_library.png)
 
 Följande objekt finns tillgängliga:
 

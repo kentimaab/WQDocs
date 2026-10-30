@@ -31,7 +31,7 @@ All three views are built on the same chart component and share the same control
 ---
 
 ### [Configuring](configuring.md) { #configuring }
-* [**Tracking a Signal**](configuring.md#tracking-a-signal) — Keeping the chart centred on a moving signal value.
+* [**Tracking a Signal**](configuring.md#tracking-a-signal) — Highlighting one signal in the chart.
 * [**Saved Signal Groups**](configuring.md#saved-signal-groups) — Saving and loading named sets of signals.
 
 ---

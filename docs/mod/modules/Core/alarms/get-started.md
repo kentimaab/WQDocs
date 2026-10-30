@@ -38,7 +38,7 @@ If `scRemoteAlarms` is running and remote systems are connected, alarms from tho
 <!-- --8<-- [start:body-2] -->
 ### Alarm - Overview { #alarm-overview }
 
-The **Alarm - Overview** gives a broader picture of alarm activity. A bar chart shows the number of alarms per day over the last seven days, broken down by alarm class. A pie chart shows the distribution of alarm classes among currently active alarms, with a top-five list of the most frequent alarms. A stats panel on the right shows the current active alarm counts and historical totals for the last 30 days, year to date, and last year.
+The **Alarm - Overview** gives a broader picture of alarm activity. A bar chart shows the number of alarms per day over the last seven days, broken down by alarm class. A pie chart shows the distribution of alarm classes among currently active alarms, with a top-five list of the most frequent alarms. A stats panel on the right shows the current active alarm counts and historical totals for the last 30 days, year to date, and the last 365 days.
 <!-- --8<-- [end:body-2] -->
 
 ![Alarm - Overview](/docs/Images/Alarms/alarm-overview.png){align=center}
@@ -60,17 +60,17 @@ The **Alarm - Log** is a historical record of all alarm events, showing alarm cl
 <!-- --8<-- [start:body-5] -->
 Alarm history can also be exported as a report. See [Reports](../../reports/configuring.md#alarm-report).
 
-### Alarms - Frequency { #alarms-frequency }
+### Alarm - Frequency { #alarms-frequency }
 
-**Alarms - Frequency** lists all alarms ranked by how often they have triggered over a selected time period. Each row shows the total active time and the frequency count alongside the alarm name, text, and class. This helps identify persistent or frequently recurring alarms that may need attention.
+**Alarm - Frequency** lists all alarms ranked by how often they have triggered over a selected time period. Each row shows the total active time and the frequency count alongside the alarm name, text, and class. This helps identify persistent or frequently recurring alarms that may need attention.
 <!-- --8<-- [end:body-5] -->
 
-![Alarms - Frequency](/docs/Images/Alarms/alarm-frequency.png){align=center}
+![Alarm - Frequency](/docs/Images/Alarms/alarm-frequency.png){align=center}
 
 <!-- --8<-- [start:body-6] -->
 ## Acknowledging alarms { #acknowledging-alarms }
 
-Alarms are acknowledged from the **Alarm - List**. Select an alarm and click **Acknowledge**, or use the acknowledge action directly on the row.
+Alarms are acknowledged from the **Alarm - List**. Select an alarm and click **Ack**, or use the acknowledge action directly on the row. **Ack all** acknowledges all alarms, including those from connected remote systems. Both buttons require the `AlarmControl` privilege.
 
 Each alarm has an acknowledgement rule that controls when it can be acknowledged:
 

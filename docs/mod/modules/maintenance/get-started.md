@@ -83,13 +83,13 @@ From **Maint. - List**, click **Create**. From the object popup, click **New mai
 <!-- --8<-- [start:body-6] -->
 Fill in the following fields:
 
-* **Object** — select the object this task belongs to from the dropdown. Pre-filled when opening from an object popup.
+* **Object** — select the object this task belongs to from the dropdown. The dropdown only lists objects that already have tasks, so any other object must be typed in. Pre-filled when opening from an object popup.
 * **Type of Maintenance** — select a template to pre-fill priority, deadline and description. All fields can still be edited after selecting.
 * **Priority** — Critical, High, Normal or Low.
 * **Maintenance deadline** — either a specific date or a number of days from now.
 * **Create multiple** — toggle on to create a series of tasks in one go, each spaced by a set interval. When enabled, two additional fields appear:
     * **Repeat every** — the interval between tasks (number + unit: Day/Week/Month/Year).
-    * **Number of times** / **End date** — either set how many tasks to create, or an end date.
+    * **Number of times** / **End date** — either set how many more tasks to create after the first one, or an end date.
 * **Assigned worker** — optionally assign the task to a responsible user.
 * **Description** — pre-filled from the selected template. Can be edited freely before saving.
 

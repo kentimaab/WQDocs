@@ -85,7 +85,7 @@ The view has three panels. The left panel lists all configurations. The middle p
 6. Set the **Repeat interval** as a number and a unit (Day/Week/Month/Year).
 7. Set the **Start date** for the first task.
 8. In the **Object** panel on the right, check all objects this configuration should apply to.
-9. Optionally enable **Auto-create next maintenance on missed deadline**.
+9. **Auto-create next maintenance on missed deadline** is enabled by default for a new configuration. Disable it if a missed task should not generate the next instance.
 10. Confirm that **Status (active)** is toggled on.
 11. Click **Save**. The first task is created immediately and appears in **Maint. - List** with the status **Planned**.
 
@@ -130,7 +130,7 @@ When a recurring task is marked as complete, the system automatically creates th
 | Done - Delayed | The task was completed but after the deadline had passed. |
 
 !!! note
-    **Missed** and **Done - Delayed** are set by the system and cannot be selected manually. When editing a task, only **Planned**, **Done** and **Stopped** are available as user-selectable statuses.
+    **Missed** and **Done - Delayed** are set by the system and cannot be selected manually. When editing a task, **Planned**, **Done** and **Stopped** are available as user-selectable statuses. A **Missed** task can only be kept as **Missed** or set to **Done**, and a **Done** task can no longer change status.
 
 Tasks that appear in the Calendar module are color-coded by status. The color reference is under [Maintenance Events](../calendar/configuring.md#maintenance-events) in the Calendar module.
 

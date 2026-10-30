@@ -60,6 +60,7 @@ The default email format looks like this:
 ---------------------------------------------------------------------------
 | Schedule: My Schedule
 | Subject: My Subject
+| Event: Alarm acknowledged (active)
 ---------------------------------------------------------------------------
 | ------------------------------------------------------------------------
 | | Name: AS01.Station1_PV01_IO
@@ -68,11 +69,19 @@ The default email format looks like this:
 | |
 | | Alarm class: 1
 | |
+| | Alarm text: My alarm text
+| |
 | | Description: My alarm description
+| |
+| | Acknowledged by: Operator
 | ------------------------------------------------------------------------
 |
 ---------------------------------------------------------------------------
 ```
+
+**Description** is only included when the alarm has one, and **Acknowledged by** only
+when a user is known. When the schedule reacts to all events, the **Event** line is
+written for each alarm instead of in the header.
 
 Each line in the email is built by adding text to a message variable using `+=`.
 This means the integrator can change the labels, add new lines of plain text, or
@@ -80,7 +89,7 @@ remove lines they do not need. For example, to change the **Alarm class** label 
 **Priority**, locate the following line in the `writeMail()` function:
 
 ```javascript title="writeMail() function in scAlarmSender script — before"
-msg += "| | Larmklass: " + alarm.severity + "\n"
+msg += "| | " + Language.translate("Translations.klib", "Larmklass") + ": " + alarm.severity + "\n"
 ```
 
 And change it to:
@@ -89,14 +98,23 @@ And change it to:
 msg += "| | Priority: " + alarm.severity + "\n"
 ```
 
-The four available alarm fields that can be included in the message are:
+The labels are passed through `Language.translate()`, so a label can also be changed
+without editing the script by changing its translation. See
+[Editing Individual Translations](../../../guides/languages.md#editing-translations).
+A translation applies everywhere the same source text is used.
+
+The available alarm fields that can be included in the message are:
 
 | Field | Description |
 |---|---|
 | `alarm.name` | The name of the alarm |
 | `alarm.timestamp` | The date and time the alarm was triggered |
 | `alarm.severity` | The alarm class |
-| `alarm.text` | The alarm description |
+| `alarm.text` | The alarm text |
+| `alarm.description` | The alarm description. Empty if the alarm has none |
+| `alarm.eventType` | The event: `active`, `acknowledged`, `unacknowledged` or `inactive` |
+| `alarm.username` | The user behind the event, if known |
+| `alarm.active` | `true` if the alarm is active |
 
 Plain text can also be added freely anywhere in the message. For example, to add a
 footer, add the following line before the closing separator:
@@ -122,7 +140,10 @@ license. See [Send SMS with Teltonika](../../../../plug-in/teltonika/oversikt.md
 ### Configuring the modem { #configuring-the-modem }
 
 The modem is configured in **WideQuick® Runtime**. Navigate to
-**Settings → GSM Settings** to open the configuration dialog.
+**Settings → Advanced settings → GSM Modem** and click **Change GSM settings** to open
+the configuration dialog. The advanced settings require the `Debug` privilege. While GSM
+is switched on, the dialog can also be opened with **Configure** in the **SMTP and GSM**
+section of **Alarm - Schedule**.
 
 ![GSM modem settings](/docs/Images/Alarms/alarm-gsm-settings.png){align=center}
 
@@ -138,8 +159,9 @@ Enter the connection parameters from the device's data sheet:
 | **Flow control** | Flow control method |
 | **Pin** | SIM card PIN, if required |
 
-Enable **GSM Modem Active** and click **Save**. If the configuration is correct the
-indicator turns green.
+Click **Save**. If the configuration is correct the **GSM Modem Active** indicator turns
+green. GSM itself is switched on and off with the **GSM Modem** toggle on the same tile in
+**Settings**.
 
 !!! note "Requirements"
     SMS notifications require `scModem` to be running in addition to `scAlarmSender`.
@@ -147,32 +169,39 @@ indicator turns green.
 ### Customize SMS
 
 The SMS notification follows the same pattern as the email and can be customized by
-editing the `writeSMS()` function in the `scAlarmSender` script. The same four alarm
-fields are available: `alarm.name`, `alarm.timestamp`, `alarm.severity` and
-`alarm.text`. Labels can be changed or plain text added in the same way.
+editing the `writeSMS()` function in the `scAlarmSender` script. The same alarm fields
+are available. Labels can be changed or plain text added in the same way.
 
 The default SMS format looks like this:
 
 ```
 Schedule: My Schedule
-Subject: My Subject
+Title: My Subject
+Event: Alarm acknowledged (active)
 Name: AS01.Station1_PV01_IO
 Timestamp: 2026-05-29 12:00:00
 Alarm class: 1
+Alarm text: My alarm text
 Description: My alarm description
+Acknowledged by: Operator
 ```
+
+With **Compact mode** switched on for the schedule, the SMS contains only the title and,
+for each event, the names of the matching alarms. A schedule whose `sms_truncated`
+column is set to `1` sends only the number of new alarms. This option has no setting in
+the views.
 
 For example, to change the **Name** label to **Signal**, locate the following line
 in the `writeSMS()` function:
 
 ```javascript title="writeSMS() function in scAlarmSender script — before"
-msg += "Namn: " + alarm.name + "\n"
+msg += Language.translate("Translations.klib", "Namn") + ": " + Language.translate("Translations.klib", alarm.name) + "\n"
 ```
 
 And change it to:
 
 ```javascript title="writeSMS() function in scAlarmSender script — after"
-msg += "Signal: " + alarm.name + "\n"
+msg += "Signal: " + Language.translate("Translations.klib", alarm.name) + "\n"
 ```
 
 !!! note

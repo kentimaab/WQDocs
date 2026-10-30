@@ -8,6 +8,8 @@ status: draft
 last_reviewed: 2026-08-25
 scripts:
   - scAuditTrail
+  - scUsers
+  - scToolTip
 tags: 
  - MOD
 ---
@@ -19,7 +21,11 @@ tags:
     related functionality covered in the Audit Trail guides:
     
     * `scAuditTrail`
+    * `scUsers`
+    * `scToolTip`
     * `scAlert`
+
+`scMaintenance` is also needed for the maintenance change log.
 
 The Audit Trail records changes to selected DataStore variables and maintenance tasks. It is available under **History → Logs → Audit Trail**.
 
@@ -34,7 +40,7 @@ Navigate to **History → Logs → Audit trail → Audit trail**.
 The log shows all recorded changes with the following columns:
 
 * **Time** — when the change occurred.
-* **Event** — the old value and new value, shown as `old → new`.
+* **Event** — the old value and new value, shown as `old -> new`.
 * **Context** — the full variable path in the Data Store.
 * **User** — the user logged in on the client where the change was made.
 * **System** — where the change was made: the local application, or the address of a web or remote client.
@@ -54,7 +60,7 @@ Use the **Filter** panel on the left to narrow down the log:
 * **User** — filter by a specific user.
 * **Number of rows** — limit how many entries are shown.
 
-Click **Filter** to apply. Click **Clear audit trail** to permanently delete all log entries.
+Click **Filter** to apply. Click **Clear audit trail** to permanently delete all log entries. The button is only shown to users with the `Config` privilege.
 ## Maintenance Change Log { #maintenance-change-log }
 
 Navigate to **History → Logs → Audit trail → Audit Trail - Maintenance**.

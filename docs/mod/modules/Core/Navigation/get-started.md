@@ -105,7 +105,8 @@ limit is exceeded, the menu adapts automatically in two ways:
 navigation to the folder at the top of that column, allowing the user to browse its 
 contents.
 * **Page overflow:** if there are too many top-level directories to fit on a single 
-page, a navigation arrow appears in the top left corner to navigate to the next page.
+page, a navigation arrow appears in the top right corner to navigate to the next page,
+next to a page counter. A Back arrow returns to the previous page.
 
 Together these two mechanisms allow the Fullscreen Menu to scale to systems of any size. However many views or directories a project contains, the menu stays navigable.
 <!-- --8<-- [end:body-4] -->

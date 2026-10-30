@@ -45,7 +45,7 @@ För att förstå hur en widget hanterar signaler, egenskaper eller layout dubbe
 
 ### Ange visningsbehörigheter { #setting-view-privileges }
 
-Visningsbehörigheter begränsar vilka användare som har åtkomst till en given dashboard. Ange dem vid körning genom att navigera till **Huvudmeny → Inställningar → Arbetsvy Privileges**. Välj Arbetsvyn från trädet till vänster och ange sedan den nödvändiga behörighetsnivån i listrutan **Privilege** till höger.
+Visningsbehörigheter begränsar vilka användare som har åtkomst till en given dashboard. Ange dem vid körning genom att navigera till **Huvudmeny → Inställningar → Arbetsvyer → Arbetsvyer - Privilegie**. Välj Arbetsvyn från trädet till vänster och ange sedan den nödvändiga behörighetsnivån i listrutan **Privilege** till höger. Klicka på **Spara** för att lagra ändringen. Inget lagras förrän du klickar på **Spara**.
 <!-- --8<-- [end:body-1] -->
 
 ![arbetsvy privileges](/docs/sv/Images/Dashboard/WVPriv.png){align=center}
@@ -53,15 +53,15 @@ Visningsbehörigheter begränsar vilka användare som har åtkomst till en given
 <!-- --8<-- [start:body-2] -->
 ### Ange standardvy per roll { #setting-default-view-per-role }
 
-För att ange en annan standarddashboard per roll lägger du till logiken i `onLoad`-skriptet för Arbetsvyn `Workspace.kvie` i **WideQuick® Designer**. Använd `_sys_user_name` för att matcha en specifik användare eller `System.currentUser().hasPrivilege()` för att matcha en behörighetsnivå.
+För att ange en annan standarddashboard per roll lägger du till logiken i `onLoad`-skriptet för Arbetsvyn `WORKSPACE.kvie` i **WideQuick® Designer**. Använd `_sys_user_name` för att matcha en specifik användare eller `System.currentUser().hasPrivilege()` för att matcha en behörighetsnivå.
 
-```javascript title="Workspace.kvie — onLoad"
+```javascript title="WORKSPACE.kvie — onLoad"
 app.MultiViewer = this.MultiviewerPage;
 if (_sys_user_name == "Admin"){
     app.MultiViewer.setView("Main_Menu/Dashboards & Kartor/Dashboard/Dashboard Larm.kvie");
 }
 if (System.currentUser().hasPrivilege("Config")){
-    app.MultiViewer.setView("Main_Menu/Dashboards & Kartor/Dashboard/Dashboard.kvie");
+    app.MultiViewer.setView("Main_Menu/Dashboards & Kartor/Dashboard/Dashboard Larm.kvie");
 }
 ```
 

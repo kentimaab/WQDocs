@@ -64,8 +64,18 @@ The **Settings** panel controls how the chart looks and how often it updates.
 | Show ruler | Toggles a vertical ruler line that follows the cursor. |
 | Scale Y-axes | Enables auto-scaling of all Y-axes to fit the visible data. |
 
-**Time interval** sets how much history is shown:
+**Time interval** sets how much history is shown. When the ruler is shown, the interval is centred on the ruler. Otherwise it ends at the current time.
 
+| Button | Description |
+|---|---|
+| 30 s | Shows 30 seconds |
+| 5 min | Shows 5 minutes |
+| 1 h | Shows 1 hour |
+| 6 h | Shows 6 hours |
+| 1 day | Shows 1 day |
+| 7 days | Shows 7 days |
+| 14 days | Shows 14 days |
+| 30 days | Shows 30 days |
 
 **Update interval** sets how often the chart refreshes with new data:
 
@@ -84,7 +94,7 @@ The **SpeedDial** menu on process views includes a button that opens a view-spec
 ![View-specific history popup](/docs/Images/History/history-view-specific.png){align=center}
 
 <!-- --8<-- [start:body-4] -->
-Signal selection, time controls, settings and saved signal groups work the same way. Saved signal groups in this popup are stored per view and are separate from project-wide saved groups. Saved groups from other views can also be imported with **Import groups from views**. See [Importing Groups from Other Views](configuring.md#importing-groups-from-other-views).
+Signal selection, time controls, settings and saved signal groups work the same way. Saved signal groups in this popup are stored per view and are separate from project-wide saved groups. The signals of project-wide groups and of groups saved in other views can also be fetched with **Get signals from other groups**. See [Importing Groups from Other Views](configuring.md#importing-groups-from-other-views).
 
 Since the view-specific History only shows signals belonging to the current view, signals from other views can be brought in with **Import signals**.
 <!-- --8<-- [end:body-4] -->
@@ -98,7 +108,7 @@ Since the view-specific History only shows signals belonging to the current view
 2. Expand the tree in the **Available** panel to find the signal to add.
 3. Select a signal and click **→** to move it to the **Selected** panel.
 4. Repeat for each signal to add.
-5. Click **Import and close**. The signals are added to the signal list and can be selected and applied to the chart.
+5. Click **Import and close**. The signals are added to the signal list already selected. Click **Apply** to plot them.
 
 To remove a signal from the selection before importing, select it in the **Selected** panel and click **←**. Click **Clear added** to empty the right panel entirely.
 

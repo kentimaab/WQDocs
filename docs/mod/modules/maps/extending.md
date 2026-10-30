@@ -24,8 +24,8 @@ This section assumes familiarity with the basics of the Maps & Indicators module
 ## Connecting Alarm to Map View { #connecting-alarm-to-map-view }
 
 An **Alarm** object can be connected to a **Map View** so that it filters alarms
-based on which status pins or cluster pins are currently visible. This gives the
-user both a full system overview and station-specific control.
+based on which pins with a **linkedView** are currently visible. Cluster pins are not
+counted. This gives the user both a full system overview and station-specific control.
 
 First, add the following onLoad script to the **Workview** containing both the
 **Map View** and the **Alarm** object. This enables all system alarms in the alarm
@@ -56,6 +56,15 @@ this.view.goToCurrentAlarm = function () {
     string of all alarm group names in the system. It does not need to be configured
     manually. The last lines make the alarm list's GoTo work, also on the web client.
     See [GoTo in custom alarm views](../Core/Navigation/extending.md#goto-in-custom-alarm-views).
+
+Also add the following onUnload script to the same **Workview**. It clears the
+references when the view closes, so that `scMap` does not keep updating a view that is
+no longer open:
+
+```javascript title="Workview — onUnload"
+scMap.alarmList = null;
+scMap.mapView = null;
+```
 
 Next, the **Map View** onLoad script already handles alarm list updates if an
 `scMap.alarmList` is set. Make sure the **Map View** onLoad script is configured
@@ -134,7 +143,7 @@ app.MultiViewer.setView(this.linkedView);
 
 #### Linking to a directory
 To link an indicator to a directory, add a **linkedView** property and set its value
-to a directory path such as `System/Videdal`. When clicked, the Fullscreen Menu will
+to a directory path such as `System/VA/Källby`. When clicked, the Fullscreen Menu will
 open at that directory, allowing the user to navigate to the desired **Workview**.
 
 ```javascript title="Custom indicator — onClick (directory)"
@@ -142,21 +151,35 @@ var _parts = this.linkedView.split("/");
 var root = _parts[0];
 var dir = _parts[_parts.length - 1];
 app._subNavTarget = { root: root, dir: dir };
+
+if (app._subnav && app._subnav[root]) {
+    app._subnav.active = root;
+    var folders = _parts.slice(1);
+    app._subnav[root].select(folders[0], true);
+    for (var level = 1; level < folders.length; level++) {
+        app._subnav[root].select(folders[level], false);
+    }
+}
+
+if (app._subNavPopupActive && typeof app._subNavPopupRefresh === 'function') {
+    app._subNavPopupRefresh(root);
+} else {
+    app.MultiViewer.setView("SubNavPopup.kvie");
+}
 ```
 
-!!! note
-    Directory linking requires the Fullscreen Menu to be available. See the [Navigation](../Core/Navigation/get-started.md) module for more information.
 
 #### Linking to a specific object
 To link an indicator directly to a specific object, add a **targetObject** property
-and set its value to the name of the target object. Then add the following onClick
-script:
+and set its value to the tag name of the target object, as listed in the `Object` column
+of the `ObjectList` table. Then add the following onClick script:
 
 ```javascript title="Custom indicator — onClick (object)"
 scLinking.goTo(this.targetObject);
 ```
 
 This will navigate to the **Workview** containing the target object and highlight it.
+If the tag is drawn in more than one **Workview**, a popup opens to choose which one.
 For more information, see [GoTo](../Core/Navigation/extending.md#goto) in the Navigation module.
 
 !!! tip
@@ -166,14 +189,15 @@ For more information, see [GoTo](../Core/Navigation/extending.md#goto) in the Na
 
 ### Pin Status { #pin-status }
 
-The `PinStatus` object is the most complex of the built-in indicators. It does two
-things automatically when linked to a **Workview**:
+The `pinStatus` object is the most complex of the built-in indicators. It does two
+things automatically when linked to a **Workview** or a folder of **Workviews**:
 
 * **Alarm counting** — queries the database for all alarms connected to the linked
 **Workview** and listens for changes. The result is reflected in the `alarmCount`
 property of the pin.
-* **Status colour** — queries all objects in the linked **Workview** and maps their
-suffix signals to a status level using the `scSuffix` script. The pin circle colour
+* **Status colour** — queries the objects in the linked **Workview** that have alarms
+(rows in the `AlarmObjects` table) and maps their suffix signals to a status level
+using the `scSuffix` script. The pin circle colour
 updates automatically to reflect the highest active status:
 
 | Status | Colour |
@@ -183,13 +207,14 @@ updates automatically to reflect the highest active status:
 | Active / OK | Green |
 | No status | Grey |
 
-The status mapping is configured in the `scSuffix` script through the
-`suffixObj.Views` object, which defines which object suffixes correspond to which
-status category. This does not need to be modified when creating a custom indicator.
+The status mapping is configured in **Settings → Suffix → Suffix - Alarms** and stored
+in `SuffixConfig.db`. Each category there lists its object suffixes, and the category's
+**Color ref.** decides which status level they map to. This does not need to be
+modified when creating a custom indicator.
 
 !!! tip "Recommendation"
     Rather than building a custom status indicator from scratch, it is strongly
-    recommended to copy the existing `PinStatus` object and modify it as needed. The script is tightly coupled to the `scSuffix` script and the database
+    recommended to copy the existing `pinStatus` object and modify it as needed. The script is tightly coupled to the `scSuffix` script and the database
     structure, making it complex to replicate correctly. Copying ensures all the
     existing logic is preserved while allowing full visual customisation.
 
@@ -213,7 +238,7 @@ or type.
 #### Making a custom indicator cluster-aware
 
 For a custom indicator to be picked up as a child by the clustering system, it needs
-a `status` property. For the built-in `PinStatus` object this is managed automatically by its script, which updates `status` through a `DataStoreListener` whenever the linked **Workview** changes state.
+a `status` property. For the built-in `pinStatus` object this is managed automatically by its script, which updates `status` through a `DataStoreListener` whenever the linked **Workview** changes state.
 
 For a custom indicator, `status` must be maintained by a script. The value should
 follow the same status hierarchy used by the built-in indicators:

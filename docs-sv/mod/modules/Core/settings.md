@@ -60,8 +60,9 @@ information.
 **Anslutna klienter** — visar antalet för tillfället anslutna fjärrklienter.
 Klicka på **Visa anslutna klienter** för att se en lista över aktiva anslutningar.
 
-**Schema** — WideQuick:s inbyggda schemaläggningssystem, som kontrolleras var 5:e minut för att
-starta konfigurerade schemalagda uppgifter såsom rapportgenerering. Klicka på **Redigera
+**Schema** — WideQuick:s inbyggda schemaläggningssystem, som startar konfigurerade
+schemalagda uppgifter såsom rapportgenerering. Varje schema har sitt eget intervall. Bara
+`ReportSchedules`, som letar efter rapporter som ska skapas, körs var 5:e minut. Klicka på **Redigera
 schema** för att konfigurera scheman.
 
 ---
@@ -110,17 +111,17 @@ för mer information.
 
 ## Navigering
 
-**Visa låsta menyer** — växlar huruvida menyalternativ som kräver en behörighet är
-synliga för oautentiserade användare. Se
+**Visa låsta menyknappar** — växlar huruvida menyalternativ som kräver en behörighet är
+synliga för användare som saknar behörigheten. Se
 [Navigering — Konfigurering](Navigation/configuring.md#setting-privilege-requirements-on-views)
 för mer information.
 
-**Visa låsta undermenyer** — växlar huruvida undermenyalternativ som kräver en behörighet
-är synliga för oautentiserade användare. Se
+**Visa låsta submenyknappar** — växlar huruvida undermenyalternativ som kräver en behörighet
+är synliga för användare som saknar behörigheten. Se
 [Navigering — Konfigurering](Navigation/configuring.md#setting-privilege-requirements-on-views)
 för mer information.
 
-**Helskärm** — växlar huruvida navigationen körs i helskärmsläge.
+**Fullskärmsmeny** — växlar huruvida navigationen körs i helskärmsläge.
 
 **Direktnavigering (karta)** — när aktiverat navigerar ett klick på ett nålobjekt på en karta
 direkt till dess länkade **Arbetsvy**. När inaktiverat visas först en informationspanel

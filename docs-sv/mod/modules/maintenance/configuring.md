@@ -84,7 +84,7 @@ Vyn har tre paneler. Den vänstra panelen listar alla konfigurationer. Den melle
 6. Ange **Upprepningsintervall** som ett antal och en enhet (Dag/Vecka/Månad/År).
 7. Ange **Startdatum** för den första uppgiften.
 8. I **Objekt**-panelen till höger, markera alla objekt som konfigurationen ska gälla för.
-9. Aktivera eventuellt **Skapa nästa underhåll automatiskt vid missad deadline**.
+9. **Skapa nästa underhåll automatiskt vid missad deadline** är aktiverat som standard för en ny konfiguration. Inaktivera det om en missad uppgift inte ska generera nästa instans.
 10. Bekräfta att **Status (aktiv)** är aktiverad.
 11. Klicka på **Spara**. Den första uppgiften skapas omedelbart och visas i **Underhåll - Lista** med statusen **Planerad**.
 
@@ -129,7 +129,7 @@ När en återkommande uppgift markeras som slutförd skapar systemet automatiskt
 | Klar - Försenad | Uppgiften slutfördes men efter att deadline hade passerat. |
 
 !!! note
-    **Missad** och **Klar - Försenad** sätts av systemet och kan inte väljas manuellt. Vid redigering av en uppgift är endast **Planerad**, **Klar** och **Stoppad** tillgängliga som användarvalbara statusar.
+    **Missad** och **Klar - Försenad** sätts av systemet och kan inte väljas manuellt. Vid redigering av en uppgift är **Planerad**, **Klar** och **Stoppad** tillgängliga som användarvalbara statusar. En **Missad** uppgift kan bara behållas som **Missad** eller sättas till **Klar**, och en uppgift som är **Klar** kan inte längre byta status.
 
 Uppgifter som visas i Kalender-modulen är färgkodade efter status. Färgreferensen finns under [Underhållshändelser](../calendar/configuring.md#maintenance-events) i Kalender-modulen.
 

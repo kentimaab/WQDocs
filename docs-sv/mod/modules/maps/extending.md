@@ -54,6 +54,15 @@ this.view.goToCurrentAlarm = function () {
     De sista raderna gör att larmlistans GoTo fungerar, även på webbklienten. Se
     [GoTo i egna larmvyer](../Core/Navigation/extending.md#goto-in-custom-alarm-views).
 
+Lägg också till följande onUnload-skript i samma **Arbetsvy**. Det rensar referenserna
+när vyn stängs, så att `scMap` inte fortsätter att uppdatera en vy som inte längre är
+öppen:
+
+```javascript title="arbetsvy — onUnload"
+scMap.alarmList = null;
+scMap.mapView = null;
+```
+
 Nästa steg: onLoad-skriptet för **Kartvyn** hanterar redan uppdateringar av larmlistan
 om `scMap.alarmList` är satt. Se till att onLoad-skriptet för **Kartvyn** är konfigurerat
 enligt följande:
@@ -131,7 +140,7 @@ app.MultiViewer.setView(this.linkedView);
 
 #### Länka till en katalog
 För att länka en indikator till en katalog, lägg till en **linkedView**-egenskap och sätt dess värde
-till en katalogsökväg som `System/Videdal`. Vid klick öppnas helskärmsmenyn
+till en katalogsökväg som `System/VA/Källby`. Vid klick öppnas helskärmsmenyn
 på den katalogen, vilket gör att användaren kan navigera till önskad **Arbetsvy**.
 
 ```javascript title="Custom indicator — onClick (directory)"
@@ -139,20 +148,35 @@ var _parts = this.linkedView.split("/");
 var root = _parts[0];
 var dir = _parts[_parts.length - 1];
 app._subNavTarget = { root: root, dir: dir };
+
+if (app._subnav && app._subnav[root]) {
+    app._subnav.active = root;
+    var folders = _parts.slice(1);
+    app._subnav[root].select(folders[0], true);
+    for (var level = 1; level < folders.length; level++) {
+        app._subnav[root].select(folders[level], false);
+    }
+}
+
+if (app._subNavPopupActive && typeof app._subNavPopupRefresh === 'function') {
+    app._subNavPopupRefresh(root);
+} else {
+    app.MultiViewer.setView("SubNavPopup.kvie");
+}
 ```
 
-!!! note
-    Kataloglänkning kräver att helskärmsmenyn är tillgänglig. Se modulen [Navigation](../Core/Navigation/get-started.md) för mer information.
 
 #### Länka till ett specifikt objekt
 För att länka en indikator direkt till ett specifikt objekt, lägg till en **targetObject**-egenskap
-och sätt dess värde till namnet på målobjektet. Lägg sedan till följande onClick-skript:
+och sätt dess värde till målobjektets taggnamn, som det står i kolumnen `Object` i
+tabellen `ObjectList`. Lägg sedan till följande onClick-skript:
 
 ```javascript title="Custom indicator — onClick (object)"
 scLinking.goTo(this.targetObject);
 ```
 
 Det navigerar till den **Arbetsvy** som innehåller målobjektet och markerar det.
+Om taggen finns i fler än en **Arbetsvy** öppnas en popup där användaren väljer vilken.
 För mer information, se [GoTo](../Core/Navigation/extending.md#goto) i modulen Navigation.
 
 !!! tip
@@ -163,13 +187,14 @@ För mer information, se [GoTo](../Core/Navigation/extending.md#goto) i modulen 
 
 ### Pinnstatus { #pin-status }
 
-`PinStatus`-objektet är det mest komplexa av de inbyggda indikatorerna. Det gör automatiskt
-två saker när det länkas till en **Arbetsvy**:
+`pinStatus`-objektet är det mest komplexa av de inbyggda indikatorerna. Det gör automatiskt
+två saker när det länkas till en **Arbetsvy** eller en mapp med **Arbetsvyer**:
 
 * **Larmräkning** — frågar databasen efter alla larm kopplade till den länkade
 **Arbetsvy** och lyssnar på ändringar. Resultatet återspeglas i pinnens `alarmCount`-egenskap.
-* **Statusfärg** — frågar alla objekt i den länkade **Arbetsvy** och mappar deras
-suffixsignaler till en statusnivå med hjälp av skriptet `scSuffix`. Pinncirkelns färg
+* **Statusfärg** — frågar de objekt i den länkade **Arbetsvy** som har larm (rader i
+tabellen `AlarmObjects`) och mappar deras suffixsignaler till en statusnivå med hjälp av
+skriptet `scSuffix`. Pinncirkelns färg
 uppdateras automatiskt för att återspegla den högsta aktiva statusen:
 
 | Status | Färg |
@@ -179,13 +204,14 @@ uppdateras automatiskt för att återspegla den högsta aktiva statusen:
 | Aktiv / OK | Grön |
 | Ingen status | Grå |
 
-Statusmappningen konfigureras i skriptet `scSuffix` via
-objektet `suffixObj.Views`, som definierar vilka objektsuffix som motsvarar vilken
-statuskategori. Det behöver inte ändras när en anpassad indikator skapas.
+Statusmappningen konfigureras under **Inställningar → Suffix → Suffixalias - Larm** och
+sparas i `SuffixConfig.db`. Varje kategori där listar sina objektsuffix, och kategorins
+**Färgreferens** avgör vilken statusnivå de motsvarar. Det behöver inte ändras när en
+anpassad indikator skapas.
 
 !!! tip "Rekommendation"
     Snarare än att bygga en anpassad statusindikator från grunden rekommenderas det starkt
-    att kopiera det befintliga `PinStatus`-objektet och anpassa kopian efter behov. Skriptet är tätt kopplat till skriptet `scSuffix` och databasstrukturen,
+    att kopiera det befintliga `pinStatus`-objektet och anpassa kopian efter behov. Skriptet är tätt kopplat till skriptet `scSuffix` och databasstrukturen,
     vilket gör det komplext att replikera korrekt. Kopiering säkerställer att all
     befintlig logik bevaras och tillåter samtidigt full visuell anpassning.
 
@@ -208,7 +234,7 @@ eller en specifik typ.
 #### Göra en anpassad indikator klustermedveten
 
 För att en anpassad indikator ska plockas upp som ett underordnat element av klustringssystemet
-behöver den en `status`-egenskap. För det inbyggda `PinStatus`-objektet hanteras detta automatiskt av dess skript, som uppdaterar `status` via en `DataStoreListener` när den länkade **Arbetsvyn** ändrar tillstånd.
+behöver den en `status`-egenskap. För det inbyggda `pinStatus`-objektet hanteras detta automatiskt av dess skript, som uppdaterar `status` via en `DataStoreListener` när den länkade **Arbetsvyn** ändrar tillstånd.
 
 För en anpassad indikator måste `status` underhållas av ett skript. Värdet ska
 följa samma statushierarki som används av de inbyggda indikatorerna:

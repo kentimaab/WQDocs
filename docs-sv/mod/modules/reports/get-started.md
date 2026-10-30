@@ -64,8 +64,8 @@ För att hantera rapporter i **WideQuick® Runtime**, navigera till
 **Historik → Rapporter → Rapporter - Lista**. Den här sidan visar en lista över alla
 genererade rapporter med två kolumner:
 
-* **Rapport** — Rapportens namn, som standard Larmrapport \[#\] där \[#\]
-anger genereringsnumret.
+* **Rapport** — Rapportens namn, som standard mallens namn följt av
+genereringsnumret, till exempel `Alarm_Report1`.
 * **Tidsstämpel** — Datum och tid då inspelningen avslutas.
 
 Från den här sidan kan rapporter skapas, tas bort eller skickas som e-postbilagor. Att skicka
@@ -132,7 +132,8 @@ och deltarapporter, eftersom de kräver historiska data från den tidpunkten och
 [här](configuring.md#changing-year-span) för konfiguration.
 * **Till** — Slutdatum för inspelningsperioden.
 * **LoggerList** — Visar de signaler som är tillgängliga i den valda loggern. Låst för
-larmrapporter, eftersom de inkluderar alla signaler automatiskt. På energi- och
+**Larmrapport**, eftersom den inkluderar alla signaler automatiskt. I **Larmrapport ett larm**
+är listan aktiv, och exakt ett larm måste väljas. På energi- och
 deltakontrollerna är den dessutom låst till dess att en enhet har valts, och listar sedan
 endast de signaler som mäts i den enheten. Se [Enheter och prefix](#units-and-prefixes).
 * **Antal händelser** — Det maximala antalet händelser att inkludera. För energirapporter
@@ -141,13 +142,14 @@ detta i onLoad-skriptet.
 * **Enhet** och **Prefix** — Den enhet rapporten presenteras i. Finns endast på energi- och
 deltakontrollerna. Larmrapporter har ingen enhet. Se
 [Enheter och prefix](#units-and-prefixes) nedan.
-* **Rapportfilformat** — Rapportens utdataformat: antingen PDF eller PDF och XLSM.
+* **Rapportfilformat** — Rapportens utdataformat: antingen **PDF** eller **PDF och Excel**.
 * **Rapportstatus** — Visar rapportens aktuella status, inklusive
 slutförande eller eventuella fel.
 
 !!! note "Minst en signal måste vara vald"
     En rapport kan inte skapas förrän minst en signal har valts i **LoggerList**. Detta
-    gäller inte larmrapporter, som inkluderar alla signaler automatiskt.
+    gäller inte **Larmrapport**, som inkluderar alla signaler automatiskt.
+    **Larmrapport ett larm** kräver att exakt ett larm är valt.
 
 När den väl har genererats läggs rapporten till i rapportlistan där den kan förhandsgranskas.
 
@@ -161,12 +163,12 @@ som standard med ett individuellt diagram per vecka och en treveckorssammanfattn
 
 **Deltarapport år** och **Deltarapport vecka** visar förändringen mellan efterföljande
 avläsningar i stället för de loggade värdena i sig, vilket passar mätare som rapporterar
-en kontinuerligt ökande totalsumma. Deltarapport år presenterar ett månadsdelta per
-kolumn, en kolumn per månad, och täcker tre år som standard. Deltarapport vecka
-presenterar ett dagsdelta per kolumn, en kolumn per veckodag, och täcker tre veckor.
-Ingen av dem är bunden till ett enda loggningsintervall: Deltarapport år hanterar
-intervall från månad till dag, eller ned till timme med den alternativa mallen, och
-Deltarapport vecka från timme till dag. För detaljerad konfiguration av varje
+en kontinuerligt ökande totalsumma. Deltarapport år presenterar månadsdeltana med en
+rad per månad och en kolumn per signal, och täcker tre år som standard. Deltarapport
+vecka presenterar dagsdeltana med en rad per veckodag och en kolumn per signal, och
+täcker tre veckor. Ingen av dem är bunden till ett enda loggningsintervall: Deltarapport
+år hanterar intervall från månad ned till timme med sin standardmall, och Deltarapport
+vecka från timme till dag. För detaljerad konfiguration av varje
 rapporttyp, se [Konfigurera](configuring.md).
 
 ## Enheter och prefix { #units-and-prefixes }
@@ -236,8 +238,11 @@ till höger. Observera att den andra sidan ändras beroende på den valda
 
 </div>
 
-Den andra sidan speglar rapportkonfigurationen som beskrivs i föregående avsnitt,
-inklusive väljarna **Enhet** och **Prefix**. En schemalagd rapport lagrar därför samma
+Den andra sidan innehåller rapportinställningarna: **Titel i Rapport**,
+**Data från x dagar bakåt**, **Antal händelser**, signallistan och, för energi- och
+deltarapporterna, väljarna **Enhet** och **Prefix**. Den har inga fält för **Från** eller
+**Till**. Varje körning täcker det angivna antalet dagar bakåt från den tidpunkt då
+rapporten skickas. En schemalagd rapport lagrar samma
 visningsenhet och skalfaktorer per signal som en rapport som skapas manuellt, så att en
 schemalagd och en manuell körning av samma konfiguration ger samma värden.
 
@@ -278,7 +283,8 @@ Nedan finns beskrivningar av alternativen på den första och tredje sidan:
     för att lägga till det som mottagare.
     * **Mottagarlista** — Visar den fullständiga listan över mottagare och anger om
     varje post är en e-postadress eller ett alias.
-    * **Rapportfilformat** — Formatet i vilket rapporten skickas: PDF eller Excel.
+    * **Rapportfilformat** — Formatet i vilket rapporten skickas: **PDF** eller
+    **PDF och Excel**.
 
 ## Nästa steg { #next-steps }
 

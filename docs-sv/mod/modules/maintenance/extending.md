@@ -18,7 +18,7 @@ Underhållsuppgifter med kommande deadlines visas automatiskt som händelser i k
 
 Kalendern läser uppgifter från underhållsdatabasen och visar dem utifrån deras deadline-datum. Uppgifter med status **Done**, **Done - Delayed** eller **Removed** exkluderas.
 
-En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppgifts deadline. Standardförskjutningen för påminnelser är 3 dagar. Förskjutningen och påminnelseväxeln per mall kan båda konfigureras via ett skript. Se [Påminnelsekonfiguration](../calendar/extending.md#reminder-configuration) i Kalender-modulen.
+En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppgifts deadline. Standardförskjutningen för påminnelser är 3 dagar, och förskjutningen kan konfigureras via ett skript. Påminnelser slås på per mall med kryssrutan **Skapa en påminnelse 3 dagar innan** i **Underhåll - Mallar**. En uppgift vars mall har rutan avmarkerad får ingen påminnelse, och nya mallar skapas med rutan avmarkerad. Se [Påminnelsekonfiguration](../calendar/extending.md#reminder-configuration) i Kalender-modulen.
 <!-- --8<-- [end:body-1] -->
 
 ![Underhållsuppgifter synliga som händelser i kalendervyn](/docs/sv/Images/Maintenance/maintenance-in-calendar.png){align=center}

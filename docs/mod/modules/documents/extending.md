@@ -24,8 +24,8 @@ Access to document actions is controlled by privileges. Buttons that require a p
 | Privilege | Controls |
 |---|---|
 | `Documents_Upload` | **Add document**: upload local files and add online resources |
-| `Documents_Edit` | **Edit selected document**: rename documents |
+| `Documents_Edit` | **Edit selected document**: rename documents and change the URL of online resources |
 | `Documents_Delete` | **Delete document**: permanently remove a document |
 | `Documents_Sync` | **Sync with local files on server**: sync the document list with the server filesystem |
-| `Documents_Link` | Linking and unlinking documents from within the object popup |
+| `Documents_Link` | **Edit document links** and **Delete document link**: linking and unlinking documents, both in **Docs - Object Refs** and in the object popup |
 <!-- --8<-- [end:body-2] -->

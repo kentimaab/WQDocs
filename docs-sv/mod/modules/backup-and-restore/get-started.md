@@ -23,7 +23,7 @@ Funktionen Säkerhetskopiering och återställning sparar de aktuella värdena f
 
 Variabelträdet visar Datalager-variabler som är tillgängliga för säkerhetskopiering: interna variabler och loggade signaler från processvyer. Systemvariabler med prefixet `_sys_` är undantagna. Alla variabler med ett värde av typen sträng, tal eller boolesk kan säkerhetskopieras.
 
-En säkerhetskopia fångar värdena för de valda variablerna vid det tillfälle **Skapa säkerhetskopia** klickas. Det är en ögonblicksbild. Värden som ändras efter att säkerhetskopian skapats spåras inte.
+En säkerhetskopia fångar värdena för de valda variablerna så som de lästes när vyn öppnades eller när uppdateringsknappen senast klickades, inte vid det tillfälle **Skapa säkerhetskopia** klickas. Klicka på uppdatera först för att fånga de senaste värdena. Det är en ögonblicksbild. Värden som ändras efter att säkerhetskopian skapats spåras inte.
 
 ## Skapa en säkerhetskopia { #creating-a-backup }
 

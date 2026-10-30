@@ -43,7 +43,7 @@ System.themes.color("Symbol_Alarm")
 
 ## Module-specific color palettes { #module-specific-color-palettes }
 
-In addition to the M3 roles that make up the main theme, WideQuick MOD includes a number of separate color palettes used by specific modules. These palettes appear under the theme variant in **WideQuick® Designer** and can be edited the same way as other theme colors, but the light/dark toggle does not affect them. They apply regardless of which theme is active.
+In addition to the M3 roles that make up the main theme, WideQuick MOD includes a number of separate color palettes used by specific modules. These palettes are their own top-level entries under **Themes** in **WideQuick® Designer**, alongside the themes themselves, and can be edited the same way as other theme colors, but the light/dark toggle does not affect them. They apply regardless of which theme is active.
 
 | Palette | Module | What it controls |
 |---|---|---|

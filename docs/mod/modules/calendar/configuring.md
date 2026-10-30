@@ -23,7 +23,7 @@ When creating or editing an event, a color can be selected from a fixed set of o
 
 **Editing an event:**
 
-Click an existing event to open the **Add/Edit Calendar Event** popup. All fields can be updated. Click **Save** to apply the changes.
+In **Week** or **Day** view, click an existing event to open the **Add/Edit Calendar Event** popup. All fields can be updated. Click **Save** to apply the changes.
 
 **Deleting an event:**
 
@@ -33,11 +33,11 @@ Open the event and click **Remove**. This removes the event permanently.
 
 ## Maintenance Events { #maintenance-events }
 
-Maintenance deadlines from the [Maintenance module](../maintenance/index.md) are automatically shown in the calendar. They are read-only and cannot be edited or deleted from the calendar. Changes must be made in **Maint. - List**.
+Maintenance deadlines from the [Maintenance module](../maintenance/index.md) are automatically shown in the calendar. They are not edited as calendar events. Changes are made to the maintenance task, either in **Maint. - List** or through **Open editing** in the calendar.
 
 Each maintenance event is displayed on the day of its deadline. The color is set automatically based on the task's current status and cannot be chosen manually. These colors are defined in the **MaintenanceColors** theme in `Themes.kdat` and are separate from the colors used for custom calendar events.
 
-Clicking a maintenance event opens a popup showing the object, status, deadline and maintenance type. Click **Open editing** to navigate directly to that task in **Maint. - List**.
+Clicking a maintenance event opens a popup showing the object, status, deadline and maintenance type. Click **Open editing** to open the task's edit popup directly over the calendar. Saving there updates the calendar.
 
 | Status | Color |
 |---|---|
@@ -56,7 +56,7 @@ Reminders are enabled by default for tasks created without a template. Tasks cre
 
 ## Holidays and Holiday Eves { #holidays-and-holiday-eves }
 
-A day is marked as a holiday by creating an ordinary calendar event on it and choosing the colour **HOLIDAY**. A holiday eve is marked the same way with **HOLIDAYEVE**. No separate dialog or import is involved.
+A day is marked as a holiday by creating an ordinary calendar event on it and choosing the colour **HOLIDAY**. A holiday eve is marked the same way with **HOLIDAYEVE**. A whole imported calendar can also be marked, with **Change category** in **Edit calendars**. See [Managing Imported Calendars](#managing-imported-calendars).
 
 The event is snapped to whole days when it is saved, because a day either is a holiday or is not. A start and end time entered on the grid is widened to cover the days the event touches.
 
@@ -75,7 +75,7 @@ The calendar publishes today's classification to two internal variables in the D
 
 Both are plain boolean variables and can be connected to an output the same way as any other value, so a PLC or DUC can read the day type and run its own schedules accordingly. The classification is a property of the day, so one pair of variables serves every schedule rather than each time channel carrying its own copy.
 
-The variables are written at startup and refreshed on each sync. Marking a day in the calendar therefore takes effect on that day without further action.
+The variables are written at startup and refreshed by the hourly poll and by **Sync**. Marking a day ahead of time therefore needs no further action, but marking today only takes effect at the next poll, or at once with **Sync**.
 
 !!! note "The calendar classifies the day, the PLC decides what to do"
     The hand-off reports only which day type applies today. Which outputs change, and when, stays with the PLC's own schedule logic.
@@ -93,21 +93,23 @@ An import is rejected if its name or its path matches one that already exists. T
 
 <!-- --8<-- [start:body-2] -->
 !!! warning "An imported file is read once"
-    A file is read at import and is not re-checked afterwards. Editing or replacing the `.ics` file on disk does not update the calendar. Import the file again to pick up the new content.
+    A file is read at import and is not re-checked afterwards. Editing or replacing the `.ics` file on disk does not update the calendar. Importing the same file again is rejected as a duplicate, so remove the import in **Edit calendars** first, then import the file again. The new import starts with the default name, colour and filter setting.
 
     A database carried over from a build that had the plugin can still hold subscriptions of those types. They are skipped during a sync and a note is written to the log. Their events remain in the calendar until the subscription is removed.
 
 ## Managing Imported Calendars { #managing-imported-calendars }
 
-**Edit** opens **Edit calendars**, which lists every import with its name and type. Select one to **Rename** it, **Remove** it, or pick a colour from the combo box and click **Change colour**. Removing an import deletes its events from the calendar. Events created directly in the calendar are not affected.
+**Edit** opens **Edit calendars**, which lists every import with its name and type. Select one to **Rename** it, **Remove** it, or pick a colour from the combo box and click **Change category**. Removing an import deletes its events from the calendar. Events created directly in the calendar are not affected.
 
 Imports are created with the **DEFAULT** colour.
+
+Changing an import to **HOLIDAY** or **HOLIDAYEVE** asks for confirmation, then marks every event of the import as a holiday or holiday eve and converts the events to whole days. The conversion is permanent. Changing the category back removes the marking, but the events stay whole-day.
 <!-- --8<-- [end:body-2] -->
 
 ![Edit calendars dialog](/docs/Images/Calendar/edit-calendars.png){align=center}
 
 <!-- --8<-- [start:body-3] -->
-**Sync** re-reads every import immediately. Since a file import is read at import time, this matters mainly for tidying up an existing database rather than for picking up new content.
+**Sync** redraws the calendar and refreshes `isHoliday` and `isHolidayEve` at once. It does not re-read imported files.
 
 ### Choosing Which Calendars Are Shown { #choosing-which-calendars-are-shown }
 
@@ -121,9 +123,9 @@ Tick the calendars to show and click **Apply**.
 
 ## Exporting a Calendar { #exporting-a-calendar }
 
-**Export** opens **Export calendar**. Tick which calendars to include, then either **Generate** to write an `.ics` file, or **Send by e-mail** to send the export as an attachment.
+**Export** opens **Export calendar**. Tick which calendars to include, then click **Generate** to write an `.ics` file, and optionally **Send by e-mail** to send it as an attachment. **Send by e-mail** is available only after **Generate**, and only when SMTP is configured.
 
-**Own/internal events** is listed alongside the imports, so the events created directly in the calendar can be included or left out independently. Holiday and holiday eve events are part of that group, so a marked year can be exported and carried to another installation.
+**Own/internal events** is listed alongside the imports, so the events created directly in the calendar can be included or left out independently. Holiday and holiday eve events are part of that group, but the export does not keep them marked. Imported into another installation, the events get the **DEFAULT** colour and mark no days until the import is changed to **HOLIDAY** or **HOLIDAYEVE** with **Change category**. That marks every event of the import the same way, so holidays and holiday eves only arrive correctly marked when they travel in separate files.
 <!-- --8<-- [end:body-4] -->
 
 ![Export calendar dialog](/docs/Images/Calendar/export-calendar.png){align=center}

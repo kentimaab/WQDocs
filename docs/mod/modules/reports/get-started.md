@@ -67,8 +67,8 @@ To manage reports in **WideQuick® Runtime**, navigate to
 **History → Reports → Reports - List**. This page displays a list of all 
 generated reports with two columns:
 
-* **Report** — The name of the report, defaulting to Alarm Report \[#\] where \[#\] 
-indicates the generation number.
+* **Report** — The name of the report, defaulting to the template name followed by the 
+generation number, for example `Alarm_Report1`.
 * **Timestamp** — The date and time at which the recording ends.
 
 From this page, reports can be created, removed, or sent as email attachments. Sending 
@@ -135,21 +135,24 @@ Reports and Delta Reports, as they require historical data from that point onwar
 * **Unit** and **Prefix** — The unit the report is presented in. Present on the Energy 
 and Delta controllers only. Alarm reports carry no unit. See 
 [Units and prefixes](#units-and-prefixes) below.
-* **LoggerList** — Displays the signals available in the selected logger. Locked for 
-Alarm Reports, as they include all signals automatically. On the Energy and Delta 
-controllers it also stays locked until a unit is chosen, and then lists only the signals 
-measured in that unit. See [Units and prefixes](#units-and-prefixes).
+* **LoggerList** — Displays the signals available in the selected logger. Locked for the 
+**Alarm Report**, as it includes all signals automatically. In the 
+**Alarm Report One Alarm** the list is enabled, and exactly one alarm must be selected. On 
+the Energy and Delta controllers it also stays locked until a unit is chosen, and then 
+lists only the signals measured in that unit. See [Units and prefixes](#units-and-prefixes).
 * **Number of events** — The maximum number of events to include. For Energy 
 Reports, this defaults to the number of hourly events in the selected time period. In 
 Delta Reports, this is handled in the onLoad script.
-* **Report file format** — The output format of the report: either PDF or PDF and XLSM.
+* **Report file format** — The output format of the report: either **PDF** or 
+**PDF and Excel**.
 * **Report status** — Displays the current status of the report, including 
 completion or any errors.
 
 !!! note "At least one signal must be selected"
     A report cannot be created until at least one signal has been selected in the 
-    **LoggerList**. This does not apply to Alarm Reports, which include all signals 
-    automatically.
+    **LoggerList**. This does not apply to the **Alarm Report**, which includes all 
+    signals automatically. The **Alarm Report One Alarm** needs exactly one alarm 
+    selected.
 
 Once generated, the report is added to the report list where it can be previewed.
 
@@ -163,12 +166,13 @@ by default with an individual graph per week and a three week summary.
 
 The **Delta Report Year** and **Delta Report Week** reports show the change between
 consecutive readings rather than the logged values themselves, which suits meters
-reporting a continuously increasing total. Delta Year presents a monthly delta per
-column, one column per month, and covers three years by default. Delta Week presents a
-daily delta per column, one column per weekday, and covers three weeks. Neither is tied
-to a single logging interval: Delta Year accepts intervals from monthly to daily, or down
-to hourly with the alternative template, and Delta Week from hourly to daily. For
-detailed configuration of each report type, see [Configuring](configuring.md).
+reporting a continuously increasing total. Delta Year presents the monthly deltas with
+one row per month and one column per signal, and covers three years by default. Delta
+Week presents the daily deltas with one row per weekday and one column per signal, and
+covers three weeks. Neither is tied to a single logging interval: Delta Year accepts
+intervals from monthly down to hourly with its default template, and Delta Week from
+hourly to daily. For detailed configuration of each report type, see
+[Configuring](configuring.md).
 
 
 ## Units and prefixes { #units-and-prefixes }
@@ -238,8 +242,10 @@ appear on the right. Note that the second page changes depending on the selected
 
 </div>
 
-The second page mirrors the report configuration described in the previous section, 
-including the **Unit** and **Prefix** pickers. A scheduled report therefore stores the 
+The second page holds the report settings: **Title in Report**, **Data from x days back**, 
+**Number of events**, the signal list and, for the Energy and Delta reports, the **Unit** 
+and **Prefix** pickers. It has no **From** or **To**. Each run covers the set number of 
+days back from the time the report is sent. A scheduled report stores the 
 same display unit and per-signal scale factors as a report created by hand, so a 
 scheduled run and a manual run of the same configuration produce the same values.
 
@@ -280,7 +286,8 @@ Below are descriptions of the options on the first and third pages:
     to add it as a recipient.
     * **List of Recipients** — Shows the full list of recipients, indicating whether 
     each entry is an email address or an alias.
-    * **Report file format** — The format in which the report is sent: PDF or Excel.
+    * **Report file format** — The format in which the report is sent: **PDF** or 
+    **PDF and Excel**.
 
 ## Next Steps { #next-steps }
 

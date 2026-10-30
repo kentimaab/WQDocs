@@ -30,7 +30,7 @@ En post som är kopplad till en vy eller ett objekt kan ändå ha en egen sökv�
 
 ## Hur de två träden byggs { #how-the-two-trees-are-built }
 
-Samma poster ordnas på två sätt, och reglaget ovanför trädet växlar mellan dem. Inget av lägena filtrerar bort något.
+Samma poster ordnas på två sätt, och reglaget under trädet växlar mellan dem. Inget av lägena filtrerar bort något.
 
 ### Arbetsvyläge { #workview-mode }
 
@@ -99,7 +99,7 @@ Det är också den enda loggboken som visar anslutna fjärrsystem, vart och ett 
 
 ### Objektpopup { #object-popup }
 
-Varje objekt i projektet har en flik [**Loggbok**](../../reference/Popup/Logbook.md) i sitt popup-fönster. När fliken öppnas markeras objektet i trädet och dess poster listas. Nya poster som skapas härifrån placeras automatiskt på objektet.
+Varje objekt i projektet har en flik [**Loggbok**](../../reference/Popup/Logbook.md) i sitt popup-fönster, som visas för användare med behörigheten `Logbook_View`. När fliken öppnas markeras objektet i trädet och dess poster listas. Nya poster som skapas härifrån placeras automatiskt på objektet.
 
 Resten av trädet är fortfarande nåbart, så en anteckning på ett angränsande objekt eller på den omgivande vyn kan läsas utan att popup-fönstret lämnas. Poster kan läggas till och redigeras härifrån. Arkivering erbjuds endast i den globala loggboken, eftersom det är där arkiverade poster kan visas igen och återställas. Arkiverade poster listas aldrig i ett objektpopup.
 <!-- --8<-- [end:body-2] -->

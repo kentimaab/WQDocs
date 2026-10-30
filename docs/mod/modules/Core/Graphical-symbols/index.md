@@ -36,7 +36,7 @@ compressors, fans, pumps, frequency converters, and revolving heat exchangers.
 standard, dual, differential, digital, and outdoor sensors.
 * [**VALVES**](Symbols.md#valves) — Pre-configured two-way and three-way
 valve objects in four orientations.
-* [**OTHERS**](Symbols.md#others) — Pre-configured objects for energy
+* [**OTHER**](Symbols.md#others) — Pre-configured objects for energy
 meters, flow meters, service couplers, timers, pushbuttons, and expansion vessels.
 
 ---

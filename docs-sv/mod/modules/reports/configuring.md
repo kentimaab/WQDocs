@@ -35,6 +35,8 @@ Om en separat logger konfigureras för larm måste rapporten däremot uppdateras
 [Loggers](../../guides/Loggers.md) för mer information.
 * Uppdatera makroanropet i rapportmallen (se bild).
 * Uppdatera vyn **Alarm_Report** så att den refererar till den nya loggern.
+* Uppdatera egenskapen **Logger** på objektet `LarmLogger_List` på schemamenyns andra sida, 
+**Arbetsvyer → Pop_Outs → AlarmReports → ReportSchedule2**.
 
 !!! note "Makro"
     Larmrapportmallen använder makrot `alarms`, som samlar in alla larm som loggats 
@@ -94,6 +96,9 @@ Larmrapporten:
 * Konfigurera den nya loggern.
 * Uppdatera makroanropen i rapportmallen.
 * Uppdatera ReportController-vyn.
+* Uppdatera egenskapen **Logger** på motsvarande lista på schemamenyns andra sida, 
+**Arbetsvyer → Pop_Outs → AlarmReports → ReportSchedule2**: `LoggerList` för 
+energirapporterna, `LoggerList2` för deltarapporterna.
 
 ### Ändra årsintervall { #changing-year-span }
 Processen för att ändra årsintervallet för Energirapporten kräver ytterligare bearbetning 
@@ -160,6 +165,8 @@ Larmrapporten:
 * Konfigurera den nya loggern.
 * Uppdatera makroanropen i rapportmallen.
 * Uppdatera ReportController-vyn.
+* Uppdatera egenskapen **Logger** på objektet `LoggerList` på schemamenyns andra sida, 
+**Arbetsvyer → Pop_Outs → AlarmReports → ReportSchedule2**.
 
 ### Ändra veckointervall { #changing-week-span }
 Processen för att ändra veckointervallet följer samma steg som 
@@ -184,20 +191,22 @@ vilket dag den produceras.
 Vald som **Deltarapport år** i rullgardinsmenyn **Rapportmall** visar deltarapporterna
 förändringen mellan efterföljande avläsningar i stället för de loggade värdena i sig,
 vilket passar mätare som rapporterar en kontinuerligt ökande totalsumma. Deltarapport år
-presenterar ett månadsdelta per kolumn, en kolumn per månad, med en årssumma, vilket ger
-ett diagram per år. Som standard täcker den tre år och tillåter upp till 15 signaler.
+presenterar månadsdeltana med en rad per månad och en kolumn per signal, samt en summarad
+och en summakolumn, vilket ger ett diagram per år. Som standard täcker den tre år och
+tillåter upp till 15 signaler.
 
 Det finns två mallar för den här rapporten. De skiljer sig endast i vilket omfång av
 loggningsintervall de hanterar. `DeltaYear.xlsx` hanterar intervall från månad till dag.
 `DeltaYear_H.xlsx` utökar omfånget ned till timme, för loggrar som registrerar oftare än
 en gång per dygn. Vilken av dem rapporten använder anges av dess `SourceFile` i
-`Reports.kdat`.
+`Reports.kdat`, som pekar på `DeltaYear_H.xlsx` som standard.
 
 !!! warning "Anpassa radgränsen till loggningsintervallet"
-    ReportControllerns `limit` begränsar hur många rader rapporten hämtar. Standardvärdet
-    är `1200`, vilket täcker tre år av dagliga avläsningar. En timvis logger ger omkring
-    26 000 avläsningar under samma period, så `limit` måste höjas i motsvarande grad,
-    annars läser rapporten tyst bara den äldsta delen av perioden.
+    ReportControllerns `limit` begränsar hur många rader rapporten hämtar. ReportControllern
+    för Deltarapport år har standardvärdet `26300`, vilket täcker ungefär tre år av timvisa
+    avläsningar. Schemamenyn (`ReportSchedule2`) sätter i stället `1200`, vilket bara täcker
+    tre år av dagliga avläsningar, så en schemalagd rapport på en timvis logger läser tyst
+    bara den äldsta delen av perioden om inte `limit` höjs i motsvarande grad.
 <!-- --8<-- [end:body-1] -->
 
 ![Delta year report controller](/docs/sv/Images/Reports/DeltaYear.png){align=center}
@@ -221,9 +230,9 @@ Deltarapport år i `\Your_Project\Reports\Templates` enligt bindningen till rapp
 ## Deltarapport vecka { #delta-week }
 
 Deltarapport vecka följer samma struktur som Deltarapport år, men presenterar deltana på
-veckobasis i stället för årsbasis. Vald som **Deltarapport vecka** presenterar den ett
-dagsdelta per kolumn, en kolumn per veckodag, med en veckosumma. Som standard täcker den
-tre veckor och tillåter upp till 15 signaler.
+veckobasis i stället för årsbasis. Vald som **Deltarapport vecka** presenterar den
+dagsdeltana med en rad per veckodag och en kolumn per signal, samt en summarad och en
+summakolumn. Som standard täcker den tre veckor och tillåter upp till 15 signaler.
 
 Det finns bara en mall för den här rapporten, `DeltaWeek.xlsx`, och den hanterar
 loggningsintervall från timme till dag.

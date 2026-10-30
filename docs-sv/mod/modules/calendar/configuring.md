@@ -22,7 +22,7 @@ När en händelse skapas eller redigeras kan en färg väljas från en fast upps
 
 **Redigera en händelse:**
 
-Klicka på en befintlig händelse för att öppna popup-fönstret **Lägg till/redigera kalenderhändelse**. Alla fält kan uppdateras. Klicka på **Spara** för att tillämpa ändringarna.
+I **Vecka**- eller **Dag**-vy, klicka på en befintlig händelse för att öppna popup-fönstret **Lägg till/redigera kalenderhändelse**. Alla fält kan uppdateras. Klicka på **Spara** för att tillämpa ändringarna.
 
 **Ta bort en händelse:**
 
@@ -32,11 +32,11 @@ Klicka på en befintlig händelse för att öppna popup-fönstret **Lägg till/r
 
 ## Underhållshändelser { #maintenance-events }
 
-Underhållsdeadlines från [underhållsmodulen](../maintenance/index.md) visas automatiskt i kalendern. De är skrivskyddade och kan inte redigeras eller tas bort från kalendern. Ändringar måste göras i **Underhåll - Lista**.
+Underhållsdeadlines från [underhållsmodulen](../maintenance/index.md) visas automatiskt i kalendern. De redigeras inte som kalenderhändelser. Ändringar görs i underhållsuppgiften, antingen i **Underhåll - Lista** eller via **Öppna redigering** i kalendern.
 
 Varje underhållshändelse visas på dagen för sin deadline. Färgen ställs in automatiskt baserat på uppgiftens aktuella status och kan inte väljas manuellt. Dessa färger definieras i temat **MaintenanceColors** i `Themes.kdat` och är separata från de färger som används för kalenderhändelser.
 
-När en underhållshändelse klickas öppnas ett popup-fönster som visar objekt, status, deadline och underhållstyp. Klicka på **Öppna redigering** för att navigera direkt till den uppgiften i **Underhåll - Lista**.
+När en underhållshändelse klickas öppnas ett popup-fönster som visar objekt, status, deadline och underhållstyp. Klicka på **Öppna redigering** för att öppna uppgiftens redigeringsfönster direkt ovanpå kalendern. När ändringarna sparas där uppdateras kalendern.
 
 | Status | Färg |
 |---|---|
@@ -55,7 +55,7 @@ Påminnelser är aktiverade som standard för uppgifter som skapas utan en mall.
 
 ## Helgdagar och helgdagsaftnar { #holidays-and-holiday-eves }
 
-En dag markeras som helgdag genom att en vanlig kalenderhändelse skapas på den med färgen **HOLIDAY**. En helgdagsafton markeras på samma sätt med **HOLIDAYEVE**. Ingen separat dialog eller import är inblandad.
+En dag markeras som helgdag genom att en vanlig kalenderhändelse skapas på den med färgen **HOLIDAY**. En helgdagsafton markeras på samma sätt med **HOLIDAYEVE**. En hel importerad kalender kan också markeras, med **Byt kategori** i **Ändra kalendrar**. Se [Hantera importerade kalendrar](#managing-imported-calendars).
 
 Händelsen justeras till hela dygn när den sparas, eftersom en dag antingen är en helgdag eller inte. En start- och sluttid som angetts i tidsnätet vidgas till att täcka de dagar händelsen berör.
 
@@ -74,7 +74,7 @@ Kalendern publicerar dagens klassificering till två interna variabler i Datalag
 
 Båda är vanliga booleska variabler och kan kopplas till en utgång på samma sätt som vilket annat värde som helst, så att ett PLC eller DUC kan läsa dagtypen och köra sina egna scheman utifrån den. Klassificeringen är en egenskap hos dagen, så ett par variabler räcker för samtliga scheman i stället för att varje tidkanal bär sin egen kopia.
 
-Variablerna skrivs vid uppstart och uppdateras vid varje synkronisering. Att markera en dag i kalendern får därför effekt den dagen utan ytterligare åtgärder.
+Variablerna skrivs vid uppstart och uppdateras av den timvisa pollningen och av **Sync**. Att markera en dag i förväg kräver därför inga ytterligare åtgärder, men en markering av dagens datum får effekt först vid nästa pollning, eller direkt med **Sync**.
 
 !!! note "Kalendern klassificerar dagen, PLC:t avgör vad som ska hända"
     Överlämningen rapporterar endast vilken dagtyp som gäller i dag. Vilka utgångar som ändras, och när, ligger kvar hos PLC:ts egen schemalogik.
@@ -92,7 +92,7 @@ En import avvisas om dess namn eller sökväg matchar en som redan finns. Jämf�
 
 <!-- --8<-- [start:body-2] -->
 !!! warning "En importerad fil läses en gång"
-    En fil läses vid importtillfället och kontrolleras inte därefter. Att redigera eller byta ut `.ics`-filen på disk uppdaterar inte kalendern. Importera filen igen för att hämta in det nya innehållet.
+    En fil läses vid importtillfället och kontrolleras inte därefter. Att redigera eller byta ut `.ics`-filen på disk uppdaterar inte kalendern. En ny import av samma fil avvisas som en dubblett, så ta först bort importen i **Ändra kalendrar** och importera sedan filen igen. Den nya importen får standardvärden för namn, färg och filterinställning.
 
 !!! info "Direktflöden och import av röda dagar ingår inte i den här versionen"
     Att prenumerera på en ICS-länk, och att importera ett lands röda dagar, bygger båda på REST-insticksmodulen som inte ingår i den här versionen. Helgdagar markeras i stället i kalendern själv, enligt beskrivningen ovan.
@@ -101,15 +101,17 @@ En import avvisas om dess namn eller sökväg matchar en som redan finns. Jämf�
 
 ## Hantera importerade kalendrar { #managing-imported-calendars }
 
-**Ändra** öppnar **Ändra kalendrar**, som listar varje import med namn och typ. Välj en för att byta namn med **Byt namn**, ta bort den med **Ta bort**, eller välj en färg i kombinationsrutan och klicka på **Byt färg**. Att ta bort en import raderar dess händelser ur kalendern. Händelser som skapats direkt i kalendern påverkas inte.
+**Ändra** öppnar **Ändra kalendrar**, som listar varje import med namn och typ. Välj en för att byta namn med **Byt namn**, ta bort den med **Ta bort**, eller välj en färg i kombinationsrutan och klicka på **Byt kategori**. Att ta bort en import raderar dess händelser ur kalendern. Händelser som skapats direkt i kalendern påverkas inte.
 
 Importer skapas med färgen **DEFAULT**.
+
+När en import byts till **HOLIDAY** eller **HOLIDAYEVE** visas först en bekräftelse. Därefter markeras alla importens händelser som helgdagar eller helgdagsaftnar och görs om till heldagshändelser. Omvandlingen är permanent. Byts kategorin tillbaka tas markeringen bort, men händelserna ligger kvar som heldagshändelser.
 <!-- --8<-- [end:body-2] -->
 
 ![Dialogen Ändra kalendrar](/docs/sv/Images/Calendar/edit-calendars.png){align=center}
 
 <!-- --8<-- [start:body-3] -->
-**Sync** läser om varje import omedelbart. Eftersom en filimport läses vid importtillfället har detta främst betydelse för att städa upp en befintlig databas, inte för att hämta in nytt innehåll.
+**Sync** ritar om kalendern och uppdaterar `isHoliday` och `isHolidayEve` direkt. Importerade filer läses inte om.
 
 ### Välja vilka kalendrar som visas { #choosing-which-calendars-are-shown }
 
@@ -123,9 +125,9 @@ Kryssa i de kalendrar som ska visas och klicka på **Tillämpa**.
 
 ## Exportera en kalender { #exporting-a-calendar }
 
-**Exportera** öppnar **Exportera kalender**. Kryssa i vilka kalendrar som ska ingå, och välj sedan antingen **Generera** för att skriva en `.ics`-fil, eller **Skicka med e-post** för att skicka exporten som en bilaga.
+**Exportera** öppnar **Exportera kalender**. Kryssa i vilka kalendrar som ska ingå, klicka sedan på **Generera** för att skriva en `.ics`-fil, och vid behov på **Skicka via mejl** för att skicka den som en bilaga. **Skicka via mejl** går att använda först efter **Generera**, och bara när SMTP är konfigurerat.
 
-**Egna/interna händelser** listas bredvid importerna, så att händelser som skapats direkt i kalendern kan tas med eller utelämnas separat. Helgdags- och helgdagsaftonshändelser ingår i den gruppen, så ett markerat år kan exporteras och flyttas till en annan installation.
+**Egna/interna händelser** listas bredvid importerna, så att händelser som skapats direkt i kalendern kan tas med eller utelämnas separat. Helgdags- och helgdagsaftonshändelser ingår i den gruppen, men exporten behåller inte deras markering. Importerade i en annan installation får händelserna färgen **DEFAULT** och markerar inga dagar förrän importen byts till **HOLIDAY** eller **HOLIDAYEVE** med **Byt kategori**. Det markerar alla importens händelser på samma sätt, så helgdagar och helgdagsaftnar blir bara rätt markerade om de flyttas i separata filer.
 <!-- --8<-- [end:body-4] -->
 
 ![Dialogen Exportera kalender](/docs/sv/Images/Calendar/export-calendar.png){align=center}

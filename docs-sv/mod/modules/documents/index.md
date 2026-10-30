@@ -18,7 +18,7 @@ Dokumentmodulen ger operatörer tillgång till filer direkt från HMI:n. Både l
 
 ### [Kom igång](get-started.md) { #get-started }
 * [**Filvy**](get-started.md#files-view) — En översikt av filvyn.
-* [**Ladda upp en lokal fil**](get-started.md#uploading-a-local-file) — Lägga till en fil från datorn.
+* [**Ladda upp en lokal fil**](get-started.md#uploading-a-local-file) — Lägga till en fil från serverns filsystem.
 * [**Lägga till en onlineresurs**](get-started.md#adding-an-online-resource) — Länka till en URL.
 * [**Förhandsgranska ett dokument**](get-started.md#previewing-a-document) — Visa ett dokument inline.
 

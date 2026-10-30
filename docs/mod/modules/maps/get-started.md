@@ -8,6 +8,12 @@ status: draft
 last_reviewed: 2026-10-12
 scripts:
   - scMap
+  - scSuffix
+  - scToolTip
+  - scWeather
+  - scWM
+  - scAlarmFinder
+  - scLinking
 object_libraries:
   - Map Indicators
   - WEATHER
@@ -22,6 +28,13 @@ tags:
     related functionality covered in the Maps & Indicators guides:
     
     * `scMap`
+    * `scSuffix`
+    * `scToolTip`
+    * `scWeather`
+    * `scWM`
+    * `scAlarmFinder`
+    * `scLinking`
+    * `scRemoteSystems`
     * `scAlert`
     
     And the following Object Libraries:
@@ -76,7 +89,7 @@ if (sysInfo.productId == sysInfo.WQWeb) {
 if (web && (app.subNavMenu.visible || app._subNavRemoteVisible)) {
     this.width = 1300
 } else {
-    this.width = 1620;
+    this.width = 1600;
 }
 
 return true;
@@ -128,7 +141,9 @@ Data Store variable by default. This is configured in the properties tab of the
 ![Weather Widget](/docs/Images/Map_Indicators/WeatherWidgetSettings.png)
 
 Once configured, the Weather Widget will display current weather information for the
-centre of the visible map area, updating automatically as the user navigates the map.
+centre of the visible map area. It updates when the view loads and then every 60
+seconds, using the map centre at that moment. The data is fetched by the `scWeather`
+script through the `SMHI` IO device, which must be present in the project.
 
 ## Next Steps { #next-steps }
 

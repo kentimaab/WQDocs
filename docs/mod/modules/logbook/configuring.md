@@ -32,7 +32,7 @@ An entry anchored to a view or an object can still carry a path of its own below
 
 ## How the Two Trees Are Built { #how-the-two-trees-are-built }
 
-The same entries are arranged two ways, and the toggle above the tree switches between them. Neither arrangement filters anything out.
+The same entries are arranged two ways, and the toggle below the tree switches between them. Neither arrangement filters anything out.
 
 ### Workview mode { #workview-mode }
 
@@ -101,7 +101,7 @@ It is also the only logbook that shows connected remote systems, each under its 
 
 ### Object Popup { #object-popup }
 
-Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md) tab in its popup. Opening this tab selects that object in the tree and lists its entries. New entries created from here are filed against the object automatically.
+Every object in the project has a [**Logbook**](../../reference/Popup/Logbook.md) tab in its popup, shown to users with the `Logbook_View` privilege. Opening this tab selects that object in the tree and lists its entries. New entries created from here are filed against the object automatically.
 
 The rest of the tree stays reachable, so a note on a neighbouring object or on the surrounding view can be read without leaving the popup. Entries can be added and edited from here. Archiving is offered in the global logbook only, since that is where archived entries can be shown again and restored. Archived entries are never listed in an object popup.
 <!-- --8<-- [end:body-2] -->

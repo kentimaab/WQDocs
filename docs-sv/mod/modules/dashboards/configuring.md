@@ -14,7 +14,7 @@ tags:
 
 ## Parametrar { #parameters-common-settings-shared-by-all-widgets }
 
-Alla widgetar delar en `Header`-parameter, en sträng, som anger den rubrik som visas på widgeten. Om den lämnas tom har widgeten en standardrubrik.
+Alla widgetar utom Larmrad och Larmgraf delar en `Header`-parameter, en sträng, som anger den rubrik som visas på widgeten. Om den lämnas tom har widgeten en standardrubrik.
 
 Parametrar som accepterar flera signaler eller grupper tar antingen en enskild sträng eller en array av strängar.
 
@@ -26,15 +26,15 @@ Parametrar som accepterar flera signaler eller grupper tar antingen en enskild s
 ["MB.AS01.MySystem_Meter1_E", "MB.AS01.MySystem_Meter1_P"]
 ```
 
-Vissa widgetar har en expanderingsknapp i det övre högra hörnet. Genom att klicka på den öppnas en fullskärmsversion av widgeten för en mer detaljerad vy.
+Vissa widgetar har en expanderingsknapp i det övre högra hörnet. Genom att klicka på den öppnas en expanderad version av widgeten i ett popup-fönster för en mer detaljerad vy.
 
-Widgetar som visar en signallegende hanterar automatiskt överfyllnad. När det finns fler signaler än vad som får plats i legenden visas en knapp som anger hur många som är dolda. Genom att klicka på den öppnas fullskärmsvyn med alla signaler listade.
+Widgetar som visar en signallegende hanterar automatiskt överfyllnad. När det finns fler signaler än vad som får plats i legenden visas en knapp som anger hur många som är dolda. Genom att klicka på den öppnas den expanderade vyn med alla signaler listade.
 
 ## Widgetar { #widgets-all-available-widgets-and-their-parameters }
 
 ### Larmstatus { #alarm-status }
 
-Visar larmantal: totalt, kvitterade och okvitterade.
+Visar larmantal: totalt, kvitterade och okvitterade. Två storlekar finns: `Alarm_1x1` och `Alarm_2x1`.
 <!-- --8<-- [end:body-1] -->
 
 ![Alarm Status](/docs/sv/Images/Dashboard/AlarmStatus.png){align=center}
@@ -104,7 +104,7 @@ Visar hur ofta larm har utlösts.
 
 ### Larmgraf { #alarm-graph }
 
-En större graf för larmtrender och larmfördelning. Lämpar sig för dashboards där larmanalys är i fokus.
+En större widget för larmanalys. Ett cirkeldiagram visar larmen under de senaste N dagarna (standard 7), grupperade efter larmklass eller larmgrupp, bredvid en topp 5-lista över de vanligaste larmen. En inställningspanel anger gruppering och antal dagar. Kräver en larmloggare som lagrar i en databas. Lämpar sig för dashboards där larmanalys är i fokus.
 <!-- --8<-- [end:body-6] -->
 
 ![Alarm Graph](/docs/sv/Images/Dashboard/AlarmGraph.png){align=center}
@@ -124,7 +124,7 @@ Fälten **Från** och **Till** längst upp på dashboarden anger tidsintervallet
 
 * **Tillämpa** — tillämpar Från/Till-intervallet på alla Historik-widgetinstanser på dashboarden.
 * **Kalenderikon** (på en enskild widget) — tillämpar Från/Till-intervallet enbart på den widgetinstansen, utan att påverka de övriga.
-* **Återställ** — återställer alla Historik-widgetinstanser till standardfönstret på 5 minuter.
+* **Återställ** — sätter Från/Till-intervallet till de senaste 5 minuterna och tillämpar det på alla Historik-widgetinstanser. Fönstret är fast, så widgetarna slutar följa livevärdena.
 
 **Parametrar**
 
@@ -134,7 +134,7 @@ Fälten **Från** och **Till** längst upp på dashboarden anger tidsintervallet
 
 ### Nyckelvärde { #key-value }
 
-Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accepterar vilket värde som helst i Datalager: interna variabler, drivsignaler och systemvariabler.
+Visar ett enskilt livevärde med konfigurerad enhet och decimalprecision. Accepterar vilket värde som helst i Datalager: interna variabler, drivsignaler och systemvariabler. Två storlekar finns: `KeyMetric_1x1` och `KeyMetric_2x1`.
 <!-- --8<-- [end:body-8] -->
 
 ![Key Value](/docs/sv/Images/Dashboard/KeyValue.png){align=center}
@@ -164,7 +164,7 @@ Visar aktuella livevärden för en eller flera signaler. Löser automatiskt upp 
 
 ### Cirkeldiagram { #pie-chart }
 
-Visar realtidsfördelning av signaler som ett cirkeldiagram. Inkluderar en expanderingsknapp som öppnar en fullskärmsvy.
+Visar realtidsfördelning av signaler som ett cirkeldiagram. Inkluderar en expanderingsknapp som öppnar en expanderad vy i ett popup-fönster.
 <!-- --8<-- [end:body-11] -->
 
 ![Pie Chart](/docs/sv/Images/Dashboard/PieChart.png){align=center}
@@ -178,7 +178,7 @@ Visar realtidsfördelning av signaler som ett cirkeldiagram. Inkluderar en expan
 
 ### Stapeldiagram { #bar-chart }
 
-Visar jämförelser av signalvärden som ett stapeldiagram över konfigurerbara tidsperioder. Lämpar sig för energijämförelser över tid. Inkluderar en expanderingsknapp som öppnar en fullskärmsvy.
+Visar jämförelser av signalvärden som ett stapeldiagram över konfigurerbara tidsperioder. Lämpar sig för energijämförelser över tid. Inkluderar en expanderingsknapp som öppnar en expanderad vy i ett popup-fönster.
 <!-- --8<-- [end:body-12] -->
 
 ![Bar Chart](/docs/sv/Images/Dashboard/Widget.png){align=center}

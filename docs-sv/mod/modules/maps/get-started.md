@@ -16,6 +16,13 @@ tags:
     relaterad funktionalitet som beskrivs i guiderna för Kartor och indikatorer:
     
     * `scMap`
+    * `scSuffix`
+    * `scToolTip`
+    * `scWeather`
+    * `scWM`
+    * `scAlarmFinder`
+    * `scLinking`
+    * `scRemoteSystems`
     * `scMaintenance`
     * `scDatabase`
     * `scThemes`
@@ -72,7 +79,7 @@ if (sysInfo.productId == sysInfo.WQWeb) {
 if (web && (app.subNavMenu.visible || app._subNavRemoteVisible)) {
     this.width = 1300
 } else {
-    this.width = 1620;
+    this.width = 1600;
 }
 
 return true;
@@ -123,7 +130,9 @@ Widgeten behöver också pekas mot sin datakälla, som är Datalager-variabeln `
 ![Weather Widget](/docs/sv/Images/Map_Indicators/WeatherWidgetSettings.png)
 
 När widgeten är konfigurerad visar den aktuell väderinformation för
-mitten av det synliga kartområdet och uppdateras automatiskt när användaren navigerar på kartan.
+mitten av det synliga kartområdet. Den uppdateras när vyn laddas och sedan var 60:e sekund,
+med kartans mittpunkt vid det tillfället. Datan hämtas av skriptet `scWeather` via
+IO-enheten `SMHI`, som måste finnas i projektet.
 
 ## Nästa steg { #next-steps }
 

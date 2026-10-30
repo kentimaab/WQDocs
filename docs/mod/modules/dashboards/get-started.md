@@ -9,6 +9,11 @@ last_reviewed: 2026-10-12
 scripts:
   - scDashboard
   - scAlarm
+  - scMaintenance
+  - scNav
+  - scToolTip
+  - scAlarmFinder
+  - scWM
 object_libraries: 
     - Dashboard Widgets
 tags: 
@@ -23,8 +28,20 @@ tags:
     
     * `scDashboard`
     * `scAlarm`
+    * `scMaintenance`
+    * `scNav`
+    * `scToolTip`
+    * `scAlarmFinder`
+    * `scWM`
     * `scHistory`
+    * `scSubNav`
+    * `scDatabase`
+    * `scLinking`
+    * `scMap`
+    * `scPlatform`
     * `scPrototypes`
+    * `scRemoteSystems`
+    * `scUsers`
     * `scAlert`
     * `scQuickSort`
     
@@ -32,7 +49,9 @@ tags:
     
     * `Dashboard Widgets`
 
-WideQuick MOD comes with three example dashboards that can be used as a starting point or modified to fit a project.
+`scRemoteAlarms` is optional. With it, the alarm widgets also count alarms from remote systems.
+
+WideQuick MOD comes with a set of example dashboards that can be used as a starting point or modified to fit a project.
 New Dashboards can be created either from the template or from scratch depending on what the user wants.
 <!-- --8<-- [end:body-1] -->
 

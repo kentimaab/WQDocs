@@ -23,6 +23,12 @@ tags:
     * `scSuffix`
     * `scThemes`
     * `scUsers`
+    * `scFilePicker`
+    * `scWM`
+    * `scButtons`
+    * `scNav`
+    * `scToolTip`
+    * `scSmartPopup`
     * `scAlert`
 
 Dokumentmodulen finns under **Dokument & Loggbok → Dokument** i huvudmenyn. Vyn **Dokument - Lista** är den primära ingångspunkten. Den visar alla dokument i systemet, och där kan de läggas till, förhandsgranskas och hanteras.
@@ -42,14 +48,16 @@ Följande åtgärder är tillgängliga längst ned i vyn:
 * **Förhandsgranska** — öppnar den valda filen i förhandsgranskningspanelen.
 * **Lägg till dokument** — öppnar uppladdningsdialogen för att lägga till ett nytt dokument.
 * **Ta bort dokument** — tar permanent bort det valda dokumentet.
-* **Redigera valt dokument** — byt namn på det valda dokumentet.
+* **Redigera valt dokument** — byt namn på det valda dokumentet, eller ändra URL:en för en onlineresurs. Sökvägen till en lokal fil kan inte redigeras.
 * **Synkronisera med lokala filer på server** — söker igenom dokumentmappen på servern och uppdaterar listan för att matcha. Se [Synkronisering med filsystemet](configuring.md#syncing-with-the-filesystem).
 
 ## Ladda upp en lokal fil { #uploading-a-local-file }
 
+Lokala filer kan bara laddas upp på servern. På fjärr- och webbklienter är fliken **Ladda upp fil** inaktiverad och visar "Uppladdning av fil är inte möjligt på fjärrsystem".
+
 1. Klicka på **Lägg till dokument**.
 2. Välj fliken **Ladda upp fil**.
-3. Klicka på släppzonen eller dra filer till den för att lägga till dem i kön.
+3. Klicka på **Klicka för att bläddra bland lokala filer** och dubbelklicka på filer i filbläddraren för att lägga till dem i kön.
 4. Klicka valfritt på ett filnamn i kön för att byta namn på det innan uppladdning.
 5. Klicka på **Ladda upp filer**.
 <!-- --8<-- [end:body-2] -->
@@ -79,7 +87,7 @@ Resursen läggs till i dokumentlistan under **Onlinefiler**. Endast URL:en lagra
 
 Välj en fil i den vänstra panelen och klicka på **Förhandsgranska** för att läsa in den i förhandsgranskningspanelen.
 
-De flesta filtyper kan förhandsgranskas direkt. Bilder, PDF:er och webbsidor visas inline. På **WideQuick® Web** kan inte Office-filer (Word, Excel, PowerPoint) förhandsgranskas i webbläsaren och grupperas separat i filträdet.
+Bilder, PDF:er och webbsidor visas direkt i förhandsgranskningspanelen. Office- och OpenDocument-filer (Word, Excel, PowerPoint, `.odt`, `.ods`, `.odp`) förhandsgranskas aldrig inline. På skrivbordsklienter öppnas de i det externa program som är kopplat till filtypen. På **WideQuick® Web** grupperas de separat i filträdet, och ett meddelande talar om att de inte kan visas i webbläsaren.
 
 ## Nästa steg { #next-steps }
 

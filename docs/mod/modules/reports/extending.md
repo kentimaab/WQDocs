@@ -146,8 +146,9 @@ the user in the ReportController when generating the report.
     * `$(Report_Reference.variable_ref[#])` — The signal at index `#`.
     * `$(Report_Reference.unit)` — The unit for the report.
     * `$(Report_Reference.factorArray[#])` — The scaling factor for each signal at index `#`.
-    * `$(System.dateTime)` — The current date and time.
-    * `$(System.user)` — The current user.
+    * `$(_sys_clock_year)`, `$(_sys_clock_month)`, `$(_sys_clock_day)`, 
+    `$(_sys_clock_hour)` and so on — The current date and time, one part per cell.
+    * `$(_sys_user_name)` — The current user.
 
     The Meta sheet is the only way to pass the report title set by the user into the 
     presentation sheet. The integrator is free to include whichever fields are relevant 
@@ -235,10 +236,8 @@ ReportController.
 
 ### LarmLogger_List { #larmlogger_list }
 The `LarmLogger_List` object is a specialized version of `LoggerList`, purpose-built 
-for displaying alarms logged by a logger. Unlike `LoggerList`, it automatically builds 
-its tree based on alarm groups and omits redundant information. For example, if all 
-alarms in the logger follow the pattern `AS01.AS01_XXX_XX`, the TreeView will display 
-them simply as `XXX_XX`.
+for displaying alarms logged by a logger. It builds its tree from the alarm paths the 
+same way as `LoggerList`.
 
 This object has two properties that must be configured:
 
@@ -327,16 +326,24 @@ generations. This can easily be changed if more signals are required. First, in
 </figure>
 
 Change the **Max. size** to the desired value. Click **Apply** then **Ok**. The 
-**Report_Reference** array has now been updated.
+**Report_Reference** array has now been updated. Repeat the same steps for 
+**Data Types → Arrays → factorArray**, which holds the per-signal scale factors.
 
 Next, update the `scReports` script to handle the new size. Locate the 
-`createReport()` function and change the value `15` to the new **Max. size** value:
+`createReport()` function and change the value `15` to the new **Max. size** value, in 
+both the signal loops and the factor loops:
 
 ``` javascript title="scReports — createReport() — before"
 
 for (var i = 0; i < 15; i++) Report_Reference.variable_ref[i] = "";
 var signals = reportObj.variable_ref.split(',');
 for (var i = 0; i < signals.length && i < 15; i++) Report_Reference.variable_ref[i] = signals[i];
+
+for (var fi = 0; fi < 15; fi++) Report_Reference.factorArray[fi] = 1;
+if (typeof reportObj.factorArray != "undefined" && reportObj.factorArray != "") {
+	var factors = String(reportObj.factorArray).split(',');
+	for (var fi2 = 0; fi2 < factors.length && fi2 < 15; fi2++) Report_Reference.factorArray[fi2] = factors[fi2] * 1;
+}
 
 ```
 
@@ -346,7 +353,23 @@ for (var i = 0; i < YOUR_MAX_VALUE; i++) Report_Reference.variable_ref[i] = "";
 var signals = reportObj.variable_ref.split(',');
 for (var i = 0; i < signals.length && i < YOUR_MAX_VALUE; i++) Report_Reference.variable_ref[i] = signals[i];
 
+for (var fi = 0; fi < YOUR_MAX_VALUE; fi++) Report_Reference.factorArray[fi] = 1;
+if (typeof reportObj.factorArray != "undefined" && reportObj.factorArray != "") {
+	var factors = String(reportObj.factorArray).split(',');
+	for (var fi2 = 0; fi2 < factors.length && fi2 < YOUR_MAX_VALUE; fi2++) Report_Reference.factorArray[fi2] = factors[fi2] * 1;
+}
+
 ```
+
+Then set the **Signals** property to the new value on every logger list that should 
+allow it: the `LoggerList` object in each Energy and Delta ReportController, and the 
+`LoggerList` and `LoggerList2` objects on the second page of the schedule menu 
+(`ReportSchedule2`).
+
+Finally, extend the templates. The shipped templates have room for 15 signals: one macro 
+call per signal on the data sheet, the signal names in `B21:B35` on the **Meta** sheet 
+and the scale factors in `B39:B53`. A template only shows the additional signals once it 
+has macro calls, signal slots and factors for them.
 
 ## Adding a base unit { #adding-a-base-unit }
 The report system recognises six physical quantities, each in any SI prefix:

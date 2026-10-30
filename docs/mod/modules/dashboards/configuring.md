@@ -14,7 +14,7 @@ tags:
 
 ## Parameters { #parameters-common-settings-shared-by-all-widgets }
 
-All widgets share a `Header` parameter, a string, that sets the title displayed on the widget. If left empty the widgets has a standard header.
+All widgets except Alarm Row and Alarm Graph share a `Header` parameter, a string, that sets the title displayed on the widget. If left empty the widgets has a standard header.
 
 
 Parameters that accept multiple signals or groups accept either a single string or an array of strings.
@@ -27,15 +27,15 @@ Parameters that accept multiple signals or groups accept either a single string 
 ["MB.AS01.MySystem_Meter1_E", "MB.AS01.MySystem_Meter1_P"]
 ```
 
-Some widgets include an expand button in the top-right corner. Clicking it opens a fullscreen version of the widget for a more detailed view.
+Some widgets include an expand button in the top-right corner. Clicking it opens an expanded version of the widget in a popup window for a more detailed view.
 
-Widgets that display a signal legend automatically handle overflow. When there are more signals than fit in the legend, a button shows how many are hidden. Clicking it opens the fullscreen view with all signals listed.
+Widgets that display a signal legend automatically handle overflow. When there are more signals than fit in the legend, a button shows how many are hidden. Clicking it opens the expanded view with all signals listed.
 
 ## Widgets { #widgets-all-available-widgets-and-their-parameters }
 
 ### Alarm Status { #alarm-status }
 
-Displays alarm counts: total, acknowledged and unacknowledged.
+Displays alarm counts: total, acknowledged and unacknowledged. Two sizes are available: `Alarm_1x1` and `Alarm_2x1`.
 <!-- --8<-- [end:body-1] -->
 
 ![Alarm Status](/docs/Images/Dashboard/AlarmStatus.png){align=center}
@@ -105,7 +105,7 @@ Displays how often alarms have been triggered.
 
 ### Alarm Graph { #alarm-graph }
 
-A larger alarm trend and distribution graph. Suited for dashboards where alarm analysis is a primary focus.
+A larger alarm analysis widget. A pie chart shows the alarms of the last N days (default 7) grouped by alarm class or by alarm group, next to a Top 5 list of the most frequent alarms. A settings panel sets the grouping and the number of days. Requires an alarm logger that stores to a database. Suited for dashboards where alarm analysis is a primary focus.
 <!-- --8<-- [end:body-6] -->
 
 ![Alarm Graph](/docs/Images/Dashboard/AlarmGraph.png){align=center}
@@ -125,7 +125,7 @@ The **From** and **To** fields at the top of the dashboard set the time range. H
 
 * **Apply** — applies the From/To range to all History widget instances on the dashboard.
 * **Calendar icon** (on an individual widget) — applies the From/To range to that widget instance only, without affecting the others.
-* **Reset** — sets all History widget instances back to the default 5-minute window.
+* **Restore** — sets the From/To range to the last 5 minutes and applies it to all History widget instances. The window is fixed, so the widgets stop following live values.
 
 **Parameters**
 
@@ -135,7 +135,7 @@ The **From** and **To** fields at the top of the dashboard set the time range. H
 
 ### Key Value { #key-value }
 
-Displays a single live value with its configured unit and decimal precision. Accepts any value in Data Store: internal variables, driver signals and System variables.
+Displays a single live value with its configured unit and decimal precision. Accepts any value in Data Store: internal variables, driver signals and System variables. Two sizes are available: `KeyMetric_1x1` and `KeyMetric_2x1`.
 <!-- --8<-- [end:body-8] -->
 
 ![Key Value](/docs/Images/Dashboard/KeyValue.png){align=center}
@@ -165,7 +165,7 @@ Displays current live values for one or more signals. Automatically resolves uni
 
 ### Pie Chart { #pie-chart }
 
-Displays real-time signal distribution as a pie chart. Includes an expand button that opens a fullscreen view.
+Displays real-time signal distribution as a pie chart. Includes an expand button that opens an expanded view in a popup window.
 <!-- --8<-- [end:body-11] -->
 
 ![Pie Chart](/docs/Images/Dashboard/PieChart.png){align=center}
@@ -179,7 +179,7 @@ Displays real-time signal distribution as a pie chart. Includes an expand button
 
 ### Bar Chart { #bar-chart }
 
-Displays signal value comparisons as a bar chart across configurable time periods. Suited for energy comparisons over time. Includes an expand button that opens a fullscreen view.
+Displays signal value comparisons as a bar chart across configurable time periods. Suited for energy comparisons over time. Includes an expand button that opens an expanded view in a popup window.
 <!-- --8<-- [end:body-12] -->
 
 ![Bar Chart](/docs/Images/Dashboard/Widget.png){align=center}
@@ -212,11 +212,10 @@ Displays a single live value as a dial against a configured range, with an optio
 <!-- --8<-- [start:body-14] -->
 **Parameters**
 
-* `Signal` — The signal path to display.
-* `Name` — The label shown for the value.
+* `Signal` — Direct variable reference (not a string). Enter the signal path without quotes: `MB.AS01.LB01_P`, not `"MB.AS01.LB01_P"`.
 * `Header` — The widget heading.
-* `Min` and `Max` — The ends of the dial's range.
-* `WarningMin` and `WarningMax` — The bounds of the warning band drawn on the dial.
+* `Min` and `Max` — The ends of the dial's range. Default to `0` and `100`.
+* `WarningMin` and `WarningMax` — Warning limits. Values at or below `WarningMin`, or at or above `WarningMax`, lie in a warning zone. Each takes one value or an array `[red, yellow]`, for example `[90, 75]` for `WarningMax` or `[10, 25]` for `WarningMin`. While the value is in a zone, that zone is coloured and the centre disc blinks in its colour.
 
 ---
 

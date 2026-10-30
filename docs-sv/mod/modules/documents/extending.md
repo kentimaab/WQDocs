@@ -23,8 +23,8 @@ tags:
 | Behörighet | Styr |
 |---|---|
 | `Documents_Upload` | **Lägg till dokument**: ladda upp lokala filer och lägg till onlineresurser |
-| `Documents_Edit` | **Redigera valt dokument**: byt namn på dokument |
+| `Documents_Edit` | **Redigera valt dokument**: byt namn på dokument och ändra URL:en för onlineresurser |
 | `Documents_Delete` | **Ta bort dokument**: ta bort ett dokument permanent |
 | `Documents_Sync` | **Synkronisera med lokala filer på servern**: synkronisera dokumentlistan med serverns filsystem |
-| `Documents_Link` | Länka och avlänka dokument inifrån objektets popup |
+| `Documents_Link` | **Redigera dokumentlänkar** och **Ta bort dokumentlänk**: länka och avlänka dokument, både i **Dokument - Objektreferenser** och i objektets popup |
 <!-- --8<-- [end:body-2] -->

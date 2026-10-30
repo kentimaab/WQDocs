@@ -12,21 +12,21 @@ tags:
 
 # Legacy symbols {#legacy-symbols}
 
-WideQuick BMS 8.0 included an earlier generation of symbols which are still
-available in the following object libraries:
+WideQuick BMS 8.0 and WideQuick MOD 2024.1.0 included an earlier generation of symbols
+which are still available in the following object libraries:
 
 * **COMPONENTS_Legacy**
 * **DAMPERS_Legacy**
 * **MOTORS_Legacy**
 * **SENSORS_Legacy**
 * **VALVES_Legacy**
-* **OTHERS_Legacy**
+* **OTHER_Legacy**
 
 Legacy symbols function the same way as the current symbols and are fully compatible
 with WideQuick Modular Framework. However they use the older single-layer animation
 system and do not provide the same level of visual feedback as the new symbols.
 
-When importing a view from an older BMS project, all legacy symbols are automatically
+When importing a view from an older BMS project or a MOD 2024.1.0 project, all legacy symbols are automatically
 upgraded to the new symbol versions. This means migration is seamless, no manual
 replacement is needed.
 

@@ -13,7 +13,7 @@ tags:
 
 ## Påminnelsekonfiguration { #reminder-configuration }
 
-Det finns för närvarande inget gränssnitt för påminnelseinställningar. Båda kan ställas in via ett skript.
+Aktiveringen per mall är en kryssruta i **Underhåll - Mallar**. Endast det globala förskjutningsvärdet måste ställas in via ett skript.
 
 ### Globalt förskjutningsvärde { #global-offset }
 
@@ -26,7 +26,7 @@ scMaintenance.setReminderOffset(days * 24 * 60 * 60 * 1000);
 
 ### Aktivering per mall { #per-template-toggle }
 
-Styr om påminnelser genereras för uppgifter som skapas från en specifik mall. Standard är av. Det finns ingen hjälpfunktion för detta. Uppdatera tabellen `maintenanceLog_templates` direkt och anropa `updateTemplates()` för att uppdatera minnescachen så att kalendern fångar upp ändringen omedelbart:
+Styr om påminnelser genereras för uppgifter som skapas från en specifik mall. Standard är av. I **Underhåll - Mallar**, kryssa i **Skapa en påminnelse 3 dagar innan** för mallen och klicka på **Spara**. Från ett skript tar `scMaintenance.updateTemplate()` inställningen som sitt sista argument. Alternativt kan tabellen `maintenanceLog_templates` uppdateras direkt, följt av ett anrop till `updateTemplates()` för att uppdatera minnescachen så att kalendern fångar upp ändringen omedelbart:
 
 ```javascript
 var templateType = "Filterbyte";
@@ -86,13 +86,13 @@ Importerade kalendrar lagras i tabellen `ics_subscriptions` i underhållsdatabas
 | Funktion | Syfte |
 |---|---|
 | `importFileSubscription(path)` | Lägger till en import för en lokal `.ics`-sökväg och läser den omedelbart. Namnet sätts som standard till filnamnet utan filändelse. |
-| `addSubscription(name, url, isBuiltin, type)` | Lägger till en prenumerationsrad. Returnerar `duplicate_name` eller `duplicate_url` om en redan matchar. |
+| `addSubscription(name, url, isBuiltin, type)` | Lägger till en prenumerationsrad. Returnerar `{error, id}`. `error` är `duplicate_name` eller `duplicate_url` om en redan matchar, `exception` om anropet misslyckas, och `null` om det lyckas. |
 | `listSubscriptions()` | Returnerar samtliga prenumerationer. |
 | `getSubscription(id)` | Returnerar en prenumeration. |
 | `syncSubscription(id)` | Läser om en import. |
-| `syncAllSubscriptions()` | Läser om samtliga importer. |
+| `syncAllSubscriptions()` | Anropas av **Sync** och av den timvisa pollningen. Den hoppar över importer av typen `file`, den enda typen i den här versionen, så den läser inte om något. Rader av en utgången typ hoppas över med en notering i loggen. |
 | `renameSubscription(id, newName)` | Byter namn på en import. |
-| `setSubscriptionColor(id, color)` | Åsidosätter färgen på en imports händelser. |
+| `setSubscriptionColor(id, color)` | Åsidosätter färgen på en imports händelser. **HOLIDAY** och **HOLIDAYEVE** markerar dessutom alla importens händelser och gör om dem till heldagshändelser, vilket inte kan ångras. |
 | `setSubscriptionVisibility(id, visible)` | Anger om importen ritas i kalendern. |
 | `countSubscriptionEvents(id)` | Returnerar hur många händelser en import för närvarande bidrar med. |
 | `removeSubscription(id)` | Tar bort en import och dess händelser. |

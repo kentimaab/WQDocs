@@ -14,7 +14,7 @@ tags:
 
 ## Följa ett signal { #tracking-a-signal }
 
-Panelen **Följ signal** håller diagrammet centrerat på en specifik signal när dess värde förändras över tid.
+Panelen **Följ signal** framhäver en specifik signal i diagrammet.
 
 **Följa en signal:**
 
@@ -42,7 +42,7 @@ Signalgrupper kan sparas och läsas in igen för att slippa välja om samma sign
 **Läsa in en sparad grupp:**
 
 1. Välj gruppen från rullgardinsmenyn **Välj sparad grupp**.
-2. Klicka på **Använd grupp**. Signalerna från gruppen väljs och tillämpas i diagrammet.
+2. Klicka på **Använd grupp**. Signalerna från gruppen väljs och tillämpas i diagrammet. I den projektövergripande Historiken läggs de till bland de signaler som redan är valda. I den vyspecifika Historiken ersätter de det aktuella urvalet.
 
 **Ta bort en sparad grupp:**
 
@@ -51,7 +51,7 @@ Signalgrupper kan sparas och läsas in igen för att slippa välja om samma sign
 
 ### Importera grupper från andra vyer { #importing-groups-from-other-views }
 
-Både den projektövergripande Historiken och den vyspecifika Historiken kan importera sparade grupper som skapats i andra vyer, så att en grupp som sparats i en vy kan återanvändas utan att skapas på nytt.
+Både den projektövergripande Historiken och den vyspecifika Historiken kan hämta signalerna i sparade grupper som skapats i andra vyer, så att en grupp som sparats i en vy kan återanvändas utan att skapas på nytt.
 <!-- --8<-- [end:body-2] -->
 
 ![Dialogruta för sparade grupper med Alla sparade till vänster och Valda till höger](/docs/sv/Images/History/history-import-groups.png){align=center}
@@ -59,16 +59,17 @@ Både den projektövergripande Historiken och den vyspecifika Historiken kan imp
 <!-- --8<-- [start:body-3] -->
 **Importera grupper från andra vyer:**
 
-1. Klicka på **Importera grupper från vyer** i avsnittet **Sparade grupper**. En dialogruta öppnas.
-2. Den vänstra panelen (**Alla sparade**) listar alla sparade grupper i projektet, både projektövergripande grupper och grupper sparade i andra vyer, organiserade efter källa.
+1. Klicka på **Hämta signaler från grupper i driftbilder** (projektövergripande Historik) eller **Hämta signaler från andra grupper** (vyspecifik Historik) i avsnittet **Sparade grupper**. En dialogruta öppnas.
+2. Den vänstra panelen (**Alla sparade**) listar sparade grupper organiserade efter källa. I den projektövergripande Historiken listas grupperna som sparats i vyer. I den vyspecifika Historiken listas de projektövergripande grupperna under **Projekt** och grupperna som sparats i andra vyer.
 3. Välj en grupp och klicka på **→** för att flytta den till den högra panelen (**Valda**).
 4. Upprepa för varje grupp som ska importeras.
-5. Klicka på **Importera och stäng**. Grupperna läggs till i den aktuella listan med sparade grupper.
+5. Klicka på **Hämta och stäng**. Signalerna i de valda grupperna markeras i trädet **Signaler**, och knappen **Tillämpa** visar det nya antalet. Ett meddelande visar hur många signaler som hämtades, och dialogrutan stängs när meddelandet kvitteras.
+6. Klicka på **Tillämpa** för att plotta signalerna.
 
 För att ta bort en grupp från urvalet innan import, markera den i den högra panelen och klicka på **←**. Klicka på **Rensa tillagda** för att tömma den högra panelen helt.
 
 !!! note
-    Att importera en grupp kopierar den till den aktuella kontexten. Ändringar i den ursprungliga gruppen efter import återspeglas inte.
+    Importen hämtar bara signalerna. Grupperna läggs inte till i rullgardinsmenyn **Välj sparad grupp**. För att behålla urvalet som en grupp här, spara det med **Spara grupp**.
 
 ## Nästa steg { #next-steps }
 

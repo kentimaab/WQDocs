@@ -8,6 +8,10 @@ status: draft
 last_reviewed: 2026-10-12
 scripts:
   - scLogBook
+  - scUsers
+  - scObjectFinder
+  - scSmartPopup
+  - scWM
 tags: 
  - MOD
 ---
@@ -19,17 +23,20 @@ tags:
     related functionality covered in the Logbook guides:
     
     * `scLogBook`
-    * `scDoc`
-    * `scLinking`
+    * `scUsers`
+    * `scObjectFinder`
+    * `scSmartPopup`
+    * `scWM`
     * `scPrototypes`
-    * `scThemes`
+    * `scSuffix`
     * `scAlert`
+    * `scQuickSort`
 
 The Logbook is available in the main menu under **Documents & Logbook → Logbook**.
 
 ## The Logbook View { #the-logbook-view }
 
-The logbook view has two panels. The left panel shows the topic tree, a hierarchical list of every topic that has at least one entry. Selecting a node and clicking **Show entries** loads all entries under that topic into the entry list on the right. Selecting **All topics** at the top of the tree shows all entries.
+The logbook view has two panels. The left panel shows the topic tree, a hierarchical list of every topic that has at least one entry. Selecting a node and clicking **Show entries** loads all entries under that topic into the entry list on the right. Selecting **All topics** at the top of the tree shows all of this system's entries, but not those of connected remote systems.
 
 Selecting a node includes everything filed below it. Selecting a view node lists the notes on that view together with the notes on the objects drawn in it, so a whole plant section can be reviewed in one step.
 
@@ -52,7 +59,7 @@ Select an entry and click **Edit note** to open it for editing, or **Archive not
 <!-- --8<-- [start:body-2] -->
 ## Switching How the Tree Is Keyed { #switching-how-the-tree-is-keyed }
 
-The toggle labelled **Navigate by workviews** above the tree switches between the two ways of arranging the same entries.
+The toggle labelled **Navigate by workviews** below the tree switches between the two ways of arranging the same entries. In the object popup and the view-scoped logbook the same toggle is labelled **Navigate by system view**.
 
 * **On, workview mode** — the tree follows the folder structure of the process views, for example **System → MySystem → Station1**. This is the arrangement to use when looking for notes about a part of the plant as it is drawn in the views.
 * **Off, signal mode** — the tree follows the tag path, for example **MB → AS01 → Station1**. This is the arrangement to use when looking for notes about a specific tag, regardless of which views it appears in.

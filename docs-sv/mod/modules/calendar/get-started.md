@@ -17,6 +17,8 @@ tags:
     * `scCalendar`
     * `scDayViewManager`
     * `scWeekViewManager`
+    * `scHoliday`
+    * `scFilePicker`
     * `scMaintenance`
     * `scDatabase`
     * `scThemes`
@@ -77,14 +79,13 @@ Listan med kommande händelser visar nästa händelser och underhållsdeadlines 
 Nya händelser kan skapas på två sätt:
 
 * Klicka på **+** i det övre fältet för att öppna popup-rutan **Lägg till/redigera kalenderhändelse** direkt.
-* I **Vecka**- eller **Dag**-vy, klicka en gång på tidsnätet för att ange starttid, klicka sedan igen för att ange sluttid. Popup-rutan öppnas med Start och Slut förifyllda.
+* I **Vecka**- eller **Dag**-vy, klicka en gång på tidsnätet för att ange starttid, klicka sedan igen för att ange sluttid. Popup-rutan öppnas med Start och Slut förifyllda. Detta fungerar inte på webbklienten. Använd **+** där.
 
 Fyll i fälten:
 
 * **Titel** — en kort etikett som visas på händelsen.
 * **Start** och **Slut** — datum och tid för händelsen. Kan justeras efter att popup-rutan öppnats.
-* **Färg** — anger visningsfärgen för händelsen i kalendern. **HOLIDAY** och **HOLIDAYEVE** markerar dessutom dagen, se nedan.
-* **Kategori** — grupperar händelsen under en namngiven kategori.
+* **Kategori** (färg) — anger visningsfärgen för händelsen i kalendern. **HOLIDAY** och **HOLIDAYEVE** markerar dessutom dagen, se nedan.
 * **Beskrivning** — valfria ytterligare detaljer.
 
 Klicka på **Spara** för att lägga till händelsen i kalendern.
@@ -98,5 +99,5 @@ Se [Helgdagar och helgdagsaftnar](configuring.md#holidays-and-holiday-eves).
 ## Nästa steg { #next-steps }
 
 * [Konfigurera](configuring.md) — redigera händelser, underhållsfärger och påminnelseinställningar
-* [Utöka](extending.md) — felsökning
+* [Utöka](extending.md) — påminnelsekonfiguration, helgdagsvariabler, lagring av prenumerationer och skriptreferens
 <!-- --8<-- [end:body-5] -->
