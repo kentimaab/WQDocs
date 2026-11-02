@@ -17,11 +17,11 @@ tags:
 
 | Problem | Solution |
 |---|---|
-| Signal tree is empty | The signal tree is populated by scanning the project's loggers. If no loggers are configured, the tree will be empty. Verify that at least one logger is active in the project configuration. |
+| Signal tree is empty | The signal tree is populated by scanning the project's loggers. If no loggers are configured, the tree will be empty. Verify that at least one logger is active in the project configuration. The tree also lists only objects found in process views that have been opened at least once, so in a new project it stays empty until the views have been visited. |
 | A signal is missing from the tree | Only signals with an active logger appear in the tree, and only cyclic, change and trigger loggers count. The process view that holds the object must also have been opened at least once, since the tree only lists objects found in opened views. Use **Show variables not being logged** in the project-wide view to confirm whether the signal is present but unlogged. |
 | Chart is blank after clicking Apply | Confirm that the selected time interval contains logged data for those signals. If the signals were only recently added, there may not yet be enough data to display. |
 | Saved signal groups are missing | Project-wide saved groups are stored in the `History_SavedSignals_Project` table. View-specific groups are stored in `History_SavedSignals_View`. If groups are missing after a project update, check whether the relevant table was overwritten during the update. |
-| Y-axis ranges are unexpected | When **Scale Y-axes** is off, the Y-axis range uses the default limits for each signal unit. Enable **Scale Y-axes** in the **Settings** panel to fit the chart to actual data. |
+| Y-axis ranges are unexpected | When **Scale Y-axes** is off, the Y-axis range uses the default limits for each signal unit. Enable **Scale Y-axes** in the **Settings** panel to fit the chart to actual data. The axes are scaled when the toggle is switched on, so to rescale after the data has changed, switch it off and on again. |
 | A signal logged in more than one logger is read from the wrong one | History uses the first logger in alphabetical order. See [Signals Logged in More Than One Logger](#signals-in-several-loggers). |
 
 ## Signals Logged in More Than One Logger { #signals-in-several-loggers }

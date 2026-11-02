@@ -74,7 +74,7 @@ The following suffix aliases are configured for the Industry variant by default:
 
 !!! note
     The default suffix aliases can be modified and extended in
-    **Settings → Suffix → Suffix - Popups**. See [Create Popup](../../guides/create-a-popup.md)
+    **Settings → Suffix → Suffix Alias - Popups**. See [Create Popup](../../guides/create-a-popup.md)
     for more information.
 <!-- --8<-- [end:industry] -->
 
@@ -115,6 +115,6 @@ The following suffix aliases are configured for the BMS variant by default:
 
 !!! note
     The default suffix aliases can be modified and extended in
-    **Settings → Suffix → Suffix - Popups**. See [Create Popup](../../guides/create-a-popup.md)
+    **Settings → Suffix → Suffix Alias - Popups**. See [Create Popup](../../guides/create-a-popup.md)
     for more information.
 <!-- --8<-- [end:body-2] -->

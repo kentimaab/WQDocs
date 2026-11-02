@@ -198,7 +198,7 @@ approximately `520` will ensure all objects are visible while removing the empty
 space. The `foreGroundBox2` object does not need to be resized as it rescales
 automatically with the view.
 
-Start the application and navigate to **Settings → Suffix → Suffix - Popups**.
+Start the application and navigate to **Settings → Suffix → Suffix Alias - Popups**.
 Select **Pump Control** and update **View** to the newly created view **Pump Control**
 as shown below:
 

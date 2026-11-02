@@ -1,5 +1,6 @@
 ---
 title: Underhåll — Utöka
+description: Utöka modulen Underhåll med kalenderintegration och felsökning.
 product: mod
 page_type: module
 status: draft
@@ -16,7 +17,7 @@ tags:
 
 Underhållsuppgifter med kommande deadlines visas automatiskt som händelser i kalendermodulen. Det ger en tidsbaserad översikt över planerat underhåll i hela projektet utan att behöva öppna underhållslistan.
 
-Kalendern läser uppgifter från underhållsdatabasen och visar dem utifrån deras deadline-datum. Uppgifter med status **Done**, **Done - Delayed** eller **Removed** exkluderas.
+Kalendern läser uppgifter från underhållsdatabasen och visar dem utifrån deras deadline-datum. Uppgifter med status **Klar**, **Klar - Försenad** eller **Borttagen** exkluderas.
 
 En påminnelsehändelse visas i kalendern ett visst antal dagar före varje uppgifts deadline. Standardförskjutningen för påminnelser är 3 dagar, och förskjutningen kan konfigureras via ett skript. Påminnelser slås på per mall med kryssrutan **Skapa en påminnelse 3 dagar innan** i **Underhåll - Mallar**. En uppgift vars mall har rutan avmarkerad får ingen påminnelse, och nya mallar skapas med rutan avmarkerad. Se [Påminnelsekonfiguration](../calendar/extending.md#reminder-configuration) i Kalender-modulen.
 <!-- --8<-- [end:body-1] -->

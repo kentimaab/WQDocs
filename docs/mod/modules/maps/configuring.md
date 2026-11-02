@@ -37,6 +37,30 @@ make `pinStatus` objects the foundation for system control through a map.
     To display a different icon on the `pinStatus` object, change its SVG or make a
     copy of the object and change the SVG on the copy.
 
+The library also has ready-made variants of `pinStatus` with their own icons, such as
+`pinStatusAppartment`, `pinStatusOffice` and `pinStatusSolarPark`. Example maps using
+them are included in the main menu under **Dashboards & Kartor**.
+
+The following properties are set on a `pinStatus` object:
+
+* **linkedView** — The **Workview** or folder the pin opens on click, and whose state it
+shows. A path ending in `.kvie` opens that **Workview**. Any other path opens the folder
+in the menu. A pin without a **linkedView** zooms the map in two steps when clicked.
+* **systemName** — The name shown on the hover card.
+
+Hovering over a pin shows a card with its name and state: **Offline**, **Normal**,
+**Warning** or **Alarm**. A cluster pin's card shows how many pins it holds, for example
+"(4 buildings)".
+
+#### Direct navigation { #direct-navigation }
+
+The **Direct navigation (map)** setting, under **Settings → Navigation**, decides what a
+click on a pin does. It is on by default, and a click opens the pin's **linkedView** at
+once. When it is off, the pin instead stores its details on the **Map View** as
+`MapSelectedPin`, `MapSelectedLink`, `MapSelectedAlarm` and `MapSelectedStatus`. The
+example maps show them in their **Info about selected pin** panel, with a **Go to view**
+or **Go to folder** button. A map of your own needs a panel that reads these properties.
+
 To integrate an **Alarm** object with a map and status pins, see
 [Connecting Alarm to Map View](extending.md#connecting-alarm-to-map-view).
 
@@ -101,6 +125,14 @@ most 50 coordinate rows, which draw 49 segments.
 used.
 * **Caption** — The header displayed in the map indicator.
 
+Clicking a segment of a line network opens an info popup. Each segment object
+(`MainLine1`, `MediumLine1` or `SmallLine1`) has its own **Header** and **Text** for that
+popup. An empty **Header** falls back to the network's **Caption**, and an empty **Text**
+leaves the popup body blank.
+
+!!! note "Not on remote and web clients"
+    Line networks are not shown on remote and web clients.
+
 Example configuration:
 
 ![Lines configuration](/docs/Images/Map_Indicators/MapLines.png)
@@ -132,6 +164,11 @@ To link the file to a line group such as `MainPipeLines`, set the **fileName** p
 to the file name without the extension, here `malmo_big`:
 
 ![fileName configuration](/docs/Images/Map_Indicators/fileNameCSV.png)
+
+!!! warning "Give the file a unique name"
+    The file name must not match any other name in the Data Store, such as an alarm
+    group. If it does, the line network is not drawn and a `scMap.readFromCSV() error`
+    is written to the log.
 
 #### Line geometry properties { #line-geometry-properties }
 

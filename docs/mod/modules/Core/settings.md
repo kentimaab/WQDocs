@@ -19,6 +19,21 @@ configuration options. Navigate to **Settings** in the main menu and open the
 ![Settings](/docs/Images/Settings/Settings.png)
 
 <!-- --8<-- [start:body-2] -->
+Each section is locked by its own privilege. A user without it sees the section's
+settings disabled and covered by the text *Requires privilege*, followed by the
+privilege name.
+
+| Section | Privilege |
+|---|---|
+| General settings | `Settings_Project` |
+| Process images | `Settings_Process_Images` |
+| Users and privileges | `EditUsers` |
+| Navigation | `Settings_Navigation` |
+| Advanced settings | `Debug` |
+
+A few buttons also check a privilege of their own. They are noted with the setting
+below. See [Users and Privileges](users-privileges.md#framework-privileges).
+
 ---
 
 ## General settings
@@ -49,7 +64,8 @@ adjust it.
 and dark mode.
 
 **SMTP settings** — configures the SMTP server used for sending email
-notifications. Click **Edit** to open the configuration dialog. See
+notifications. Click **Edit** to open the configuration dialog. **Edit** requires
+`editSMTP`. See
 [Alarms — Extending](../Core/alarms/extending.md#email-notifications) for more
 information.
 
@@ -62,7 +78,12 @@ Click **View connected clients** to see a list of active connections.
 
 **Schedule** — WideQuick's built-in scheduling system, checked every 5 minutes to
 trigger configured scheduled tasks such as report generation. Click **Edit
-schedule** to configure schedules. 
+schedule** to configure schedules. **Edit schedule** requires `Schedules`.
+
+**Archived notes** — click **Delete all** to permanently delete every archived
+logbook note, after a confirmation. Requires `Logbook_Delete`. See
+[Logbook - Extending](../logbook/extending.md#archiving).
+
 ---
 
 ## Process images
@@ -125,14 +146,14 @@ for more information.
 **Direct navigation (map)** — when enabled, clicking a pin object on a map
 navigates directly to its linked **Workview**. When disabled, an information panel
 is shown first allowing the user to choose whether to navigate. See
-[Maps — Configuring](../maps/configuring.md) for more information.
+[Maps — Configuring](../maps/configuring.md#direct-navigation) for more information.
 
 ---
 
 ## Advanced settings
 
-**Debug tree** — click **DebugTree** to open the debug tree, which displays the
-full Data Store variable hierarchy. Useful for troubleshooting tag connections.
+**Debug tree** — click **DebugTree** to open the object tree of the running
+application, for inspecting its objects while troubleshooting.
 
 **Console** — click **Open console** to open the script console, which displays
 script output and errors at runtime.
@@ -144,4 +165,12 @@ Useful for diagnosing issues in production environments.
 **Change GSM settings** to open the configuration dialog. See
 [Alarms — Extending](alarms/extending.md#sms-notifications) for more
 information.
+
+**Shutdown option** — shown on OE200 panels only. Click **Open config** to choose
+what happens when WideQuick shuts down. Requires `Config`.
+
+---
+
+**Exit WideQuick** — the button at the bottom right of the view closes WideQuick,
+after a confirmation.
 <!-- --8<-- [end:body-2] -->

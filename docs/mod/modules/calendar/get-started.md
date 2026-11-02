@@ -87,7 +87,7 @@ The sidebar shows two things: a mini calendar for the current month and a list o
 
 The mini calendar highlights the currently selected day.
 
-The upcoming events list shows the next events and maintenance deadlines sorted by date, merging both event sources into a single list.
+The upcoming events list shows the next events and maintenance deadlines sorted by date, merging both event sources into a single list. Clicking an event in the list opens the Day view for that date.
 <!-- --8<-- [end:body-4] -->
 
 ![Sidebar with upcoming events](/docs/Images/Calendar/calendar-sidebar.png){align=center}

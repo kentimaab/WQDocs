@@ -30,11 +30,13 @@ To link documents to an object:
 3. Double-click a file to add it. A **+** indicator shows it will be linked.
 4. Click **Update document links** to save.
 
+Files that are already linked show the **+** when the dialog opens. To unlink one, double-click it to remove the **+**, then click **Update document links**.
+
 A document can be linked to multiple objects. The same object can have multiple documents linked to it.
 
 ## Object popup { #object-popup }
 
-Every object in the project has a [**Documents**](../../reference/Popup/Documents.md) tab available through its popup. Open the popup by clicking on an object and selecting the **Documents** tab. This shows all documents linked to that specific object. Selecting a document and clicking **Preview** opens a preview directly in the popup.
+Every object in the project has a [**Documents**](../../reference/Popup/Documents.md) tab available through its popup. Open the popup by clicking on an object and selecting the **Documents** tab. This shows all documents linked to that specific object. Selecting a document and clicking **Preview** opens a preview directly in the popup. On remote and web clients, double-clicking an online file opens it in the browser instead.
 <!-- --8<-- [end:body-2] -->
 
 ![Documents tab in the object popup](/docs/Images/Documents/documents-object-popup.png){align=center}

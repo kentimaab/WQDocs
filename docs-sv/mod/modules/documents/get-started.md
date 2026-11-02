@@ -16,12 +16,6 @@ tags:
     relaterad funktionalitet som täcks av Dokument-guiderna:
     
     * `scDoc`
-    * `scLinking`
-    * `scSubNav`
-    * `scObjectFinder`
-    * `scPrototypes`
-    * `scSuffix`
-    * `scThemes`
     * `scUsers`
     * `scFilePicker`
     * `scWM`
@@ -29,7 +23,13 @@ tags:
     * `scNav`
     * `scToolTip`
     * `scSmartPopup`
+    * `scSubNav`
+    * `scLinking`
+    * `scPrototypes`
+    * `scSuffix`
+    * `scThemes`
     * `scAlert`
+    * `scQuickSort`
 
 Dokumentmodulen finns under **Dokument & Loggbok → Dokument** i huvudmenyn. Vyn **Dokument - Lista** är den primära ingångspunkten. Den visar alla dokument i systemet, och där kan de läggas till, förhandsgranskas och hanteras.
 
@@ -47,7 +47,7 @@ Följande åtgärder är tillgängliga längst ned i vyn:
 
 * **Förhandsgranska** — öppnar den valda filen i förhandsgranskningspanelen.
 * **Lägg till dokument** — öppnar uppladdningsdialogen för att lägga till ett nytt dokument.
-* **Ta bort dokument** — tar permanent bort det valda dokumentet.
+* **Ta bort dokument** — tar bort det valda dokumentet. En lokal fil raderas från disken efter en bekräftelse, och det går inte att ångra. En onlineresurs tas bort ur listan utan fråga. Fjärr- och webbklienter kan bara ta bort onlineresurser.
 * **Redigera valt dokument** — byt namn på det valda dokumentet, eller ändra URL:en för en onlineresurs. Sökvägen till en lokal fil kan inte redigeras.
 * **Synkronisera med lokala filer på server** — söker igenom dokumentmappen på servern och uppdaterar listan för att matcha. Se [Synkronisering med filsystemet](configuring.md#syncing-with-the-filesystem).
 
@@ -85,7 +85,7 @@ Resursen läggs till i dokumentlistan under **Onlinefiler**. Endast URL:en lagra
 
 ## Förhandsgranska ett dokument { #previewing-a-document }
 
-Välj en fil i den vänstra panelen och klicka på **Förhandsgranska** för att läsa in den i förhandsgranskningspanelen.
+Välj en fil i den vänstra panelen och klicka på **Förhandsgranska** för att läsa in den i förhandsgranskningspanelen. Att dubbelklicka på filen gör detsamma.
 
 Bilder, PDF:er och webbsidor visas direkt i förhandsgranskningspanelen. Office- och OpenDocument-filer (Word, Excel, PowerPoint, `.odt`, `.ods`, `.odp`) förhandsgranskas aldrig inline. På skrivbordsklienter öppnas de i det externa program som är kopplat till filtypen. På **WideQuick® Web** grupperas de separat i filträdet, och ett meddelande talar om att de inte kan visas i webbläsaren.
 

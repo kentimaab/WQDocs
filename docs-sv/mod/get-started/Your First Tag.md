@@ -76,7 +76,7 @@ Välj objektet `DynTouch` inuti gruppen och navigera till fliken **Egenskaper**.
 
 ### Konfigurera animationen
 
-Starta projektet och navigera till **Inställningar → Suffix → Suffix - Larm**. Välj **4 - Aktiv** och klicka på **Lägg till nytt suffixalias i vald kategori**. När du uppmanas att ange ett namn, skriv **On** och klicka på **Ok**. Klicka på **Skriv ändringar till DB** för att spara.
+Starta projektet och navigera till **Inställningar → Suffix → Suffixalias - Larm**. Välj **4 - Aktiv** och klicka på **Lägg till nytt suffixalias i vald kategori**. När du uppmanas att ange ett namn, skriv **On** och klicka på **Ok**. Klicka på **Skriv ändringar till DB** för att spara.
 
 Suffixaliaset **On** är nu en del av gruppen **4 - Aktiv**. Välj sedan **On** i trädvyn och tilldela `_IO` till fältet **Suffix**.
 
@@ -88,7 +88,7 @@ För mer information om hur animationssystemet fungerar, se [Arbetsvy-animatione
 <!-- --8<-- [start:body-2] -->
 ### Konfigurera Processpopupen
 
-Nästa steg är att koppla suffixet till **Process**-popupen, så att ett klick på objektet öppnar popupen och gör det möjligt att styra signalen. Navigera till **Inställningar → Suffix → Suffix - Popups**.
+Nästa steg är att koppla suffixet till **Process**-popupen, så att ett klick på objektet öppnar popupen och gör det möjligt att styra signalen. Navigera till **Inställningar → Suffix → Suffixalias - Popuper**.
 
 Den här vyn visar alla konfigurerade standardpopups. För att skapa en anpassad popup, se [Skapa ett popup](../guides/create-a-popup.md). Välj **Process** och klicka på **Lägg till nytt suffixalias i vald kategori**. Ge det nya suffixaliaset namnet **On** för konsekvensens skull. Välj sedan aliaset **On** och tilldela `_IO` till fältet **Suffix**.
 <!-- --8<-- [end:body-2] -->

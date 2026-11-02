@@ -38,7 +38,7 @@ Signal groups can be saved and reloaded to avoid re-selecting the same signals e
 
 1. Select the signals and click **Apply** so they are visible in the chart.
 2. Type a name in the **Enter group name** field.
-3. Click **Save group**. The group is saved and appears in the **Select saved group** dropdown.
+3. Click **Save group**. The group is saved and appears in the **Select saved group** dropdown. If a group with the same name already exists, a confirmation asks whether to replace it.
 
 **To load a saved group:**
 
@@ -71,6 +71,8 @@ To remove a group from the selection before importing, select it in the right pa
 
 !!! note
     Importing fetches only the signals. The groups are not added to the **Select saved group** dropdown. To keep the selection as a group here, save it with **Save group**.
+
+In the project-wide History, a fetched signal whose object is not in the **Signals** tree is skipped without a message. The tree lists only objects from views that have been opened at least once. The count in the message includes skipped signals, so it can be higher than the number of signals actually selected.
 
 ## Next Steps { #next-steps }
 

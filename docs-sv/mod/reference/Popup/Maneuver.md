@@ -74,7 +74,7 @@ Följande suffixaliaser är konfigurerade för Industri-varianten som standard:
 
 !!! note
     Standardsuffixaliaserna kan ändras och utökas under
-    **Inställningar → Suffix → Suffix - Popups**. Se [Skapa popup](../../guides/create-a-popup.md)
+    **Inställningar → Suffix → Suffixalias - Popuper**. Se [Skapa popup](../../guides/create-a-popup.md)
     för mer information.
 <!-- --8<-- [end:industry] -->
 
@@ -115,6 +115,6 @@ Följande suffixaliaser är konfigurerade för BMS-varianten som standard:
 
 !!! note
     Standardsuffixaliaserna kan ändras och utökas under
-    **Inställningar → Suffix → Suffix - Popups**. Se [Skapa popup](../../guides/create-a-popup.md)
+    **Inställningar → Suffix → Suffixalias - Popuper**. Se [Skapa popup](../../guides/create-a-popup.md)
     för mer information.
 <!-- --8<-- [end:body-2] -->

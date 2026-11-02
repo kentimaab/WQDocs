@@ -58,6 +58,10 @@ tags:
 
 --8<-- "mod/modules/dashboards/configuring.md:body-13"
 
-![Maintenance](/docs/sv/Images/Dashboard/Maintenance-wwt.png){align=center}
+![Gauge widget](/docs/sv/Images/Dashboard/Gauge-wwt.png){align=center}
 
 --8<-- "mod/modules/dashboards/configuring.md:body-14"
+
+![Maintenance](/docs/sv/Images/Dashboard/Maintenance-wwt.png){align=center}
+
+--8<-- "mod/modules/dashboards/configuring.md:body-15"

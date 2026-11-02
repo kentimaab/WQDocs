@@ -111,7 +111,7 @@ For more information on how the animation system works see
 
 The next step is to connect the suffix to the **Process** popup, so that clicking
 the object opens the popup and allows the signal to be manipulated. Navigate to
-**Settings → Suffix → Suffix - Popups**.
+**Settings → Suffix → Suffix Alias - Popups**.
 
 This view shows all configured standard popups. To create a custom popup see
 [Create a Popup](../guides/create-a-popup.md). Select **Process** and click **Add new

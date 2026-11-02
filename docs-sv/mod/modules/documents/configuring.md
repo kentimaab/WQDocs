@@ -25,15 +25,17 @@ Navigera till **Dokument & Loggbok → Dokument → Dokument - Objektreferenser*
 Så här kopplas dokument till ett objekt:
 
 1. Hitta objektet i listan.
-2. Klicka på **Redigera dokumentkopplingar**.
+2. Klicka på **Redigera dokumentlänkar**.
 3. Dubbelklicka på en fil för att lägga till den. En **+**-indikator visar att den kommer att kopplas.
-4. Klicka på **Uppdatera dokumentkopplingar** för att spara.
+4. Klicka på **Uppdatera dokumentlänkar** för att spara.
+
+Filer som redan är kopplade visar **+** när dialogen öppnas. För att ta bort en koppling dubbelklickar du på filen så att **+** försvinner, och klickar sedan på **Uppdatera dokumentlänkar**.
 
 Ett dokument kan kopplas till flera objekt. Samma objekt kan ha flera dokument kopplade till sig.
 
 ## Objektpopup { #object-popup }
 
-Varje objekt i projektet har en flik [**Dokument**](../../reference/Popup/Documents.md) tillgänglig via sin popup. Öppna popupen genom att klicka på ett objekt och välja fliken **Dokument**. Här visas alla dokument som är kopplade till det specifika objektet. Välj ett dokument och klicka på **Förhandsgranska** för att öppna en förhandsgranskning direkt i popupen.
+Varje objekt i projektet har en flik [**Dokument**](../../reference/Popup/Documents.md) tillgänglig via sin popup. Öppna popupen genom att klicka på ett objekt och välja fliken **Dokument**. Här visas alla dokument som är kopplade till det specifika objektet. Välj ett dokument och klicka på **Förhandsgranska** för att öppna en förhandsgranskning direkt i popupen. På fjärr- och webbklienter öppnar ett dubbelklick på en onlinefil den i stället i webbläsaren.
 <!-- --8<-- [end:body-2] -->
 
 ![Dokumentfliken i objektpopupen](/docs/sv/Images/Documents/documents-object-popup.png){align=center}

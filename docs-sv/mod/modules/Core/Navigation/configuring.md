@@ -25,7 +25,7 @@ på det traditionella sättet via säkerhetsfliken. Istället hanteras behörigh
 inställningar i **WideQuick® Runtime**.
 
 För att komma åt dessa inställningar, starta projektet och navigera till
-**Huvudmeny → Inställningar → Arbetsvyer → Arbetsvyer - Behörighet**.
+**Huvudmeny → Inställningar → Arbetsvyer → Arbetsvyer - Privilegie**.
 
 Här visas två menygrupper: **Main_Menu** och **System**. Expandera dessa för att välja
 en specifik vy eller en **Arbetsvy**-mapp och tilldela sedan önskad **Behörighet** från

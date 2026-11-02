@@ -31,7 +31,7 @@ tags:
 | `isHoliday` changes an hour or so into the day | Expected. Both holiday variables are refreshed by the hourly poll, which counts from application start rather than from midnight. See [Holiday Variables](extending.md#holiday-variables). |
 | A holiday eve does not set `isHoliday` | The two are separate by design, because a holiday eve is usually a shortened working day rather than a closed one. Read `isHolidayEve` for it, or read both where the same behaviour is wanted. |
 | A multi-day holiday only marks its first day | The classification uses an overlap test, so every covered day is marked. If only the first day is marked, check that the event's end date is set as intended. A holiday event is snapped to whole days when saved. |
-| A holiday does not reach the PLC | The variables carry the classification but do not send it. Connect `isHoliday` and `isHolidayEve` to outputs the same way as any other value. |
+| A holiday does not reach the control system | The variables carry the classification but do not send it. Connect `isHoliday` and `isHolidayEve` to outputs the same way as any other value. |
 
 ## Known Bugs { #known-bugs }
 

@@ -1,5 +1,6 @@
 ---
 title: Kalender — Konfigurering
+description: Konfigurera händelser, underhållsfärger, påminnelser, helgdagar och kalenderimport i kalendermodulen.
 product: mod
 page_type: module
 status: draft
@@ -36,7 +37,7 @@ Underhållsdeadlines från [underhållsmodulen](../maintenance/index.md) visas a
 
 Varje underhållshändelse visas på dagen för sin deadline. Färgen ställs in automatiskt baserat på uppgiftens aktuella status och kan inte väljas manuellt. Dessa färger definieras i temat **MaintenanceColors** i `Themes.kdat` och är separata från de färger som används för kalenderhändelser.
 
-När en underhållshändelse klickas öppnas ett popup-fönster som visar objekt, status, deadline och underhållstyp. Klicka på **Öppna redigering** för att öppna uppgiftens redigeringsfönster direkt ovanpå kalendern. När ändringarna sparas där uppdateras kalendern.
+I **Vecka**- eller **Dag**-vy öppnas ett popup-fönster som visar objekt, status, deadline och underhållstyp när en underhållshändelse klickas. I **Månad**-vy öppnar ett klick på en händelse i stället dagsvyn för det datumet. På **WideQuick® Web** öppnar ett klick i veckovy också dagsvyn, och popup-fönstret öppnas därifrån. Klicka på **Öppna redigering** för att öppna uppgiftens redigeringsfönster direkt ovanpå kalendern. När ändringarna sparas där uppdateras kalendern.
 
 | Status | Färg |
 |---|---|
@@ -63,7 +64,7 @@ De två hålls isär avsiktligt. En helgdagsafton är oftast en förkortad arbet
 
 Flerdagshelger fungerar som väntat. En händelse som sträcker sig över flera dagar markerar varje dag den täcker, inte bara den dag den börjar.
 
-### Skicka klassificeringen till ett PLC { #handing-the-classification-to-a-plc }
+### Skicka klassificeringen till styrsystemet { #handing-the-classification-to-a-plc }
 
 Kalendern publicerar dagens klassificering till två interna variabler i Datalagret:
 
@@ -72,12 +73,12 @@ Kalendern publicerar dagens klassificering till två interna variabler i Datalag
 | `isHoliday` | Sann när dagens datum täcks av en **HOLIDAY**-händelse. |
 | `isHolidayEve` | Sann när dagens datum täcks av en **HOLIDAYEVE**-händelse. |
 
-Båda är vanliga booleska variabler och kan kopplas till en utgång på samma sätt som vilket annat värde som helst, så att ett PLC eller DUC kan läsa dagtypen och köra sina egna scheman utifrån den. Klassificeringen är en egenskap hos dagen, så ett par variabler räcker för samtliga scheman i stället för att varje tidkanal bär sin egen kopia.
+Båda är vanliga booleska variabler och kan kopplas till en utgång på samma sätt som vilket annat värde som helst, så att styrsystemet kan läsa dagtypen och köra sina egna scheman utifrån den. Klassificeringen är en egenskap hos dagen, så ett par variabler räcker för samtliga scheman i stället för att varje tidkanal bär sin egen kopia.
 
 Variablerna skrivs vid uppstart och uppdateras av den timvisa pollningen och av **Sync**. Att markera en dag i förväg kräver därför inga ytterligare åtgärder, men en markering av dagens datum får effekt först vid nästa pollning, eller direkt med **Sync**.
 
-!!! note "Kalendern klassificerar dagen, PLC:t avgör vad som ska hända"
-    Överlämningen rapporterar endast vilken dagtyp som gäller i dag. Vilka utgångar som ändras, och när, ligger kvar hos PLC:ts egen schemalogik.
+!!! note "Kalendern klassificerar dagen, styrsystemet avgör vad som ska hända"
+    Överlämningen rapporterar endast vilken dagtyp som gäller i dag. Vilka utgångar som ändras, och när, ligger kvar hos styrsystemets egen schemalogik.
 
 ## Importera en kalender { #importing-a-calendar }
 
@@ -86,6 +87,8 @@ Variablerna skrivs vid uppstart och uppdateras av den timvisa pollningen och av 
 Varje importerad fil blir en prenumeration. Alla händelser den bidragit med märks med den, så en import kan byta färg eller tas bort som en enhet utan att påverka händelser som skapats direkt i kalendern eller händelser från en annan fil.
 
 En import avvisas om dess namn eller sökväg matchar en som redan finns. Jämförelsen bortser från omgivande blanksteg och ett avslutande snedstreck.
+
+Import är bara tillgänglig på servern. På fjärr- och webbklienter är **Importera** inaktiverad och märkt *Inte tillgänglig på fjärrsystem*, så att en fjärrklient inte kan komma åt serverns filer.
 <!-- --8<-- [end:body-1] -->
 
 ![Dialogen Importera kalender](/docs/sv/Images/Calendar/import-calendar.png){align=center}
@@ -128,6 +131,8 @@ Kryssa i de kalendrar som ska visas och klicka på **Tillämpa**.
 **Exportera** öppnar **Exportera kalender**. Kryssa i vilka kalendrar som ska ingå, klicka sedan på **Generera** för att skriva en `.ics`-fil, och vid behov på **Skicka via mejl** för att skicka den som en bilaga. **Skicka via mejl** går att använda först efter **Generera**, och bara när SMTP är konfigurerat.
 
 **Egna/interna händelser** listas bredvid importerna, så att händelser som skapats direkt i kalendern kan tas med eller utelämnas separat. Helgdags- och helgdagsaftonshändelser ingår i den gruppen, men exporten behåller inte deras markering. Importerade i en annan installation får händelserna färgen **DEFAULT** och markerar inga dagar förrän importen byts till **HOLIDAY** eller **HOLIDAYEVE** med **Byt kategori**. Det markerar alla importens händelser på samma sätt, så helgdagar och helgdagsaftnar blir bara rätt markerade om de flyttas i separata filer.
+
+Kalendern exporteras också automatiskt varje natt klockan 03:00 till `Export/WideQuickCalendar.ics`, med alla kalendrar. **Generera** skriver till samma fil, så ett urval som gjorts i **Exportera kalender** ersätts av hela kalendern vid nästa nattliga export.
 <!-- --8<-- [end:body-4] -->
 
 ![Dialogen Exportera kalender](/docs/sv/Images/Calendar/export-calendar.png){align=center}

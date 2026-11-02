@@ -57,6 +57,6 @@ The following suffix aliases are configured for the Alarm Limits popup by defaul
 
 !!! note
     The default suffix aliases can be modified and extended in
-    **Settings → Suffix → Suffix - Popups**. See [Create Popup](../../guides/create-a-popup.md)
+    **Settings → Suffix → Suffix Alias - Popups**. See [Create Popup](../../guides/create-a-popup.md)
     for more information.
 <!-- --8<-- [end:body] -->

@@ -31,7 +31,7 @@ The Audit Trail records changes to selected DataStore variables and maintenance 
 
 ## Viewing the Log { #viewing-the-log }
 
-Navigate to **History → Logs → Audit trail → Audit trail**.
+Navigate to **History → Logs → Audit Trail → Audit Trail**.
 <!-- --8<-- [end:body-1] -->
 
 ![Audit trail view](/docs/Images/Audit_Trail/audit-trail-log.png){align=center}
@@ -45,13 +45,14 @@ The log shows all recorded changes with the following columns:
 * **User** — the user logged in on the client where the change was made.
 * **System** — where the change was made: the local application, or the address of a web or remote client.
 
-Each change is logged once, by the application where the user made it. Changes without a user, for example from scripts, drivers or schedules, are logged by the local application.
+Each change is logged once, by the application where the user made it. Changes nobody made by hand, for example from scripts, drivers or schedules, are logged by the local application, and show the user logged in there at that moment.
 
 !!! note
     The audit trail decides where a change was made from each client's recent user
     activity. A web client running in a browser on the same computer as the application
     shares that activity, so a change made there can be logged twice. Web clients on other
-    computers are not affected.
+    computers are not affected. Two users active on two clients within the same couple of
+    seconds both log a change made during that time.
 
 Use the **Filter** panel on the left to narrow down the log:
 
@@ -60,10 +61,11 @@ Use the **Filter** panel on the left to narrow down the log:
 * **User** — filter by a specific user.
 * **Number of rows** — limit how many entries are shown.
 
-Click **Filter** to apply. Click **Clear audit trail** to permanently delete all log entries. The button is only shown to users with the `Config` privilege.
+Click **Filter** to apply. Click **Clear Audit trail** to permanently delete all log entries. The button is only shown to users with the `Config` privilege.
+
 ## Maintenance Change Log { #maintenance-change-log }
 
-Navigate to **History → Logs → Audit trail → Audit Trail - Maintenance**.
+Navigate to **History → Logs → Audit Trail → Audit Trail - Maintenance**.
 <!-- --8<-- [end:body-2] -->
 
 ![Audit Trail - Maintenance view](/docs/Images/Audit_Trail/audit-trail-maintenance.png){align=center}
@@ -81,6 +83,8 @@ Each row shows:
 * **Current Status** — the status after the change.
 
 Select a row and click **Open** to see the full before/after detail for that change, including assignee, priority, deadline and description.
+
+The list does not reload by itself. When maintenance data changes after the list was loaded, here or on another client, a blinking refresh button appears. Click it to reload the list.
 
 ### Clearing the maintenance log { #clearing-the-maintenance-log }
 

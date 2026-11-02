@@ -1,5 +1,6 @@
 ---
 title: Rapporter — Kom igång
+description: Kom igång med modulen Rapporter.
 product: mod
 page_type: module
 status: draft
@@ -66,7 +67,7 @@ genererade rapporter med två kolumner:
 
 * **Rapport** — Rapportens namn, som standard mallens namn följt av
 genereringsnumret, till exempel `Alarm_Report1`.
-* **Tidsstämpel** — Datum och tid då inspelningen avslutas.
+* **Tidsstämpel** — Datumet då rapporten genererades.
 
 Från den här sidan kan rapporter skapas, tas bort eller skickas som e-postbilagor. Att skicka
 rapporter via e-post kräver att en SMTP-server är konfigurerad, vilket förklaras
@@ -134,9 +135,9 @@ och deltarapporter, eftersom de kräver historiska data från den tidpunkten och
 * **LoggerList** — Visar de signaler som är tillgängliga i den valda loggern. Låst för
 **Larmrapport**, eftersom den inkluderar alla signaler automatiskt. I **Larmrapport ett larm**
 är listan aktiv, och exakt ett larm måste väljas. På energi- och
-deltakontrollerna är den dessutom låst till dess att en enhet har valts, och listar sedan
-endast de signaler som mäts i den enheten. Se [Enheter och prefix](#units-and-prefixes).
-* **Antal händelser** — Det maximala antalet händelser att inkludera. För energirapporter
+deltakontrollerna listar den endast de signaler som mäts i den valda enheten. Se
+[Enheter och prefix](#units-and-prefixes).
+* **Antal händelser** — Det maximala antalet händelser att inkludera per signal. För energirapporter
 är standardvärdet antalet timhändelser i den valda tidsperioden. I deltarapporter hanteras
 detta i onLoad-skriptet.
 * **Enhet** och **Prefix** — Den enhet rapporten presenteras i. Finns endast på energi- och
@@ -193,14 +194,14 @@ så skalningen sker i mallen snarare än i skriptet.
 Enhetslistan byggs utifrån enheterna hos de signaler som finns i den valda loggern, så
 att endast enheter som projektet faktiskt loggar erbjuds.
 
-Den valda enheten filtrerar också signallistan. TreeView är låst till dess att en enhet
-har valts, och listar sedan endast de signaler som mäts i den enheten. Om enheten ändras
+Den valda enheten filtrerar också signallistan. En enhet väljs så fort kontrollern
+öppnas, och TreeView listar endast de signaler som mäts i den enheten. Om enheten ändras
 rensas det aktuella urvalet, eftersom de signaler som valts under den tidigare enheten
 inte längre finns i listan.
 
 ## Schemalägga en rapport i **WideQuick® Runtime** { #scheduling-a-report-in-widequick-runtime }
 För att schemalägga en rapport, navigera till
-**Historik → Rapporter → Rapporter - Schema**.
+**Historik → Rapporter → Rapporter - Schemalägg**.
 
 <figure markdown="span">
 <!-- --8<-- [end:body-6] -->
@@ -277,14 +278,40 @@ Nedan finns beskrivningar av alternativen på den första och tredje sidan:
 * Tredje sidan
 
     * **Ämnesrad** — Ämnesraden i det e-postmeddelande där rapporten skickas.
-    * **Mottagare** — Mottagarna av e-postmeddelandet. Accepterar både e-postadresser
-    och alias.
+    * **Mottagare** — Skriv en e-postadress och klicka på **Lägg till** för att lägga
+    till den i listan. Ett telefonnummer accepteras också och listas som **Nummer**, men
+    schemalagda rapporter skickas bara med e-post. Allt annat listas som **Okänd**.
     * **Alias** — Visar tillgängliga alias. Välj ett och klicka på **Lägg till**
     för att lägga till det som mottagare.
-    * **Mottagarlista** — Visar den fullständiga listan över mottagare och anger om
-    varje post är en e-postadress eller ett alias.
+    * **Lista av mottagare** — Visar varje mottagare med dess typ: **Email**, **Alias**,
+    **Nummer** eller **Okänd**. En varningstriangel markerar en post som rapporten inte
+    kan nå: ett nummer, en okänd post eller en e-postadress när SMTP inte är konfigurerat.
+    Välj en post och klicka på **Ta bort vald mottagare** för att ta bort den.
     * **Rapportfilformat** — Formatet i vilket rapporten skickas: **PDF** eller
     **PDF och Excel**.
+
+### Hantera scheman { #managing-schedules }
+
+Vyn **Rapporter - Schemalägg** listar varje schema med dess **Titel**, **Rapporttyp** och
+**Beskrivning**. Panelen **Scheman** ovanför listan visar det totala antalet rapportscheman
+och hur många av dem som är aktiva och inaktiva.
+
+* **Skapa nytt schema** öppnar menyn med tre sidor som beskrivs ovan.
+* **Redigera schema** öppnar det valda schemat i samma meny.
+* **Ta bort valt schema** tar bort det valda schemat efter en bekräftelse. Det går inte
+att ångra.
+
+Alla tre knapparna kräver privilegiet `Schedules`. Utan det är de inaktiverade och täckta
+av texten *Kräver privilegiet Schedules*. Se [Behörigheter](extending.md#privileges).
+
+Panelen **SMTP och GSM** visar om SMTP är konfigurerat och om ett GSM-modem är aktivt. På
+SMTP-raden öppnar **Konfigurera** inställningarna för e-postservern, och **Kontrollera**
+kontrollerar att avsändare, användare, port, server och avsändarnamn är ifyllda och
+uppdaterar statusen. **Testa** visas när SMTP är konfigurerat och öppnar popupen för att
+skicka en rapport med e-post, så att ett testmeddelande kan skickas. På GSM-raden, som bara
+visar sina knappar när ett GSM-modem är aktivt, öppnar **Konfigurera** modeminställningarna.
+
+Vyn innehåller också Rapporthistoriken. Se [Rapporthistorik](configuring.md#report-history).
 
 ## Nästa steg { #next-steps }
 

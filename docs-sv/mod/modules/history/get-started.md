@@ -1,5 +1,6 @@
 ---
 title: Historik — Kom igång
+description: Kom igång med modulen Historik.
 product: mod
 page_type: module
 status: draft
@@ -34,7 +35,7 @@ Den projektövergripande vyn **Historik** är tillgänglig från huvudmenyn. Den
 Vyn har ett diagram längst upp och tre paneler längst ned:
 
 * **Signaler** — ett träd med alla loggade signaler i projektet, grupperade efter system. Signaler väljs här och appliceras på diagrammet.
-* **Spåra signal** — alternativ för att spåra en livesignal i diagrammet. Innehåller även avsnittet **Sparade grupper** för att spara och läsa in namngivna signalgrupper.
+* **Följ signal** — alternativ för att följa en livesignal i diagrammet. Innehåller även avsnittet **Sparade grupper** för att spara och läsa in namngivna signalgrupper.
 * **Inställningar** — växlar för teckenförklaring, linjal och Y-axelskalning, samt kontroller för tidsintervall och uppdateringsintervall.
 
 Knappen **Visa variabler som inte loggas** i det övre högra hörnet öppnar ett separat fönster som visar alla signaler som inte är anslutna till en loggenhet.
@@ -42,8 +43,8 @@ Knappen **Visa variabler som inte loggas** i det övre högra hörnet öppnar et
 ## Välja signaler { #selecting-signals }
 
 1. Expandera trädet **Signaler** för att hitta signalen. Klicka på **Expandera alla** för att öppna alla noder på en gång.
-2. Klicka på signalen för att markera den. Flera signaler kan markeras samtidigt. Knappen **Applicera** visar hur många signaler som för närvarande är valda.
-3. Klicka på **Applicera** för att plotta de valda signalerna i diagrammet.
+2. Klicka på signalen för att markera den. Flera signaler kan markeras samtidigt. Knappen **Tillämpa** visar hur många signaler som för närvarande är valda.
+3. Klicka på **Tillämpa** för att plotta de valda signalerna i diagrammet.
 4. För att rensa alla signaler från diagrammet, klicka på **Rensa val**.
 
 Den andra kolumnen i trädet visar linjetypen för varje vald signal. Att klicka på linjetypssymbolen växlar mellan tillgängliga stilar (heldragen eller streckad).
@@ -59,8 +60,8 @@ Panelen **Inställningar** styr hur diagrammet ser ut och hur ofta det uppdatera
 | Inställning | Beskrivning |
 |---|---|
 | Visa teckenförklaring | Växlar signalförklaringen i diagramområdet. |
-| Visa linjal | Växlar en vertikal linjalslinje som följer markören. |
-| Skala Y-axlar | Aktiverar automatisk skalning av alla Y-axlar för att passa synliga data. |
+| Visa linjal | Växlar en vertikal linjalslinje som kan dras längs tidsaxeln. |
+| Skala Y-axlar | Skalar alla Y-axlar efter synliga data när den slås på. För att skala om efter att data har ändrats, slå av och på den igen. |
 
 **Tidsintervall** anger hur mycket historik som visas. När linjalen visas centreras intervallet kring linjalen. Annars slutar det vid aktuell tid.
 
@@ -94,7 +95,9 @@ Menyn **SpeedDial** på processvyer innehåller en knapp som öppnar ett vyspeci
 <!-- --8<-- [start:body-4] -->
 Signalval, tidskontroller, inställningar och sparade signalgrupper fungerar på samma sätt. Sparade signalgrupper i detta popup lagras per vy och är separata från projektövergripande sparade grupper. Signalerna i projektövergripande grupper och i grupper som sparats i andra vyer kan också hämtas via **Hämta signaler från andra grupper**. Se [Importera grupper från andra vyer](configuring.md#importing-groups-from-other-views).
 
-Eftersom den vyspecifika historiken bara visar signaler som tillhör den aktuella vyn kan signaler från andra vyer hämtas in med **Importera signaler**.
+Dess knapp **Visa variabler som inte loggas** listar bara de ologgade signalerna i den aktuella vyn.
+
+Eftersom den vyspecifika historiken bara visar signaler som tillhör den aktuella vyn kan signaler från andra vyer hämtas in med **Importera signaler**. **Ta bort importerade signaler** tar bort dem ur signallistan igen. Knappen är aktiv när signaler har importerats.
 <!-- --8<-- [end:body-4] -->
 
 ![Dialogrutan Importera signaler med Tillgängliga till vänster och Valda till höger](/docs/sv/Images/History/history-import-signals.png){align=center}
@@ -106,7 +109,7 @@ Eftersom den vyspecifika historiken bara visar signaler som tillhör den aktuell
 2. Expandera trädet i panelen **Tillgängliga** för att hitta signalen som ska läggas till.
 3. Markera en signal och klicka på **→** för att flytta den till panelen **Valda**.
 4. Upprepa för varje signal som ska läggas till.
-5. Klicka på **Importera och stäng**. Signalerna läggs till i signallistan och är redan markerade. Klicka på **Applicera** för att plotta dem.
+5. Klicka på **Importera och stäng**. Signalerna läggs till i signallistan och är redan markerade. Klicka på **Tillämpa** för att plotta dem.
 
 För att ta bort en signal från urvalet innan import, markera den i panelen **Valda** och klicka på **←**. Klicka på **Rensa tillagda** för att tömma den högra panelen helt.
 
@@ -125,7 +128,7 @@ Signallistan stödjer tangentbordsnavigering med knapparna **▲** och **▼**. 
 
 Signaler med suffixet `_MV` (uppmätt värde) väljs automatiskt när popupen öppnas.
 
-Klicka på **Applicera** för att plotta de valda signalerna. Klicka på **Stäng** för att stänga popupen.
+Klicka på **Tillämpa** för att plotta de valda signalerna. Klicka på **Stäng** för att stänga popupen.
 
 ## Nästa steg { #next-steps }
 

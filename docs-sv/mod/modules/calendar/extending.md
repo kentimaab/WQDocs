@@ -1,5 +1,6 @@
 ---
 title: Kalender — Utöka
+description: Påminnelsekonfiguration, helgdagsvariablerna och prenumerationstabellen.
 product: mod
 page_type: module
 status: draft

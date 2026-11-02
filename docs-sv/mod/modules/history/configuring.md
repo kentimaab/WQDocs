@@ -1,5 +1,6 @@
 ---
 title: Historik — Konfigurering
+description: Konfigurera signalval, diagraminställningar och sparade signalgrupper i modulen Historik.
 product: mod
 page_type: module
 status: draft
@@ -35,9 +36,9 @@ Signalgrupper kan sparas och läsas in igen för att slippa välja om samma sign
 <!-- --8<-- [start:body-2] -->
 **Spara en signalgrupp:**
 
-1. Välj signalerna och klicka på **Använd** så att de visas i diagrammet.
+1. Välj signalerna och klicka på **Tillämpa** så att de visas i diagrammet.
 2. Skriv ett namn i fältet **Ange gruppnamn**.
-3. Klicka på **Spara grupp**. Gruppen sparas och visas i rullgardinsmenyn **Välj sparad grupp**.
+3. Klicka på **Spara grupp**. Gruppen sparas och visas i rullgardinsmenyn **Välj sparad grupp**. Finns redan en grupp med samma namn frågar en bekräftelse om den ska ersättas.
 
 **Läsa in en sparad grupp:**
 
@@ -70,6 +71,8 @@ För att ta bort en grupp från urvalet innan import, markera den i den högra p
 
 !!! note
     Importen hämtar bara signalerna. Grupperna läggs inte till i rullgardinsmenyn **Välj sparad grupp**. För att behålla urvalet som en grupp här, spara det med **Spara grupp**.
+
+I den projektövergripande historiken hoppas en hämtad signal vars objekt inte finns i trädet **Signaler** över utan meddelande. Trädet listar bara objekt från vyer som har öppnats minst en gång. Antalet i meddelandet räknar med de överhoppade signalerna, så det kan vara högre än antalet signaler som faktiskt markerades.
 
 ## Nästa steg { #next-steps }
 

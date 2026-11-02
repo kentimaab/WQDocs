@@ -24,6 +24,8 @@ Introduction to generating reports in **WideQuick® Runtime**.
 report is presented in, and how per-signal scale factors are applied.
 * [**Scheduling a report**](get-started.md#scheduling-a-report-in-widequick-runtime) — 
 How to set up recurring scheduled reports.
+* [**Managing schedules**](get-started.md#managing-schedules) — Editing and deleting 
+schedules, and the SMTP and GSM panel.
 
 ---
 
@@ -50,6 +52,8 @@ How to create a ReportController view for a custom template.
 * [**Changing the maximum number of signals**](extending.md#changing-the-maximum-of-signals-to-be-selected) — 
 How to increase the signal limit for report generation.
 * [**Adding a base unit**](extending.md#adding-a-base-unit) — How to add custom units to the unit system.
+* [**Privileges**](extending.md#privileges) — The privileges that control schedules and SMTP.
+
 ---
 
 ### [Troubleshooting](troubleshooting.md) { #troubleshooting }

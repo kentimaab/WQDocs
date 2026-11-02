@@ -30,7 +30,7 @@ Core is the foundation of every WideQuick MOD installation. Unlike optional modu
 ### [Graphical Symbols](Graphical-symbols/index.md) { #graphical-symbols }
 
 * [**Symbol libraries**](Graphical-symbols/Symbols.md) — Components, dampers, motors, sensors, valves, and more.
-* [**Legacy symbols**](Graphical-symbols/legacy.md) — Earlier generation symbols from WideQuick BMS 8.0.
+* [**Legacy symbols**](Graphical-symbols/legacy.md) — Earlier generation symbols from WideQuick BMS 8.0 and MOD 2024.1.0.
 
 ---
 

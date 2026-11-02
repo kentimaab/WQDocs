@@ -27,7 +27,7 @@ För en guide om hur du skapar och konfigurerar en anpassad Process-popup, se
 Avsnittet **Värden** listar alla processsignaler kopplade till objektet. Varje rad
 visar signalbeskrivningen, dess aktuella värde och enhet. Utseendet på varje rad
 beror på signaltypen och om den är konfigurerad som skrivbar i
-**Inställningar → Suffix → Suffix - Popups**:
+**Inställningar → Suffix → Suffixalias - Popuper**:
 
 * **Numeriska värden** — visas som ett skrivskyddat värde med sin enhet. Om
 konfigurerat som skrivbart kan värdet redigeras direkt i raden.
@@ -53,6 +53,6 @@ Följande suffixalias är konfigurerade för Process-popupen som standard:
 
 !!! note
     Standardsuffixaliasen kan ändras och utökas i
-    **Inställningar → Suffix → Suffix - Popups**. Se [Skapa popup](../../guides/create-a-popup.md)
+    **Inställningar → Suffix → Suffixalias - Popuper**. Se [Skapa popup](../../guides/create-a-popup.md)
     för mer information.
 <!-- --8<-- [end:body-2] -->

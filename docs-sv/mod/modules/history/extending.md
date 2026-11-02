@@ -1,5 +1,6 @@
 ---
 title: Historik — Utöka
+description: Skriptuppsättning för vyspecifik historik, ologgade signaler och felsökning.
 product: mod
 page_type: module
 status: draft

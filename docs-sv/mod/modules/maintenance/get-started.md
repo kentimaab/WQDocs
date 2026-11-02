@@ -1,5 +1,6 @@
 ---
 title: Underhåll — Kom igång
+description: Kom igång med modulen Underhåll.
 product: mod
 page_type: module
 status: draft
@@ -83,7 +84,7 @@ Fyll i följande fält:
 * **Tilldelad person** — tilldela uppgiften till en ansvarig användare (valfritt).
 * **Beskrivning** — förifyllt från den valda mallen. Kan redigeras fritt innan sparande.
 
-Klicka på **Spara** för att spara. Uppgiften skapas med statusen **Planerad**. Om Skapa flera är aktiverat skapas alla uppgifter i serien på en gång.
+Klicka på **Spara** för att spara. Uppgiften skapas med statusen **Planerat**. Om Skapa flera är aktiverat skapas alla uppgifter i serien på en gång.
 
 ## Slutföra en uppgift { #completing-a-task }
 

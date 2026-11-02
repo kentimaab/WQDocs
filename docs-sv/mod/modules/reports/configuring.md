@@ -1,5 +1,6 @@
 ---
 title: Rapporter — Konfigurering
+description: Konfigurera och anpassa modulen Rapporter.
 product: mod
 page_type: module
 status: draft
@@ -138,7 +139,7 @@ innevarande år.
 Den här konfigurationen producerar en fullständig årsrapport oavsett vilket datum den produceras.
 
 Öppna `EnergyReport.xlsx` som finns i `\Your_Project\Reports\Templates`. I stället för att 
-välja `A:1` till `Q:31`, välj `A:97` till `Q:127` och ange det som utskriftsområde. 
+välja `A1:Q31`, välj `A97:Q127` och ange det som utskriftsområde. 
 Välj sedan rad 113 i rubrikbladet och klistra in följande:
 
 ```excel title="EnergyReport.xlsx — row 113"
@@ -256,7 +257,7 @@ skillnaden är mallfilen: ändra `DeltaWeek.xlsx` i `\Your_Project\Reports\Templ
 stället för `WeeklyEnergyReport.xlsx`.
 
 ## Rapporthistorik { #report-history }
-Rapporthistoriken är tillgänglig från vyn **Reports - Schedule**. Den 
+Rapporthistoriken är tillgänglig från vyn **Rapporter - Schemalägg**. Den 
 visar ett stapeldiagram med rapportstatistik för de senaste 30 dagarna, inklusive dagliga 
 värden som anger om varje rapport genererades framgångsrikt och om den skickades 
 framgångsrikt.

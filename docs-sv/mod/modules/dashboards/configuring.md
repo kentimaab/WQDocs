@@ -14,7 +14,7 @@ tags:
 
 ## Parametrar { #parameters-common-settings-shared-by-all-widgets }
 
-Alla widgetar utom Larmrad och Larmgraf delar en `Header`-parameter, en sträng, som anger den rubrik som visas på widgeten. Om den lämnas tom har widgeten en standardrubrik.
+Alla widgetar utom Larmrad och Larmgraf delar en `Header`-parameter, en sträng, som anger den rubrik som visas på widgeten. Om den lämnas tom visar widgeten en standardrubrik.
 
 Parametrar som accepterar flera signaler eller grupper tar antingen en enskild sträng eller en array av strängar.
 
@@ -35,6 +35,8 @@ Widgetar som visar en signallegende hanterar automatiskt överfyllnad. När det 
 ### Larmstatus { #alarm-status }
 
 Visar larmantal: totalt, kvitterade och okvitterade. Två storlekar finns: `Alarm_1x1` och `Alarm_2x1`.
+
+Utan ett `Grupp`-filter räknar totalerna även larmen från anslutna fjärrsystem, och ett andra block, **Lokalt**, visar samma antal för systemets egna larm. Med ett filter räknar båda blocken bara systemets egna larm i de valda grupperna.
 <!-- --8<-- [end:body-1] -->
 
 ![Alarm Status](/docs/sv/Images/Dashboard/AlarmStatus.png){align=center}
@@ -126,6 +128,8 @@ Fälten **Från** och **Till** längst upp på dashboarden anger tidsintervallet
 * **Kalenderikon** (på en enskild widget) — tillämpar Från/Till-intervallet enbart på den widgetinstansen, utan att påverka de övriga.
 * **Återställ** — sätter Från/Till-intervallet till de senaste 5 minuterna och tillämpar det på alla Historik-widgetinstanser. Fönstret är fast, så widgetarna slutar följa livevärdena.
 
+Knappen spela/pausa på varje Historik-widget startar eller stoppar liveuppdateringen för just den widgeten.
+
 **Parametrar**
 
 * `Signaler` — Signalsökväg eller array av signalsökvägar att visa.
@@ -190,6 +194,7 @@ Visar jämförelser av signalvärden som ett stapeldiagram över konfigurerbara 
 * `Typ` — Aggregeringsläge. Bestämmer hur varje periods stapelvärde beräknas. Standardvärde är `Add`.
 * `TimePeriod` — Tidsenheten för varje stapel: `"Day"`, `"Week"`, `"Month"` eller `"Year"`. Standardvärde är `"Month"`.
 * `TimeSpan` — Antal perioder att visa. Standardvärde är `12`.
+* `LeftOrder` — Datumaxelns riktning. Sätt till `1` för att placera äldre värden till höger. Lämnas den tom placeras äldre värden till vänster.
 
 | `Typ` | Beskrivning |
 |---|---|
@@ -198,17 +203,36 @@ Visar jämförelser av signalvärden som ett stapeldiagram över konfigurerbara 
 | `Trend` | Visar skillnaden mellan det sista värdet i innevarande period och det sista värdet i föregående period. Används för signaler där förändringen från en period till nästa är det viktiga. |
 | `Result` | Visar det senaste loggade värdet inom varje period. Används för signaler där tillståndet vid periodens slut är det viktiga. |
 
+Värdena läses från den första cykliska, ändrings- eller triggerloggare som hittas och som loggar signalen. En signal som ingen sådan loggare loggar får tomma staplar. Den nyaste stapeln är innevarande period hittills, och diagrammet uppdateras varje timme.
+
+---
+
+### Mätare { #gauge }
+
+Visar ett enskilt livevärde som en visare mot ett konfigurerat intervall, med ett valfritt varningsband. Värdet visas i mitten med sin enhet, intervallets ändar är märkta på var sin sida och signalens sökväg visas nedanför. Två storlekar finns: `Gauge_1x1` upptar en rutnätscell och `Gauge_2x2` ett block på två gånger två.
+<!-- --8<-- [end:body-13] -->
+
+![Gauge widget](/docs/sv/Images/Dashboard/Gauge.png){align=center}
+
+<!-- --8<-- [start:body-14] -->
+**Parametrar**
+
+* `Signal` — Direkt variabelreferens (inte en sträng). Ange signalens sökväg utan citattecken: `MB.AS01.LB01_P`, inte `"MB.AS01.LB01_P"`.
+* `Header` — Widgetens rubrik. Om den lämnas tom är rubriken **Mätare**.
+* `Min` och `Max` — Visarens intervallgränser. Standardvärden är `0` och `100`.
+* `WarningMin` och `WarningMax` — Varningsgränser. Värden vid eller under `WarningMin`, eller vid eller över `WarningMax`, ligger i en varningszon. Var och en tar ett värde eller en array `[röd, gul]`, till exempel `[90, 75]` för `WarningMax` eller `[10, 25]` för `WarningMin`. Medan värdet ligger i en zon färgas zonen och mittskivan blinkar i dess färg.
+
 ---
 
 ### Underhåll { #maintenance }
 
-Visar underhållsuppgiftsstatus: aktiva, planerade och missade uppgifter. Ansluter direkt till underhållsmodulen. Ingen signalinmatning krävs.
-<!-- --8<-- [end:body-13] -->
+Visar underhållsuppgiftsstatus: totalt antal aktiva uppgifter och hur många av dem som är pågående och missade. Därunder räknar **Mina pågående** och **Mina missade** de uppgifter som är tilldelade den inloggade användaren. **Mina pågående** tar bara med uppgifter med en deadline inom de närmaste 60 dagarna, vilket styrs av variabeln `maintenanceDaysAhead`. Ansluter direkt till underhållsmodulen. Ingen signalinmatning krävs.
+<!-- --8<-- [end:body-14] -->
 
 ![Maintenance](/docs/sv/Images/Dashboard/Maintenance.png){align=center}
 
-<!-- --8<-- [start:body-14] -->
+<!-- --8<-- [start:body-15] -->
 ## Nästa steg { #next-steps }
 
 * [Utöka](extending.md) — egna widgetar, designmönster och felsökning
-<!-- --8<-- [end:body-14] -->
+<!-- --8<-- [end:body-15] -->

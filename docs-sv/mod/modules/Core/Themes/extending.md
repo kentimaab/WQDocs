@@ -31,6 +31,12 @@ På samma sida för [Temabyggaren](../../../../Tools/theme-builder.md), scrolla 
 
 Ersätt den befintliga `Themes.kdat` i projektmappen med den nedladdade filen. Om **WideQuick® Designer** var öppet, starta om det. Det nya temat visas under grenen **Themes** i projektträdet och kan anges som starttema.
 
+### Namngivning för växling mellan ljust och mörkt { #naming-for-the-light-and-dark-toggle }
+
+Temaväxlingen i **Inställningar** hittar det aktuella temats andra variant utifrån namnet. Den fungerar bara när de två är namngivna som ett par, `<Namn>_Light` och `<Namn>_Dark`, så som de inbyggda temana är. Ett tema vars namn innehåller varken `_Light` eller `_Dark` lämnas som det är.
+
+För att para ihop två teman med andra namn, sätt Datalager-variablerna `Theme_light` och `Theme_dark` till deras namn. När båda är satta använder växlingen dem i stället för namnregeln.
+
 ## Vad M3 genererar automatiskt { #what-m3-generates-automatically }
 
 När ett tema genereras via M3 härleds följande automatiskt:

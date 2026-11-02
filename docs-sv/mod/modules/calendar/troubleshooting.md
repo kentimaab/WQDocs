@@ -1,5 +1,6 @@
 ---
 title: Kalender
+description: Vanliga problem och lösningar för kalendermodulen.
 product: mod
 page_type: module
 status: draft
@@ -30,7 +31,7 @@ tags:
 | `isHoliday` ändras en timme in på dagen | Förväntat. Båda helgdagsvariablerna uppdateras av den timvisa pollningen, som räknar från applikationens start snarare än från midnatt. Se [Helgdagsvariabler](extending.md#holiday-variables). |
 | En helgdagsafton sätter inte `isHoliday` | De två är avsiktligt åtskilda, eftersom en helgdagsafton oftast är en förkortad arbetsdag snarare än en stängd dag. Läs `isHolidayEve` för den, eller läs båda där samma beteende önskas. |
 | En flerdagshelg markerar bara sin första dag | Klassificeringen använder ett överlappningstest, så varje täckt dag markeras. Om endast den första dagen markeras, kontrollera att händelsens slutdatum är satt som avsett. En helgdagshändelse justeras till hela dygn när den sparas. |
-| En helgdag når inte fram till PLC:t | Variablerna bär klassificeringen men skickar den inte. Koppla `isHoliday` och `isHolidayEve` till utgångar på samma sätt som vilket annat värde som helst. |
+| En helgdag når inte fram till styrsystemet | Variablerna bär klassificeringen men skickar den inte. Koppla `isHoliday` och `isHolidayEve` till utgångar på samma sätt som vilket annat värde som helst. |
 
 ## Kända fel { #known-bugs }
 

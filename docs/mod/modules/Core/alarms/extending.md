@@ -108,7 +108,7 @@ The available alarm fields that can be included in the message are:
 | Field | Description |
 |---|---|
 | `alarm.name` | The name of the alarm |
-| `alarm.timestamp` | The date and time the alarm was triggered |
+| `alarm.timestamp` | The date and time the event was processed for the notification. For an acknowledgement, this is close to the time of acknowledgement, not when the alarm was triggered |
 | `alarm.severity` | The alarm class |
 | `alarm.text` | The alarm text |
 | `alarm.description` | The alarm description. Empty if the alarm has none |
@@ -133,7 +133,8 @@ AT commands over a serial connection is compatible.
 
 Alternatively, SMS can be sent through a Teltonika router with the Teltonika plug-in. The
 plug-in talks to the router's REST API over the network instead of a serial connection,
-and sends SMS for the same alarm notification schedules. It runs on Windows only and
+and sends SMS for the same alarm notification schedules. The plug-in hooks into
+`scAlarmSender`, so SMS go through the router instead of the GSM modem. It runs on Windows only and
 requires a **WideQuick Advanced** license with the .NET plug-in option, or a Premium
 license. See [Send SMS with Teltonika](../../../../plug-in/teltonika/oversikt.md).
 
@@ -166,7 +167,7 @@ green. GSM itself is switched on and off with the **GSM Modem** toggle on the sa
 !!! note "Requirements"
     SMS notifications require `scModem` to be running in addition to `scAlarmSender`.
 
-### Customize SMS
+### Customize SMS { #customize-sms }
 
 The SMS notification follows the same pattern as the email and can be customized by
 editing the `writeSMS()` function in the `scAlarmSender` script. The same alarm fields

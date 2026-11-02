@@ -40,6 +40,8 @@ The logbook view has two panels. The left panel shows the topic tree, a hierarch
 
 Selecting a node includes everything filed below it. Selecting a view node lists the notes on that view together with the notes on the objects drawn in it, so a whole plant section can be reviewed in one step.
 
+Double-clicking a node loads its entries at once, without **Show entries**. The **Expand all nodes** toggle opens every node in the tree. Its setting is shared with the view-scoped logbook.
+
 When remote systems are connected, each one appears as a top node in the tree, named after the remote system. Under it is that system's own logbook, arranged the same way as the local tree, and notes can be read and written there. See [Logbooks of Remote Systems](configuring.md#logbooks-of-remote-systems).
 
 The tree and the entry list refresh by themselves when an entry is added, edited or archived anywhere: here, on a web or remote client, or on a connected system.
@@ -49,6 +51,8 @@ The entry list shows the following columns: **Title**, **Placed on**, **Message*
 **Placed on** reports what the entry is actually filed against, independent of how the tree is currently keyed. A view is shown by its path without the `.kvie` extension, an object by its tag, and an operator's own sub-topic is appended after the identifier. This matters because the same entry appears under different nodes in the two tree modes, and this column is the one place that always names the entry's real anchor.
 
 Select an entry and click **Edit note** to open it for editing, or **Archive note** to move it out of the active list. An archived entry is kept in the database and hidden from the list rather than removed, and the same button restores it once archived entries are shown.
+
+Double-clicking an entry does the same as **Edit note**, and needs `Logbook_Edit` in the same way. In the edit popup the topic is shown as **Topic (read-only)**, so an entry cannot be moved to another topic from the logbook.
 
 !!! note "Entries are archived, not deleted"
     There is no per-entry delete. The only action that removes logbook content permanently is **delete all archived notes** in the settings view, which clears every archived entry at once. See [Archiving](extending.md#archiving).
@@ -75,7 +79,7 @@ The setting is shared with the logbooks opened from an object popup or from a pr
 
 Click **Add note** to open the **Create new logbook entry** popup. Fill in the following fields:
 
-* **Topic** — what the entry is filed against. When the logbook was opened from an object or from a process view, this is filled in already and normally needs no change.
+* **Topic** — what the entry is filed against. When the logbook was opened from an object or from a process view, this is filled in already and normally needs no change. A pre-filled topic is locked. Click the padlock beside it to change it, which also shows the hint *Use / to create levels*.
 * **Context** — an optional grouping label. Click **...** to manage available contexts.
 * **Title** — a short headline for the entry.
 * **Message** — the full text of the note.

@@ -23,7 +23,9 @@ sensors. They are the building blocks for creating custom process objects.
 **VALVES**, and **OTHER** object libraries. These are fully pre-configured objects
 that combine a basic symbol with a `DynTouch` object, value displays, and status
 indicators. For most use cases, wired up symbols are the recommended starting point
-as they require only a tag connection to work out of the box.
+as they require only a tag connection to work out of the box. DAMPERS, SENSORS and
+VALVES also come in a **with Connection** variant. See
+[Connection variants](#connection-variants).
 
 !!! tip "Migrating from older projects"
     When importing a view from an older WideQuick project, all symbols are
@@ -350,5 +352,22 @@ for example flow rate and accumulated volume.
 * **Timer**, **Pushbutton**, and **Expansion vessel** — include status indicators
 and a name label.
 
+## Connection variants {#connection-variants}
+
+The **DAMPERS with Connection**, **SENSORS with Connection** and **VALVES with
+Connection** libraries hold the same objects as **DAMPERS**, **SENSORS** and
+**VALVES**, with a line added that ends in a circle. The line shows where the object
+is connected, so the object can be placed beside a pipe or duct instead of on it.
+
+The object names add `_C` before the orientation, for example
+`dynValveTwoWay_C_090`. The analog dampers are named `dynAnalogDamper_C_…`. The
+libraries contain:
+
+* **DAMPERS with Connection** — the digital and analog dampers, in all four
+orientations.
+* **SENSORS with Connection** — the standard, dual, simple and digital sensors in all
+four orientations, and the heater sensor at 0°.
+* **VALVES with Connection** — the two-way and three-way valves, in all four
+orientations.
 
 <!-- --8<-- [end:body] -->

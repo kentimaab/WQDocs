@@ -23,9 +23,6 @@ tags:
     * `scAlarmFinder`
     * `scLinking`
     * `scRemoteSystems`
-    * `scMaintenance`
-    * `scDatabase`
-    * `scThemes`
     * `scAlert`
     
     Samt följande objektbibliotek:
@@ -60,7 +57,7 @@ if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 
 Alla objekt inuti en **Kartvy** har en egenskap kallad `geo`, som innehåller objektets
 geografiska koordinater. För att indikatorerna ska renderas korrekt
-när användaren panorerar och zoomar behöver **Kartvyw** spåra skalan och det synliga
+när användaren panorerar och zoomar behöver **Kartvyn** spåra skalan och det synliga
 området i den aktuella visningsrutan. Detta görs genom att lägga till följande skript i
 synlighetsdynamiken för **Kartvy**:
 

@@ -69,7 +69,7 @@ generated reports with two columns:
 
 * **Report** — The name of the report, defaulting to the template name followed by the 
 generation number, for example `Alarm_Report1`.
-* **Timestamp** — The date and time at which the recording ends.
+* **Timestamp** — The date the report was generated.
 
 From this page, reports can be created, removed, or sent as email attachments. Sending 
 reports by email requires an SMTP server to be configured, which is explained [here](../Core/alarms/extending.md#configuring-smtp-in-widequick-designer).
@@ -138,9 +138,9 @@ and Delta controllers only. Alarm reports carry no unit. See
 * **LoggerList** — Displays the signals available in the selected logger. Locked for the 
 **Alarm Report**, as it includes all signals automatically. In the 
 **Alarm Report One Alarm** the list is enabled, and exactly one alarm must be selected. On 
-the Energy and Delta controllers it also stays locked until a unit is chosen, and then 
-lists only the signals measured in that unit. See [Units and prefixes](#units-and-prefixes).
-* **Number of events** — The maximum number of events to include. For Energy 
+the Energy and Delta controllers it lists only the signals measured in the chosen unit. 
+See [Units and prefixes](#units-and-prefixes).
+* **Number of events** — The maximum number of events to include per signal. For Energy 
 Reports, this defaults to the number of hourly events in the selected time period. In 
 Delta Reports, this is handled in the onLoad script.
 * **Report file format** — The output format of the report: either **PDF** or 
@@ -197,8 +197,8 @@ applies them, so the scaling happens in the template rather than in the script.
 The unit list is built from the units of the signals available in the selected logger, 
 so only units the project actually logs are offered.
 
-The chosen unit also filters the signal list. The TreeView stays locked until a unit is 
-selected, and then lists only the signals measured in that unit. Changing the unit clears 
+The chosen unit also filters the signal list. A unit is selected as soon as the controller 
+opens, and the TreeView lists only the signals measured in that unit. Changing the unit clears 
 the current selection, since the signals picked under the previous unit are no longer in 
 the list.
 
@@ -280,14 +280,40 @@ Below are descriptions of the options on the first and third pages:
 * Third page
 
     * **Subject line** — The subject line of the email in which the report is sent.
-    * **Recipient** — The recipients of the email. Accepts both email addresses 
-    and aliases.
+    * **Recipient** — Type an email address and click **Add** to add it to the list. 
+    A phone number is also accepted and listed as **Number**, but scheduled reports are 
+    sent by email only. Anything else is listed as **Unknown**.
     * **Alias** — Displays available aliases. Select one and click **Add** 
     to add it as a recipient.
-    * **List of Recipients** — Shows the full list of recipients, indicating whether 
-    each entry is an email address or an alias.
+    * **List of recipients** — Shows every recipient with its type: **Email**, 
+    **Alias**, **Number** or **Unknown**. A warning triangle marks an entry the report 
+    cannot reach: a number, an unknown entry, or an email address while SMTP is not 
+    configured. Select an entry and click **Remove recipient** to remove it.
     * **Report file format** — The format in which the report is sent: **PDF** or 
     **PDF and Excel**.
+
+### Managing schedules { #managing-schedules }
+
+The **Reports - Schedule** view lists every schedule with its **Title**, **Report type** 
+and **Description**. The **Schedules** panel above the list shows the total number of 
+report schedules and how many of them are active and inactive.
+
+* **New schedule** opens the three-page menu described above.
+* **Edit schedule** opens the selected schedule in the same menu.
+* **Delete schedule** removes the selected schedule after a confirmation. This cannot be 
+undone.
+
+All three buttons need the `Schedules` privilege. Without it they are disabled and 
+covered by the text *Requires Schedules Privilege*. See [Privileges](extending.md#privileges).
+
+The **SMTP and GSM** panel shows whether SMTP is configured and whether a GSM modem is 
+active. On the SMTP row, **Configure** opens the mail server settings, and **Check** 
+confirms that the sender, user, port, server and sender name are all filled in and 
+updates the status. **Test** appears once SMTP is configured and opens the popup for 
+sending a report by email, so a test message can be sent. On the GSM row, which shows 
+its buttons only while a GSM modem is active, **Configure** opens the modem settings.
+
+The view also holds the Report History. See [Report History](configuring.md#report-history).
 
 ## Next Steps { #next-steps }
 

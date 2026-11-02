@@ -1,5 +1,6 @@
 ---
 title: Säkerhetskopiering och återställning — Konfigurering
+description: Återställ och ta bort sparade säkerhetskopior i funktionen Säkerhetskopiering och återställning.
 product: mod
 page_type: module
 status: draft
@@ -30,16 +31,18 @@ Vyn har tre paneler. Den vänstra panelen listar alla sparade säkerhetskopior m
 * **Skapad av** — den användare som skapade säkerhetskopian.
 * **Beskrivning** — den beskrivning som angavs vid skapandet.
 
-Den mellersta panelen stöder samma filter som vyn för att skapa säkerhetskopior. Skriv i filterfältet för att begränsa variabellistan.
+De tre panelerna är **Tillgängliga säkerhetskopieringar**, **Variabler tillgängliga i säkerhetskopiering** och **Variabler att återställa från säkerhetskopiering**. Var och en har ett filterfält längst upp, som rensas med **X**. Precis som i vyn för att skapa säkerhetskopior begränsar filtret också vad **>**, **<** och dubbelklick tar från en överordnad nod.
 
 1. Välj en säkerhetskopia i den vänstra panelen.
 2. Bläddra eller filtrera den mellersta panelen för att hitta de variabler som ska återställas.
 3. Dubbelklicka på en variabel, eller markera den och klicka på **>**, för att flytta den till den högra panelen. Klicka på **Lägg till alla variabler** för att lägga till alla variabler på en gång.
-4. Klicka på **Återställ från säkerhetskopia**. De lagrade värdena tillämpas omedelbart.
+4. Klicka på **Återställ från säkerhetskopia**. De lagrade värdena tillämpas omedelbart, utan bekräftelse.
+
+Varje lagrat värde omvandlas till den typ variabeln har nu. En variabel som inte längre finns i Datalager hoppas över, och det skrivs till felloggen. Resten av urvalet återställs ändå.
 
 ## Ta bort en säkerhetskopia { #deleting-a-backup }
 
 1. Navigera till **Inställningar → Säkerhetskopiering → Återställ**.
 2. Välj den säkerhetskopia som ska tas bort i den vänstra panelen.
-3. Klicka på **Ta bort säkerhetskopia** och bekräfta. Säkerhetskopian och alla dess lagrade värden tas bort permanent.
+3. Klicka på **Radera säkerhetskopia** och bekräfta. Säkerhetskopian och alla dess lagrade värden tas bort permanent.
 <!-- --8<-- [end:body-3] -->

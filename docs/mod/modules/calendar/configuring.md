@@ -37,7 +37,7 @@ Maintenance deadlines from the [Maintenance module](../maintenance/index.md) are
 
 Each maintenance event is displayed on the day of its deadline. The color is set automatically based on the task's current status and cannot be chosen manually. These colors are defined in the **MaintenanceColors** theme in `Themes.kdat` and are separate from the colors used for custom calendar events.
 
-Clicking a maintenance event opens a popup showing the object, status, deadline and maintenance type. Click **Open editing** to open the task's edit popup directly over the calendar. Saving there updates the calendar.
+In **Week** or **Day** view, clicking a maintenance event opens a popup showing the object, status, deadline and maintenance type. In **Month** view, a click on an event opens the Day view for that date instead. On **WideQuick® Web**, a click in Week view also opens the Day view, and the popup is opened from there. Click **Open editing** to open the task's edit popup directly over the calendar. Saving there updates the calendar.
 
 | Status | Color |
 |---|---|
@@ -64,7 +64,7 @@ The two are kept apart deliberately. A holiday eve is usually a shortened workin
 
 Multi-day holidays work as expected. An event spanning several days marks every day it covers, not only the day it starts on.
 
-### Handing the classification to a PLC { #handing-the-classification-to-a-plc }
+### Handing the classification to the control system { #handing-the-classification-to-a-plc }
 
 The calendar publishes today's classification to two internal variables in the Data Store:
 
@@ -73,12 +73,12 @@ The calendar publishes today's classification to two internal variables in the D
 | `isHoliday` | True when today is covered by a **HOLIDAY** event. |
 | `isHolidayEve` | True when today is covered by a **HOLIDAYEVE** event. |
 
-Both are plain boolean variables and can be connected to an output the same way as any other value, so a PLC or DUC can read the day type and run its own schedules accordingly. The classification is a property of the day, so one pair of variables serves every schedule rather than each time channel carrying its own copy.
+Both are plain boolean variables and can be connected to an output the same way as any other value, so the control system can read the day type and run its own schedules accordingly. The classification is a property of the day, so one pair of variables serves every schedule rather than each time channel carrying its own copy.
 
 The variables are written at startup and refreshed by the hourly poll and by **Sync**. Marking a day ahead of time therefore needs no further action, but marking today only takes effect at the next poll, or at once with **Sync**.
 
-!!! note "The calendar classifies the day, the PLC decides what to do"
-    The hand-off reports only which day type applies today. Which outputs change, and when, stays with the PLC's own schedule logic.
+!!! note "The calendar classifies the day, the control system decides what to do"
+    The hand-off reports only which day type applies today. Which outputs change, and when, stays with the control system's own schedule logic.
 
 ## Importing a Calendar { #importing-a-calendar }
 
@@ -87,6 +87,8 @@ The variables are written at startup and refreshed by the hourly poll and by **S
 Each imported file becomes a subscription. Every event it contributed is tagged with it, so an import can be recoloured or removed as a unit without affecting events created directly in the calendar or events from another file.
 
 An import is rejected if its name or its path matches one that already exists. The comparison ignores surrounding whitespace and a trailing slash.
+
+Import is available only on the server. On remote and web clients **Import** is disabled and marked *Not available on remote systems*, so that a remote client cannot reach the server's files.
 <!-- --8<-- [end:body-1] -->
 
 ![Import calendar dialog](/docs/Images/Calendar/import-calendar.png){align=center}
@@ -126,6 +128,8 @@ Tick the calendars to show and click **Apply**.
 **Export** opens **Export calendar**. Tick which calendars to include, then click **Generate** to write an `.ics` file, and optionally **Send by e-mail** to send it as an attachment. **Send by e-mail** is available only after **Generate**, and only when SMTP is configured.
 
 **Own/internal events** is listed alongside the imports, so the events created directly in the calendar can be included or left out independently. Holiday and holiday eve events are part of that group, but the export does not keep them marked. Imported into another installation, the events get the **DEFAULT** colour and mark no days until the import is changed to **HOLIDAY** or **HOLIDAYEVE** with **Change category**. That marks every event of the import the same way, so holidays and holiday eves only arrive correctly marked when they travel in separate files.
+
+The calendar is also exported automatically every night at 03:00 to `Export/WideQuickCalendar.ics`, with every calendar included. **Generate** writes to the same file, so a selection made in **Export calendar** is replaced by the full calendar at the next nightly export.
 <!-- --8<-- [end:body-4] -->
 
 ![Export calendar dialog](/docs/Images/Calendar/export-calendar.png){align=center}

@@ -1,5 +1,6 @@
 ---
 title: Säkerhetskopiering och återställning
+description: Spara och återställ värden för Datalager-variabler med namn.
 product: mod
 page_type: module
 status: draft

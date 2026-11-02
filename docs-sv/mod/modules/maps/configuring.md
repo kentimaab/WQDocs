@@ -37,6 +37,31 @@ dessutom visa antalet aktiva larm och varningar. Tillsammans gör dessa funktion
     För att visa en annan ikon på `pinStatus`-objektet, ändra dess SVG eller gör en
     kopia av objektet och ändra SVG på kopian.
 
+Biblioteket har också färdiga varianter av `pinStatus` med egna ikoner, till exempel
+`pinStatusAppartment`, `pinStatusOffice` och `pinStatusSolarPark`. Exempelkartor som
+använder dem finns i huvudmenyn under **Dashboards & Kartor**.
+
+Följande egenskaper anges på ett `pinStatus`-objekt:
+
+* **linkedView** — Den **Arbetsvy** eller mapp som pinnen öppnar vid klick, och vars
+status den visar. En sökväg som slutar på `.kvie` öppnar den **Arbetsvyn**. Alla andra
+sökvägar öppnar mappen i menyn. En pinne utan **linkedView** zoomar in kartan två steg
+när den klickas.
+* **systemName** — Namnet som visas på infokortet.
+
+När pekaren hålls över en pinne visas ett infokort med dess namn och status: **Offline**,
+**Normal**, **Varning** eller **Larm**. En klusterpinnes infokort visar hur många pinnar den
+rymmer, till exempel "(4 byggnader)".
+
+#### Direktnavigering { #direct-navigation }
+
+Inställningen **Direktnavigering (karta)**, under **Inställningar → Navigering**, avgör
+vad ett klick på en pinne gör. Den är på som standard, och ett klick öppnar pinnens
+**linkedView** direkt. När den är av sparar pinnen i stället sina uppgifter på **Kartvyn**
+som `MapSelectedPin`, `MapSelectedLink`, `MapSelectedAlarm` och `MapSelectedStatus`.
+Exempelkartorna visar dem i panelen **Info kring vald nål**, med knappen **Gå till vy**
+eller **Gå till mapp**. En egen karta behöver en panel som läser de egenskaperna.
+
 För att integrera ett **Alarm**-objekt med en karta och statuspinnar, se
 [Koppla Alarm till Kartvy](extending.md#connecting-alarm-to-map-view).
 
@@ -100,6 +125,14 @@ vilket ger 49 segment.
 inte.
 * **Caption** — Rubriken som visas i kartindikatorn.
 
+Ett klick på ett segment i ett linjenätverk öppnar en infopopup. Varje segmentobjekt
+(`MainLine1`, `MediumLine1` eller `SmallLine1`) har en egen **Header** och **Text** för
+popupen. En tom **Header** ersätts av nätverkets **Caption**, och en tom **Text** lämnar
+popupens innehåll tomt.
+
+!!! note "Inte på fjärr- och webbklienter"
+    Linjenätverk visas inte på fjärr- och webbklienter.
+
 Exempelkonfiguration:
 
 ![Lines configuration](/docs/sv/Images/Map_Indicators/MapLines.png)
@@ -132,9 +165,14 @@ till filnamnet utan filändelse, här `malmo_big`:
 
 ![fileName configuration](/docs/sv/Images/Map_Indicators/fileNameCSV.png)
 
+!!! warning "Ge filen ett unikt namn"
+    Filnamnet får inte vara samma som något annat namn i Datalagret, till exempel en
+    larmgrupp. Om det är det ritas linjenätverket inte, och ett `scMap.readFromCSV() error`
+    skrivs till loggen.
+
 ### Filter { #filter }
 Filter låter användare fokusera på en specifik uppsättning linjer eller nätverk genom att växla deras
-synlighet. Alla linjennätverk registreras automatiskt med filtret, så ingen
+synlighet. Alla linjenätverk registreras automatiskt med filtret, så ingen
 ytterligare konfiguration krävs. Lägg till ett `FilterRow`-objekt i **Kartvyn** på samma sätt
 som vilket annat objekt som helst. En enskild `Filter`-knapp fungerar inte på egen hand.
 

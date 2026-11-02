@@ -31,6 +31,12 @@ On the same [Theme Builder](../../../../Tools/theme-builder.md) page, scroll dow
 
 Replace the existing `Themes.kdat` in the project folder with the downloaded file. If **WideQuick® Designer** was open, restart it. The new theme appears under the **Themes** branch in the project tree and can be set as the start theme.
 
+### Naming for the light and dark toggle { #naming-for-the-light-and-dark-toggle }
+
+The theme toggle in **Settings** finds the other variant of the current theme by its name. It only works when the two are named as a pair, `<Name>_Light` and `<Name>_Dark`, as the built-in themes are. A theme whose name contains neither `_Light` nor `_Dark` is left as it is.
+
+To pair two themes with other names, set the Data Store variables `Theme_light` and `Theme_dark` to their names. When both are set, the toggle uses them instead of the naming rule.
+
 ## What M3 generates automatically { #what-m3-generates-automatically }
 
 When a theme is generated through M3, the following are derived automatically:

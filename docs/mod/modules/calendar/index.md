@@ -37,7 +37,7 @@ Days can be marked as holidays and holiday eves. The calendar publishes that cla
 * [**Events**](configuring.md#events) — Creating, editing and deleting events.
 * [**Maintenance Events**](configuring.md#maintenance-events) — How maintenance deadlines appear and what the colors mean.
 * [**Reminders**](configuring.md#reminders) — Configuring the reminder offset for maintenance deadlines.
-* [**Holidays and Holiday Eves**](configuring.md#holidays-and-holiday-eves) — Marking a day and handing the classification to a PLC.
+* [**Holidays and Holiday Eves**](configuring.md#holidays-and-holiday-eves) — Marking a day and handing the classification to the control system.
 * [**Importing a Calendar**](configuring.md#importing-a-calendar) — Adding events from a local `.ics` file.
 * [**Managing Imported Calendars**](configuring.md#managing-imported-calendars) — Renaming, recolouring, filtering and removing.
 * [**Exporting a Calendar**](configuring.md#exporting-a-calendar) — Writing events to a file or sending them by email.

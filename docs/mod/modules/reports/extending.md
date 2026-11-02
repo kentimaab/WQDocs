@@ -91,7 +91,8 @@ and cannot be changed dynamically.
 * **Fixed/Range timespan** — The reporter uses **Range timespan** by default, with 
 `Report_Reference.from_time` and `Report_Reference.to_time` as the start and end times. 
 These are set by the time objects in the ReportController.
-* **Limit** — The maximum number of rows to populate. This is set by the user in the 
+* **Limit** — The maximum number of rows the macro call populates. Each signal has its own 
+macro call, so the limit applies per signal. This is set by the user in the 
 ReportController when generating the report.
 * **Datetime format** — The format used for datetime values. Defaults to 
 `yyyy-MM-dd hh:mm:ss` but can be adjusted to fit the needs of the report.
@@ -208,6 +209,16 @@ it is critical that the ReportController view name exactly matches the report te
     The ReportController view name must exactly match the report template name. If they
     differ, `scReports` script will not be able to locate and trigger the correct template.
 
+!!! note "Scheduling a custom template"
+    The schedule menu lists every report template, but its second page decides what to show
+    from the template name. A name containing `alarm` shows the alarm list, one containing
+    `energy` the signal list of the Energy reports, and one containing `delta` the signal
+    list of the Delta reports. The match ignores case. A template whose name contains none
+    of the three gets no signal list there, so name a custom template accordingly, for
+    example `Energy_Report_Water`. The menu fills in **Data from x days back** and
+    **Number of events** for the built-in Energy and Delta templates only, so set both by
+    hand for a custom one.
+
 To build the view, a set of premade objects is available in the object library under
 **Report**. Below is a description of each object and when to use it:
 
@@ -260,8 +271,8 @@ extend it.
 
 Placing the object also turns on unit filtering for the signal list:
 
-* The signal TreeView stays disabled until a unit is chosen.
-* Choosing a unit filters the TreeView to signals of that dimension.
+* A unit is selected as soon as the controller opens.
+* The TreeView lists only the signals of the selected unit's dimension.
 * Changing the unit clears the current selection, since the signals selected under the
 previous unit are no longer in the list.
 
@@ -445,6 +456,20 @@ this.baseUnitOrder = ["m³/h", "m³/s", "L/s", "m³", "Wh", "W", "L"];
 
 A signal whose unit is not in the table is skipped without a log entry when the **Unit**
 list is built. A logger holding only unrecognised units therefore produces an empty **Unit**
-list, and because the signal TreeView is gated on a unit being chosen, the controller
-appears to offer no selectable signals at all. Adding the unit to the table resolves it.
+list, and because the signal TreeView lists only the signals of the selected unit, the
+controller appears to offer no selectable signals at all. Adding the unit to the table resolves it.
+
+## Privileges { #privileges }
+
+These privileges control the **Reports - Schedule** view:
+
+| Privilege | Description |
+|---|---|
+| `Schedules` | Required for **New schedule**, **Edit schedule** and **Delete schedule**. Without it the three buttons are disabled and covered by the text *Requires Schedules Privilege*. |
+| `editSMTP` | Shows the SMTP buttons **Configure**, **Check** and **Test** in the **SMTP and GSM** panel. **Check** is also hidden on remote and web clients. |
+
+Both are defined with `Default="denied"` in `Privileges.kdat`, so they must be granted to a 
+role before anyone can manage schedules or the SMTP settings from the view. Creating, 
+removing and sending reports in **Reports - List** need no privilege. See 
+[Users and Privileges](../Core/users-privileges.md).
 <!-- --8<-- [end:body] -->

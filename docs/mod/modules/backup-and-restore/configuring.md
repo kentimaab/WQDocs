@@ -31,12 +31,14 @@ The view has three panels. The left panel lists all saved backups with their cre
 * **Created By** — the user who created the backup.
 * **Description** — the description entered at the time of creation.
 
-The middle panel supports the same filter as the create view. Type in the filter field to narrow the variable list.
+The three panels are **Available Backups**, **Variables available in backup** and **Variables to restore from backup**. Each has a filter field at the top, cleared with **X**. As in the create view, the filter also limits what **>**, **<** and double-click take from a parent node.
 
 1. Select a backup from the left panel.
 2. Browse or filter the middle panel to find the variables to restore.
 3. Double-click a variable, or select it and click **>**, to move it to the right panel. To add all variables at once, click **Add all variables**.
-4. Click **Restore from backup**. The stored values are applied immediately.
+4. Click **Restore from backup**. The stored values are applied immediately, with no confirmation.
+
+Each stored value is converted to the type the variable has now. A variable that no longer exists in the Data Store is skipped, and the skip is written to the error log. The rest of the selection is still restored.
 
 ## Deleting a Backup { #deleting-a-backup }
 

@@ -32,6 +32,8 @@ Loggboksvyn har två paneler. Den vänstra panelen visar ämnesträdet, en hiera
 
 En vald nod omfattar allt som är placerat under den. Väljs en vynod listas anteckningarna på vyn tillsammans med anteckningarna på de objekt som är ritade i den, vilket gör att en hel anläggningsdel kan granskas i ett steg.
 
+Ett dubbelklick på en nod läser in dess poster direkt, utan **Visa inlägg**. Reglaget **Expandera alla noder** öppnar alla noder i trädet. Inställningen delas med den vybegränsade loggboken.
+
 När fjärrsystem är anslutna visas vart och ett som en toppnod i trädet, namngiven efter fjärrsystemet. Under den finns systemets egen loggbok, ordnad på samma sätt som det lokala trädet, och där kan anteckningar läsas och skrivas. Se [Fjärrsystemens loggböcker](configuring.md#logbooks-of-remote-systems).
 
 Trädet och postlistan uppdateras av sig själva när en post läggs till, redigeras eller arkiveras var som helst: här, i en webb- eller fjärrklient eller i ett anslutet system.
@@ -41,6 +43,8 @@ Postlistan visar följande kolumner: **Rubrik**, **Placerad på**, **Meddelande*
 **Placerad på** anger vad posten faktiskt är kopplad till, oberoende av hur trädet för tillfället är ordnat. En vy visas med sin sökväg utan filändelsen `.kvie`, ett objekt med sin tagg, och ett eget underämne läggs till efter identifieraren. Detta har betydelse eftersom samma post hamnar under olika noder i de två trädlägena, och den här kolumnen är det enda stället som alltid namnger postens verkliga koppling.
 
 Välj en post och klicka på **Redigera anteckning** för att öppna den för redigering, eller **Arkivera anteckning** för att flytta ut den ur den aktiva listan. En arkiverad post behålls i databasen och döljs i listan i stället för att raderas, och samma knapp återställer den när arkiverade poster visas.
+
+Ett dubbelklick på en post gör detsamma som **Redigera anteckning** och kräver `Logbook_Edit` på samma sätt. I redigeringspopupen visas ämnet som **Ämne (skrivskyddat)**, så en post kan inte flyttas till ett annat ämne från loggboken.
 
 !!! note "Poster arkiveras, de raderas inte"
     Det finns ingen radering av enskilda poster. Den enda åtgärd som permanent tar bort loggboksinnehåll är **ta bort alla arkiverade anteckningar** i inställningsvyn, som rensar samtliga arkiverade poster på en gång. Se [Arkivering](extending.md#archiving).
@@ -67,7 +71,7 @@ Inställningen delas med de loggböcker som öppnas från ett objektpopup eller 
 
 Klicka på **Lägg till anteckning** för att öppna popup-fönstret **Skapa ny loggbokspost**. Fyll i följande fält:
 
-* **Ämne** — vad posten placeras på. Om loggboken öppnats från ett objekt eller från en processvy är fältet redan ifyllt och behöver normalt inte ändras.
+* **Ämne** — vad posten placeras på. Om loggboken öppnats från ett objekt eller från en processvy är fältet redan ifyllt och behöver normalt inte ändras. Ett förifyllt ämne är låst. Klicka på hänglåset bredvid för att ändra det, vilket också visar tipset *Använd / för att skapa nivåer*.
 * **Kontext** — en valfri grupperingsetikett. Klicka på **...** för att hantera tillgängliga kontexter.
 * **Rubrik** — en kort rubrik för posten.
 * **Meddelande** — den fullständiga texten i anteckningen.

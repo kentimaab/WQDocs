@@ -14,7 +14,7 @@ tags:
 
 ## Parameters { #parameters-common-settings-shared-by-all-widgets }
 
-All widgets except Alarm Row and Alarm Graph share a `Header` parameter, a string, that sets the title displayed on the widget. If left empty the widgets has a standard header.
+All widgets except Alarm Row and Alarm Graph share a `Header` parameter, a string, that sets the title displayed on the widget. If left empty, the widget shows a standard header.
 
 
 Parameters that accept multiple signals or groups accept either a single string or an array of strings.
@@ -36,6 +36,8 @@ Widgets that display a signal legend automatically handle overflow. When there a
 ### Alarm Status { #alarm-status }
 
 Displays alarm counts: total, acknowledged and unacknowledged. Two sizes are available: `Alarm_1x1` and `Alarm_2x1`.
+
+Without a `Grupp` filter, the totals also count the alarms of connected remote systems, and a second block, **Local**, shows the same counts for this system's own alarms. With a filter, both blocks count only this system's alarms in the chosen groups.
 <!-- --8<-- [end:body-1] -->
 
 ![Alarm Status](/docs/Images/Dashboard/AlarmStatus.png){align=center}
@@ -127,6 +129,8 @@ The **From** and **To** fields at the top of the dashboard set the time range. H
 * **Calendar icon** (on an individual widget) — applies the From/To range to that widget instance only, without affecting the others.
 * **Restore** — sets the From/To range to the last 5 minutes and applies it to all History widget instances. The window is fixed, so the widgets stop following live values.
 
+The play/pause button on each History widget starts or stops live updating for that widget only.
+
 **Parameters**
 
 * `Signaler` — Signal path or array of signal paths to display.
@@ -200,6 +204,8 @@ Displays signal value comparisons as a bar chart across configurable time period
 | `Trend` | Shows the difference between the last value in the current period and the last value in the previous period. Use for signals where the change from one period to the next is what matters. |
 | `Result` | Shows the last logged value within each period. Use for signals where the end-of-period state is what matters. |
 
+The values are read from the first cyclic, change or trigger logger found that logs the signal. A signal that no such logger logs gets empty bars. The newest bar is the current period so far, and the chart refreshes every hour.
+
 ---
 
 ### Gauge { #gauge }
@@ -213,7 +219,7 @@ Displays a single live value as a dial against a configured range, with an optio
 **Parameters**
 
 * `Signal` — Direct variable reference (not a string). Enter the signal path without quotes: `MB.AS01.LB01_P`, not `"MB.AS01.LB01_P"`.
-* `Header` — The widget heading.
+* `Header` — The widget heading. If empty, the heading is **Gauge**.
 * `Min` and `Max` — The ends of the dial's range. Default to `0` and `100`.
 * `WarningMin` and `WarningMax` — Warning limits. Values at or below `WarningMin`, or at or above `WarningMax`, lie in a warning zone. Each takes one value or an array `[red, yellow]`, for example `[90, 75]` for `WarningMax` or `[10, 25]` for `WarningMin`. While the value is in a zone, that zone is coloured and the centre disc blinks in its colour.
 
@@ -221,7 +227,7 @@ Displays a single live value as a dial against a configured range, with an optio
 
 ### Maintenance { #maintenance }
 
-Displays maintenance task status: active, planned and missed tasks. Connects directly to the maintenance module. No signal input required.
+Displays maintenance task status: the total of active tasks, and how many of them are ongoing and missed. Below that, **My ongoing** and **My missed** count the tasks assigned to the logged-in user. **My ongoing** includes only tasks with a deadline within the next 60 days, set by the `maintenanceDaysAhead` variable. Connects directly to the maintenance module. No signal input required.
 <!-- --8<-- [end:body-14] -->
 
 ![Maintenance](/docs/Images/Dashboard/Maintenance.png){align=center}

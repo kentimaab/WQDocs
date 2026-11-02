@@ -17,7 +17,7 @@ tags:
 
 | Problem | Solution |
 |---|---|
-| Dates are out of range | If no data is available for the selected time period the report will fail. Ensure the values are actually being stored in the database. If not, verify that the logger is correctly set up. See [Loggers](../../guides/Loggers.md) for more information. |
+| The report fails | The error shown in **Report status** is general and does not name the cause. The most common cause is that no data is stored for the selected time period. Ensure the values are actually being stored in the database. If not, verify that the logger is correctly set up. See [Loggers](../../guides/Loggers.md) for more information. |
 | The report is empty | If no data appears in the report the macro command is most likely failing. This only happens when a custom template is used. Review the macro command configuration in [Creating templates](extending.md#creating-templates) |
 | Report is not being sent | The SMTP server may not be configured correctly. Send a test email from the **Reports - Schedule** view to check. If that works, verify that the email addresses are entered correctly. See [Email notifications](../Core/alarms/extending.md#email-notifications) in the Alarms module for SMTP configuration. |
 | **Create Report** does nothing | A report cannot be created until at least one signal is selected in the **LoggerList**. Select a signal and try again. The **Alarm Report** is exempt, since it includes all signals automatically. The **Alarm Report One Alarm** needs exactly one alarm selected. |

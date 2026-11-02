@@ -37,11 +37,13 @@ standard-, dubbel-, differentiell-, digital- och utomhussensorer.
 * [**VENTILER**](Symbols.md#valves) — Förkonfigurerade tvåvägs- och trevägsventilsobjekt i fyra orienteringar.
 * [**ÖVRIGT**](Symbols.md#others) — Förkonfigurerade objekt för energimätare,
 flödesmätare, servicekopplare, timer, tryckknappar och expansionskärl.
+* [**Varianter med anslutning**](Symbols.md#connection-variants) — DAMPERS, SENSORS och
+VALVES med en linje och cirkel som visar var objektet är anslutet.
 
 ---
 
 ### Äldre symboler
 * [**Äldre symboler**](legacy.md) — Tidigare generations
-symboler från WideQuick BMS 8.0. Uppgraderas automatiskt vid import av gamla vyer.
+symboler från WideQuick BMS 8.0 och MOD 2024.1.0. Uppgraderas automatiskt vid import av gamla vyer.
 Migrering till de nya symbolerna rekommenderas för nya och uppdaterade projekt.
 <!-- --8<-- [end:body] -->

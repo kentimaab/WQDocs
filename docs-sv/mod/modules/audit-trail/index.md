@@ -1,5 +1,6 @@
 ---
-title: Spårningslogg (Spårningslogg)
+title: Spårningslogg
+description: Spåra och granska ändringar av Datalager-variabler och historiken för underhållsuppgifter.
 product: mod
 page_type: module
 status: draft
@@ -9,7 +10,7 @@ tags:
 ---
 <!-- --8<-- [start:body] -->
 
-# Spårningslogg (Spårningslogg)
+# Spårningslogg
 
 Spårningsloggen registrerar ändringar av valda Datalager-variabler och ger en fullständig historik över ändringar av underhållsuppgifter. För spårade variabler lagrar varje post det gamla värdet, det nya värdet, variabelns sökväg, användaren som gjorde ändringen samt en tidsstämpel. Ändringar av underhållsuppgifter registreras automatiskt. Ingen konfiguration krävs.
 
@@ -19,10 +20,11 @@ Spårningsloggen finns under **Historik → Loggar → Spårningslogg**.
 
 ### [Kom igång](get-started.md) { #get-started }
 * [**Visa loggen**](get-started.md#viewing-the-log) — Filtrera och läsa Spårningsloggen.
-* [**Ändringslogg för underhåll**](get-started.md#maintenance-change-log) — Automatisk historik över ändringar av underhållsuppgifter.
+* [**Underhållsändringslogg**](get-started.md#maintenance-change-log) — Automatisk historik över ändringar av underhållsuppgifter.
 
 ---
 
 ### [Konfigurera](configuring.md) { #configuring }
 * [**Variabler att spåra**](configuring.md#configuring-variables-to-track) — Lägga till och ta bort variabler från Spårningsloggen.
+* [**Variabler som inte längre finns**](configuring.md#variables-that-no-longer-exist) — Hitta och ta bort spårade variabler som försvunnit från Datalager.
 <!-- --8<-- [end:body] -->

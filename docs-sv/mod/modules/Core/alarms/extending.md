@@ -106,7 +106,7 @@ De tillgängliga larmfälten som kan inkluderas i meddelandet är:
 | Fält | Beskrivning |
 |---|---|
 | `alarm.name` | Larmets namn |
-| `alarm.timestamp` | Datum och tid då larmet utlöstes |
+| `alarm.timestamp` | Datum och tid då händelsen behandlades för notifieringen. För en kvittering ligger den nära tiden för kvitteringen, inte när larmet utlöstes |
 | `alarm.severity` | Larmklass |
 | `alarm.text` | Larmtext |
 | `alarm.description` | Larmbeskrivning. Tom om larmet saknar beskrivning |
@@ -131,7 +131,8 @@ accepterar AT-kommandon via en seriekoppling är kompatibla.
 
 Alternativt kan SMS skickas via en Teltonika-router med Teltonika-pluginet. Pluginet
 kommunicerar med routerns REST API över nätverket i stället för via en seriell anslutning,
-och skickar SMS för samma larmnotifieringsscheman. Det fungerar endast i Windows och
+och skickar SMS för samma larmnotifieringsscheman. Pluginet kopplar in sig i `scAlarmSender`,
+så att SMS skickas via routern i stället för via GSM-modemet. Det fungerar endast i Windows och
 kräver licensen **WideQuick Advanced** med optionen .NET-plugin, eller en Premium-licens.
 Se [Skicka SMS med Teltonika](../../../../plug-in/teltonika/oversikt.md).
 
@@ -164,7 +165,7 @@ grönt. Själva GSM slås på och av med reglaget **GSM Modem** på samma ruta i
 !!! note "Krav"
     SMS-notifieringar kräver att `scModem` körs utöver `scAlarmSender`.
 
-### Anpassa SMS
+### Anpassa SMS { #customize-sms }
 
 SMS-notifieringen följer samma mönster som e-posten och kan anpassas genom att
 redigera funktionen `writeSMS()` i skriptet `scAlarmSender`. Samma larmfält är

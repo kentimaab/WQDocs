@@ -1,5 +1,6 @@
 ---
 title: Rapporter — Utöka
+description: Utöka modulen Rapporter med egna mallar, rapportkontroller och enheter.
 product: mod
 page_type: module
 status: draft
@@ -89,7 +90,8 @@ och kan inte ändras dynamiskt.
 * **Fixed/Range timespan** — Rapportören använder **Range timespan** som standard, med 
 `Report_Reference.from_time` och `Report_Reference.to_time` som start- och sluttider. 
 Dessa anges av tidsobjekten i ReportController.
-* **Limit** — Det maximala antalet rader att fylla. Detta anges av användaren i 
+* **Limit** — Det maximala antalet rader som makroanropet fyller. Varje signal har ett eget 
+makroanrop, så gränsen gäller per signal. Detta anges av användaren i 
 ReportController vid generering av rapporten.
 * **Datetime format** — Det format som används för datum- och tidsvärden. Standardvärdet är 
 `yyyy-MM-dd hh:mm:ss` men kan justeras för att passa rapportens behov.
@@ -142,6 +144,8 @@ användaren i ReportController vid generering av rapporten.
     * `$(Report_Reference.to_time)` — Rapportens sluttid.
     * `$(Report_Reference.limit)` — Det maximala antalet händelser.
     * `$(Report_Reference.variable_ref[#])` — Signalen vid index `#`.
+    * `$(Report_Reference.unit)` — Rapportens enhet.
+    * `$(Report_Reference.factorArray[#])` — Skalfaktorn för signalen vid index `#`.
     * `$(_sys_clock_year)`, `$(_sys_clock_month)`, `$(_sys_clock_day)`, 
     `$(_sys_clock_hour)` och så vidare — Aktuellt datum och tid, en del per cell.
     * `$(_sys_user_name)` — Den aktuella användaren.
@@ -204,6 +208,16 @@ det är kritiskt att ReportController-vyns namn exakt matchar rapportmallens nam
     ReportController-vyns namn måste exakt matcha rapportmallens namn. Om de 
     skiljer sig åt kommer `scReports`-skriptet inte att kunna hitta och aktivera rätt mall.
 
+!!! note "Schemalägga en egen mall"
+    Schemamenyn listar alla rapportmallar, men dess andra sida avgör vad som visas utifrån
+    mallens namn. Ett namn som innehåller `alarm` visar larmlistan, ett som innehåller
+    `energy` energirapporternas signallista och ett som innehåller `delta`
+    deltarapporternas signallista. Skillnad mellan versaler och gemener ignoreras. En mall
+    vars namn inte innehåller något av de tre får ingen signallista där, så namnge en egen
+    mall därefter, till exempel `Energy_Report_Water`. Menyn fyller bara i
+    **Data från x dagar bakåt** och **Antal händelser** för de inbyggda energi- och
+    deltamallarna, så ange båda manuellt för en egen mall.
+
 För att bygga vyn finns en uppsättning färdiga objekt tillgängliga i objektbiblioteket under 
 **Report**. Nedan beskrivs varje objekt och när det ska användas:
 
@@ -255,8 +269,8 @@ igenkända uppsättningen och hur den utökas.
 
 Att placera objektet aktiverar även enhetsfiltrering för signallistan:
 
-* TreeView förblir låst till dess att en enhet har valts.
-* När en enhet väljs filtreras TreeView till signaler av den dimensionen.
+* En enhet väljs så fort kontrollern öppnas.
+* TreeView listar endast signaler av den valda enhetens dimension.
 * Om enheten ändras rensas det aktuella urvalet, eftersom de signaler som valdes under den
 tidigare enheten inte längre finns i listan.
 
@@ -440,6 +454,20 @@ this.baseUnitOrder = ["m³/h", "m³/s", "L/s", "m³", "Wh", "W", "L"];
 
 En signal vars enhet inte finns i tabellen hoppas över utan loggpost när listan i **Enhet**
 byggs. En logger som bara innehåller okända enheter ger därför en tom **Enhet**-lista, och
-eftersom signalernas TreeView är låst till dess att en enhet har valts verkar kontrollern
+eftersom signalernas TreeView endast listar signaler i den valda enheten verkar kontrollern
 inte erbjuda några valbara signaler alls. Att lägga till enheten i tabellen löser det.
+
+## Behörigheter { #privileges }
+
+Följande behörigheter styr vyn **Rapporter - Schemalägg**:
+
+| Behörighet | Beskrivning |
+|---|---|
+| `Schedules` | Krävs för **Skapa nytt schema**, **Redigera schema** och **Ta bort valt schema**. Utan den är de tre knapparna inaktiverade och täckta av texten *Kräver privilegiet Schedules*. |
+| `editSMTP` | Visar SMTP-knapparna **Konfigurera**, **Kontrollera** och **Testa** i panelen **SMTP och GSM**. **Kontrollera** döljs dessutom i fjärr- och webbklienter. |
+
+Båda är definierade med `Default="denied"` i `Privileges.kdat`, så de måste tilldelas en
+roll innan någon kan hantera scheman eller SMTP-inställningarna från vyn. Att skapa, ta bort
+och skicka rapporter i **Rapporter - Lista** kräver ingen behörighet. Se
+[Användare och behörigheter](../Core/users-privileges.md).
 <!-- --8<-- [end:body] -->

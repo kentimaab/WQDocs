@@ -1,5 +1,6 @@
 ---
 title: Spårningslogg — Kom igång
+description: Kom igång med modulen Spårningslogg.
 product: mod
 page_type: module
 status: draft
@@ -16,10 +17,11 @@ tags:
     relaterad funktionalitet som beskrivs i guiderna för Spårningsloggen:
     
     * `scAuditTrail`
-    * `scAlert`
     * `scUsers`
     * `scToolTip`
-    * `scMaintenance` (för underhållsändringsloggen)
+    * `scAlert`
+
+`scMaintenance` krävs också för underhållsändringsloggen.
 
 Spårningsloggen registrerar ändringar av valda Datalager-variabler och underhållsuppgifter. Den finns under **Historik → Loggar → Spårningslogg**.
 
@@ -39,13 +41,14 @@ Loggen visar alla registrerade ändringar med följande kolumner:
 * **Användare** — den inloggade användaren på klienten där ändringen gjordes.
 * **System** — var ändringen gjordes: den lokala applikationen, eller adressen till en webb- eller fjärrklient.
 
-Varje ändring loggas en gång, av den applikation där användaren gjorde den. Ändringar utan användare, till exempel från skript, drivrutiner eller scheman, loggas av den lokala applikationen.
+Varje ändring loggas en gång, av den applikation där användaren gjorde den. Ändringar som ingen gjort för hand, till exempel från skript, drivrutiner eller scheman, loggas av den lokala applikationen och visar den användare som är inloggad där i det ögonblicket.
 
 !!! note
     Spårningsloggen avgör var en ändring gjordes utifrån varje klients senaste
     användaraktivitet. En webbklient i en webbläsare på samma dator som applikationen delar
     den aktiviteten, så en ändring som görs där kan loggas två gånger. Webbklienter på andra
-    datorer påverkas inte.
+    datorer påverkas inte. Är två användare aktiva på två klienter inom samma par sekunder
+    loggar båda en ändring som görs under den tiden.
 
 Använd panelen **Filter** till vänster för att begränsa loggen:
 
@@ -55,6 +58,7 @@ Använd panelen **Filter** till vänster för att begränsa loggen:
 * **Antal rader** — begränsa hur många poster som visas.
 
 Klicka på **Filter** för att tillämpa. Klicka på **Rensa spårningsloggen** för att permanent ta bort alla loggposter. Knappen visas bara för användare med privilegiet `Config`.
+
 ## Underhållsändringslogg { #maintenance-change-log }
 
 Navigera till **Historik → Loggar → Spårningslogg → Spårningslogg - Underhåll**.
@@ -69,12 +73,21 @@ Varje rad visar:
 
 * **Uppgift** — underhållstypen.
 * **Objekt** — det objekt som uppgiften tillhör.
-* **Ändrad av** — den användare som gjorde ändringen, eller **System** för automatiska ändringar såsom övergångar vid missad deadline.
-* **Ändringstid** — när ändringen gjordes.
-* **Tidigare status** — statusen före ändringen.
-* **Aktuell status** — statusen efter ändringen.
+* **Förändrad av** — den användare som gjorde ändringen, eller **System** för automatiska ändringar såsom övergångar vid missad deadline.
+* **Förändringstid** — när ändringen gjordes.
+* **Föregående status** — statusen före ändringen.
+* **Nuvarande status** — statusen efter ändringen.
 
-Markera en rad och klicka på **Öppna** för att se det fullständiga detaljerna för ändringen, inklusive tilldelad person, prioritet, deadline och beskrivning.
+Markera en rad och klicka på **Öppna** för att se de fullständiga detaljerna för ändringen, inklusive tilldelad person, prioritet, deadline och beskrivning.
+
+Listan läses inte om av sig själv. När underhållsdata ändras efter att listan lästes in, här eller i en annan klient, visas en blinkande uppdateringsknapp. Klicka på den för att läsa om listan.
+
+### Rensa underhållsloggen { #clearing-the-maintenance-log }
+
+**Rensa underhållsloggen** tar bort alla poster i underhållsändringsloggen. En bekräftelsedialog visas först, och åtgärden kräver privilegiet `Config`.
+
+!!! warning "Att rensa loggen går inte att ångra"
+    Åtgärden raderar hela ändringshistoriken på en gång. Själva underhållsuppgifterna påverkas inte, men uppgifterna om vem som ändrade vad, och när, försvinner. Exportera eller arkivera det som behövs för spårbarhet innan loggen rensas.
 
 ## Nästa steg { #next-steps }
 

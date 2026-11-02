@@ -68,7 +68,7 @@ När taggarna har importerats är nästa steg att konfigurera dem och koppla dem
 till popupen. Detta görs i några steg:
 
 * Starta projektet.
-* Navigera till **Inställningar → Suffix → Suffix Alias - Popups**.
+* Navigera till **Inställningar → Suffix → Suffixalias - Popuper**.
 <!-- --8<-- [end:body-1] -->
 
 ![Navigering till inställningar](/docs/sv/Images/Create_Popup/Navigation.gif){width="400"}
@@ -197,7 +197,7 @@ ungefär `520` säkerställer att alla objekt är synliga samtidigt som det tomm
 utrymmet tas bort. Objektet `foreGroundBox2` behöver inte ändras i storlek eftersom det skalas om
 automatiskt med vyn.
 
-Starta applikationen och navigera till **Inställningar → Suffix → Suffix - Popups**.
+Starta applikationen och navigera till **Inställningar → Suffix → Suffixalias - Popuper**.
 Välj **Pump Control** och uppdatera **View** till den nyligen skapade vyn **Pump Control**
 som visas nedan:
 

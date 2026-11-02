@@ -1,5 +1,6 @@
 ---
 title: Kalender
+description: Visuell översikt över händelser och underhållsdeadlines i månads-, vecko- och dagsvy.
 product: mod
 page_type: module
 status: draft
@@ -16,7 +17,7 @@ Kalendermodulen ger en visuell översikt över händelser och kommande underhål
 
 Händelser hämtas från tre källor: händelser som skapas direkt i kalendern, underhållsdeadlines som hämtas automatiskt från [Underhållsmodulen](../maintenance/index.md), samt händelser som importeras från en lokal `.ics`-fil. En konfigurerbar påminnelse visas ett angivet antal dagar innan varje underhållsdeadline.
 
-Dagar kan markeras som helgdagar och helgdagsaftnar. Kalendern publicerar den klassificeringen till två interna variabler, som kan skickas vidare till styrsystemt så att dess egna schema kan ta hänsyn till dagtypen.
+Dagar kan markeras som helgdagar och helgdagsaftnar. Kalendern publicerar den klassificeringen till två interna variabler, som kan skickas vidare till styrsystemet så att dess egna scheman kan ta hänsyn till dagtypen.
 
 !!! info "Direktanslutna kalenderflöden ingår inte i den här versionen"
     Att prenumerera på en ICS-länk och att importera ett lands röda dagar kräver båda REST-insticksmodulen, som inte ingår. Import från en lokal `.ics`-fil är tillgänglig, och helgdagar markeras i kalendern själv. Se [Importera en kalender](configuring.md#importing-a-calendar).
@@ -34,7 +35,7 @@ Dagar kan markeras som helgdagar och helgdagsaftnar. Kalendern publicerar den kl
 * [**Händelser**](configuring.md#events) — Skapa, redigera och ta bort händelser.
 * [**Underhållshändelser**](configuring.md#maintenance-events) — Hur underhållsdeadlines visas och vad färgerna betyder.
 * [**Påminnelser**](configuring.md#reminders) — Konfigurera påminnelseförskjutning för underhållsdeadlines.
-* [**Helgdagar och helgdagsaftnar**](configuring.md#holidays-and-holiday-eves) — Markera en dag och skicka klassificeringen till ett PLC.
+* [**Helgdagar och helgdagsaftnar**](configuring.md#holidays-and-holiday-eves) — Markera en dag och skicka klassificeringen till styrsystemet.
 * [**Importera en kalender**](configuring.md#importing-a-calendar) — Lägga till händelser från en lokal `.ics`-fil.
 * [**Hantera importerade kalendrar**](configuring.md#managing-imported-calendars) — Byta namn, färg, filtrera och ta bort.
 * [**Exportera en kalender**](configuring.md#exporting-a-calendar) — Skriva händelser till en fil eller skicka dem med e-post.

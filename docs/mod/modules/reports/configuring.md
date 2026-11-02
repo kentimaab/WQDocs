@@ -143,7 +143,7 @@ current year.
 This configuration produces a full year report regardless of what day it is produced on.
 
 Open `EnergyReport.xlsx` located in `\Your_Project\Reports\Templates`. Rather than 
-selecting `A:1` to `Q:31`, select `A:97` to `Q:127` and set that as the print area. 
+selecting `A1:Q31`, select `A97:Q127` and set that as the print area. 
 Then select row 113 in the header sheet and paste the following:
 
 ```excel title="EnergyReport.xlsx — row 113"

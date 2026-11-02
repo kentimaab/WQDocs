@@ -61,8 +61,8 @@ The **Settings** panel controls how the chart looks and how often it updates.
 | Setting | Description |
 |---|---|
 | Show legend | Toggles the signal legend in the chart area. |
-| Show ruler | Toggles a vertical ruler line that follows the cursor. |
-| Scale Y-axes | Enables auto-scaling of all Y-axes to fit the visible data. |
+| Show ruler | Toggles a vertical ruler line that can be dragged along the time axis. |
+| Scale Y-axes | Scales all Y-axes to fit the visible data when switched on. To rescale after the data has changed, switch it off and on again. |
 
 **Time interval** sets how much history is shown. When the ruler is shown, the interval is centred on the ruler. Otherwise it ends at the current time.
 
@@ -96,7 +96,9 @@ The **SpeedDial** menu on process views includes a button that opens a view-spec
 <!-- --8<-- [start:body-4] -->
 Signal selection, time controls, settings and saved signal groups work the same way. Saved signal groups in this popup are stored per view and are separate from project-wide saved groups. The signals of project-wide groups and of groups saved in other views can also be fetched with **Get signals from other groups**. See [Importing Groups from Other Views](configuring.md#importing-groups-from-other-views).
 
-Since the view-specific History only shows signals belonging to the current view, signals from other views can be brought in with **Import signals**.
+Its **Show variables not being logged** button lists only the unlogged signals of the current view.
+
+Since the view-specific History only shows signals belonging to the current view, signals from other views can be brought in with **Import signals**. **Remove imported signals** takes them out of the signal list again. It is enabled once signals have been imported.
 <!-- --8<-- [end:body-4] -->
 
 ![Import signals dialog with Available on the left and Selected on the right](/docs/Images/History/history-import-signals.png){align=center}
