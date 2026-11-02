@@ -28,14 +28,14 @@ anpassade processobjekt, inklusive motorer, pumpar, ventiler, sensorer och mer.
 ---
 
 ### Förkopplade symboler
-* [**SPJÄLL**](Symbols.md#dampers) — Förkonfigurerade digitala och analoga
+* [**DAMPERS**](Symbols.md#dampers) — Förkonfigurerade digitala och analoga
 spjällobjekt i fyra orienteringar.
-* [**MOTORER**](Symbols.md#motors) — Förkonfigurerade motorobjekt för
+* [**MOTORS**](Symbols.md#motors) — Förkonfigurerade motorobjekt för
 kompressorer, fläktar, pumpar, frekvensomriktare och roterande värmeväxlare.
-* [**SENSORER**](Symbols.md#sensors) — Förkonfigurerade sensorobjekt för
+* [**SENSORS**](Symbols.md#sensors) — Förkonfigurerade sensorobjekt för
 standard-, dubbel-, differentiell-, digital- och utomhussensorer.
-* [**VENTILER**](Symbols.md#valves) — Förkonfigurerade tvåvägs- och trevägsventilsobjekt i fyra orienteringar.
-* [**ÖVRIGT**](Symbols.md#others) — Förkonfigurerade objekt för energimätare,
+* [**VALVES**](Symbols.md#valves) — Förkonfigurerade tvåvägs- och trevägsventilsobjekt i fyra orienteringar.
+* [**OTHER**](Symbols.md#others) — Förkonfigurerade objekt för energimätare,
 flödesmätare, servicekopplare, timer, tryckknappar och expansionskärl.
 * [**Varianter med anslutning**](Symbols.md#connection-variants) — DAMPERS, SENSORS och
 VALVES med en linje och cirkel som visar var objektet är anslutet.
