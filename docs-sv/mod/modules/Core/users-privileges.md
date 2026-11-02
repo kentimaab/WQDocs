@@ -104,7 +104,7 @@ Ramverket levereras med behörigheterna nedan, definierade i `Privileges.kdat`.
 | `ControlCurve_EditProfiles` | Redigera styrkurvans profiler |
 | `ControlCurve_ManualControl` | Ändra styrkurvans värden direkt |
 | `Settings_Project` | Ändra allmänna projektinställningar såsom språk, enheter, tid, SMTP och applikationsnamn |
-| `Settings_Navigation` | Ändra navigeringsinställningar såsom fullskärmsmeny, direktnavigering och visning av låsta menyer |
+| `Settings_Navigation` | Ändra alla inställningar i avsnittet **Navigering** i **Inställningar**: visning av låsta menyknappar och submenyknappar, fullskärmsmeny och direktnavigering |
 | `Settings_Process_Images` | Ändra visningsinställningar för processbilder såsom namnskyltar, teckenstorlek, decimaler och handsymbol |
 | `Setpoints` | Ändra börvärden och reglerparametrar på signaler märkta `PRIV=Setpoints` |
 | `AlarmLimits` | Ändra larmgränser och larmfördröjningar på signaler märkta `PRIV=AlarmLimits` |

@@ -23,7 +23,7 @@ Funktionen Säkerhetskopiering och återställning sparar de aktuella värdena f
 
 ## Vad kan säkerhetskopieras { #what-can-be-backed-up }
 
-Variabelträdet visar hela Datalager, utom arrayer, larm, postmängder, `ViewPaths` och systemvariabler med prefixet `_sys`. Alla variabler med ett värde av typen sträng, tal eller boolesk kan säkerhetskopieras.
+Variabelträdet visar hela Datalager, utom arrayer, larm, postmängder och `ViewPaths`. Systemvariabler med prefixet `_sys` är också undantagna: de går inte att välja och ska inte säkerhetskopieras. Alla andra variabler med ett värde av typen sträng, tal eller boolesk kan säkerhetskopieras.
 
 En säkerhetskopia fångar värdena för de valda variablerna så som de lästes när vyn öppnades eller när uppdateringsknappen senast klickades, inte vid det tillfälle **Skapa säkerhetskopia** klickas. Klicka på uppdatera först för att fånga de senaste värdena. Det är en ögonblicksbild. Värden som ändras efter att säkerhetskopian skapats spåras inte.
 

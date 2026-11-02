@@ -25,7 +25,7 @@ The Backup and Restore feature saves the current values of selected Data Store v
 
 ## What Can Be Backed Up { #what-can-be-backed-up }
 
-The variable tree shows the whole Data Store, except arrays, alarms, recordsets, `ViewPaths` and system variables prefixed with `_sys`. Any variable with a value of type string, number, or boolean can be backed up.
+The variable tree shows the whole Data Store, except arrays, alarms, recordsets and `ViewPaths`. System variables prefixed with `_sys` are left out as well: they cannot be picked, and should not be backed up. Any other variable with a value of type string, number, or boolean can be backed up.
 
 A backup captures the values of the selected variables as they were read when the view opened or the refresh button was last clicked, not at the moment **Create backup** is clicked. Click refresh first to capture the latest values. It is a point-in-time snapshot. Values that change after the backup is created are not tracked.
 

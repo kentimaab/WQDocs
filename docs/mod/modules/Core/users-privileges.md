@@ -105,7 +105,7 @@ The framework ships with the privileges below, defined in `Privileges.kdat`.
 | `ControlCurve_EditProfiles` | Edit control curve profiles |
 | `ControlCurve_ManualControl` | Change control curve values directly |
 | `Settings_Project` | Change general project settings such as language, units, time, SMTP and application name |
-| `Settings_Navigation` | Change navigation settings such as fullscreen menu, direct navigation and showing locked menus |
+| `Settings_Navigation` | Change every setting in the **Navigation** section of **Settings**: showing locked menus and submenus, fullscreen menu and direct navigation |
 | `Settings_Process_Images` | Change process image display settings such as nameplates, font size, decimals and hand symbol |
 | `Setpoints` | Change setpoints and control parameters on signals tagged `PRIV=Setpoints` |
 | `AlarmLimits` | Change alarm limits and alarm delays on signals tagged `PRIV=AlarmLimits` |
