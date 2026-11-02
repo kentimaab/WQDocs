@@ -15,7 +15,7 @@ tags:
 
 ## Reminder Configuration { #reminder-configuration }
 
-There is currently no UI for reminder settings. Both can be set from a script.
+The per-template toggle is a checkbox in **Maint. - Templates**. Only the global offset has to be set from a script.
 
 ### Global Offset { #global-offset }
 
@@ -28,7 +28,7 @@ scMaintenance.setReminderOffset(days * 24 * 60 * 60 * 1000);
 
 ### Per-Template Toggle { #per-template-toggle }
 
-Controls whether reminders are generated for tasks created from a specific template. Default is off. There is no helper function for this. Update the `maintenanceLog_templates` table directly and call `updateTemplates()` to refresh the in-memory cache so the calendar picks up the change immediately:
+Controls whether reminders are generated for tasks created from a specific template. Default is off. In **Maint. - Templates**, tick **Create a reminder 3 days before** for the template and click **Save**. From a script, `scMaintenance.updateTemplate()` takes the setting as its last argument. Alternatively, update the `maintenanceLog_templates` table directly and call `updateTemplates()` to refresh the in-memory cache so the calendar picks up the change immediately:
 
 ```javascript
 var templateType = "Filterbyte";
@@ -88,13 +88,13 @@ Imported calendars are stored in the `ics_subscriptions` table in the maintenanc
 | Function | Purpose |
 |---|---|
 | `importFileSubscription(path)` | Adds an import for a local `.ics` path and reads it immediately. The name defaults to the filename without its extension. |
-| `addSubscription(name, url, isBuiltin, type)` | Adds a subscription row. Returns `duplicate_name` or `duplicate_url` if one already matches. |
+| `addSubscription(name, url, isBuiltin, type)` | Adds a subscription row. Returns `{error, id}`. `error` is `duplicate_name` or `duplicate_url` if one already matches, `exception` if the call fails, and `null` on success. |
 | `listSubscriptions()` | Returns every subscription. |
 | `getSubscription(id)` | Returns one subscription. |
 | `syncSubscription(id)` | Re-reads one import. |
-| `syncAllSubscriptions()` | Re-reads every import. |
+| `syncAllSubscriptions()` | Called by **Sync** and the hourly poll. It skips `file` imports, the only type in this build, so it re-reads nothing. Rows of a retired type are skipped with a note in the log. |
 | `renameSubscription(id, newName)` | Renames an import. |
-| `setSubscriptionColor(id, color)` | Overrides an import's event colour. |
+| `setSubscriptionColor(id, color)` | Overrides an import's event colour. **HOLIDAY** and **HOLIDAYEVE** also mark every event of the import and convert the events to whole days, which cannot be undone. |
 | `setSubscriptionVisibility(id, visible)` | Sets whether the import is drawn in the calendar. |
 | `countSubscriptionEvents(id)` | Returns how many events an import currently contributes. |
 | `removeSubscription(id)` | Removes an import and its events. |

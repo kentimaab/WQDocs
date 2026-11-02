@@ -1,5 +1,6 @@
 ---
 title: Användare och behörigheter
+description: Skapa och hantera användare och behörigheter i WideQuick.
 product: mod
 page_type: module
 status: draft
@@ -35,7 +36,7 @@ dubbelklicka på **Användare**, högerklicka på användaren och välj **Egensk
 ### WideQuick® Runtime
 
 Navigera till **Inställningar** i huvudmenyn och öppna vyn **Inställningar**. Under
-**Användare och behörigheter** klicka på **Byt användare**. Klicka på **Lägg till...** för att skapa en ny
+**Användare och behörigheter** klicka på **Ändra användare**. Klicka på **Lägg till...** för att skapa en ny
 användare eller välj en befintlig användare och klicka på **Redigera...** för att ändra den.
 
 ![Users](/docs/sv/Images/User_and_privileges/Users.png)
@@ -67,6 +68,50 @@ klicka på **Bevilja** eller **Neka**
 
 ![Privilege](/docs/sv/Images/User_and_privileges/Privilege.png)
 
+## Ramverkets behörigheter { #framework-privileges }
+
+Ramverket levereras med behörigheterna nedan, definierade i `Privileges.kdat`.
+
+!!! warning "Alla ramverkets behörigheter är nekade som standard"
+    Samtliga är definierade med `Default="denied"`. En behörighet som tillkommer i en ny version är därför otillgänglig för alla roller tills den tilldelas, även för roller som redan har de närliggande behörigheterna. Gå efter en uppgradering igenom tilldelningarna för varje behörighet som versionen införde.
+
+| Behörighet | Ger |
+|---|---|
+| `AlarmControl` | Kvittera och blockera larm |
+| `Schedules` | Lägga till och redigera scheman |
+| `TimeChannels` | Styra tidkanaler |
+| `EditUsers` | Redigera användare, samt inställningarna **Kräv inloggning** och **Kräv användarnamn** |
+| `Config` | Konfigurationsåtgärder, bland annat att rensa underhållsloggen |
+| `editSMTP` | Redigera SMTP-konfigurationen |
+| `Debug` | Felsökning. Inte avsett för driftsatta applikationer |
+| `Logbook_View` | Visa loggboksposter |
+| `Logbook_Add` | Lägga till loggboksposter |
+| `Logbook_Edit` | Redigera befintliga loggboksposter |
+| `Logbook_Archive` | Arkivera och återställa loggboksposter i den globala loggboksvyn |
+| `Logbook_Delete` | Radera alla arkiverade anteckningar från inställningsvyn |
+| `Logbook_Context` | Lägga till, ta bort och redigera loggbokskontexter |
+| `Documents_View` | Visa och öppna dokument |
+| `Documents_Upload` | Ladda upp nya dokument |
+| `Documents_Edit` | Redigera dokumentnamn och metadata |
+| `Documents_Link` | Koppla dokument till och från objekt |
+| `Documents_Delete` | Ta bort dokument |
+| `Documents_Sync` | Synkronisera databasen med filsystemet |
+| `Maintenance_Add` | Lägga till nya underhållsuppgifter |
+| `Maintenance_Edit` | Redigera status och beskrivning för underhållsuppgifter |
+| `Maintenance_EditExtended` | Redigera tilldelad person, prioritet och deadline |
+| `Maintenance_Templates` | Lägga till och ta bort återkommande underhåll i **Underhåll - Återkommande**. Underhållsmallar använder `Maintenance_Add` och `Maintenance_Edit` |
+| `ControlCurve_ChangeProfile` | Växla mellan styrkurvans profiler |
+| `ControlCurve_EditProfiles` | Redigera styrkurvans profiler |
+| `ControlCurve_ManualControl` | Ändra styrkurvans värden direkt |
+| `Settings_Project` | Ändra allmänna projektinställningar såsom språk, enheter, tid, SMTP och applikationsnamn |
+| `Settings_Navigation` | Ändra alla inställningar i avsnittet **Navigering** i **Inställningar**: visning av låsta menyknappar och submenyknappar, fullskärmsmeny och direktnavigering |
+| `Settings_Process_Images` | Ändra visningsinställningar för processbilder såsom namnskyltar, teckenstorlek, decimaler och handsymbol |
+| `Setpoints` | Ändra börvärden och reglerparametrar på signaler märkta `PRIV=Setpoints` |
+| `AlarmLimits` | Ändra larmgränser och larmfördröjningar på signaler märkta `PRIV=AlarmLimits` |
+| `ManualCommand` | Sätta objekt i manuellt läge och ge manuella kommandon på signaler märkta `PRIV=ManualCommand` |
+| `SystemConfig` | Ändra givarkalibrering och skalning på signaler märkta `PRIV=SystemConfig` |
+| `TagInfo` | Reserverad för visning av tagginformation. Definierad, men används ännu inte av någon vy eller signal |
+
 ## Virtuella privilegier { #virtual-privileges }
 
 Ett virtuellt privilegium gör det möjligt för ett enskilt privilegium att automatiskt
@@ -91,10 +136,10 @@ För att lägga till virtuella privilegier till ett privilegium, öppna
 privilegieegenskaperna och klicka på knappen **Virtuellt privilegium** för att välja
 vilka privilegier som ska ingå.
 
-## Begränsa Arbetsvyer med behörighet { #restricting-arbetsvyer-by-privilege }
+## Begränsa Arbetsvyer med behörighet { #restricting-workviews-by-privilege }
 
 Åtkomst till specifika **Arbetsvyer** kan begränsas baserat på behörigheter. Navigera
-till **Inställningar → Arbetsvyer → Arbetsvyer - Behörighet** i huvudmenyn.
+till **Inställningar → Arbetsvyer → Arbetsvyer - Privilegie** i huvudmenyn.
 
 ![arbetsvy Privilege](/docs/sv/Images/User_and_privileges/Workview_privleage.png)
 

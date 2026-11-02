@@ -110,6 +110,7 @@ slot. To receive notifications for the entire day, set **From** to `00:00` and
 * **Severity level** — which alarm classes trigger this schedule. Leave empty to include all classes.
 * **Alarm groups** — which alarm groups are monitored. Use **Select all** to include all groups.
 * **Criteria** — which alarm state the notification is sent on. See [Notification criteria](#notification-criteria) below.
+* **Compact mode** — when switched on, an SMS from this schedule contains only the subject, the event and the names of the matching alarms. See [Customize SMS](extending.md#customize-sms).
 
 The schedule list shows which alarm classes and which criteria each schedule monitors, and the status panel updates the number of schedules and their active state live rather than only when the view is opened.
 

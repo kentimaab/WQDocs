@@ -27,5 +27,6 @@ The Audit Trail is available under **History → Logs → Audit Trail**.
 
 ### [Configuring](configuring.md) { #configuring }
 * [**Variables to Track**](configuring.md#configuring-variables-to-track) — Adding and removing variables from the audit trail.
+* [**Variables That No Longer Exist**](configuring.md#variables-that-no-longer-exist) — Finding and removing tracked variables that are gone from the Data Store.
 
 <!-- --8<-- [end:body] -->

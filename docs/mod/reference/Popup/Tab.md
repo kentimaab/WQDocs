@@ -33,7 +33,7 @@ object has:
 
 Additional popups such as **Process** or **Control** appear only when the object
 has signals matching the suffixes configured for that popup. See
-[Suffix - Popups](../../../mod/guides/create-a-popup.md#configure-popup) for more information
+[Suffix Alias - Popups](../../../mod/guides/create-a-popup.md#configure-popup) for more information
 on how popups are connected to suffixes.
 
 The menu supports a maximum of 15 tabs. For information on creating custom popups

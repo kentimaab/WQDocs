@@ -24,9 +24,11 @@ These privileges control access to logbook operations:
 | `Logbook_Archive` | Required to archive and restore entries |
 | `Logbook_Delete` | Required for **delete all archived notes** in the settings view |
 | `Logbook_Context` | Required to add, remove or edit contexts |
-| `Logbook_View` | Required to view entries |
+| `Logbook_View` | Shows the logbook in the main menu and the **Logbook** tab in object popups, and lets the **SpeedDial** logbook button open the view-scoped logbook |
 
-Users without `Logbook_Add` will see the **Add** button area disabled and grayed out, with a red box overlay displaying a message indicating the required privilege. The `Enabled` property on the button is bound to `scUsers.hasPriv("Logbook_Add")`. The same pattern applies to the other logbook privileges.
+Users without `Logbook_Add` will see the **Add** button area disabled and grayed out, with a red box overlay displaying a message indicating the required privilege. The `Enabled` property on the button is bound to `scUsers.hasPriv("Logbook_Add")`. `Logbook_Edit` and `Logbook_Archive` gate **Edit note** and **Archive note** the same way. `Logbook_Context` hides the **...** button next to the Context field, and `Logbook_Delete` disables **Delete all** in the settings view. Neither of these two has an overlay.
+
+`Logbook_View` takes effect through two settings that ship set to it. It is the workview privilege of the logbook view under **Settings → Workviews → Workviews - Privilege**, which locks or hides its menu entry, and the **Visibility priv.** of the **Logbook** category under **Settings → Suffix → Suffix Alias - Popups**, which hides the **Logbook** tab in object popups. The logbook button in a process view's **SpeedDial** checks `Logbook_View` directly and does nothing for a user without it.
 
 The check always runs on the system where the logbook is open. Writing to a remote system's logbook is therefore governed by the local user's privileges, not by the remote system's. See [Writing to a remote system's logbook](configuring.md#writing-to-a-remote-systems-logbook).
 
@@ -44,13 +46,13 @@ An entry's placement is held in three columns on the `logbook` table. `topic_kin
 | `topic_ref` | The raw identifier of that anchor: a view path including `.kvie`, or a tag. Empty for `free`. |
 
 !!! warning "Only `topic` should be edited directly"
-    `topic_kind` and `topic_ref` are derived values. `reconcileTopicRefs()` re-derives both from `topic` at every start, so a change written to either one alone is overwritten on the next restart. To move an entry, change its `topic`.
+    `topic_kind` and `topic_ref` are derived values. `reconcileTopicRefs()` re-derives both from `topic` at every start, so a change written to either one alone is overwritten on the next restart. To move an entry, change its `topic` directly in the database. The logbook views cannot move an entry, since the topic is read-only when editing.
 
 The derivation takes the longest part of the path that resolves to a known view or tag, and keeps whatever follows as the entry's own sub-path. `MB/AS02/Station2/GT44/Trend` therefore anchors to the sensor `MB.AS02.Station2_GT44` and keeps `Trend` as a node beneath it.
 
 ### Self-healing on start { #self-healing-on-start }
 
-`reconcileTopicRefs()` runs once on start and re-derives the anchor of every distinct topic. This keeps placements correct after views are renamed or moved, and after the object index is rebuilt.
+`reconcileTopicRefs()` runs once on start and re-derives the anchor of every distinct topic. This keeps placements correct after the object index is rebuilt. A note on an object is stored under its tag path, so it follows the object when a view is renamed or moved. A note on a view is stored under the view's path, so after the view is renamed or moved it stays at the old path as a topic of its own until its `topic` is changed.
 
 !!! note "The object index fills in as views are opened"
     Anchors are resolved against the index of which objects are drawn in which views, and that index grows as views are visited. A tag that has not been indexed yet resolves to the equipment above it instead, and settles on the exact tag after the view has been opened once and the application is restarted. The entry is reachable either way. Only the node it sits on differs.

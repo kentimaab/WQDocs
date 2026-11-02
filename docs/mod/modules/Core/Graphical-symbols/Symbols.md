@@ -20,10 +20,12 @@ geometric shapes representing physical components such as motors, pumps, valves 
 sensors. They are the building blocks for creating custom process objects.
 
 **Wired up symbols** are found in the **DAMPERS**, **MOTORS**, **SENSORS**,
-**VALVES**, and **OTHERS** object libraries. These are fully pre-configured objects
+**VALVES**, and **OTHER** object libraries. These are fully pre-configured objects
 that combine a basic symbol with a `DynTouch` object, value displays, and status
 indicators. For most use cases, wired up symbols are the recommended starting point
-as they require only a tag connection to work out of the box.
+as they require only a tag connection to work out of the box. DAMPERS, SENSORS and
+VALVES also come in a **with Connection** variant. See
+[Connection variants](#connection-variants).
 
 !!! tip "Migrating from older projects"
     When importing a view from an older WideQuick project, all symbols are
@@ -63,7 +65,7 @@ animation system, making them ready to use as building blocks for custom objects
 
 Use basic symbols when the pre-configured wired up symbols do not match your needs
 and you want to build a fully custom object. For most use cases the wired up symbols
-in the **DAMPERS**, **MOTORS**, **SENSORS**, **VALVES**, and **OTHERS** libraries
+in the **DAMPERS**, **MOTORS**, **SENSORS**, **VALVES**, and **OTHER** libraries
 are the recommended starting point.
 
 <div markdown style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
@@ -316,13 +318,13 @@ example `75 %`, connected to the `analogOutputValue` suffix alias
 * **Status indicators** — circles showing active states
 * **Name label** — displays the object name
 
-## OTHERS {#others}
+## OTHER {#others}
 
-The **OTHERS** object library contains pre-configured objects for components that
+The **OTHER** object library contains pre-configured objects for components that
 do not fit into the other four categories. Each object comes with a `DynTouch`
 object and relevant displays. It connects to tags through the **Connection**, **Device**, **Sys** and **ObjectName** properties on the `DynTouch` object.
 
-![OTHERS library](/docs/Images/Symbol_Libraries/other_library.png)
+![OTHER library](/docs/Images/Symbol_Libraries/other_library.png)
 
 The following objects are available:
 
@@ -350,5 +352,22 @@ for example flow rate and accumulated volume.
 * **Timer**, **Pushbutton**, and **Expansion vessel** — include status indicators
 and a name label.
 
+## Connection variants {#connection-variants}
+
+The **DAMPERS with Connection**, **SENSORS with Connection** and **VALVES with
+Connection** libraries hold the same objects as **DAMPERS**, **SENSORS** and
+**VALVES**, with a line added that ends in a circle. The line shows where the object
+is connected, so the object can be placed beside a pipe or duct instead of on it.
+
+The object names add `_C` before the orientation, for example
+`dynValveTwoWay_C_090`. The analog dampers are named `dynAnalogDamper_C_…`. The
+libraries contain:
+
+* **DAMPERS with Connection** — the digital and analog dampers, in all four
+orientations.
+* **SENSORS with Connection** — the standard, dual, simple and digital sensors in all
+four orientations, and the heater sensor at 0°.
+* **VALVES with Connection** — the two-way and three-way valves, in all four
+orientations.
 
 <!-- --8<-- [end:body] -->

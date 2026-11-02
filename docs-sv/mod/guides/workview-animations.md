@@ -54,7 +54,7 @@ egna animerade objekt beskrivs i
 ## Konfigurera kategorier och suffix { #configuring-categories-and-suffixes }
 
 Animationskategorierna och deras suffixalias konfigureras i **WideQuick®
-Runtime** genom att navigera till **Inställningar → Suffix → Suffix - Larm**.
+Runtime** genom att navigera till **Inställningar → Suffix → Suffixalias - Larm**.
 <!-- --8<-- [end:body-1] -->
 
 ![Lista med Arbetsvy-animationer](/docs/sv/Images/Workview_Animations/Workview_animations_list.png)
@@ -176,7 +176,7 @@ Ersätt `alarm` med det relevanta kategorinamnet. De tillgängliga kategorinamne
 
 !!! note
     Egna kategorier som lagts till i driftsättningen är också tillgängliga här. Använd kategorinamnet
-    som det definierades i **Inställningar → Suffix → Suffix - Larm**.
+    som det definierades i **Inställningar → Suffix → Suffixalias - Larm**.
 
 !!! tip
     Det enklaste sättet att skapa ett eget animerat objekt är att kopiera ett befintligt
@@ -193,7 +193,7 @@ som standard.
 ### Steg 1 - Verifiera suffixkonfigurationen { #step-1-verify-the-suffix-configuration }
 
 Innan du bygger objektet, kontrollera att alla fyra animationskategorier som används i det här
-exemplet är konfigurerade i **Inställningar → Suffix → Suffix - Larm**. Kategorierna 1, 2
+exemplet är konfigurerade i **Inställningar → Suffix → Suffixalias - Larm**. Kategorierna 1, 2
 och 4 bör redan vara konfigurerade som standard. Expandera varje och bekräfta att suffixalias kopplade till de relevanta suffixen finns
 under **suffix**:
 

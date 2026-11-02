@@ -36,7 +36,7 @@ Om `scRemoteAlarms` körs och fjärrsystem är anslutna visas även larm från d
 <!-- --8<-- [start:body-2] -->
 ### Larm - Översikt { #alarm-overview }
 
-**Larm - Översikt** ger en bredare bild av larmaktiviteten. Ett stapeldiagram visar antalet larm per dag under de senaste sju dagarna, uppdelat efter larmklass. Ett cirkeldiagram visar fördelningen av larmklasser bland aktuellt aktiva larm, med en topp-fem-lista över de vanligaste larmen. En statistikpanel till höger visar aktuellt antal aktiva larm samt historiska totaler för de senaste 30 dagarna, hittills i år och föregående år.
+**Larm - Översikt** ger en bredare bild av larmaktiviteten. Ett stapeldiagram visar antalet larm per dag under de senaste sju dagarna, uppdelat efter larmklass. Ett cirkeldiagram visar fördelningen av larmklasser bland aktuellt aktiva larm. Det har två förklaringar: den ena listar de tre största larmklasserna eller larmgrupperna, beroende på vad diagrammet grupperar efter, och den andra listar de fem vanligaste larmen i de valda larmgrupperna. Deras markörer (kvadrat, cirkel, triangel och romb) motsvarar den larmklass eller grupp som varje rad hör till. En separat panel listar de tre vanligaste larmen under de senaste 30 dagarna. En statistikpanel till höger visar aktuellt antal aktiva larm samt historiska totaler för de senaste 30 dagarna, hittills i år och de senaste 365 dagarna.
 <!-- --8<-- [end:body-2] -->
 
 ![Alarm - Overview](/docs/sv/Images/Alarms/alarm-overview.png){align=center}
@@ -50,7 +50,7 @@ Cirkeldiagrammet kan konfigureras genom att klicka på **kugghjulsikonen**. Väl
 <!-- --8<-- [start:body-4] -->
 ### Larm - Logg { #alarm-log }
 
-**Larm - Logg** är ett historiskt register över alla larmhändelser och visar larmklass, larmtext, tid, larmnamn, detaljer och fjärrsystem. Aktiva larm markeras i rött.
+**Larm - Logg** är ett historiskt register över alla larmhändelser och visar larmklass, larmtext, tid, larmnamn, detaljer och fjärrsystem. Raderna färgas efter larmtillstånd, med de färger som är inställda på larmgruppen. Se [Skapa larmgrupper](configuring.md#creating-alarm-groups).
 <!-- --8<-- [end:body-4] -->
 
 ![Alarm - Log](/docs/sv/Images/Alarms/alarm-log.png){align=center}
@@ -63,12 +63,12 @@ Larmhistorik kan också exporteras som en rapport. Se [Rapporter](../../reports/
 **Larm - Frekvens** listar alla larm rangordnade efter hur ofta de har utlösts under en vald tidsperiod. Varje rad visar den totala aktiva tiden och frekvensantalet tillsammans med larmnamn, larmtext och larmklass. Detta hjälper till att identifiera beständiga eller ofta återkommande larm som kan behöva åtgärdas.
 <!-- --8<-- [end:body-5] -->
 
-![Alarms - Frequency](/docs/sv/Images/Alarms/alarm-frequency.png){align=center}
+![Alarm - Frequency](/docs/sv/Images/Alarms/alarm-frequency.png){align=center}
 
 <!-- --8<-- [start:body-6] -->
 ## Kvittera larm { #acknowledging-alarms }
 
-Larm kvitteras från **Larm - Lista**. Välj ett larm och klicka på **Kvittera**, eller använd kvitteringsåtgärden direkt på raden.
+Larm kvitteras från **Larm - Lista**. Välj ett larm och klicka på **Kvittera**, eller använd kvitteringsåtgärden direkt på raden. **Kvittera alla** kvitterar alla larm, även larm från anslutna fjärrsystem. Båda knapparna kräver privilegiet `AlarmControl`.
 
 Varje larm har en kvitteringsregel som styr när det kan kvitteras:
 

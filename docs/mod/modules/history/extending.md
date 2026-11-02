@@ -15,10 +15,10 @@ tags:
 
 ## Opening View-Specific History { #opening-view-specific-history }
 
-The view-specific history popup is opened from a workview using a script. The view passes its own link name so the popup knows which objects to include:
+The view-specific history popup is opened from a workview using a script. The view passes its own name as `linkName` so the popup knows which objects to include:
 
 ```javascript
-app.popOut.newData = { linkName: view.linkName };
+app.popOut.newData = { linkName: this.view.name };
 app.popOutVisible = true;
 app.popOut.setView("Pop_Outs/VySpecifikHistorik.kvie");
 ```

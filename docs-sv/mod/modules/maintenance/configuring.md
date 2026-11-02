@@ -1,5 +1,6 @@
 ---
 title: Underhåll — Konfigurering
+description: Konfigurera modulen Underhåll med mallar, återkommande scheman och statusreferens.
 product: mod
 page_type: module
 status: draft
@@ -18,15 +19,27 @@ Vyn **Underhåll - Lista** visar alla underhållsuppgifter i projektet i en enda
 
 Uppgifter behöver inte vara kopplade till ett taggat objekt. Om **Objekt** lämnas tomt eller ett fritext-namn anges kan underhåll spåras för utrustning som inte är ansluten till HMI:n.
 
-Klicka på **Filter** för att öppna filterpanelen:
+Klicka på **Filtrera** för att öppna filterpanelen:
 
 * **Objekt** — filtrera efter en specifik objekttagg-sökväg.
 * **Underhållstyp** — filtrera efter underhållstyp.
-* **Underhållsstatus** — filtrera efter en eller flera statusar: Planerad, Klar, Klar - Försenad, Missad, Stoppad.
+* **Underhållsstatus** — filtrera efter en eller flera statusar: Planerat, Klar, Klar - Försenad, Missad, Stoppad.
 * **Prioritet** — filtrera efter en eller flera prioritetsnivåer.
 * **Ansvarig** — filtrera efter tilldelad arbetstagare.
 * **System** — filtrera för att endast visa uppgifter som tillhör ett specifikt system.
 * **Tidsinställningar - deadline** — visa alla uppgifter oavsett deadline (**Alla**), eller begränsa till uppgifter med en deadline inom ett valt datumintervall (**Tidsintervall**).
+
+Klicka på **Ta bort filter** för att rensa filtret och visa alla uppgifter igen.
+
+Listan läses inte om av sig själv. När underhållsdata ändras efter att listan lästes in, här eller i en annan klient, visas en blinkande uppdateringsknapp. Klicka på den för att läsa om listan.
+
+### System { #systems }
+
+Varje uppgift hör till det system den skapades på, identifierat med systemets `ApplicationName`. Kolumnen **System** visar vilket system en uppgift hör till, och filtret **System** begränsar listan till ett system.
+
+Om en annan dator redan använder samma `ApplicationName` mot samma underhållsdatabas visar listan varningen *ApplicationName används redan av ett annat system. Byt ApplicationName i inställningarna för att kunna skapa underhåll.* och **Skapa** är inaktiverad tills namnet har bytts.
+
+När `ApplicationName` ändras frågar en dialog om befintliga underhåll ska flyttas till det nya systemnamnet. Om svaret är nej ligger befintliga uppgifter kvar under det gamla namnet.
 <!-- --8<-- [end:body-1] -->
 
 ![Underhållslista med filterpanel öppen](/docs/sv/Images/Maintenance/maintenance-list-filter.png){align=center}
@@ -46,6 +59,7 @@ Den vänstra panelen listar alla mallar. Att välja en visar dess fält till hö
 * **Prioritet** — den standardprioritet som är förifylld när denna mall väljs.
 * **Deadline** — ett standarddeadline-intervall (antal + enhet: Dag/Vecka/Månad/År) som föreslås vid skapande av en uppgift.
 * **Underhållsbeskrivning** — en standardbeskrivning som är förifylld i uppgiften.
+* **Skapa en påminnelse 3 dagar innan** — när rutan är ikryssad får uppgifter som skapas från mallen en påminnelse i kalendern före sin deadline. Nya mallar skapas med rutan avmarkerad. Se [Kalenderintegration](extending.md#calendar-integration).
 
 **Skapa en mall:**
 
@@ -55,6 +69,8 @@ Den vänstra panelen listar alla mallar. Att välja en visar dess fält till hö
 4. Klicka på **Spara** för att spara mallen.
 
 Mallen är nu tillgänglig i rullgardinsmenyn **Underhållstyp** när en uppgift skapas. Alla förifyllda fält kan fortfarande redigeras innan de sparas. Att redigera mallen påverkar inte uppgifter som redan skapats från den.
+
+För att ta bort en mall, välj den och klicka på **Ta bort**.
 
 ## Återkommande underhåll { #recurring-maintenance }
 
@@ -84,9 +100,11 @@ Vyn har tre paneler. Den vänstra panelen listar alla konfigurationer. Den melle
 6. Ange **Upprepningsintervall** som ett antal och en enhet (Dag/Vecka/Månad/År).
 7. Ange **Startdatum** för den första uppgiften.
 8. I **Objekt**-panelen till höger, markera alla objekt som konfigurationen ska gälla för.
-9. Aktivera eventuellt **Skapa nästa underhåll automatiskt vid missad deadline**.
+9. **Skapa nästa underhåll automatiskt vid missad deadline** är aktiverat som standard för en ny konfiguration. Inaktivera det om en missad uppgift inte ska generera nästa instans.
 10. Bekräfta att **Status (aktiv)** är aktiverad.
-11. Klicka på **Spara**. Den första uppgiften skapas omedelbart och visas i **Underhåll - Lista** med statusen **Planerad**.
+11. Klicka på **Spara**. Den första uppgiften skapas omedelbart och visas i **Underhåll - Lista** med statusen **Planerat**.
+
+**Ta bort en konfiguration:** välj den och klicka på **Ta bort**. Alla dess uppgifter med statusen **Planerat** tas bort samtidigt. Uppgifter som är klara, missade eller stoppade ligger kvar i listan.
 
 ### Upprepningsintervall { #repeat-interval }
 
@@ -122,14 +140,14 @@ När en återkommande uppgift markeras som slutförd skapar systemet automatiskt
 
 | Status | Beskrivning |
 |---|---|
-| Planerad | Uppgiften är aktiv och har en kommande deadline. |
-| Missad | Deadlinen passerade utan att uppgiften slutfördes. Sätts automatiskt av systemet. |
+| Planerat | Uppgiften är aktiv och har en kommande deadline. |
+| Missad | Deadlinen passerade utan att uppgiften slutfördes. Sätts automatiskt av systemet en gång i timmen, via schemat `maintenance_tracker`, så en uppgift kan ligga kvar som **Planerat** i upp till en timme efter sin deadline. |
 | Stoppad | Uppgiften har stoppats manuellt och kommer inte att arbetas med. |
 | Klar | Uppgiften slutfördes på eller före deadline. |
 | Klar - Försenad | Uppgiften slutfördes men efter att deadline hade passerat. |
 
 !!! note
-    **Missad** och **Klar - Försenad** sätts av systemet och kan inte väljas manuellt. Vid redigering av en uppgift är endast **Planerad**, **Klar** och **Stoppad** tillgängliga som användarvalbara statusar.
+    **Missad** och **Klar - Försenad** sätts av systemet och kan inte väljas manuellt. Vid redigering av en uppgift är **Planerat**, **Klar** och **Stoppad** tillgängliga som användarvalbara statusar. En **Missad** uppgift kan bara behållas som **Missad** eller sättas till **Klar**, och en uppgift som är **Klar** kan inte längre byta status.
 
 Uppgifter som visas i Kalender-modulen är färgkodade efter status. Färgreferensen finns under [Underhållshändelser](../calendar/configuring.md#maintenance-events) i Kalender-modulen.
 
@@ -143,6 +161,17 @@ Uppgifter kan tilldelas en av fyra prioritetsnivåer:
 | Hög | Hög prioritet. För viktiga men icke-kritiska uppgifter. |
 | Normal | Standardnivå för rutinmässigt schemalagt underhåll. |
 | Låg | Låg prioritet. För uppgifter som kan skjutas upp vid behov. |
+
+## Behörigheter { #privileges }
+
+| Behörighet | Styr |
+|---|---|
+| `Maintenance_Add` | **Skapa** i **Underhåll - Lista**, **Nytt underhåll** i objektpopupen och **Lägg till** i **Underhåll - Mallar** |
+| `Maintenance_Edit` | Fälten för status och beskrivning vid redigering av en uppgift, samt **Ta bort** i **Underhåll - Mallar** |
+| `Maintenance_EditExtended` | Fälten för ansvarig, deadline och prioritet vid redigering av en uppgift, samt att ta bort en uppgift från **Underhåll - Lista** eller objektpopupen |
+| `Maintenance_Templates` | **Lägg till** och **Ta bort** i **Underhåll - Återkommande** |
+
+En knapp eller ett fält är inaktiverat för en användare som saknar behörigheten. **Spara** i redigeringsdialogen kräver antingen `Maintenance_Edit` eller `Maintenance_EditExtended`. Alla fyra behörigheterna är nekade som standard. Se [Användare och behörigheter](../Core/users-privileges.md#framework-privileges).
 
 ## Nästa steg { #next-steps }
 

@@ -69,6 +69,6 @@ Följande suffixalias är konfigurerade för popupen Reglering som standard:
 
 !!! note
     Standardsuffixaliasen kan ändras och utökas i
-    **Inställningar → Suffix → Suffix - Popups**. Se [Skapa popup](../../guides/create-a-popup.md)
+    **Inställningar → Suffix → Suffixalias - Popuper**. Se [Skapa popup](../../guides/create-a-popup.md)
     för mer information.
 <!-- --8<-- [end:body] -->

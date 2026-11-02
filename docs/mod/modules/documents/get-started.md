@@ -8,6 +8,13 @@ status: draft
 last_reviewed: 2026-10-12
 scripts:
   - scDoc
+  - scUsers
+  - scFilePicker
+  - scWM
+  - scButtons
+  - scNav
+  - scToolTip
+  - scSmartPopup
 tags: 
  - MOD
 ---
@@ -19,10 +26,20 @@ tags:
     related functionality covered in the Documents guides:
     
     * `scDoc`
+    * `scUsers`
+    * `scFilePicker`
+    * `scWM`
+    * `scButtons`
+    * `scNav`
+    * `scToolTip`
+    * `scSmartPopup`
+    * `scSubNav`
     * `scLinking`
     * `scPrototypes`
+    * `scSuffix`
     * `scThemes`
     * `scAlert`
+    * `scQuickSort`
 
 The Documents module is available under **Documents & Logbook → Documents** in the main menu. The **Documents - List** view is the main entry point. It lists all documents in the system, where they can be added, previewed and managed.
 
@@ -40,15 +57,17 @@ The following actions are available at the bottom of the view:
 
 * **Preview** — opens the selected file in the preview panel.
 * **Add document** — opens the upload dialog to add a new document.
-* **Delete document** — permanently removes the selected document.
-* **Edit selected document** — rename the selected document.
+* **Delete document** — removes the selected document. A local file is deleted from disk after a confirmation, and this cannot be undone. An online resource is removed from the list without a question. Remote and web clients can only delete online resources.
+* **Edit selected document** — rename the selected document, or change the URL of an online resource. The path of a local file cannot be edited.
 * **Sync with local files on server** — scans the documents folder on the server and updates the list to match. See [Syncing with the filesystem](configuring.md#syncing-with-the-filesystem).
 
 ## Uploading a local file { #uploading-a-local-file }
 
+Local files can only be uploaded on the server. On remote and web clients the **Upload file** tab is disabled and shows "File upload is not possible on remote systems".
+
 1. Click **Add document**.
 2. Select the **Upload file** tab.
-3. Click the drop zone or drag files into it to add them to the queue.
+3. Click **Click to browse local files** and double-click files in the file browser to add them to the queue.
 4. Optionally click a file name in the queue to rename it before uploading.
 5. Click **Upload files**.
 <!-- --8<-- [end:body-2] -->
@@ -76,9 +95,9 @@ The resource is added to the document list under **Online files**. Only the URL 
 
 ## Previewing a document { #previewing-a-document }
 
-Select a file in the left panel and click **Preview** to load it in the preview panel.
+Select a file in the left panel and click **Preview** to load it in the preview panel. Double-clicking the file does the same.
 
-Most file types can be previewed inline. Images, PDFs and web pages render directly. On **WideQuick® Web**, Office files (Word, Excel, PowerPoint) are not previewable in the browser and are grouped separately in the file tree.
+Images, PDFs and web pages render directly in the preview panel. Office and OpenDocument files (Word, Excel, PowerPoint, `.odt`, `.ods`, `.odp`) are never previewed inline. On desktop clients they open in the external application associated with the file type. On **WideQuick® Web** they are grouped separately in the file tree, and an alert explains that they cannot be shown in the browser.
 
 ## Next Steps { #next-steps }
 

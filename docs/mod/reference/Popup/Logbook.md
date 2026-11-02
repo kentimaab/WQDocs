@@ -13,8 +13,9 @@ tags:
 # Logbook
 
 The Logbook popup displays the active logbook entries associated with the selected
-object. Notes can be created and edited directly from this popup. It is always
-visible in the Tab menu regardless of which suffixes the object has. For more
+object. Notes can be created and edited directly from this popup. It is shown in the
+Tab menu for every object regardless of which suffixes it has, but only to users with
+`Logbook_View`. For more
 information on how the logbook system works, see [Logbook](../../modules/logbook/index.md).
 
 !!! note "Archived entries are not shown here"
@@ -51,7 +52,8 @@ the filtered results.
 The following actions are available at the bottom of the popup:
 
 * **Add note** — creates a new logbook entry for this object. Requires `Logbook_Add`.
-* **Edit note** — edits the selected entry. Requires `Logbook_Edit`.
+* **Edit note** — edits the selected entry. Requires `Logbook_Edit`. Double-clicking an
+entry does the same.
 * **Show entries** — loads the entries for the selected topic into the list.
 
 An action the current user lacks the privilege for is disabled and covered by a red

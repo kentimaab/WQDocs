@@ -32,7 +32,7 @@ what is currently visible on the map.
 * [**Pin Status**](configuring.md#pin-status) — How to configure Pin Status objects for live **Workview** status display.
 * [**Cluster Pins**](configuring.md#cluster-pins) — How to configure Cluster Pins to group underlying pins and reduce clutter.
 * [**Lines**](configuring.md#lines) — How to configure line networks for visualising paths and pipes.
-* [**Filter**](configuring.md#filter) — How to add a Filter object to toggle line network visibility.
+* [**Filter**](configuring.md#filter) — How to add a `FilterRow` object to toggle line network visibility.
 
 ---
 

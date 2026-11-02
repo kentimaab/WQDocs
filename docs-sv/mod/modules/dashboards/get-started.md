@@ -21,12 +21,18 @@ tags:
     * `scThemes`
     * `scAlert`
     * `scQuickSort`
+    * `scMaintenance`
+    * `scNav`
+    * `scToolTip`
+    * `scAlarmFinder`
+    * `scWM`
+    * `scRemoteAlarms` (valfritt, för larm från fjärrsystem)
     
     Samt följande objektbibliotek:
     
     * `Dashboard Widgets`
 
-WideQuick MOD levereras med tre exempeldashboards som kan användas som startpunkt eller anpassas för att passa ett projekt.
+WideQuick MOD levereras med ett antal exempeldashboards som kan användas som startpunkt eller anpassas för att passa ett projekt.
 Nya dashboards kan skapas antingen från mallen eller från grunden beroende på vad användaren vill.
 <!-- --8<-- [end:body-1] -->
 

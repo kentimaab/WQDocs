@@ -1,5 +1,6 @@
 ---
 title: Kalender — Kom igång
+description: Kom igång med kalendermodulen.
 product: mod
 page_type: module
 status: draft
@@ -17,10 +18,19 @@ tags:
     * `scCalendar`
     * `scDayViewManager`
     * `scWeekViewManager`
+    * `scHoliday`
+    * `scFilePicker`
     * `scMaintenance`
+    * `scNav`
+    * `scSubNav`
     * `scDatabase`
+    * `scLinking`
+    * `scPlatform`
+    * `scPrototypes`
     * `scThemes`
+    * `scUsers`
     * `scAlert`
+    * `scQuickSort`
 
 Kalendern är tillgänglig i huvudmenyn under **Kalender**. Den öppnas i månadsvy och läser automatiskt in händelser och underhållsdeadlines för den aktuella perioden.
 
@@ -37,7 +47,9 @@ Använd pilknapparna i det övre fältet för att flytta framåt eller bakåt en
 
 ### Månad { #month }
 
-Månadsvy visar ett fullständigt kalendernät för den aktuella månaden. Händelser visas som färgade indikatorer på varje dag. Om fler händelser finns på en dag än vad som kan visas, visar ett överflödesmärke hur många som är dolda.
+Månadsvy visar ett fullständigt kalendernät för den aktuella månaden. Händelser visas som färgade indikatorer på varje dag.
+
+När en dag har fler händelser än dess ruta kan visa ritas resten inte ut i rutan alls. I stället visar märket **Visa fler (N)** hur många som inte visas. Ett klick på märket öppnar dagsvyn för det datumet, där alla dagens händelser syns.
 <!-- --8<-- [end:body-1] -->
 
 ![Månadsvy med händelser](/docs/sv/Images/Calendar/calendar-month-events.png){align=center}
@@ -46,6 +58,8 @@ Månadsvy visar ett fullständigt kalendernät för den aktuella månaden. Händ
 ### Vecka { #week }
 
 Veckovy visar den aktuella 7-dagarsperioden som ett tidsnät. Händelser renderas som block med sina start- och sluttider synliga.
+
+Händelser med exakt samma tidsspann skulle annars ritas som staplade block med namnen ovanpå varandra. En kolumn som rymmer mer än en händelse slås därför ihop till ett enda block märkt **Visa händelser (X)**. Ett klick på det öppnar en lista med alla händelser som blocket står för.
 <!-- --8<-- [end:body-2] -->
 
 ![Veckovy](/docs/sv/Images/Calendar/calendar-week.png){align=center}
@@ -66,7 +80,7 @@ Sidopanelen visar två saker: en minikalender för den aktuella månaden och en 
 
 Minikalendern markerar den aktuellt valda dagen.
 
-Listan med kommande händelser visar nästa händelser och underhållsdeadlines sorterade efter datum, och slår ihop båda händelsekällorna till en enda lista.
+Listan med kommande händelser visar nästa händelser och underhållsdeadlines sorterade efter datum, och slår ihop båda händelsekällorna till en enda lista. Ett klick på en händelse i listan öppnar dagsvyn för det datumet.
 <!-- --8<-- [end:body-4] -->
 
 ![Sidopanel med kommande händelser](/docs/sv/Images/Calendar/calendar-sidebar.png){align=center}
@@ -77,26 +91,25 @@ Listan med kommande händelser visar nästa händelser och underhållsdeadlines 
 Nya händelser kan skapas på två sätt:
 
 * Klicka på **+** i det övre fältet för att öppna popup-rutan **Lägg till/redigera kalenderhändelse** direkt.
-* I **Vecka**- eller **Dag**-vy, klicka en gång på tidsnätet för att ange starttid, klicka sedan igen för att ange sluttid. Popup-rutan öppnas med Start och Slut förifyllda.
+* I **Vecka**- eller **Dag**-vy, klicka en gång på tidsnätet för att ange starttid, klicka sedan igen för att ange sluttid. Popup-rutan öppnas med Start och Slut förifyllda. Detta fungerar inte på webbklienten. Använd **+** där.
 
 Fyll i fälten:
 
 * **Titel** — en kort etikett som visas på händelsen.
 * **Start** och **Slut** — datum och tid för händelsen. Kan justeras efter att popup-rutan öppnats.
-* **Färg** — anger visningsfärgen för händelsen i kalendern. **HOLIDAY** och **HOLIDAYEVE** markerar dessutom dagen, se nedan.
-* **Kategori** — grupperar händelsen under en namngiven kategori.
+* **Kategori** (färg) — anger visningsfärgen för händelsen i kalendern. **HOLIDAY** och **HOLIDAYEVE** markerar dessutom dagen, se nedan.
 * **Beskrivning** — valfria ytterligare detaljer.
 
 Klicka på **Spara** för att lägga till händelsen i kalendern.
 
 ### Markera en helgdag { #marking-a-holiday }
 
-Att välja färgen **HOLIDAY** eller **HOLIDAYEVE** gör mer än att ändra händelsens utseende. Det markerar de dagar händelsen täcker som helgdag eller helgdagsafton, vilket kalendern publicerar till en intern variabel som ett PLC eller DUC kan läsa. En händelse som skapas med någon av färgerna justeras automatiskt till hela dygn, eftersom en dag antingen är en helgdag eller inte.
+Att välja färgen **HOLIDAY** eller **HOLIDAYEVE** gör mer än att ändra händelsens utseende. Det markerar de dagar händelsen täcker som helgdag eller helgdagsafton, vilket kalendern publicerar till en intern variabel som styrsystemet kan läsa. En händelse som skapas med någon av färgerna justeras automatiskt till hela dygn, eftersom en dag antingen är en helgdag eller inte.
 
 Se [Helgdagar och helgdagsaftnar](configuring.md#holidays-and-holiday-eves).
 
 ## Nästa steg { #next-steps }
 
 * [Konfigurera](configuring.md) — redigera händelser, underhållsfärger och påminnelseinställningar
-* [Utöka](extending.md) — felsökning
+* [Utöka](extending.md) — påminnelsekonfiguration, helgdagsvariabler, lagring av prenumerationer och skriptreferens
 <!-- --8<-- [end:body-5] -->

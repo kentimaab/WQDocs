@@ -91,7 +91,8 @@ and cannot be changed dynamically.
 * **Fixed/Range timespan** — The reporter uses **Range timespan** by default, with 
 `Report_Reference.from_time` and `Report_Reference.to_time` as the start and end times. 
 These are set by the time objects in the ReportController.
-* **Limit** — The maximum number of rows to populate. This is set by the user in the 
+* **Limit** — The maximum number of rows the macro call populates. Each signal has its own 
+macro call, so the limit applies per signal. This is set by the user in the 
 ReportController when generating the report.
 * **Datetime format** — The format used for datetime values. Defaults to 
 `yyyy-MM-dd hh:mm:ss` but can be adjusted to fit the needs of the report.
@@ -146,8 +147,9 @@ the user in the ReportController when generating the report.
     * `$(Report_Reference.variable_ref[#])` — The signal at index `#`.
     * `$(Report_Reference.unit)` — The unit for the report.
     * `$(Report_Reference.factorArray[#])` — The scaling factor for each signal at index `#`.
-    * `$(System.dateTime)` — The current date and time.
-    * `$(System.user)` — The current user.
+    * `$(_sys_clock_year)`, `$(_sys_clock_month)`, `$(_sys_clock_day)`, 
+    `$(_sys_clock_hour)` and so on — The current date and time, one part per cell.
+    * `$(_sys_user_name)` — The current user.
 
     The Meta sheet is the only way to pass the report title set by the user into the 
     presentation sheet. The integrator is free to include whichever fields are relevant 
@@ -207,6 +209,16 @@ it is critical that the ReportController view name exactly matches the report te
     The ReportController view name must exactly match the report template name. If they
     differ, `scReports` script will not be able to locate and trigger the correct template.
 
+!!! note "Scheduling a custom template"
+    The schedule menu lists every report template, but its second page decides what to show
+    from the template name. A name containing `alarm` shows the alarm list, one containing
+    `energy` the signal list of the Energy reports, and one containing `delta` the signal
+    list of the Delta reports. The match ignores case. A template whose name contains none
+    of the three gets no signal list there, so name a custom template accordingly, for
+    example `Energy_Report_Water`. The menu fills in **Data from x days back** and
+    **Number of events** for the built-in Energy and Delta templates only, so set both by
+    hand for a custom one.
+
 To build the view, a set of premade objects is available in the object library under
 **Report**. Below is a description of each object and when to use it:
 
@@ -235,10 +247,8 @@ ReportController.
 
 ### LarmLogger_List { #larmlogger_list }
 The `LarmLogger_List` object is a specialized version of `LoggerList`, purpose-built 
-for displaying alarms logged by a logger. Unlike `LoggerList`, it automatically builds 
-its tree based on alarm groups and omits redundant information. For example, if all 
-alarms in the logger follow the pattern `AS01.AS01_XXX_XX`, the TreeView will display 
-them simply as `XXX_XX`.
+for displaying alarms logged by a logger. It builds its tree from the alarm paths the 
+same way as `LoggerList`.
 
 This object has two properties that must be configured:
 
@@ -261,8 +271,8 @@ extend it.
 
 Placing the object also turns on unit filtering for the signal list:
 
-* The signal TreeView stays disabled until a unit is chosen.
-* Choosing a unit filters the TreeView to signals of that dimension.
+* A unit is selected as soon as the controller opens.
+* The TreeView lists only the signals of the selected unit's dimension.
 * Changing the unit clears the current selection, since the signals selected under the
 previous unit are no longer in the list.
 
@@ -327,16 +337,24 @@ generations. This can easily be changed if more signals are required. First, in
 </figure>
 
 Change the **Max. size** to the desired value. Click **Apply** then **Ok**. The 
-**Report_Reference** array has now been updated.
+**Report_Reference** array has now been updated. Repeat the same steps for 
+**Data Types → Arrays → factorArray**, which holds the per-signal scale factors.
 
 Next, update the `scReports` script to handle the new size. Locate the 
-`createReport()` function and change the value `15` to the new **Max. size** value:
+`createReport()` function and change the value `15` to the new **Max. size** value, in 
+both the signal loops and the factor loops:
 
 ``` javascript title="scReports — createReport() — before"
 
 for (var i = 0; i < 15; i++) Report_Reference.variable_ref[i] = "";
 var signals = reportObj.variable_ref.split(',');
 for (var i = 0; i < signals.length && i < 15; i++) Report_Reference.variable_ref[i] = signals[i];
+
+for (var fi = 0; fi < 15; fi++) Report_Reference.factorArray[fi] = 1;
+if (typeof reportObj.factorArray != "undefined" && reportObj.factorArray != "") {
+	var factors = String(reportObj.factorArray).split(',');
+	for (var fi2 = 0; fi2 < factors.length && fi2 < 15; fi2++) Report_Reference.factorArray[fi2] = factors[fi2] * 1;
+}
 
 ```
 
@@ -346,7 +364,23 @@ for (var i = 0; i < YOUR_MAX_VALUE; i++) Report_Reference.variable_ref[i] = "";
 var signals = reportObj.variable_ref.split(',');
 for (var i = 0; i < signals.length && i < YOUR_MAX_VALUE; i++) Report_Reference.variable_ref[i] = signals[i];
 
+for (var fi = 0; fi < YOUR_MAX_VALUE; fi++) Report_Reference.factorArray[fi] = 1;
+if (typeof reportObj.factorArray != "undefined" && reportObj.factorArray != "") {
+	var factors = String(reportObj.factorArray).split(',');
+	for (var fi2 = 0; fi2 < factors.length && fi2 < YOUR_MAX_VALUE; fi2++) Report_Reference.factorArray[fi2] = factors[fi2] * 1;
+}
+
 ```
+
+Then set the **Signals** property to the new value on every logger list that should 
+allow it: the `LoggerList` object in each Energy and Delta ReportController, and the 
+`LoggerList` and `LoggerList2` objects on the second page of the schedule menu 
+(`ReportSchedule2`).
+
+Finally, extend the templates. The shipped templates have room for 15 signals: one macro 
+call per signal on the data sheet, the signal names in `B21:B35` on the **Meta** sheet 
+and the scale factors in `B39:B53`. A template only shows the additional signals once it 
+has macro calls, signal slots and factors for them.
 
 ## Adding a base unit { #adding-a-base-unit }
 The report system recognises six physical quantities, each in any SI prefix:
@@ -422,6 +456,20 @@ this.baseUnitOrder = ["m³/h", "m³/s", "L/s", "m³", "Wh", "W", "L"];
 
 A signal whose unit is not in the table is skipped without a log entry when the **Unit**
 list is built. A logger holding only unrecognised units therefore produces an empty **Unit**
-list, and because the signal TreeView is gated on a unit being chosen, the controller
-appears to offer no selectable signals at all. Adding the unit to the table resolves it.
+list, and because the signal TreeView lists only the signals of the selected unit, the
+controller appears to offer no selectable signals at all. Adding the unit to the table resolves it.
+
+## Privileges { #privileges }
+
+These privileges control the **Reports - Schedule** view:
+
+| Privilege | Description |
+|---|---|
+| `Schedules` | Required for **New schedule**, **Edit schedule** and **Delete schedule**. Without it the three buttons are disabled and covered by the text *Requires Schedules Privilege*. |
+| `editSMTP` | Shows the SMTP buttons **Configure**, **Check** and **Test** in the **SMTP and GSM** panel. **Check** is also hidden on remote and web clients. |
+
+Both are defined with `Default="denied"` in `Privileges.kdat`, so they must be granted to a 
+role before anyone can manage schedules or the SMTP settings from the view. Creating, 
+removing and sending reports in **Reports - List** need no privilege. See 
+[Users and Privileges](../Core/users-privileges.md).
 <!-- --8<-- [end:body] -->

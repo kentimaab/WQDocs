@@ -28,6 +28,18 @@ Click **Filter** to open the filter panel:
 * **Responsible** — filter by assigned worker.
 * **System** — filter to show only tasks belonging to a specific system.
 * **Time settings - deadline** — show all tasks regardless of deadline (**All**), or limit to tasks with a deadline within a selected date range (**Time span**).
+
+Click **Remove filter** to clear the filter and show all tasks again.
+
+The list does not reload by itself. When maintenance data changes after the list was loaded, here or on another client, a blinking refresh button appears. Click it to reload the list.
+
+### Systems { #systems }
+
+Each task belongs to the system it was created on, identified by the system's `ApplicationName`. The **System** column shows which system a task belongs to, and the **System** filter limits the list to one system.
+
+If a different computer already uses the same `ApplicationName` with the same maintenance database, the list shows the warning *ApplicationName is already used by another system. Change ApplicationName in the settings to be able to create maintenance.* and **Create** is disabled until the name is changed.
+
+When `ApplicationName` is changed, a prompt asks whether to move the existing tasks to the new system name. If the answer is no, the existing tasks stay under the old name.
 <!-- --8<-- [end:body-1] -->
 
 ![Maintenance list with filter panel open](/docs/Images/Maintenance/maintenance-list-filter.png){align=center}
@@ -47,6 +59,7 @@ The left panel lists all templates. Selecting one shows its fields on the right:
 * **Priority** — the default priority pre-filled when this template is selected.
 * **Deadline** — a default deadline offset (number + unit: Day/Week/Month/Year) suggested when creating a task.
 * **Maintenance Description** — a default description pre-filled on the task.
+* **Create a reminder 3 days before** — when checked, tasks created from the template get a reminder in the calendar before their deadline. New templates start with it unchecked. See [Calendar Integration](extending.md#calendar-integration).
 
 **Creating a template:**
 
@@ -56,6 +69,8 @@ The left panel lists all templates. Selecting one shows its fields on the right:
 4. Click **Save** to save the template.
 
 The template is now available in the **Type of Maintenance** dropdown when creating a task. All pre-filled fields can still be edited before saving. Editing the template does not affect tasks already created from it.
+
+To delete a template, select it and click **Remove**.
 
 ## Recurring Maintenance { #recurring-maintenance }
 
@@ -85,9 +100,11 @@ The view has three panels. The left panel lists all configurations. The middle p
 6. Set the **Repeat interval** as a number and a unit (Day/Week/Month/Year).
 7. Set the **Start date** for the first task.
 8. In the **Object** panel on the right, check all objects this configuration should apply to.
-9. Optionally enable **Auto-create next maintenance on missed deadline**.
+9. **Auto-create next maintenance on missed deadline** is enabled by default for a new configuration. Disable it if a missed task should not generate the next instance.
 10. Confirm that **Status (active)** is toggled on.
 11. Click **Save**. The first task is created immediately and appears in **Maint. - List** with the status **Planned**.
+
+**Removing a configuration:** select it and click **Remove**. All of its **Planned** tasks are deleted with it. Tasks that are done, missed or stopped stay in the list.
 
 ### Repeat Interval { #repeat-interval }
 
@@ -124,13 +141,13 @@ When a recurring task is marked as complete, the system automatically creates th
 | Status | Description |
 |---|---|
 | Planned | The task is active and has an upcoming deadline. |
-| Missed | The deadline passed without the task being completed. Set automatically by the system. |
+| Missed | The deadline passed without the task being completed. Set automatically by the system once an hour, through the `maintenance_tracker` schedule, so a task can stay **Planned** for up to an hour after its deadline. |
 | Stopped | The task has been manually stopped and will not be worked on. |
 | Done | The task was completed on or before the deadline. |
 | Done - Delayed | The task was completed but after the deadline had passed. |
 
 !!! note
-    **Missed** and **Done - Delayed** are set by the system and cannot be selected manually. When editing a task, only **Planned**, **Done** and **Stopped** are available as user-selectable statuses.
+    **Missed** and **Done - Delayed** are set by the system and cannot be selected manually. When editing a task, **Planned**, **Done** and **Stopped** are available as user-selectable statuses. A **Missed** task can only be kept as **Missed** or set to **Done**, and a **Done** task can no longer change status.
 
 Tasks that appear in the Calendar module are color-coded by status. The color reference is under [Maintenance Events](../calendar/configuring.md#maintenance-events) in the Calendar module.
 
@@ -144,6 +161,17 @@ Tasks can be assigned one of four priority levels:
 | High | High priority. For important but non-critical tasks. |
 | Normal | Default level for standard scheduled maintenance. |
 | Low | Low priority. For tasks that can be deferred if needed. |
+
+## Privileges { #privileges }
+
+| Privilege | Controls |
+|---|---|
+| `Maintenance_Add` | **Create** in **Maint. - List**, **New maint.** in the object popup, and **Add** in **Maint. - Templates** |
+| `Maintenance_Edit` | The status and description fields when editing a task, and **Remove** in **Maint. - Templates** |
+| `Maintenance_EditExtended` | The assignee, deadline and priority fields when editing a task, and deleting a task from **Maint. - List** or the object popup |
+| `Maintenance_Templates` | **Add** and **Remove** in **Maintenance - Recurring** |
+
+A button or field is disabled for a user without the privilege. **Save** in the edit dialog needs either `Maintenance_Edit` or `Maintenance_EditExtended`. All four privileges default to denied. See [Users and Privileges](../Core/users-privileges.md#framework-privileges).
 
 ## Next Steps { #next-steps }
 

@@ -28,7 +28,7 @@ For a guide on how to create and configure a custom Process popup, see
 The **Values** section lists all process signals connected to the object. Each row
 displays the signal description, its current value, and its unit. The appearance of
 each row depends on the signal type and whether it is configured as writable in
-**Settings → Suffix → Suffix - Popups**:
+**Settings → Suffix → Suffix Alias - Popups**:
 
 * **Numeric values** — displayed as a read-only value with its unit. If configured
 as writable, the value can be edited directly in the row.
@@ -54,6 +54,6 @@ The following suffix aliases are configured for the Process popup by default:
 
 !!! note
     The default suffix aliases can be modified and extended in
-    **Settings → Suffix → Suffix - Popups**. See [Create Popup](../../guides/create-a-popup.md)
+    **Settings → Suffix → Suffix Alias - Popups**. See [Create Popup](../../guides/create-a-popup.md)
     for more information.
 <!-- --8<-- [end:body-2] -->

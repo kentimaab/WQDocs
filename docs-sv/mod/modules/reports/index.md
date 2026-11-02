@@ -1,5 +1,6 @@
 ---
 title: Rapporter
+description: Översikt över modulen Rapporter i WideQuick MOD, som genererar, schemalägger och anpassar rapporter baserade på larm- och energidata.
 product: mod
 page_type: module
 status: draft
@@ -20,6 +21,7 @@ täcker allt från att använda standardmallarna till att skapa helt egna mallar
 * [**Använda rapportverktyget**](get-started.md#using-the-reporter-in-widequick-runtime) —
 Introduktion till att generera rapporter i **WideQuick® Runtime**.
 * [**Schemalägga en rapport**](get-started.md#scheduling-a-report-in-widequick-runtime) — Hur återkommande schemalagda rapporter ställs in.
+* [**Hantera scheman**](get-started.md#managing-schedules) — Redigera och ta bort scheman, och panelen SMTP och GSM.
 
 ---
 
@@ -37,6 +39,7 @@ Introduktion till att generera rapporter i **WideQuick® Runtime**.
 * [**Skapa en ReportController**](extending.md#creating-the-reportcontroller-view) — Hur en ReportController-vy skapas för en egen mall.
 * [**Ändra maximalt antal signaler**](extending.md#changing-the-maximum-of-signals-to-be-selected) — Hur signalgränsen för rapportgenerering ökas.
 * [**Lägg till en basenhet**](extending.md#adding-a-base-unit) — Hur egna enheter läggs till i enhetssystemet.
+* [**Behörigheter**](extending.md#privileges) — De behörigheter som styr scheman och SMTP.
 
 ---
 

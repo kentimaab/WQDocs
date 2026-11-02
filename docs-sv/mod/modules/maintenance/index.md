@@ -1,5 +1,6 @@
 ---
 title: Underhåll
+description: Schemalägg, följ upp och automatisera underhållsuppgifter för objekt i systemet.
 product: mod
 page_type: module
 status: draft

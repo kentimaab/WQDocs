@@ -36,13 +36,15 @@ compressors, fans, pumps, frequency converters, and revolving heat exchangers.
 standard, dual, differential, digital, and outdoor sensors.
 * [**VALVES**](Symbols.md#valves) — Pre-configured two-way and three-way
 valve objects in four orientations.
-* [**OTHERS**](Symbols.md#others) — Pre-configured objects for energy
+* [**OTHER**](Symbols.md#others) — Pre-configured objects for energy
 meters, flow meters, service couplers, timers, pushbuttons, and expansion vessels.
+* [**Connection variants**](Symbols.md#connection-variants) — DAMPERS, SENSORS and
+VALVES with a line and circle that show where the object is connected.
 
 ---
 
 ### Legacy symbols
 * [**Legacy symbols**](legacy.md) — Earlier generation
-symbols from WideQuick BMS 8.0. Automatically upgraded when importing old views.
+symbols from WideQuick BMS 8.0 and MOD 2024.1.0. Automatically upgraded when importing old views.
 Migration to the new symbols is recommended for new and updated projects.
 <!-- --8<-- [end:body] -->

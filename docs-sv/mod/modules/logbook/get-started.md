@@ -16,19 +16,23 @@ tags:
     relaterad funktionalitet som täcks av Loggboksguiderna:
     
     * `scLogBook`
-    * `scDoc`
-    * `scLinking`
     * `scPrototypes`
     * `scThemes`
     * `scAlert`
+    * `scUsers`
+    * `scObjectFinder`
+    * `scSmartPopup`
+    * `scWM`
 
 Loggboken finns i huvudmenyn under **Dokument & Loggbok → Loggbok**.
 
 ## Loggboksvyn { #the-logbook-view }
 
-Loggboksvyn har två paneler. Den vänstra panelen visar ämnesträdet, en hierarkisk lista över alla ämnen som har minst en post. Välj en nod och klicka på **Visa inlägg** för att läsa in alla poster under det ämnet i postlistan till höger. Väljs **Alla ämnen** längst upp i trädet visas samtliga poster.
+Loggboksvyn har två paneler. Den vänstra panelen visar ämnesträdet, en hierarkisk lista över alla ämnen som har minst en post. Välj en nod och klicka på **Visa inlägg** för att läsa in alla poster under det ämnet i postlistan till höger. Väljs **Alla ämnen** längst upp i trädet visas samtliga poster i det här systemet, men inte de anslutna fjärrsystemens.
 
 En vald nod omfattar allt som är placerat under den. Väljs en vynod listas anteckningarna på vyn tillsammans med anteckningarna på de objekt som är ritade i den, vilket gör att en hel anläggningsdel kan granskas i ett steg.
+
+Ett dubbelklick på en nod läser in dess poster direkt, utan **Visa inlägg**. Reglaget **Expandera alla noder** öppnar alla noder i trädet. Inställningen delas med den vybegränsade loggboken.
 
 När fjärrsystem är anslutna visas vart och ett som en toppnod i trädet, namngiven efter fjärrsystemet. Under den finns systemets egen loggbok, ordnad på samma sätt som det lokala trädet, och där kan anteckningar läsas och skrivas. Se [Fjärrsystemens loggböcker](configuring.md#logbooks-of-remote-systems).
 
@@ -40,6 +44,8 @@ Postlistan visar följande kolumner: **Rubrik**, **Placerad på**, **Meddelande*
 
 Välj en post och klicka på **Redigera anteckning** för att öppna den för redigering, eller **Arkivera anteckning** för att flytta ut den ur den aktiva listan. En arkiverad post behålls i databasen och döljs i listan i stället för att raderas, och samma knapp återställer den när arkiverade poster visas.
 
+Ett dubbelklick på en post gör detsamma som **Redigera anteckning** och kräver `Logbook_Edit` på samma sätt. I redigeringspopupen visas ämnet som **Ämne (skrivskyddat)**, så en post kan inte flyttas till ett annat ämne från loggboken.
+
 !!! note "Poster arkiveras, de raderas inte"
     Det finns ingen radering av enskilda poster. Den enda åtgärd som permanent tar bort loggboksinnehåll är **ta bort alla arkiverade anteckningar** i inställningsvyn, som rensar samtliga arkiverade poster på en gång. Se [Arkivering](extending.md#archiving).
 <!-- --8<-- [end:body-1] -->
@@ -49,7 +55,7 @@ Välj en post och klicka på **Redigera anteckning** för att öppna den för re
 <!-- --8<-- [start:body-2] -->
 ## Byta hur trädet ordnas { #switching-how-the-tree-is-keyed }
 
-Reglaget **Navigera efter arbetsvyer** ovanför trädet växlar mellan de två sätten att ordna samma poster.
+Reglaget **Navigera efter arbetsvyer** under trädet växlar mellan de två sätten att ordna samma poster. I objektpopupen och den vybegränsade loggboken heter samma reglage **Navigera efter System vy**.
 
 * **På, arbetsvyläge** — trädet följer processvyernas mappstruktur, till exempel **System → MySystem → Station1**. Detta läge används när anteckningar söks utifrån en anläggningsdel så som den är ritad i vyerna.
 * **Av, signalläge** — trädet följer taggsökvägen, till exempel **MB → AS01 → Station1**. Detta läge används när anteckningar söks utifrån en specifik tagg, oavsett i vilka vyer den förekommer.
@@ -65,7 +71,7 @@ Inställningen delas med de loggböcker som öppnas från ett objektpopup eller 
 
 Klicka på **Lägg till anteckning** för att öppna popup-fönstret **Skapa ny loggbokspost**. Fyll i följande fält:
 
-* **Ämne** — vad posten placeras på. Om loggboken öppnats från ett objekt eller från en processvy är fältet redan ifyllt och behöver normalt inte ändras.
+* **Ämne** — vad posten placeras på. Om loggboken öppnats från ett objekt eller från en processvy är fältet redan ifyllt och behöver normalt inte ändras. Ett förifyllt ämne är låst. Klicka på hänglåset bredvid för att ändra det, vilket också visar tipset *Använd / för att skapa nivåer*.
 * **Kontext** — en valfri grupperingsetikett. Klicka på **...** för att hantera tillgängliga kontexter.
 * **Rubrik** — en kort rubrik för posten.
 * **Meddelande** — den fullständiga texten i anteckningen.
@@ -82,7 +88,7 @@ En post som skapas från en nod i trädet placeras på det noden står för. Ska
 
 Klicka på filterikonen för att öppna panelen **Filtrera loggbok**. Tillgängliga filter:
 
-* **Tidsperiod** — filtrera efter skapandedatum (Skapad från / Skapad till)
+* **Tidsperiod** — filtrera efter skapandedatum (Skapad från / Skapad till). Perioden är som standard de senaste 14 dagarna och tillämpas tillsammans med övriga filter, så flytta **Skapad från** bakåt för att få med äldre poster.
 * **Användare** — visa poster från en specifik användare
 * **Sök** — sök efter text i rubriken, meddelandet eller båda
 * **Sortering** — nyaste först eller äldsta först

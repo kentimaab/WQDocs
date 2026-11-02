@@ -1,5 +1,6 @@
 ---
 title: Historik — Felsökning
+description: Vanliga problem och lösningar för modulen Historik.
 product: mod
 page_type: module
 status: draft
@@ -16,11 +17,11 @@ tags:
 
 | Problem | Lösning |
 |---|---|
-| Signalträdet är tomt | Signalträdet fylls i genom att skanna projektets loggenheter. Om inga loggenheter är konfigurerade kommer trädet att vara tomt. Kontrollera att minst en loggenhet är aktiv i projektkonfigurationen. |
-| En signal saknas i trädet | Endast signaler med en aktiv loggenhet visas i trädet. Använd **Visa variabler som inte loggas** i den projektövergripande vyn för att bekräfta om signalen finns men inte loggas. |
-| Diagrammet är tomt efter att ha klickat på Verkställ | Kontrollera att det valda tidsintervallet innehåller loggad data för dessa signaler. Om signalerna nyligen lades till kan det hända att det ännu inte finns tillräckligt med data att visa. |
+| Signalträdet är tomt | Signalträdet fylls i genom att skanna projektets loggenheter. Om inga loggenheter är konfigurerade kommer trädet att vara tomt. Kontrollera att minst en loggenhet är aktiv i projektkonfigurationen. Trädet listar dessutom bara objekt i processvyer som har öppnats minst en gång, så i ett nytt projekt förblir det tomt tills vyerna har besökts. |
+| En signal saknas i trädet | Endast signaler med en aktiv loggenhet visas i trädet, och bara cykliska, ändrings- och triggerloggenheter räknas. Processvyn som innehåller objektet måste också ha öppnats minst en gång, eftersom trädet bara listar objekt från vyer som har öppnats. Använd **Visa variabler som inte loggas** i den projektövergripande vyn för att bekräfta om signalen finns men inte loggas. |
+| Diagrammet är tomt efter att ha klickat på Tillämpa | Kontrollera att det valda tidsintervallet innehåller loggad data för dessa signaler. Om signalerna nyligen lades till kan det hända att det ännu inte finns tillräckligt med data att visa. |
 | Sparade signalgrupper saknas | Projektövergripande sparade grupper lagras i tabellen `History_SavedSignals_Project`. Vyspecifika grupper lagras i `History_SavedSignals_View`. Om grupper saknas efter en projektuppdatering, kontrollera om relevant tabell skrevs över under uppdateringen. |
-| Y-axelns skalning är oväntad | När **Skala Y-axlar** är avstängd används standardgränserna för varje signals enhet på Y-axeln. Aktivera **Skala Y-axlar** i panelen **Inställningar** för att anpassa diagrammet till faktiska data. |
+| Y-axelns skalning är oväntad | När **Skala Y-axlar** är avstängd används standardgränserna för varje signals enhet på Y-axeln. Aktivera **Skala Y-axlar** i panelen **Inställningar** för att anpassa diagrammet till faktiska data. Axlarna skalas när reglaget slås på, så för att skala om efter att data har ändrats, slå av och på det igen. |
 | En signal som loggas i flera loggenheter läses från fel loggenhet | Historik använder den första loggenheten i bokstavsordning. Se [Signaler som loggas i flera loggenheter](#signals-in-several-loggers). |
 
 ## Signaler som loggas i flera loggenheter { #signals-in-several-loggers }
@@ -37,7 +38,7 @@ I vyn Historik och det vyspecifika Historik-popupet kan en kurva flyttas till en
 2. Markera kurvan under **Grafer**.
 3. Välj en annan loggenhet i **Loggenhet**.
 
-Bytet är tillfälligt. Historik väljer loggenhet igen varje gång en kurva läggs till på nytt: **Verkställ** gör det för alla kurvor, och **Följ** och **Sluta följa** för den följda signalen. Bytet försvinner också när vyn stängs, och sparade signalgrupper behåller det inte.
+Bytet är tillfälligt. Historik väljer loggenhet igen varje gång en kurva läggs till på nytt: **Tillämpa** gör det för alla kurvor, och **Följ** och **Sluta följa** för den följda signalen. Bytet försvinner också när vyn stängs, och sparade signalgrupper behåller det inte.
 
 Fliken Historik i objektpopuper har ingen inställningsknapp, så där går det inte att byta loggenhet.
 

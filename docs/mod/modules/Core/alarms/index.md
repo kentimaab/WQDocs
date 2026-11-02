@@ -19,7 +19,7 @@ The Alarms module provides real-time alarm monitoring across the WideQuick MOD i
 ## Contents { #contents }
 
 ### [Get started](get-started.md) { #get-started }
-* [**Alarm views**](get-started.md#alarm-views) — Alarm - List, Alarm - Overview, Alarm - Log, and Alarms - Frequency.
+* [**Alarm views**](get-started.md#alarm-views) — Alarm - List, Alarm - Overview, Alarm - Log, and Alarm - Frequency.
 * [**Acknowledging alarms**](get-started.md#acknowledging-alarms) — How alarms are acknowledged and the available acknowledgement rules.
 * [**Process view alarm list**](get-started.md#process-view-alarm-list) — A dedicated alarm list scoped to a specific process view.
 

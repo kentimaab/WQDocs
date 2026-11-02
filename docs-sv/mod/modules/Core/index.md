@@ -27,7 +27,7 @@ Kärna är grunden i varje WideQuick MOD-installation. Till skillnad från valfr
 ### [Grafiska symboler](Graphical-symbols/index.md) { #graphical-symbols }
 
 * [**Symbolbibliotek**](Graphical-symbols/Symbols.md) — Komponenter, spjäll, motorer, sensorer, ventiler med mera.
-* [**Äldre symboler**](Graphical-symbols/legacy.md) — Symboler från tidigare generationen i WideQuick BMS 8.0.
+* [**Äldre symboler**](Graphical-symbols/legacy.md) — Symboler från tidigare generationen i WideQuick BMS 8.0 och MOD 2024.1.0.
 
 ---
 

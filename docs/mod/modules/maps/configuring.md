@@ -29,13 +29,37 @@ implemented the same way as a regular pin, but with more logic behind them. When
 successfully linked to a **Workview**, they allow the user to navigate directly to that
 **Workview** on click. The background colour of the pin also displays the live status of the **Workview**: active, warning or alarm. The pin can
 additionally display the number of active alarms and warnings. Together, these features
-make `PinStatus` objects the foundation for system control through a map.
+make `pinStatus` objects the foundation for system control through a map.
 
 ![Pin Status](/docs/Images/Map_Indicators/PinStatus.png)
 
 !!! note
-    To display a different icon on the `PinStatus` object, change its SVG or make a
+    To display a different icon on the `pinStatus` object, change its SVG or make a
     copy of the object and change the SVG on the copy.
+
+The library also has ready-made variants of `pinStatus` with their own icons, such as
+`pinStatusAppartment`, `pinStatusOffice` and `pinStatusSolarPark`. Example maps using
+them are included in the main menu under **Dashboards & Kartor**.
+
+The following properties are set on a `pinStatus` object:
+
+* **linkedView** — The **Workview** or folder the pin opens on click, and whose state it
+shows. A path ending in `.kvie` opens that **Workview**. Any other path opens the folder
+in the menu. A pin without a **linkedView** zooms the map in two steps when clicked.
+* **systemName** — The name shown on the hover card.
+
+Hovering over a pin shows a card with its name and state: **Offline**, **Normal**,
+**Warning** or **Alarm**. A cluster pin's card shows how many pins it holds, for example
+"(4 buildings)".
+
+#### Direct navigation { #direct-navigation }
+
+The **Direct navigation (map)** setting, under **Settings → Navigation**, decides what a
+click on a pin does. It is on by default, and a click opens the pin's **linkedView** at
+once. When it is off, the pin instead stores its details on the **Map View** as
+`MapSelectedPin`, `MapSelectedLink`, `MapSelectedAlarm` and `MapSelectedStatus`. The
+example maps show them in their **Info about selected pin** panel, with a **Go to view**
+or **Go to folder** button. A map of your own needs a panel that reads these properties.
 
 To integrate an **Alarm** object with a map and status pins, see
 [Connecting Alarm to Map View](extending.md#connecting-alarm-to-map-view).
@@ -94,22 +118,31 @@ not need to be filled in manually.
 * **popupWidth** *(optional)* — The width of the popup.
 * **popupHeight** *(optional)* — The height of the popup.
 * **popupTextSize** *(optional)* — Alters the font size of the popup text.
-* **fileName** — Points to the CSV file containing the coordinates for the line
-network. There is a maximum of 50 segments per network.
-* **origoLatitude** *(optional)* — Specifies a start point latitude for the network.
-* **origoLongitude** *(optional)* — Specifies a start point longitude for the network.
+* **fileName** — The name of the file in the `mapPaths` folder that holds the
+coordinates for the line network, without the `.txt` extension. The file can hold at
+most 50 coordinate rows, which draw 49 segments.
+* **origoLatitude** and **origoLongitude** — Only present on `MainPipeLines`, and not
+used.
 * **Caption** — The header displayed in the map indicator.
+
+Clicking a segment of a line network opens an info popup. Each segment object
+(`MainLine1`, `MediumLine1` or `SmallLine1`) has its own **Header** and **Text** for that
+popup. An empty **Header** falls back to the network's **Caption**, and an empty **Text**
+leaves the popup body blank.
+
+!!! note "Not on remote and web clients"
+    Line networks are not shown on remote and web clients.
 
 Example configuration:
 
 ![Lines configuration](/docs/Images/Map_Indicators/MapLines.png)
 
 #### CSV file with coordinates
-To link a line network to a CSV file, create the file in the project's `mapPaths` folder. If the folder does not exist, create it.
+To link a line network to a coordinate file, create a `.txt` file in the project's `mapPaths` folder. If the folder does not exist, create it.
 
-The CSV has two comma-separated columns, latitude and longitude, that define the path from start to end. The following example covers a network over Malmö, Sweden:
+The file has a `lat,long` header row followed by two comma-separated columns, latitude and longitude, that define the path from start to end. The following example covers a network over Malmö, Sweden:
 
-```csv title="example.csv"
+```csv title="malmo_big.txt"
 lat,long
 55.60993454611365,13.067280081496149
 55.60754066940655,13.068012894315629
@@ -127,15 +160,21 @@ lat,long
 55.61529406922991,13.083397968508196
 ```
 
-To link the CSV to a line group such as `MainPipeLines`, set the **fileName** property
-to the filename:
+To link the file to a line group such as `MainPipeLines`, set the **fileName** property
+to the file name without the extension, here `malmo_big`:
 
 ![fileName configuration](/docs/Images/Map_Indicators/fileNameCSV.png)
+
+!!! warning "Give the file a unique name"
+    The file name must not match any other name in the Data Store, such as an alarm
+    group. If it does, the line network is not drawn and a `scMap.readFromCSV() error`
+    is written to the log.
 
 #### Line geometry properties { #line-geometry-properties }
 
 Each line group contains individual line objects named `MainLine1`, `MediumLine1` and
-`SmallLine1`. These objects carry the geometry of the segment they draw:
+`SmallLine1`. These objects carry the geometry of the segment they draw. The line group
+fills in the coordinates from the file named in **fileName** when it loads:
 
 * **startLatitude** and **startLongitude** — the coordinate the segment starts at.
 * **endLatitude** and **endLongitude** — the coordinate the segment ends at.
@@ -148,15 +187,13 @@ coordinates above and the current map frame. They do not need to be set by hand.
 large geographic area is therefore positioned correctly at high zoom, rather than from a
 fixed point that may fall outside the current view.
 
-!!! warning "Geometry properties moved off the info popup"
-    In earlier versions these properties sat on the `infoPopUp` object. They now live on
-    the line objects themselves. Any values previously entered on the info popup are not
-    carried across and must be set again on `MainLine1`, `MediumLine1` or `SmallLine1`.
-
 ### Filter { #filter }
 Filters allow users to focus on a specific set of lines or networks by toggling their
 visibility. Any line network is automatically registered with the filter, so no
-additional configuration is needed. Add a `Filter` object to the view the same way as any other object.
+additional configuration is needed. Add a `FilterRow` object to the **Map View** the same way as any other object. A single `Filter` button does not work on its own.
+
+The `FilterRow` shows one button per line network, for up to 8 networks. All networks
+start hidden until a filter is selected, and clearing every filter hides them all again.
 
 ## Next Steps { #next-steps }
 

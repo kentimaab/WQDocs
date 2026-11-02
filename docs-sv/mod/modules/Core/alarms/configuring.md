@@ -77,7 +77,7 @@ Vyn **Alarm - Schedule** styr när och till vem larmnotifieringar skickas via e-
 <!-- --8<-- [start:body-2] -->
 ### Skapa ett schema { #creating-a-schedule }
 
-Klicka på **New schedule** för att öppna skapandeassistenten. Den går igenom tre sidor.
+Klicka på **Skapa nytt schema** för att öppna skapandeassistenten. Den går igenom tre sidor.
 
 **Steg 1 — När**
 <!-- --8<-- [end:body-2] -->
@@ -85,23 +85,24 @@ Klicka på **New schedule** för att öppna skapandeassistenten. Den går igenom
 ![Nytt schema steg 1](/docs/sv/Images/Alarms/alarm-schedule-step-1.png){align=center}
 
 <!-- --8<-- [start:body-3] -->
-* **Name** — namn för schemat.
+* **Namn** — namn för schemat.
 * **System** — vilket system det här schemat gäller för: det lokala systemet eller ett anslutet fjärrsystem.
-* **Active schedule** — växla för att aktivera eller inaktivera schemat utan att ta bort det.
-* **Weekdays** — välj vilka dagar i veckan schemat är aktivt. Endast de valda dagarna visas i avsnittet **Time interval** nedan.
-* **Time interval** — konfigurera aktiva tidsfönster för varje vald dag. Varje dag visar en primär **From/To**-tidsperiod. Klicka på **+**-knappen för att lägga till en sekundär tidsperiod för den dagen, vilket möjliggör två separata notifieringsfönster samma dag. Om både **From** och **To** sätts till `00:00` inaktiveras notifieringar för den tidsperioden. För att ta emot notifieringar hela dagen, sätt **From** till `00:00` och **To** till `23:59`.
+* **Aktivt schema** — växla för att aktivera eller inaktivera schemat utan att ta bort det.
+* **Veckodagar** — välj vilka dagar i veckan schemat är aktivt. Endast de valda dagarna visas i avsnittet **Tidsintervall** nedan.
+* **Tidsintervall** — konfigurera aktiva tidsfönster för varje vald dag. Varje dag visar en primär **Från/Till**-tidsperiod. Klicka på **+**-knappen för att lägga till en sekundär tidsperiod för den dagen, vilket möjliggör två separata notifieringsfönster samma dag. Om både **Från** och **Till** sätts till `00:00` inaktiveras notifieringar för den tidsperioden. För att ta emot notifieringar hela dagen, sätt **Från** till `00:00` och **Till** till `23:59`.
 
 !!! note
-    Att sätta **To** till `23:59` täcker hela dagen inklusive den sista minuten.
+    Att sätta **Till** till `23:59` täcker hela dagen inklusive den sista minuten.
 **Steg 2 — Vad**
 <!-- --8<-- [end:body-3] -->
 
 ![Nytt schema steg 2](/docs/sv/Images/Alarms/alarm-schedule-step-2.png){align=center}
 
 <!-- --8<-- [start:body-4] -->
-* **Severity level** — vilka larmklasser som utlöser det här schemat. Lämna tomt för att inkludera alla klasser.
-* **Alarm groups** — vilka larmgrupper som övervakas. Använd **Select all** för att inkludera alla grupper.
-* **Criteria** — vilket larmtillstånd notifieringen skickas vid. Se [Notifieringskriterier](#notification-criteria) nedan.
+* **Allvarlighetsgrad** — vilka larmklasser som utlöser det här schemat. Lämna tomt för att inkludera alla klasser.
+* **Larmgrupper** — vilka larmgrupper som övervakas. Använd **Välj alla** för att inkludera alla grupper.
+* **Kriterier** — vilket larmtillstånd notifieringen skickas vid. Se [Notifieringskriterier](#notification-criteria) nedan.
+* **Kompakt läge** — när det är påslaget innehåller ett SMS från schemat bara rubriken, händelsen och namnen på de larm som matchar. Se [Anpassa SMS](extending.md#customize-sms).
 
 Schemalistan visar vilka larmklasser och vilka kriterier varje schema bevakar, och statuspanelen uppdaterar antalet scheman och deras aktiva läge direkt i stället för bara när vyn öppnas.
 
@@ -111,10 +112,10 @@ Schemalistan visar vilka larmklasser och vilka kriterier varje schema bevakar, o
 ![Nytt schema steg 3](/docs/sv/Images/Alarms/alarm-schedule-step-3.png){align=center}
 
 <!-- --8<-- [start:body-5] -->
-* **Subject line** — ämnesrad som används för utgående e-postnotifieringar.
-* **Recipient** — lägg till enskilda e-postadresser eller telefonnummer direkt.
+* **Ämnesrad** — ämnesrad som används för utgående e-postnotifieringar.
+* **Mottagare** — lägg till enskilda e-postadresser eller telefonnummer direkt.
 * **Alias** — välj från konfigurerade alias för att lägga till en grupp mottagare på en gång.
-* **Collect alarm dispatches** — fördröjning i sekunder innan sändning. Larm som utlöses inom detta fönster samlas in och skickas tillsammans i en enda notifiering.
+* **Samla larmutskick** — fördröjning i sekunder innan sändning. Larm som utlöses inom detta fönster samlas in och skickas tillsammans i en enda notifiering.
 
 ### Notifieringskriterier { #notification-criteria }
 
@@ -138,9 +139,9 @@ Endast **acknowledged** och **inactive** har ett användarnamn, så det är bara
 
 ### Redigera och ta bort scheman { #editing-and-deleting-schedules }
 
-Markera ett schema i listan och klicka på **Edit schedule** för att ändra det. Aktivt och inaktivt läge kan växlas inifrån redigeringsdialogen.
+Markera ett schema i listan och klicka på **Redigera schema** för att ändra det. Aktivt och inaktivt läge kan växlas inifrån redigeringsdialogen.
 
-Klicka på **Delete schedule** för att ta bort det valda schemat.
+Klicka på **Ta bort valt schema** för att ta bort det valda schemat.
 
 ## Nästa steg { #next-steps }
 

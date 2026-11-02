@@ -23,9 +23,11 @@ Dessa behörigheter styr åtkomsten till loggboksoperationer:
 | `Logbook_Archive` | Krävs för att arkivera och återställa poster |
 | `Logbook_Delete` | Krävs för **ta bort alla arkiverade anteckningar** i inställningsvyn |
 | `Logbook_Context` | Krävs för att lägga till, ta bort eller redigera kontexter |
-| `Logbook_View` | Krävs för att se poster |
+| `Logbook_View` | Visar loggboken i huvudmenyn och fliken **Loggbok** i objektpopuper, och låter loggboksknappen i **SpeedDial** öppna den vybegränsade loggboken |
 
-Användare utan `Logbook_Add` ser knappområdet **Lägg till** inaktiverat och nedtonat, med ett rött överlager som visar ett meddelande om vilken behörighet som krävs. Egenskapen `Enabled` på knappen är bunden till `scUsers.hasPriv("Logbook_Add")`. Samma mönster gäller för övriga loggboksbehörigheter.
+Användare utan `Logbook_Add` ser knappområdet **Lägg till** inaktiverat och nedtonat, med ett rött överlager som visar ett meddelande om vilken behörighet som krävs. Egenskapen `Enabled` på knappen är bunden till `scUsers.hasPriv("Logbook_Add")`. `Logbook_Edit` och `Logbook_Archive` styr **Redigera anteckning** och **Arkivera anteckning** på samma sätt. `Logbook_Context` döljer knappen **...** bredvid fältet Kontext, och `Logbook_Delete` inaktiverar **Radera alla** i inställningsvyn. Ingen av dessa två har något överlager.
+
+`Logbook_View` verkar genom två inställningar som levereras satta till den. Den är arbetsvybehörigheten för loggboksvyn under **Inställningar → Arbetsvyer → Arbetsvyer - Privilegie**, som låser eller döljer vyns menyval, och **Synlighets privilegie** för kategorin **Loggbok** under **Inställningar → Suffix → Suffixalias - Popuper**, som döljer fliken **Loggbok** i objektpopuper. Loggboksknappen i en processvys **SpeedDial** kontrollerar `Logbook_View` direkt och gör ingenting för en användare som saknar den.
 
 Kontrollen görs alltid i det system där loggboken är öppen. Skrivning i ett fjärrsystems loggbok styrs därför av den lokala användarens behörigheter, inte av fjärrsystemets. Se [Skriva i ett fjärrsystems loggbok](configuring.md#writing-to-a-remote-systems-logbook).
 
@@ -43,7 +45,7 @@ En posts placering hålls i tre kolumner i tabellen `logbook`. `topic_kind` och 
 | `topic_ref` | Den råa identifieraren för kopplingen: en vysökväg inklusive `.kvie`, eller en tagg. Tom för `free`. |
 
 !!! warning "Endast `topic` ska redigeras direkt"
-    `topic_kind` och `topic_ref` är härledda värden. `reconcileTopicRefs()` härleder båda från `topic` vid varje start, så en ändring som skrivs till enbart den ena skrivs över vid nästa omstart. För att flytta en post ändras dess `topic`.
+    `topic_kind` och `topic_ref` är härledda värden. `reconcileTopicRefs()` härleder båda från `topic` vid varje start, så en ändring som skrivs till enbart den ena skrivs över vid nästa omstart. För att flytta en post ändras dess `topic` direkt i databasen. Loggboksvyerna kan inte flytta en post, eftersom ämnet är skrivskyddat vid redigering.
 
 Härledningen tar den längsta del av sökvägen som motsvarar en känd vy eller tagg, och behåller resten som postens egen undersökväg. `MB/AS02/Station2/GT44/Trend` kopplas därför till givaren `MB.AS02.Station2_GT44` och behåller `Trend` som en nod under den.
 

@@ -67,9 +67,9 @@ To manage reports in **WideQuick® Runtime**, navigate to
 **History → Reports → Reports - List**. This page displays a list of all 
 generated reports with two columns:
 
-* **Report** — The name of the report, defaulting to Alarm Report \[#\] where \[#\] 
-indicates the generation number.
-* **Timestamp** — The date and time at which the recording ends.
+* **Report** — The name of the report, defaulting to the template name followed by the 
+generation number, for example `Alarm_Report1`.
+* **Timestamp** — The date the report was generated.
 
 From this page, reports can be created, removed, or sent as email attachments. Sending 
 reports by email requires an SMTP server to be configured, which is explained [here](../Core/alarms/extending.md#configuring-smtp-in-widequick-designer).
@@ -135,21 +135,24 @@ Reports and Delta Reports, as they require historical data from that point onwar
 * **Unit** and **Prefix** — The unit the report is presented in. Present on the Energy 
 and Delta controllers only. Alarm reports carry no unit. See 
 [Units and prefixes](#units-and-prefixes) below.
-* **LoggerList** — Displays the signals available in the selected logger. Locked for 
-Alarm Reports, as they include all signals automatically. On the Energy and Delta 
-controllers it also stays locked until a unit is chosen, and then lists only the signals 
-measured in that unit. See [Units and prefixes](#units-and-prefixes).
-* **Number of events** — The maximum number of events to include. For Energy 
+* **LoggerList** — Displays the signals available in the selected logger. Locked for the 
+**Alarm Report**, as it includes all signals automatically. In the 
+**Alarm Report One Alarm** the list is enabled, and exactly one alarm must be selected. On 
+the Energy and Delta controllers it lists only the signals measured in the chosen unit. 
+See [Units and prefixes](#units-and-prefixes).
+* **Number of events** — The maximum number of events to include per signal. For Energy 
 Reports, this defaults to the number of hourly events in the selected time period. In 
 Delta Reports, this is handled in the onLoad script.
-* **Report file format** — The output format of the report: either PDF or PDF and XLSM.
+* **Report file format** — The output format of the report: either **PDF** or 
+**PDF and Excel**.
 * **Report status** — Displays the current status of the report, including 
 completion or any errors.
 
 !!! note "At least one signal must be selected"
     A report cannot be created until at least one signal has been selected in the 
-    **LoggerList**. This does not apply to Alarm Reports, which include all signals 
-    automatically.
+    **LoggerList**. This does not apply to the **Alarm Report**, which includes all 
+    signals automatically. The **Alarm Report One Alarm** needs exactly one alarm 
+    selected.
 
 Once generated, the report is added to the report list where it can be previewed.
 
@@ -163,12 +166,13 @@ by default with an individual graph per week and a three week summary.
 
 The **Delta Report Year** and **Delta Report Week** reports show the change between
 consecutive readings rather than the logged values themselves, which suits meters
-reporting a continuously increasing total. Delta Year presents a monthly delta per
-column, one column per month, and covers three years by default. Delta Week presents a
-daily delta per column, one column per weekday, and covers three weeks. Neither is tied
-to a single logging interval: Delta Year accepts intervals from monthly to daily, or down
-to hourly with the alternative template, and Delta Week from hourly to daily. For
-detailed configuration of each report type, see [Configuring](configuring.md).
+reporting a continuously increasing total. Delta Year presents the monthly deltas with
+one row per month and one column per signal, and covers three years by default. Delta
+Week presents the daily deltas with one row per weekday and one column per signal, and
+covers three weeks. Neither is tied to a single logging interval: Delta Year accepts
+intervals from monthly down to hourly with its default template, and Delta Week from
+hourly to daily. For detailed configuration of each report type, see
+[Configuring](configuring.md).
 
 
 ## Units and prefixes { #units-and-prefixes }
@@ -193,8 +197,8 @@ applies them, so the scaling happens in the template rather than in the script.
 The unit list is built from the units of the signals available in the selected logger, 
 so only units the project actually logs are offered.
 
-The chosen unit also filters the signal list. The TreeView stays locked until a unit is 
-selected, and then lists only the signals measured in that unit. Changing the unit clears 
+The chosen unit also filters the signal list. A unit is selected as soon as the controller 
+opens, and the TreeView lists only the signals measured in that unit. Changing the unit clears 
 the current selection, since the signals picked under the previous unit are no longer in 
 the list.
 
@@ -238,8 +242,10 @@ appear on the right. Note that the second page changes depending on the selected
 
 </div>
 
-The second page mirrors the report configuration described in the previous section, 
-including the **Unit** and **Prefix** pickers. A scheduled report therefore stores the 
+The second page holds the report settings: **Title in Report**, **Data from x days back**, 
+**Number of events**, the signal list and, for the Energy and Delta reports, the **Unit** 
+and **Prefix** pickers. It has no **From** or **To**. Each run covers the set number of 
+days back from the time the report is sent. A scheduled report stores the 
 same display unit and per-signal scale factors as a report created by hand, so a 
 scheduled run and a manual run of the same configuration produce the same values.
 
@@ -274,13 +280,40 @@ Below are descriptions of the options on the first and third pages:
 * Third page
 
     * **Subject line** — The subject line of the email in which the report is sent.
-    * **Recipient** — The recipients of the email. Accepts both email addresses 
-    and aliases.
+    * **Recipient** — Type an email address and click **Add** to add it to the list. 
+    A phone number is also accepted and listed as **Number**, but scheduled reports are 
+    sent by email only. Anything else is listed as **Unknown**.
     * **Alias** — Displays available aliases. Select one and click **Add** 
     to add it as a recipient.
-    * **List of Recipients** — Shows the full list of recipients, indicating whether 
-    each entry is an email address or an alias.
-    * **Report file format** — The format in which the report is sent: PDF or Excel.
+    * **List of recipients** — Shows every recipient with its type: **Email**, 
+    **Alias**, **Number** or **Unknown**. A warning triangle marks an entry the report 
+    cannot reach: a number, an unknown entry, or an email address while SMTP is not 
+    configured. Select an entry and click **Remove recipient** to remove it.
+    * **Report file format** — The format in which the report is sent: **PDF** or 
+    **PDF and Excel**.
+
+### Managing schedules { #managing-schedules }
+
+The **Reports - Schedule** view lists every schedule with its **Title**, **Report type** 
+and **Description**. The **Schedules** panel above the list shows the total number of 
+report schedules and how many of them are active and inactive.
+
+* **New schedule** opens the three-page menu described above.
+* **Edit schedule** opens the selected schedule in the same menu.
+* **Delete schedule** removes the selected schedule after a confirmation. This cannot be 
+undone.
+
+All three buttons need the `Schedules` privilege. Without it they are disabled and 
+covered by the text *Requires Schedules Privilege*. See [Privileges](extending.md#privileges).
+
+The **SMTP and GSM** panel shows whether SMTP is configured and whether a GSM modem is 
+active. On the SMTP row, **Configure** opens the mail server settings, and **Check** 
+confirms that the sender, user, port, server and sender name are all filled in and 
+updates the status. **Test** appears once SMTP is configured and opens the popup for 
+sending a report by email, so a test message can be sent. On the GSM row, which shows 
+its buttons only while a GSM modem is active, **Configure** opens the modem settings.
+
+The view also holds the Report History. See [Report History](configuring.md#report-history).
 
 ## Next Steps { #next-steps }
 

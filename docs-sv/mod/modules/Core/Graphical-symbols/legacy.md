@@ -12,21 +12,21 @@ tags:
 
 # Äldre symboler {#legacy-symbols}
 
-WideQuick BMS 8.0 innehöll en tidigare generation av symboler som fortfarande
-finns tillgängliga i följande objektbibliotek:
+WideQuick BMS 8.0 och WideQuick MOD 2024.1.0 innehöll en tidigare generation av symboler
+som fortfarande finns tillgängliga i följande objektbibliotek:
 
 * **COMPONENTS_Legacy**
 * **DAMPERS_Legacy**
 * **MOTORS_Legacy**
 * **SENSORS_Legacy**
 * **VALVES_Legacy**
-* **OTHERS_Legacy**
+* **OTHER_Legacy**
 
 Äldre symboler fungerar på samma sätt som de aktuella symbolerna och är helt kompatibla
 med WideQuick Modular Framework. De använder dock det äldre animationssystemet med ett
 enda lager och ger inte samma nivå av visuell återkoppling som de nya symbolerna.
 
-Vid import av en vy från ett äldre BMS-projekt uppgraderas alla äldre symboler automatiskt
+Vid import av en vy från ett äldre BMS-projekt eller ett MOD 2024.1.0-projekt uppgraderas alla äldre symboler automatiskt
 till de nya symbolversionerna. Det innebär att migreringen sker sömlöst, ingen manuell
 ersättning behövs.
 

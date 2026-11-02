@@ -29,13 +29,38 @@ implementeras på samma sätt som en vanlig pinne, men med mer logik bakom sig. 
 de är korrekt länkade till en **Arbetsvy** kan användaren navigera direkt till den
 **Arbetsvy** med ett klick. Pinnens bakgrundsfärg visar också den aktuella statusen för **Arbetsvyn**: aktiv, varning eller larm. Pinnen kan
 dessutom visa antalet aktiva larm och varningar. Tillsammans gör dessa funktioner
-`PinStatus`-objekt till grunden för systemkontroll via en karta.
+`pinStatus`-objekt till grunden för systemkontroll via en karta.
 
 ![Pin Status](/docs/sv/Images/Map_Indicators/PinStatus.png)
 
 !!! note
-    För att visa en annan ikon på `PinStatus`-objektet, ändra dess SVG eller gör en
+    För att visa en annan ikon på `pinStatus`-objektet, ändra dess SVG eller gör en
     kopia av objektet och ändra SVG på kopian.
+
+Biblioteket har också färdiga varianter av `pinStatus` med egna ikoner, till exempel
+`pinStatusAppartment`, `pinStatusOffice` och `pinStatusSolarPark`. Exempelkartor som
+använder dem finns i huvudmenyn under **Dashboards & Kartor**.
+
+Följande egenskaper anges på ett `pinStatus`-objekt:
+
+* **linkedView** — Den **Arbetsvy** eller mapp som pinnen öppnar vid klick, och vars
+status den visar. En sökväg som slutar på `.kvie` öppnar den **Arbetsvyn**. Alla andra
+sökvägar öppnar mappen i menyn. En pinne utan **linkedView** zoomar in kartan två steg
+när den klickas.
+* **systemName** — Namnet som visas på infokortet.
+
+När pekaren hålls över en pinne visas ett infokort med dess namn och status: **Offline**,
+**Normal**, **Varning** eller **Larm**. En klusterpinnes infokort visar hur många pinnar den
+rymmer, till exempel "(4 byggnader)".
+
+#### Direktnavigering { #direct-navigation }
+
+Inställningen **Direktnavigering (karta)**, under **Inställningar → Navigering**, avgör
+vad ett klick på en pinne gör. Den är på som standard, och ett klick öppnar pinnens
+**linkedView** direkt. När den är av sparar pinnen i stället sina uppgifter på **Kartvyn**
+som `MapSelectedPin`, `MapSelectedLink`, `MapSelectedAlarm` och `MapSelectedStatus`.
+Exempelkartorna visar dem i panelen **Info kring vald nål**, med knappen **Gå till vy**
+eller **Gå till mapp**. En egen karta behöver en panel som läser de egenskaperna.
 
 För att integrera ett **Alarm**-objekt med en karta och statuspinnar, se
 [Koppla Alarm till Kartvy](extending.md#connecting-alarm-to-map-view).
@@ -93,22 +118,31 @@ behöver inte fyllas i manuellt.
 * **popupWidth** *(valfritt)* — Popupens bredd.
 * **popupHeight** *(valfritt)* — Popupens höjd.
 * **popupTextSize** *(valfritt)* — Ändrar teckenstorlek för popuptexten.
-* **fileName** — Pekar på CSV-filen som innehåller koordinaterna för linje-
-nätverket. Det finns ett maximum på 50 segment per nätverk.
-* **origoLatitude** *(valfritt)* — Anger en startpunktens latitud för nätverket.
-* **origoLongitude** *(valfritt)* — Anger en startpunktens longitud för nätverket.
+* **fileName** — Namnet på filen i mappen `mapPaths` som innehåller koordinaterna för
+linjenätverket, utan filändelsen `.txt`. Filen kan innehålla högst 50 koordinatrader,
+vilket ger 49 segment.
+* **origoLatitude** och **origoLongitude** — Finns bara på `MainPipeLines` och används
+inte.
 * **Caption** — Rubriken som visas i kartindikatorn.
+
+Ett klick på ett segment i ett linjenätverk öppnar en infopopup. Varje segmentobjekt
+(`MainLine1`, `MediumLine1` eller `SmallLine1`) har en egen **Header** och **Text** för
+popupen. En tom **Header** ersätts av nätverkets **Caption**, och en tom **Text** lämnar
+popupens innehåll tomt.
+
+!!! note "Inte på fjärr- och webbklienter"
+    Linjenätverk visas inte på fjärr- och webbklienter.
 
 Exempelkonfiguration:
 
 ![Lines configuration](/docs/sv/Images/Map_Indicators/MapLines.png)
 
 #### CSV-fil med koordinater
-För att länka ett linjesnätverk till en CSV-fil, skapa filen i projektets mapp `mapPaths`. Om mappen inte finns, skapa den.
+För att länka ett linjenätverk till en koordinatfil, skapa en `.txt`-fil i projektets mapp `mapPaths`. Om mappen inte finns, skapa den.
 
-CSV-filen har två kommaseparerade kolumner, latitud och longitud, som definierar sträckan från start till slut. Följande exempel täcker ett nätverk över Malmö, Sverige:
+Filen har en rubrikrad `lat,long` följd av två kommaseparerade kolumner, latitud och longitud, som definierar sträckan från start till slut. Följande exempel täcker ett nätverk över Malmö, Sverige:
 
-```csv title="example.csv"
+```csv title="malmo_big.txt"
 lat,long
 55.60993454611365,13.067280081496149
 55.60754066940655,13.068012894315629
@@ -126,16 +160,24 @@ lat,long
 55.61529406922991,13.083397968508196
 ```
 
-För att länka CSV-filen till en linjegrupp såsom `MainPipeLines`, ange egenskapen **fileName**
-till filnamnet:
+För att länka filen till en linjegrupp såsom `MainPipeLines`, ange egenskapen **fileName**
+till filnamnet utan filändelse, här `malmo_big`:
 
 ![fileName configuration](/docs/sv/Images/Map_Indicators/fileNameCSV.png)
 
+!!! warning "Ge filen ett unikt namn"
+    Filnamnet får inte vara samma som något annat namn i Datalagret, till exempel en
+    larmgrupp. Om det är det ritas linjenätverket inte, och ett `scMap.readFromCSV() error`
+    skrivs till loggen.
+
 ### Filter { #filter }
 Filter låter användare fokusera på en specifik uppsättning linjer eller nätverk genom att växla deras
-synlighet. Alla linjennätverk registreras automatiskt med filtret, så ingen
-ytterligare konfiguration krävs. Lägg till ett `Filter`-objekt i vyn på samma sätt
-som vilket annat objekt som helst.
+synlighet. Alla linjenätverk registreras automatiskt med filtret, så ingen
+ytterligare konfiguration krävs. Lägg till ett `FilterRow`-objekt i **Kartvyn** på samma sätt
+som vilket annat objekt som helst. En enskild `Filter`-knapp fungerar inte på egen hand.
+
+`FilterRow` visar en knapp per linjenätverk, för upp till 8 nätverk. Alla nätverk är dolda
+tills ett filter väljs, och när alla filter avmarkeras döljs de igen.
 
 ## Nästa steg { #next-steps }
 

@@ -140,8 +140,10 @@ else if (type === 'solarcell' || type === 'solar' || type === 'solarpanel' || ty
 }
 ```
 
-Any **Workview** whose name contains `solarcell`, `solar`, `solarpanel`, or
-`solar park` will be assigned the corresponding icon. The `scSubNav` script
+Any **Workview** whose name is exactly `solarcell`, `solar`, `solarpanel`, or
+`solar park` will be assigned the corresponding icon. The comparison uses `===`, so to
+match names that only start with or contain an identifier, use `indexOf()` instead, as
+the existing `type.indexOf('karta ') === 0` check does. The `scSubNav` script
 automatically converts **Workview** names to lowercase before comparing, so
 capitalisation is not an issue as long as the identifier words in the
 `selectImage()` function are lowercase. The `base` variable holds the path to the

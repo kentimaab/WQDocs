@@ -1,5 +1,6 @@
 ---
 title: Rapporter — Kom igång
+description: Kom igång med modulen Rapporter.
 product: mod
 page_type: module
 status: draft
@@ -64,9 +65,9 @@ För att hantera rapporter i **WideQuick® Runtime**, navigera till
 **Historik → Rapporter → Rapporter - Lista**. Den här sidan visar en lista över alla
 genererade rapporter med två kolumner:
 
-* **Rapport** — Rapportens namn, som standard Larmrapport \[#\] där \[#\]
-anger genereringsnumret.
-* **Tidsstämpel** — Datum och tid då inspelningen avslutas.
+* **Rapport** — Rapportens namn, som standard mallens namn följt av
+genereringsnumret, till exempel `Alarm_Report1`.
+* **Tidsstämpel** — Datumet då rapporten genererades.
 
 Från den här sidan kan rapporter skapas, tas bort eller skickas som e-postbilagor. Att skicka
 rapporter via e-post kräver att en SMTP-server är konfigurerad, vilket förklaras
@@ -132,22 +133,24 @@ och deltarapporter, eftersom de kräver historiska data från den tidpunkten och
 [här](configuring.md#changing-year-span) för konfiguration.
 * **Till** — Slutdatum för inspelningsperioden.
 * **LoggerList** — Visar de signaler som är tillgängliga i den valda loggern. Låst för
-larmrapporter, eftersom de inkluderar alla signaler automatiskt. På energi- och
-deltakontrollerna är den dessutom låst till dess att en enhet har valts, och listar sedan
-endast de signaler som mäts i den enheten. Se [Enheter och prefix](#units-and-prefixes).
-* **Antal händelser** — Det maximala antalet händelser att inkludera. För energirapporter
+**Larmrapport**, eftersom den inkluderar alla signaler automatiskt. I **Larmrapport ett larm**
+är listan aktiv, och exakt ett larm måste väljas. På energi- och
+deltakontrollerna listar den endast de signaler som mäts i den valda enheten. Se
+[Enheter och prefix](#units-and-prefixes).
+* **Antal händelser** — Det maximala antalet händelser att inkludera per signal. För energirapporter
 är standardvärdet antalet timhändelser i den valda tidsperioden. I deltarapporter hanteras
 detta i onLoad-skriptet.
 * **Enhet** och **Prefix** — Den enhet rapporten presenteras i. Finns endast på energi- och
 deltakontrollerna. Larmrapporter har ingen enhet. Se
 [Enheter och prefix](#units-and-prefixes) nedan.
-* **Rapportfilformat** — Rapportens utdataformat: antingen PDF eller PDF och XLSM.
+* **Rapportfilformat** — Rapportens utdataformat: antingen **PDF** eller **PDF och Excel**.
 * **Rapportstatus** — Visar rapportens aktuella status, inklusive
 slutförande eller eventuella fel.
 
 !!! note "Minst en signal måste vara vald"
     En rapport kan inte skapas förrän minst en signal har valts i **LoggerList**. Detta
-    gäller inte larmrapporter, som inkluderar alla signaler automatiskt.
+    gäller inte **Larmrapport**, som inkluderar alla signaler automatiskt.
+    **Larmrapport ett larm** kräver att exakt ett larm är valt.
 
 När den väl har genererats läggs rapporten till i rapportlistan där den kan förhandsgranskas.
 
@@ -161,12 +164,12 @@ som standard med ett individuellt diagram per vecka och en treveckorssammanfattn
 
 **Deltarapport år** och **Deltarapport vecka** visar förändringen mellan efterföljande
 avläsningar i stället för de loggade värdena i sig, vilket passar mätare som rapporterar
-en kontinuerligt ökande totalsumma. Deltarapport år presenterar ett månadsdelta per
-kolumn, en kolumn per månad, och täcker tre år som standard. Deltarapport vecka
-presenterar ett dagsdelta per kolumn, en kolumn per veckodag, och täcker tre veckor.
-Ingen av dem är bunden till ett enda loggningsintervall: Deltarapport år hanterar
-intervall från månad till dag, eller ned till timme med den alternativa mallen, och
-Deltarapport vecka från timme till dag. För detaljerad konfiguration av varje
+en kontinuerligt ökande totalsumma. Deltarapport år presenterar månadsdeltana med en
+rad per månad och en kolumn per signal, och täcker tre år som standard. Deltarapport
+vecka presenterar dagsdeltana med en rad per veckodag och en kolumn per signal, och
+täcker tre veckor. Ingen av dem är bunden till ett enda loggningsintervall: Deltarapport
+år hanterar intervall från månad ned till timme med sin standardmall, och Deltarapport
+vecka från timme till dag. För detaljerad konfiguration av varje
 rapporttyp, se [Konfigurera](configuring.md).
 
 ## Enheter och prefix { #units-and-prefixes }
@@ -191,14 +194,14 @@ så skalningen sker i mallen snarare än i skriptet.
 Enhetslistan byggs utifrån enheterna hos de signaler som finns i den valda loggern, så
 att endast enheter som projektet faktiskt loggar erbjuds.
 
-Den valda enheten filtrerar också signallistan. TreeView är låst till dess att en enhet
-har valts, och listar sedan endast de signaler som mäts i den enheten. Om enheten ändras
+Den valda enheten filtrerar också signallistan. En enhet väljs så fort kontrollern
+öppnas, och TreeView listar endast de signaler som mäts i den enheten. Om enheten ändras
 rensas det aktuella urvalet, eftersom de signaler som valts under den tidigare enheten
 inte längre finns i listan.
 
 ## Schemalägga en rapport i **WideQuick® Runtime** { #scheduling-a-report-in-widequick-runtime }
 För att schemalägga en rapport, navigera till
-**Historik → Rapporter → Rapporter - Schema**.
+**Historik → Rapporter → Rapporter - Schemalägg**.
 
 <figure markdown="span">
 <!-- --8<-- [end:body-6] -->
@@ -236,8 +239,11 @@ till höger. Observera att den andra sidan ändras beroende på den valda
 
 </div>
 
-Den andra sidan speglar rapportkonfigurationen som beskrivs i föregående avsnitt,
-inklusive väljarna **Enhet** och **Prefix**. En schemalagd rapport lagrar därför samma
+Den andra sidan innehåller rapportinställningarna: **Titel i Rapport**,
+**Data från x dagar bakåt**, **Antal händelser**, signallistan och, för energi- och
+deltarapporterna, väljarna **Enhet** och **Prefix**. Den har inga fält för **Från** eller
+**Till**. Varje körning täcker det angivna antalet dagar bakåt från den tidpunkt då
+rapporten skickas. En schemalagd rapport lagrar samma
 visningsenhet och skalfaktorer per signal som en rapport som skapas manuellt, så att en
 schemalagd och en manuell körning av samma konfiguration ger samma värden.
 
@@ -272,13 +278,40 @@ Nedan finns beskrivningar av alternativen på den första och tredje sidan:
 * Tredje sidan
 
     * **Ämnesrad** — Ämnesraden i det e-postmeddelande där rapporten skickas.
-    * **Mottagare** — Mottagarna av e-postmeddelandet. Accepterar både e-postadresser
-    och alias.
+    * **Mottagare** — Skriv en e-postadress och klicka på **Lägg till** för att lägga
+    till den i listan. Ett telefonnummer accepteras också och listas som **Nummer**, men
+    schemalagda rapporter skickas bara med e-post. Allt annat listas som **Okänd**.
     * **Alias** — Visar tillgängliga alias. Välj ett och klicka på **Lägg till**
     för att lägga till det som mottagare.
-    * **Mottagarlista** — Visar den fullständiga listan över mottagare och anger om
-    varje post är en e-postadress eller ett alias.
-    * **Rapportfilformat** — Formatet i vilket rapporten skickas: PDF eller Excel.
+    * **Lista av mottagare** — Visar varje mottagare med dess typ: **Email**, **Alias**,
+    **Nummer** eller **Okänd**. En varningstriangel markerar en post som rapporten inte
+    kan nå: ett nummer, en okänd post eller en e-postadress när SMTP inte är konfigurerat.
+    Välj en post och klicka på **Ta bort vald mottagare** för att ta bort den.
+    * **Rapportfilformat** — Formatet i vilket rapporten skickas: **PDF** eller
+    **PDF och Excel**.
+
+### Hantera scheman { #managing-schedules }
+
+Vyn **Rapporter - Schemalägg** listar varje schema med dess **Titel**, **Rapporttyp** och
+**Beskrivning**. Panelen **Scheman** ovanför listan visar det totala antalet rapportscheman
+och hur många av dem som är aktiva och inaktiva.
+
+* **Skapa nytt schema** öppnar menyn med tre sidor som beskrivs ovan.
+* **Redigera schema** öppnar det valda schemat i samma meny.
+* **Ta bort valt schema** tar bort det valda schemat efter en bekräftelse. Det går inte
+att ångra.
+
+Alla tre knapparna kräver privilegiet `Schedules`. Utan det är de inaktiverade och täckta
+av texten *Kräver privilegiet Schedules*. Se [Behörigheter](extending.md#privileges).
+
+Panelen **SMTP och GSM** visar om SMTP är konfigurerat och om ett GSM-modem är aktivt. På
+SMTP-raden öppnar **Konfigurera** inställningarna för e-postservern, och **Kontrollera**
+kontrollerar att avsändare, användare, port, server och avsändarnamn är ifyllda och
+uppdaterar statusen. **Testa** visas när SMTP är konfigurerat och öppnar popupen för att
+skicka en rapport med e-post, så att ett testmeddelande kan skickas. På GSM-raden, som bara
+visar sina knappar när ett GSM-modem är aktivt, öppnar **Konfigurera** modeminställningarna.
+
+Vyn innehåller också Rapporthistoriken. Se [Rapporthistorik](configuring.md#report-history).
 
 ## Nästa steg { #next-steps }
 

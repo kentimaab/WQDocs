@@ -16,9 +16,13 @@ tags:
     relaterad funktionalitet som beskrivs i guiderna för Kartor och indikatorer:
     
     * `scMap`
-    * `scMaintenance`
-    * `scDatabase`
-    * `scThemes`
+    * `scSuffix`
+    * `scToolTip`
+    * `scWeather`
+    * `scWM`
+    * `scAlarmFinder`
+    * `scLinking`
+    * `scRemoteSystems`
     * `scAlert`
     
     Samt följande objektbibliotek:
@@ -53,7 +57,7 @@ if (scMap.alarmList) scMap.updateAlarmList(this, scMap.alarmList);
 
 Alla objekt inuti en **Kartvy** har en egenskap kallad `geo`, som innehåller objektets
 geografiska koordinater. För att indikatorerna ska renderas korrekt
-när användaren panorerar och zoomar behöver **Kartvyw** spåra skalan och det synliga
+när användaren panorerar och zoomar behöver **Kartvyn** spåra skalan och det synliga
 området i den aktuella visningsrutan. Detta görs genom att lägga till följande skript i
 synlighetsdynamiken för **Kartvy**:
 
@@ -72,7 +76,7 @@ if (sysInfo.productId == sysInfo.WQWeb) {
 if (web && (app.subNavMenu.visible || app._subNavRemoteVisible)) {
     this.width = 1300
 } else {
-    this.width = 1620;
+    this.width = 1600;
 }
 
 return true;
@@ -123,7 +127,9 @@ Widgeten behöver också pekas mot sin datakälla, som är Datalager-variabeln `
 ![Weather Widget](/docs/sv/Images/Map_Indicators/WeatherWidgetSettings.png)
 
 När widgeten är konfigurerad visar den aktuell väderinformation för
-mitten av det synliga kartområdet och uppdateras automatiskt när användaren navigerar på kartan.
+mitten av det synliga kartområdet. Den uppdateras när vyn laddas och sedan var 60:e sekund,
+med kartans mittpunkt vid det tillfället. Datan hämtas av skriptet `scWeather` via
+IO-enheten `SMHI`, som måste finnas i projektet.
 
 ## Nästa steg { #next-steps }
 

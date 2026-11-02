@@ -1,5 +1,6 @@
 ---
 title: Underhåll — Kom igång
+description: Kom igång med modulen Underhåll.
 product: mod
 page_type: module
 status: draft
@@ -73,17 +74,17 @@ Från **Underhåll - Lista**, klicka på **Skapa**. Från objektpopupen, klicka 
 <!-- --8<-- [start:body-6] -->
 Fyll i följande fält:
 
-* **Objekt** — välj det objekt uppgiften tillhör i rullgardinsmenyn. Förifyllt när formuläret öppnas från en objektpopup.
+* **Objekt** — välj det objekt uppgiften tillhör i rullgardinsmenyn. Rullgardinsmenyn listar bara objekt som redan har uppgifter, så andra objekt måste skrivas in. Förifyllt när formuläret öppnas från en objektpopup.
 * **Typ av underhåll** — välj en mall för att fylla i prioritet, deadline och beskrivning i förväg. Alla fält kan ändras efter valet.
 * **Prioritet** — Kritisk, Hög, Normal eller Låg.
 * **Underhållsdeadline** — antingen ett specifikt datum eller ett antal dagar från nu.
 * **Skapa flera** — aktivera för att skapa en serie uppgifter på en gång, med ett angivet intervall mellan varje. När alternativet är aktiverat visas två ytterligare fält:
     * **Upprepa var** — intervallet mellan uppgifter (antal + enhet: Dag/Vecka/Månad/År).
-    * **Antal gånger** / **Slutdatum** — ange antingen hur många uppgifter som ska skapas, eller ett slutdatum.
+    * **Antal gånger** / **Slutdatum** — ange antingen hur många uppgifter som ska skapas utöver den första, eller ett slutdatum.
 * **Tilldelad person** — tilldela uppgiften till en ansvarig användare (valfritt).
 * **Beskrivning** — förifyllt från den valda mallen. Kan redigeras fritt innan sparande.
 
-Klicka på **Spara** för att spara. Uppgiften skapas med statusen **Planerad**. Om Skapa flera är aktiverat skapas alla uppgifter i serien på en gång.
+Klicka på **Spara** för att spara. Uppgiften skapas med statusen **Planerat**. Om Skapa flera är aktiverat skapas alla uppgifter i serien på en gång.
 
 ## Slutföra en uppgift { #completing-a-task }
 

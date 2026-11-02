@@ -8,6 +8,10 @@ status: draft
 last_reviewed: 2026-10-12
 scripts:
   - scLogBook
+  - scUsers
+  - scObjectFinder
+  - scSmartPopup
+  - scWM
 tags: 
  - MOD
 ---
@@ -19,19 +23,24 @@ tags:
     related functionality covered in the Logbook guides:
     
     * `scLogBook`
-    * `scDoc`
-    * `scLinking`
+    * `scUsers`
+    * `scObjectFinder`
+    * `scSmartPopup`
+    * `scWM`
     * `scPrototypes`
-    * `scThemes`
+    * `scSuffix`
     * `scAlert`
+    * `scQuickSort`
 
 The Logbook is available in the main menu under **Documents & Logbook → Logbook**.
 
 ## The Logbook View { #the-logbook-view }
 
-The logbook view has two panels. The left panel shows the topic tree, a hierarchical list of every topic that has at least one entry. Selecting a node and clicking **Show entries** loads all entries under that topic into the entry list on the right. Selecting **All topics** at the top of the tree shows all entries.
+The logbook view has two panels. The left panel shows the topic tree, a hierarchical list of every topic that has at least one entry. Selecting a node and clicking **Show entries** loads all entries under that topic into the entry list on the right. Selecting **All topics** at the top of the tree shows all of this system's entries, but not those of connected remote systems.
 
 Selecting a node includes everything filed below it. Selecting a view node lists the notes on that view together with the notes on the objects drawn in it, so a whole plant section can be reviewed in one step.
+
+Double-clicking a node loads its entries at once, without **Show entries**. The **Expand all nodes** toggle opens every node in the tree. Its setting is shared with the view-scoped logbook.
 
 When remote systems are connected, each one appears as a top node in the tree, named after the remote system. Under it is that system's own logbook, arranged the same way as the local tree, and notes can be read and written there. See [Logbooks of Remote Systems](configuring.md#logbooks-of-remote-systems).
 
@@ -43,6 +52,8 @@ The entry list shows the following columns: **Title**, **Placed on**, **Message*
 
 Select an entry and click **Edit note** to open it for editing, or **Archive note** to move it out of the active list. An archived entry is kept in the database and hidden from the list rather than removed, and the same button restores it once archived entries are shown.
 
+Double-clicking an entry does the same as **Edit note**, and needs `Logbook_Edit` in the same way. In the edit popup the topic is shown as **Topic (read-only)**, so an entry cannot be moved to another topic from the logbook.
+
 !!! note "Entries are archived, not deleted"
     There is no per-entry delete. The only action that removes logbook content permanently is **delete all archived notes** in the settings view, which clears every archived entry at once. See [Archiving](extending.md#archiving).
 <!-- --8<-- [end:body-1] -->
@@ -52,7 +63,7 @@ Select an entry and click **Edit note** to open it for editing, or **Archive not
 <!-- --8<-- [start:body-2] -->
 ## Switching How the Tree Is Keyed { #switching-how-the-tree-is-keyed }
 
-The toggle labelled **Navigate by workviews** above the tree switches between the two ways of arranging the same entries.
+The toggle labelled **Navigate by workviews** below the tree switches between the two ways of arranging the same entries. In the object popup and the view-scoped logbook the same toggle is labelled **Navigate by system view**.
 
 * **On, workview mode** — the tree follows the folder structure of the process views, for example **System → MySystem → Station1**. This is the arrangement to use when looking for notes about a part of the plant as it is drawn in the views.
 * **Off, signal mode** — the tree follows the tag path, for example **MB → AS01 → Station1**. This is the arrangement to use when looking for notes about a specific tag, regardless of which views it appears in.
@@ -68,7 +79,7 @@ The setting is shared with the logbooks opened from an object popup or from a pr
 
 Click **Add note** to open the **Create new logbook entry** popup. Fill in the following fields:
 
-* **Topic** — what the entry is filed against. When the logbook was opened from an object or from a process view, this is filled in already and normally needs no change.
+* **Topic** — what the entry is filed against. When the logbook was opened from an object or from a process view, this is filled in already and normally needs no change. A pre-filled topic is locked. Click the padlock beside it to change it, which also shows the hint *Use / to create levels*.
 * **Context** — an optional grouping label. Click **...** to manage available contexts.
 * **Title** — a short headline for the entry.
 * **Message** — the full text of the note.
