@@ -1,8 +1,13 @@
 /* Version menu at the top of the product sidebar, filled in by version-select.js.
    Archived versions load this file from the live site, so changes reach them too. */
+/* Stays at the top of the sidebar while the menu tree scrolls under it */
 .wq-version {
-    margin: 0 0 1.2em;
-    padding: 0 .6rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0 0 .6em;
+    padding: 0 .6rem .6em;
+    background-color: var(--md-default-bg-color);
 }
 
 /* Same as the sidebar's section titles ("Get started") */
