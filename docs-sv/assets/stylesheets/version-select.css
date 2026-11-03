@@ -1,0 +1,31 @@
+/* Version menu at the top of the product sidebar, filled in by version-select.js.
+   Archived versions load this file from the live site, so changes reach them too. */
+.wq-version {
+    margin: 0 0 1.2em;
+    padding: 0 .6rem;
+}
+
+.wq-version__label {
+    display: block;
+    margin-bottom: .3em;
+    color: var(--md-default-fg-color--light);
+    font-size: .64rem;
+    font-weight: 700;
+}
+
+.wq-version__select {
+    width: 100%;
+    padding: .4em .5em;
+    border: .05rem solid var(--md-default-fg-color--lighter);
+    border-radius: .2rem;
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    font: inherit;
+    font-size: .7rem;
+    cursor: pointer;
+}
+
+.wq-version__select:focus-visible {
+    outline: .1rem solid var(--md-accent-fg-color);
+    outline-offset: .1rem;
+}

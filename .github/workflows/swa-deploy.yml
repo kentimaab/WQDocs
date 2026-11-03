@@ -44,6 +44,24 @@ jobs:
       - name: Build Swedish docs
         run: zensical build --config-file zensical-sv.toml --clean --strict
 
+      # Older product versions are archived on the "versions" branch by the
+      # "Archive a product version" workflow (hooks/versioning.py). They go in
+      # next to the live pages: /docs/bms/2026.1.1/, /docs/sv/bms/2026.1.1/, ...
+      # Before the first archive the branch doesn't exist, and this does nothing.
+      - name: Add archived versions
+        run: |
+          if git fetch --depth 1 origin versions; then
+            git archive FETCH_HEAD | tar -x -C site
+            rm -f site/.nojekyll
+          fi
+
+      # A product whose live pages aren't released yet is pinned to one of its
+      # archived versions in docs/current-versions.json. Its live pages become
+      # redirects to that version and leave the search and the sitemap. Fails
+      # if the pinned version isn't archived, rather than publish the pages.
+      - name: Point pinned products at their archived version
+        run: python hooks/versioning.py pin site
+
       # Shares the English images with the Swedish pages and turns big GIFs into
       # MP4. Fails if a link would break or the site is over the 250 MB limit.
       # The report shows up in the run summary.

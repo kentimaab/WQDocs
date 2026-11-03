@@ -239,7 +239,9 @@ def main():
     # Safety net: no link that worked before may point at a missing file afterwards
     exists_before = set(files)
     exists_after = (exists_before - set(removable)) | set(mp4_size)
-    looks_like_file = lambda t: posixpath.splitext(t)[1] != ''
+    # A folder can have a dot in its name too, such as an archived version (bms/2026.1.1)
+    folders = {posixpath.dirname(f) for f in files}
+    looks_like_file = lambda t: posixpath.splitext(t)[1] != '' and t not in folders
     broken_before = {(p, t) for p, t in targets(0) if looks_like_file(t) and t not in exists_before}
     broken_after = {(p, t) for p, t in targets(1) if looks_like_file(t) and t not in exists_after}
     newly_broken = sorted(broken_after - broken_before)

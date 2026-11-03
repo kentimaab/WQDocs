@@ -550,7 +550,7 @@ wwt/archive/
 mod/archive/
 """
 
-extra_css = ["assets/stylesheets/extra.css"]
+extra_css = ["assets/stylesheets/extra.css", "assets/stylesheets/version-select.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
@@ -558,7 +558,7 @@ extra_css = ["assets/stylesheets/extra.css"]
 # The path provided should be relative to the "docs_dir".
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
-extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js"]
+extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js", "assets/javascripts/version-select.js"]
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options

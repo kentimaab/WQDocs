@@ -1,0 +1,67 @@
+name: Archive a product version
+
+# Freezes the current docs of one product (MOD, BMS or WWT), in English and
+# Swedish, as an older version: /docs/<product>/<version>/ and
+# /docs/sv/<product>/<version>/. Run it when a release's docs are final and
+# before the docs move on to the next release. The archive is committed to the
+# "versions" branch; it goes live with the next deploy (swa-deploy.yml).
+
+on:
+  workflow_dispatch:
+    inputs:
+      product:
+        description: 'Product'
+        type: choice
+        options: [bms, mod, wwt]
+      version:
+        description: 'Version, e.g. 2026.1.1'
+        required: true
+        type: string
+      title:
+        description: 'Name in the version menu (default: "BMS 2026.1.1" and so on)'
+        required: false
+        type: string
+      ref:
+        description: 'Commit to take the pages from (default: the branch the workflow runs on)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-version
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-24.04
+    steps:
+      # Full history: mike adds a commit on top of the versions branch
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+
+      # Same Zensical as swa-deploy.yml. mike is Zensical's fork, which isn't
+      # on PyPI, pinned to a commit.
+      - name: Install dependencies
+        run: |
+          pip install zensical==0.0.70 pyyaml \
+            "mike @ git+https://github.com/squidfunk/mike.git@2d4ad799442f4592db8ad53b179bfb33db8c69ac"
+
+      - name: Archive
+        env:
+          PRODUCT: ${{ inputs.product }}
+          VERSION: ${{ inputs.version }}
+          TITLE: ${{ inputs.title }}
+          REF: ${{ inputs.ref }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          set -- archive "$PRODUCT" "$VERSION" --push
+          if [ -n "$TITLE" ]; then set -- "$@" --title "$TITLE"; fi
+          if [ -n "$REF" ]; then set -- "$@" --ref "$REF"; fi
+          python hooks/versioning.py "$@"

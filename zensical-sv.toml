@@ -503,8 +503,8 @@ nav = [
   ]},
 ]
 
-extra_css = ["assets/stylesheets/extra.css"]
-extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js"]
+extra_css = ["assets/stylesheets/extra.css", "assets/stylesheets/version-select.css"]
+extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js", "assets/javascripts/version-select.js"]
 
 [project.extra]
 alternate = [
