@@ -64,7 +64,7 @@ __Utgiven 2026-08-20__
 | **Larmutskick — kompakt SMS** | Ett larmschema kan skicka ett kompakt meddelande i stället för den fullständiga listan per larm. Ett kompakt meddelande bär rubriken, händelsetypen och en kommaseparerad lista över de larm som matchar den, vilket håller ett utskick som omfattar många larm inom en rimlig längd. |
 | **Inmatningsrutan accepterar Enter** | Pop-out-rutan för inmatning behandlar **Enter** som en bekräftelse, så ett värde kan skrivas in och bekräftas utan att knappen behöver användas. |
 | **Tystare loggar** | Applikations- och felloggarna har städats upp. Schemamigreringar i `scCalendar`, `scHoliday`, `scMaintenance` och `scSuffix` kontrollerar nu om en kolumn finns innan den läggs till, i stället för att försöka ändringen och låta SQLite-drivrutinen rapportera felet till `Errors.log`. `scUsers.hasPriv()` nekar i stället för att kasta ett fel när den anropas utan behörighet. Flera hundra rader återkommande uppstartsbrus är borta. |
-
+| **Popupplacering** | Popuper öppnas nu intill det objekt som trycktes och flyttas bara så långt som behövs för att ligga helt inom skärmen. De skalas för skärmen de ligger på, stannar på samma skärm när operatören byter flik och behåller sitt objekt när operatören navigerar till en annan vy. |
 ---
 
 ### Ändringar

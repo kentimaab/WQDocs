@@ -38,7 +38,7 @@ __Released 2026-08-20__
 | **Dashboard gauges** | Two gauge widgets, `Gauge_1x1` and `Gauge_2x2`, were added to `Dashboard Widgets.klib`. They present a single value as a dial, in a one-cell and a two-by-two dashboard size. |
 | **Unused suffix view** | An **Unused popup variables** button in the debug view opens the new `UnboundDebug.kvie`, listing every suffix that is not connected to a popup or a view. |
 | **Logbook topic tree** | The logbook files an entry against a workview, an object, or a topic path of its own, and presents all three in a single tree. A toggle switches that tree between **workview** order, which follows the folder structure of the process views, and **signal** order, which follows the tag path. The two are linked through the object index, so a note on an object also appears under every view that object is drawn in, and a note on a view also appears under the objects drawn in it. Where two objects in the same view share a name, the leaf label is extended with as much of the tag as is needed to tell them apart. The `logbook` table gains `topic_kind` and `topic_ref`, derived from `topic` and re-derived on every start, and the entry list gains a **Placed on** column naming what each entry is anchored to. The logbooks opened from an object popup and from a process view preselect their subject while leaving the rest of the tree reachable. |
-
+| **Popup placement** | Popups now open next to the object that was pressed, and are moved only as far as needed to stay inside the screen. They are scaled for the screen they are on, stay on the same screen when the operator switches between their tabs, and keep their object when the operator navigates to another view. |
 ---
 
 ### Improvements

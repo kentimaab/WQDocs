@@ -76,7 +76,7 @@ Den andra huvudversionen av WideQuick Modular Framework bygger vidare på grunde
 | **Larmutskick**      | Utgående SMS har fått ett kompakt läge. I stället för den fullständiga listan per larm bär ett kompakt meddelande rubriken, händelsetypen och en kommaseparerad lista över de larm som matchar den, vilket håller ett utskick som omfattar många larm inom en rimlig meddelandelängd. Läget ställs in per larmschema. |
 | **Dialogrutan Fråga** | Pop-out-rutan för inmatning accepterar **Enter** som bekräftelse, så ett värde kan skrivas in och bekräftas utan att knappen behöver användas. |
 | **Loggutskrifter**   | Applikations- och felloggarna har städats upp. Schemamigreringar i kalender-, helgdags-, underhålls- och suffixskripten kontrollerar nu om en kolumn finns innan den läggs till, i stället för att försöka ändringen och låta drivrutinen rapportera felet, och en behörighetskontroll kastar inte längre ett fel när den anropas utan behörighet. Flera hundra rader återkommande uppstartsbrus är borta, vilket gör loggarna användbara för att hitta verkliga fel. |
-| **Popupplacering** | Popuper öppnas nu intill det objekt som trycktes och flyttas bara så långt som behövs för att ligga helt inom skärmen. De skalas för skärmen de ligger på, stannar på samma skärm när operatören byter flik och behåller sitt objekt när operatören navigerar till en annan vy. |
+
 
 ### Rättningar
 

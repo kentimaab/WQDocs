@@ -77,7 +77,7 @@ The second major release of the WideQuick Modular Framework builds on the 2024.1
 | **Alarm Sender**         | Outbound SMS gained a compact mode. Instead of the full per-alarm listing, a compact message carries the subject line, the event type and a comma-separated list of the alarms matching it, which keeps a notification covering many alarms within a sensible message length. The mode is set per alarm schedule. |
 | **Prompt dialog**        | The prompt pop-out accepts **Enter** as a confirmation, so a value can be typed and committed without reaching for the button. |
 | **Log output**           | The application and error logs were cleaned up. Schema migrations in the calendar, holiday, maintenance and suffix scripts now check whether a column exists before adding it, rather than attempting the change and letting the driver report the failure, and a privilege check no longer throws when it is called without a privilege. Several hundred lines of recurring startup noise are gone, which leaves the logs usable for finding real faults. |
-| **Popup placement** | Popups now open next to the object that was pressed, and are moved only as far as needed to stay inside the screen. They are scaled for the screen they are on, stay on the same screen when the operator switches between their tabs, and keep their object when the operator navigates to another view. |
+
 
 ### Fixes
 
