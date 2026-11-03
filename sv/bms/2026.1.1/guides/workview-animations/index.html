@@ -1,0 +1,3636 @@
+
+<!doctype html>
+<html lang="sv" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation för WideQuick Modular Framework och dess vertikaler">
+      
+      
+        <meta name="author" content="johan.vikstrand@kentima.se">
+      
+      
+        <link rel="canonical" href="https://www.widequick.com/docs/sv/bms/2026.1.1/guides/workview-animations/">
+      
+      
+      
+        <link rel="prev" href="../speeddial/">
+      
+      
+        <link rel="next" href="../../reference/">
+      
+      
+        
+          <link rel="alternate" href="/docs/" hreflang="en">
+        
+          <link rel="alternate" href="/docs/sv/" hreflang="sv">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.70">
+    
+    
+      
+        <title>Arbetsvy-animationer - WideQuick Docs</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e442bf79.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="/docs/assets/stylesheets/version-select.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+<script>
+(function () {
+  var COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens'];
+
+  function processItem(item) {
+    var ellipsis = item.querySelector('.md-nav__link .md-ellipsis');
+    if (!ellipsis || COLLAPSED.indexOf(ellipsis.textContent.trim()) === -1) return;
+    item.classList.remove('md-nav__item--section');
+    if (!item.classList.contains('md-nav__item--nested')) {
+      item.classList.add('md-nav__item--nested');
+    }
+    item.classList.add('nav-item--collapsible-section');
+    if (item.querySelector('.md-nav__link--active')) return;
+    var toggle = item.querySelector('input.md-nav__toggle');
+    if (toggle) toggle.checked = false;
+  }
+
+  var observer = new MutationObserver(function (mutations) {
+    for (var i = 0; i < mutations.length; i++) {
+      var added = mutations[i].addedNodes;
+      for (var j = 0; j < added.length; j++) {
+        var node = added[j];
+        if (node.nodeType !== 1) continue;
+        if (node.classList.contains('md-nav__item--section')) processItem(node);
+        var nested = node.querySelectorAll('.md-nav__item--section');
+        for (var k = 0; k < nested.length; k++) processItem(nested[k]);
+      }
+    }
+  });
+
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    observer.disconnect();
+  });
+}());
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Gå till innehållet
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Sidhuvud">
+    <a href="/docs/sv/" title="WideQuick Docs" class="md-header__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WideQuick Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arbetsvy-animationer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Välj språk">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-languages" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/docs/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/docs/sv/" hreflang="sv" class="md-select__link">
+              Svenska
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Sök">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Sök">
+  <button type="button" class="md-search__button">
+    Sök
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Flikar" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/" class="md-tabs__link">
+        
+  
+  Hem
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/wq/" class="md-tabs__link">
+        
+  
+  WideQuick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/mod/" class="md-tabs__link">
+        
+  
+  Modular Framework
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Building Management System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/wwt/" class="md-tabs__link">
+        
+  
+  Water & Wastewater Treatment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/plug-in/" class="md-tabs__link">
+        
+  
+  Plug-in
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/Tools/tag-name-validator/" class="md-tabs__link">
+        
+  
+  Verktyg
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/docs/sv/" title="WideQuick Docs" class="md-nav__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    WideQuick Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Hem
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/wq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  WideQuick
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modular Framework
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Building Management System
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Building Management System
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../get-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kom igång
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Kom igång
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ladda ned
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/Your%20First%20Tag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Din första tagg
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../modules/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Moduler
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Moduler
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/Core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kärna
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/audit-trail/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Spårningslogg
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/backup-and-restore/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Säkerhetskopiering och återställning
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/calendar/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kalender
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/dashboards/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dashboard
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/documents/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dokument
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/history/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Historik
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/logbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Loggbok
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maintenance/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Underhåll
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maps/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kartor
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/reports/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Rapporter
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guider
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guider
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automatic-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automatisk skalning
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-an-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skapa objekt
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-a-popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skapa popup
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Språk
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Loggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Loggenheter
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login%20Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Inloggningskonfiguration
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fjärrsystem
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../speeddial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Speed Dial
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arbetsvy-animationer
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arbetsvy-animationer
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Innehållsförteckning">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Innehållsförteckning
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hur det fungerar
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-categories-and-suffixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Konfigurera kategorier och suffix
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Konfigurera kategorier och suffix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-suffix-aliases-to-a-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lägga till suffixalias i en grupp
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-custom-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lägga till egna grupper
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-animated-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Skapa egna animerade objekt
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-building-a-custom-animated-motor-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exempel - Bygga ett eget animerat motorobjekt
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exempel - Bygga ett eget animerat motorobjekt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-verify-the-suffix-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 1 - Verifiera suffixkonfigurationen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-the-visual-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 2 - Skapa de visuella elementen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-add-the-onload-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 3 - Lägg till onLoad-skripten
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-add-the-color-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 4 - Lägg till färguttrycken
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-group-the-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 5 - Gruppera objekten
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-test-in-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 6 - Testa i Runtime
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Referens
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Referens
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../reference/database-schemas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Databasscheman
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/multiview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Multiview
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../reference/Popup/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Popups
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/Resources-and-Resource-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Resurser och Resurspaket
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ScriptHierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skripthierarki
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/suffix-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suffixsystem
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tag-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Taggstruktur
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../releases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Versioner
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Versioner
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/MigrationGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migreringsguide
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/wwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Water & Wastewater Treatment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/plug-in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Plug-in
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/Tools/tag-name-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Verktyg
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Innehållsförteckning">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Innehållsförteckning
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Hur det fungerar
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-categories-and-suffixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Konfigurera kategorier och suffix
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Konfigurera kategorier och suffix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-suffix-aliases-to-a-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lägga till suffixalias i en grupp
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-custom-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Lägga till egna grupper
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-custom-animated-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Skapa egna animerade objekt
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-building-a-custom-animated-motor-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exempel - Bygga ett eget animerat motorobjekt
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exempel - Bygga ett eget animerat motorobjekt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-verify-the-suffix-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 1 - Verifiera suffixkonfigurationen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-the-visual-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 2 - Skapa de visuella elementen
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-add-the-onload-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 3 - Lägg till onLoad-skripten
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-add-the-color-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 4 - Lägg till färguttrycken
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-group-the-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 5 - Gruppera objekten
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-test-in-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Steg 6 - Testa i Runtime
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../.." class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Building Management System
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Guider
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="arbetsvy-animationer">Arbetsvy-animationer<a class="headerlink" href="#arbetsvy-animationer" title="Permanent link">&para;</a></h1>
+<details class="info" open="open">
+<summary>Krav</summary>
+<p>Följande skript krävs för att använda Arbetsvy-animationer:</p>
+<ul>
+<li><code>scWorkviewAnimation</code></li>
+<li><code>scAlert</code></li>
+<li><code>scSuffix</code></li>
+<li><code>scPrototypes</code></li>
+</ul>
+</details>
+<p>WideQuick Modular Framework innehåller ett inbyggt animationssystem som visar
+statusindikatorer på objekt för att indikera deras aktuella tillstånd — från larm och varningar
+till aktiv och manuell styrning. Systemet styrs av taggsuffix, vilket innebär att
+färgen ett objekt visar bestäms av vilka signaler som är aktiva på det objektet.</p>
+<p>För mer information om taggsuffix, se <a href="../../reference/tag-structure/">Taggstruktur</a>.</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Workview_Animations/AllActive.gif"><img alt="Animationstillstånd" src="/docs/sv/Images/Workview_Animations/AllActive.gif" /></a></p>
+<h2 id="how-it-works">Hur det fungerar<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>När ett <code>DynTouch</code>-objekt placeras på ett objekt i <strong>WideQuick® Designer</strong> anropas
+<code>AnimationHandler()</code>-funktionen i <code>scWorkviewAnimation</code>-skriptet automatiskt.
+Detta skapar en hanterare som bevakar alla Datalager-signaler som matchar
+objektets taggnamn kombinerat med de konfigurerade suffixen. Hanteraren exponerar ett
+booleskt värde för varje kategori — till exempel <code>animation.alarm</code> eller <code>animation.warning</code>,
+där <code>animation</code> är referensen till hanteraren — som är <code>true</code> när någon signal
+i den kategorin är aktiv.</p>
+<p>Det här animationstillståndet delas automatiskt med alla underobjekt i gruppen,
+så att varje visuellt element kan reagera självständigt på sin tilldelade kategori.</p>
+<p>Alla vanliga komponenter i standardobjektbiblioteken levereras med färdigbyggda animerade
+objekt som fungerar direkt, och täcker kategorierna larm, varning, aktiv och ManAuto.
+Serviceanimation ingår inte i standardobjekten som standard — exemplet i
+<a href="#example-building-a-custom-animated-motor-object">Bygga ett eget animerat motorobjekt</a>
+visar hur man lägger till det i ett eget objekt.</p>
+<p>För de flesta integratörer räcker det med att konfigurera suffix i driftsättningen. Att skapa
+egna animerade objekt beskrivs i
+<a href="#creating-custom-animated-objects">Skapa egna animerade objekt</a>.</p>
+<h2 id="configuring-categories-and-suffixes">Konfigurera kategorier och suffix<a class="headerlink" href="#configuring-categories-and-suffixes" title="Permanent link">&para;</a></h2>
+<p>Animationskategorierna och deras suffixalias konfigureras i <strong>WideQuick®
+Runtime</strong> genom att navigera till <strong>Inställningar → Suffix → Suffix - Larm</strong>.</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Workview_Animations/Workview_animations_list.png"><img alt="Lista med Arbetsvy-animationer" src="/docs/sv/Images/Workview_Animations/Workview_animations_list.png" /></a></p>
+<p>Inställningarna är organiserade i två nivåer:</p>
+<ul>
+<li><strong>Grupper</strong> — definierar animationskategorin och dess färg. Fem grupper finns
+tillgängliga som standard: <strong>1 - Larm</strong>, <strong>2 - Varningar</strong>, <strong>3 - Service</strong>,
+<strong>4 - Aktiv</strong> och <strong>5 - ManAuto</strong>.</li>
+<li><strong>Suffixalias</strong> — definieras inom varje grupp. Varje alias har ett läsbart
+namn, till exempel <code>Fellarm</code>, och är kopplat till ett faktiskt taggsuffix, till exempel
+<code>_LF</code>. När en signal som slutar med det suffixet blir aktiv animeras objektet i
+gruppens färg.</li>
+</ul>
+<p>Grupper prioriteras efter nummer — lägre nummer har högre prioritet. Om ett objekt
+har både ett aktivt larm och en varning ges larmet prioritet eftersom det är grupp 1.</p>
+<p>Att välja en grupp visar två inställningspaneler till höger:</p>
+<p><strong>Inställningar för kategori</strong> — konfigurerar gruppens beteende:</p>
+<ul>
+<li><strong>Referensnamn</strong> — det namn som används i animationsuttryck, till exempel <code>alarm</code>
+eller <code>warning</code>. Används vid byggande av egna animerade objekt, se
+<a href="#creating-custom-animated-objects">Skapa egna animerade objekt</a>.</li>
+<li><strong>Temafärg</strong> — den färg som visas när något suffixalias i gruppen är
+aktivt. En färgförhandsvisning visas till höger.</li>
+<li><strong>Färgreferens (automatisk)</strong> — genereras automatiskt från referensnamnet.
+Behöver inte konfigureras manuellt.</li>
+<li><strong>Vektornamn (automatiskt)</strong> — genereras automatiskt från referensnamnet.
+Behöver inte konfigureras manuellt.</li>
+</ul>
+<p>Att välja ett suffixalias inom en grupp visar:</p>
+<p><strong>Inställningar för suffix</strong> — konfigurerar det valda suffixaliaset:</p>
+<ul>
+<li><strong>Suffix</strong> — det faktiska taggsuffixet kopplat till detta alias, till exempel <code>_LF</code>
+eller <code>_LG</code>.</li>
+<li><strong>Beskrivning</strong> — en läsbar beskrivning av vad suffixet representerar,
+till exempel <code>Fellarm</code>.</li>
+</ul>
+<p>Standardtemafärgerna för varje grupp är:</p>
+<table>
+<thead>
+<tr>
+<th>Grupp</th>
+<th>Temafärg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - Larm</td>
+<td><code>error</code></td>
+</tr>
+<tr>
+<td>2 - Varningar</td>
+<td><code>Symbol_Warning</code></td>
+</tr>
+<tr>
+<td>3 - Service</td>
+<td><code>Symbol_Service</code></td>
+</tr>
+<tr>
+<td>4 - Aktiv</td>
+<td><code>Symbol_Active</code></td>
+</tr>
+<tr>
+<td>5 - ManAuto</td>
+<td><code>Symbol_ManAuto</code></td>
+</tr>
+</tbody>
+</table>
+<p>Om inga suffixalias i någon grupp är aktiva får objektet färgen
+<code>Symbol_Default</code>.</p>
+<h3 id="adding-suffix-aliases-to-a-group">Lägga till suffixalias i en grupp<a class="headerlink" href="#adding-suffix-aliases-to-a-group" title="Permanent link">&para;</a></h3>
+<p>För att lägga till ett suffixalias i en grupp, välj gruppen och klicka på <strong>Lägg till nytt suffixalias
+i vald kategori</strong>. Ge aliaset ett läsbart namn som <code>Fellarm</code>,
+ange det faktiska taggsuffixet som <code>_LF</code> och lägg till en beskrivning. Klicka
+på <strong>Skriv ändringar till DB</strong> för att spara.</p>
+<p>Alla objekt med en signal som matchar det konfigurerade suffixet och som aktiveras kommer att
+animeras i gruppens färg.</p>
+<h3 id="adding-custom-groups">Lägga till egna grupper<a class="headerlink" href="#adding-custom-groups" title="Permanent link">&para;</a></h3>
+<p>Ytterligare grupper kan läggas till utöver de fem standardgrupperna genom att klicka på <strong>Lägg till ny
+kategori</strong>. Ge gruppen ett <strong>Referensnamn</strong>, välj en <strong>Temafärg</strong> och lägg till
+relevanta suffixalias. Den nya gruppen blir tillgänglig som ett animationstillstånd
+på alla objekt som använder <code>AnimationHandler()</code>-funktionen i
+<code>scWorkviewAnimation</code>-skriptet.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Referensnamnet</strong> för en egen grupp är det du använder i animationsuttryck
+när du bygger egna objekt. Välj ett kort namn med gemener
+utan mellanslag, till exempel <code>pressure</code> eller <code>fault</code>.</p>
+</div>
+<h2 id="creating-custom-animated-objects">Skapa egna animerade objekt<a class="headerlink" href="#creating-custom-animated-objects" title="Permanent link">&para;</a></h2>
+<p>För integratörer som vill bygga egna animerade objekt förklaras nedan
+hur man kopplar ett underobjekt till en animationskategori.</p>
+<p>Varje underobjekt som ska reagera på en animationskategori behöver tre saker:</p>
+<p><strong>onLoad-skript</strong> — sparar objektets ursprungliga färger så att de kan återställas när
+ingen kategori är aktiv:</p>
+<div class="language-javascript highlight"><span class="filename">Underobjekt — onLoad</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">defaultColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">System</span><span class="p">.</span><span class="nx">themes</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="s2">"background"</span><span class="p">);</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">this</span><span class="p">.</span><span class="nx">defaultpColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">pen</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+</span></code></pre></div>
+<p><strong>Synlighetsuttryck</strong> — visar objektet bara när kategorin är aktiv:</p>
+<div class="language-javascript highlight"><span class="filename">Underobjekt — synlighet</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">alarm</span>
+</span></code></pre></div>
+<p><strong>Färguttryck</strong> — ställer in färgen baserat på den aktiva kategorin, och återgår till
+standardfärgen när den är inaktiv:</p>
+<div class="language-javascript highlight"><span class="filename">Underobjekt — färg</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">alarm</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">scWorkviewAnimation</span><span class="p">.</span><span class="nx">alarmColor</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">defaultColor</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Ersätt <code>alarm</code> med det relevanta kategorinamnet. De tillgängliga kategorinamnen är:</p>
+<table>
+<thead>
+<tr>
+<th>Kategori</th>
+<th>Namn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Larm</td>
+<td><code>alarm</code></td>
+</tr>
+<tr>
+<td>Varningar</td>
+<td><code>warning</code></td>
+</tr>
+<tr>
+<td>Service</td>
+<td><code>service</code></td>
+</tr>
+<tr>
+<td>Aktiv</td>
+<td><code>active</code></td>
+</tr>
+<tr>
+<td>ManAuto</td>
+<td><code>manauto</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Egna kategorier som lagts till i driftsättningen är också tillgängliga här. Använd kategorinamnet
+som det definierades i <strong>Inställningar → Suffix → Suffix - Larm</strong>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Det enklaste sättet att skapa ett eget animerat objekt är att kopiera ett befintligt
+animerat objekt från standardobjektbiblioteken och anpassa det. Det säkerställer
+att alla uttryck och skript redan finns på plats.</p>
+</div>
+<h2 id="example-building-a-custom-animated-motor-object">Exempel - Bygga ett eget animerat motorobjekt<a class="headerlink" href="#example-building-a-custom-animated-motor-object" title="Permanent link">&para;</a></h2>
+<p>Det här exemplet visar hur man bygger ett enkelt eget motorobjekt som reagerar på
+fyra animationskategorier — larm, varning, service och aktiv. Det visar också
+hur man lägger till serviceanimation, som inte ingår i standardobjektbiblioteken
+som standard.</p>
+<h3 id="step-1-verify-the-suffix-configuration">Steg 1 - Verifiera suffixkonfigurationen<a class="headerlink" href="#step-1-verify-the-suffix-configuration" title="Permanent link">&para;</a></h3>
+<p>Innan du bygger objektet, kontrollera att alla fyra animationskategorier som används i det här
+exemplet är konfigurerade i <strong>Inställningar → Suffix → Suffix - Larm</strong>. Kategorierna 1, 2
+och 4 bör redan vara konfigurerade som standard — expandera varje och bekräfta att suffixalias kopplade till de relevanta suffixen finns
+under <strong>suffix</strong>:</p>
+<ul>
+<li><strong>1 - Larm</strong> — bör innehålla suffixalias kopplade till larmsuffix som <code>_LD</code> eller <code>_LG</code></li>
+<li><strong>2 - Varningar</strong> — bör innehålla suffixalias kopplade till varningssuffix som <code>_LM</code></li>
+<li><strong>4 - Aktiv</strong> — bör innehålla suffixalias kopplade till aktivsuffix som <code>_IT</code></li>
+</ul>
+<p>Kategori 3 kräver manuell konfiguration eftersom suffixet <code>_SERVICE</code> inte ingår som
+standard. Expandera <strong>3 - Service</strong> och kontrollera om <code>_SERVICE</code> visas under
+<strong>suffix</strong>. Om det inte finns där, klicka på <strong>Lägg till nytt suffixalias i vald kategori</strong>,
+ange <code>_SERVICE</code> som suffix och ge det en beskrivning som passar dina behov.</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Workview_Animations/Service_suffix.png"><img alt="Servicesuffix" src="/docs/sv/Images/Workview_Animations/Service_suffix.png" /></a></p>
+<h3 id="step-2-create-the-visual-elements">Steg 2 - Skapa de visuella elementen<a class="headerlink" href="#step-2-create-the-visual-elements" title="Permanent link">&para;</a></h3>
+<p>I <strong>WideQuick® Designer</strong>, skapa följande objekt:</p>
+<ul>
+<li>En <strong>cirkel</strong> — den blinkar i larm-, varnings- eller servicefärgen när någon
+av dessa kategorier är aktiv.</li>
+<li>En <strong>triangel</strong> — dess kontur ändrar färg när kategorin aktiv är aktiv.</li>
+<li>Ett <code>DynTouch</code>-objekt — detta kopplar animationen till taggen.</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Workview_Animations/Create_object.png"><img alt="Skapa objekt" src="/docs/sv/Images/Workview_Animations/Create_object.png" /></a></p>
+<h3 id="step-3-add-the-onload-scripts">Steg 3 - Lägg till onLoad-skripten<a class="headerlink" href="#step-3-add-the-onload-scripts" title="Permanent link">&para;</a></h3>
+<p>Lägg till följande onLoad-skript på cirkeln:</p>
+<div class="language-javascript highlight"><span class="filename">Cirkel — onLoad</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">defaultColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">System</span><span class="p">.</span><span class="nx">themes</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="s2">"background"</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Lägg till följande onLoad-skript på triangeln:</p>
+<div class="language-javascript highlight"><span class="filename">Triangel — onLoad</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">brush</span><span class="p">.</span><span class="nx">color1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">System</span><span class="p">.</span><span class="nx">themes</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="s2">"background"</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">this</span><span class="p">.</span><span class="nx">defaultpColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">pen</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Dessa skript sparar de ursprungliga färgerna för varje objekt så att de kan återställas när
+ingen animationskategori är aktiv.</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Workview_Animations/LoadScripts.gif"><img alt="onLoad-skript" src="/docs/sv/Images/Workview_Animations/LoadScripts.gif" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Eftersom triangelns <strong>penselgfärg</strong> inte styrs av något animationsuttryck
+ställs den in till temats bakgrundsfärg vid inläsning. Det säkerställer att fyllningen följer
+det aktiva temat istället för att vara hårdkodad till en specifik färg.</p>
+</div>
+<h3 id="step-4-add-the-color-expressions">Steg 4 - Lägg till färguttrycken<a class="headerlink" href="#step-4-add-the-color-expressions" title="Permanent link">&para;</a></h3>
+<p><strong>Cirkel — penselgfärg:</strong></p>
+<p>Lägg till följande uttryck i <strong>penselgfärg</strong>-dynamiken på cirkeln. Cirkeln
+blinkar i den färg som hör till den aktiva kategorin med högst prioritet:</p>
+<div class="language-javascript highlight"><span class="filename">Cirkel — penselgfärg</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">alarm</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">_sys_pulse_1_Hz</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">scWorkviewAnimation</span><span class="p">.</span><span class="nx">alarmColor</span><span class="p">;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">warning</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">_sys_pulse_1_Hz</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">scWorkviewAnimation</span><span class="p">.</span><span class="nx">warningColor</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">service</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">_sys_pulse_1_Hz</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">scWorkviewAnimation</span><span class="p">.</span><span class="nx">serviceColor</span><span class="p">;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">defaultColor</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>GIF:en nedan visar var detta uttryck ska läggas till:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Workview_Animations/DynCircel.gif"><img alt="Penselgfärg-dynamik för cirkel" src="/docs/sv/Images/Workview_Animations/DynCircel.gif" /></a></p>
+<p><strong>Triangel — pennfärg:</strong></p>
+<p>Lägg till följande uttryck i <strong>pennfärg</strong>-dynamiken på triangeln. Triangelns
+kontur ändrar färg när kategorin aktiv är aktiv:</p>
+<div class="language-javascript highlight"><span class="filename">Triangel — pennfärg</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">active</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">scWorkviewAnimation</span><span class="p">.</span><span class="nx">activeColor</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">defaultpColor</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>GIF:en nedan visar var detta uttryck ska läggas till:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Workview_Animations/DynTriangel.gif"><img alt="Pennfärg-dynamik för triangel" src="/docs/sv/Images/Workview_Animations/DynTriangel.gif" /></a></p>
+<h3 id="step-5-group-the-objects">Steg 5 - Gruppera objekten<a class="headerlink" href="#step-5-group-the-objects" title="Permanent link">&para;</a></h3>
+<p>Konfigurera <code>DynTouch</code>-objektets egenskaper innan grupperingen för att koppla det till
+rätt tagg. Under fliken <strong>Egenskaper</strong>, ange följande:</p>
+<ul>
+<li><strong>Connection</strong> — anslutningsnamnet, till exempel <code>MB</code></li>
+<li><strong>Device</strong> — enhetsnamnet, till exempel <code>AS01</code></li>
+<li><strong>Sys</strong> — systemnamnet, till exempel <code>VS10</code></li>
+<li><strong>ObjectName</strong> — objektnamnet, till exempel <code>PV01</code></li>
+</ul>
+<p>Dessa fyra egenskaper kombineras till taggnamnet <code>MB.AS01_VS10_PV01</code>, som <code>AnimationHandler()</code>-funktionen i <code>scWorkviewAnimation</code>-skriptet använder
+för att hitta alla signaler som matchar de konfigurerade suffixen.</p>
+<p>När egenskaperna är ifyllda, markera cirkeln, triangeln och <code>DynTouch</code>-objektet
+och tryck <strong>Ctrl+G</strong> för att gruppera dem. Animationstillståndet delas automatiskt
+med alla underobjekt i gruppen.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Egenskaperna <strong>Connection</strong>, <strong>Device</strong> och <strong>Sys</strong> kan också ställas in på
+<strong>Arbetsvy</strong>-egenskaperna istället för på varje <code>DynTouch</code>-objekt individuellt. Se
+<a href="../../reference/tag-structure/">Taggstruktur</a> för mer information.</p>
+</div>
+<h3 id="step-6-test-in-runtime">Steg 6 - Testa i Runtime<a class="headerlink" href="#step-6-test-in-runtime" title="Permanent link">&para;</a></h3>
+<p>Starta projektet och kontrollera att:</p>
+<ul>
+<li>Cirkeln blinkar rött när en signal som slutar med ett larmsuffix är aktiv.</li>
+<li>Cirkeln blinkar gult när en signal som slutar med ett varningssuffix är aktiv.</li>
+<li>Cirkeln blinkar lila när en signal som slutar med <code>_SERVICE</code> är aktiv.</li>
+<li>Triangelns kontur ändras till aktivfärgen när en signal som slutar med ett
+aktivsuffix är aktiv.</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Workview_Animations/Demonstration.gif"><img alt="Demonstration" src="/docs/sv/Images/Workview_Animations/Demonstration.gif" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>För att testa utan en PLC ansluten, högerklicka på objektet i <strong>WideQuick® Runtime</strong>
+för att öppna felsökningspopupen. Härifrån kan Datalager-variablerna växlas mellan
+<code>true</code> och <code>false</code> för att verifiera att animationerna fungerar som förväntat.</p>
+</div>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">BMS</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Tillbaka till toppen
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class = "md-footer-meta__inner md-footer__link">
+        
+            </div>
+            <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Kentima AB
+Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+            
+            <!-- Social links -->
+            
+            
+           
+         
+           
+        </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Kopierat till urklipp","clipboard.copy":"Kopiera till urklipp","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 till på denna sida","search.result.more.other":"# till på denna sida","search.result.none":"Inga sökresultat","search.result.one":"1 sökresultat","search.result.other":"# sökresultat","search.result.placeholder":"Skriv sökord","search.result.term.missing":"Saknas","select.version":"Välj version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
+      
+        <script src="../../assets/javascripts/custom.js"></script>
+      
+        <script src="../../assets/javascripts/scrollAnim.js"></script>
+      
+        <script src="../../assets/javascripts/tag-filter.js"></script>
+      
+        <script src="/docs/assets/javascripts/version-select.js"></script>
+      
+    
+  </body>
+</html>

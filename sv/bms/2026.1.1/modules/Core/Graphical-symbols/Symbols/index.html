@@ -1,0 +1,4583 @@
+
+<!doctype html>
+<html lang="sv" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation för WideQuick Modular Framework och dess vertikaler">
+      
+      
+        <meta name="author" content="johan.vikstrand@kentima.se">
+      
+      
+        <link rel="canonical" href="https://www.widequick.com/docs/sv/bms/2026.1.1/modules/Core/Graphical-symbols/Symbols/">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../legacy/">
+      
+      
+        
+          <link rel="alternate" href="/docs/" hreflang="en">
+        
+          <link rel="alternate" href="/docs/sv/" hreflang="sv">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.70">
+    
+    
+      
+        <title>Symbolbibliotek - Referens - WideQuick Docs</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../../assets/stylesheets/modern/main.e442bf79.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="/docs/assets/stylesheets/version-select.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+<script>
+(function () {
+  var COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens'];
+
+  function processItem(item) {
+    var ellipsis = item.querySelector('.md-nav__link .md-ellipsis');
+    if (!ellipsis || COLLAPSED.indexOf(ellipsis.textContent.trim()) === -1) return;
+    item.classList.remove('md-nav__item--section');
+    if (!item.classList.contains('md-nav__item--nested')) {
+      item.classList.add('md-nav__item--nested');
+    }
+    item.classList.add('nav-item--collapsible-section');
+    if (item.querySelector('.md-nav__link--active')) return;
+    var toggle = item.querySelector('input.md-nav__toggle');
+    if (toggle) toggle.checked = false;
+  }
+
+  var observer = new MutationObserver(function (mutations) {
+    for (var i = 0; i < mutations.length; i++) {
+      var added = mutations[i].addedNodes;
+      for (var j = 0; j < added.length; j++) {
+        var node = added[j];
+        if (node.nodeType !== 1) continue;
+        if (node.classList.contains('md-nav__item--section')) processItem(node);
+        var nested = node.querySelectorAll('.md-nav__item--section');
+        for (var k = 0; k < nested.length; k++) processItem(nested[k]);
+      }
+    }
+  });
+
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    observer.disconnect();
+  });
+}());
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Gå till innehållet
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Sidhuvud">
+    <a href="/docs/sv/" title="WideQuick Docs" class="md-header__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WideQuick Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Symbolbibliotek - Referens
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Välj språk">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-languages" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/docs/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/docs/sv/" hreflang="sv" class="md-select__link">
+              Svenska
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Sök">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Sök">
+  <button type="button" class="md-search__button">
+    Sök
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Flikar" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/" class="md-tabs__link">
+        
+  
+  Hem
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/wq/" class="md-tabs__link">
+        
+  
+  WideQuick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/mod/" class="md-tabs__link">
+        
+  
+  Modular Framework
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+  Building Management System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/wwt/" class="md-tabs__link">
+        
+  
+  Water & Wastewater Treatment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/plug-in/" class="md-tabs__link">
+        
+  
+  Plug-in
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/Tools/tag-name-validator/" class="md-tabs__link">
+        
+  
+  Verktyg
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/docs/sv/" title="WideQuick Docs" class="md-nav__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    WideQuick Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Hem
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/wq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  WideQuick
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modular Framework
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Building Management System
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Building Management System
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../get-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kom igång
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Kom igång
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../get-started/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ladda ned
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../get-started/Your%20First%20Tag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Din första tagg
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Moduler
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Moduler
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kärna
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4_3_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Kärna
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../alarms/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Larm
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Grafiska symboler
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3_2_3" id="__nav_4_3_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_3_2_3_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4_3_2_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Grafiska symboler
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Symbolbibliotek
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Symbolbibliotek
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Innehållsförteckning">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Innehållsförteckning
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-new-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Varför de nya symbolerna
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Grundläggande symboler - COMPONENTS
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dampers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DAMPERS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAMPERS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MOTORS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MOTORS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SENSORS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SENSORS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valves" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VALVES
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VALVES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OTHERS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OTHERS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../legacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Äldre symboler
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../Navigation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Navigation
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Inställningar
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../Themes/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Teman
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../users-privileges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Användare och behörigheter
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../audit-trail/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Spårningslogg
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../backup-and-restore/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Säkerhetskopiering och återställning
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../calendar/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kalender
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../dashboards/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dashboard
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../documents/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dokument
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../history/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Historik
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../logbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Loggbok
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../maintenance/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Underhåll
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../maps/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kartor
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../reports/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Rapporter
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../guides/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guider
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guider
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/automatic-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automatisk skalning
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/create-an-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skapa objekt
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/create-a-popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skapa popup
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Språk
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/Loggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Loggenheter
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/Login%20Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Inloggningskonfiguration
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/remote-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fjärrsystem
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/speeddial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Speed Dial
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../guides/workview-animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arbetsvy-animationer
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Referens
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Referens
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../../reference/database-schemas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Databasscheman
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../reference/multiview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Multiview
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../../../reference/Popup/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Popups
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../reference/Resources-and-Resource-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Resurser och Resurspaket
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../reference/ScriptHierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skripthierarki
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../reference/suffix-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suffixsystem
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../reference/tag-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Taggstruktur
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../releases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Versioner
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Versioner
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../releases/MigrationGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migreringsguide
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/wwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Water & Wastewater Treatment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/plug-in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Plug-in
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/Tools/tag-name-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Verktyg
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Innehållsförteckning">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Innehållsförteckning
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-new-symbols" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Varför de nya symbolerna
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Grundläggande symboler - COMPONENTS
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dampers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        DAMPERS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAMPERS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MOTORS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MOTORS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SENSORS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SENSORS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#valves" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        VALVES
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VALVES">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#others" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        OTHERS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OTHERS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forkonfigurerade-indikatorer_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Förkonfigurerade indikatorer
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../../../.." class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Building Management System
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Moduler
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Kärna
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Grafiska symboler
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="symbol-libraries">Symbolbibliotek<a class="headerlink" href="#symbol-libraries" title="Permanent link">&para;</a></h1>
+<p>WideQuick innehåller två typer av symbolbibliotek för att bygga processvyer —
+grundläggande symboler och färdigkopplade symboler. Tillsammans täcker de de
+vanligaste komponenterna inom byggautomation och processtyrningstillämpningar.</p>
+<p><strong>Grundläggande symboler</strong> finns i objektbiblioteket <strong>COMPONENTS</strong> och består av
+geometriska former som representerar fysiska komponenter såsom motorer, pumpar, ventiler
+och givare. De är byggstenarna för att skapa anpassade processobjekt.</p>
+<p><strong>Färdigkopplade symboler</strong> finns i objektbiblioteken <strong>DAMPERS</strong>, <strong>MOTORS</strong>,
+<strong>SENSORS</strong>, <strong>VALVES</strong> och <strong>OTHERS</strong>. Dessa är helt förkonfigurerade objekt som
+kombinerar en grundläggande symbol med ett <code>DynTouch</code>-objekt, värdevisningar och
+statusindikatorer. I de flesta fall är färdigkopplade symboler den rekommenderade
+startpunkten eftersom de bara kräver en taggkoppling för att fungera direkt.</p>
+<div class="admonition tip">
+<p class="admonition-title">Migrering från äldre projekt</p>
+<p>När en vy importeras från ett äldre WideQuick-projekt uppgraderas alla symboler
+automatiskt till de nya versionerna. De nya symbolerna använder samma objekt-ID:n
+som de gamla, så ingen manuell ersättning krävs.</p>
+</div>
+<h2 id="why-the-new-symbols">Varför de nya symbolerna<a class="headerlink" href="#why-the-new-symbols" title="Permanent link">&para;</a></h2>
+<p>De nya symbolerna ger rikare visuell återkoppling än sina föregångare genom ett
+tvålageranimationssystem byggt av två koncentriska cirklar. GIF-bilden nedan visar
+den nya symbolen som växlar mellan larm-, varnings- och aktiva tillstånd:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/new_symbol.gif"><img alt="New symbol" src="/docs/sv/Images/Symbol_Libraries/new_symbol.gif" /></a></p>
+<p>De äldre symbolerna stödde grundläggande dynamik — till exempel en enkel
+färgändring vid larm. De nya symbolerna går längre och tillhandahåller två
+oberoende animationslager:</p>
+<ul>
+<li><strong>Yttre cirkel</strong> — visar en heltäckande färg när ett larm är aktivt, vilket ger
+en tydlig bakgrundmarkering som förblir synlig även när den inre cirkeln inte blinkar</li>
+<li><strong>Inre cirkel</strong> — blinkar i färgen för den aktiva kategorin med högst prioritet,
+och växlar mellan larm-, varnings- och servicetillstånd</li>
+</ul>
+<p>Det innebär att en användare direkt kan se både att ett larm är aktivt och dess
+larmklass, utan att behöva öppna popup-fönstret. Tvålagersystemet innebär
+också att flera tillstånd kan kommuniceras samtidigt — till exempel en aktiv
+varning med en bakgrundslarmsmarkering.</p>
+<p>Alla nya symboler är fullt kompatibla med
+<a href="../../../../guides/workview-animations/">Arbetsvy Animation</a>-systemet, vilket innebär
+att de automatiskt svarar på alla konfigurerade animationskategorier utan någon
+ytterligare konfiguration.</p>
+<h2 id="components">Grundläggande symboler - COMPONENTS<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
+<p>Objektbiblioteket <strong>COMPONENTS</strong> innehåller bassymbolerna som används för att
+representera fysiska komponenter i processvyer. Varje symbol inkluderar redan
+tvålagersanimationssystemet, vilket gör dem redo att använda som byggstenar för
+anpassade objekt.</p>
+<p>Använd grundläggande symboler när de förkonfigurerade färdigkopplade symbolerna
+inte passar dina behov och du vill bygga ett helt anpassat objekt. I de flesta fall
+är de färdigkopplade symbolerna i biblioteken <strong>DAMPERS</strong>, <strong>MOTORS</strong>, <strong>SENSORS</strong>,
+<strong>VALVES</strong> och <strong>OTHERS</strong> den rekommenderade startpunkten.</p>
+<div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/componets1.png"><img alt="Components library1" src="/docs/sv/Images/Symbol_Libraries/componets1.png" /></a></p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/componets2.png"><img alt="Components  library2" src="/docs/sv/Images/Symbol_Libraries/componets2.png" /></a></p>
+</div>
+<p>Följande symboler finns tillgängliga:</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dynMeterUnit</code></td>
+<td>Energimätenhet</td>
+</tr>
+<tr>
+<td><code>dynRevolvingHeatExchanger</code></td>
+<td>Roterande värmeväxlare</td>
+</tr>
+<tr>
+<td><code>dynSYMBOL_KLOCKA</code></td>
+<td>Ursymbol</td>
+</tr>
+<tr>
+<td><code>dynSensorDifference</code></td>
+<td>Differentialgivare</td>
+</tr>
+<tr>
+<td><code>dynSensorDifferenceFar</code></td>
+<td>Differentialgivare — fjärrmonterad</td>
+</tr>
+<tr>
+<td><code>dynSensorDifferenceNear</code></td>
+<td>Differentialgivare — närmonterad</td>
+</tr>
+<tr>
+<td><code>dynSymbolDamper</code></td>
+<td>Digital spjäll</td>
+</tr>
+<tr>
+<td><code>dynSymbolDamperAnalog</code></td>
+<td>Analogt spjäll</td>
+</tr>
+<tr>
+<td><code>dynSymbolExpansionVessel</code></td>
+<td>Expansionskärl</td>
+</tr>
+<tr>
+<td><code>dynSymbolFlowMeter</code></td>
+<td>Flödesmätare</td>
+</tr>
+<tr>
+<td><code>dynSymbolFreq</code></td>
+<td>Frekvensomriktare</td>
+</tr>
+<tr>
+<td><code>dynSymbolGeneric</code></td>
+<td>Generisk symbol</td>
+</tr>
+<tr>
+<td><code>dynSymbolMotorCompressor</code></td>
+<td>Motorkompressor</td>
+</tr>
+<tr>
+<td><code>dynSymbolMotorFan</code></td>
+<td>Motorfläkt</td>
+</tr>
+<tr>
+<td><code>dynSymbolMotorPump</code></td>
+<td>Motorpump</td>
+</tr>
+<tr>
+<td><code>dynSymbolPushbutton</code></td>
+<td>Tryckknappar</td>
+</tr>
+<tr>
+<td><code>dynSymbolRotarySwitch</code></td>
+<td>Vredomkopplare — 2 lägen</td>
+</tr>
+<tr>
+<td><code>dynSymbolRotarySwitch3State</code></td>
+<td>Vredomkopplare — 3 lägen</td>
+</tr>
+<tr>
+<td><code>dynSymbolSensor</code></td>
+<td>Givare</td>
+</tr>
+<tr>
+<td><code>dynSymbolSensorDuctPipe</code></td>
+<td>Kanal-/rörmonterad givare</td>
+</tr>
+<tr>
+<td><code>dynSymbolSensorOutdoor</code></td>
+<td>Utomhusgivare</td>
+</tr>
+<tr>
+<td><code>dynSymbolTimer</code></td>
+<td>Timer</td>
+</tr>
+<tr>
+<td><code>dynSymbolValve2WayActuator</code></td>
+<td>2-vägsventil med ställdon</td>
+</tr>
+<tr>
+<td><code>dynSymbolValve3WayActuator</code></td>
+<td>3-vägsventil med ställdon</td>
+</tr>
+</tbody>
+</table>
+<p>Biblioteket <strong>COMPONENTS</strong> innehåller också en uppsättning stödobjekt såsom
+statustexter, värdevisningar och indikatorer. Dessa är användbara när man bygger
+anpassade objekt och kompletterar bassymbolerna. För mer information om att bygga
+anpassade objekt, se <a href="../../../../guides/create-an-object/">Skapa objekt</a>.</p>
+<h2 id="dampers">DAMPERS<a class="headerlink" href="#dampers" title="Permanent link">&para;</a></h2>
+<p>Objektbiblioteket <strong>DAMPERS</strong> innehåller förkonfigurerade spjällobjekt för både
+digitala och analoga spjäll. Varje objekt levereras med ett <code>DynTouch</code>-objekt,
+statusindikatorer, en indikator för manuellt läge och en namnsetikett — redo att
+kopplas till taggar genom att fylla i egenskaperna <strong>Connection</strong>, <strong>Device</strong>,
+<strong>Sys</strong> och <strong>ObjectName</strong> på <code>DynTouch</code>-objektet.</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/dampers_library.png"><img alt="DAMPERS library" src="/docs/sv/Images/Symbol_Libraries/dampers_library.png" /></a></p>
+<p>Varje spjällobjekt finns i fyra orienteringar — <strong>000</strong>, <strong>090</strong>, <strong>180</strong> och
+<strong>270</strong> grader — för att matcha layouten i processvyn.</p>
+<p>Följande objekt finns tillgängliga:</p>
+<table>
+<thead>
+<tr>
+<th>Objekt</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dynDamperAnalog_000</code></td>
+<td>Analogt spjäll — 0°</td>
+</tr>
+<tr>
+<td><code>dynDamperAnalog_090</code></td>
+<td>Analogt spjäll — 90°</td>
+</tr>
+<tr>
+<td><code>dynDamperAnalog_180</code></td>
+<td>Analogt spjäll — 180°</td>
+</tr>
+<tr>
+<td><code>dynDamperAnalog_270</code></td>
+<td>Analogt spjäll — 270°</td>
+</tr>
+<tr>
+<td><code>dynDamper_000</code></td>
+<td>Digitalt spjäll — 0°</td>
+</tr>
+<tr>
+<td><code>dynDamper_090</code></td>
+<td>Digitalt spjäll — 90°</td>
+</tr>
+<tr>
+<td><code>dynDamper_180</code></td>
+<td>Digitalt spjäll — 180°</td>
+</tr>
+<tr>
+<td><code>dynDamper_270</code></td>
+<td>Digitalt spjäll — 270°</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forkonfigurerade-indikatorer">Förkonfigurerade indikatorer<a class="headerlink" href="#forkonfigurerade-indikatorer" title="Permanent link">&para;</a></h3>
+<p>Varje spjällobjekt innehåller följande förkonfigurerade visuella element:</p>
+<ul>
+<li><strong>Indikator för manuellt läge</strong> — visar symbolen <strong>H</strong> när spjället är i manuellt
+läge</li>
+<li><strong>Larmindikator</strong> — övre statuscirkel blir röd när ett larm är aktivt</li>
+<li><strong>Varningsindikator</strong> — nedre statuscirkel blir orange när en varning är aktiv</li>
+<li><strong>Statustext</strong> — visar <strong>Öppen</strong> eller <strong>Stängd</strong> för digitala spjäll</li>
+<li><strong>Namnsetikett</strong> — visar objektnamnet</li>
+</ul>
+<p>De analoga spjällobjekten är förkonfigurerade för suffixaliaset <code>analogOutputValue</code>.
+Spjällstrecket roterar för att återspegla det aktuella värdet av <code>analogOutputValue</code>
+och anger visuellt öppningsläget. Linjens startposition kan ställas in för att
+matcha om spjället är normalt öppet eller normalt stängt. Den aktuella
+öppningsprocenten visas bredvid symbolen, till exempel <code>42 %</code>.</p>
+<h2 id="motors">MOTORS<a class="headerlink" href="#motors" title="Permanent link">&para;</a></h2>
+<p>Objektbiblioteket <strong>MOTORS</strong> innehåller förkonfigurerade motorobjekt för
+kompressorer, fläktar, pumpar, frekvensomriktare och roterande värmeväxlare. Varje
+objekt levereras med ett <code>DynTouch</code>-objekt, statusindikatorer och en namnsetikett —
+redo att kopplas till taggar genom att fylla i egenskaperna <strong>Connection</strong>,
+<strong>Device</strong>, <strong>Sys</strong> och <strong>ObjectName</strong> på <code>DynTouch</code>-objektet.</p>
+<div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/motor_library1.png"><img alt="MOTORS library1" src="/docs/sv/Images/Symbol_Libraries/motor_library1.png" /></a></p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/motor_library2.png"><img alt="MOTORS library2" src="/docs/sv/Images/Symbol_Libraries/motor_library2.png" /></a></p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/motor_library3.png"><img alt="MOTORS library3" src="/docs/sv/Images/Symbol_Libraries/motor_library3.png" /></a></p>
+</div>
+<p>Varje motorobjekt finns i flera orienteringar för att matcha layouten i
+processvyn. Suffixbokstaven anger riktningen för motorsymbolen:
+<strong>D</strong> (ned), <strong>L</strong> (vänster), <strong>R</strong> (höger), <strong>U</strong> (upp).</p>
+<p>Följande objekt finns tillgängliga:</p>
+<table>
+<thead>
+<tr>
+<th>Objekt</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dynMotorCompressor_000</code></td>
+<td>Motorkompressor — 0°</td>
+</tr>
+<tr>
+<td><code>dynMotorCompressor_090</code></td>
+<td>Motorkompressor — 90°</td>
+</tr>
+<tr>
+<td><code>dynMotorCompressor_180</code></td>
+<td>Motorkompressor — 180°</td>
+</tr>
+<tr>
+<td><code>dynMotorCompressor_270</code></td>
+<td>Motorkompressor — 270°</td>
+</tr>
+<tr>
+<td><code>dynMotorFanD_090</code></td>
+<td>Motorfläkt — riktad nedåt</td>
+</tr>
+<tr>
+<td><code>dynMotorFanD_270</code></td>
+<td>Motorfläkt — riktad nedåt, spegelvänd</td>
+</tr>
+<tr>
+<td><code>dynMotorFanL_000</code></td>
+<td>Motorfläkt — riktad vänster</td>
+</tr>
+<tr>
+<td><code>dynMotorFanL_180</code></td>
+<td>Motorfläkt — riktad vänster, spegelvänd</td>
+</tr>
+<tr>
+<td><code>dynMotorFanR_000</code></td>
+<td>Motorfläkt — riktad höger</td>
+</tr>
+<tr>
+<td><code>dynMotorFanR_180</code></td>
+<td>Motorfläkt — riktad höger, spegelvänd</td>
+</tr>
+<tr>
+<td><code>dynMotorFanU_090</code></td>
+<td>Motorfläkt — riktad uppåt</td>
+</tr>
+<tr>
+<td><code>dynMotorFanU_270</code></td>
+<td>Motorfläkt — riktad uppåt, spegelvänd</td>
+</tr>
+<tr>
+<td><code>dynMotorPumpD_090</code></td>
+<td>Motorpump — riktad nedåt</td>
+</tr>
+<tr>
+<td><code>dynMotorPumpD_270</code></td>
+<td>Motorpump — riktad nedåt, spegelvänd</td>
+</tr>
+<tr>
+<td><code>dynMotorPumpL_000</code></td>
+<td>Motorpump — riktad vänster</td>
+</tr>
+<tr>
+<td><code>dynMotorPumpL_180</code></td>
+<td>Motorpump — riktad vänster, spegelvänd</td>
+</tr>
+<tr>
+<td><code>dynMotorPumpR_000</code></td>
+<td>Motorpump — riktad höger</td>
+</tr>
+<tr>
+<td><code>dynMotorPumpR_180</code></td>
+<td>Motorpump — riktad höger, spegelvänd</td>
+</tr>
+<tr>
+<td><code>dynMotorPumpU_090</code></td>
+<td>Motorpump — riktad uppåt</td>
+</tr>
+<tr>
+<td><code>dynMotorPumpU_270</code></td>
+<td>Motorpump — riktad uppåt, spegelvänd</td>
+</tr>
+<tr>
+<td><code>dynRevolvingHeatExchanger1</code></td>
+<td>Roterande värmeväxlare</td>
+</tr>
+<tr>
+<td><code>dynFreq_000</code></td>
+<td>Frekvensomriktare — 0°</td>
+</tr>
+<tr>
+<td><code>dyn_Freq_090</code></td>
+<td>Frekvensomriktare — 90°</td>
+</tr>
+<tr>
+<td><code>dyn_Freq_180</code></td>
+<td>Frekvensomriktare — 180°</td>
+</tr>
+<tr>
+<td><code>dyn_Freq_270</code></td>
+<td>Frekvensomriktare — 270°</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forkonfigurerade-indikatorer_1">Förkonfigurerade indikatorer<a class="headerlink" href="#forkonfigurerade-indikatorer_1" title="Permanent link">&para;</a></h3>
+<p>Varje motorobjekt innehåller följande förkonfigurerade visuella element:</p>
+<ul>
+<li><strong>Larmindikator</strong> — varningstriangel blir röd när ett larm är aktivt</li>
+<li><strong>Varningsindikator</strong> — varningstriangel blir orange när en varning är aktiv</li>
+<li><strong>Statusindikatorer</strong> — cirklar som visar aktiva tillstånd</li>
+<li><strong>Namnsetikett</strong> — visar objektnamnet</li>
+</ul>
+<p>Frekvensomriktarobjekten är dessutom förkonfigurerade för suffixaliaset
+<code>analogOutputValue</code> och visar det aktuella utgångsvärdet med dess enhet,
+till exempel <code>42 %</code>.</p>
+<h2 id="sensors">SENSORS<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h2>
+<p>Objektbiblioteket <strong>SENSORS</strong> innehåller förkonfigurerade givarobjekt för ett
+brett urval av givarstyper, inklusive standardgivare, dubbla givare,
+differentialgivare, digitala givare och utomhusgivare. Varje objekt levereras med
+ett <code>DynTouch</code>-objekt, värdevisningar, statusindikatorer och en namnsetikett —
+redo att kopplas till taggar genom att fylla i egenskaperna <strong>Connection</strong>,
+<strong>Device</strong>, <strong>Sys</strong> och <strong>ObjectName</strong> på <code>DynTouch</code>-objektet.</p>
+<div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/sensor_library1.png"><img alt="Sensor library1" src="/docs/sv/Images/Symbol_Libraries/sensor_library1.png" /></a></p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/sensor_library2.png"><img alt="Sensor library2" src="/docs/sv/Images/Symbol_Libraries/sensor_library2.png" /></a></p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/sensor_library3.png"><img alt="Sensor library3" src="/docs/sv/Images/Symbol_Libraries/sensor_library3.png" /></a></p>
+</div>
+<p>Varje givarobjekt finns i fyra orienteringar — <strong>000</strong>, <strong>090</strong>, <strong>180</strong> och
+<strong>270</strong> grader — för att matcha layouten i processvyn.</p>
+<p>Följande objekt finns tillgängliga:</p>
+<table>
+<thead>
+<tr>
+<th>Objekt</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dynSensorOutdoor</code></td>
+<td>Utomhusgivare</td>
+</tr>
+<tr>
+<td><code>dynSensor_000</code></td>
+<td>Standardgivare — 0°</td>
+</tr>
+<tr>
+<td><code>dynSensor_090</code></td>
+<td>Standardgivare — 90°</td>
+</tr>
+<tr>
+<td><code>dynSensor_180</code></td>
+<td>Standardgivare — 180°</td>
+</tr>
+<tr>
+<td><code>dynSensor_270</code></td>
+<td>Standardgivare — 270°</td>
+</tr>
+<tr>
+<td><code>DynSensorDual_000</code></td>
+<td>Dubbel givare — 0°</td>
+</tr>
+<tr>
+<td><code>DynSensorDual_090</code></td>
+<td>Dubbel givare — 90°</td>
+</tr>
+<tr>
+<td><code>dynSensorDual_180</code></td>
+<td>Dubbel givare — 180°</td>
+</tr>
+<tr>
+<td><code>dynSensorDual_270</code></td>
+<td>Dubbel givare — 270°</td>
+</tr>
+<tr>
+<td><code>dynSensorHeater_000</code></td>
+<td>Givare med värmeelement — 0°</td>
+</tr>
+<tr>
+<td><code>dynSensorSimple_000</code></td>
+<td>Enkel givare — 0°</td>
+</tr>
+<tr>
+<td><code>dynSensorSimple_090</code></td>
+<td>Enkel givare — 90°</td>
+</tr>
+<tr>
+<td><code>dynSensorSimple_180</code></td>
+<td>Enkel givare — 180°</td>
+</tr>
+<tr>
+<td><code>dynSensorSimple_270</code></td>
+<td>Enkel givare — 270°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigital_000</code></td>
+<td>Digital givare — 0°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigital_090</code></td>
+<td>Digital givare — 90°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigital_180</code></td>
+<td>Digital givare — 180°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigital_270</code></td>
+<td>Digital givare — 270°</td>
+</tr>
+<tr>
+<td><code>dynSensorDiff_000</code></td>
+<td>Differentialgivare — 0°</td>
+</tr>
+<tr>
+<td><code>dynSensorDiff_090</code></td>
+<td>Differentialgivare — 90°</td>
+</tr>
+<tr>
+<td><code>dynSensorDiff_180</code></td>
+<td>Differentialgivare — 180°</td>
+</tr>
+<tr>
+<td><code>dynSensorDiff_270</code></td>
+<td>Differentialgivare — 270°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigitalDiffShort_000</code></td>
+<td>Kort digital differentialgivare — 0°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigitalDiffShort_090</code></td>
+<td>Kort digital differentialgivare — 90°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigitalDiffShort_180</code></td>
+<td>Kort digital differentialgivare — 180°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigitalDiffShort_270</code></td>
+<td>Kort digital differentialgivare — 270°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigitalDiff_000</code></td>
+<td>Digital differentialgivare — 0°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigitalDiff_090</code></td>
+<td>Digital differentialgivare — 90°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigitalDiff_180</code></td>
+<td>Digital differentialgivare — 180°</td>
+</tr>
+<tr>
+<td><code>dynSensorDigitalDiff_270</code></td>
+<td>Digital differentialgivare — 270°</td>
+</tr>
+<tr>
+<td><code>dynSensorDiff2_000</code></td>
+<td>Differentialgivare 2 — 0°</td>
+</tr>
+<tr>
+<td><code>dynSensorDiff2_090</code></td>
+<td>Differentialgivare 2 — 90°</td>
+</tr>
+<tr>
+<td><code>dynSensorDiff2_180</code></td>
+<td>Differentialgivare 2 — 180°</td>
+</tr>
+<tr>
+<td><code>dynSensorDiff2_270</code></td>
+<td>Differentialgivare 2 — 270°</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forkonfigurerade-indikatorer_2">Förkonfigurerade indikatorer<a class="headerlink" href="#forkonfigurerade-indikatorer_2" title="Permanent link">&para;</a></h3>
+<p>Varje givarobjekt innehåller följande förkonfigurerade visuella element:</p>
+<ul>
+<li><strong>Värdevisning</strong> — visar det aktuella givarvärdet med dess enhet, till exempel
+<code>21.5 °C</code>, kopplad till suffixaliaset <code>processValue</code></li>
+<li><strong>Statusindikatorer</strong> — cirklar som visar aktiva larm- och varningsstillstånd</li>
+<li><strong>Namnsetikett</strong> — visar objektnamnet</li>
+</ul>
+<p>Dubbla och differentiella givarobjekt visar två oberoende värdevisningar, var och
+en kopplad till sitt eget suffixalias.</p>
+<h2 id="valves">VALVES<a class="headerlink" href="#valves" title="Permanent link">&para;</a></h2>
+<p>Objektbiblioteket <strong>VALVES</strong> innehåller förkonfigurerade ventolobjekt för tvåvägs-
+och trevägsventiler. Varje objekt levereras med ett <code>DynTouch</code>-objekt, värdevisningar,
+statusindikatorer och en namnsetikett — redo att kopplas till taggar genom att fylla
+i egenskaperna <strong>Connection</strong>, <strong>Device</strong>, <strong>Sys</strong> och <strong>ObjectName</strong> på
+<code>DynTouch</code>-objektet.</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/valves_library.png"><img alt="VALVES library" src="/docs/sv/Images/Symbol_Libraries/valves_library.png" /></a></p>
+<p>Varje ventolobjekt finns i fyra orienteringar — <strong>000</strong>, <strong>090</strong>, <strong>180</strong> och
+<strong>270</strong> grader — för att matcha layouten i processvyn.</p>
+<p>Följande objekt finns tillgängliga:</p>
+<table>
+<thead>
+<tr>
+<th>Objekt</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dynValveTwoWay_000</code></td>
+<td>Tvåvägsventil — 0°</td>
+</tr>
+<tr>
+<td><code>dynValveTwoWay_090</code></td>
+<td>Tvåvägsventil — 90°</td>
+</tr>
+<tr>
+<td><code>dynValveTwoWay_180</code></td>
+<td>Tvåvägsventil — 180°</td>
+</tr>
+<tr>
+<td><code>dynValveTwoWay_270</code></td>
+<td>Tvåvägsventil — 270°</td>
+</tr>
+<tr>
+<td><code>dynValveThreeWay_000</code></td>
+<td>Trevägsventil — 0°</td>
+</tr>
+<tr>
+<td><code>dynValveThreeWay_090</code></td>
+<td>Trevägsventil — 90°</td>
+</tr>
+<tr>
+<td><code>dynValveThreeWay_180</code></td>
+<td>Trevägsventil — 180°</td>
+</tr>
+<tr>
+<td><code>dynValveThreeWay_270</code></td>
+<td>Trevägsventil — 270°</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forkonfigurerade-indikatorer_3">Förkonfigurerade indikatorer<a class="headerlink" href="#forkonfigurerade-indikatorer_3" title="Permanent link">&para;</a></h3>
+<p>Varje ventolobjekt innehåller följande förkonfigurerade visuella element:</p>
+<ul>
+<li><strong>Positionsvisning</strong> — visar den aktuella ventilpositionen som en procentandel,
+till exempel <code>75 %</code>, kopplad till suffixaliaset <code>analogOutputValue</code></li>
+<li><strong>Larmindikator</strong> — varningstriangel blir röd när ett larm är aktivt</li>
+<li><strong>Varningsindikator</strong> — varningstriangel blir orange när en varning är aktiv</li>
+<li><strong>Statusindikatorer</strong> — cirklar som visar aktiva tillstånd</li>
+<li><strong>Namnsetikett</strong> — visar objektnamnet</li>
+</ul>
+<h2 id="others">OTHERS<a class="headerlink" href="#others" title="Permanent link">&para;</a></h2>
+<p>Objektbiblioteket <strong>OTHERS</strong> innehåller förkonfigurerade objekt för komponenter
+som inte passar in i de övriga fyra kategorierna. Varje objekt levereras med ett
+<code>DynTouch</code>-objekt och relevanta visningar — redo att kopplas till taggar genom att
+fylla i egenskaperna <strong>Connection</strong>, <strong>Device</strong>, <strong>Sys</strong> och <strong>ObjectName</strong> på
+<code>DynTouch</code>-objektet.</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Symbol_Libraries/other_library.png"><img alt="OTHERS library" src="/docs/sv/Images/Symbol_Libraries/other_library.png" /></a></p>
+<p>Följande objekt finns tillgängliga:</p>
+<table>
+<thead>
+<tr>
+<th>Objekt</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dynServiceCoupler_0-1</code></td>
+<td>Servicekoppling — 2 lägen</td>
+</tr>
+<tr>
+<td><code>dynServiceCoupler_0-1-2</code></td>
+<td>Servicekoppling — 3 lägen</td>
+</tr>
+<tr>
+<td><code>dynExpansionVessel</code></td>
+<td>Expansionskärl</td>
+</tr>
+<tr>
+<td><code>dynTimer</code></td>
+<td>Timer</td>
+</tr>
+<tr>
+<td><code>dynPushButton</code></td>
+<td>Tryckknapp</td>
+</tr>
+<tr>
+<td><code>dynFlowMeter</code></td>
+<td>Flödesmätare med två värdevisningar</td>
+</tr>
+<tr>
+<td><code>dynEnergyMeterSimple</code></td>
+<td>Energimätare — enkel, två värdevisningar</td>
+</tr>
+<tr>
+<td><code>dynEnergyMeter2</code></td>
+<td>Energimätare — kompakt</td>
+</tr>
+<tr>
+<td><code>dynEnergyMeter</code></td>
+<td>Energimätare — full, flera värdevisningar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="forkonfigurerade-indikatorer_4">Förkonfigurerade indikatorer<a class="headerlink" href="#forkonfigurerade-indikatorer_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Servicekoppling</strong> — visar en digital textetikett som anger det aktuella läget.
+3-lägsvarianten stöder ytterligare ett mellanläge.</li>
+<li><strong>Flödesmätare</strong> — visar två värdevisningar kopplade till egna suffixalias,
+till exempel flödeshastighet och ackumulerad volym.</li>
+<li><strong>Energimätare</strong> — visar energiförbrukningsvärden med enheter. Den fullständiga
+<code>dynEnergyMeter</code> visar flera avläsningar medan <code>dynEnergyMeterSimple</code> och
+<code>dynEnergyMeter2</code> visar en mer kompakt vy.</li>
+<li><strong>Timer</strong>, <strong>Tryckknapp</strong> och <strong>Expansionskärl</strong> — inkluderar statusindikatorer
+och en namnsetikett.</li>
+</ul>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">BMS</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Tillbaka till toppen
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class = "md-footer-meta__inner md-footer__link">
+        
+            </div>
+            <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Kentima AB
+Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+            
+            <!-- Social links -->
+            
+            
+           
+         
+           
+        </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Kopierat till urklipp","clipboard.copy":"Kopiera till urklipp","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 till på denna sida","search.result.more.other":"# till på denna sida","search.result.none":"Inga sökresultat","search.result.one":"1 sökresultat","search.result.other":"# sökresultat","search.result.placeholder":"Skriv sökord","search.result.term.missing":"Saknas","select.version":"Välj version"},"version":null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.a2388154.min.js"></script>
+      
+        <script src="../../../../assets/javascripts/custom.js"></script>
+      
+        <script src="../../../../assets/javascripts/scrollAnim.js"></script>
+      
+        <script src="../../../../assets/javascripts/tag-filter.js"></script>
+      
+        <script src="/docs/assets/javascripts/version-select.js"></script>
+      
+    
+  </body>
+</html>
