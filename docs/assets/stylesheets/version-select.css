@@ -5,11 +5,12 @@
     padding: 0 .6rem;
 }
 
+/* Same as the sidebar's section titles ("Get started") */
 .wq-version__label {
     display: block;
     margin-bottom: .3em;
-    color: var(--md-default-fg-color--light);
-    font-size: .64rem;
+    color: var(--md-default-fg-color);
+    font-size: .68rem;
     font-weight: 700;
 }
 
