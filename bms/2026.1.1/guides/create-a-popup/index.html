@@ -1,0 +1,3248 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How to create a custom popup in WideQuick BMS.">
+      
+      
+        <meta name="author" content="johan.vikstrand@kentima.se">
+      
+      
+        <link rel="canonical" href="https://www.widequick.com/docs/bms/2026.1.1/guides/create-a-popup/">
+      
+      
+      
+        <link rel="prev" href="../create-an-object/">
+      
+      
+        <link rel="next" href="../languages/">
+      
+      
+        
+          <link rel="alternate" href="/docs/" hreflang="en">
+        
+          <link rel="alternate" href="/docs/sv/" hreflang="sv">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.70">
+    
+    
+      
+        <title>Create a custom popup - WideQuick Docs</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e442bf79.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="/docs/assets/stylesheets/version-select.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+<script>
+(function () {
+  var COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens'];
+
+  function processItem(item) {
+    var ellipsis = item.querySelector('.md-nav__link .md-ellipsis');
+    if (!ellipsis || COLLAPSED.indexOf(ellipsis.textContent.trim()) === -1) return;
+    item.classList.remove('md-nav__item--section');
+    if (!item.classList.contains('md-nav__item--nested')) {
+      item.classList.add('md-nav__item--nested');
+    }
+    item.classList.add('nav-item--collapsible-section');
+    if (item.querySelector('.md-nav__link--active')) return;
+    var toggle = item.querySelector('input.md-nav__toggle');
+    if (toggle) toggle.checked = false;
+  }
+
+  var observer = new MutationObserver(function (mutations) {
+    for (var i = 0; i < mutations.length; i++) {
+      var added = mutations[i].addedNodes;
+      for (var j = 0; j < added.length; j++) {
+        var node = added[j];
+        if (node.nodeType !== 1) continue;
+        if (node.classList.contains('md-nav__item--section')) processItem(node);
+        var nested = node.querySelectorAll('.md-nav__item--section');
+        for (var k = 0; k < nested.length; k++) processItem(nested[k]);
+      }
+    }
+  });
+
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    observer.disconnect();
+  });
+}());
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/docs/" title="WideQuick Docs" class="md-header__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WideQuick Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create a custom popup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-languages" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/docs/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/docs/sv/" hreflang="sv" class="md-select__link">
+              Svenska
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/wq/" class="md-tabs__link">
+        
+  
+  WideQuick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/mod/" class="md-tabs__link">
+        
+  
+  Modular Framework
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Building Management System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/wwt/" class="md-tabs__link">
+        
+  
+  Water & Wastewater Treatment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/plug-in/" class="md-tabs__link">
+        
+  
+  Plug-in
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/Tools/tag-name-validator/" class="md-tabs__link">
+        
+  
+  Tools
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/docs/" title="WideQuick Docs" class="md-nav__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    WideQuick Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/wq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  WideQuick
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modular Framework
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Building Management System
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Building Management System
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../get-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Get Started
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Get Started
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Download
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/Your%20First%20Tag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Your First Tag
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../modules/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modules
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Modules
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/Core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/audit-trail/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit Trail
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/backup-and-restore/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backup and Restore
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/calendar/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Calendar
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/dashboards/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dashboards
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/documents/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documents
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/history/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  History
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/logbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Logbook
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maintenance/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maps/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maps
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/reports/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reports
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guides
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guides
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automatic-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automatic Scaling
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-an-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Create Object
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Create Popup
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Create Popup
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Import tags
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configure popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-popup-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Choosing a popup template
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Build popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automatic scaling
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-a-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Opening a popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-a-specific-popup-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Opening a specific popup directly
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Languages
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Loggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Logger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login%20Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Login Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Remote System
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../speeddial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Speed Dial
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workview-animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workview Animations
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reference
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Reference
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../reference/database-schemas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database Schemas
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/multiview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Multiview
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../reference/Popup/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Popups
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/Resources-and-Resource-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Resources and Resource package
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ScriptHierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script Hierarchy
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/suffix-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suffix System
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tag-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tag Structure
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../releases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Releases
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Releases
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/MigrationGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migration Guide
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/wwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Water & Wastewater Treatment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/plug-in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Plug-in
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/Tools/tag-name-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tools
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Import tags
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configure popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-popup-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Choosing a popup template
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Build popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automatic scaling
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-a-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Opening a popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-a-specific-popup-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Opening a specific popup directly
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../.." class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Building Management System
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="create-popup">Create Popup<a class="headerlink" href="#create-popup" title="Permanent link">&para;</a></h1>
+<p>WideQuick Modular Framework is delivered with several pre-configured popups, such as
+history, trend and maintenance. It is also possible to create fully custom popups
+tailored to specific objects and workflows. This guide explains how to create a custom
+popup from scratch — from importing tags and configuring suffixes to building the view
+and connecting it to an object.</p>
+<p>Before getting started, make sure you are familiar with the tag structure used in
+WideQuick Modular Framework. If not, see <a href="../../reference/tag-structure/">Tag Structure</a>.</p>
+<p>There are three steps involved in creating a custom popup:</p>
+<ul>
+<li>First, import the tags to display and control in the popup. See
+<a href="#import-tags">Import tags</a> for more information.</li>
+<li>Secondly, configure the suffixes for the newly imported tags and connect them to
+the specific popup. See <a href="#configure-popup">Configure popup</a> for more information.</li>
+<li>Lastly, create the popup view. See <a href="#build-popup">Build popup</a> for more information.</li>
+</ul>
+<p>In this example we will build a popup for pump control. The pump will be called
+<code>pump06</code>.</p>
+<h2 id="import-tags">Import tags<a class="headerlink" href="#import-tags" title="Permanent link">&para;</a></h2>
+<p>The first step is to import the tags to display and control. These tags must follow
+the tag structure:</p>
+<p><code>Connection.Device.Sys_objectName_suffix</code></p>
+<p>The suffix can be whatever you want, but remember it for the next step where the
+popup will be configured. For more information on tag structure see
+<a href="../../reference/tag-structure/">Tag Structure</a>.</p>
+<p>In this example we will import 5 tags from the PLC for controlling the pump:</p>
+<ol>
+<li>The first tag displays whether the pump is on or off. It will be given the suffix
+<code>_IO</code>. This is a read-only tag in the PLC.</li>
+<li>The second tag starts or stops the pump. It will be given the suffix <code>_start</code>.
+This is a read/write tag in the PLC.</li>
+<li>The third tag is the setpoint for the pump RPM. It will be given the suffix
+<code>_setpoint</code>. This is a read/write tag in the PLC.</li>
+<li>The fourth tag is the actual RPM of the pump. It will be given the suffix <code>_rpm</code>.
+This is a read-only tag in the PLC.</li>
+<li>The fifth tag is an error signal, active when the pump has encountered an error.
+It will be given the suffix <code>_error</code>. This is a read-only tag in the PLC.</li>
+</ol>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/tagList_popup.png"><img alt="Imported tags" src="/docs/Images/Create_Popup/tagList_popup.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Reusing tags</p>
+<p>A tag can be displayed on several popups. It is not necessary to import the same
+tag multiple times.</p>
+</div>
+<h2 id="configure-popup">Configure popup<a class="headerlink" href="#configure-popup" title="Permanent link">&para;</a></h2>
+<p>Once the tags have been imported, the next step is to configure them and connect them
+to the popup. This is done in a few steps:</p>
+<ul>
+<li>Start the project.</li>
+<li>Navigate to <strong>Settings → Suffix → Suffix Alias - Popups</strong>.</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/Navigation.gif"><img alt="Navigation to settings" src="/docs/Images/Create_Popup/Navigation.gif" width="400" /></a></p>
+<ul>
+<li>Create a new suffix category by pressing <strong>Add new category</strong> and give the
+new category a name. Since we are creating a popup for pump control, name it
+<strong>Pump Control</strong>.</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/Adding%20category.gif"><img alt="Adding category" src="/docs/Images/Create_Popup/Adding%20category.gif" /></a></p>
+<ul>
+<li>Select the new category in the list and click <strong>Add new suffix alias in selected category</strong>. In this example we start with the tag with suffix <code>_IO</code>, which displays
+whether the pump is on or not. Name this suffix <strong>Active</strong>.</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/Adding%20suffix.gif"><img alt="Adding suffix" src="/docs/Images/Create_Popup/Adding%20suffix.gif" /></a></p>
+<ul>
+<li>Fill in the relevant information for this suffix alias:</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/suffix_config.png"><img alt="Configuring suffix" src="/docs/Images/Create_Popup/suffix_config.png" /></a></p>
+<ul>
+<li><strong>Suffix</strong> — The suffix entered on the tag, in this case <code>_IO</code>.</li>
+<li><strong>Writable</strong> — Leave disabled since this is a read-only tag in the PLC.</li>
+<li><strong>Write privilege</strong> — Leave empty since this suffix is not writable.</li>
+<li><strong>Decimals</strong> — Leave as is since this is a boolean signal with no decimals.</li>
+<li><strong>Unit</strong> — Enter the unit for the suffix. Since this is a boolean no unit is needed.</li>
+<li><strong>Description</strong> — A description of what this suffix represents. Since this is a
+status signal, enter <code>On/Off signal</code>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Specific information per tag</p>
+<p>It is possible to overwrite the write privilege, number of decimals, and the
+suffix description per tag by entering the information in the tag description.
+See <a href="../../reference/tag-structure/">Tag Structure</a> for more information.</p>
+</div>
+<p>Repeat these steps for the four remaining tags. In this example the suffixes will
+be named as follows:</p>
+<ul>
+<li><code>_setpoint</code> — <strong>Setpoint</strong></li>
+<li><code>_rpm</code> — <strong>RPM</strong></li>
+<li><code>_error</code> — <strong>Error</strong></li>
+<li><code>_start</code> — <strong>Start</strong></li>
+</ul>
+<p>The finished list should look something like this:</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/configured_suffixes.png"><img alt="configured suffixes" src="/docs/Images/Create_Popup/configured_suffixes.png" /></a></p>
+<h2 id="choosing-a-popup-template">Choosing a popup template<a class="headerlink" href="#choosing-a-popup-template" title="Permanent link">&para;</a></h2>
+<p>WideQuick Modular Framework includes three popup template sizes to choose from
+depending on the complexity of the popup and the amount of content to display:</p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Width</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Template_Popup_Small</strong></td>
+<td>490px</td>
+<td>Simple popups with few rows</td>
+</tr>
+<tr>
+<td><strong>Template_Popup_Medium</strong></td>
+<td>980px</td>
+<td>More complex popups with more content</td>
+</tr>
+<tr>
+<td><strong>Template_Popup_Large</strong></td>
+<td>1480px</td>
+<td>Comprehensive popups with maximum content</td>
+</tr>
+</tbody>
+</table>
+<p>All three templates are found under <strong>Workviews → Templates</strong>. The buttons and layout
+scale automatically with the template size, so the process for building a popup is
+the same regardless of which template is chosen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When in doubt, start with <strong>Template_Popup_Small</strong>. Since popups scale
+automatically based on available tags, a smaller template is often sufficient
+and results in a cleaner, more focused popup.</p>
+</div>
+<h2 id="build-popup">Build popup<a class="headerlink" href="#build-popup" title="Permanent link">&para;</a></h2>
+<p>The final step is to build the popup view for controlling the pump and displaying
+information.</p>
+<p>There are two ways to approach this — start from a new <strong>Workview</strong> or copy an
+existing template view. The easiest approach is to start with the template view,
+which contains all the necessary scripts and configuration. Copy the <strong>Workview</strong>
+<strong>Template_Popup_Small</strong> found under <strong>Workviews → Templates</strong> and name the new
+<strong>Workview</strong> <strong>Pump Control</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Naming popups</p>
+<p>The popup does not need to be named the same as the suffix group created in the
+previous step. This is just a coincidence in this example.</p>
+</div>
+<p>The view can now be built using objects from the <strong>CustomPopupObjects</strong> object
+library. This library contains objects for displaying and controlling tags. If a
+tag is not available for the object displaying the popup, the object will
+automatically be hidden and the popup rescaled to avoid blank space.</p>
+<p>Start by adding an object to display whether the pump has been started. The
+<code>StatusRow</code> object is ideal for this. Drag a <code>StatusRow</code> into the view, select it,
+and open the <strong>Properties</strong> tab. Set the <strong>SuffixAlias</strong> property to <strong>Active</strong> to
+connect this object to the suffix <code>_IO</code>:</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/StatusRow2.png"><img alt="Status row" src="/docs/Images/Create_Popup/StatusRow2.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Suffixes</p>
+<p>The <strong>SuffixAlias</strong> on <strong>CustomPopupObjects</strong> refers to the name given to the
+suffix in the previous step, not the actual suffix. In this example, enter
+<strong>Active</strong> instead of <code>_IO</code>.</p>
+</div>
+<p>Next, add controls for starting and stopping the pump using the <code>2Button_row</code>
+object. One button for start and one for stop. In this example, setting <code>_start</code>
+to <code>0</code> stops the pump and setting it to <code>1</code> starts it. Fill in the properties
+accordingly:</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/2Button_start2.png"><img alt="2 Button start" src="/docs/Images/Create_Popup/2Button_start2.png" /></a></p>
+<p>Next, add a row for setting the setpoint and another for displaying the actual RPM
+using the <code>ValueRow</code> object. This object allows value entry if <strong>Writable</strong> was
+enabled in the previous step, otherwise it displays the value read-only. Since
+<strong>Writable</strong> was enabled for the setpoint but not the RPM, add two <code>ValueRow</code>
+objects and set their <strong>SuffixAlias</strong> to <strong>Setpoint</strong> and <strong>RPM</strong> respectively.</p>
+<p>Finally, add a <code>StatusRow</code> for displaying whether the pump has encountered an error.
+The final view should look something like this:</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/Error.png"><img alt="error row" src="/docs/Images/Create_Popup/Error.png" /></a></p>
+<p>The last step is to resize the view to remove empty space at the bottom. Right-click
+the view in the project tree and select <strong>Properties</strong>. Setting the height to
+approximately <code>520</code> will ensure all objects are visible while removing the empty
+space. The <code>foreGroundBox2</code> object does not need to be resized as it rescales
+automatically with the view.</p>
+<p>Start the application and navigate to <strong>Settings → Suffix → Suffix - Popups</strong>.
+Select <strong>Pump Control</strong> and update <strong>View</strong> to the newly created view <strong>Pump Control</strong>
+as shown below:</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/view_config.png"><img alt="Popup config" src="/docs/Images/Create_Popup/view_config.png" /></a></p>
+<p>All that remains is to start the project and click on <code>pump06</code> to see the <strong>Pump Control</strong> popup. See <a href="../create-an-object/">Create Object</a> to create an object in a
+<strong>Workview</strong>.</p>
+<div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/pump06.png"><img alt="pump06" src="/docs/Images/Create_Popup/pump06.png" style="height:500px;" /></a></p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/pump%20control.png"><img alt="pump control" src="/docs/Images/Create_Popup/pump%20control.png" style="height:500px;" /></a></p>
+</div>
+<h2 id="automatic-scaling">Automatic scaling<a class="headerlink" href="#automatic-scaling" title="Permanent link">&para;</a></h2>
+<p>The content shown for an object is directly linked to which signals, tags, or
+variables are available for that object. When a popup is loaded, the view is
+automatically resized and all rows in the custom popup that are not relevant for
+the linked object are hidden.</p>
+<div class="admonition note">
+<p class="admonition-title">Automatic Scaling</p>
+<p>More information about Automatic Scaling can be found
+<a href="../automatic-scaling/">here</a>.</p>
+</div>
+<p>To illustrate this, a second pump called <code>pump07</code> will be added. This pump has the
+same signals as <code>pump06</code> except it does not have an error tag (<code>_error</code>).</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/pump07_tags.png"><img alt="pump07" src="/docs/Images/Create_Popup/pump07_tags.png" /></a></p>
+<p>When <code>pump07</code> is clicked, the popup will automatically hide the error status row
+and rescale to remove the blank space:</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/Pump%20control_scaled.png"><img alt="pump control scaled" src="/docs/Images/Create_Popup/Pump%20control_scaled.png" /></a></p>
+<p>Because of this feature, popups should always be built to show the maximum number
+of tags — the <strong>worst case</strong> scenario — and will then automatically rescale
+according to the actual number of tags available for the object.</p>
+<h2 id="opening-a-popup">Opening a popup<a class="headerlink" href="#opening-a-popup" title="Permanent link">&para;</a></h2>
+<p>The following section covers the two ways a popup can be opened in WideQuick.
+The opening method is determined by how the <code>DynTouch</code> object is configured in
+<strong>WideQuick® Designer</strong>.</p>
+<p>There are two ways to open a popup in WideQuick, each with a different visual
+behaviour:</p>
+<ul>
+<li>
+<p><strong><code>app.popOut</code></strong> — Opens the popup as a sidebar within the current view. The rest
+of the view is shaded, keeping the user in context while focusing attention on the
+popup. This is the default behaviour for most built-in popups.</p>
+</li>
+<li>
+<p><strong><code>view.link</code></strong> — Opens the popup as a floating window on top of the current view,
+similar to a traditional dialog. This is useful when the popup content needs more
+visual separation from the underlying view.</p>
+</li>
+</ul>
+<div class="figure-row">
+<figure>
+  <a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/view.link.png"><img alt="view.link" src="/docs/Images/Create_Popup/view.link.png" /></a>
+<br />
+<figcaption>Using view.link.</figcaption>
+</figure>
+<figure>
+  <a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/app.popOut.png"><img alt="app.popOut" src="/docs/Images/Create_Popup/app.popOut.png" /></a>
+<br />
+<figcaption>Using app.popOut.</figcaption>
+</figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use <strong><code>app.popOut</code></strong> for most popups — it keeps the user oriented within the
+current view. Use <strong><code>view.link</code></strong> when the popup content is complex enough to
+warrant full visual separation from the underlying view.</p>
+</div>
+<h2 id="opening-a-specific-popup-directly">Opening a specific popup directly<a class="headerlink" href="#opening-a-specific-popup-directly" title="Permanent link">&para;</a></h2>
+<p>By default, clicking a <code>DynTouch</code> object opens the tab navigation first, allowing
+the user to select which popup to view. In cases where users frequently navigate
+to a specific popup — such as <strong>Manover</strong> — it is possible to bypass the tab
+navigation and open that popup directly.</p>
+<p>This is done by using the <code>_DynTouch_DirectLink</code> or <code>_DynTouchRounded_DirectLink</code>
+objects instead of the regular <code>DynTouch</code> object. These are found in the same
+object library as the regular <code>DynTouch</code> object.</p>
+<p>To configure a direct link, set the <strong>startPopup</strong> property on the object to the
+name of the popup that should open on click:</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/Create_Popup/Direct_Link_prop.png"><img alt="DirectLink DynTouch" src="/docs/Images/Create_Popup/Direct_Link_prop.png" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use <code>_DynTouch_DirectLink</code> when users frequently navigate to a specific popup
+tab. This saves an extra click and improves the workflow for operators who
+regularly interact with the same popup.</p>
+</div>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">BMS</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class = "md-footer-meta__inner md-footer__link">
+        
+            </div>
+            <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Kentima AB
+Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+            
+            <!-- Social links -->
+            
+            
+           
+         
+           
+        </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
+      
+        <script src="../../assets/javascripts/custom.js"></script>
+      
+        <script src="../../assets/javascripts/scrollAnim.js"></script>
+      
+        <script src="../../assets/javascripts/tag-filter.js"></script>
+      
+        <script src="/docs/assets/javascripts/version-select.js"></script>
+      
+    
+  </body>
+</html>

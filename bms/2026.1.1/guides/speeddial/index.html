@@ -1,0 +1,3413 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Add a floating action menu to a workview with icon options that run project functions.">
+      
+      
+        <meta name="author" content="johan.vikstrand@kentima.se">
+      
+      
+        <link rel="canonical" href="https://www.widequick.com/docs/bms/2026.1.1/guides/speeddial/">
+      
+      
+      
+        <link rel="prev" href="../remote-systems/">
+      
+      
+        <link rel="next" href="../workview-animations/">
+      
+      
+        
+          <link rel="alternate" href="/docs/" hreflang="en">
+        
+          <link rel="alternate" href="/docs/sv/" hreflang="sv">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.70">
+    
+    
+      
+        <title>Speed Dial - WideQuick Docs</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e442bf79.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="/docs/assets/stylesheets/version-select.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+<script>
+(function () {
+  var COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens'];
+
+  function processItem(item) {
+    var ellipsis = item.querySelector('.md-nav__link .md-ellipsis');
+    if (!ellipsis || COLLAPSED.indexOf(ellipsis.textContent.trim()) === -1) return;
+    item.classList.remove('md-nav__item--section');
+    if (!item.classList.contains('md-nav__item--nested')) {
+      item.classList.add('md-nav__item--nested');
+    }
+    item.classList.add('nav-item--collapsible-section');
+    if (item.querySelector('.md-nav__link--active')) return;
+    var toggle = item.querySelector('input.md-nav__toggle');
+    if (toggle) toggle.checked = false;
+  }
+
+  var observer = new MutationObserver(function (mutations) {
+    for (var i = 0; i < mutations.length; i++) {
+      var added = mutations[i].addedNodes;
+      for (var j = 0; j < added.length; j++) {
+        var node = added[j];
+        if (node.nodeType !== 1) continue;
+        if (node.classList.contains('md-nav__item--section')) processItem(node);
+        var nested = node.querySelectorAll('.md-nav__item--section');
+        for (var k = 0; k < nested.length; k++) processItem(nested[k]);
+      }
+    }
+  });
+
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    observer.disconnect();
+  });
+}());
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/docs/" title="WideQuick Docs" class="md-header__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WideQuick Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Speed Dial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-languages" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/docs/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/docs/sv/" hreflang="sv" class="md-select__link">
+              Svenska
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/wq/" class="md-tabs__link">
+        
+  
+  WideQuick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/mod/" class="md-tabs__link">
+        
+  
+  Modular Framework
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Building Management System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/wwt/" class="md-tabs__link">
+        
+  
+  Water & Wastewater Treatment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/plug-in/" class="md-tabs__link">
+        
+  
+  Plug-in
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/Tools/tag-name-validator/" class="md-tabs__link">
+        
+  
+  Tools
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/docs/" title="WideQuick Docs" class="md-nav__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    WideQuick Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/wq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  WideQuick
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modular Framework
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Building Management System
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Building Management System
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../get-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Get Started
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Get Started
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Download
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/Your%20First%20Tag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Your First Tag
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../modules/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modules
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Modules
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/Core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/audit-trail/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit Trail
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/backup-and-restore/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backup and Restore
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/calendar/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Calendar
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/dashboards/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dashboards
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/documents/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documents
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/history/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  History
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/logbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Logbook
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maintenance/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maps/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maps
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/reports/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reports
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guides
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guides
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automatic-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automatic Scaling
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-an-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Create Object
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-a-popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Create Popup
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Languages
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Loggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Logger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login%20Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Login Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Remote System
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Speed Dial
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Speed Dial
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-speed-dial-to-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding a Speed Dial to a view
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a Speed Dial to a view">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-variant" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Choosing a variant
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configuring the options
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-captions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding captions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Image paths
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-five-standard-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The five standard options
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The five standard options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toggle-dyntouch-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Toggle DynTouch fields
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-specific-alarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. View-specific alarms
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-specific-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. View-specific history
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggle-nameplates" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Toggle nameplates
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-scoped-logbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. View-scoped logbook
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The complete example
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-custom-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding a custom option
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workview-animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workview Animations
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reference
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Reference
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../reference/database-schemas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database Schemas
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/multiview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Multiview
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../reference/Popup/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Popups
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/Resources-and-Resource-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Resources and Resource package
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ScriptHierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script Hierarchy
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/suffix-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suffix System
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tag-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tag Structure
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../releases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Releases
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Releases
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/MigrationGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migration Guide
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/wwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Water & Wastewater Treatment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/plug-in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Plug-in
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/Tools/tag-name-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tools
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-speed-dial-to-a-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding a Speed Dial to a view
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a Speed Dial to a view">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-a-variant" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Choosing a variant
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Configuring the options
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-captions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding captions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Image paths
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-five-standard-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The five standard options
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The five standard options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toggle-dyntouch-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1. Toggle DynTouch fields
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-specific-alarms" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        2. View-specific alarms
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-specific-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        3. View-specific history
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggle-nameplates" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        4. Toggle nameplates
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-scoped-logbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        5. View-scoped logbook
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-complete-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The complete example
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-custom-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Adding a custom option
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../.." class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Building Management System
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="speed-dial">Speed Dial<a class="headerlink" href="#speed-dial" title="Permanent link">&para;</a></h1>
+<details class="info" open="open">
+<summary>Requirements</summary>
+<p>The following scripts are required to use Speed Dial and all
+related functionality covered in the Speed Dial guides:</p>
+<ul>
+<li><code>scLogBook</code></li>
+<li><code>scAlert</code></li>
+</ul>
+</details>
+<p>The Speed Dial is a floating action button placed in a workview. It sits collapsed as a single button and expands into a set of icon options when clicked, so a view can offer several actions without giving up permanent screen space to a toolbar.</p>
+<p>At rest it shows a single <strong>+</strong> button.</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/SpeedDial/speeddial-collapsed.png"><img align="center" alt="Speed Dial collapsed" src="/docs/Images/SpeedDial/speeddial-collapsed.png" /></a></p>
+<p>Clicking it expands the options and rotates the button to a <strong>×</strong>, which collapses it again.</p>
+<p><a class="glightbox" data-type="image" href="/docs/Images/SpeedDial/speeddial-expanded.png"><img align="center" alt="Speed Dial expanded, showing the five standard options" src="/docs/Images/SpeedDial/speeddial-expanded.png" /></a></p>
+<p>Each option is an icon paired with a function. Because the function is written in the view itself, the same component can drive very different actions from one view to the next: toggling a display setting, opening a popup scoped to the current view, or running any other project script.</p>
+<p>The objects live in <code>Speed Dial.klib</code>. A Speed Dial holds a maximum of seven options.</p>
+<h2 id="adding-a-speed-dial-to-a-view">Adding a Speed Dial to a view<a class="headerlink" href="#adding-a-speed-dial-to-a-view" title="Permanent link">&para;</a></h2>
+<p>Drag one of the Speed Dial objects from <code>Speed Dial.klib</code> into the workview and position it where the button should sit. Nothing else is configured through properties. The options are defined in a script on the instance, described in <a href="#configuring-the-options">Configuring the options</a>.</p>
+<h3 id="choosing-a-variant">Choosing a variant<a class="headerlink" href="#choosing-a-variant" title="Permanent link">&para;</a></h3>
+<p>The library provides several variants. They differ only in which direction the options expand and whether each option carries a caption.</p>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Options expand</th>
+<th>Captions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SpeedDial</code></td>
+<td>Vertically, above the button</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>SpeedDialBottom</code></td>
+<td>Vertically, above the button, slots in reverse order</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>SpeedDialVerticalRight</code></td>
+<td>Horizontally, beside the button</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>SpeedDialVerticalLeft</code></td>
+<td>Horizontally, beside the button, slots in reverse order</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>SpeedDialCaption</code></td>
+<td>Vertically</td>
+<td>Below each icon</td>
+</tr>
+<tr>
+<td><code>SpeedDialCaptionBottom</code></td>
+<td>Vertically, slots in reverse order</td>
+<td>Below each icon</td>
+</tr>
+<tr>
+<td><code>SpeedDialCaptionsRight</code></td>
+<td>Vertically</td>
+<td>To the right of each icon</td>
+</tr>
+<tr>
+<td><code>SpeedDialCaptionsRightBottom</code></td>
+<td>Vertically, slots in reverse order</td>
+<td>To the right of each icon</td>
+</tr>
+</tbody>
+</table>
+<p>Use a plain variant where the button sits along the top or bottom of a view, and a <code>Vertical</code> variant where it sits along a side.</p>
+<h2 id="configuring-the-options">Configuring the options<a class="headerlink" href="#configuring-the-options" title="Permanent link">&para;</a></h2>
+<p>A Speed Dial is configured entirely from the instance's <strong>Load</strong> event. Two arrays are assigned there:</p>
+<ul>
+<li><code>ImageArray</code> — the image path for each option, in order.</li>
+<li><code>Functions</code> — the function to run when that option is clicked, in the same order.</li>
+</ul>
+<p>The object's own Load handler reads both arrays and wires them to the option slots, which are named <code>Op0</code> through <code>Op6</code>:</p>
+<div class="language-javascript highlight"><span class="filename">Speed Dial.klib — SpeedDial onLoad()</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">img</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">7</span><span class="p">;</span><span class="w"> </span><span class="nx">img</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">img</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">ImageArray</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">SpeedDialOptions</span><span class="p">[</span><span class="s2">"Op"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">img</span><span class="p">].</span><span class="nx">imgPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">ImageArray</span><span class="p">[</span><span class="nx">img</span><span class="p">]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">SpeedDialOptions</span><span class="p">[</span><span class="s2">"Op"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">img</span><span class="p">].</span><span class="nx">onClick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">Functions</span><span class="p">[</span><span class="nx">img</span><span class="p">]</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">SpeedDialOptions</span><span class="p">[</span><span class="s2">"Op"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">img</span><span class="p">].</span><span class="nx">visible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Slots beyond the length of <code>ImageArray</code> are hidden, so a Speed Dial with three options shows three icons and nothing else. There is no way to add an eighth option without extending the library object.</p>
+<div class="admonition warning">
+<p class="admonition-title">Both arrays are required, and must be the same length</p>
+<p>The loop is driven by the length of <code>ImageArray</code> and indexes <code>Functions</code> with the same counter. An entry present in <code>ImageArray</code> but missing from <code>Functions</code> produces an option whose <code>onClick</code> is <code>undefined</code>, so the icon appears but does nothing.</p>
+</div>
+<h3 id="adding-captions">Adding captions<a class="headerlink" href="#adding-captions" title="Permanent link">&para;</a></h3>
+<p>The caption variants take a third array, <code>Captions</code>, holding the label for each option in the same order:</p>
+<div class="language-javascript highlight"><span class="filename">Workview — SpeedDialCaption onLoad()</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">ImageArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="s2">"Images/Material_Icons/Alarm_white.svg"</span><span class="p">,</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/logs-white.svg"</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">this</span><span class="p">.</span><span class="nx">Captions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="s2">"Alarms"</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">                          </span><span class="s2">"Logbook"</span><span class="p">);</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">this</span><span class="p">.</span><span class="nx">Functions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                           </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">});</span>
+</span></code></pre></div>
+<p>The caption variants run the same loop as the plain ones with one extra assignment, setting <code>Op{n}.Caption.Caption</code> from the array. Pass caption text through <code>Language.translate</code> if the project is translated.</p>
+<h3 id="image-paths">Image paths<a class="headerlink" href="#image-paths" title="Permanent link">&para;</a></h3>
+<p>An image path is given relative to the project root, and the file must exist in the project's resources. The icons used by the standard options live in <code>Images/Material_Icons/</code>.</p>
+<p>Icons are drawn on the Speed Dial's own background, so a white icon variant is normally the right choice. The library ships light icon files for this reason, for example <code>Alarm_white.svg</code> and <code>logs-white.svg</code>.</p>
+<h2 id="the-five-standard-options">The five standard options<a class="headerlink" href="#the-five-standard-options" title="Permanent link">&para;</a></h2>
+<p>Five options recur across process views in the project. Together they form the standard Speed Dial: two display toggles and three view-scoped popups. The system views in the demo project use exactly this set on a <code>SpeedDialVerticalLeft</code>, and it is the set shown expanded above.</p>
+<p>They are listed here in array order. On a <code>SpeedDialVerticalLeft</code> that puts the first entry closest to the button and the last one furthest from it, so the icons read right to left on screen.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Icon</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>dynTouch-white.svg</code></td>
+<td>Toggle DynTouch fields</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>Alarm_white.svg</code></td>
+<td>View-specific alarms</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>chart-line-variant.svg</code></td>
+<td>View-specific history</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>showNamePlate.svg</code></td>
+<td>Toggle nameplates</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>logs-white.svg</code></td>
+<td>View-scoped logbook</td>
+</tr>
+</tbody>
+</table>
+<h3 id="toggle-dyntouch-fields">1. Toggle DynTouch fields<a class="headerlink" href="#toggle-dyntouch-fields" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">dynTouchVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">dynTouchVisible</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>Flips the <code>dynTouchVisible</code> variable in Data Store. When it is <code>true</code> the clickable DynTouch fields over process objects are always visible. The variable is persisted, so the choice survives a restart.</p>
+<p>This gives an operator a way to see which objects in a view are clickable without hovering over each one.</p>
+<h3 id="view-specific-alarms">2. View-specific alarms<a class="headerlink" href="#view-specific-alarms" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="s2">"Common_Popup/VySpecifikAlarm/VySpecifikAlarm.kvie"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">linkName</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="p">})</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Opens the alarm list filtered to the current view. The view's own name is passed as <code>linkName</code>, which is what scopes the list, so the same function works unchanged in every view it is pasted into.</p>
+<p>The filtering is done in the database rather than by the popup. <code>linkName</code> is matched against the <code>View</code> column of <code>ObjectList</code>, and the objects found there are joined to <code>AlarmObjects</code> to arrive at the alarms belonging to the view:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">ao</span><span class="p">.</span><span class="n">AlarmName</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">AlarmObjects</span><span class="w"> </span><span class="n">ao</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">ObjectList</span><span class="w"> </span><span class="n">ol</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">ao</span><span class="p">.</span><span class="n">DeviceKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ol</span><span class="p">.</span><span class="k">Object</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">ol</span><span class="p">.</span><span class="k">View</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'&lt;linkName&gt;'</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">This option depends on both finder scripts</p>
+<p><code>ObjectList</code> is built by <code>scObjectFinder</code> and <code>AlarmObjects</code> by <code>scAlarmFinder</code>. Both must have run for the alarm option to return anything. If either table is empty, or the view has not been indexed, the popup opens with no alarms rather than reporting an error.</p>
+</div>
+<h3 id="view-specific-history">3. View-specific history<a class="headerlink" href="#view-specific-history" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOut</span><span class="p">.</span><span class="nx">newData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">linkName</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOutVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOut</span><span class="p">.</span><span class="nx">setView</span><span class="p">(</span><span class="s2">"Pop_Outs/VySpecifikHistorik.kvie"</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Opens history for the signals belonging to the current view. Unlike the alarm option this uses the pop-out mechanism rather than a link: the data is set first, the pop-out is made visible, and the view is loaded into it.</p>
+<p>Scoping works the same way as for alarms, from a single lookup:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">Select</span><span class="w"> </span><span class="o">`</span><span class="k">Object</span><span class="o">`</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">ObjectList</span><span class="w"> </span><span class="k">Where</span><span class="w"> </span><span class="k">View</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'&lt;linkName&gt;'</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">This option depends on <code>scObjectFinder</code></p>
+<p>Only <code>ObjectList</code> is consulted here, so the history option needs <code>scObjectFinder</code> but not <code>scAlarmFinder</code>. A view missing from <code>ObjectList</code> opens an empty history rather than an error.</p>
+</div>
+<h3 id="toggle-nameplates">4. Toggle nameplates<a class="headerlink" href="#toggle-nameplates" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showNamplates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">showNamplates</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>Flips the <code>showNamplates</code> variable in Data Store, which controls whether nameplates are drawn on process objects. It defaults to on and is persisted.</p>
+<p>Turning nameplates off is useful on dense views where the labels obscure the process picture.</p>
+<div class="admonition note">
+<p class="admonition-title">The variable name is spelled <code>showNamplates</code></p>
+<p>The variable is spelled without the second <code>e</code>. It is the name defined in Data Store, so it has to be written that way in scripts.</p>
+</div>
+<h3 id="view-scoped-logbook">5. View-scoped logbook<a class="headerlink" href="#view-scoped-logbook" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">logbookSelectedTopic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">scLogBook</span><span class="p">.</span><span class="nx">normalizeTopic</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOut</span><span class="p">.</span><span class="nx">setView</span><span class="p">(</span><span class="s2">"Pop_Outs/LogBookControls/GetLogBookEntryByTopic.kvie"</span><span class="p">);</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOutVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">scAlert</span><span class="p">.</span><span class="nx">toFile</span><span class="p">(</span><span class="s2">"SpeedDial logbook: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Opens the logbook filtered to the current view's topic, and new entries created from it are assigned that topic automatically. The topic is taken from the view's own path through <code>scLogBook.normalizeTopic()</code>, so entries written from a Speed Dial group under the view they came from. See <a href="../../modules/logbook/configuring/#topics">Logbook — Configuring</a> for how topics are structured.</p>
+<p>This is the one standard option that guards itself. The logbook depends on a database connection and on <code>scLogBook</code> being loaded, so a failure is written to the alert log through <code>scAlert.toFile()</code> instead of interrupting the operator. See <a href="../../modules/logbook/configuring/#view-scoped">Logbook — Configuring</a> for how view-scoped logbooks behave.</p>
+<h3 id="the-complete-example">The complete example<a class="headerlink" href="#the-complete-example" title="Permanent link">&para;</a></h3>
+<p>The five options as they appear in a system view in the demo project:</p>
+<div class="language-javascript highlight"><span class="filename">System view — SpeedDialVerticalLeft onLoad()</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">this</span><span class="p">.</span><span class="nx">ImageArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="s2">"Images/Material_Icons/dynTouch-white.svg"</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/Alarm_white.svg"</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/chart-line-variant.svg"</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/showNamePlate.svg"</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/logs-white.svg"</span><span class="p">);</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="k">this</span><span class="p">.</span><span class="nx">Functions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">dynTouchVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">dynTouchVisible</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">                           </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">link</span><span class="p">(</span><span class="s2">"Common_Popup/VySpecifikAlarm/VySpecifikAlarm.kvie"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">linkName</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="p">})</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">},</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">                           </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOut</span><span class="p">.</span><span class="nx">newData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">linkName</span><span class="o">:</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOutVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOut</span><span class="p">.</span><span class="nx">setView</span><span class="p">(</span><span class="s2">"Pop_Outs/VySpecifikHistorik.kvie"</span><span class="p">)</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="p">},</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">                           </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">showNamplates</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">showNamplates</span><span class="p">;</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">                           </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">logbookSelectedTopic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">scLogBook</span><span class="p">.</span><span class="nx">normalizeTopic</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">view</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOut</span><span class="p">.</span><span class="nx">setView</span><span class="p">(</span><span class="s2">"Pop_Outs/LogBookControls/GetLogBookEntryByTopic.kvie"</span><span class="p">);</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOutVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">scAlert</span><span class="p">.</span><span class="nx">toFile</span><span class="p">(</span><span class="s2">"SpeedDial logbook: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="p">})</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
+<p>Every function refers to the view through <code>this.view</code> rather than naming a view, so the block can be copied into a new process view without editing. Adding the standard Speed Dial to a view is a matter of placing the object and pasting this script into its Load event.</p>
+<h2 id="adding-a-custom-option">Adding a custom option<a class="headerlink" href="#adding-a-custom-option" title="Permanent link">&para;</a></h2>
+<p>A custom option is added by extending both arrays with a matching pair. To add a documents option to the standard set:</p>
+<div class="language-javascript highlight"><span class="filename">Workview — SpeedDial onLoad() — after</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">ImageArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="s2">"Images/Material_Icons/dynTouch-white.svg"</span><span class="p">,</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/Alarm_white.svg"</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/chart-line-variant.svg"</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/showNamePlate.svg"</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/logs-white.svg"</span><span class="p">,</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">                            </span><span class="s2">"Images/Material_Icons/file-document-edit-outline-white.svg"</span><span class="p">);</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="k">this</span><span class="p">.</span><span class="nx">Functions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">dynTouchVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">dynTouchVisible</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">                           </span><span class="cm">/* ... the four standard functions ... */</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">                           </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOut</span><span class="p">.</span><span class="nx">setView</span><span class="p">(</span><span class="s2">"Common_Popup/Documents.kvie"</span><span class="p">);</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">popOutVisible</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>Keep the two arrays aligned. An entry added to one and not the other is the most common configuration mistake, and it fails quietly rather than raising an error.</p>
+<div class="admonition tip">
+<p class="admonition-title">Scripts run in the object's context</p>
+<p>Inside these functions <code>this</code> is the option object, so the current view is reached through <code>this.view</code>. A function that needs the Speed Dial itself can use <code>this.parent</code>.</p>
+</div>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">BMS</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class = "md-footer-meta__inner md-footer__link">
+        
+            </div>
+            <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Kentima AB
+Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+            
+            <!-- Social links -->
+            
+            
+           
+         
+           
+        </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
+      
+        <script src="../../assets/javascripts/custom.js"></script>
+      
+        <script src="../../assets/javascripts/scrollAnim.js"></script>
+      
+        <script src="../../assets/javascripts/tag-filter.js"></script>
+      
+        <script src="/docs/assets/javascripts/version-select.js"></script>
+      
+    
+  </body>
+</html>

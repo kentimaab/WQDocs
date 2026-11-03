@@ -1,0 +1,3435 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dependency map for all scripts in WideQuick BMS.">
+      
+      
+        <meta name="author" content="johan.vikstrand@kentima.se">
+      
+      
+        <link rel="canonical" href="https://www.widequick.com/docs/bms/2026.1.1/reference/ScriptHierarchy/">
+      
+      
+      
+        <link rel="prev" href="../Resources-and-Resource-package/">
+      
+      
+        <link rel="next" href="../suffix-system/">
+      
+      
+        
+          <link rel="alternate" href="/docs/" hreflang="en">
+        
+          <link rel="alternate" href="/docs/sv/" hreflang="sv">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.70">
+    
+    
+      
+        <title>Script Dependencies - WideQuick Docs</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e442bf79.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="/docs/assets/stylesheets/version-select.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+<script>
+(function () {
+  var COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens'];
+
+  function processItem(item) {
+    var ellipsis = item.querySelector('.md-nav__link .md-ellipsis');
+    if (!ellipsis || COLLAPSED.indexOf(ellipsis.textContent.trim()) === -1) return;
+    item.classList.remove('md-nav__item--section');
+    if (!item.classList.contains('md-nav__item--nested')) {
+      item.classList.add('md-nav__item--nested');
+    }
+    item.classList.add('nav-item--collapsible-section');
+    if (item.querySelector('.md-nav__link--active')) return;
+    var toggle = item.querySelector('input.md-nav__toggle');
+    if (toggle) toggle.checked = false;
+  }
+
+  var observer = new MutationObserver(function (mutations) {
+    for (var i = 0; i < mutations.length; i++) {
+      var added = mutations[i].addedNodes;
+      for (var j = 0; j < added.length; j++) {
+        var node = added[j];
+        if (node.nodeType !== 1) continue;
+        if (node.classList.contains('md-nav__item--section')) processItem(node);
+        var nested = node.querySelectorAll('.md-nav__item--section');
+        for (var k = 0; k < nested.length; k++) processItem(nested[k]);
+      }
+    }
+  });
+
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    observer.disconnect();
+  });
+}());
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/docs/" title="WideQuick Docs" class="md-header__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WideQuick Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Script Dependencies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-languages" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/docs/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/docs/sv/" hreflang="sv" class="md-select__link">
+              Svenska
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/" class="md-tabs__link">
+        
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/wq/" class="md-tabs__link">
+        
+  
+  WideQuick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/mod/" class="md-tabs__link">
+        
+  
+  Modular Framework
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Building Management System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/wwt/" class="md-tabs__link">
+        
+  
+  Water & Wastewater Treatment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/plug-in/" class="md-tabs__link">
+        
+  
+  Plug-in
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/Tools/tag-name-validator/" class="md-tabs__link">
+        
+  
+  Tools
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/docs/" title="WideQuick Docs" class="md-nav__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    WideQuick Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Home
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/wq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  WideQuick
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modular Framework
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Building Management System
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Building Management System
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../get-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Get Started
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Get Started
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Download
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/Your%20First%20Tag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Your First Tag
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../modules/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modules
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Modules
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/Core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Core
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/audit-trail/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Audit Trail
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/backup-and-restore/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Backup and Restore
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/calendar/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Calendar
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/dashboards/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dashboards
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/documents/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Documents
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/history/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  History
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/logbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Logbook
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maintenance/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maintenance
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maps/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Maps
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/reports/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reports
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guides/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guides
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guides
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/automatic-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automatic Scaling
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/create-an-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Create Object
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/create-a-popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Create Popup
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Languages
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/Loggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Logger
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/Login%20Config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Login Config
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/remote-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Remote System
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/speeddial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Speed Dial
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/workview-animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Workview Animations
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Reference
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Reference
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../database-schemas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Database Schemas
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Multiview
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../Popup/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Popups
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resources-and-Resource-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Resources and Resource package
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script Hierarchy
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Script Hierarchy
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Dependency graph
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reference tables
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        No dependencies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Single dependency
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Multiple dependencies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suffix-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suffix System
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tag-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tag Structure
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../releases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Releases
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_6">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Releases
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/MigrationGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Migration Guide
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/wwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Water & Wastewater Treatment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/plug-in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Plug-in
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/Tools/tag-name-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Tools
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Dependency graph
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Reference tables
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        No dependencies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#single-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Single dependency
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Multiple dependencies
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../.." class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Building Management System
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="script-dependencies">Script Dependencies<a class="headerlink" href="#script-dependencies" title="Permanent link">&para;</a></h1>
+<p>This page lists all scripts in WideQuick Modular Framework and their dependencies.
+A script listed under <strong>Requires</strong> must be present and running for the script to
+function correctly.</p>
+<h2 id="dependency-graph">Dependency graph<a class="headerlink" href="#dependency-graph" title="Permanent link">&para;</a></h2>
+<p>The graph below shows all scripts grouped by dependency layer — from standalone
+scripts at the top to the most complex chains at the bottom. Click a node to
+highlight its direct dependencies and dependents. Use the layer buttons to focus
+on a specific level.</p>
+<div>
+<style>
+* { box-sizing: border-box; }
+.wrap { padding: 1rem 0; font-family: var(--md-text-font, sans-serif); }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem; }
+.controls button { font-size: 12px; padding: 4px 10px; border-radius: 4px; border: 0.5px solid var(--md-default-fg-color--lighter); background: var(--md-default-bg-color); color: var(--md-default-fg-color); cursor: pointer; font-family: var(--md-text-font, sans-serif); }
+.controls button:hover { background: var(--md-code-bg-color); }
+.controls button.active { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); border-color: var(--md-primary-fg-color); }
+svg text { font-family: var(--md-text-font, sans-serif); }
+.node-g { cursor: pointer; }
+.node-g rect { transition: opacity 0.2s; }
+.node-g:hover rect { opacity: 0.85; }
+#sdg-tooltip { position: fixed; background: var(--md-default-bg-color); border: 0.5px solid var(--md-default-fg-color--lighter); border-radius: 4px; padding: 8px 12px; font-size: 12px; color: var(--md-default-fg-color); pointer-events: none; display: none; z-index: 999; max-width: 220px; font-family: var(--md-text-font, sans-serif); }
+#sdg-tooltip strong { display: block; margin-bottom: 4px; color: var(--md-default-fg-color); }
+#sdg-tooltip span { color: var(--md-default-fg-color--light); }
+</style>
+<div class="wrap">
+<div class="controls" id="sdg-controls">
+  <button class="active" data-layer="all">All layers</button>
+  <button data-layer="0">Layer 0 — standalone</button>
+  <button data-layer="1">Layer 1</button>
+  <button data-layer="2">Layer 2</button>
+  <button data-layer="3">Layer 3</button>
+  <button data-layer="4">Layer 4</button>
+</div>
+<svg id="sdg-g" width="100%" viewBox="0 0 680 820" role="img">
+  <title>Script dependency graph</title>
+  <desc>Layered dependency graph of WideQuick scripts from standalone scripts to complex dependency chains</desc>
+  <defs>
+    <marker id="sdg-arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+</svg>
+<div id="sdg-tooltip"></div>
+</div>
+<script>
+(function(){
+function initGraph() {
+const svg = document.getElementById('sdg-g');
+if (!svg || svg.dataset.initialized) return;
+svg.dataset.initialized = '1';
+const deps = {"scAlert":[],"scQuickSort":[],"scKeybindings":[],"scModem":[],"scOSK":[],"scDatabase":["scAlert"],"scObjectFinder":["scAlert"],"scUsers":["scAlert"],"scPrototypes":["scAlert"],"scPlatform":["scAlert"],"scThemes":["scAlert"],"scSuffix":["scAlert"],"scLogBook":["scAlert"],"scAuditTrail":["scAlert"],"scBackUpAndRestore":[],"scRemoteClients":["scAlert"],"scRemoteSystems":["scAlert"],"scTimeChannel":["scAlert"],"scToolTip":["scAlert"],"scTrend":["scAlert"],"scWM":["scAlert"],"scWeather":["scAlert"],"scMapObjects":["scAlert"],"scButtons":["scAlert"],"scInit":["scAlert"],"scMail":["scAlert"],"scReports":["scAlert"],"scMaintenance":["scAlert","scDatabase"],"scSubNav":["scAlert","scUsers","scSuffix"],"scHistory":["scAlert","scPrototypes","scQuickSort","scThemes"],"scNav":["scAlert","scThemes"],"scFilePicker":["scAlert","scThemes"],"scAlarm":["scAlert","scPrototypes"],"scMap":["scAlert","scThemes","scMaintenance"],"scSubNavPopup":["scAlert","scUsers","scSubNav"],"scLinking":["scAlert","scPrototypes","scSubNav","scObjectFinder"],"scSmartPopup":["scAlert","scPrototypes","scUsers","scSuffix"],"scStyrkurva":["scAlert","scSuffix"],"scStyrkurvaTid":["scAlert","scSuffix"],"scWorkviewAnimation":["scAlert","scSuffix"],"scRemoteAlarms":["scAlert","scAlarm"],"scReportScheduler":["scAlert","scReports"],"scAlarmSender":["scAlert","scMail"],"scCalendar":["scAlert","scThemes","scMaintenance"],"scDashboard":["scAlert","scHistory"],"scDoc":["scAlert","scThemes","scLinking"],"scAlarmFinder":["scAlert","scObjectFinder","scLinking","scMap"],"scDayViewManager":["scAlert","scThemes","scCalendar"],"scWeekViewManager":["scAlert","scThemes","scCalendar"]};
+
+function getLayer(s, memo={}) {
+  if (s in memo) return memo[s];
+  if (!deps[s] || deps[s].length===0) { memo[s]=0; return 0; }
+  memo[s] = 1 + Math.max(...deps[s].map(d=>getLayer(d,memo)));
+  return memo[s];
+}
+const layers = {};
+Object.keys(deps).forEach(s=>{ layers[s]=getLayer(s); });
+
+function getAllDeps(s, visited=new Set()) {
+  if (visited.has(s)) return visited;
+  visited.add(s);
+  (deps[s]||[]).forEach(d => getAllDeps(d, visited));
+  return visited;
+}
+
+const layerColors = {
+  0: { fill:'#EEEDFE', stroke:'#534AB7', text:'#26215C' },
+  1: { fill:'#E1F5EE', stroke:'#0F6E56', text:'#04342C' },
+  2: { fill:'#FAEEDA', stroke:'#854F0B', text:'#412402' },
+  3: { fill:'#FAECE7', stroke:'#993C1D', text:'#4A1B0C' },
+  4: { fill:'#FBEAF0', stroke:'#993556', text:'#4B1528' },
+};
+const darkColors = {
+  0: { fill:'#3C3489', stroke:'#AFA9EC', text:'#EEEDFE' },
+  1: { fill:'#085041', stroke:'#5DCAA5', text:'#E1F5EE' },
+  2: { fill:'#633806', stroke:'#EF9F27', text:'#FAEEDA' },
+  3: { fill:'#712B13', stroke:'#F0997B', text:'#FAECE7' },
+  4: { fill:'#72243E', stroke:'#ED93B1', text:'#FBEAF0' },
+};
+const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+const C = dark ? darkColors : layerColors;
+const edgeColor = dark ? '#555' : '#ccc';
+
+const byLayer = {};
+Object.keys(deps).forEach(s=>{
+  const l = layers[s];
+  if (!byLayer[l]) byLayer[l]=[];
+  byLayer[l].push(s);
+});
+
+const nodeW = 148, nodeH = 28, padX = 8, padY = 44;
+const svgW = 680;
+const positions = {};
+
+const layerNums = Object.keys(byLayer).map(Number).sort((a,b)=>a-b);
+let y = 48;
+layerNums.forEach(l => {
+  const nodes = byLayer[l];
+  const cols = Math.min(nodes.length, 4);
+  const totalW = cols * nodeW + (cols-1)*padX;
+  const startX = (svgW - totalW) / 2;
+  nodes.forEach((s,i) => {
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    positions[s] = { x: startX + col*(nodeW+padX), y: y + row*(nodeH+8) };
+  });
+  const rows = Math.ceil(nodes.length/cols);
+  y += rows*(nodeH+8) + padY;
+});
+
+const svgH = y + 20;
+//const svg = document.getElementById('sdg-g');
+svg.setAttribute('viewBox', `0 0 ${svgW} ${svgH}`);
+
+const edgeLayer = document.createElementNS('http://www.w3.org/2000/svg','g');
+edgeLayer.id = 'sdg-edges';
+svg.appendChild(edgeLayer);
+
+const nodeLayer = document.createElementNS('http://www.w3.org/2000/svg','g');
+nodeLayer.id = 'sdg-nodes';
+svg.appendChild(nodeLayer);
+
+layerNums.forEach(l => {
+  const nodes = byLayer[l];
+  const ys = nodes.map(s=>positions[s].y);
+  const minY = Math.min(...ys);
+  const c = C[l];
+  const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
+  lbl.setAttribute('x','16');
+  lbl.setAttribute('y', String(minY + nodeH/2 + 4));
+  lbl.setAttribute('font-size','11');
+  lbl.setAttribute('fill', c.stroke);
+  lbl.setAttribute('font-family','var(--md-text-font, sans-serif)');
+  lbl.textContent = `L${l}`;
+  svg.appendChild(lbl);
+});
+
+Object.keys(deps).forEach(s => {
+  deps[s].forEach(dep => {
+    if (!positions[dep] || !positions[s]) return;
+    const sx = positions[dep].x + nodeW/2;
+    const sy = positions[dep].y + nodeH;
+    const ex = positions[s].x + nodeW/2;
+    const ey = positions[s].y;
+    const midY = (sy + ey) / 2;
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d',`M${sx},${sy} C${sx},${midY} ${ex},${midY} ${ex},${ey}`);
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke', edgeColor);
+    path.setAttribute('stroke-width','0.8');
+    path.setAttribute('marker-end','url(#sdg-arr)');
+    path.dataset.from = dep;
+    path.dataset.to = s;
+    edgeLayer.appendChild(path);
+  });
+});
+
+const tooltip = document.getElementById('sdg-tooltip');
+
+Object.keys(deps).forEach(s => {
+  if (!positions[s]) return;
+  const {x,y} = positions[s];
+  const l = layers[s];
+  const c = C[l];
+  const g = document.createElementNS('http://www.w3.org/2000/svg','g');
+  g.classList.add('node-g');
+  g.dataset.name = s;
+  g.dataset.layer = l;
+  const rect = document.createElementNS('http://www.w3.org/2000/svg','rect');
+  rect.setAttribute('x', x); rect.setAttribute('y', y);
+  rect.setAttribute('width', nodeW); rect.setAttribute('height', nodeH);
+  rect.setAttribute('rx','5');
+  rect.setAttribute('fill', c.fill);
+  rect.setAttribute('stroke', c.stroke);
+  rect.setAttribute('stroke-width','0.5');
+  const txt = document.createElementNS('http://www.w3.org/2000/svg','text');
+  txt.setAttribute('x', x + nodeW/2);
+  txt.setAttribute('y', y + nodeH/2 + 1);
+  txt.setAttribute('text-anchor','middle');
+  txt.setAttribute('dominant-baseline','central');
+  txt.setAttribute('font-size','11');
+  txt.setAttribute('font-family','var(--md-text-font, sans-serif)');
+  txt.setAttribute('fill', c.text);
+  txt.textContent = s;
+  g.appendChild(rect); g.appendChild(txt);
+
+  g.addEventListener('mouseenter', e => {
+    const requires = deps[s];
+    const requiredBy = Object.keys(deps).filter(k=>deps[k].includes(s));
+    tooltip.innerHTML = `<strong>${s}</strong><span>Layer ${l}<br>Requires: ${requires.length ? requires.join(', ') : 'none'}<br>Required by: ${requiredBy.length ? requiredBy.join(', ') : 'none'}</span>`;
+    tooltip.style.display = 'block';
+  });
+  g.addEventListener('mousemove', e => {
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top = (e.clientY - 10) + 'px';
+  });
+  g.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+
+  g.addEventListener('click', () => {
+    const allDeps = getAllDeps(s);
+    allDeps.delete(s);
+    const requiredBy = new Set(Object.keys(deps).filter(k=>deps[k].includes(s)));
+    document.querySelectorAll('.node-g').forEach(n => {
+      const name = n.dataset.name;
+      const r = n.querySelector('rect');
+      const t = n.querySelector('text');
+      if (name === s) {
+        r.setAttribute('stroke-width','2'); r.setAttribute('opacity','1'); t.setAttribute('opacity','1');
+      } else if (allDeps.has(name) || requiredBy.has(name)) {
+        r.setAttribute('stroke-width','1'); r.setAttribute('opacity','0.55'); t.setAttribute('opacity','0.55');
+      } else {
+        r.setAttribute('stroke-width','0.5'); r.setAttribute('opacity','0.08'); t.setAttribute('opacity','0.08');
+      }
+    });
+    document.querySelectorAll('#sdg-edges path').forEach(p => {
+      const from = p.dataset.from, to = p.dataset.to;
+      if ((to===s && allDeps.has(from)) || (from===s && requiredBy.has(to))) {
+        p.style.opacity='0.6'; p.setAttribute('stroke-width','1.2');
+      } else {
+        p.style.opacity='0.04'; p.setAttribute('stroke-width','0.8');
+      }
+    });
+  });
+
+  nodeLayer.appendChild(g);
+});
+
+document.getElementById('sdg-controls').addEventListener('click', e => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  document.querySelectorAll('#sdg-controls button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const layer = btn.dataset.layer;
+  document.querySelectorAll('.node-g').forEach(n => {
+    const r = n.querySelector('rect');
+    const t = n.querySelector('text');
+    r.setAttribute('stroke-width','0.5');
+    const show = layer==='all' || n.dataset.layer===layer;
+    r.setAttribute('opacity', show ? '1' : '0.1');
+    t.setAttribute('opacity', show ? '1' : '0.1');
+  });
+  document.querySelectorAll('#sdg-edges path').forEach(p => {
+    p.setAttribute('stroke-width','0.8');
+    if (layer==='all') { p.style.opacity=''; return; }
+    const fromL = layers[p.dataset.from], toL = layers[p.dataset.to];
+    p.style.opacity = (String(fromL)===layer||String(toL)===layer) ? '1' : '0.05';
+  });
+});
+
+svg.addEventListener('click', e => {
+  if (!e.target.closest('.node-g')) {
+    document.querySelectorAll('.node-g').forEach(n => {
+      const r = n.querySelector('rect');
+      r.setAttribute('stroke-width','0.5'); r.setAttribute('opacity','1');
+      n.querySelector('text').setAttribute('opacity','1');
+    });
+    document.querySelectorAll('#sdg-edges path').forEach(p => {
+      p.style.opacity=''; p.setAttribute('stroke-width','0.8');
+    });
+  }
+});
+}
+initGraph();
+if (typeof document$ !== 'undefined') {
+  document$.subscribe(function() { if (document.getElementById('sdg-g')) initGraph(); });
+}
+})();
+</script>
+</div>
+<h2 id="reference-tables">Reference tables<a class="headerlink" href="#reference-tables" title="Permanent link">&para;</a></h2>
+<h3 id="no-dependencies">No dependencies<a class="headerlink" href="#no-dependencies" title="Permanent link">&para;</a></h3>
+<p>The following scripts have no dependencies and can run standalone:</p>
+<ul>
+<li><code>scAlert</code></li>
+<li><code>scQuickSort</code></li>
+<li><code>scKeybindings</code></li>
+<li><code>scModem</code></li>
+<li><code>scOSK</code></li>
+</ul>
+<h3 id="single-dependency">Single dependency<a class="headerlink" href="#single-dependency" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Requires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scDatabase</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scObjectFinder</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scUsers</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scPrototypes</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scPlatform</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scThemes</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scSuffix</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scLogBook</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scAuditTrail</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scRemoteClients</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scRemoteSystems</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scTimeChannel</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scToolTip</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scTrend</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scWM</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scWeather</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scMapObjects</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scButtons</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scInit</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scSimMB</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scMail</code></td>
+<td><code>scAlert</code></td>
+</tr>
+<tr>
+<td><code>scReports</code></td>
+<td><code>scAlert</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="multiple-dependencies">Multiple dependencies<a class="headerlink" href="#multiple-dependencies" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Requires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scMaintenance</code></td>
+<td><code>scAlert</code>, <code>scDatabase</code></td>
+</tr>
+<tr>
+<td><code>scSubNav</code></td>
+<td><code>scAlert</code>, <code>scUsers</code>, <code>scSuffix</code></td>
+</tr>
+<tr>
+<td><code>scHistory</code></td>
+<td><code>scAlert</code>, <code>scPrototypes</code>, <code>scQuickSort</code>, <code>scThemes</code></td>
+</tr>
+<tr>
+<td><code>scNav</code></td>
+<td><code>scAlert</code>, <code>scThemes</code></td>
+</tr>
+<tr>
+<td><code>scFilePicker</code></td>
+<td><code>scAlert</code>, <code>scThemes</code></td>
+</tr>
+<tr>
+<td><code>scAlarm</code></td>
+<td><code>scAlert</code>, <code>scPrototypes</code></td>
+</tr>
+<tr>
+<td><code>scMap</code></td>
+<td><code>scAlert</code>, <code>scThemes</code>, <code>scMaintenance</code></td>
+</tr>
+<tr>
+<td><code>scSubNavPopup</code></td>
+<td><code>scAlert</code>, <code>scUsers</code>, <code>scSubNav</code></td>
+</tr>
+<tr>
+<td><code>scLinking</code></td>
+<td><code>scAlert</code>, <code>scPrototypes</code>, <code>scSubNav</code>, <code>scObjectFinder</code></td>
+</tr>
+<tr>
+<td><code>scSmartPopup</code></td>
+<td><code>scAlert</code>, <code>scPrototypes</code>, <code>scUsers</code>, <code>scSuffix</code></td>
+</tr>
+<tr>
+<td><code>scStyrkurva</code></td>
+<td><code>scAlert</code>, <code>scSuffix</code></td>
+</tr>
+<tr>
+<td><code>scStyrkurvaTid</code></td>
+<td><code>scAlert</code>, <code>scSuffix</code></td>
+</tr>
+<tr>
+<td><code>scWorkviewAnimation</code></td>
+<td><code>scAlert</code>, <code>scSuffix</code></td>
+</tr>
+<tr>
+<td><code>scRemoteAlarms</code></td>
+<td><code>scAlert</code>, <code>scAlarm</code></td>
+</tr>
+<tr>
+<td><code>scReportScheduler</code></td>
+<td><code>scAlert</code>, <code>scReports</code></td>
+</tr>
+<tr>
+<td><code>scAlarmSender</code></td>
+<td><code>scAlert</code>, <code>scMail</code></td>
+</tr>
+<tr>
+<td><code>scCalendar</code></td>
+<td><code>scAlert</code>, <code>scThemes</code>, <code>scMaintenance</code></td>
+</tr>
+<tr>
+<td><code>scDashboard</code></td>
+<td><code>scAlert</code>, <code>scHistory</code></td>
+</tr>
+<tr>
+<td><code>scDoc</code></td>
+<td><code>scAlert</code>, <code>scThemes</code>, <code>scLinking</code></td>
+</tr>
+<tr>
+<td><code>scAlarmFinder</code></td>
+<td><code>scAlert</code>, <code>scObjectFinder</code>, <code>scLinking</code>, <code>scMap</code></td>
+</tr>
+<tr>
+<td><code>scDayViewManager</code></td>
+<td><code>scAlert</code>, <code>scThemes</code>, <code>scCalendar</code></td>
+</tr>
+<tr>
+<td><code>scWeekViewManager</code></td>
+<td><code>scAlert</code>, <code>scThemes</code>, <code>scCalendar</code></td>
+</tr>
+</tbody>
+</table>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">BMS</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class = "md-footer-meta__inner md-footer__link">
+        
+            </div>
+            <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Kentima AB
+Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+            
+            <!-- Social links -->
+            
+            
+           
+         
+           
+        </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
+      
+        <script src="../../assets/javascripts/custom.js"></script>
+      
+        <script src="../../assets/javascripts/scrollAnim.js"></script>
+      
+        <script src="../../assets/javascripts/tag-filter.js"></script>
+      
+        <script src="/docs/assets/javascripts/version-select.js"></script>
+      
+    
+  </body>
+</html>
