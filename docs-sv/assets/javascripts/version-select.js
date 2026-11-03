@@ -6,8 +6,8 @@
 // version is: its live pages under a name ({"live": "MOD 2027.1.0"}), or one of its archives
 // when the live pages aren't released yet ({"pinned": "2026.1.1"}; the deploy then sends the
 // live pages there). On a product's pages this puts a version menu at the top of the left
-// sidebar and keeps the reader on the same page when the chosen version has it. Products with
-// neither a live name nor an archive get no menu.
+// sidebar and keeps the reader on the same page, scrolled to the same place, when the chosen
+// version has it. Products with neither a live name nor an archive get no menu.
 //
 // Archived pages load this script and its stylesheet from the live site, so a change here
 // reaches every archive. Archived pages other than the current version get a banner pointing
@@ -30,6 +30,7 @@
             link: 'Gå till {current}'
         }
     };
+    var SCROLL_KEY = 'wq-version-scroll';
     var lists = {};
     var currents = null;
     var renders = 0;
@@ -63,11 +64,75 @@
         return currents;
     }
 
+    // Where the reader is on the page, for the version about to open: the last heading above the
+    // top of the window and how far above it is. The same page can differ in length between
+    // versions, so the heading places the reader better than the scroll offset alone.
+    function rememberScroll(url) {
+        var headings = document.querySelectorAll(
+            '.md-content__inner h1[id], .md-content__inner h2[id], .md-content__inner h3[id], ' +
+            '.md-content__inner h4[id], .md-content__inner h5[id], .md-content__inner h6[id]');
+        var anchor = null;
+        for (var i = 0; i < headings.length && headings[i].getBoundingClientRect().top <= 0; i++) {
+            anchor = headings[i];
+        }
+        try {
+            sessionStorage.setItem(SCROLL_KEY, JSON.stringify({
+                path: url,
+                y: window.scrollY,
+                id: anchor ? anchor.id : null,
+                offset: anchor ? anchor.getBoundingClientRect().top : 0
+            }));
+        } catch (e) {
+            // No session storage: the page opens at the top
+        }
+    }
+
+    // What rememberScroll() saved, if it was saved for this page. Read once, as the page loads.
+    function takeScroll() {
+        try {
+            var saved = JSON.parse(sessionStorage.getItem(SCROLL_KEY));
+            sessionStorage.removeItem(SCROLL_KEY);
+            return saved && saved.path === location.pathname ? saved : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    // Back at the saved place: at the same heading, or without it in this version, at the same
+    // scroll offset. Runs after the first render, whose banner moves the page down.
+    function restoreScroll() {
+        var saved = savedScroll;
+        savedScroll = null;
+        if (!saved) {
+            return;
+        }
+        var y = null;
+        function apply() {
+            var heading = saved.id && document.getElementById(saved.id);
+            var top = heading ? heading.getBoundingClientRect().top + window.scrollY - saved.offset : saved.y;
+            window.scrollTo({ top: top, behavior: 'instant' });
+            y = window.scrollY;
+        }
+        requestAnimationFrame(apply);
+        // Images above the place move it while they load. Unless the reader has scrolled since.
+        window.addEventListener('load', function () {
+            if (y === null || window.scrollY === y) {
+                apply();
+            }
+        });
+    }
+
     // An archive is a site of its own, so switching is a full page load rather than the theme's
-    // instant navigation. Lands on the same page when the target version has it, else its start.
+    // instant navigation. Lands on the same page and place when the target version has the page,
+    // else on its start page.
     function go(base, page) {
         fetch(base + page, { method: 'HEAD' })
-            .then(function (r) { location.href = r.ok ? base + page : base; })
+            .then(function (r) {
+                if (r.ok) {
+                    rememberScroll(base + page);
+                }
+                location.href = r.ok ? base + page : base;
+            })
             .catch(function () { location.href = base; });
     }
 
@@ -128,6 +193,47 @@
         return li;
     }
 
+    // The menu, and on archived pages the banner and the "Home" breadcrumb, for one product page.
+    // list: the product's archived versions; entry: its line in current-versions.json.
+    function show(here, list, entry) {
+        document.querySelectorAll('.wq-version, .wq-version-banner, .wq-version-home').forEach(function (el) {
+            el.remove();
+        });
+        var t = TEXT[here.lang];
+        var pinned = list.filter(function (v) { return v.version === entry.pinned; })[0];
+        // Without a pinned archive the live pages are current, named or not
+        var live = pinned ? null : (entry.live || (list.length ? t.latest : null));
+        if (!live && !list.length) {
+            return;
+        }
+        var first = here.rest.split('/')[0];
+        var archived = list.filter(function (v) { return v.version === first; })[0];
+        var page = archived ? here.rest.slice(first.length + 1) : here.rest;
+        var current = pinned
+            ? { title: pinned.title || pinned.version, base: here.root + pinned.version + '/' }
+            : { title: live, base: here.root };
+
+        var options = live ? [{ title: live, base: here.root, selected: !archived }] : [];
+        list.forEach(function (v) {
+            options.push({ title: v.title || v.version, base: here.root + v.version + '/', selected: v === archived });
+        });
+        var sidebar = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
+        if (sidebar) {
+            sidebar.insertBefore(menu(t, options, page), sidebar.firstChild);
+        }
+        if (!archived) {
+            return;
+        }
+        var content = document.querySelector('.md-content__inner');
+        if (content && archived !== pinned) {
+            content.insertBefore(banner(t, archived.title || archived.version, current, page), content.firstChild);
+        }
+        var crumbs = document.querySelector('.md-path__list');
+        if (crumbs) {
+            crumbs.insertBefore(homeCrumb(t, here), crumbs.firstChild);
+        }
+    }
+
     function render() {
         var mine = ++renders;
         var here = locate();
@@ -139,47 +245,12 @@
             if (mine !== renders) {
                 return;
             }
-            document.querySelectorAll('.wq-version, .wq-version-banner, .wq-version-home').forEach(function (el) {
-                el.remove();
-            });
-            var list = results[0];
-            var entry = results[1][here.product] || {};
-            var t = TEXT[here.lang];
-            var pinned = list.filter(function (v) { return v.version === entry.pinned; })[0];
-            // Without a pinned archive the live pages are current, named or not
-            var live = pinned ? null : (entry.live || (list.length ? t.latest : null));
-            if (!live && !list.length) {
-                return;
-            }
-            var first = here.rest.split('/')[0];
-            var archived = list.filter(function (v) { return v.version === first; })[0];
-            var page = archived ? here.rest.slice(first.length + 1) : here.rest;
-            var current = pinned
-                ? { title: pinned.title || pinned.version, base: here.root + pinned.version + '/' }
-                : { title: live, base: here.root };
-
-            var options = live ? [{ title: live, base: here.root, selected: !archived }] : [];
-            list.forEach(function (v) {
-                options.push({ title: v.title || v.version, base: here.root + v.version + '/', selected: v === archived });
-            });
-            var sidebar = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
-            if (sidebar) {
-                sidebar.insertBefore(menu(t, options, page), sidebar.firstChild);
-            }
-            if (!archived) {
-                return;
-            }
-            var content = document.querySelector('.md-content__inner');
-            if (content && archived !== pinned) {
-                content.insertBefore(banner(t, archived.title || archived.version, current, page), content.firstChild);
-            }
-            var crumbs = document.querySelector('.md-path__list');
-            if (crumbs) {
-                crumbs.insertBefore(homeCrumb(t, here), crumbs.firstChild);
-            }
+            show(here, results[0], results[1][here.product] || {});
+            restoreScroll();
         });
     }
 
+    var savedScroll = takeScroll();
     document.addEventListener('DOMContentLoaded', render);
     if (typeof document$ !== 'undefined') {
         document$.subscribe(render);
