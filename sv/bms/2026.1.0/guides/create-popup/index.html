@@ -1,0 +1,3330 @@
+
+<!doctype html>
+<html lang="sv" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Dokumentation för WideQuick Modular Framework och dess vertikaler">
+      
+      
+        <meta name="author" content="johan.vikstrand@kentima.se">
+      
+      
+        <link rel="canonical" href="https://www.widequick.com/docs/sv/bms/2026.1.0/guides/create-popup/">
+      
+      
+      
+        <link rel="prev" href="../create-object/">
+      
+      
+        <link rel="next" href="../languages/">
+      
+      
+        
+          <link rel="alternate" href="/docs/" hreflang="en">
+        
+          <link rel="alternate" href="/docs/sv/" hreflang="sv">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="zensical-0.0.70">
+    
+    
+      
+        <title>Skapa ett anpassat popup-fönster - WideQuick Docs</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.e442bf79.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.b60ce83d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="/docs/assets/stylesheets/version-select.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+
+<script>
+(function () {
+  var COLLAPSED = ['Guides', 'Reference', 'Guider', 'Referens'];
+
+  function processItem(item) {
+    var ellipsis = item.querySelector('.md-nav__link .md-ellipsis');
+    if (!ellipsis || COLLAPSED.indexOf(ellipsis.textContent.trim()) === -1) return;
+    item.classList.remove('md-nav__item--section');
+    if (!item.classList.contains('md-nav__item--nested')) {
+      item.classList.add('md-nav__item--nested');
+    }
+    item.classList.add('nav-item--collapsible-section');
+    if (item.querySelector('.md-nav__link--active')) return;
+    var toggle = item.querySelector('input.md-nav__toggle');
+    if (toggle) toggle.checked = false;
+  }
+
+  var observer = new MutationObserver(function (mutations) {
+    for (var i = 0; i < mutations.length; i++) {
+      var added = mutations[i].addedNodes;
+      for (var j = 0; j < added.length; j++) {
+        var node = added[j];
+        if (node.nodeType !== 1) continue;
+        if (node.classList.contains('md-nav__item--section')) processItem(node);
+        var nested = node.querySelectorAll('.md-nav__item--section');
+        for (var k = 0; k < nested.length; k++) processItem(nested[k]);
+      }
+    }
+  });
+
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    observer.disconnect();
+  });
+}());
+</script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Gå till innehållet
+      </a>
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Sidhuvud">
+    <a href="/docs/sv/" title="WideQuick Docs" class="md-header__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WideQuick Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Skapa ett anpassat popup-fönster
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="kentima-dark" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Välj språk">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-languages" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/docs/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/docs/sv/" hreflang="sv" class="md-select__link">
+              Svenska
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Sök">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Sök">
+  <button type="button" class="md-search__button">
+    Sök
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Flikar" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/" class="md-tabs__link">
+        
+  
+  Hem
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/wq/" class="md-tabs__link">
+        
+  
+  WideQuick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/mod/" class="md-tabs__link">
+        
+  
+  Modular Framework
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Building Management System
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/wwt/" class="md-tabs__link">
+        
+  
+  Water & Wastewater Treatment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/plug-in/" class="md-tabs__link">
+        
+  
+  Plug-in
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/docs/sv/Tools/tag-name-validator/" class="md-tabs__link">
+        
+  
+  Verktyg
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/docs/sv/" title="WideQuick Docs" class="md-nav__button md-logo" aria-label="WideQuick Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="WideQuick Docs">
+
+    </a>
+    WideQuick Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Hem
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/wq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  WideQuick
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/mod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Modular Framework
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Building Management System
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Building Management System
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../get-started/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kom igång
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Kom igång
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/download/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Ladda ned
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/Your%20First%20Tag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Din första tagg
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../modules/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Moduler
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_3">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Moduler
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/Core/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kärna
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/audit-trail/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Spårningslogg
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/backup-and-restore/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Säkerhetskopiering och återställning
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/calendar/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kalender
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/dashboards/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dashboard
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/documents/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Dokument
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/history/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Historik
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/logbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Loggbok
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maintenance/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Underhåll
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/maps/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Kartor
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../modules/reports/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Rapporter
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Guider
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_4_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Guider
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automatic-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Automatisk skalning
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-object/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skapa objekt
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skapa popup
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skapa popup
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Innehållsförteckning">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Innehållsförteckning
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Importera taggar
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Konfigurera popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-popup-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Välja popup-mall
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Bygg popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automatisk skalning
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-a-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Öppna en popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-a-specific-popup-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Öppna en specifik popup direkt
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Språk
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Loggenheter
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Inloggningskonfiguration
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remote-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Fjärrsystem
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workview-animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Arbetsvy-animationer
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../reference/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Referens
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_5">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Referens
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+              
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../reference/database-schemas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Databasscheman
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/multiview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Multiview
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+  
+    <a href="../../reference/Popup/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Popups
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/Resources-and-Resource-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Resurser och Resurspaket
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/ScriptHierarchy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Skripthierarki
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/suffix-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Suffixsystem
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/tag-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Taggstruktur
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+                
+              
+                
+                  
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Versioner
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+                
+              
+            </ul>
+          </nav>
+        
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/wwt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Water & Wastewater Treatment
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/plug-in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Plug-in
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/docs/sv/Tools/tag-name-validator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Verktyg
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Innehållsförteckning">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Innehållsförteckning
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Importera taggar
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Konfigurera popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-popup-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Välja popup-mall
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Bygg popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Automatisk skalning
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-a-popup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Öppna en popup
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-a-specific-popup-directly" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Öppna en specifik popup direkt
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../.." class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Building Management System
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    Guider
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+                
+                  
+
+
+<h1 id="skapa-popup">Skapa popup<a class="headerlink" href="#skapa-popup" title="Permanent link">&para;</a></h1>
+<p>WideQuick Modular Framework levereras med flera förkonfigurerade popups, till exempel
+historik, trend och underhåll. Det är också möjligt att skapa helt anpassade popups
+anpassade till specifika objekt och arbetsflöden. Den här guiden förklarar hur man skapar
+en anpassad popup från grunden — från att importera taggar och konfigurera suffix till
+att bygga vyn och koppla den till ett objekt.</p>
+<p>Innan du börjar, se till att du är bekant med taggstrukturen som används i
+WideQuick Modular Framework. Om inte, se <a href="../../reference/tag-structure/">Taggstruktur</a>.</p>
+<p>Det finns tre steg i att skapa en anpassad popup:</p>
+<ul>
+<li>Importera först de taggar som ska visas och styras i popupen. Se
+<a href="#import-tags">Importera taggar</a> för mer information.</li>
+<li>Konfigurera sedan suffixen för de nyligen importerade taggarna och koppla dem till
+den specifika popupen. Se <a href="#configure-popup">Konfigurera popup</a> för mer information.</li>
+<li>Skapa slutligen popup-vyn. Se <a href="#build-popup">Bygg popup</a> för mer information.</li>
+</ul>
+<p>I det här exemplet kommer vi att bygga en popup för pumpstyring. Pumpen kommer att kallas
+<code>pump06</code>.</p>
+<h2 id="import-tags">Importera taggar<a class="headerlink" href="#import-tags" title="Permanent link">&para;</a></h2>
+<p>Det första steget är att importera de taggar som ska visas och styras. Dessa taggar måste följa
+taggstrukturen:</p>
+<p><code>Connection.Device.Sys_objectName_suffix</code></p>
+<p>Suffixet kan vara vad du vill, men kom ihåg det till nästa steg där popupen
+konfigureras. Mer information om taggstruktur finns i
+<a href="../../reference/tag-structure/">Taggstruktur</a>.</p>
+<p>I det här exemplet importerar vi 5 taggar från PLC:n för att styra pumpen:</p>
+<ol>
+<li>Den första taggen visar om pumpen är på eller av. Den ges suffixet
+<code>_IO</code>. Detta är en skrivskyddad tagg i PLC:n.</li>
+<li>Den andra taggen startar eller stoppar pumpen. Den ges suffixet <code>_start</code>.
+Detta är en läs/skriv-tagg i PLC:n.</li>
+<li>Den tredje taggen är börvärdet för pumpens varvtal. Den ges suffixet
+<code>_setpoint</code>. Detta är en läs/skriv-tagg i PLC:n.</li>
+<li>Den fjärde taggen är pumpens faktiska varvtal. Den ges suffixet <code>_rpm</code>.
+Detta är en skrivskyddad tagg i PLC:n.</li>
+<li>Den femte taggen är en felsignal, aktiv när pumpen har stött på ett fel.
+Den ges suffixet <code>_error</code>. Detta är en skrivskyddad tagg i PLC:n.</li>
+</ol>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/tagList_popup.png"><img alt="Importerade taggar" src="/docs/sv/Images/Create_Popup/tagList_popup.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Återanvända taggar</p>
+<p>En tagg kan visas på flera popups. Det är inte nödvändigt att importera samma
+tagg flera gånger.</p>
+</div>
+<h2 id="configure-popup">Konfigurera popup<a class="headerlink" href="#configure-popup" title="Permanent link">&para;</a></h2>
+<p>När taggarna har importerats är nästa steg att konfigurera dem och koppla dem
+till popupen. Detta görs i några steg:</p>
+<ul>
+<li>Starta projektet.</li>
+<li>Navigera till <strong>Inställningar → Suffix → Suffix Alias - Popups</strong>.</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/Navigation.gif"><img alt="Navigering till inställningar" src="/docs/sv/Images/Create_Popup/Navigation.gif" width="400" /></a></p>
+<ul>
+<li>Skapa en ny suffixkategori genom att trycka på <strong>Lägg till ny kategori</strong> och ge
+den nya kategorin ett namn. Eftersom vi skapar en popup för pumpstyring, namnge den
+<strong>Pump Control</strong>.</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/Adding%20category.gif"><img alt="Lägga till kategori" src="/docs/sv/Images/Create_Popup/Adding%20category.gif" /></a></p>
+<ul>
+<li>Markera den nya kategorin i listan och klicka på <strong>Lägg till nytt suffixalias i vald kategori</strong>. I det här exemplet börjar vi med taggen med suffixet <code>_IO</code>, som visar
+om pumpen är på eller inte. Namnge detta suffix <strong>Active</strong>.</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/Adding%20suffix.gif"><img alt="Lägga till suffix" src="/docs/sv/Images/Create_Popup/Adding%20suffix.gif" /></a></p>
+<ul>
+<li>Fyll i relevant information för detta suffixalias:</li>
+</ul>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/suffix_config.png"><img alt="Konfigurera suffix" src="/docs/sv/Images/Create_Popup/suffix_config.png" /></a></p>
+<ul>
+<li><strong>Suffix</strong> — Suffixet som angetts på taggen, i det här fallet <code>_IO</code>.</li>
+<li><strong>Writable</strong> — Lämna inaktiverat eftersom detta är en skrivskyddad tagg i PLC:n.</li>
+<li><strong>Write privilege</strong> — Lämna tomt eftersom detta suffix inte är skrivbart.</li>
+<li><strong>Decimals</strong> — Lämna som det är eftersom detta är en booleansk signal utan decimaler.</li>
+<li><strong>Unit</strong> — Ange enheten för suffixet. Eftersom detta är en booleansk behövs ingen enhet.</li>
+<li><strong>Description</strong> — En beskrivning av vad detta suffix representerar. Eftersom detta är en
+statussignal, ange <code>On/Off signal</code>.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Specifik information per tagg</p>
+<p>Det är möjligt att skriva över skrivprivilegiet, antalet decimaler och
+suffixbeskrivningen per tagg genom att ange informationen i taggbeskrivningen.
+Se <a href="../../reference/tag-structure/">Taggstruktur</a> för mer information.</p>
+</div>
+<p>Upprepa dessa steg för de fyra återstående taggarna. I det här exemplet kommer suffixen att
+namnges enligt följande:</p>
+<ul>
+<li><code>_setpoint</code> — <strong>Setpoint</strong></li>
+<li><code>_rpm</code> — <strong>RPM</strong></li>
+<li><code>_error</code> — <strong>Error</strong></li>
+<li><code>_start</code> — <strong>Start</strong></li>
+</ul>
+<p>Den färdiga listan bör se ut ungefär så här:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/configured_suffixes.png"><img alt="Konfigurerade suffix" src="/docs/sv/Images/Create_Popup/configured_suffixes.png" /></a></p>
+<h2 id="choosing-a-popup-template">Välja popup-mall<a class="headerlink" href="#choosing-a-popup-template" title="Permanent link">&para;</a></h2>
+<p>WideQuick Modular Framework inkluderar tre popup-mallstorlekar att välja mellan
+beroende på popupens komplexitet och mängden innehåll som ska visas:</p>
+<table>
+<thead>
+<tr>
+<th>Mall</th>
+<th>Bredd</th>
+<th>Använd när</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Template_Popup_Small</strong></td>
+<td>490px</td>
+<td>Enkla popups med få rader</td>
+</tr>
+<tr>
+<td><strong>Template_Popup_Medium</strong></td>
+<td>980px</td>
+<td>Mer komplexa popups med mer innehåll</td>
+</tr>
+<tr>
+<td><strong>Template_Popup_Large</strong></td>
+<td>1480px</td>
+<td>Omfattande popups med maximalt innehåll</td>
+</tr>
+</tbody>
+</table>
+<p>Alla tre mallar finns under <strong>Arbetsvyer → Templates</strong>. Knapparna och layouten
+skalas automatiskt med mallstorleken, så processen för att bygga en popup är
+densamma oavsett vilken mall som väljs.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>När du är osäker, börja med <strong>Template_Popup_Small</strong>. Eftersom popups skalas
+automatiskt baserat på tillgängliga taggar räcker ofta en mindre mall
+och resulterar i en renare, mer fokuserad popup.</p>
+</div>
+<h2 id="build-popup">Bygg popup<a class="headerlink" href="#build-popup" title="Permanent link">&para;</a></h2>
+<p>Det sista steget är att bygga popup-vyn för att styra pumpen och visa
+information.</p>
+<p>Det finns två sätt att angripa detta — börja från en ny <strong>Arbetsvy</strong> eller kopiera en
+befintlig mallvy. Det enklaste sättet är att börja med mallvyn,
+som innehåller alla nödvändiga skript och konfigurationer. Kopiera <strong>Arbetsvyn:</strong>
+<strong>Template_Popup_Small</strong> som finns under <strong>Arbetsvyer → Templates</strong> och namnge den nya
+<strong>Arbetsvyn:</strong> <strong>Pump Control</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Namngivning av popups</p>
+<p>Popupen behöver inte heta samma sak som suffixgruppen som skapades i
+föregående steg. Detta är bara en tillfällighet i det här exemplet.</p>
+</div>
+<p>Vyn kan nu byggas med objekt från objektbiblioteket <strong>CustomPopupObjects</strong>.
+Detta bibliotek innehåller objekt för att visa och styra taggar. Om en
+tagg inte är tillgänglig för objektet som visar popupen, döljs objektet
+automatiskt och popupen skalas om för att undvika tomt utrymme.</p>
+<p>Börja med att lägga till ett objekt för att visa om pumpen har startats. Objektet
+<code>StatusRow</code> är idealiskt för detta. Dra ett <code>StatusRow</code> in i vyn, markera det
+och öppna fliken <strong>Properties</strong>. Ställ in egenskapen <strong>SuffixAlias</strong> till <strong>Active</strong> för att
+koppla detta objekt till suffixet <code>_IO</code>:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/StatusRow2.png"><img alt="Statusrad" src="/docs/sv/Images/Create_Popup/StatusRow2.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Suffix</p>
+<p><strong>SuffixAlias</strong> på <strong>CustomPopupObjects</strong> refererar till namnet som getts till
+suffixet i föregående steg, inte det faktiska suffixet. I det här exemplet, ange
+<strong>Active</strong> istället för <code>_IO</code>.</p>
+</div>
+<p>Lägg sedan till kontroller för att starta och stoppa pumpen med objektet <code>2Button_row</code>.
+En knapp för start och en för stopp. I det här exemplet stoppar inställningen av <code>_start</code>
+till <code>0</code> pumpen och inställningen till <code>1</code> startar den. Fyll i egenskaperna
+därefter:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/2Button_start2.png"><img alt="2 knappar start" src="/docs/sv/Images/Create_Popup/2Button_start2.png" /></a></p>
+<p>Lägg sedan till en rad för att ställa in börvärdet och en annan för att visa det faktiska varvtalet
+med objektet <code>ValueRow</code>. Detta objekt tillåter värdesinmatning om <strong>Writable</strong> var
+aktiverat i föregående steg, annars visas värdet som skrivskyddat. Eftersom
+<strong>Writable</strong> var aktiverat för börvärdet men inte för varvtalet, lägg till två <code>ValueRow</code>-objekt
+och ställ in deras <strong>SuffixAlias</strong> till <strong>Setpoint</strong> respektive <strong>RPM</strong>.</p>
+<p>Lägg slutligen till ett <code>StatusRow</code> för att visa om pumpen har stött på ett fel.
+Den slutliga vyn bör se ut ungefär så här:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/Error.png"><img alt="Felrad" src="/docs/sv/Images/Create_Popup/Error.png" /></a></p>
+<p>Det sista steget är att ändra storlek på vyn för att ta bort tomt utrymme längst ned. Högerklicka
+på vyn i projektträdet och välj <strong>Properties</strong>. Att ställa in höjden till
+ungefär <code>520</code> säkerställer att alla objekt är synliga samtidigt som det tomma
+utrymmet tas bort. Objektet <code>foreGroundBox2</code> behöver inte ändras i storlek eftersom det skalas om
+automatiskt med vyn.</p>
+<p>Starta applikationen och navigera till <strong>Inställningar → Suffix → Suffix - Popups</strong>.
+Välj <strong>Pump Control</strong> och uppdatera <strong>View</strong> till den nyligen skapade vyn <strong>Pump Control</strong>
+som visas nedan:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/view_config.png"><img alt="Popup-konfiguration" src="/docs/sv/Images/Create_Popup/view_config.png" /></a></p>
+<p>Allt som återstår är att starta projektet och klicka på <code>pump06</code> för att se popupen <strong>Pump Control</strong>. Se <a href="../create-an-object/">Skapa objekt</a> för att skapa ett objekt i en
+<strong>Arbetsvy</strong>.</p>
+<div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem;">
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/pump06.png"><img alt="pump06" src="/docs/sv/Images/Create_Popup/pump06.png" style="height:500px;" /></a></p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/pump%20control.png"><img alt="pump control" src="/docs/sv/Images/Create_Popup/pump%20control.png" style="height:500px;" /></a></p>
+</div>
+<h2 id="automatic-scaling">Automatisk skalning<a class="headerlink" href="#automatic-scaling" title="Permanent link">&para;</a></h2>
+<p>Innehållet som visas för ett objekt är direkt kopplat till vilka signaler, taggar eller
+variabler som är tillgängliga för det objektet. När en popup laddas skalas vyn
+automatiskt om och alla rader i den anpassade popupen som inte är relevanta för
+det länkade objektet döljs.</p>
+<div class="admonition note">
+<p class="admonition-title">Automatisk skalning</p>
+<p>Mer information om automatisk skalning finns
+<a href="../automatic-scaling/">här</a>.</p>
+</div>
+<p>För att illustrera detta läggs en andra pump kallad <code>pump07</code> till. Denna pump har samma
+signaler som <code>pump06</code> förutom att den inte har en feltagg (<code>_error</code>).</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/pump07_tags.png"><img alt="pump07" src="/docs/sv/Images/Create_Popup/pump07_tags.png" /></a></p>
+<p>När <code>pump07</code> klickas på döljer popupen automatiskt felstatusraden
+och skalas om för att ta bort det tomma utrymmet:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/Pump%20control_scaled.png"><img alt="pump control skalad" src="/docs/sv/Images/Create_Popup/Pump%20control_scaled.png" /></a></p>
+<p>På grund av denna funktion bör popups alltid byggas för att visa det maximala antalet
+taggar — <strong>värsta tänkbara</strong> scenariot — och skalas sedan automatiskt om
+beroende på det faktiska antalet tillgängliga taggar för objektet.</p>
+<h2 id="opening-a-popup">Öppna en popup<a class="headerlink" href="#opening-a-popup" title="Permanent link">&para;</a></h2>
+<p>Följande avsnitt täcker de två sätten en popup kan öppnas i WideQuick.
+Öppningsmetoden bestäms av hur objektet <code>DynTouch</code> är konfigurerat i
+<strong>WideQuick Designer®</strong>.</p>
+<p>Det finns två sätt att öppna en popup i WideQuick, var och en med ett annorlunda visuellt
+beteende:</p>
+<ul>
+<li>
+<p><strong><code>app.popOut</code></strong> — Öppnar popupen som ett sidofält i den aktuella vyn. Resten
+av vyn skuggas, vilket håller användaren i sammanhang samtidigt som uppmärksamheten fokuseras på
+popupen. Detta är standardbeteendet för de flesta inbyggda popups.</p>
+</li>
+<li>
+<p><strong><code>view.link</code></strong> — Öppnar popupen som ett flytande fönster ovanpå den aktuella vyn,
+liknande en traditionell dialog. Detta är användbart när popup-innehållet behöver mer
+visuell separation från den underliggande vyn.</p>
+</li>
+</ul>
+<div class="figure-row">
+<figure>
+  <a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/view.link.png"><img alt="view.link" src="/docs/sv/Images/Create_Popup/view.link.png" /></a>
+<br />
+<figcaption>Använder view.link.</figcaption>
+</figure>
+<figure>
+  <a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/app.popOut.png"><img alt="app.popOut" src="/docs/sv/Images/Create_Popup/app.popOut.png" /></a>
+<br />
+<figcaption>Använder app.popOut.</figcaption>
+</figure>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Använd <strong><code>app.popOut</code></strong> för de flesta popups — det håller användaren orienterad i den
+aktuella vyn. Använd <strong><code>view.link</code></strong> när popup-innehållet är tillräckligt komplext för att
+motivera fullständig visuell separation från den underliggande vyn.</p>
+</div>
+<h2 id="opening-a-specific-popup-directly">Öppna en specifik popup direkt<a class="headerlink" href="#opening-a-specific-popup-directly" title="Permanent link">&para;</a></h2>
+<p>Som standard öppnar ett klick på ett <code>DynTouch</code>-objekt fliknavigeringen först, vilket låter
+användaren välja vilken popup som ska visas. I fall där användare ofta navigerar
+till en specifik popup — till exempel <strong>Maneuver</strong> — är det möjligt att kringgå fliknavigeringen
+och öppna den popupen direkt.</p>
+<p>Detta görs genom att använda objekten <code>_DynTouch_DirectLink</code> eller <code>_DynTouchRounded_DirectLink</code>
+istället för det vanliga <code>DynTouch</code>-objektet. Dessa finns i samma
+objektbibliotek som det vanliga <code>DynTouch</code>-objektet.</p>
+<p>För att konfigurera en direktlänk, ställ in egenskapen <strong>startPopup</strong> på objektet till
+namnet på den popup som ska öppnas vid klick:</p>
+<p><a class="glightbox" data-type="image" href="/docs/sv/Images/Create_Popup/Direct_Link_prop.png"><img alt="DirectLink DynTouch" src="/docs/sv/Images/Create_Popup/Direct_Link_prop.png" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Använd <code>_DynTouch_DirectLink</code> när användare ofta navigerar till en specifik popup-flik.
+Detta sparar ett extra klick och förbättrar arbetsflödet för operatörer som
+regelbundet interagerar med samma popup.</p>
+</div>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">BMS</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Tillbaka till toppen
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class = "md-footer-meta__inner md-footer__link">
+        
+            </div>
+            <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Kentima AB
+Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+            
+            <!-- Social links -->
+            
+            
+           
+         
+           
+        </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.prune","navigation.sections","navigation.tabs","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Kopierat till urklipp","clipboard.copy":"Kopiera till urklipp","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 till på denna sida","search.result.more.other":"# till på denna sida","search.result.none":"Inga sökresultat","search.result.one":"1 sökresultat","search.result.other":"# sökresultat","search.result.placeholder":"Skriv sökord","search.result.term.missing":"Saknas","select.version":"Välj version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a2388154.min.js"></script>
+      
+        <script src="../../assets/javascripts/custom.js"></script>
+      
+        <script src="../../assets/javascripts/scrollAnim.js"></script>
+      
+        <script src="../../assets/javascripts/tag-filter.js"></script>
+      
+        <script src="/docs/assets/javascripts/version-select.js"></script>
+      
+    
+  </body>
+</html>
