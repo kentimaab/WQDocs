@@ -28,7 +28,7 @@ WideQuick MOD 2027.1.0 is available in two versions for download on the Kentima 
     opening the project files. See [Installing WideQuick](../../wq/get-started/index.md)
     for more information.
 
-[**Download WideQuick MOD 2027.1.0**](https://www.kentima.com/sv-SE/Download/HMI-SCADA%20CONCEPTS/MOD/Hamta%20applikation){target="_blank"}
+[**Download WideQuick MOD 2027.1.0**](https://www.kentima.com/sv-SE/Download/HMI-SCADA%20CONCEPTS/MOD/Hamta%20Applikation/Version%202027-1){target="_blank"}
 
 ### Template project
 
