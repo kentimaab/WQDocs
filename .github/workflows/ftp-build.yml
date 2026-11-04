@@ -12,8 +12,9 @@ jobs:
         with:
           python-version: 3.x
 
+      # Same Zensical as swa-deploy.yml, so both sites are built alike
       - name: Install dependencies
-        run: pip install zensical pyyaml
+        run: pip install zensical==0.0.70 pyyaml
 
       - name: Build English docs
         run: |
@@ -23,6 +24,19 @@ jobs:
 
       - name: Build Swedish docs
         run: zensical build --config-file zensical-sv.toml --clean --strict
+
+      # Older product versions, from the "versions" branch, as in swa-deploy.yml
+      - name: Add archived versions
+        run: |
+          if git fetch --depth 1 origin versions; then
+            git archive FETCH_HEAD | tar -x -C site
+            rm -f site/.nojekyll
+          fi
+
+      # Turns a pinned product's live pages into redirects to its archived version, so
+      # unreleased pages aren't published. Fails if the pinned version isn't archived.
+      - name: Point pinned products at their archived version
+        run: python hooks/versioning.py pin site
 
       - name: Upload via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
