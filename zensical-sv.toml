@@ -507,6 +507,9 @@ extra_css = ["assets/stylesheets/extra.css", "assets/stylesheets/version-select.
 extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js", "assets/javascripts/version-select.js"]
 
 [project.extra]
+# One set of saved preferences (light/dark mode and so on) for the whole site: both languages
+# and every archived version. By default each of those keeps its own.
+scope = "/docs/"
 alternate = [
     { name = "English", link = "/docs/", lang = "en" },
     { name = "Svenska", link = "/docs/sv/", lang = "sv" },

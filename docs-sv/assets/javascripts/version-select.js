@@ -12,7 +12,8 @@
 // Archived pages load this script and its stylesheet from the live site, so a change here
 // reaches every archive. Archived pages other than the current version get a banner pointing
 // to it, and all archived pages get the "Home" item their breadcrumbs lack: in an archive the
-// product's overview is the build's own home page.
+// product's overview is the build's own home page. Their language menu is pointed at the same
+// page of the same version in the other language.
 (function () {
     var TEXT = {
         en: {
@@ -30,6 +31,8 @@
             link: 'Gå till {current}'
         }
     };
+    // Each language's home, as in the language menu
+    var HOMES = { en: '/docs/', sv: '/docs/sv/' };
     var SCROLL_KEY = 'wq-version-scroll';
     var lists = {};
     var currents = null;
@@ -193,6 +196,35 @@
         return li;
     }
 
+    // On an archived page the language menu opens the same page of the same version in the other
+    // language; archiving always builds both. Left alone, the theme looks the page up in the live
+    // site's other language, doesn't find it there and opens that language's start page. The
+    // links are updated on every render, since the header outlives the theme's page changes.
+    function languageLinks(here, version, page) {
+        document.querySelectorAll('.md-select__link[hreflang]').forEach(function (a) {
+            var lang = a.getAttribute('hreflang');
+            if (lang === here.lang || !HOMES.hasOwnProperty(lang)) {
+                return;
+            }
+            a.setAttribute('data-wq-base', HOMES[lang] + here.product + '/' + version + '/');
+            a.setAttribute('data-wq-page', page);
+            a.href = a.getAttribute('data-wq-base') + page;
+            if (a.hasAttribute('data-wq-language')) {
+                return;
+            }
+            a.setAttribute('data-wq-language', '');
+            a.addEventListener('click', function (e) {
+                // Before the theme's handler on the page, which would send it to the start page
+                e.stopPropagation();
+                if (e.ctrlKey || e.metaKey || e.shiftKey) {
+                    return;
+                }
+                e.preventDefault();
+                go(a.getAttribute('data-wq-base'), a.getAttribute('data-wq-page'));
+            });
+        });
+    }
+
     // The menu, and on archived pages the banner and the "Home" breadcrumb, for one product page.
     // list: the product's archived versions; entry: its line in current-versions.json.
     function show(here, list, entry) {
@@ -224,6 +256,7 @@
         if (!archived) {
             return;
         }
+        languageLinks(here, archived.version, page);
         var content = document.querySelector('.md-content__inner');
         if (content && archived !== pinned) {
             content.insertBefore(banner(t, archived.title || archived.version, current, page), content.firstChild);
