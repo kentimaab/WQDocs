@@ -143,6 +143,4 @@ Every module in the framework is independent. There are no hidden dependencies b
 
 For a system integrator this means the delivered application can be scoped precisely to what the end customer needs. A smaller installation might run with Alarms, History, and a Dashboard. A larger one adds Maintenance scheduling, Reports, and Maps. Neither project requires workarounds or stub implementations for the features that were left out.
 
-The practical workflow is to start from the [downscale version](../get-started/downscale.md) and add only the modules that are relevant, growing the project deliberately as requirements are confirmed. What results is a clean, purposeful application with no dead views or unused configuration.
-
 <!-- --8<-- [end:body] -->

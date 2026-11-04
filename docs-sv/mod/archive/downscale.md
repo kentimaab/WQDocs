@@ -11,7 +11,7 @@ tags:
 
 # Nedskalad version
 
-Utöver det fullständiga [mallprojektet](download.md#mallprojekt) finns WideQuick MOD även som en **nedskalad version**: mallprojektet med alla valfria moduler borttagna. Varje borttagen modul finns som ett eget paket, så att ett projekt kan börja litet och bara lägga till de moduler det behöver.
+Utöver det fullständiga [mallprojektet](../get-started/download.md#mallprojekt) finns WideQuick MOD även som en **nedskalad version**: mallprojektet med alla valfria moduler borttagna. Varje borttagen modul finns som ett eget paket, så att ett projekt kan börja litet och bara lägga till de moduler det behöver.
 
 ## Vad den nedskalade versionen innehåller { #what-the-downscale-version-includes }
 
@@ -29,7 +29,7 @@ Elva moduler är borttagna, och var och en finns som ett eget paket:
 * [Spårningslogg](../modules/audit-trail/index.md): loggar ändringar av variabler, vad som ändrades, av vem och när.
 * [Säkerhetskopiering och återställning](../modules/backup-and-restore/index.md): sparar värdena på valda variabler under ett namn och återställer dem vid behov.
 * [Kalender](../modules/calendar/index.md): månads-, vecko- och dagsvyer över händelser, med import av helgdagar. Visar underhållsdeadlines när Underhåll också är installerat.
-* [Styrkurva](../reference/Popup/Control%20curve.md): popuperna Styrkurva och [Styrkurva Tid](../reference/Popup/Control%20curveTime.md), för att justera styrkurvor och växla mellan deras profiler.
+* [Styrkurva](../reference/Popup/Control curve.md): popuperna Styrkurva och [Styrkurva Tid](../reference/Popup/Control curveTime.md), för att justera styrkurvor och växla mellan deras profiler.
 * [Dashboards](../modules/dashboards/index.md): widgetar och en vymall för att bygga dashboards med signaler, nyckeltal, historik och larm.
 * [Dokument](../modules/documents/index.md): lagrar filer i projektet och kopplar dem till objekt.
 * [Loggbok](../modules/logbook/index.md): fritextanteckningar kopplade till objekt, vyer och andra delar av systemet.
@@ -40,7 +40,7 @@ Elva moduler är borttagna, och var och en finns som ett eget paket:
 
 ## Lägga till en modul { #adding-a-module }
 
-Varje modul laddas ner som en zip-fil från samma sida som mallprojektet, se [Ladda ner](download.md). Zip-filen innehåller:
+Varje modul laddas ner som en zip-fil från samma sida som mallprojektet, se [Ladda ner](../get-started/download.md). Zip-filen innehåller:
 
 * `<Modul>.wqrc`: resurspaketet, med modulens skript, vyer, objektbibliotek, variabler, behörigheter och, för en modul som har en, dess databas.
 * `README.md`: vad modulen innehåller, hur den importeras, vilka behörigheter den för med sig och vad som kräver extra omsorg.
@@ -83,6 +83,6 @@ SMHI-anslutningen för väder importeras inaktiv. Väderwidgeten aktiverar den n
 ## Välja startpunkt { #choosing-a-starting-point }
 
 * Börja från den **nedskalade versionen** när projektets modulbehov är begränsat, eller ännu inte är helt klarlagt, och moduler bör läggas till medvetet i takt med att kraven bekräftas.
-* Börja från det fullständiga **mallprojektet** (se [Ladda ner](download.md)) när de flesta eller alla moduler förväntas användas redan från start.
+* Börja från det fullständiga **mallprojektet** (se [Ladda ner](../get-started/download.md)) när de flesta eller alla moduler förväntas användas redan från start.
 
 Oavsett vilken startpunkt som används är modulerna i sig identiska: en modul som importeras i ett nedskalat projekt är densamma som den som redan finns i det fullständiga mallprojektet. Det som skiljer är vad som finns på plats när projektet öppnas första gången, och behörigheterna. I det fullständiga mallprojektet har de förkonfigurerade användarna redan modulernas behörigheter, medan en importerad moduls behörigheter inte är tilldelade någon förrän du tilldelar dem.

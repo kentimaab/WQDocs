@@ -11,7 +11,7 @@ tags:
 
 # Downscale Version
 
-Alongside the full [template project](download.md#template-project), WideQuick MOD is also available as a **downscale version**: the template project with every optional module taken out. Each of those modules is available as a package of its own, so a project can start small and add only the modules it needs.
+Alongside the full [template project](../get-started/download.md#template-project), WideQuick MOD is also available as a **downscale version**: the template project with every optional module taken out. Each of those modules is available as a package of its own, so a project can start small and add only the modules it needs.
 
 ## What the downscale version includes { #what-the-downscale-version-includes }
 
@@ -29,7 +29,7 @@ Eleven modules are left out, and each one is available as a separate package:
 * [Audit Trail](../modules/audit-trail/index.md): logs changes to variables, what changed, who changed it and when.
 * [Backup and Restore](../modules/backup-and-restore/index.md): saves the values of chosen variables under a name and restores them when needed.
 * [Calendar](../modules/calendar/index.md): month, week and day views of events, with holiday import. Shows maintenance deadlines when Maintenance is installed too.
-* [Control Curve](../reference/Popup/Control%20curve.md): the Control Curve and [Control Curve Time](../reference/Popup/Control%20curveTime.md) popups, for adjusting control curves and switching between their profiles.
+* [Control Curve](../reference/Popup/Control curve.md): the Control Curve and [Control Curve Time](../reference/Popup/Control curveTime.md) popups, for adjusting control curves and switching between their profiles.
 * [Dashboards](../modules/dashboards/index.md): widgets and a view template for building dashboards with signals, key figures, history and alarms.
 * [Documents](../modules/documents/index.md): stores files in the project and links them to objects.
 * [Logbook](../modules/logbook/index.md): free-text notes tied to objects, views and other parts of the system.
@@ -40,7 +40,7 @@ Eleven modules are left out, and each one is available as a separate package:
 
 ## Adding a module { #adding-a-module }
 
-Each module is downloaded as a zip file from the same page as the template project, see [Download](download.md). The zip file holds:
+Each module is downloaded as a zip file from the same page as the template project, see [Download](../get-started/download.md). The zip file holds:
 
 * `<Module>.wqrc`: the resource package, with the module's scripts, views, object libraries, variables, privileges and, for a module that has one, its database.
 * `README.md`: what the module contains, how to import it, the privileges it brings and anything that needs extra care.
@@ -83,6 +83,6 @@ The SMHI weather connection is imported inactive. The weather widget turns it on
 ## Choosing a starting point { #choosing-a-starting-point }
 
 * Start from the **downscale version** when the project's module needs are narrow, or not yet fully known, and modules should be added deliberately as requirements are confirmed.
-* Start from the full **template project** (see [Download](download.md)) when most or all modules are expected to be used from the outset.
+* Start from the full **template project** (see [Download](../get-started/download.md)) when most or all modules are expected to be used from the outset.
 
 Whichever starting point is used, the modules themselves are identical: a module imported into a downscale project is the same as the one already in the full template project. What differs is what is in place when the project is opened for the first time, and the privileges. In the full template the preconfigured users already hold the module privileges, while an imported module's privileges are granted to no one until you assign them.

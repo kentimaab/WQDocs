@@ -19,8 +19,9 @@ and links back to its entry here.
 
 ## WideQuick MOD 2027.1.0 { #mod-2027-1-0 }
 
+__Released 2026-11-04__
 <details class="release" markdown="1" open>
-<summary>Not yet released</summary>
+<summary>Release notes</summary>
 
 The second major release of the WideQuick Modular Framework builds on the 2024.1.0 foundation with several new modules and a large number of usability improvements. The headline additions are full multi-language support, an in-system logbook, a maintenance calendar, document handling, and far broader support for web and remote clients — making the framework easier to deploy, configure and operate across teams and sites.
 
@@ -100,8 +101,9 @@ The second major release of the WideQuick Modular Framework builds on the 2024.1
 
 ## WideQuick MOD 2024.1.0 { #mod-2024-1-0 }
 
+__Released 2024-09-03__
 <details class="release" markdown="1">
-<summary>Released 2024-09-03</summary>
+<summary>Release notes</summary>
 
 The first official release of the WideQuick Modular Framework — a ready-to-use HMI/SCADA template assembled from
 independent, reusable modules. It provides a themed, privilege-controlled operator environment with a complete

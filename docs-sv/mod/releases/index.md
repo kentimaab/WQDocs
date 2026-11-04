@@ -18,8 +18,9 @@ specifik MOD-version och länkar tillbaka till sin post här.
 
 ## WideQuick MOD 2027.1.0 { #mod-2027-1-0 }
 
+__Utgiven 2026-11-04__
 <details class="release" markdown="1" open>
-<summary>Ännu inte utgiven</summary>
+<summary>Versionsnoteringar</summary>
 
 Den andra huvudversionen av WideQuick Modular Framework bygger vidare på grunden från 2024.1.0 med flera nya moduler och ett stort antal förbättringar av användarvänligheten. De viktigaste tilläggen är fullt stöd för flera språk, en intern loggbok, en underhållskalender, dokumenthantering och väsentligt bredare stöd för webb- och fjärrklienter — vilket gör ramverket enklare att driftsätta, konfigurera och använda för team och anläggningar.
 
@@ -99,8 +100,9 @@ Den andra huvudversionen av WideQuick Modular Framework bygger vidare på grunde
 
 ## WideQuick MOD 2024.1.0 { #mod-2024-1-0 }
 
+__Utgiven 2024-09-03__
 <details class="release" markdown="1">
-<summary>Utgiven 2024-09-03</summary>
+<summary>Versionsnoteringar</summary>
 
 Den första officiella versionen av WideQuick Modular Framework — en färdig HMI/SCADA-mall sammansatt av
 oberoende, återanvändbara moduler. Den tillhandahåller en temad, behörighetsstyrd operatörsmiljö med ett komplett

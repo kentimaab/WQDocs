@@ -71,7 +71,6 @@ nav = [
     { "Get Started" = [
       { "Overview" = "mod/get-started/index.md" },
       { "Concepts" = "mod/concepts/index.md" },
-      { "Downscale Version" = "mod/get-started/downscale.md" },
       { "Download" = "mod/get-started/download.md" },
       { "Your First Tag" = "mod/get-started/Your First Tag.md" },
     ]},

@@ -38,7 +38,6 @@ nav = [
     { "Kom igång" = [
       { "Översikt" = "mod/get-started/index.md" },
       { "Koncept" = "mod/concepts/index.md" },
-      { "Nedskalad version" = "mod/get-started/downscale.md" },
       { "Ladda ned" = "mod/get-started/download.md" },
       { "Din första tagg" = "mod/get-started/Your First Tag.md" },
     ]},
@@ -502,6 +501,13 @@ nav = [
     {"Script Reference Handler" = "Tools/Script-Reference-Handler.md"},
   ]},
 ]
+
+# Pages kept for later, not published: the same folders as in zensical.toml
+exclude_docs = """
+bms/archive/
+wwt/archive/
+mod/archive/
+"""
 
 extra_css = ["assets/stylesheets/extra.css", "assets/stylesheets/version-select.css"]
 extra_javascript = ["assets/javascripts/custom.js", "assets/javascripts/scrollAnim.js", "assets/javascripts/tag-filter.js", "assets/javascripts/version-select.js"]
