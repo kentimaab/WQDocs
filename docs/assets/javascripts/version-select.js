@@ -1,4 +1,5 @@
-// Version menu for the product sections (MOD, BMS, WWT).
+// Version menu for the product sections (MOD, BMS, WWT), and a language menu that keeps the
+// page on every page of the site.
 //
 // Older versions of a product are archived with mike at /docs/<product>/<version>/ (and
 // /docs/sv/<product>/<version>/), each product with its own versions.json beside them
@@ -12,8 +13,7 @@
 // Archived pages load this script and its stylesheet from the live site, so a change here
 // reaches every archive. Archived pages other than the current version get a banner pointing
 // to it, and all archived pages get the "Home" item their breadcrumbs lack: in an archive the
-// product's overview is the build's own home page. Their language menu is pointed at the same
-// page of the same version in the other language.
+// product's overview is the build's own home page.
 (function () {
     var TEXT = {
         en: {
@@ -196,19 +196,27 @@
         return li;
     }
 
-    // On an archived page the language menu opens the same page of the same version in the other
-    // language; archiving always builds both. Left alone, the theme looks the page up in the live
-    // site's other language, doesn't find it there and opens that language's start page. The
-    // links are updated on every render, since the header outlives the theme's page changes.
-    function languageLinks(here, version, page) {
+    // The language menu opens the same page in the other language, or that language's start page
+    // when it has no such page. A page has the same path below each language's home, archived
+    // versions included, since archiving always builds both languages. The theme's own switcher
+    // expects every language in a folder of its own; with Swedish inside the English root it
+    // falls back to the start page. The links are updated on every render, since the header
+    // outlives the theme's page changes.
+    function languageLinks() {
+        var path = location.pathname;
+        var here = path.indexOf(HOMES.sv) === 0 ? 'sv' : path.indexOf(HOMES.en) === 0 ? 'en' : null;
+        if (!here) {
+            return;
+        }
+        var page = path.slice(HOMES[here].length);
         document.querySelectorAll('.md-select__link[hreflang]').forEach(function (a) {
             var lang = a.getAttribute('hreflang');
-            if (lang === here.lang || !HOMES.hasOwnProperty(lang)) {
+            if (lang === here || !HOMES.hasOwnProperty(lang)) {
                 return;
             }
-            a.setAttribute('data-wq-base', HOMES[lang] + here.product + '/' + version + '/');
+            a.setAttribute('data-wq-base', HOMES[lang]);
             a.setAttribute('data-wq-page', page);
-            a.href = a.getAttribute('data-wq-base') + page;
+            a.href = HOMES[lang] + page;
             if (a.hasAttribute('data-wq-language')) {
                 return;
             }
@@ -256,7 +264,6 @@
         if (!archived) {
             return;
         }
-        languageLinks(here, archived.version, page);
         var content = document.querySelector('.md-content__inner');
         if (content && archived !== pinned) {
             content.insertBefore(banner(t, archived.title || archived.version, current, page), content.firstChild);
@@ -269,8 +276,10 @@
 
     function render() {
         var mine = ++renders;
+        languageLinks();
         var here = locate();
         if (!here) {
+            restoreScroll();
             return;
         }
         Promise.all([versions(here.root), currentVersions()]).then(function (results) {
