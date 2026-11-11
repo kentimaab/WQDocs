@@ -72,11 +72,3 @@ The next step is to create a dedicated user on the router that WideQuick can use
     ![Create a new user](images/Create_user.png)
 
 The username and password created here are used later to configure the plugin in WideQuick.
-
-## Import the plugin
-
-This section covers importing the plugin into WideQuick as a resource, so that WideQuick can communicate with the router.
-
-1. Download the resource with the link provided by Kentima.
-2. Import the resource and select **Replace all**. If you are unsure how to import resources, see [Resources and Resource package](../../bms/reference/Resources-and-Resource-package.md).
-3. The plugin is now installed. See [Usage](anvandning-mod.md) for how to configure it in WideQuick.

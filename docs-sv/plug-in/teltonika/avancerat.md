@@ -2,7 +2,7 @@
 
 ## Certifikat giltigt för routerns IP-adress
 
-Som ett alternativ till `SetIgnoreCertificateErrors(true)` (se [Användning](anvandning-mod.md)) går det att skapa ett certifikat som routern faktiskt litar på för sin IP-adress, och sedan lita på det certifikatet på serverdatorn som kör WideQuick. Då slipper man stänga av certifikatvalideringen helt.
+Som ett alternativ till `SetIgnoreCertificateErrors(true)` (se [Användning Generellt](anvandning-wq.md)) går det att skapa ett certifikat som routern faktiskt litar på för sin IP-adress, och sedan lita på det certifikatet på serverdatorn som kör WideQuick. Då slipper man stänga av certifikatvalideringen helt.
 
 En publik certifikatutfärdare (CA), som Let's Encrypt, utfärdar aldrig certifikat för privata IP-adresser (RFC 1918, t.ex. `192.168.1.1`). Teltonika-routern har däremot en egen inbyggd CA (`uhttpd.crt` / `uhttpd.key` – samma CA som routerns eget webbgränssnitt är signerat med) som kan signera ett certifikat där IP-adressen ingår som Subject Alternative Name (SAN). Certifikatet skapas i två steg: först genereras en certifikatförfrågan (CSR), som sedan signeras separat med routerns IP-adress angiven som SAN.
 
@@ -58,10 +58,10 @@ En publik certifikatutfärdare (CA), som Let's Encrypt, utfärdar aldrig certifi
 
 ### 3. Lita på certifikatet i serverdatorn
 
-Det är routerns signerade certifikat (`sms-cert`) som skickas till klienten vid TLS-anslutningen, och som innehåller SAN med IP-adressen. Men för att Windows-datorn som kör WideQuick Server ska lita på det certifikatet måste det gå att verifiera vem som utfärdat det – därför är det CA:t (routerns egen utfärdare), inte det signerade certifikatet, som ska importeras. Genom att lita på utfärdaren litar Windows automatiskt på allt den CA:n signerar, både nu och vid en framtida förnyelse (t.ex. om routerns IP-adress ändras och certifikatet behöver signeras om) – utan att importen behöver göras om varje gång.
+Det är routerns signerade certifikat (`sms-cert`) som skickas till klienten vid TLS-anslutningen, och som innehåller SAN med IP-adressen. Men för att Windows-datorn som kör WideQuick Runtime ska lita på det certifikatet måste det gå att verifiera vem som utfärdat det – därför är det CA:t (routerns egen utfärdare), inte det signerade certifikatet, som ska importeras. Genom att lita på utfärdaren litar Windows automatiskt på allt den CA:n signerar, både nu och vid en framtida förnyelse (t.ex. om routerns IP-adress ändras och certifikatet behöver signeras om) – utan att importen behöver göras om varje gång.
 
 1. Exportera CA-certifikatet `uhttpd.crt` (enbart CA-certifikatet, inte routerns signerade certifikat eller privata nycklar) från Certificates-sidan.
-2. Importera CA-certifikatet till **Trusted Root Certification Authorities** ("Betrodda certifikatsutgivare" på svenska) på Windows-datorn som kör WideQuick Server, antingen via `certmgr.msc` eller med PowerShell:
+2. Importera CA-certifikatet till **Trusted Root Certification Authorities** ("Betrodda certifikatsutgivare" på svenska) på Windows-datorn som kör WideQuick Runtime, antingen via `certmgr.msc` eller med PowerShell:
 
     ```powershell
     Import-Certificate -FilePath "ca.crt" -CertStoreLocation Cert:\LocalMachine\Root
@@ -74,17 +74,17 @@ Efter detta litar Windows/.NET på certifikatet – både förtroendekedjan (via
 
 ## Funktionsreferens
 
-Utöver funktionerna som redan används i [Användning](anvandning-mod.md) innehåller pluginet ett antal funktioner för diagnostik och drift. Pluginet kommunicerar med routern via en inbyggd REST-klient, men den behöver man normalt inte bry sig om – SMS-funktionerna nedan täcker de flesta behov.
+Utöver funktionerna som redan används i [Användning Generellt](anvandning-wq.md) innehåller pluginet ett antal funktioner för diagnostik och drift. Pluginet kommunicerar med routern via en inbyggd REST-klient, men den behöver man normalt inte bry sig om – SMS-funktionerna nedan täcker de flesta behov.
 
 | Funktion | Vad den gör |
 |---|---|
 | `PluginInfo.Version()` | Returnerar pluginets version, t.ex. `"1.0.0"` – bra sanity check direkt efter driftsättning eller uppgradering. |
 | `SmsClient.GetQueueLength()` | Antal SMS som just nu väntar i bakgrundskön. |
 | `SmsClient.GetLastSmsStatus()` | Resultatet av det senast avslutade utskicket, t.ex. `"OK 2026-07-03 12:01:44 +46701234567"` eller `"FAILED 2026-07-03 12:01:44 +46701234567: <orsak>"`. Tom sträng innan första utskicket är klart. |
-| `SmsClient.GetSentCount()` / `GetFailedCount()` | Räknare sedan tjänsten senast startades. Går att polla för att upptäcka ett lyckat eller misslyckat utskick som ett "event" (jämför värdet mellan varje körning), eller för att övervaka ett dött modem eller felaktiga inloggningsuppgifter i drift. |
+| `SmsClient.GetSentCount()` / `GetFailedCount()` | Räknare sedan WideQuick Runtime senast startades. Går att polla för att upptäcka ett lyckat eller misslyckat utskick som ett "event" (jämför värdet mellan varje körning), eller för att övervaka ett dött modem eller felaktiga inloggningsuppgifter i drift. |
 | `SmsClient.GetLog()` / `GetLog(maxRader)` | De senaste loggraderna (standard 50, buffert på max 200 rader) – lämpligt att visa i en diagnostikvy. |
 | `SmsClient.ClearLog()` | Rensar minnesloggen. |
-| `SmsClient.SetLogFile(sökväg)` | Speglar loggen till en fil så att historiken överlever en omstart av tjänsten (minnesloggen gör det inte). Tom sträng (`""`) stänger av filloggningen igen. |
+| `SmsClient.SetLogFile(sökväg)` | Speglar loggen till en fil så att historiken överlever en omstart av WideQuick Runtime (minnesloggen gör det inte). Tom sträng (`""`) stänger av filloggningen igen. |
 | `RestClient.SetTimeoutSeconds(n)` | HTTP-timeout i sekunder, standard `10`. Påverkar även hur länge `SendSmsWait()` kan blockera i värsta fall (cirka 8 × timeout, ~80 s med standardvärdet) om ett köat utskick samtidigt håller på med ett omförsök. |
 
 ## Felsökning
@@ -94,7 +94,7 @@ Utöver funktionerna som redan används i [Användning](anvandning-mod.md) inneh
 | SMS kommer aldrig fram | Kontrollera `GetLastSmsStatus()` och `GetLastError()` – de innehåller routerns felorsak (t.ex. misslyckad inloggning eller onåbar router). |
 | Behöver historik över vad som hänt | `GetLog(200)` visar de senaste 200 pluginhändelserna: konfiguration, utskick, omförsök och kasserade meddelanden. |
 | Behöver historik som överlever en omstart | Anropa `SetLogFile("C:\\Logs\\sms.log")` en gång vid uppstart, läs sedan filen. |
-| Felet "not configured" | `Configure()` har inte körts i den här processen – kontrollera att skriptbiblioteket med konfigurationen faktiskt laddas. |
-| Inget fungerar efter driftsättning eller uppgradering | Kör `PluginInfo.Version()` från ett skript. Misslyckas anropet är DLL:en inte laddad – kontrollera `ScriptPluginAssemblies` och att tjänsten startats om (se [Importera plugin](anvandning-mod.md#importera-plugin)), samt att inga gamla DLL-filer ligger kvar. |
+| Felet "not configured" | `Configure()` har inte körts i den här processen – kontrollera att skriptmodulen med konfigurationen (t.ex. `scSMS`) faktiskt laddas. |
+| Inget fungerar efter driftsättning eller uppgradering | Kör `PluginInfo.Version()` från ett skript. Misslyckas anropet är DLL:en inte laddad. Kontrollera att pluginet är registrerat under **Plugins** med en relativ sökväg till DLL-filen (se [Registrera pluginet i projektet](anvandning-wq.md#registrera-pluginet-i-projektet), eller [Importera plugin](anvandning-mod.md#importera-plugin) i ett Modular Framework-projekt), att WideQuick Runtime har startats om, samt att inga gamla DLL-filer ligger kvar. |
 | `HTTP 401`, eller en loggrad som börjar `router redirected http:// to https://` | Routern kräver https – kontrollera att `url` i `Configure(...)` börjar med `https://`, samt att **Redirect to HTTPS** är aktiverat under **System → Administration → Access Control → HTTPS** om du är osäker. |
 | `"Modem 'X' not found on this router"` | Det angivna modem-id:t i `Configure(...)` finns inte på routern. `GetLastError()` listar routerns riktiga modem-id:n – rätta argumentet, eller använd tre-argumentsvarianten av `Configure()` för att låta pluginet auto-detektera modemet istället. |

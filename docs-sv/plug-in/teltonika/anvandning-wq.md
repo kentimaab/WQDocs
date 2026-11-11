@@ -7,7 +7,7 @@ I detta kapitel beskrivs hur pluginet anropas från skript i WideQuick för att 
 Pluginet är en .NET-DLL, `KentimaSmsClient.dll`, som behöver registreras i projektet innan skripten kan anropa det.
 
 1. Lägg `KentimaSmsClient.dll` i projektkatalogen, gärna i en egen underkatalog.
-2. Högerklicka på noden **Script-plugins** i projektträdet i WideQuick Designer och välj **Lägg till plugin**.
+2. Högerklicka på noden **Plugins** i projektträdet i WideQuick Designer och välj **Lägg till plugin**.
 3. Ange namnet `KentimaSmsClient` och peka ut DLL-filen med en relativ sökväg.
 
 !!! note "Namnet ingår i varje anrop"
@@ -86,6 +86,10 @@ Det rekommenderas att lägga konfigurationen i en egen skriptmodul. På så vis 
         Ett upprepat `Configure()`-anrop med oförändrade uppgifter gör ingenting, så funktionen kan anropas igen, t.ex. från en inställningsvy, utan att anslutningen störs. Ändras url, användarnamn, lösenord eller modem-id byggs anslutningen om, och meddelanden som just då ligger kvar i den gamla kön överges.
 
 5. Starta WideQuick Runtime, eller starta om den om den redan körs. En skriptmodul körs bara en gång, när Runtime startar. Öppna sedan `Log\Debug.log` i projektkatalogen. Om allt har gått rätt till står `Koppling till Teltonika Router fungerar!` i loggen.
+
+    !!! warning "Aktivera felsökningsloggen"
+        `Debug.log` skrivs bara när felsökningsloggen är aktiverad i projektet. Högerklicka på projektet i projektträdet, välj **Properties** och kryssa i rutan **Debug Log** innan Runtime startas.
+        ![Debuglog](./images/debuglog.png)
 
 ### Val av modem vid flera SIM-kort
 

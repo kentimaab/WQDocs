@@ -7,7 +7,7 @@
     The Teltonika plugin only works for Windows OS
 
 !!! warning "Modular Framework"
-    The Teltonika plugin is built on the Modular Framework, so it only works in WideQuick projects that are also built on the Modular Framework.
+    The Teltonika plugin is a general solution that works in any WideQuick application. To use the ready-made resource package, with its configuration views and dialogs, the project has to be built on WideQuick Modular Framework (MOD, BMS, WWT). If the WideQuick project is not built on Modular Framework, follow the guide under [Usage General](anvandning-wq.md).
     
 Using a .NET plugin, WideQuick can send SMS messages directly from the system, without intermediate services or external SMS gateways. The plugin communicates with a Teltonika router via its built-in REST API and sends SMS through the mobile network the router is connected to.
 

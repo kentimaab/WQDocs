@@ -16,7 +16,7 @@ This page is updated continuously as more plugins are released.
 Send SMS notifications directly from WideQuick through a Teltonika router's built-in REST API, as a drop-in replacement for the built-in GSM Modem system.
 
 * [**Overview**](teltonika/oversikt.md) — what the plugin does and which routers are supported.
-* [**Installation**](teltonika/installation.md) — importing the plugin as a resource.
+* [**Installation**](teltonika/installation.md) — setting up the Teltonika router.
 * [**Usage General**](teltonika/anvandning-wq.md) — configuring the plugin and sending SMS.
 * [**Usage Modular Framework**](teltonika/anvandning-mod.md) — configuring the plugin and sending SMS in a Modular Framework project.
 * [**Advanced**](teltonika/avancerat.md) — certificates, function reference, and troubleshooting.

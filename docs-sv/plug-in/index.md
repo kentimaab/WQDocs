@@ -16,7 +16,7 @@ Den här sidan uppdateras löpande i takt med att fler plugins släpps.
 Skicka SMS-aviseringar direkt från WideQuick via en Teltonika-routers inbyggda REST API, som en direkt ersättning för det inbyggda GSM-modem-systemet.
 
 * [**Översikt**](teltonika/oversikt.md) — vad pluginet gör och vilka routrar som stöds.
-* [**Installation**](teltonika/installation.md) — importera pluginet som en resurs.
+* [**Installation**](teltonika/installation.md) — konfigurera Teltonika-routern.
 * [**Användning Generellt**](teltonika/anvandning-wq.md) — konfigurera pluginet och skicka SMS.
 * [**Användning Modular Framework**](teltonika/anvandning-mod.md) — konfigurera pluginet och skicka SMS i ett Modular Framework-projekt.
 * [**Avancerat**](teltonika/avancerat.md) — certifikat, funktionsreferens och felsökning.

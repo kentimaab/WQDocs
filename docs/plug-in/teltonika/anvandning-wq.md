@@ -7,7 +7,7 @@ This chapter describes how to call the plugin from scripts in WideQuick to send 
 The plugin is a .NET DLL, `KentimaSmsClient.dll`, which has to be registered in the project before scripts can call it.
 
 1. Place `KentimaSmsClient.dll` in the project directory, preferably in a subdirectory of its own.
-2. Right-click the **Script Plugins** node in the project tree in WideQuick Designer and select **Add plugin**.
+2. Right-click the **Plugins** node in the project tree in WideQuick Designer and select **Add plugin**.
 3. Enter the name `KentimaSmsClient` and point to the DLL file with a relative path.
 
 !!! note "The name is part of every call"
@@ -87,6 +87,10 @@ It is recommended to put the configuration in a script module of its own. That w
 
 5. Start WideQuick Runtime, or restart it if it is already running. A script module only runs once, when Runtime starts. Then open `Log\Debug.log` in the project directory. If everything went well, the log contains `Connection to the Teltonika router works!`.
 
+    !!! warning "Turn on the debug log"
+        `Debug.log` is only written when the debug log is turned on in the project. Right-click the project in the project tree, select **Properties** and check the **Debug Log** box before starting Runtime.
+        ![Debuglog](./images/debuglog.png)
+        
 ### Choosing a modem with several SIM cards
 
 `Configure()` comes in two variants: one taking three arguments (`url`, `username`, `password`) and one taking four (the same three, plus `id`). The example above uses the three-argument variant.

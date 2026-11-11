@@ -7,7 +7,7 @@
     Teltonika-pluginet fungerar endast för Windows OS
 
 !!! warning "Modular Framework"
-    Teltonika-pluginet som resurs är byggt för Modular Framework och fungerar därför bara i WideQuick-projekt som också är byggda på Modular Framework(MOD,BMS,WWT). Om WideQuick-projektet inte är byggt på Modular Framework, följ använding generellt.
+    Teltonika-pluginet är en generell lösning som fungerar i alla WideQuick-applikationer. Vill man däremot använda det färdiga resurspaketet med färdiga konfigurationsvyer och dialoger så krävs WideQuick Modular Framework (MOD, BMS, WWT). Om WideQuick-projektet inte är byggt på Modular Framework, följ guiden under [Användning Generellt](anvandning-wq.md).
 
 Med hjälp av ett .NET-plugin kan WideQuick skicka SMS direkt från systemet, utan mellanliggande tjänster eller externa SMS-gateways. Pluginet kommunicerar med en Teltonika-router via dess inbyggda REST API och skickar SMS genom det mobilnät som routern är ansluten till.
 

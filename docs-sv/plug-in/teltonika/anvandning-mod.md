@@ -3,7 +3,7 @@
 Pluginet fungerar nästan som en direkt ersättning för WideQuicks inbyggda GSM-modem-system och kräver ingen skriptning. När det har importerats konfigureras det helt och hållet från vyn Inställningar.
 
 !!! note "Modular Framework" 
-    Att importera Teltonika pluginet som resurs funkar bara för projekt som är byggda från Modular Framework, dvs MOD,BMS och WWT.  
+    Att importera Teltonika-pluginet som resurs fungerar bara för projekt som är byggda från Modular Framework, dvs. MOD, BMS och WWT.
 
 
 ## Importera plugin
@@ -12,7 +12,7 @@ Det här avsnittet beskriver hur pluginet importeras till WideQuick som en resur
 
 1. Ladda ner resursen med länken från Kentima.
 2. Importera resursen och välj **Replace all**. Är du osäker på hur man importerar resurser, se [Resurser och Resurspaket](../../bms/reference/Resources-and-Resource-package.md).
-3. Pluginet är nu installerat. Se [Användning](anvandning-mod.md) för hur du konfigurerar det i WideQuick.
+3. Pluginet är nu installerat.
 
 ## Konfigurera pluginet
 
