@@ -17,5 +17,6 @@ Skicka SMS-aviseringar direkt från WideQuick via en Teltonika-routers inbyggda 
 
 * [**Översikt**](teltonika/oversikt.md) — vad pluginet gör och vilka routrar som stöds.
 * [**Installation**](teltonika/installation.md) — importera pluginet som en resurs.
-* [**Användning**](teltonika/anvandning.md) — konfigurera pluginet och skicka SMS.
+* [**Användning Generellt**](teltonika/anvandning-wq.md) — konfigurera pluginet och skicka SMS.
+* [**Användning Modular Framework**](teltonika/anvandning-mod.md) — konfigurera pluginet och skicka SMS i ett Modular Framework-projekt.
 * [**Avancerat**](teltonika/avancerat.md) — certifikat, funktionsreferens och felsökning.

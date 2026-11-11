@@ -1,6 +1,18 @@
 # Skicka SMS med Teltonika – Användning
 
-Pluginet fungerar nästan som en direkt ersättning för WideQuicks inbyggda GSM-modem-system och kräver ingen skriptning. När det har [importerats som en resurs](installation.md#importera-plugin) konfigureras det helt och hållet från vyn Inställningar.
+Pluginet fungerar nästan som en direkt ersättning för WideQuicks inbyggda GSM-modem-system och kräver ingen skriptning. När det har importerats konfigureras det helt och hållet från vyn Inställningar.
+
+!!! note "Modular Framework" 
+    Att importera Teltonika pluginet som resurs funkar bara för projekt som är byggda från Modular Framework, dvs MOD,BMS och WWT.  
+
+
+## Importera plugin
+
+Det här avsnittet beskriver hur pluginet importeras till WideQuick som en resurs, så att WideQuick kan kommunicera med routern.
+
+1. Ladda ner resursen med länken från Kentima.
+2. Importera resursen och välj **Replace all**. Är du osäker på hur man importerar resurser, se [Resurser och Resurspaket](../../bms/reference/Resources-and-Resource-package.md).
+3. Pluginet är nu installerat. Se [Användning](anvandning-mod.md) för hur du konfigurerar det i WideQuick.
 
 ## Konfigurera pluginet
 

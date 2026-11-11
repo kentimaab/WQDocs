@@ -2,7 +2,7 @@
 
 ## Certifikat giltigt för routerns IP-adress
 
-Som ett alternativ till `SetIgnoreCertificateErrors(true)` (se [Användning](anvandning.md)) går det att skapa ett certifikat som routern faktiskt litar på för sin IP-adress, och sedan lita på det certifikatet på serverdatorn som kör WideQuick. Då slipper man stänga av certifikatvalideringen helt.
+Som ett alternativ till `SetIgnoreCertificateErrors(true)` (se [Användning](anvandning-mod.md)) går det att skapa ett certifikat som routern faktiskt litar på för sin IP-adress, och sedan lita på det certifikatet på serverdatorn som kör WideQuick. Då slipper man stänga av certifikatvalideringen helt.
 
 En publik certifikatutfärdare (CA), som Let's Encrypt, utfärdar aldrig certifikat för privata IP-adresser (RFC 1918, t.ex. `192.168.1.1`). Teltonika-routern har däremot en egen inbyggd CA (`uhttpd.crt` / `uhttpd.key` – samma CA som routerns eget webbgränssnitt är signerat med) som kan signera ett certifikat där IP-adressen ingår som Subject Alternative Name (SAN). Certifikatet skapas i två steg: först genereras en certifikatförfrågan (CSR), som sedan signeras separat med routerns IP-adress angiven som SAN.
 
@@ -74,7 +74,7 @@ Efter detta litar Windows/.NET på certifikatet – både förtroendekedjan (via
 
 ## Funktionsreferens
 
-Utöver funktionerna som redan används i [Användning](anvandning.md) innehåller pluginet ett antal funktioner för diagnostik och drift. Pluginet kommunicerar med routern via en inbyggd REST-klient, men den behöver man normalt inte bry sig om – SMS-funktionerna nedan täcker de flesta behov.
+Utöver funktionerna som redan används i [Användning](anvandning-mod.md) innehåller pluginet ett antal funktioner för diagnostik och drift. Pluginet kommunicerar med routern via en inbyggd REST-klient, men den behöver man normalt inte bry sig om – SMS-funktionerna nedan täcker de flesta behov.
 
 | Funktion | Vad den gör |
 |---|---|
@@ -95,6 +95,6 @@ Utöver funktionerna som redan används i [Användning](anvandning.md) innehåll
 | Behöver historik över vad som hänt | `GetLog(200)` visar de senaste 200 pluginhändelserna: konfiguration, utskick, omförsök och kasserade meddelanden. |
 | Behöver historik som överlever en omstart | Anropa `SetLogFile("C:\\Logs\\sms.log")` en gång vid uppstart, läs sedan filen. |
 | Felet "not configured" | `Configure()` har inte körts i den här processen – kontrollera att skriptbiblioteket med konfigurationen faktiskt laddas. |
-| Inget fungerar efter driftsättning eller uppgradering | Kör `PluginInfo.Version()` från ett skript. Misslyckas anropet är DLL:en inte laddad – kontrollera `ScriptPluginAssemblies` och att tjänsten startats om (se [Importera plugin](installation.md#importera-plugin)), samt att inga gamla DLL-filer ligger kvar. |
+| Inget fungerar efter driftsättning eller uppgradering | Kör `PluginInfo.Version()` från ett skript. Misslyckas anropet är DLL:en inte laddad – kontrollera `ScriptPluginAssemblies` och att tjänsten startats om (se [Importera plugin](anvandning-mod.md#importera-plugin)), samt att inga gamla DLL-filer ligger kvar. |
 | `HTTP 401`, eller en loggrad som börjar `router redirected http:// to https://` | Routern kräver https – kontrollera att `url` i `Configure(...)` börjar med `https://`, samt att **Redirect to HTTPS** är aktiverat under **System → Administration → Access Control → HTTPS** om du är osäker. |
 | `"Modem 'X' not found on this router"` | Det angivna modem-id:t i `Configure(...)` finns inte på routern. `GetLastError()` listar routerns riktiga modem-id:n – rätta argumentet, eller använd tre-argumentsvarianten av `Configure()` för att låta pluginet auto-detektera modemet istället. |

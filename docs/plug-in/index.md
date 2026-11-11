@@ -17,5 +17,6 @@ Send SMS notifications directly from WideQuick through a Teltonika router's buil
 
 * [**Overview**](teltonika/oversikt.md) — what the plugin does and which routers are supported.
 * [**Installation**](teltonika/installation.md) — importing the plugin as a resource.
-* [**Usage**](teltonika/anvandning.md) — configuring the plugin and sending SMS.
+* [**Usage General**](teltonika/anvandning-wq.md) — configuring the plugin and sending SMS.
+* [**Usage Modular Framework**](teltonika/anvandning-mod.md) — configuring the plugin and sending SMS in a Modular Framework project.
 * [**Advanced**](teltonika/avancerat.md) — certificates, function reference, and troubleshooting.

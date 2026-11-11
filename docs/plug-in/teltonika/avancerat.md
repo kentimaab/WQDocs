@@ -2,7 +2,7 @@
 
 ## Certificate valid for the router's IP address
 
-As an alternative to `SetIgnoreCertificateErrors(true)` (see [Usage](anvandning.md)), it is possible to create a certificate that the router actually trusts for its IP address, and then trust that certificate on the server computer running WideQuick. This avoids disabling certificate validation entirely.
+As an alternative to `SetIgnoreCertificateErrors(true)` (see [Usage](anvandning-mod.md)), it is possible to create a certificate that the router actually trusts for its IP address, and then trust that certificate on the server computer running WideQuick. This avoids disabling certificate validation entirely.
 
 A public certificate authority (CA), such as Let's Encrypt, never issues certificates for private IP addresses (RFC 1918, e.g. `192.168.1.1`). The Teltonika router does, however, have its own built-in CA (`uhttpd.crt` / `uhttpd.key` – the same CA the router's own web interface is signed with) that can sign a certificate with the IP address included as a Subject Alternative Name (SAN). The certificate is created in two steps: first a certificate signing request (CSR) is generated, which is then signed separately with the router's IP address given as SAN.
 
@@ -74,7 +74,7 @@ After this, Windows/.NET trusts the certificate – both the trust chain (via th
 
 ## Function reference
 
-In addition to the functions already used in [Usage](anvandning.md), the plugin includes a number of functions for diagnostics and operation. The plugin communicates with the router via a built-in REST client, but you normally don't need to worry about that – the SMS functions below cover most needs.
+In addition to the functions already used in [Usage](anvandning-mod.md), the plugin includes a number of functions for diagnostics and operation. The plugin communicates with the router via a built-in REST client, but you normally don't need to worry about that – the SMS functions below cover most needs.
 
 | Function | What it does |
 |---|---|

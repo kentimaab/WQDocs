@@ -57,7 +57,7 @@ Before importing the plugin, it is worth verifying that the SIM card and mobile 
 
 ### Create a user
 
-The next step is to create a dedicated user on the router that Ethiris can use to connect to it. The user is assigned its own group with minimal write permissions, restricted to sending SMS, to reduce the risk if the user's credentials were to leak.
+The next step is to create a dedicated user on the router that WideQuick can use to connect to it. The user is assigned its own group with minimal write permissions, restricted to sending SMS, to reduce the risk if the user's credentials were to leak.
 
 1. Go to **System → Administration → User Settings → System Users**. Under **Add new group**, enter a group name, e.g. `sms`, and click **Add**.
 
@@ -71,7 +71,7 @@ The next step is to create a dedicated user on the router that Ethiris can use t
 
     ![Create a new user](images/Create_user.png)
 
-The username and password created here are used later to configure the plugin in Ethiris.
+The username and password created here are used later to configure the plugin in WideQuick.
 
 ## Import the plugin
 
@@ -79,4 +79,4 @@ This section covers importing the plugin into WideQuick as a resource, so that W
 
 1. Download the resource with the link provided by Kentima.
 2. Import the resource and select **Replace all**. If you are unsure how to import resources, see [Resources and Resource package](../../bms/reference/Resources-and-Resource-package.md).
-3. The plugin is now installed. See [Usage](anvandning.md) for how to configure it in WideQuick.
+3. The plugin is now installed. See [Usage](anvandning-mod.md) for how to configure it in WideQuick.

@@ -524,7 +524,8 @@ nav = [
     { "Teltonika" = [
       { "Overview" = "plug-in/teltonika/oversikt.md" },
       { "Installation" = "plug-in/teltonika/installation.md" },
-      { "Usage" = "plug-in/teltonika/anvandning.md" },
+      { "Usage General" = "plug-in/teltonika/anvandning-wq.md" },
+      { "Usage Modular Framework" = "plug-in/teltonika/anvandning-mod.md" },
       { "Advanced" = "plug-in/teltonika/avancerat.md" },
     ]},
   ]},
