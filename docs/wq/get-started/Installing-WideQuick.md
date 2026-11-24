@@ -57,6 +57,10 @@ hardware is required:
 Run the installation file on the computer where you wish to install **WideQuick®**.
 The installer will guide you through the following steps.
 
+!!! tip
+    To install without any dialogs, for example from a script or with Intune,
+    see [Installing from the command line](#installing-from-the-command-line).
+
 ### Welcome
 
 ![Welcome](/docs/Images/Install/Welcome.png)
@@ -104,7 +108,6 @@ The available components are:
 * **WideQuick Designer**
 * **WideQuick Runtime**
 * **WideQuick Manual**
-* **WideQuick License Handler**
 
 **Runtime machine** — for running a project locally on the target machine:
 
@@ -112,14 +115,13 @@ The available components are:
 * **WideQuick License Handler**
 * **Startup project**
 
-**Remotely accessible runtime machine** — for running a project that can also be
+**WideQuick Remote machine** — for running a project that can also be
 accessed remotely:
 
 * **WideQuick Runtime**
 * **WideQuick Remote**
 * **Startup project**
 * **Startup Remote project**
-* **WideQuick License Handler**
 
 ### License Agreement
 
@@ -184,3 +186,243 @@ installation location. Click **Finish** to close the installer.
 !!! tip
     If you skipped entering the product key during installation, open the
     **WideQuick License Handler** from the Start Menu to enter it now.
+
+## Installing from the command line
+
+WideQuick® can be installed without any dialogs (a *silent install*), for example when the installation is scripted or deployed with Intune, SCCM or GPO. The installer is then run from the command line, and the choices normally made in the dialogs are given in advance.
+
+How the choices are given depends on the version:
+
+- **WideQuick 13.4 and earlier** use InstallShield. The choices are first recorded to a response file, which is then played back during the silent installation.
+- **WideQuick 14** uses Qt Installer Framework. The choices are given directly as commands and options, and no response file is needed.
+
+!!! warning "Requires administrator rights"
+    Run the installation from a Command Prompt or PowerShell started as administrator, or as SYSTEM in a deployment tool.
+
+### WideQuick 13.4 and earlier
+
+In WideQuick 13.4 and earlier, WideQuick products are installed with InstallShield. A silent installation is then done in two steps:
+
+1. The installation is first done manually and "recorded". The choices are saved to a response file (`.iss`).
+2. The response file is then used to run the same installation silently from the command line on other computers.
+
+!!! note
+    The choices made during the recording also apply to the silent installation. For example, if only Designer is installed during the recording, only Designer is installed when the response file is used.
+
+#### Record the installation
+
+```
+setup.exe /r /f1"C:\Temp\my-answer-file.iss"
+```
+
+- Replace `setup.exe` with the installation file, for example `"WideQuick 13.4.1.exe"`.
+- Replace `C:\Temp\my-answer-file.iss` with the path where the response file should be saved.
+
+The normal graphical installer starts. Make the choices that should apply and complete the installation.
+
+#### Install from the recording
+
+```
+setup.exe /s /f1"C:\Temp\my-answer-file.iss" /f2"C:\Temp\my-install.log"
+```
+
+- Replace `setup.exe` with the installation file.
+- Replace `C:\Temp\my-answer-file.iss` with the path to the recorded response file.
+- Replace `C:\Temp\my-install.log` with the path where the log file should be saved. `/f2` is optional, but is needed to [check the result](#check-the-result).
+
+| Option | Description |
+|---|---|
+| `/r` | Records the installation to a response file. |
+| `/s` | Installs silently using a response file. |
+| `/f1"<path>"` | Path to the response file. |
+| `/f2"<path>"` | *(Optional)* Path to the log file for the silent installation. |
+
+!!! note
+    Give the full path to the files and do not put a space between `/f1` or `/f2` and the quotation mark.
+
+#### Check the result
+
+The result is written to the log file given with `/f2`, under `[ResponseResult]`:
+
+| ResultCode | Meaning |
+|---|---|
+| `0` | The installation succeeded. |
+| `-3` | The response file does not match the installer, for example if it was recorded with a different version or in a different mode. |
+
+Other negative values mean that the installation failed.
+
+### WideQuick 14
+
+```
+"WideQuick 14.0.3.exe" <command> [components ...] [options]
+```
+
+- **Command** – *what* to do, for example `install`. Written without dashes, and only one per run.
+- **Components** – *which* parts to install, for example `wqruntime wqdesigner`.
+- **Options** – *how* to do it, for example `--al`. Always start with `-` or `--`.
+
+Replace the file name with the installation package you have downloaded.
+
+!!! note
+    No UAC dialog is shown in command-line mode. Without administrator rights, the installation stops with the error *Cannot elevate access rights while running from command line*.
+
+#### Quick start
+
+Install the default components (Runtime, Designer, Manual, Startup project and License Handler) to the default folder:
+
+```
+"WideQuick 14.0.3.exe" install --al --da -c
+```
+
+The same, but also with Remote and Startup Remote project:
+
+```
+"WideQuick 14.0.3.exe" install startupremote --al --da -c
+```
+
+#### Recommended configurations from the command line
+
+The commands below correspond to the [Recommended configurations](#recommended-configurations) above. With `--nd`, only the components given are installed. For a development machine, the commands under [Quick start](#quick-start) are enough.
+
+**Runtime machine:**
+
+```
+"WideQuick 14.0.3.exe" install startup com.kentima.licensehandler --nd --al --da -c
+```
+
+**WideQuick Remote machine:**
+
+```
+"WideQuick 14.0.3.exe" install startup startupremote --nd --al --da -c
+```
+
+#### Options
+
+Both long and short names work, for example `--accept-licenses` is the same as `--al`. A fully silent installation needs `--al`, `--da` and `-c`.
+
+| Option | Short | Description |
+|---|---|---|
+| `--accept-licenses` | `--al` | Accepts the license agreement. |
+| `--default-answer` | `--da` | Answers all questions with the default answer. |
+| `--confirm-command` | `-c` | Starts the installation without asking for confirmation. |
+| `--no-default-installations` | `--nd` | Installs only the components given. See [What does --nd do?](#what-does-nd-do) |
+| `--root <folder>` | `-t` | Installs to a folder other than the default folder. Use quotation marks if the path contains spaces. |
+| `--accept-messages` | `--am` | Answers *Yes/OK* to all questions instead of the default answer. |
+| `--reject-messages` | `--rm` | Answers *No/Cancel* to all questions. |
+| `--auto-answer <id=value,...>` | `--aa` | Answers specific questions, for example `--aa TargetDirectoryInUse=Ok`. The question id is shown first on the line in the output. |
+| `--no-size-checking` | `--ns` | Skips the free disk space check. |
+| `--verbose` | `-d` | More detailed output, useful for troubleshooting. |
+| `--help` | `-h` | Shows all available commands and options. |
+
+!!! note
+    Use only one of `--da`, `--am` and `--rm`.
+
+##### What does --nd do?
+
+The default components (Runtime, Designer, Manual, Startup project and License Handler) are preselected, just like the checked boxes in the [Select Components](#select-components) step. Components given after `install` are **added** to the preselected ones. `--nd` clears the preselected components first, so that only the ones given are installed.
+
+| Command | Installs |
+|---|---|
+| `install` | The default components |
+| `install wqremote` | The default components **and** Remote |
+| `install wqremote --nd` | **Only** Remote |
+
+Components that a selected component depends on are always installed automatically, even with `--nd`.
+
+!!! note
+    WideQuick License Handler is not included automatically when `--nd` is used. Add `com.kentima.licensehandler` if it is needed.
+
+!!! tip
+    Use `--nd` and list the components explicitly in scripts. That way the installation is not affected if the default selection changes in a future version.
+
+#### Components
+
+Components are given after `install`, separated by spaces. Most of them have a short alias. License Handler and C API have no alias and are given by package name.
+
+| Component | Alias | Package name | Default |
+|---|---|---|---|
+| WideQuick Runtime | `wqruntime` | `com.kentima.wqruntime` | Yes |
+| WideQuick Designer | `wqdesigner` | `com.kentima.wqdesigner` | Yes |
+| WideQuick Manual | `wqmanual` | `com.kentima.wqmanual` | Yes |
+| Startup project (incl. Runtime) | `startup` | `com.kentima.startup` | Yes |
+| WideQuick License Handler | – | `com.kentima.licensehandler` | Yes |
+| WideQuick Remote | `wqremote` | `com.kentima.wqremote` | No |
+| Startup Remote project (incl. Remote) | `startupremote` | `com.kentima.startup_remote` | No |
+| WideQuick LED Driver | `wqleddriver` | `com.kentima.wqleddriver` | No |
+| WideQuick C API | – | `com.kentima.wqcapi` | No |
+
+List the components in the installation package:
+
+```
+"WideQuick 14.0.3.exe" search
+"WideQuick 14.0.3.exe" search --type package
+```
+
+!!! note
+    Type `search`, not `install se`. `install se` stops with the error *2 commands provided, only one can be used at a time*.
+
+#### Change or uninstall an existing installation
+
+The installation package cannot install to a folder that already contains an installation. Use the maintenance tool `maintenancetool.exe` in the installation folder instead. It takes the same commands and options and must also be run as administrator.
+
+**List installed components:**
+
+```
+"C:\Program Files\Kentima AB\WideQuick 14\maintenancetool.exe" list
+```
+
+**Add a component:**
+
+```
+"C:\Program Files\Kentima AB\WideQuick 14\maintenancetool.exe" install wqremote --al --da -c
+```
+
+**Remove a component** (give the package name, not the alias):
+
+```
+"C:\Program Files\Kentima AB\WideQuick 14\maintenancetool.exe" remove com.kentima.wqremote -c --da
+```
+
+**Uninstall everything:**
+
+```
+"C:\Program Files\Kentima AB\WideQuick 14\maintenancetool.exe" purge -c --da
+```
+
+!!! warning
+    `purge` removes the entire installation folder, including files created after the installation, for example `wqservice.ini`. Back up such files first.
+
+#### Upgrade within the same major version
+
+To upgrade to a newer version within the same major version, for example from 14.0.2 to 14.0.3, the old version must be uninstalled first:
+
+1. Back up your own files in the installation folder, for example `wqservice.ini`.
+2. Uninstall the old version with `maintenancetool.exe purge -c --da`.
+3. Install the new version with the components you want.
+4. Put the backed-up files back.
+
+!!! note
+    A new major version, for example WideQuick 15, is installed in its own folder. The old version does not need to be uninstalled.
+
+#### Deployment with Intune, SCCM or GPO
+
+- The installation works when run as SYSTEM. The program is then registered for all users, and the shortcuts are placed in the common Start Menu.
+- Use `--nd --al --da -c` and list the components explicitly.
+- The Runtime installation creates the Windows service **WideQuick Runtime** with the startup type Manual.
+- Check the exit code:
+
+    | Exit code | Meaning |
+    |---|---|
+    | `0` | The installation succeeded. |
+    | `1` | Error or cancelled installation. |
+    | `3` | Unknown component, for example a misspelled alias. |
+
+Example in PowerShell:
+
+```powershell
+$p = Start-Process "C:\Install\WideQuick 14.0.3.exe" -ArgumentList 'install startup com.kentima.licensehandler --nd --al --da -c' -Wait -PassThru
+$p.ExitCode
+```
+
+!!! tip
+    If something fails, run again with `-d` and save the output to a file, for example `> C:\Temp\wq_install.log 2>&1`. The installer also writes the log `InstallationLog.txt` in the installation folder.
