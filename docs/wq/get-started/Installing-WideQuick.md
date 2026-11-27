@@ -293,7 +293,7 @@ The commands below correspond to the [Recommended configurations](#recommended-c
 **WideQuick Remote machine:**
 
 ```
-"WideQuick 14.0.3.exe" install startup startupremote --nd --al --da -c
+"WideQuick 14.0.3.exe" install startupremote --nd --al --da -c
 ```
 
 #### Options

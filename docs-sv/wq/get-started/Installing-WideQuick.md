@@ -295,7 +295,7 @@ Kommandona nedan motsvarar [Rekommenderade konfigurationer](#rekommenderade-konf
 **WideQuick Remote-maskin:**
 
 ```
-"WideQuick 14.0.3.exe" install startup startupremote --nd --al --da -c
+"WideQuick 14.0.3.exe" install startupremote --nd --al --da -c
 ```
 
 #### Flaggor
