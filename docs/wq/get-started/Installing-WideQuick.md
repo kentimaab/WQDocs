@@ -50,7 +50,7 @@ hardware is required:
 * Windows 10 (1809, 64-bit)
 * Windows 11 (64-bit)
 * Windows Server 2019 or newer (64-bit)
-* Debian GNU/Linux 11.0 (64-bit)
+* Linux (64-bit), tested on Debian GNU/Linux 11.0
 
 ## Installation procedure
 

@@ -52,7 +52,7 @@ följande minimala hårdvara:
 * Windows 10 (1809, 64-bit)
 * Windows 11 (64-bit)
 * Windows Server 2019 eller senare (64-bit)
-* Debian GNU/Linux 11.0 (64-bit)
+* Linux (64-bit), testat på Debian GNU/Linux 11.0
 
 ## Installationsprocedur
 
